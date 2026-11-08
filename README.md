@@ -9,7 +9,7 @@
 - `captions/` — caption guidance; the current dated captions are stored with their entries in `queue.json`.
 - `publish/` — safe API checks, draft queue builder, and a manual publishing client.
 - `.github/workflows/` — an account/container check only. There is no publishing or scheduled workflow.
-- `assets/` — the original book mark, lesson text, reviewed Armenian translations, timings, and voice tracks.
+- `assets/` — the original book mark, lesson text, Armenian translations, timings, and voice tracks.
 
 The current three bundled stories are *A Day at the Zoo*, *The Saturday Market*, and *My Little Garden*. To add another site lesson, run:
 
