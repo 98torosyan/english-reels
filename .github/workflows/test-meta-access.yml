@@ -1,0 +1,33 @@
+name: Test Instagram access
+
+on:
+  push:
+    branches:
+      - "codex/**"
+    paths:
+      - ".github/workflows/test-meta-access.yml"
+      - "publish/test_meta_access.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: instagram-access-check
+  cancel-in-progress: false
+
+jobs:
+  verify-account-and-container:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      IG_TOKEN: ${{ secrets.IG_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      META_GRAPH_API_VERSION: v27.0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check account and create an unpublished test container
+        run: python publish/test_meta_access.py

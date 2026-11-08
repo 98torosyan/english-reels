@@ -1,0 +1,9 @@
+node_modules/
+assets/rendered/
+assets/frames/
+exports/
+*.tmp
+*.log
+.env
+.env.*
+!.env.example
