@@ -1,0 +1,175 @@
+{
+  "mistakes": [
+    {
+      "id": "plural-subject",
+      "keyword": "Present simple · plural subjects",
+      "wrong": "The monkeys jumps and play.",
+      "correct": "The monkeys jump and play.",
+      "explanation_hy": "Հոգնակի ենթակայի հետ Present Simple-ում բայը մնում է սկզբնական ձևով։",
+      "audio": {"lesson": "zoo", "sentence": 6}
+    },
+    {
+      "id": "does-base-form",
+      "keyword": "Doesn’t + base verb",
+      "wrong": "The cat doesn’t likes milk.",
+      "correct": "The cat doesn’t like milk.",
+      "explanation_hy": "Doesn’t-ից հետո բայը դնում ենք սկզբնական ձևով՝ առանց -s-ի։"
+    },
+    {
+      "id": "did-base-form",
+      "keyword": "Questions in the past",
+      "wrong": "Did you went home?",
+      "correct": "Did you go home?",
+      "explanation_hy": "Did-ն արդեն ցույց է տալիս անցյալը, դրա համար հիմնական բայը մնում է սկզբնական ձևով։"
+    },
+    {
+      "id": "age-with-be",
+      "keyword": "Talking about age",
+      "wrong": "I have twelve years.",
+      "correct": "I am twelve years old.",
+      "explanation_hy": "Անգլերենում տարիքը ասում ենք be բայով՝ I am … years old։"
+    },
+    {
+      "id": "go-home",
+      "keyword": "Go home",
+      "wrong": "We went to home.",
+      "correct": "We went home.",
+      "explanation_hy": "Home-ը դեպի տուն ուղղության իմաստով սովորաբար գործածվում է առանց to-ի։"
+    },
+    {
+      "id": "a-or-an",
+      "keyword": "A or an?",
+      "wrong": "I saw a owl.",
+      "correct": "I saw an owl.",
+      "explanation_hy": "An-ը դնում ենք ձայնավոր հնչյունով սկսվող բառից առաջ։"
+    },
+    {
+      "id": "there-are",
+      "keyword": "There is or there are?",
+      "wrong": "There is three books on the desk.",
+      "correct": "There are three books on the desk.",
+      "explanation_hy": "Հոգնակի գոյականի հետ գործածում ենք there are։"
+    },
+    {
+      "id": "first-conditional",
+      "keyword": "The first conditional",
+      "wrong": "If it will rain, we will stay inside.",
+      "correct": "If it rains, we will stay inside.",
+      "explanation_hy": "Առաջին պայմանականում if-մասի բայը Present Simple-ով է, ոչ թե will-ով։"
+    },
+    {
+      "id": "adjective-order",
+      "keyword": "Comparatives",
+      "wrong": "This path is more shorter.",
+      "correct": "This path is shorter.",
+      "explanation_hy": "Կարճ ածականի համեմատական ձևում -er-ից առաջ more չենք դնում։"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "plural-verb",
+      "keyword": "Present simple quiz",
+      "prompt": "The monkeys ___ and play.",
+      "options": ["jumps", "jump", "jumping"],
+      "answer": "jump",
+      "explanation_hy": "Monkeys-ը հոգնակի ենթակա է, ուստի բայը սկզբնական ձևով է։",
+      "audio": {"lesson": "zoo", "sentence": 6}
+    },
+    {
+      "id": "past-simple",
+      "keyword": "Past simple quiz",
+      "prompt": "Yesterday, we ___ a new book.",
+      "options": ["see", "saw", "seen"],
+      "answer": "saw",
+      "explanation_hy": "Yesterday-ը ցույց է տալիս անցյալը, իսկ see բայի Past Simple ձևը saw է։"
+    },
+    {
+      "id": "third-person",
+      "keyword": "Present simple · he, she, it",
+      "prompt": "The library ___ at nine.",
+      "options": ["open", "opens", "is open"],
+      "answer": "opens",
+      "explanation_hy": "Եզակի երրորդ դեմքով սովորության մասին խոսելիս բային ավելացնում ենք -s։"
+    },
+    {
+      "id": "any-milk",
+      "keyword": "Some or any?",
+      "prompt": "There isn’t ___ milk in the fridge.",
+      "options": ["some", "any", "many"],
+      "answer": "any",
+      "explanation_hy": "Ժխտական նախադասություններում սովորաբար գործածում ենք any։"
+    },
+    {
+      "id": "first-conditional",
+      "keyword": "The first conditional",
+      "prompt": "If it rains, we ___ inside.",
+      "options": ["stay", "will stay", "stayed"],
+      "answer": "will stay",
+      "explanation_hy": "Արդյունքի մասում գործածում ենք will և բայի սկզբնական ձևը։"
+    },
+    {
+      "id": "time-preposition",
+      "keyword": "Time prepositions",
+      "prompt": "The lesson starts ___ 9:00.",
+      "options": ["in", "on", "at"],
+      "answer": "at",
+      "explanation_hy": "Ժամերի հետ գործածում ենք at։"
+    }
+  ],
+  "words": [
+    {
+      "id": "lazy",
+      "word": "lazy",
+      "part_of_speech": "adjective",
+      "armenian": "ծույլ",
+      "example": "They are big, but they are very lazy.",
+      "example_hy": "Նրանք մեծ են, բայց շատ ծույլ են։",
+      "audio": {"lesson": "zoo", "sentence": 3}
+    },
+    {
+      "id": "sky",
+      "word": "sky",
+      "part_of_speech": "noun",
+      "armenian": "երկինք",
+      "example": "The sun is hot, and the sky is blue.",
+      "example_hy": "Արևը շոգ է, իսկ երկինքը՝ կապույտ։",
+      "audio": {"lesson": "zoo", "sentence": 1}
+    },
+    {
+      "id": "jump",
+      "word": "jump",
+      "part_of_speech": "verb",
+      "armenian": "ցատկել",
+      "example": "The monkeys jump and play.",
+      "example_hy": "Կապիկները ցատկում ու խաղում են։",
+      "audio": {"lesson": "zoo", "sentence": 6}
+    },
+    {
+      "id": "market",
+      "word": "market",
+      "part_of_speech": "noun",
+      "armenian": "շուկա",
+      "example": "Every Saturday, my grandmother and I go to the market.",
+      "example_hy": "Ամեն շաբաթ օր տատիկս ու ես գնում ենք շուկա։",
+      "audio": {"lesson": "saturday-market", "sentence": 0}
+    },
+    {
+      "id": "price",
+      "word": "price",
+      "part_of_speech": "noun",
+      "armenian": "գին",
+      "example": "She always asks the price.",
+      "example_hy": "Նա միշտ հարցնում է գինը։",
+      "audio": {"lesson": "saturday-market", "sentence": 8}
+    },
+    {
+      "id": "fence",
+      "word": "fence",
+      "part_of_speech": "noun",
+      "armenian": "ցանկապատ",
+      "example": "Small birds often sit on the fence and watch me.",
+      "example_hy": "Փոքրիկ թռչունները հաճախ նստում են ցանկապատին ու նայում ինձ։",
+      "audio": {"lesson": "my-garden", "sentence": 6}
+    }
+  ]
+}

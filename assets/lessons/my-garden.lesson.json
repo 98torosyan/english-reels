@@ -1,0 +1,72 @@
+{
+  "id": "my-garden",
+  "level": "A1",
+  "topic": "Nature",
+  "title": "My Little Garden",
+  "text": [
+    "Behind our house, there is a small garden. It is my garden! I have tomatoes, carrots and some yellow flowers there. Every morning before school, I water my plants. In the evening, I look at them again.",
+    "My tomatoes are green now, but in summer they are red and sweet. Small birds often sit on the fence and watch me. I think they want my tomatoes too!",
+    "My mum says a garden needs three things: sun, water and love. My garden gets all three. When I eat a tomato from my garden, it tastes better than a tomato from the shop."
+  ],
+  "words": [
+    [
+      "behind",
+      "ետևում"
+    ],
+    [
+      "carrots",
+      "գազար"
+    ],
+    [
+      "water",
+      "ջրել"
+    ],
+    [
+      "sweet",
+      "քաղցր"
+    ],
+    [
+      "fence",
+      "ցանկապատ"
+    ],
+    [
+      "love",
+      "սեր"
+    ]
+  ],
+  "qs": [
+    [
+      "What does the writer have in the garden?",
+      [
+        "Tomatoes, carrots and yellow flowers",
+        "Apples and potatoes",
+        "Only red roses"
+      ]
+    ],
+    [
+      "When does the writer water the plants?",
+      [
+        "Every morning before school",
+        "Only on Sundays",
+        "At night"
+      ]
+    ],
+    [
+      "What colour are the tomatoes now?",
+      [
+        "Green",
+        "Red",
+        "Yellow"
+      ]
+    ],
+    [
+      "What does a garden need, according to Mum?",
+      [
+        "Sun, water and love",
+        "Money and time",
+        "Birds and music"
+      ]
+    ]
+  ],
+  "voice": "thomas"
+}

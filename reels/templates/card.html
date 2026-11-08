@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <style>
+    @font-face{font-family:Inter;src:url("__INTER_FONT__") format("woff2");font-style:normal;font-weight:100 900;font-display:block}
+    @font-face{font-family:Literata;src:url("__LITERATA_FONT__") format("woff2");font-style:normal;font-weight:100 900;font-display:block}
+    @font-face{font-family:NotoArmenian;src:url("__ARMENIAN_FONT__") format("woff2");font-style:normal;font-weight:100 900;font-display:block}
+    *{box-sizing:border-box;margin:0}
+    html,body{width:1080px;height:1920px;overflow:hidden;background:#17183A;color:#fff;font-family:Inter,sans-serif}
+    body{position:relative;background:radial-gradient(800px 650px at 90% 5%,#6A49E2aa,transparent 68%),radial-gradient(750px 800px at -10% 65%,#5A3B8C88,transparent 70%),linear-gradient(165deg,#17183A 5%,#2A1E4D 58%,#17183A)}
+    .grain{position:absolute;inset:0;opacity:.11;background-image:radial-gradient(#fff 0.65px,transparent .65px);background-size:8px 8px;mask-image:linear-gradient(180deg,transparent,#000 25%,#000 80%,transparent)}
+    .header{position:absolute;top:105px;left:82px;right:82px;display:flex;align-items:center;gap:24px}
+    .logo{width:96px;height:96px;border-radius:27px;box-shadow:0 14px 36px #08061588}
+    .brand-name{font-family:Literata,serif;font-size:38px;font-weight:700;letter-spacing:-.7px}
+    .brand-sub{margin-top:7px;color:#A891F7;font-size:19px;font-weight:800;letter-spacing:5px}
+    .rainbow{position:absolute;top:245px;left:84px;display:flex;gap:8px}
+    .rainbow i{display:block;width:42px;height:8px;border-radius:8px}
+    .eyebrow{position:absolute;top:302px;left:84px;color:#A891F7;font-size:23px;letter-spacing:5px;font-weight:800;text-transform:uppercase}
+    .headline{position:absolute;top:382px;left:82px;right:82px;font:700 72px/1.15 Literata,serif;letter-spacing:-1.3px}
+    .headline .gold{color:#E9C46A;font-style:italic}
+    .panel{position:absolute;top:600px;left:62px;right:62px;min-height:620px;padding:58px 58px 54px;border-radius:42px;background:linear-gradient(155deg,#6A49E233,#ffffff0a 58%);border:1.5px solid #A891F755;box-shadow:0 30px 80px #07061588}
+    .panel-label{font-family:Inter,sans-serif;font-size:22px;letter-spacing:5px;color:#A891F7;font-weight:800;text-transform:uppercase}
+    .panel-label-hy{font-family:NotoArmenian,sans-serif;font-size:.95em;letter-spacing:0;text-transform:none}
+    .wrong{margin-top:34px;padding:30px 34px;border:1.5px solid #FF829288;border-radius:27px;background:#712e4733;color:#FFD9E0;font:600 40px/1.24 Literata,serif}
+    .wrong .mark{color:#FF8292;font:800 32px Inter,sans-serif;margin-right:12px}
+    .correct{margin-top:24px;padding:30px 34px;border:1.5px solid #2E9E6A99;border-radius:27px;background:#2E9E6A1c;font:600 42px/1.28 Literata,serif;opacity:0;transform:translateY(18px)}
+    .correct .mark{color:#57D79A;font:800 32px Inter,sans-serif;margin-right:12px}
+    .correct-word{opacity:.55;padding:0 3px;border-radius:8px}
+    .correct-word.done{opacity:1}
+    .correct-word.now{opacity:1;background:#E9C46A;color:#17183A}
+    .armenian{position:absolute;top:1290px;left:88px;right:88px;text-align:center;font:500 38px/1.45 NotoArmenian,sans-serif;color:#E4DEFA}
+    .countdown{position:absolute;top:1292px;left:0;right:0;text-align:center;font:800 130px/1.2 Literata,serif;color:#E9C46A;opacity:0}
+    .timer-label{margin-top:14px;font:800 20px/1.2 Inter,sans-serif;letter-spacing:5px;color:#A891F7}
+    .word{font:700 116px/1.0 Literata,serif;color:#E9C46A;text-align:center;margin-top:40px}
+    .word-meta{text-align:center;color:#A891F7;font:800 24px/1.2 Inter,sans-serif;letter-spacing:6px;text-transform:uppercase;margin-top:22px}
+    .word-hy{text-align:center;color:#E4DEFA;font:600 50px/1.25 NotoArmenian,sans-serif;margin-top:28px}
+    .example{margin-top:44px;text-align:center;font:600 45px/1.38 Literata,serif}
+    .example-hy{margin-top:25px;text-align:center;font:500 34px/1.42 NotoArmenian,sans-serif;color:#E4DEFA}
+    .foot{position:absolute;left:82px;right:82px;bottom:190px;display:flex;align-items:center;justify-content:space-between;color:#C9C2E3;font-size:22px;font-weight:700}
+    .foot .handle{letter-spacing:3px;color:#A891F7;font-weight:800}
+    .progress{position:absolute;left:82px;right:82px;bottom:140px;height:7px;border-radius:99px;background:#ffffff24;overflow:hidden}
+    .progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#6A49E2,#A891F7,#E9C46A)}
+    .outro{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:radial-gradient(680px 640px at 50% 42%,#6A49E2,#2A1E4D 56%,#17183A 82%);opacity:0;transform:scale(1.03)}
+    .outro img{width:170px;height:170px;border-radius:42px;box-shadow:0 20px 60px #0009}
+    .outro h2{margin-top:44px;font:700 82px/1.06 Literata,serif}
+    .outro h2 em{color:#E9C46A}
+    .outro p{margin-top:22px;color:#E4DEFA;font-size:32px;font-weight:600}
+    .save{margin-top:46px;padding:16px 34px;border-radius:99px;background:#E9C46A;color:#17183A;font-size:27px;font-weight:800}
+    .signature{margin-top:58px;color:#A891F7;font-size:21px;font-weight:800;letter-spacing:5px}
+    body[data-kind="quiz"] .armenian{top:1480px;font-size:30px}
+    #save[hidden]{display:none}
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="header"><img class="logo" src="__LOGO_DATA__" alt=""><div><div class="brand-name">Gayane Torosyan</div><div class="brand-sub">ENGLISH READING ROOM</div></div></header>
+  <div class="rainbow"><i style="background:#B23F78"></i><i style="background:#7A4FD6"></i><i style="background:#3E5FD9"></i><i style="background:#1C8AA3"></i><i style="background:#2E9E6A"></i><i style="background:#E8A317"></i></div>
+  <div id="eyebrow" class="eyebrow"></div>
+  <h1 id="headline" class="headline"></h1>
+  <main id="panel" class="panel"></main>
+  <div id="countdown" class="countdown"></div>
+  <div id="armenian" class="armenian"></div>
+  <footer class="foot"><span>Let's read together</span><span class="handle">ENGLISH READING ROOM</span></footer>
+  <div class="progress"><i id="progress"></i></div>
+  <section id="outro" class="outro"><img src="__LOGO_DATA__" alt=""><h2>Read · Listen · <em>Learn</em></h2><p>Small steps, big English.</p><span class="save">Save 📌</span><span class="signature">GAYANE TOROSYAN · ENGLISH READING ROOM</span></section>
+  <script>
+    const clamp=x=>Math.max(0,Math.min(1,x));
+    const ease=x=>1-Math.pow(1-x,3);
+    window.configure=data=>{
+      document.body.dataset.kind=data.kind;
+      document.getElementById('eyebrow').textContent=data.eyebrow;
+      document.getElementById('headline').innerHTML=data.headline;
+      const panel=document.getElementById('panel');
+      if(data.kind==='mistake'){
+        panel.innerHTML=`<div class="panel-label">COMMON MISTAKE · <span class="panel-label-hy">Սովորական սխալ</span></div><div class="wrong"><span class="mark">✕</span>${data.wrong}</div><div id="correct" class="correct"><span class="mark">✓</span><span id="correctText"></span></div>`;
+      }else if(data.kind==='quiz'){
+        panel.innerHTML=`<div class="panel-label">CHOOSE THE CORRECT ANSWER</div><div class="wrong" style="border-color:#A891F755;background:#ffffff0d;color:#fff">${data.prompt}</div><div class="options">${data.options.map((option,index)=>`<div class="wrong option" data-option="${index}" style="margin-top:17px;padding:20px 26px;font-size:34px">${String.fromCharCode(65+index)} <span style="color:#A891F7">·</span> ${option}</div>`).join('')}</div><div id="correct" class="correct"><span class="mark">✓</span><span id="correctText"></span></div>`;
+      }else{
+        panel.innerHTML=`<div class="panel-label">WORD OF THE DAY · <span class="panel-label-hy">Օրվա բառը</span></div><div class="word">${data.word}</div><div class="word-meta">${data.part_of_speech}</div><div class="word-hy">${data.armenian}</div><div id="example" class="example"></div><div class="example-hy">${data.example_hy}</div>`;
+      }
+      const text=data.kind==='word'?data.example:data.correct;
+      if(data.kind!=='word'){
+        const html=data.wordTimings&&data.wordTimings.length===text.split(/\s+/).length
+          ? text.split(/\s+/).map((word,index)=>`<span class="correct-word" data-word="${index}">${word}</span>`).join(' ')
+          : text;
+        document.getElementById('correctText').innerHTML=html;
+      }else{
+        const html=data.wordTimings&&data.wordTimings.length===text.split(/\s+/).length
+          ? text.split(/\s+/).map((word,index)=>`<span class="correct-word" data-word="${index}">${word}</span>`).join(' ')
+          : text;
+        document.getElementById('example').innerHTML=html;
+      }
+      if(data.kind==='mistake') document.getElementById('armenian').textContent=data.explanation_hy;
+      if(data.kind==='quiz') document.getElementById('armenian').innerHTML=`<span id="quizExplanation">${data.explanation_hy}</span>`;
+    };
+    window.seek=t=>{
+      const total=window.REEL_DURATION||10;
+      document.getElementById('progress').style.width=(clamp(t/total)*100)+'%';
+      const panel=document.getElementById('panel');
+      const reveal=t>=3.35;
+      if(window.REEL_KIND==='mistake'){
+        const answer=document.getElementById('correct');
+        const amount=ease(clamp((t-3.25)/.55)); answer.style.opacity=amount; answer.style.transform=`translateY(${(1-amount)*18}px)`;
+      }else if(window.REEL_KIND==='quiz'){
+        const countdown=document.getElementById('countdown');
+        const value=t<1.4?'3':t<2.3?'2':t<3.15?'1':'';
+        countdown.textContent=value; countdown.style.opacity=value?1:0;
+        const answer=document.getElementById('correct');
+        const amount=ease(clamp((t-3.25)/.55)); answer.style.opacity=amount; answer.style.transform=`translateY(${(1-amount)*18}px)`;
+        document.querySelectorAll('.option').forEach((element,index)=>{
+          element.style.borderColor=reveal&&index===window.CORRECT_INDEX?'#2E9E6A99':'#A891F755';
+          element.style.background=reveal&&index===window.CORRECT_INDEX?'#2E9E6A1c':'#ffffff0d';
+        });
+      }
+      document.querySelectorAll('.correct-word').forEach(element=>{
+        const index=Number(element.dataset.word); const timing=window.WORD_TIMINGS[index];
+        if(!timing) return;
+        element.className='correct-word'+(t>=timing[1]?' done':t>=timing[0]?' now':'');
+      });
+      const outro=ease(clamp((t-(total-1.05))/.85));
+      document.getElementById('outro').style.opacity=outro;
+      document.getElementById('outro').style.transform=`scale(${1.03-.03*outro})`;
+      panel.style.opacity=1;
+    };
+  </script>
+</body>
+</html>
