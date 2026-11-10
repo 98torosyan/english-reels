@@ -60,8 +60,8 @@
     },
     {
       "id": "2026-11-10-list-dont-know",
-      "date": "2026-11-11",
-      "time": "13:00",
+      "date": "2026-11-10",
+      "time": "22:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -80,6 +80,47 @@
           "https://98torosyan.github.io/english-reels-media/2026-11-10-list-dont-know/06-dont-know.jpg",
           "https://98torosyan.github.io/english-reels-media/2026-11-10-list-dont-know/07-dont-know.jpg",
           "https://98torosyan.github.io/english-reels-media/2026-11-10-list-dont-know/08-dont-know.jpg"
+        ]
+      }
+    },
+    {
+      "id": "2026-11-12-word-lazy",
+      "date": "2026-11-10",
+      "time": "23:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "word",
+      "content_id": "lazy",
+      "title": "Word of the day",
+      "caption": "Word of the day: lazy ✨\n\nlazy (adjective) — ծույլ\n“They are big, but they are very lazy.” — «Նրանք մեծ են, բայց շատ ծույլ են»։\n\nՕգտագործի՛ր այս բառը քո նախադասությունում 👇\n\n📚 Ամբողջական դասերը ձայնով՝ bio-ի հղումով\n\n#EnglishReadingRoom #Անգլերեն #LearnEnglish #EnglishPractice",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-12-word-lazy/word-lazy.mp4"
+      }
+    },
+    {
+      "id": "2026-11-11-list-thank-you",
+      "date": "2026-11-11",
+      "time": "13:00",
+      "timezone": "Asia/Yerevan",
+      "type": "CAROUSEL",
+      "format": "CAROUSEL",
+      "kind": "rule",
+      "content_id": "thank-you",
+      "title": "More than Thank you",
+      "caption": "More than “Thank you” 🙏\n\n6 բնական եղանակ շնորհակալություն հայտնելու համար։\nՕրինակ՝ “I really appreciate it.” — «Իսկապես գնահատում եմ»։\n\nՊահպանի՛ր 📌 և ուղարկի՛ր մեկին, ում շնորհակալ ես 💜\n\n📚 Ամբողջական դասերը ձայնով՝ bio-ի հղումով\n\n#EnglishReadingRoom #Անգլերեն #LearnEnglish #EnglishPractice",
+      "review_status": "staged",
+      "media": {
+        "slides": [
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/01-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/02-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/03-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/04-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/05-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/06-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/07-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/08-thank-you.jpg"
         ]
       }
     },
@@ -137,22 +178,6 @@
           "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/06-tenses.jpg",
           "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/07-tenses.jpg"
         ]
-      }
-    },
-    {
-      "id": "2026-11-12-word-lazy",
-      "date": "2026-11-12",
-      "time": "17:00",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "word",
-      "content_id": "lazy",
-      "title": "Word of the day",
-      "caption": "Word of the day: lazy ✨\n\nlazy (adjective) — ծույլ\n“They are big, but they are very lazy.” — «Նրանք մեծ են, բայց շատ ծույլ են»։\n\nՕգտագործի՛ր այս բառը քո նախադասությունում 👇\n\n📚 Ամբողջական դասերը ձայնով՝ bio-ի հղումով\n\n#EnglishReadingRoom #Անգլերեն #LearnEnglish #EnglishPractice",
-      "review_status": "staged",
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-12-word-lazy/word-lazy.mp4"
       }
     },
     {
