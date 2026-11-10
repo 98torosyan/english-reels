@@ -210,13 +210,20 @@ async function renderCard(browser, baseUrl, input, audio, outputName, correctInd
   fs.writeFileSync(htmlPath, buildCardHtml(baseUrl), 'utf8');
   const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
-  const config = { ...input, wordTimings: audio.wordTimings || [], correctIndex };
+  // Human pace: time to read and think before the answer, then hold so viewers can read it.
+  const REVEAL = { quiz: 8.0, mistake: 5.0, word: 2.6 }[input.kind] || 3.4;
+  const voiceDelay = REVEAL + 0.2;
+  const voiceLen = audio.wordTimings && audio.wordTimings.length ? audio.wordTimings.at(-1)[1] + 0.4 : 0;
+  audio = { ...audio, wordTimings: (audio.wordTimings || []).map(([a, b]) => [a + voiceDelay, b + voiceDelay]),
+    duration: Number((voiceDelay + voiceLen + (input.kind === 'word' ? 3.5 : 3.8) + 1.9).toFixed(3)), voiceDelay, voiceLen };
+  const config = { ...input, wordTimings: audio.wordTimings, correctIndex, revealAt: REVEAL };
   await page.evaluate(({ data, duration }) => {
     window.configure(data);
     window.REEL_KIND = data.kind;
     window.REEL_DURATION = duration;
     window.WORD_TIMINGS = data.wordTimings;
     window.CORRECT_INDEX = data.correctIndex;
+    window.REVEAL_AT = data.revealAt;
     window.seek(0);
   }, { data: config, duration: audio.duration });
   await page.evaluate(() => Promise.all([document.fonts.load('40px NotoArmenian', 'Աբգ'), document.fonts.load('40px Literata', 'Ab'), document.fonts.load('40px Inter', 'Ab')]).then(() => document.fonts.ready));
@@ -234,14 +241,14 @@ async function renderCard(browser, baseUrl, input, audio, outputName, correctInd
       if (actual !== expected) throw new Error(`Quiz countdown at ${time}s should show ${expected}.`);
     }
   }
-  await utils.renderFrames(page, audio.duration, frames, posterPath, input.kind === 'quiz' ? 0.5 : 5.2, FPS);
+  await utils.renderFrames(page, audio.duration, frames, posterPath, input.kind === 'quiz' ? 2.0 : REVEAL + 2.5, FPS);
   if (errors.length) throw new Error(`${input.kind} template console errors: ${errors.join(' | ')}`);
   await page.close();
   const sfx = [{ file: 'sfx-whoosh.wav', at: 0.25, gain: 0.35 }, { file: 'sfx-whoosh.wav', at: audio.duration - 1.05, gain: 0.3 }];
-  if (input.kind === 'quiz') sfx.push({ file: 'sfx-tick.wav', at: 0.05, gain: 0.5 }, { file: 'sfx-tick.wav', at: 1.4, gain: 0.5 }, { file: 'sfx-tick.wav', at: 2.3, gain: 0.5 }, { file: 'sfx-ding.wav', at: 3.35, gain: 0.55 });
-  if (input.kind === 'mistake') sfx.push({ file: 'sfx-pop.wav', at: 1.1, gain: 0.4 }, { file: 'sfx-ding.wav', at: 3.3, gain: 0.5 });
+  if (input.kind === 'quiz') { for (let k = 0; k < 5; k += 1) sfx.push({ file: 'sfx-tick.wav', at: REVEAL - 5 + k, gain: 0.45 }); sfx.push({ file: 'sfx-ding.wav', at: REVEAL, gain: 0.55 }); }
+  if (input.kind === 'mistake') sfx.push({ file: 'sfx-pop.wav', at: 1.8, gain: 0.4 }, { file: 'sfx-ding.wav', at: REVEAL, gain: 0.5 });
   if (input.kind === 'word') sfx.push({ file: 'sfx-pop.wav', at: 0.9, gain: 0.4 });
-  utils.encodeVideo(frames, audio.audioPath, audio.audioStart, audio.duration, videoPath, FPS, sfx);
+  utils.encodeVideo(frames, audio.audioPath, audio.audioStart, audio.duration, videoPath, FPS, sfx, audio.voiceDelay, audio.voiceLen);
   const info = utils.verifyVideo(videoPath);
   fs.rmSync(frames, { recursive: true, force: true });
   console.log(`Rendered ${videoPath}: ${JSON.stringify(info)}`);
@@ -267,7 +274,7 @@ async function main() {
     const quizAudio = sentenceAudio(quiz.audio.lesson, quiz.audio.sentence);
     const quizCorrect = quiz.prompt.replace('___', quiz.answer);
     const quizResult = await renderCard(browser, baseUrl, {
-      kind: 'quiz', eyebrow: '3-2-1 · QUICK QUIZ', headline: 'Choose the<br><span class="gold">right verb</span>',
+      kind: 'quiz', eyebrow: '5-SECOND QUIZ', headline: 'Choose the<br><span class="gold">right verb</span>',
       prompt: quiz.prompt, options: quiz.options, correct: quizCorrect, explanation_hy: quiz.explanation_hy,
     }, quizAudio, 'quiz-present-simple', quiz.options.indexOf(quiz.answer));
 

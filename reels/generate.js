@@ -51,7 +51,7 @@ async function main() {
       };
     } else if (kind === 'quiz') {
       data = {
-        kind, eyebrow: '3-2-1 · QUICK QUIZ', headline: 'Choose the<br><span class="gold">right answer</span>',
+        kind, eyebrow: '5-SECOND QUIZ', headline: 'Choose the<br><span class="gold">right answer</span>',
         prompt: item.prompt, options: item.options,
         correct: item.prompt.replace('___', item.answer), explanation_hy: item.explanation_hy,
       };
