@@ -5,7 +5,7 @@
   "title": "Hello! I’m <em>Gayane</em>",
   "en": "English teacher · Yerevan",
   "hy": "Անգլերենի դասեր աշակերտների համար, ներառյալ միասնական քննության և UFAR-ի նախապատրաստում։",
-  "foot": "Let’s read together 💜"
+  "foot": "Let’s read together"
  },
  {
   "id": "lessons",
@@ -13,7 +13,7 @@
   "title": "150 free <em>lessons</em>",
   "en": "A1–C1 · audio · dictionary · tests",
   "hy": "Կարդա՛, լսի՛ր և ստուգի՛ր քեզ մեր կայքում։",
-  "foot": "🔗 Link in bio"
+  "foot": "Link in bio"
  },
  {
   "id": "words",
@@ -21,7 +21,7 @@
   "title": "<em>delighted</em>",
   "en": "“I was delighted to hear the news.”",
   "hy": "շատ ուրախ — «Շատ ուրախացա, երբ լսեցի այդ լուրը»։",
-  "foot": "New word every day ✨"
+  "foot": "New word every day"
  },
  {
   "id": "grammar",
@@ -29,7 +29,7 @@
   "title": "He / she / it <em>+ s</em>",
   "en": "She works. · He watches TV.",
   "hy": "Present Simple-ում he/she/it-ի հետ բային ավելանում է -s կամ -es։",
-  "foot": "Save the rule 📌"
+  "foot": "Save the rule"
  },
  {
   "id": "ufar",
@@ -37,15 +37,15 @@
   "title": "Ready for <em>UFAR</em>?",
   "en": "Real-format mini-tests every Friday",
   "hy": "Իսկական UFAR ձևաչափով առաջադրանքներ՝ պատասխաններով։",
-  "foot": "🎓 Exam prep"
+  "foot": "Exam prep"
  },
  {
   "id": "quiz",
   "tag": "QUIZ",
   "title": "Which is <em>correct</em>?",
-  "en": "❌ I have 20 years.<br>✅ I am 20 years old.",
+  "en": "✕ I have 20 years.<br>✓ I am 20 years old.",
   "hy": "Տարիքը անգլերենում արտահայտվում է be բայով։",
-  "foot": "Did you know? 💡"
+  "foot": "Did you know?"
  },
  {
   "id": "w-2026-11-11",
@@ -53,7 +53,7 @@
   "title": "<em>exhausted</em>",
   "en": "“After the long walk, we were exhausted.”",
   "hy": "ուժասպառ — «Երկար զբոսանքից հետո ուժասպառ էինք»։",
-  "foot": "New word every day ✨"
+  "foot": "New word every day"
  },
  {
   "id": "p-2026-11-11",
@@ -61,7 +61,7 @@
   "title": "<em>Exactly!</em>",
   "en": "“It’s too cold to go out.” — “Exactly!”",
   "hy": "Ճիշտ այդպես։ — «Դուրս գալու համար շատ ցուրտ է»։ — «Ճիշտ այդպես»։",
-  "foot": "Say it today 💬"
+  "foot": "Say it today"
  },
  {
   "id": "w-2026-11-12",
@@ -69,7 +69,7 @@
   "title": "<em>nervous</em>",
   "en": "“She feels nervous before exams.”",
   "hy": "անհանգիստ — «Նա անհանգստանում է քննություններից առաջ»։",
-  "foot": "New word every day ✨"
+  "foot": "New word every day"
  },
  {
   "id": "p-2026-11-12",
@@ -77,7 +77,7 @@
   "title": "<em>I couldn’t agree more.</em>",
   "en": "“Reading every day helps? I couldn’t agree more.”",
   "hy": "Լիովին համաձայն եմ։ — «Ամեն օր կարդալն օգնո՞ւմ է։ Լիովին համաձայն եմ»։",
-  "foot": "Say it today 💬"
+  "foot": "Say it today"
  },
  {
   "id": "w-2026-11-13",
@@ -85,7 +85,7 @@
   "title": "<em>proud</em>",
   "en": "“My parents are proud of me.”",
   "hy": "հպարտ — «Ծնողներս հպարտանում են ինձնով»։",
-  "foot": "New word every day ✨"
+  "foot": "New word every day"
  },
  {
   "id": "p-2026-11-13",
@@ -93,7 +93,7 @@
   "title": "<em>That’s true.</em>",
   "en": "“That’s true, the test was very long.”",
   "hy": "Ճիշտ է։ — «Ճիշտ է, թեստը շատ երկար էր»։",
-  "foot": "Say it today 💬"
+  "foot": "Say it today"
  },
  {
   "id": "w-2026-11-14",
@@ -101,7 +101,7 @@
   "title": "<em>confused</em>",
   "en": "“I’m confused. Could you explain it again?”",
   "hy": "շփոթված — «Շփոթվել եմ։ Կարո՞ղ եք նորից բացատրել»։",
-  "foot": "New word every day ✨"
+  "foot": "New word every day"
  },
  {
   "id": "p-2026-11-14",
@@ -109,6 +109,6 @@
   "title": "<em>Good point.</em>",
   "en": "“Good point. Let’s leave earlier.”",
   "hy": "Լավ միտք է։ — «Լավ միտք է։ Եկ ավելի շուտ դուրս գանք»։",
-  "foot": "Say it today 💬"
+  "foot": "Say it today"
  }
 ]
