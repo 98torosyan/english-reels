@@ -115,6 +115,48 @@
       "published_at": "2026-11-10T21:02+04:00"
     },
     {
+      "id": "2026-11-11-list-thank-you",
+      "date": "2026-11-10",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "CAROUSEL",
+      "format": "CAROUSEL",
+      "kind": "rule",
+      "content_id": "thank-you",
+      "title": "More than Thank you",
+      "caption": "Խոսակցական անգլերեն · Spoken English phrases\n\nMore than “Thank you”\n\n6 բնական եղանակ շնորհակալություն հայտնելու համար։\nՕրինակ՝ “I really appreciate it.” — «Իսկապես գնահատում եմ»։\n\nՊահպանի՛ր և ուղարկի՛ր մեկին, ում շնորհակալ ես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "slides": [
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/01-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/02-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/03-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/04-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/05-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/06-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/07-thank-you.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/08-thank-you.jpg"
+        ]
+      }
+    },
+    {
+      "id": "2026-11-11-mistake-plural-subject",
+      "date": "2026-11-10",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "mistake",
+      "content_id": "plural-subject",
+      "title": "Fix it",
+      "caption": "Անգլերենի սխալներ · Common English mistakes\n\nFind the mistake\n\n✕ The monkeys jumps and play.\n✓ The monkeys jump and play.\n\nՀոգնակի ենթակայի հետ Present Simple-ում բայը մնում է սկզբնական ձևով։\n\nՊահպանի՛ր և ուղարկի՛ր ընկերոջդ։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishGrammar #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 3300,
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-11-mistake-plural-subject/mistake-plural-subject.mp4"
+      }
+    },
+    {
       "id": "2026-11-10-list-dont-know",
       "date": "2026-11-10",
       "time": "22:00",
@@ -153,6 +195,23 @@
       "review_status": "staged",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-stories/story-words.jpg"
+      }
+    },
+    {
+      "id": "2026-11-10-sound-ship-sheep",
+      "date": "2026-11-10",
+      "time": "22:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "sound",
+      "content_id": "ship-sheep",
+      "title": "Sound it out 01",
+      "caption": "Անգլերենի արտասանություն · English pronunciation\n\nShip or sheep? Can you hear the difference?\n\nship /ʃɪp/ — նավ. կարճ, թուլացած «ի»\nsheep /ʃiːp/ — ոչխար. երկար «ի», շուրթերը՝ ժպիտի պես\n\nԼսի՛ր, ընտրի՛ր A կամ B, ապա բարձրաձայն կրկնի՛ր.\nThere is a sheep on the ship.\n\nԳրի՛ր մեկնաբանություններում՝ A, թե B։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishPronunciation #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 7000,
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-sound-ship-sheep/sound-ship-sheep.mp4"
       }
     },
     {
@@ -205,6 +264,30 @@
       }
     },
     {
+      "id": "2026-11-12-rule-tenses",
+      "date": "2026-11-10",
+      "time": "23:00",
+      "timezone": "Asia/Yerevan",
+      "type": "CAROUSEL",
+      "format": "CAROUSEL",
+      "kind": "rule",
+      "content_id": "tenses",
+      "title": "Grammar",
+      "caption": "Անգլերենի քերականություն · English grammar\n\nPresent simple & continuous\n\nՍովորություն կամ փաստ արտահայտելու համար օգտագործում ենք Present Simple-ը։ Հենց հիմա կատարվող գործողության համար՝ Present Continuous-ը։\nՕրինակ՝ “The library opens at nine. / The library is opening now.” — «Գրադարանը ժամը իննին է բացվում։ / Գրադարանն այժմ բացվում է։»։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishGrammar #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "slides": [
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/01-tenses.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/02-tenses.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/03-tenses.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/04-tenses.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/05-tenses.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/06-tenses.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/07-tenses.jpg"
+        ]
+      }
+    },
+    {
       "id": "2026-11-11-story-w-2026-11-11",
       "date": "2026-11-11",
       "time": "09:00",
@@ -218,48 +301,6 @@
       "review_status": "staged",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-11-stories/story-w-2026-11-11.jpg"
-      }
-    },
-    {
-      "id": "2026-11-11-list-thank-you",
-      "date": "2026-11-11",
-      "time": "12:00",
-      "timezone": "Asia/Yerevan",
-      "type": "CAROUSEL",
-      "format": "CAROUSEL",
-      "kind": "rule",
-      "content_id": "thank-you",
-      "title": "More than Thank you",
-      "caption": "Խոսակցական անգլերեն · Spoken English phrases\n\nMore than “Thank you”\n\n6 բնական եղանակ շնորհակալություն հայտնելու համար։\nՕրինակ՝ “I really appreciate it.” — «Իսկապես գնահատում եմ»։\n\nՊահպանի՛ր և ուղարկի՛ր մեկին, ում շնորհակալ ես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
-      "review_status": "staged",
-      "media": {
-        "slides": [
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/01-thank-you.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/02-thank-you.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/03-thank-you.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/04-thank-you.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/05-thank-you.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/06-thank-you.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/07-thank-you.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/08-thank-you.jpg"
-        ]
-      }
-    },
-    {
-      "id": "2026-11-11-mistake-plural-subject",
-      "date": "2026-11-11",
-      "time": "17:00",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "mistake",
-      "content_id": "plural-subject",
-      "title": "Fix it",
-      "caption": "Անգլերենի սխալներ · Common English mistakes\n\nFind the mistake\n\n✕ The monkeys jumps and play.\n✓ The monkeys jump and play.\n\nՀոգնակի ենթակայի հետ Present Simple-ում բայը մնում է սկզբնական ձևով։\n\nՊահպանի՛ր և ուղարկի՛ր ընկերոջդ։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishGrammar #Yerevan",
-      "review_status": "staged",
-      "thumb_offset": 3300,
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-11-mistake-plural-subject/mistake-plural-subject.mp4"
       }
     },
     {
@@ -309,30 +350,6 @@
       "review_status": "staged",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-12-stories/story-w-2026-11-12.jpg"
-      }
-    },
-    {
-      "id": "2026-11-12-rule-tenses",
-      "date": "2026-11-12",
-      "time": "12:00",
-      "timezone": "Asia/Yerevan",
-      "type": "CAROUSEL",
-      "format": "CAROUSEL",
-      "kind": "rule",
-      "content_id": "tenses",
-      "title": "Grammar",
-      "caption": "Անգլերենի քերականություն · English grammar\n\nPresent simple & continuous\n\nՍովորություն կամ փաստ արտահայտելու համար օգտագործում ենք Present Simple-ը։ Հենց հիմա կատարվող գործողության համար՝ Present Continuous-ը։\nՕրինակ՝ “The library opens at nine. / The library is opening now.” — «Գրադարանը ժամը իննին է բացվում։ / Գրադարանն այժմ բացվում է։»։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishGrammar #Yerevan",
-      "review_status": "staged",
-      "media": {
-        "slides": [
-          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/01-tenses.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/02-tenses.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/03-tenses.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/04-tenses.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/05-tenses.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/06-tenses.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/07-tenses.jpg"
-        ]
       }
     },
     {
