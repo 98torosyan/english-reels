@@ -59,6 +59,7 @@ def main():
             for f in (mp3, tj): f.unlink(missing_ok=True)
     made += voice_cards()
     made += voice_sounds()
+    made += voice_dialogues()
     print(f"{made} file(s) voiced.")
 
 
@@ -133,6 +134,27 @@ def voice_sounds():
             except Exception as error:
                 print(f"SKIPPED sound {item['id']}/{key}: {error}"); mp3.unlink(missing_ok=True); continue
             tj.write_text(json.dumps({"text": text, "words": words, "tag": item["voice"]}), encoding="utf-8"); made += 1
+    return made
+
+def voice_dialogues():
+    """Everyday English: every dialogue line on its own, in the speaker's voice."""
+    made = 0
+    root = LESSONS.parents[1]
+    data = json.loads((root / "reels/data/dialogues.json").read_text(encoding="utf-8"))
+    for d in data["dialogues"]:
+        out = root / "assets" / "dialogues" / d["id"]; out.mkdir(parents=True, exist_ok=True)
+        for n, line in enumerate(d["lines"]):
+            voice = d["speakers"][line["s"]]["voice"]
+            mp3, tj = out / f"{n}.mp3", out / f"{n}.json"
+            if mp3.exists() and tj.exists():
+                old = json.loads(tj.read_text())
+                if old.get("text") == line["en"] and old.get("tag") == voice: continue
+            try:
+                bounds = asyncio.run(synth(line["en"], voice, "-15%", mp3))
+                words = align(line["en"].split(), bounds)
+            except Exception as error:
+                print(f"SKIPPED dialogue {d['id']}/{n}: {error}"); mp3.unlink(missing_ok=True); continue
+            tj.write_text(json.dumps({"text": line["en"], "words": words, "tag": voice}), encoding="utf-8"); made += 1
     return made
 
 if __name__ == "__main__":

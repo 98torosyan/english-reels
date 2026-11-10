@@ -1,0 +1,164 @@
+{
+  "series": "Everyday English",
+  "note": "Short real-life dialogues (A2-B1). Part 1: listen to both speakers. Part 2: the viewer plays B; B's audio is silent and a timed pause lets the viewer say the line.",
+  "dialogues": [
+    {
+      "id": "cafe", "number": 1, "level": "A2", "title": ["At the", "café"], "title_hy": "Սրճարանում",
+      "speakers": { "A": { "role": "Barista", "voice": "en-GB-SoniaNeural" }, "B": { "role": "You", "voice": "en-GB-RyanNeural" } },
+      "lines": [
+        { "s": "A", "en": "Hi! What can I get you?", "hy": "Բարև՛։ Ի՞նչ կցանկանաք։" },
+        { "s": "B", "en": "A latte, please. To take away.", "hy": "Լատտե, խնդրում եմ։ Տանելու։" },
+        { "s": "A", "en": "Of course. Anything else?", "hy": "Իհարկե։ Էլի՞ ինչ-որ բան։" },
+        { "s": "B", "en": "No, thanks. How much is it?", "hy": "Ոչ, շնորհակալություն։ Որքա՞ն արժե։" },
+        { "s": "A", "en": "That's three pounds fifty.", "hy": "Երեք ֆունտ հիսուն պենս։" }
+      ]
+    },
+    {
+      "id": "directions", "number": 2, "level": "A2", "title": ["Asking the", "way"], "title_hy": "Ճանապարհ հարցնել",
+      "speakers": { "A": { "role": "Passer-by", "voice": "en-GB-ThomasNeural" }, "B": { "role": "You", "voice": "en-GB-SoniaNeural" } },
+      "lines": [
+        { "s": "B", "en": "Excuse me, where is the station?", "hy": "Ներեցեք, որտե՞ղ է կայարանը։" },
+        { "s": "A", "en": "Go straight on, then turn left.", "hy": "Գնացեք ուղիղ, հետո թեքվեք ձախ։" },
+        { "s": "B", "en": "Is it far from here?", "hy": "Հեռո՞ւ է այստեղից։" },
+        { "s": "A", "en": "No, it's about five minutes on foot.", "hy": "Ոչ, մոտ հինգ րոպե ոտքով։" },
+        { "s": "B", "en": "Thank you so much!", "hy": "Շատ շնորհակալություն։" },
+        { "s": "A", "en": "You're welcome.", "hy": "Խնդրեմ։" }
+      ]
+    },
+    {
+      "id": "meeting", "number": 3, "level": "A1", "title": ["Nice to", "meet you"], "title_hy": "Ծանոթություն",
+      "speakers": { "A": { "role": "Anna", "voice": "en-GB-SoniaNeural" }, "B": { "role": "David", "voice": "en-GB-RyanNeural" } },
+      "lines": [
+        { "s": "A", "en": "Hi, I'm Anna. What's your name?", "hy": "Բարև, ես Աննան եմ։ Ի՞նչ է քո անունը։" },
+        { "s": "B", "en": "I'm David. Nice to meet you.", "hy": "Ես Դավիթն եմ։ Ուրախ եմ ծանոթանալու համար։" },
+        { "s": "A", "en": "Nice to meet you too. Where are you from?", "hy": "Ես էլ եմ ուրախ։ Որտեղի՞ց ես։" },
+        { "s": "B", "en": "I'm from Armenia. And you?", "hy": "Ես Հայաստանից եմ։ Իսկ դո՞ւ։" },
+        { "s": "A", "en": "I'm from London.", "hy": "Ես Լոնդոնից եմ։" }
+      ]
+    },
+    {
+      "id": "clothes-shop", "number": 4, "level": "A2", "title": ["In a", "clothes shop"], "title_hy": "Հագուստի խանութում",
+      "speakers": { "A": { "role": "Shop assistant", "voice": "en-GB-SoniaNeural" }, "B": { "role": "You", "voice": "en-GB-ThomasNeural" } },
+      "lines": [
+        { "s": "A", "en": "Hello! Can I help you?", "hy": "Բարև Ձեզ։ Կարո՞ղ եմ օգնել։" },
+        { "s": "B", "en": "Yes, do you have this in a medium?", "hy": "Այո, սա միջին չափսի ունե՞ք։" },
+        { "s": "A", "en": "Let me check. Yes, here you are.", "hy": "Թույլ տվեք ստուգեմ։ Այո, խնդրեմ։" },
+        { "s": "B", "en": "Can I try it on?", "hy": "Կարո՞ղ եմ փորձել։" },
+        { "s": "A", "en": "Sure. The changing rooms are over there.", "hy": "Իհարկե։ Հանդերձարանները այնտեղ են։" }
+      ]
+    },
+    {
+      "id": "doctor", "number": 5, "level": "B1", "title": ["At the", "doctor's"], "title_hy": "Բժշկի մոտ",
+      "speakers": { "A": { "role": "Doctor", "voice": "en-GB-RyanNeural" }, "B": { "role": "You", "voice": "en-GB-SoniaNeural" } },
+      "lines": [
+        { "s": "A", "en": "What seems to be the problem?", "hy": "Ի՞նչն է Ձեզ անհանգստացնում։" },
+        { "s": "B", "en": "I have a bad headache.", "hy": "Գլուխս շատ է ցավում։" },
+        { "s": "A", "en": "How long have you had it?", "hy": "Ինչքա՞ն ժամանակ է՝ ցավում է։" },
+        { "s": "B", "en": "Since yesterday morning.", "hy": "Երեկ առավոտվանից։" },
+        { "s": "A", "en": "Drink plenty of water and get some rest.", "hy": "Շատ ջուր խմեք և հանգստացեք։" }
+      ]
+    },
+    {
+      "id": "phone", "number": 6, "level": "B1", "title": ["On the", "phone"], "title_hy": "Հեռախոսով",
+      "speakers": { "A": { "role": "Caller", "voice": "en-GB-SoniaNeural" }, "B": { "role": "You", "voice": "en-GB-ThomasNeural" } },
+      "lines": [
+        { "s": "A", "en": "Hello, can I speak to Mr Smith, please?", "hy": "Բարև Ձեզ, կարո՞ղ եմ խոսել պարոն Սմիթի հետ։" },
+        { "s": "B", "en": "I'm sorry, he's not in at the moment.", "hy": "Ցավոք, նա հիմա տեղում չէ։" },
+        { "s": "A", "en": "Could I leave a message?", "hy": "Կարո՞ղ եմ հաղորդագրություն թողնել։" },
+        { "s": "B", "en": "Of course. Who's calling, please?", "hy": "Իհարկե։ Ո՞վ է զանգում։" },
+        { "s": "A", "en": "It's Maria from the bank.", "hy": "Մարիան է՝ բանկից։" }
+      ]
+    },
+    {
+      "id": "restaurant", "number": 7, "level": "A2", "title": ["At a", "restaurant"], "title_hy": "Ռեստորանում",
+      "speakers": { "A": { "role": "Waiter", "voice": "en-GB-ThomasNeural" }, "B": { "role": "You", "voice": "en-GB-SoniaNeural" } },
+      "lines": [
+        { "s": "A", "en": "Good evening. Do you have a reservation?", "hy": "Բարի երեկո։ Ամրագրում ունե՞ք։" },
+        { "s": "B", "en": "Yes, a table for two, please.", "hy": "Այո, երկու հոգու սեղան, խնդրում եմ։" },
+        { "s": "A", "en": "This way, please. Here's the menu.", "hy": "Այստեղով, խնդրեմ։ Ահա ճաշացանկը։" },
+        { "s": "B", "en": "Thank you. Could we have some water?", "hy": "Շնորհակալություն։ Կարո՞ղ ենք ջուր ստանալ։" },
+        { "s": "A", "en": "Of course. Still or sparkling?", "hy": "Իհարկե։ Առանց գազի՞, թե գազավորված։" },
+        { "s": "B", "en": "Still, please.", "hy": "Առանց գազի, խնդրում եմ։" }
+      ]
+    },
+    {
+      "id": "hotel", "number": 8, "level": "A2", "title": ["Checking", "in"], "title_hy": "Հյուրանոցում",
+      "speakers": { "A": { "role": "Receptionist", "voice": "en-GB-SoniaNeural" }, "B": { "role": "You", "voice": "en-GB-RyanNeural" } },
+      "lines": [
+        { "s": "A", "en": "Good afternoon. How can I help?", "hy": "Բարի օր։ Ինչո՞վ կարող եմ օգնել։" },
+        { "s": "B", "en": "Hi, I have a booking for three nights.", "hy": "Բարև Ձեզ, ես ամրագրում ունեմ երեք գիշերով։" },
+        { "s": "A", "en": "Thank you. Here's your key.", "hy": "Շնորհակալություն։ Ահա Ձեր բանալին։" },
+        { "s": "B", "en": "What time is breakfast?", "hy": "Ժամը քանիսի՞ն է նախաճաշը։" },
+        { "s": "A", "en": "From seven to ten.", "hy": "Յոթից տասը։" }
+      ]
+    },
+    {
+      "id": "making-plans", "number": 9, "level": "A2", "title": ["Making", "plans"], "title_hy": "Պայմանավորվել",
+      "speakers": { "A": { "role": "Friend", "voice": "en-GB-RyanNeural" }, "B": { "role": "You", "voice": "en-GB-SoniaNeural" } },
+      "lines": [
+        { "s": "A", "en": "Are you free on Saturday?", "hy": "Շաբաթ օրը ազա՞տ ես։" },
+        { "s": "B", "en": "Yes, I think so. Why?", "hy": "Այո, կարծես թե։ Ինչո՞ւ։" },
+        { "s": "A", "en": "Let's go to the cinema.", "hy": "Արի կինո գնանք։" },
+        { "s": "B", "en": "Great idea! What time?", "hy": "Հիանալի միտք է։ Ժամը քանիսի՞ն։" },
+        { "s": "A", "en": "How about seven o'clock?", "hy": "Ի՞նչ կասես ժամը յոթին։" },
+        { "s": "B", "en": "Perfect. See you then!", "hy": "Հրաշալի է։ Կհանդիպենք։" }
+      ]
+    },
+    {
+      "id": "taxi", "number": 10, "level": "A2", "title": ["Taking a", "taxi"], "title_hy": "Տաքսիում",
+      "speakers": { "A": { "role": "Driver", "voice": "en-GB-ThomasNeural" }, "B": { "role": "You", "voice": "en-GB-SoniaNeural" } },
+      "lines": [
+        { "s": "A", "en": "Hello! Where to?", "hy": "Բարև Ձեզ։ Ո՞ւր գնանք։" },
+        { "s": "B", "en": "To the airport, please.", "hy": "Օդանավակայան, խնդրում եմ։" },
+        { "s": "A", "en": "Which terminal?", "hy": "Ո՞ր տերմինալ։" },
+        { "s": "B", "en": "Terminal two. How long will it take?", "hy": "Երկրորդ տերմինալ։ Որքա՞ն ժամանակ կտևի։" },
+        { "s": "A", "en": "About twenty minutes, if there's no traffic.", "hy": "Մոտ քսան րոպե, եթե խցանում չլինի։" }
+      ]
+    },
+    {
+      "id": "sorry-late", "number": 11, "level": "A2", "title": ["Sorry I'm", "late"], "title_hy": "Ներողություն ուշանալու համար",
+      "speakers": { "A": { "role": "You", "voice": "en-GB-RyanNeural" }, "B": { "role": "Colleague", "voice": "en-GB-SoniaNeural" } },
+      "lines": [
+        { "s": "A", "en": "Sorry I'm late!", "hy": "Ներողություն, որ ուշացա։" },
+        { "s": "B", "en": "Don't worry. What happened?", "hy": "Մի՛ անհանգստացիր։ Ի՞նչ է պատահել։" },
+        { "s": "A", "en": "I missed the bus.", "hy": "Ավտոբուսից ուշացա։" },
+        { "s": "B", "en": "It happens. Shall we start?", "hy": "Լինում է։ Սկսե՞նք։" },
+        { "s": "A", "en": "Yes, let's.", "hy": "Այո, սկսենք։" }
+      ]
+    },
+    {
+      "id": "supermarket", "number": 12, "level": "A2", "title": ["At the", "supermarket"], "title_hy": "Սուպերմարկետում",
+      "speakers": { "A": { "role": "You", "voice": "en-GB-SoniaNeural" }, "B": { "role": "Shop assistant", "voice": "en-GB-ThomasNeural" } },
+      "lines": [
+        { "s": "A", "en": "Excuse me, where can I find the bread?", "hy": "Ներեցեք, որտե՞ղ կարող եմ գտնել հացը։" },
+        { "s": "B", "en": "It's in aisle three, next to the milk.", "hy": "Երրորդ շարքում է՝ կաթի կողքին։" },
+        { "s": "A", "en": "And do you sell fresh fish?", "hy": "Իսկ թարմ ձուկ վաճառո՞ւմ եք։" },
+        { "s": "B", "en": "Yes, at the counter at the back.", "hy": "Այո, խանութի խորքում՝ վաճառասեղանի մոտ։" },
+        { "s": "A", "en": "Great, thanks for your help.", "hy": "Հիանալի է, շնորհակալություն օգնության համար։" }
+      ]
+    },
+    {
+      "id": "job-interview", "number": 13, "level": "B1", "title": ["A job", "interview"], "title_hy": "Աշխատանքային հարցազրույց",
+      "speakers": { "A": { "role": "Manager", "voice": "en-GB-SoniaNeural" }, "B": { "role": "You", "voice": "en-GB-RyanNeural" } },
+      "lines": [
+        { "s": "A", "en": "Tell me a little about yourself.", "hy": "Մի փոքր պատմեք Ձեր մասին։" },
+        { "s": "B", "en": "I'm an engineer with five years of experience.", "hy": "Ես ինժեներ եմ՝ հինգ տարվա փորձով։" },
+        { "s": "A", "en": "Why do you want this job?", "hy": "Ինչո՞ւ եք ուզում այս աշխատանքը։" },
+        { "s": "B", "en": "I enjoy working with people.", "hy": "Ինձ դուր է գալիս մարդկանց հետ աշխատել։" },
+        { "s": "A", "en": "When can you start?", "hy": "Ե՞րբ կարող եք սկսել։" },
+        { "s": "B", "en": "Next Monday, if that's OK.", "hy": "Հաջորդ երկուշաբթի, եթե հարմար է։" }
+      ]
+    },
+    {
+      "id": "small-talk", "number": 14, "level": "B1", "title": ["Small", "talk"], "title_hy": "Թեթև զրույց",
+      "speakers": { "A": { "role": "Neighbour", "voice": "en-GB-SoniaNeural" }, "B": { "role": "You", "voice": "en-GB-ThomasNeural" } },
+      "lines": [
+        { "s": "A", "en": "Lovely day, isn't it?", "hy": "Հրաշալի օր է, չէ՞։" },
+        { "s": "B", "en": "Yes, it's really warm today.", "hy": "Այո, այսօր իսկապես տաք է։" },
+        { "s": "A", "en": "I hope it stays like this.", "hy": "Հուսով եմ՝ այսպես էլ կմնա։" },
+        { "s": "B", "en": "Me too. But they say it will rain tomorrow.", "hy": "Ես էլ։ Բայց ասում են՝ վաղը անձրև կլինի։" },
+        { "s": "A", "en": "Oh no! I'd better take an umbrella.", "hy": "Վա՜յ։ Ավելի լավ է՝ անձրևանոց վերցնեմ։" }
+      ]
+    }
+  ]
+}
