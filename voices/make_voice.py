@@ -11,6 +11,8 @@ import edge_tts
 
 LESSONS = Path(__file__).resolve().parents[1] / "assets" / "lessons"
 CLEAN = re.compile(r"[^\w']+", re.UNICODE)
+KEEP = {"zoo", "saturday-market", "my-garden"}  # original site lessons
+GAP = 0.9  # seconds of silence after each sentence
 
 def norm(s): return CLEAN.sub("", s.replace("’", "'")).lower()
 
@@ -49,20 +51,35 @@ def main():
     for lp in sorted(LESSONS.glob("*.lesson.json")):
         lid = lp.name[:-len(".lesson.json")]
         mp3, tj = LESSONS / f"{lid}.mp3", LESSONS / f"{lid}.json"
-        if mp3.exists() and tj.exists(): continue
+        if mp3.exists() and tj.exists() and (lid in KEEP or json.loads(tj.read_text()).get("pace") == "v2"): continue
         lesson = json.loads(lp.read_text(encoding="utf-8"))
-        voice = lesson.get("voice", "en-GB-SoniaNeural"); rate = lesson.get("rate", "-10%")
+        voice = lesson.get("voice", "en-GB-SoniaNeural"); rate = lesson.get("rate", "-18%")
         text = " ".join(lesson["text"])
-        bounds = asyncio.run(synth(text, voice, rate, mp3))
+        # one sentence at a time + a calm pause after each, so learners can read along
+        sents = [x for x in re.split(r'(?<=[.!?][”"]?)\s+', text) if x]
+        pieces, words, t0 = [], [], 0.0
+        for k, sent in enumerate(sents):
+            part = mp3.with_suffix(f".{k}.mp3")
+            b_ = asyncio.run(synth(sent, voice, rate, part))
+            w_ = align(sent.split(), b_)
+            words += [[round(a + t0, 2), round(e + t0, 2)] for a, e in w_]
+            dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(part)], capture_output=True, text=True).stdout)
+            pieces.append(part); t0 += dur + GAP
+        lst = mp3.with_suffix(".txt")
+        sil = mp3.with_suffix(".sil.mp3")
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", str(GAP), "-c:a", "libmp3lame", "-b:a", "48k", str(sil)], check=True)
+        lst.write_text("".join(f"file '{p.name}'\nfile '{sil.name}'\n" for p in pieces))
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-ar", "24000", "-ac", "1", "-c:a", "libmp3lame", "-b:a", "64k", str(mp3)], check=True, cwd=str(mp3.parent))
+        for p_ in pieces + [lst, sil]: p_.unlink()
         tokens = text.split()
-        words = align(tokens, bounds)
+        assert len(words) == len(tokens)
         # sentence starts: first token of each sentence
         starts, new = [], True
         for tok, (s, _) in zip(tokens, words):
             if new: starts.append(s)
             new = bool(re.search(r"[.!?][”\"']?$", tok))
         tj.write_text(json.dumps({"start": words[0][0], "end": words[-1][1], "starts": starts, "tag": f"words-1|{voice}",
-            "words": words, "env": envelope(mp3), "hop": 0.05}, ensure_ascii=False), encoding="utf-8")
+            "words": words, "env": envelope(mp3), "hop": 0.05, "pace": "v2"}, ensure_ascii=False), encoding="utf-8")
         print(f"voiced {lid}: {len(tokens)} words, {words[-1][1]:.1f}s, {voice}"); made += 1
     # short card sentences (mistake corrections)
     root = LESSONS.parents[1]
@@ -72,11 +89,11 @@ def main():
         f = (m.get("audio") or {}).get("file")
         if not f: continue
         mp3, tj = root / "assets" / f"{f}.mp3", root / "assets" / f"{f}.json"
-        if mp3.exists() and tj.exists(): continue
+        if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("pace") == "v2": continue
         voice = ["en-GB-SoniaNeural", "en-GB-RyanNeural", "en-GB-LibbyNeural", "en-GB-ThomasNeural"][i % 4]
-        bounds = asyncio.run(synth(m["correct"], voice, "-12%", mp3))
+        bounds = asyncio.run(synth(m["correct"], voice, "-18%", mp3))
         words = align(m["correct"].split(), bounds)
-        tj.write_text(json.dumps({"text": m["correct"], "words": words, "tag": voice}), encoding="utf-8"); made += 1
+        tj.write_text(json.dumps({"text": m["correct"], "words": words, "tag": voice, "pace": "v2"}), encoding="utf-8"); made += 1
     print(f"{made} file(s) voiced.")
 
 if __name__ == "__main__":
