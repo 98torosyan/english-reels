@@ -1,0 +1,30 @@
+[
+ {"id":"dont-know","series":"SAY IT NATURALLY","chip":"A2–B1 · SPEAKING","title":"Stop saying <em>“I don’t know”</em>","subtitle_hy":"6 բնական տարբերակ, որոնք խոսքդ ավելի վստահ կդարձնեն","items":[
+  {"en":"I’m not sure.","hy":"Վստահ չեմ։","example":"I’m not sure. Maybe tomorrow?","example_hy":"Վստահ չեմ։ Գուցե վա՞ղը։"},
+  {"en":"I have no idea.","hy":"Գաղափար չունեմ։","example":"I have no idea where my keys are.","example_hy":"Գաղափար չունեմ, թե որտեղ են բանալիներս։"},
+  {"en":"Let me think.","hy":"Թող մտածեմ։","example":"Let me think… Yes, it was on Monday.","example_hy":"Թող մտածեմ… Այո, երկուշաբթի էր։"},
+  {"en":"It’s hard to say.","hy":"Դժվար է ասել։","example":"It’s hard to say who will win.","example_hy":"Դժվար է ասել, թե ով կհաղթի։"},
+  {"en":"I’ll find out.","hy":"Կպարզեմ։","example":"Good question. I’ll find out for you.","example_hy":"Լավ հարց է։ Կպարզեմ Ձեզ համար։"},
+  {"en":"Good question!","hy":"Լավ հարց է։","example":"Good question! Let me check.","example_hy":"Լավ հարց է։ Թույլ տվեք ստուգեմ։"}]},
+ {"id":"make-do","series":"COLLOCATIONS","chip":"A2–B1 · VOCABULARY","title":"<em>Make</em> or <em>do</em>?","subtitle_hy":"MAKE՝ երբ ինչ-որ բան ստեղծում ենք, DO՝ գործերի և առաջադրանքների համար","items":[
+  {"en":"make a mistake","hy":"սխալվել","example":"Everyone makes mistakes.","example_hy":"Բոլորն էլ սխալվում են։"},
+  {"en":"make a decision","hy":"որոշում կայացնել","example":"It’s time to make a decision.","example_hy":"Ժամանակն է որոշում կայացնելու։"},
+  {"en":"make friends","hy":"ընկերներ ձեռք բերել","example":"It’s easy to make friends at school.","example_hy":"Դպրոցում հեշտ է ընկերներ ձեռք բերել։"},
+  {"en":"do your homework","hy":"տնային աշխատանքն անել","example":"I do my homework after dinner.","example_hy":"Տնային աշխատանքս անում եմ ընթրիքից հետո։"},
+  {"en":"do the shopping","hy":"գնումներ անել","example":"We do the shopping on Saturdays.","example_hy":"Մենք գնումներ ենք անում շաբաթ օրերին։"},
+  {"en":"do your best","hy":"անել հնարավորինս լավը","example":"Don’t worry — just do your best!","example_hy":"Մի՛ անհանգստացիր, պարզապես արա հնարավորինս լավը։"}]},
+ {"id":"feelings","series":"NEW WORDS","chip":"B1 · VOCABULARY","title":"6 feelings <em>beyond</em> happy and sad","subtitle_hy":"Զգացմունքներ նկարագրող 6 բառ՝ օրինակներով","items":[
+  {"en":"delighted","hy":"շատ ուրախ","example":"I was delighted to hear the news.","example_hy":"Շատ ուրախացա, երբ լսեցի այդ լուրը։"},
+  {"en":"exhausted","hy":"ուժասպառ","example":"After the long walk, we were exhausted.","example_hy":"Երկար զբոսանքից հետո ուժասպառ էինք։"},
+  {"en":"nervous","hy":"անհանգիստ","example":"She feels nervous before exams.","example_hy":"Նա անհանգստանում է քննություններից առաջ։"},
+  {"en":"proud","hy":"հպարտ","example":"My parents are proud of me.","example_hy":"Ծնողներս հպարտանում են ինձնով։"},
+  {"en":"confused","hy":"շփոթված","example":"I’m confused. Could you explain it again?","example_hy":"Շփոթվել եմ։ Կարո՞ղ եք նորից բացատրել։"},
+  {"en":"relieved","hy":"թեթևացած","example":"I was relieved when the test was over.","example_hy":"Թեթևացա, երբ թեստն ավարտվեց։"}]},
+ {"id":"cafe","series":"REAL-LIFE ENGLISH","chip":"A2 · SPEAKING","title":"Order in a café <em>like a local</em>","subtitle_hy":"6 արտահայտություն սրճարանում պատվիրելու համար","items":[
+  {"en":"Could I have a latte, please?","hy":"Կարո՞ղ եմ մեկ լատտե ստանալ, խնդրում եմ։","example":"Could I have a latte, please? — Of course.","example_hy":"Կարո՞ղ եմ մեկ լատտե ստանալ։ — Իհարկե։"},
+  {"en":"I’d like a cup of tea.","hy":"Ես կցանկանայի մեկ բաժակ թեյ։","example":"I’d like a cup of tea with lemon.","example_hy":"Կցանկանայի մեկ բաժակ թեյ կիտրոնով։"},
+  {"en":"To have here or to take away?","hy":"Այստե՞ղ, թե՞ տանելու։","example":"To take away, please.","example_hy":"Տանելու, խնդրում եմ։"},
+  {"en":"Can I pay by card?","hy":"Կարո՞ղ եմ քարտով վճարել։","example":"Can I pay by card? — Yes, sure.","example_hy":"Կարո՞ղ եմ քարտով վճարել։ — Այո, իհարկե։"},
+  {"en":"Could I have the bill, please?","hy":"Կարո՞ղ եմ հաշիվը ստանալ, խնդրում եմ։","example":"Excuse me, could I have the bill, please?","example_hy":"Ներեցեք, կարո՞ղ եմ հաշիվը ստանալ։"},
+  {"en":"Keep the change.","hy":"Մանրը թողեք Ձեզ։","example":"Thank you! Keep the change.","example_hy":"Շնորհակալություն։ Մանրը թողեք Ձեզ։"}]}
+]

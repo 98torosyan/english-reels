@@ -64,4 +64,4 @@ Real publishing remains off until the owner approves it explicitly.
 2. `python review/apply_review.py review.json` → approved items get `review_status: approved`.
 3. `python publish/stage_media.py --media-repo ../english-reels-media` → renders approved items, copies media to the public media repo, fills `media` URLs (`staged`).
 4. Commit + push both repositories.
-5. `publish.yml` runs at 13:07 and 19:07 Yerevan and publishes the one item that is due. It is a dry run until the repository variable `PUBLISH_ENABLED` is set to `true` (Settings → Secrets and variables → Actions → Variables).
+5. `publish.yml` runs at 13:07 and 19:07 Yerevan and publishes the one item that is due. It publishes for real only while the file `publish/ENABLED` exists — delete it to pause everything.

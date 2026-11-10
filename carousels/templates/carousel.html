@@ -28,7 +28,7 @@
     .body-en{margin-top:26px;font:600 40px/1.3 Literata,serif;overflow-wrap:anywhere}
     .body-hy{margin-top:24px;font:500 31px/1.45 NotoArmenian,sans-serif;color:#E4DEFA;overflow-wrap:anywhere}
     .pattern{margin-top:26px;padding:22px 26px;border-radius:24px;background:#ffffff0d;border:1px solid #ffffff20;font:700 31px/1.35 Inter,sans-serif;color:#F2C86B;overflow-wrap:anywhere}
-    .wrong{margin-top:22px;padding:18px 22px;border-radius:21px;background:#712e4733;border:1.5px solid #FF829277;color:#FFD9E0;font:600 29px/1.32 Literata,serif;overflow-wrap:anywhere}
+    .wrong{margin-top:22px;padding:18px 22px;border-radius:21px;background:#B23F781f;border:1.5px solid #B23F7899;color:#F3DCE7;font:600 29px/1.32 Literata,serif;overflow-wrap:anywhere}
     .right{margin-top:17px;padding:18px 22px;border-radius:21px;background:#2E9E6A1c;border:1.5px solid #2E9E6A88;color:#E8FFF3;font:600 29px/1.32 Literata,serif;overflow-wrap:anywhere}
     .practice{margin-top:29px;font:600 31px/1.36 Literata,serif}
     .answer{margin-top:14px;color:#E9C46A;font:700 24px/1.35 Inter,sans-serif}
@@ -39,13 +39,19 @@
     .save-panel p{margin-top:18px;color:#E4DEFA;font:500 29px/1.45 NotoArmenian,sans-serif;max-width:800px}
     .save-panel .pill{margin-top:36px;padding:15px 28px;border-radius:99px;background:#E9C46A;color:#17183A;font-size:25px;font-weight:800}
     #save[hidden]{display:none}
+    .big-num{font:700 220px/1 Literata,serif;color:#E9C46A}
+    .swipe{margin-top:40px;display:inline-block;padding:14px 26px;border-radius:99px;background:#E9C46A;color:#17183A;font:800 26px Inter,sans-serif}
+    .item-num{font:800 24px Inter,sans-serif;letter-spacing:5px;color:#A891F7}
+    .item-en{margin-top:18px;font:700 66px/1.12 Literata,serif;color:#E9C46A}
+    .item-hy{margin-top:16px;font:600 40px/1.35 NotoArmenian,sans-serif;color:#fff}
+    .item-ex{margin-top:40px;padding-top:30px;border-top:1.5px solid #A891F744;font:500 38px/1.38 Literata,serif;font-style:italic}
     .footer{position:absolute;left:78px;right:78px;bottom:53px;display:flex;justify-content:space-between;align-items:center;color:#C9C2E3;font-size:17px;font-weight:700}
     .footer .brand{color:#A891F7;letter-spacing:2.6px;font-weight:800}
     .page{position:absolute;right:78px;top:463px;color:#C9C2E3;font-size:17px;font-weight:700;letter-spacing:2px}
   </style>
 </head>
 <body>
-  <div class="grain"></div>
+  
   <header class="header"><img class="logo" src="__LOGO_DATA__" alt=""><div><div class="brand-name">Gayane Torosyan</div><div class="brand-sub">ENGLISH READING ROOM</div></div></header>
   <div class="rainbow"><i style="background:#B23F78"></i><i style="background:#7A4FD6"></i><i style="background:#3E5FD9"></i><i style="background:#1C8AA3"></i><i style="background:#2E9E6A"></i><i style="background:#E8A317"></i></div>
   <div id="chip" class="chip">A1–B1 · GRAMMAR</div>
@@ -54,13 +60,13 @@
   <div id="page" class="page"></div>
   <main id="card" class="card"></main>
   <section id="save" class="save-panel" hidden><img src="__LOGO_DATA__" alt=""><h2>Read · Learn · <em>Remember</em></h2><p id="save-hy"></p><span class="pill">Save 📌</span></section>
-  <footer class="footer"><span>Let's read together</span><span class="brand">ENGLISH READING ROOM</span></footer>
+  <footer class="footer"><span>Let's read together</span><span class="brand">@english.readingroom</span></footer>
   <script>
     window.setSlide=data=>{
-      document.getElementById('chip').textContent=`${data.level} · GRAMMAR`;
+      document.getElementById('chip').textContent=data.level;
       document.getElementById('series').textContent=data.series;
       document.getElementById('title').innerHTML=data.title;
-      document.getElementById('page').textContent=`${String(data.index+1).padStart(2,'0')} / 07`;
+      document.getElementById('page').textContent=`${String(data.index+1).padStart(2,'0')} / ${String(data.total).padStart(2,'0')}`;
       const card=document.getElementById('card');
       const hy=`<div class="body-hy">${data.rule}</div>`;
       if(data.kind==='hook') card.innerHTML=`<div class="card-label">ONE CLEAR RULE · <span class="card-label-hy">Մեկ հստակ կանոն</span></div><div class="body-en">${data.example}</div>${hy}<div class="pattern">${data.pattern}</div>`;
@@ -69,6 +75,9 @@
       if(data.kind==='example') card.innerHTML=`<div class="card-label">EXAMPLE · <span class="card-label-hy">Օրինակ</span></div><div class="body-en" style="font-size:46px">${data.example}</div><div class="body-hy">${data.example_hy}</div><div class="pattern">${data.pattern}</div>`;
       if(data.kind==='mistake') card.innerHTML=`<div class="card-label">SPOT THE SLIP · <span class="card-label-hy">Գտիր սխալը</span></div><div class="wrong">✕ &nbsp;${data.wrong}</div><div class="right">✓ &nbsp;${data.fix}</div><div class="body-hy">${data.rule}</div>`;
       if(data.kind==='practice') card.innerHTML=`<div class="card-label">YOUR TURN · <span class="card-label-hy">Քո հերթն է</span></div><div class="practice">${data.practice}</div><div class="answer">ANSWER · ${data.answer}</div><div class="body-hy">${data.rule}</div>`;
+      if(data.kind==='listhook') card.innerHTML=`<div class="big-num">${data.count}</div><div class="body-hy" style="font-size:38px;margin-top:10px">${data.subtitle}</div><div class="swipe">Swipe →</div>`;
+      if(data.kind==='item') card.innerHTML=`<div class="item-num">${String(data.num).padStart(2,'0')}</div><div class="item-en">${data.en}</div><div class="item-hy">${data.hy}</div><div class="item-ex">“${data.example}”</div><div class="body-hy" style="font-size:30px">${data.example_hy}</div>`;
+      if(data.kind==='item'||data.kind==='listhook') document.getElementById('title').innerHTML=data.kind==='item'?data.title:data.title;
       if(data.kind==='save'){
         card.hidden=true; document.getElementById('save').hidden=false;
         document.getElementById('save-hy').textContent=data.rule;

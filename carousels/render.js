@@ -4,6 +4,17 @@ const { chromium } = require('playwright-core');
 const utils = require('../reels/render_utils');
 
 const RULES = JSON.parse(fs.readFileSync(path.join(utils.ROOT, 'carousels/data/rules.json'), 'utf8'));
+const LISTS = JSON.parse(fs.readFileSync(path.join(utils.ROOT, 'carousels/data/lists.json'), 'utf8'));
+
+function listPlan(set) {
+  const n = set.items.length + 2;
+  const base = { level: set.chip, total: n, series: set.series, rule: '' };
+  return [
+    { ...base, kind: 'listhook', title: set.title, subtitle: escapeHtml(set.subtitle_hy), count: set.items.length },
+    ...set.items.map((it, i) => ({ ...base, kind: 'item', title: set.title, num: i + 1, en: escapeHtml(it.en), hy: escapeHtml(it.hy), example: escapeHtml(it.example), example_hy: escapeHtml(it.example_hy) })),
+    { ...base, kind: 'save', title: '', rule: 'Պահպանի՛ր և կիսվի՛ր ընկերոջդ հետ, ով նույնպես անգլերեն է սովորում։' },
+  ].map((slide, index) => ({ ...slide, index }));
+}
 const CHROME = process.env.CHROME_PATH || [
   'C:/Program Files/Google/Chrome/Application/chrome.exe',
   'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
@@ -62,7 +73,8 @@ function measure(page) {
 }
 
 async function renderCarousel({ browser, baseUrl, ruleId, outputDirectory }) {
-  const rule = RULES.find((item) => item.id === ruleId);
+  const list = LISTS.find((item) => item.id === ruleId);
+  const rule = RULES.find((item) => item.id === ruleId) || list;
   if (!rule) throw new Error(`Unknown carousel rule: ${ruleId}`);
   const template = fs.readFileSync(path.join(utils.ROOT, 'carousels/templates/carousel.html'), 'utf8');
   const html = utils.htmlAssets(template, baseUrl);
@@ -75,7 +87,7 @@ async function renderCarousel({ browser, baseUrl, ruleId, outputDirectory }) {
   utils.ensureDirectory(target);
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1350);
-  const plan = slidePlan(rule);
+  const plan = list ? listPlan(list) : slidePlan(rule).map((x) => ({ ...x, total: 7, level: `${rule.level} · GRAMMAR` }));
   const firstLayout = await (async () => {
     await page.evaluate((slide) => window.setSlide(slide), plan[0]);
     await page.evaluate(async () => {

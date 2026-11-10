@@ -51,8 +51,14 @@ def main() -> int:
         target.mkdir(parents=True, exist_ok=True)
         urls = []
         for f in files:
-            shutil.copy2(f, target / f.name)
-            urls.append(f"{BASE_URL}/{item['id']}/{f.name}")
+            if f.suffix == ".png":  # Instagram accepts JPEG images only
+                from PIL import Image
+                name = f.stem + ".jpg"
+                Image.open(f).convert("RGB").save(target / name, "JPEG", quality=93, optimize=True)
+            else:
+                name = f.name
+                shutil.copy2(f, target / name)
+            urls.append(f"{BASE_URL}/{item['id']}/{name}")
         item["media"] = {"video_url": urls[0]} if item["format"] == "REELS" else {"slides": urls}
         item["review_status"] = "staged"
         staged += 1

@@ -2,8 +2,7 @@ name: Publish due post
 
 on:
   schedule:
-    - cron: "7 9 * * *"   # 13:07 Yerevan — carousels
-    - cron: "7 15 * * *"  # 19:07 Yerevan — reels
+    - cron: "7 * * * *"   # every hour at :07; publishes the item that is due
   workflow_dispatch:
     inputs:
       dry_run:
@@ -26,12 +25,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Publish (real only when PUBLISH_ENABLED is true)
+      - name: Publish (real only when publish/ENABLED exists)
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          DRY_RUN: ${{ (vars.PUBLISH_ENABLED == 'true' && (github.event_name == 'schedule' || inputs.dry_run == false)) && '0' || '1' }}
-        run: python publish/run_due.py
+          MANUAL_DRY: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
+        run: |
+          if [ -f publish/ENABLED ] && [ "$MANUAL_DRY" = "0" ]; then export DRY_RUN=0; else export DRY_RUN=1; fi
+          echo "DRY_RUN=$DRY_RUN"
+          python publish/run_due.py
       - name: Save published status
         run: |
           if ! git diff --quiet queue.json; then
