@@ -103,7 +103,9 @@ async function renderCarousel({ browser, baseUrl, ruleId, outputDirectory }) {
  const rule = RULES.find((item) => item.id === ruleId) || list || (ruleId === 'welcome' ? { id: 'welcome' } : null);
  if (!rule) throw new Error(`Unknown carousel rule: ${ruleId}`);
  const template = fs.readFileSync(path.join(utils.ROOT, 'carousels/templates/carousel.html'), 'utf8');
- const html = utils.htmlAssets(template, baseUrl);
+ const skill = test ? 'test' : LISTS.find((item) => item.id === ruleId)
+   ? (['COLLOCATIONS', 'NEW WORDS'].includes(list.series) ? 'vocabulary' : 'speaking') : 'grammar';
+ const html = utils.paperTheme(utils.htmlAssets(template, baseUrl), skill);
  const working = path.join(utils.ROOT, '.render-work');
  utils.ensureDirectory(working);
  const htmlPath = path.join(working, 'carousel.html');

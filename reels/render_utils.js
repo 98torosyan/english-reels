@@ -162,7 +162,19 @@ function verifyVideo(videoPath) {
   return { width: Number(dimensions[1]), height: Number(dimensions[2]), fps: fps ? fps[1] : 'unknown', duration: duration ? duration[1] : 'unknown', hasAudio };
 }
 
+const SKILL = {
+  speaking: '#1C8AA3', pronunciation: '#B23F78', grammar: '#3E5FD9', test: '#2E9E6A', vocabulary: '#B9790B', reading: '#6A49E2',
+};
+// Light "dictionary page" theme layered over a template; skill picks the accent colour.
+function paperTheme(html, skill) {
+  if (process.env.THEME === 'dark') return html;
+  const css = fs.readFileSync(path.join(__dirname, 'templates', 'paper.css'), 'utf8');
+  return html.replace('</head>', `<style>:root{--c:${SKILL[skill] || SKILL.reading}}</style><style>${css}</style></head>`);
+}
+
 module.exports = {
+  SKILL,
+  paperTheme,
   ROOT,
   OUTPUT,
   FFmpeg,

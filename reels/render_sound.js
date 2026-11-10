@@ -77,7 +77,7 @@ async function renderSound(browser, baseUrl, item) {
   const work = path.join(utils.ROOT, '.render-work');
   utils.ensureDirectory(work); utils.ensureDirectory(output);
   const fonts = `${baseUrl}/node_modules/@fontsource-variable/inter/files`;
-  const html = utils.htmlAssets(fs.readFileSync(path.join(__dirname, 'templates', 'sound.html'), 'utf8'), baseUrl)
+  const html = utils.paperTheme(utils.htmlAssets(fs.readFileSync(path.join(__dirname, 'templates', 'sound.html'), 'utf8'), baseUrl), 'pronunciation')
     .replaceAll('__INTER_EXT_FONT__', `${fonts}/inter-latin-ext-wght-normal.woff2`)
     .replaceAll('__INTER_GREEK_FONT__', `${fonts}/inter-greek-wght-normal.woff2`);
   const htmlPath = path.join(work, 'sound.html');

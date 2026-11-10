@@ -76,7 +76,7 @@ async function renderDialogue(browser, baseUrl, d) {
   const posterPath = path.join(output, `${name}.png`);
   const work = path.join(utils.ROOT, '.render-work');
   utils.ensureDirectory(work); utils.ensureDirectory(output);
-  const html = utils.htmlAssets(fs.readFileSync(path.join(__dirname, 'templates', 'dialogue.html'), 'utf8'), baseUrl);
+  const html = utils.paperTheme(utils.htmlAssets(fs.readFileSync(path.join(__dirname, 'templates', 'dialogue.html'), 'utf8'), baseUrl), 'speaking');
   const htmlPath = path.join(work, 'dialogue.html');
   fs.writeFileSync(htmlPath, html, 'utf8');
   const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });

@@ -132,7 +132,8 @@ def create_container(client: GraphClient, user_id: str, content: dict) -> str:
             "video_url": content["video_url"],
             "caption": caption,
             "share_to_feed": "true",
-            **({"thumb_offset": str(int(content["thumb_offset"]))} if content.get("thumb_offset") else {}),
+            **({"cover_url": content["cover_url"]} if content.get("cover_url") else
+               {"thumb_offset": str(int(content["thumb_offset"]))} if content.get("thumb_offset") else {}),
         })
         container_id = str(response.get("id", ""))
         if not container_id:

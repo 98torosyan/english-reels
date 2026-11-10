@@ -25,7 +25,7 @@ h1{font:700 96px/1.08 Literata,serif;letter-spacing:-1.5px}h1 em{color:#E9C46A;f
   const work = path.join(utils.ROOT, '.render-work'); utils.ensureDirectory(work);
   const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
   for (const s of DATA.filter((x) => !process.argv[2] || x.id === process.argv[2])) {
-    const f = path.join(work, 'story.html'); fs.writeFileSync(f, utils.htmlAssets(HTML(s), baseUrl));
+    const f = path.join(work, 'story.html'); fs.writeFileSync(f, utils.paperTheme(utils.htmlAssets(HTML(s), baseUrl), s.id.startsWith('w-') ? 'vocabulary' : s.id.startsWith('p-') ? 'speaking' : s.id === 'grammar' ? 'grammar' : ['ufar', 'quiz'].includes(s.id) ? 'test' : 'reading'));
     await page.goto(`${baseUrl}${utils.renderHtmlPath(f)}`, { waitUntil: 'networkidle' });
     await page.evaluate(() => Promise.all([document.fonts.load('40px NotoArmenian', 'Աբ'), document.fonts.load('40px Literata', 'Ab')]));
     await page.screenshot({ path: path.join(out, `story-${s.id}.jpg`), type: 'jpeg', quality: 93 });

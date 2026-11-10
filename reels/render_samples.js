@@ -105,7 +105,8 @@ function buildStoryHtml(payload, baseUrl) {
   html = html.replace(/<div id="words">[\s\S]*?<\/div><div id="card">/, `<div id="words"><h4>NEW WORDS · ՆՈՐ ԲԱՌԵՐ</h4>${words}</div><div id="card">`);
   html = html.replace(/<h2>Part 2 <em>tomorrow<\/em><\/h2>/, storyEnd);
   html = html.replace('</head>', '<link rel="icon" href="data:,"></head>');
-  return html;
+  if (process.env.THEME !== 'dark') html = html.replace("linear-gradient(#E9C46A,#E9C46A)", `linear-gradient(${utils.SKILL.reading}38,${utils.SKILL.reading}38)`);
+  return utils.paperTheme(html, 'reading');
 }
 
 function sentenceAudio(slug, sentenceNumber) {
@@ -128,9 +129,10 @@ function sentenceAudio(slug, sentenceNumber) {
   };
 }
 
-function buildCardHtml(baseUrl) {
+function buildCardHtml(baseUrl, kind) {
   const template = fs.readFileSync(path.join(utils.ROOT, 'reels/templates/card.html'), 'utf8');
-  return utils.htmlAssets(template, baseUrl);
+  const skill = { quiz: 'test', mistake: 'grammar', word: 'vocabulary' }[kind] || 'grammar';
+  return utils.paperTheme(utils.htmlAssets(template, baseUrl), skill);
 }
 
 async function measureStory(page) {
@@ -207,7 +209,7 @@ async function renderCard(browser, baseUrl, input, audio, outputName, correctInd
   const posterPath = path.join(output, `${outputName}.png`);
   const htmlPath = path.join(utils.ROOT, '.render-work', 'card.html');
   utils.ensureDirectory(path.dirname(htmlPath));
-  fs.writeFileSync(htmlPath, buildCardHtml(baseUrl), 'utf8');
+  fs.writeFileSync(htmlPath, buildCardHtml(baseUrl, input.kind || (outputName.split('-')[0])), 'utf8');
   const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
   // Human pace: time to read and think before the answer, then hold so viewers can read it.
