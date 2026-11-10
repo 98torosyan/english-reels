@@ -58,6 +58,7 @@ def main():
             print(f"SKIPPED {lid}: {error}")
             for f in (mp3, tj): f.unlink(missing_ok=True)
     made += voice_cards()
+    made += voice_sounds()
     print(f"{made} file(s) voiced.")
 
 
@@ -113,6 +114,25 @@ def voice_cards():
         except Exception as error:
             print(f"SKIPPED card {m['id']}: {error}"); mp3.unlink(missing_ok=True); continue
         tj.write_text(json.dumps({"text": m["correct"], "words": words, "tag": voice, "pace": "v2"}), encoding="utf-8"); made += 1
+    return made
+
+def voice_sounds():
+    """Sound it out: each word on its own (slow, clear) + the practice sentence with word timings."""
+    made = 0
+    root = LESSONS.parents[1]
+    data = json.loads((root / "reels/data/sounds.json").read_text(encoding="utf-8"))
+    for item in data["sounds"]:
+        out = root / "assets" / "sounds" / item["id"]; out.mkdir(parents=True, exist_ok=True)
+        jobs = [("a", item["a"]["word"] + ".", "-15%"), ("b", item["b"]["word"] + ".", "-15%"), ("s", item["sentence"], "-18%")]
+        for key, text, rate in jobs:
+            mp3, tj = out / f"{key}.mp3", out / f"{key}.json"
+            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text: continue
+            try:
+                bounds = asyncio.run(synth(text, item["voice"], rate, mp3))
+                words = align(text.split(), bounds)
+            except Exception as error:
+                print(f"SKIPPED sound {item['id']}/{key}: {error}"); mp3.unlink(missing_ok=True); continue
+            tj.write_text(json.dumps({"text": text, "words": words, "tag": item["voice"]}), encoding="utf-8"); made += 1
     return made
 
 if __name__ == "__main__":
