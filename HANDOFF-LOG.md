@@ -49,3 +49,8 @@
   - `qc/system_check.py`՝ ամբողջական ստուգում (հերթ, մեդիա, emoji, ձայներ)։
   - Ստեղծված, բայց չօգտագործված fine-grained token `publish-ticker` (միայն english-reels, Actions RW). կարելի է ջնջել GitHub → Settings → Fine-grained tokens։
   - Երկխոսություն pizza/5 («Fifteen Green Street.») ձայնը չի ստեղծվել. ստուգել, մինչ pizza-ն պլան մտնի։
+
+## 2026-11-11 (գիշեր)
+- Նոր դիզայն՝ «բառարանի էջ». թղթի ֆոն, ամեն հմտություն իր գույնով (`reels/render_utils.js` → `SKILL`, `paperTheme`, `reels/templates/paper.css`). Մուգ տարբերակը՝ `THEME=dark`։
+- Ամեն սերիա ունի իր շապիկի կոմպոզիցիան (`covers/cover.html`, `covers/specs.py`, `covers/render_covers.js`)։ Reels-ը հրապարակվում են `cover_url`-ով (`publish.py`), carousel-ների 01 սլայդը շապիկն է (`covers/attach_covers.py`)։
+- Նոյեմբերի 11–18-ի բոլոր նյութերը (29 + stories) վերապատրաստված են նոր ոճով։
