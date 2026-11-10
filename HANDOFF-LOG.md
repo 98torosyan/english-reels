@@ -28,3 +28,15 @@
 - `publish/plan_launch.py` → queue.json (launch burst 10–14 Nov, then weekly rhythm). Items 10–14 Nov are staged in english-reels-media.
 - Merged to `main`; `publish.yml` runs hourly at :07 and publishes for real because `publish/ENABLED` exists (delete it to pause).
 - Open: stage items from 15 Nov on; more stories (only 3 have audio); Exam/UFAR and Kids series; new voices.
+
+## 2026-11-10 (երեկո)
+- Emoji և նկարազարդ հերոսներ ամբողջովին հանված են (պատմությունների reels-ից նույնպես). Zoo մաս 2/3-ը վերապատրաստված և փոխարինված են media պահոցում։
+- Նոր սերիաներ.
+  - **Sound it out** (`reels/render_sound.js`, `reels/templates/sound.html`, `reels/data/sounds.json`)՝ 10 բառազույգ հայերին բնորոշ դժվար հնչյուններով. լսել → բացատրություն → A/B թեստ → նախադասություն + «Your turn»։
+  - **Everyday English** (`reels/render_dialogue.js`, `reels/templates/dialogue.html`, `reels/data/dialogues.json`)՝ 14 երկխոսություն. լսել, հետո դիտողը խաղում է B-ի դերը (B-ի ձայնը լռում է, ժամանակի գոտի)։
+  - 8 նոր carousel՝ get, pay, catch, keep, break, word-pairs (collocations), polite, goodbye։
+- Ձայները՝ `voices.yml` (`voice_sounds`, `voice_dialogues`), `apt-get update` ավելացված։ Libby ձայնը երկու նախադասության վրա ձախողվեց. փոխարինված է։
+- Երաժշտություն՝ 16 track (`music/make_music2.py`-ով 8 նոր՝ դաշնամուր, lofi, մարիմբա, կիթառ, չելեստա, լարային)։ `stage_media.py`-ն ընտրում է track-ը հերթափոխով (`MUSIC_TRACK`), հարևան reels-ը նույն երաժշտությունը չունեն։
+- `publish/plan_week.py`՝ նոյեմբերի 11–17. 12:00 carousel, 17:00 երկխոսություն, 20:00 հիմնական reel, 09:00/18:00 stories։
+- Saturday Market մաս 2-ի չակերտները ուղղված են (յուրաքանչյուր նախադասություն՝ ամբողջական չակերտներով)։
+- Բաց է. նոյեմբերի 18-ից հետո պլանը, keep/break/word-pairs/goodbye carousel-ները դեռ հերթում չեն, Sound it out 03–10, երկխոսություններ 09–14։
