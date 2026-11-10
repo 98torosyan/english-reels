@@ -8,3 +8,4 @@ exports/
 .env
 .env.*
 !.env.example
+review/index.html

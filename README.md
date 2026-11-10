@@ -8,7 +8,10 @@
 - `carousels/` — the 21-rule bank and seven-slide carousel renderer.
 - `captions/` — caption guidance; the current dated captions are stored with their entries in `queue.json`.
 - `publish/` — safe API checks, draft queue builder, and a manual publishing client.
-- `.github/workflows/` — an account/container check only. There is no publishing or scheduled workflow.
+- `.github/workflows/` — `test-meta-access.yml` (account check), `publish.yml` (scheduled publishing, off until the `PUBLISH_ENABLED` variable is `true`), `qc.yml` (English check).
+- `review/` — review gallery (`build_review.py` → `review/index.html`) and `apply_review.py`.
+- `music/` — original background loops (`make_music.py`); mixed under the voice with automatic ducking.
+- `qc/` — LanguageTool English check.
 - `assets/` — the original book mark, lesson text, Armenian translations, timings, and voice tracks.
 
 The current three bundled stories are *A Day at the Zoo*, *The Saturday Market*, and *My Little Garden*. To add another site lesson, run:
@@ -54,3 +57,11 @@ The account/container check reads `IG_TOKEN` and `IG_USER_ID` from GitHub Action
 The current credential is a never-expiring Meta System User token. It does not use the 60-day Instagram Login refresh endpoint. If Meta revokes it or access changes, replace it in GitHub Secrets; do not write a token to this repository.
 
 Real publishing remains off until the owner approves it explicitly.
+
+## Publishing flow
+
+1. `python review/build_review.py` → open `review/index.html`, mark ✅/✏️, Export `review.json`.
+2. `python review/apply_review.py review.json` → approved items get `review_status: approved`.
+3. `python publish/stage_media.py --media-repo ../english-reels-media` → renders approved items, copies media to the public media repo, fills `media` URLs (`staged`).
+4. Commit + push both repositories.
+5. `publish.yml` runs at 13:07 and 19:07 Yerevan and publishes the one item that is due. It is a dry run until the repository variable `PUBLISH_ENABLED` is set to `true` (Settings → Secrets and variables → Actions → Variables).
