@@ -90,11 +90,12 @@
       "content_id": "plural-verb",
       "title": "Quiz",
       "caption": "Անգլերենի թեստ · English grammar quiz\n\n5-second quiz\n\nThe monkeys ___ and play.\nA jumps / B jump / C jumping\n\nԳրի՛ր պատասխանդ մեկնաբանություններում։ Ճիշտ պատասխանը՝ տեսանյութի վերջում։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishQuiz #Yerevan",
-      "review_status": "staged",
+      "review_status": "published",
       "thumb_offset": 3600,
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-quiz-plural-verb/quiz-plural-verb.mp4"
-      }
+      },
+      "published_at": "2026-11-10T21:02+04:00"
     },
     {
       "id": "2026-11-10-story-quiz",
@@ -107,10 +108,11 @@
       "content_id": "quiz",
       "title": "quiz",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-stories/story-quiz.jpg"
-      }
+      },
+      "published_at": "2026-11-10T21:02+04:00"
     },
     {
       "id": "2026-11-10-list-dont-know",
