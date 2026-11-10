@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="icon" href="data:,">
+ <style>
+ @font-face{font-family:Inter;src:url("__INTER_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ @font-face{font-family:IPA;src:url("__INTER_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0000-00FF}
+ @font-face{font-family:IPA;src:url("__INTER_EXT_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0100-02FF}
+ @font-face{font-family:IPA;src:url("__INTER_GREEK_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0370-03FF}
+ @font-face{font-family:Literata;src:url("__LITERATA_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ @font-face{font-family:NotoArmenian;src:url("__ARMENIAN_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ *{box-sizing:border-box;margin:0}
+ html,body{width:1080px;height:1920px;overflow:hidden;background:#17183A;color:#fff;font-family:Inter,sans-serif}
+ body{position:relative;background:radial-gradient(800px 650px at 90% 5%,#6A49E2aa,transparent 68%),radial-gradient(750px 800px at -10% 65%,#5A3B8C88,transparent 70%),linear-gradient(165deg,#17183A 5%,#2A1E4D 58%,#17183A)}
+ .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
+ .b1{width:760px;height:760px;background:#6A49E2;left:520px;top:-180px}
+ .b2{width:620px;height:620px;background:#5A3B8C;left:-260px;top:980px;opacity:.45}
+ .header{position:absolute;top:105px;left:82px;right:82px;display:flex;align-items:center;gap:24px}
+ .logo{width:96px;height:96px;border-radius:27px;box-shadow:0 14px 36px #08061588}
+ .brand-name{font-family:Literata,serif;font-size:38px;font-weight:700;letter-spacing:-.7px}
+ .brand-sub{margin-top:7px;color:#A891F7;font-size:22px;font-weight:800;letter-spacing:5px}
+ .rainbow{position:absolute;top:245px;left:84px;display:flex;gap:8px}
+ .rainbow i{display:block;width:42px;height:8px;border-radius:8px}
+ .eyebrow{position:absolute;top:296px;left:84px;right:84px;display:flex;align-items:center;justify-content:space-between}
+ .eyebrow b{color:#A891F7;font-size:30px;letter-spacing:5px;font-weight:800}
+ .eyebrow span{font:600 30px IPA,sans-serif;color:#E9C46A;padding:8px 22px;border:1.5px solid #E9C46A66;border-radius:99px}
+ .headline{position:absolute;top:378px;left:82px;right:82px;font:700 84px/1.12 Literata,serif;letter-spacing:-1.3px}
+ .headline .ln{display:block}
+ .gold{color:#E9C46A;font-style:italic;position:relative;display:inline-block}
+ .swoosh{position:absolute;left:0;bottom:-18px;width:100%;height:26px;overflow:visible}
+ .swoosh path{fill:none;stroke:#E9C46A;stroke-width:7;stroke-linecap:round}
+ .pair{position:absolute;top:650px;left:62px;right:62px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+ .card{position:relative;height:440px;border-radius:42px;background:linear-gradient(155deg,#6A49E233,#ffffff0a 58%);border:2px solid #A891F755;box-shadow:0 30px 80px #07061588;display:flex;flex-direction:column;align-items:center;padding-top:44px}
+ .tag{position:absolute;top:26px;left:28px;width:54px;height:54px;border-radius:50%;background:#ffffff14;color:#C9C2E3;font:800 26px/54px Inter,sans-serif;text-align:center}
+ .w{font:700 112px/1.05 Literata,serif;margin-top:36px;letter-spacing:-1px}
+ .ipa{font:500 44px/1.2 IPA,sans-serif;color:#A891F7;margin-top:14px}
+ .hy{font:600 38px/1.2 NotoArmenian,sans-serif;color:#E4DEFA;margin-top:22px}
+ .wave{position:absolute;bottom:34px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:8px;height:44px}
+ .wave i{display:block;width:8px;border-radius:8px;background:#E9C46A;height:8px;opacity:.25}
+ .check{position:absolute;top:22px;right:26px;width:62px;height:62px;opacity:0}
+ .check path{fill:none;stroke:#5CC491;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60}
+ .zone{position:absolute;top:1135px;left:62px;right:62px;height:520px}
+ .stage{position:absolute;inset:0;opacity:0}
+ .label{color:#A891F7;font:800 27px Inter,sans-serif;letter-spacing:5px;text-align:center}
+ .label-hy{margin-top:12px;color:#C9C2E3;font:500 32px NotoArmenian,sans-serif;text-align:center}
+ .tip{margin-top:30px;display:flex;align-items:baseline;gap:22px;padding:26px 34px;border-radius:28px;background:#ffffff0d;border:1.5px solid #A891F733}
+ .tip b{flex:0 0 190px;font:700 50px Literata,serif;color:#E9C46A}
+ .tip span{font:500 37px/1.35 NotoArmenian,sans-serif;color:#E4DEFA}
+ .ring{position:relative;width:230px;height:230px;margin:34px auto 0}
+ .ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
+ .ring circle{fill:none;stroke-width:14}
+ .ring .trk{stroke:#ffffff1f}.ring .arc{stroke:url(#rg);stroke-linecap:round}
+ .ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 116px/1 Literata,serif;color:#E9C46A}
+ .answer{position:absolute;top:160px;left:0;right:0;text-align:center;opacity:0}
+ .answer .big{font:700 92px/1.1 Literata,serif;color:#E9C46A;margin-top:24px}
+ .answer .big small{font:800 40px Inter,sans-serif;color:#C9C2E3;letter-spacing:4px;margin-right:18px;vertical-align:14px}
+ .sentence{margin-top:30px;padding:34px 38px;border-radius:32px;background:#ffffff0d;border:1.5px solid #A891F733;text-align:center;font:600 54px/1.3 Literata,serif}
+ .sw{opacity:.55;padding:0 3px;border-radius:8px}
+ .sw.key{color:#E9C46A}
+ .sw.done{opacity:1}
+ .sw.now{opacity:1;background:#E9C46A;color:#17183A}
+ .sentence-hy{margin-top:22px;text-align:center;font:500 36px/1.4 NotoArmenian,sans-serif;color:#E4DEFA}
+ .turn{margin:30px auto 0;width:560px;height:84px;border-radius:99px;background:#ffffff12;border:1.5px solid #E9C46A88;position:relative;overflow:hidden;opacity:0}
+ .turn i{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,#6A49E2,#A891F7aa)}
+ .turn span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:16px;font:800 30px Inter,sans-serif;letter-spacing:4px;color:#fff}
+ .turn span em{font:600 30px NotoArmenian,sans-serif;font-style:normal;letter-spacing:0;color:#E9C46A}
+ .foot{position:absolute;left:82px;right:82px;bottom:190px;display:flex;justify-content:space-between;color:#C9C2E3;font-size:26px;font-weight:700}
+ .foot .handle{letter-spacing:3px;color:#A891F7;font-weight:800}
+ .progress{position:absolute;left:82px;right:82px;bottom:140px;height:7px;border-radius:99px;background:#ffffff24;overflow:hidden}
+ .progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#6A49E2,#A891F7,#E9C46A)}
+ .outro{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:radial-gradient(680px 640px at 50% 42%,#6A49E2,#2A1E4D 56%,#17183A 82%);opacity:0}
+ .outro img{width:170px;height:170px;border-radius:42px;box-shadow:0 20px 60px #0009}
+ .outro h2{margin-top:44px;font:700 82px/1.06 Literata,serif}
+ .outro h2 em{color:#E9C46A}
+ .outro p{margin-top:22px;color:#E4DEFA;font-size:40px;font-weight:600}
+ .save{margin-top:46px;padding:16px 34px;border-radius:99px;background:#E9C46A;color:#17183A;font-size:36px;font-weight:800}
+ .follow{margin-top:22px;font-size:30px;font-weight:700;opacity:.9}
+ .signature{margin-top:58px;color:#A891F7;font-size:24px;font-weight:800;letter-spacing:5px}
+ .outro .rays{position:absolute;left:50%;top:42%;width:1400px;height:1400px;margin:-700px 0 0 -700px;background:repeating-conic-gradient(#ffffff0c 0 6deg,transparent 6deg 18deg);border-radius:50%;mask-image:radial-gradient(circle,#000 20%,transparent 62%)}
+ .outro>*{position:relative}
+ </style>
+</head>
+<body>
+ <div class="blob b1" id="b1"></div><div class="blob b2" id="b2"></div>
+ <header class="header"><img class="logo" src="__LOGO_DATA__" alt=""><div><div class="brand-name">Gayane Torosyan</div><div class="brand-sub">ENGLISH READING ROOM</div></div></header>
+ <div class="rainbow"><i style="background:#B23F78"></i><i style="background:#7A4FD6"></i><i style="background:#3E5FD9"></i><i style="background:#1C8AA3"></i><i style="background:#2E9E6A"></i><i style="background:#E8A317"></i></div>
+ <div class="eyebrow" id="eyebrow"><b id="series"></b><span id="focus"></span></div>
+ <h1 class="headline" id="headline"><span class="ln">Can you hear</span><span class="ln">the <span class="gold">difference?<svg class="swoosh" viewBox="0 0 300 26" preserveAspectRatio="none"><path id="sw" d="M4 18 C 80 4, 200 4, 296 14" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/></svg></span></span></h1>
+ <div class="pair" id="pair">
+  <div class="card" id="ca"><div class="tag">A</div><svg class="check" id="cka" viewBox="0 0 62 62"><path d="M12 32 L26 46 L52 16"/></svg><div class="w" id="wa"></div><div class="ipa" id="ia"></div><div class="hy" id="ha"></div><div class="wave"></div></div>
+  <div class="card" id="cb"><div class="tag">B</div><svg class="check" id="ckb" viewBox="0 0 62 62"><path d="M12 32 L26 46 L52 16"/></svg><div class="w" id="wb"></div><div class="ipa" id="ib"></div><div class="hy" id="hb"></div><div class="wave"></div></div>
+ </div>
+ <div class="zone">
+  <section class="stage" id="tips"><div class="label">HOW TO SAY IT</div><div class="label-hy">Ինչպես արտասանել</div><div class="tip"><b id="ta"></b><span id="tta"></span></div><div class="tip" style="margin-top:18px"><b id="tb"></b><span id="ttb"></span></div></section>
+  <section class="stage" id="test"><div class="label">LISTEN · A OR B?</div><div class="label-hy">Լսի՛ր և ընտրի՛ր</div>
+   <div class="ring" id="ring"><svg viewBox="0 0 230 230"><defs><linearGradient id="rg"><stop offset="0" stop-color="#A891F7"/><stop offset="1" stop-color="#E9C46A"/></linearGradient></defs><circle class="trk" cx="115" cy="115" r="98"/><circle id="arc" class="arc" cx="115" cy="115" r="98" stroke-dasharray="616" stroke-dashoffset="616"/></svg><b id="num">3</b></div>
+   <div class="answer" id="answer"><div class="label">THE ANSWER</div><div class="big" id="ansText"></div></div></section>
+  <section class="stage" id="say"><div class="label">NOW SAY IT</div><div class="sentence" id="sentence"></div><div class="sentence-hy" id="sentenceHy"></div><div class="turn" id="turn"><i id="turnBar"></i><span>YOUR TURN <em>· Քո հերթն է</em></span></div></section>
+ </div>
+ <footer class="foot"><span>Let's read together</span><span class="handle">@english.readingroom</span></footer>
+ <div class="progress"><i id="progress"></i></div>
+ <section id="outro" class="outro"><div class="rays" id="rays"></div><img id="outroLogo" src="__LOGO_DATA__" alt=""><h2>Listen · Say · <em>Repeat</em></h2><p>New sound every week.</p><span class="save" id="saveChip">Save</span><span class="follow">Full lessons with audio · link in bio</span><span class="signature">GAYANE TOROSYAN · ENGLISH READING ROOM</span></section>
+ <script>
+ const clamp=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-x,3), lerp=(a,b,x)=>a+(b-a)*x;
+ const back=x=>{const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+ let D=null, T=null;
+ const BARS=13;
+ window.configure=(data,timeline)=>{
+  D=data; T=timeline;
+  document.getElementById('series').textContent=`SOUND IT OUT · ${String(data.number).padStart(2,'0')}`;
+  document.getElementById('focus').textContent=data.focus;
+  for(const k of ['a','b']){
+   document.getElementById('w'+k).textContent=data[k].word;
+   document.getElementById('i'+k).textContent=data[k].ipa;
+   document.getElementById('h'+k).textContent=data[k].hy;
+   document.getElementById('t'+k).textContent=data[k].word;
+   document.getElementById('tt'+k).textContent=data[k].tip_hy;
+  }
+  document.querySelectorAll('.wave').forEach(w=>w.innerHTML='<i></i>'.repeat(BARS));
+  const right=data[data.test];
+  document.getElementById('ansText').innerHTML=`<small>${data.test.toUpperCase()}</small>${right.word}`;
+  const keys=[data.a.word,data.b.word].map(w=>w.toLowerCase());
+  document.getElementById('sentence').innerHTML=data.sentence.split(/\s+/).map((w,i)=>{
+   const bare=w.toLowerCase().replace(/[^a-z']/g,''); const key=keys.some(k=>bare===k||bare===k+'s');
+   return `<span class="sw${key?' key':''}" data-i="${i}">${w}</span>`}).join(' ');
+  document.getElementById('sentenceHy').textContent=data.sentence_hy;
+ };
+ function speaking(key,t){return T.plays.some(p=>p.key===key&&t>=p.at&&t<=p.end)}
+ function wave(card,on,t){card.querySelectorAll('.wave i').forEach((b,i)=>{
+  const h=on?14+30*Math.abs(Math.sin(t*14+i*0.9))*(0.5+0.5*Math.sin(i/BARS*Math.PI)):8;
+  b.style.height=h+'px'; b.style.opacity=on?1:.25;})}
+ function stage(id,a,b,t){const el=document.getElementById(id);
+  const o=Math.min(ease(clamp((t-a)/.45)), b?1-clamp((t-b)/.35):1);
+  el.style.opacity=o; el.style.transform=`translateY(${(1-ease(clamp((t-a)/.45)))*40}px)`; return o}
+ window.seek=t=>{
+  const total=T.total;
+  document.getElementById('progress').style.width=(clamp(t/total)*100)+'%';
+  document.getElementById('b1').style.transform=`translate(${Math.sin(t*.35)*70}px,${Math.cos(t*.3)*50}px)`;
+  document.getElementById('b2').style.transform=`translate(${Math.cos(t*.25)*80}px,${Math.sin(t*.4)*60}px)`;
+  const eb=ease(clamp(t/.4)); const e=document.getElementById('eyebrow'); e.style.opacity=eb; e.style.transform=`translateX(${(1-eb)*-30}px)`;
+  document.querySelectorAll('.headline .ln').forEach((l,i)=>{const a=ease(clamp((t-.05-i*.16)/.55));l.style.opacity=a;l.style.transform=`translateY(${(1-a)*60}px)`});
+  document.getElementById('sw').style.strokeDashoffset=100-100*ease(clamp((t-.6)/.5));
+  const reveal=t>=T.reveal, testing=t>=T.test&&t<T.reveal;
+  ['a','b'].forEach((k,i)=>{
+   const card=document.getElementById('c'+k);
+   const enter=back(clamp((t-.35-i*.15)/.55));
+   const on=speaking(k,t);
+   const other=T.plays.some(p=>p.key!==k&&p.key!=='s'&&t>=p.at&&t<=p.end);
+   let scale=lerp(.9,1,enter)*(on?1.045:1), op=clamp((t-.35-i*.15)/.3)*(other&&!on?.55:1);
+   let border=on?'#E9C46A':'#A891F755', glow=on?'0 0 70px #E9C46A44, 0 30px 80px #07061588':'0 30px 80px #07061588';
+   if(reveal&&t<T.say+0.6){
+    if(k===D.test){border='#5CC491';glow='0 0 80px #2E9E6A66, 0 30px 80px #07061588';scale*=1+.04*Math.sin(clamp((t-T.reveal)/.5)*Math.PI)}
+    else op*=lerp(1,.4,ease(clamp((t-T.reveal)/.4)));
+   }
+   card.style.opacity=op; card.style.transform=`translateY(${(1-enter)*80}px) scale(${scale})`;
+   card.style.borderColor=border; card.style.boxShadow=glow;
+   card.style.background=on?'linear-gradient(155deg,#6A49E266,#ffffff14 60%)':'';
+   wave(card,on||(testing&&speaking('t',t)),t);
+   const ck=document.getElementById('ck'+k); const show=reveal&&k===D.test&&t<T.say+0.6;
+   ck.style.opacity=show?1:0; ck.querySelector('path').style.strokeDashoffset=60-60*ease(clamp((t-T.reveal-.1)/.4));
+  });
+  stage('tips',T.tips,T.test-.4,t);
+  stage('test',T.test,T.say-.4,t);
+  stage('say',T.say,null,t);
+  const cd0=T.reveal-3, ring=document.getElementById('ring');
+  ring.style.opacity=t<T.reveal?ease(clamp((t-cd0+.3)/.4)):1-ease(clamp((t-T.reveal)/.25));
+  document.getElementById('arc').style.strokeDashoffset=616*(1-clamp((t-cd0)/3));
+  const n=document.getElementById('num'); n.textContent=t<cd0?'3':String(Math.min(3,Math.max(1,Math.ceil(T.reveal-t))));
+  n.style.transform=`scale(${t>=cd0?1+.35*Math.exp(-((t-cd0)%1)*7):1})`;
+  const ans=document.getElementById('answer'); const aa=ease(clamp((t-T.reveal-.15)/.45)); ans.style.opacity=aa; ans.style.transform=`translateY(${(1-aa)*30}px)`;
+  document.querySelectorAll('.sw').forEach(el=>{const w=T.words[+el.dataset.i]; if(!w) return;
+   const key=el.classList.contains('key'); const turn=t>=T.turn;
+   el.className='sw'+(key?' key':'')+(turn||t>=w[1]?' done':t>=w[0]?' now':'');});
+  const turn=document.getElementById('turn'); const ta=ease(clamp((t-T.turn)/.4)); turn.style.opacity=ta; turn.style.transform=`scale(${lerp(.92,1,back(clamp((t-T.turn)/.5)))})`;
+  document.getElementById('turnBar').style.width=(clamp((t-T.turn)/(T.turnEnd-T.turn))*100)+'%';
+  const o=ease(clamp((t-(total-2.1))/.8)); const out=document.getElementById('outro');
+  out.style.opacity=o; out.style.transform=`scale(${1.03-.03*o})`;
+  document.getElementById('rays').style.transform=`rotate(${t*12}deg)`;
+  const o2=clamp((t-(total-2.1))/.8);
+  document.getElementById('outroLogo').style.transform=`scale(${back(clamp(o2*1.4))})`;
+  document.getElementById('saveChip').style.transform=`scale(${back(clamp(o2*1.6-.3))})`;
+ };
+ </script>
+</body>
+</html>

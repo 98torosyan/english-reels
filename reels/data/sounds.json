@@ -3,74 +3,214 @@
   "note": "Minimal pairs that Armenian speakers often mix up. IPA is standard British (RP). Each item: hear both words, read the mouth tip, guess which word you hear, then say a sentence with both.",
   "sounds": [
     {
-      "id": "ship-sheep", "number": 1, "focus": "/ɪ/ · /iː/", "voice": "en-GB-SoniaNeural",
-      "a": { "word": "ship", "ipa": "/ʃɪp/", "hy": "նավ", "tip_hy": "կարճ, թուլացած «ի»" },
-      "b": { "word": "sheep", "ipa": "/ʃiːp/", "hy": "ոչխար", "tip_hy": "երկար «ի», շուրթերը՝ ժպիտի պես" },
+      "id": "ship-sheep",
+      "number": 1,
+      "focus": "/ɪ/ · /iː/",
+      "voice": "en-GB-SoniaNeural",
+      "a": {
+        "word": "ship",
+        "ipa": "/ʃɪp/",
+        "hy": "նավ",
+        "tip_hy": "կարճ, թուլացած «ի»"
+      },
+      "b": {
+        "word": "sheep",
+        "ipa": "/ʃiːp/",
+        "hy": "ոչխար",
+        "tip_hy": "երկար «ի», շուրթերը՝ ժպիտի պես"
+      },
       "test": "b",
-      "sentence": "There is a sheep on the ship.", "sentence_hy": "Նավի վրա ոչխար կա։"
+      "sentence": "There is a sheep on the ship.",
+      "sentence_hy": "Նավի վրա ոչխար կա։"
     },
     {
-      "id": "three-tree", "number": 2, "focus": "/θ/ · /t/", "voice": "en-GB-RyanNeural",
-      "a": { "word": "three", "ipa": "/θriː/", "hy": "երեք", "tip_hy": "լեզվի ծայրը՝ ատամների միջև, փչիր օդը" },
-      "b": { "word": "tree", "ipa": "/triː/", "hy": "ծառ", "tip_hy": "լեզուն՝ ատամների հետևում" },
+      "id": "three-tree",
+      "number": 2,
+      "focus": "/θ/ · /t/",
+      "voice": "en-GB-RyanNeural",
+      "a": {
+        "word": "three",
+        "ipa": "/θriː/",
+        "hy": "երեք",
+        "tip_hy": "լեզվի ծայրը՝ ատամների միջև, փչիր օդը"
+      },
+      "b": {
+        "word": "tree",
+        "ipa": "/triː/",
+        "hy": "ծառ",
+        "tip_hy": "լեզուն՝ ատամների հետևում"
+      },
       "test": "a",
-      "sentence": "There are three trees in the garden.", "sentence_hy": "Այգում երեք ծառ կա։"
+      "sentence": "There are three trees in the garden.",
+      "sentence_hy": "Այգում երեք ծառ կա։"
     },
     {
-      "id": "work-walk", "number": 3, "focus": "/ɜː/ · /ɔː/", "voice": "en-GB-LibbyNeural",
-      "a": { "word": "work", "ipa": "/wɜːk/", "hy": "աշխատանք", "tip_hy": "երկար «ը», r-ը չի հնչում" },
-      "b": { "word": "walk", "ipa": "/wɔːk/", "hy": "քայլել", "tip_hy": "երկար «օ», l-ը չի հնչում" },
+      "id": "work-walk",
+      "number": 3,
+      "focus": "/ɜː/ · /ɔː/",
+      "voice": "en-GB-SoniaNeural",
+      "a": {
+        "word": "work",
+        "ipa": "/wɜːk/",
+        "hy": "աշխատանք",
+        "tip_hy": "երկար «ը», r-ը չի հնչում"
+      },
+      "b": {
+        "word": "walk",
+        "ipa": "/wɔːk/",
+        "hy": "քայլել",
+        "tip_hy": "երկար «օ», l-ը չի հնչում"
+      },
       "test": "b",
-      "sentence": "I walk to work.", "sentence_hy": "Աշխատանքի գնում եմ ոտքով։"
+      "sentence": "I walk to work.",
+      "sentence_hy": "Աշխատանքի գնում եմ ոտքով։"
     },
     {
-      "id": "wine-vine", "number": 4, "focus": "/w/ · /v/", "voice": "en-GB-ThomasNeural",
-      "a": { "word": "wine", "ipa": "/waɪn/", "hy": "գինի", "tip_hy": "շուրթերը՝ կլոր, ինչպես «ու»-ի դեպքում" },
-      "b": { "word": "vine", "ipa": "/vaɪn/", "hy": "որթատունկ", "tip_hy": "վերին ատամները՝ ստորին շրթունքին" },
+      "id": "wine-vine",
+      "number": 4,
+      "focus": "/w/ · /v/",
+      "voice": "en-GB-ThomasNeural",
+      "a": {
+        "word": "wine",
+        "ipa": "/waɪn/",
+        "hy": "գինի",
+        "tip_hy": "շուրթերը՝ կլոր, ինչպես «ու»-ի դեպքում"
+      },
+      "b": {
+        "word": "vine",
+        "ipa": "/vaɪn/",
+        "hy": "որթատունկ",
+        "tip_hy": "վերին ատամները՝ ստորին շրթունքին"
+      },
       "test": "a",
-      "sentence": "Wine comes from the vine.", "sentence_hy": "Գինին ստացվում է որթատունկից։"
+      "sentence": "Wine comes from the vine.",
+      "sentence_hy": "Գինին ստացվում է որթատունկից։"
     },
     {
-      "id": "bad-bed", "number": 5, "focus": "/æ/ · /e/", "voice": "en-GB-SoniaNeural",
-      "a": { "word": "bad", "ipa": "/bæd/", "hy": "վատ", "tip_hy": "բերանը լայն բաց, «ա»-ի և «է»-ի միջև" },
-      "b": { "word": "bed", "ipa": "/bed/", "hy": "մահճակալ", "tip_hy": "սովորական «է»" },
+      "id": "bad-bed",
+      "number": 5,
+      "focus": "/æ/ · /e/",
+      "voice": "en-GB-SoniaNeural",
+      "a": {
+        "word": "bad",
+        "ipa": "/bæd/",
+        "hy": "վատ",
+        "tip_hy": "բերանը լայն բաց, «ա»-ի և «է»-ի միջև"
+      },
+      "b": {
+        "word": "bed",
+        "ipa": "/bed/",
+        "hy": "մահճակալ",
+        "tip_hy": "սովորական «է»"
+      },
       "test": "b",
-      "sentence": "This bed is not bad.", "sentence_hy": "Այս մահճակալը վատը չէ։"
+      "sentence": "This bed is not bad.",
+      "sentence_hy": "Այս մահճակալը վատը չէ։"
     },
     {
-      "id": "they-day", "number": 6, "focus": "/ð/ · /d/", "voice": "en-GB-RyanNeural",
-      "a": { "word": "they", "ipa": "/ðeɪ/", "hy": "նրանք", "tip_hy": "լեզուն՝ ատամների միջև, ձայնով" },
-      "b": { "word": "day", "ipa": "/deɪ/", "hy": "օր", "tip_hy": "սովորական «դ»" },
+      "id": "they-day",
+      "number": 6,
+      "focus": "/ð/ · /d/",
+      "voice": "en-GB-RyanNeural",
+      "a": {
+        "word": "they",
+        "ipa": "/ðeɪ/",
+        "hy": "նրանք",
+        "tip_hy": "լեզուն՝ ատամների միջև, ձայնով"
+      },
+      "b": {
+        "word": "day",
+        "ipa": "/deɪ/",
+        "hy": "օր",
+        "tip_hy": "սովորական «դ»"
+      },
       "test": "a",
-      "sentence": "They come every day.", "sentence_hy": "Նրանք գալիս են ամեն օր։"
+      "sentence": "They come every day.",
+      "sentence_hy": "Նրանք գալիս են ամեն օր։"
     },
     {
-      "id": "note-not", "number": 7, "focus": "/əʊ/ · /ɒ/", "voice": "en-GB-LibbyNeural",
-      "a": { "word": "note", "ipa": "/nəʊt/", "hy": "գրություն", "tip_hy": "երկու ձայն՝ «ըու»" },
-      "b": { "word": "not", "ipa": "/nɒt/", "hy": "ոչ", "tip_hy": "կարճ «օ», շուրթերը՝ կլոր" },
+      "id": "note-not",
+      "number": 7,
+      "focus": "/əʊ/ · /ɒ/",
+      "voice": "en-GB-RyanNeural",
+      "a": {
+        "word": "note",
+        "ipa": "/nəʊt/",
+        "hy": "գրություն",
+        "tip_hy": "երկու ձայն՝ «ըու»"
+      },
+      "b": {
+        "word": "not",
+        "ipa": "/nɒt/",
+        "hy": "ոչ",
+        "tip_hy": "կարճ «օ», շուրթերը՝ կլոր"
+      },
       "test": "a",
-      "sentence": "Do not lose the note.", "sentence_hy": "Գրությունը մի՛ կորցրու։"
+      "sentence": "Do not lose the note.",
+      "sentence_hy": "Գրությունը մի՛ կորցրու։"
     },
     {
-      "id": "bag-back", "number": 8, "focus": "/ɡ/ · /k/", "voice": "en-GB-ThomasNeural",
-      "a": { "word": "bag", "ipa": "/bæɡ/", "hy": "պայուսակ", "tip_hy": "վերջում՝ ձայնեղ «գ»" },
-      "b": { "word": "back", "ipa": "/bæk/", "hy": "մեջք", "tip_hy": "վերջում՝ խուլ «կ»" },
+      "id": "bag-back",
+      "number": 8,
+      "focus": "/ɡ/ · /k/",
+      "voice": "en-GB-ThomasNeural",
+      "a": {
+        "word": "bag",
+        "ipa": "/bæɡ/",
+        "hy": "պայուսակ",
+        "tip_hy": "վերջում՝ ձայնեղ «գ»"
+      },
+      "b": {
+        "word": "back",
+        "ipa": "/bæk/",
+        "hy": "մեջք",
+        "tip_hy": "վերջում՝ խուլ «կ»"
+      },
       "test": "b",
-      "sentence": "Put the bag on your back.", "sentence_hy": "Պայուսակը դիր մեջքիդ։"
+      "sentence": "Put the bag on your back.",
+      "sentence_hy": "Պայուսակը դիր մեջքիդ։"
     },
     {
-      "id": "think-sink", "number": 9, "focus": "/θ/ · /s/", "voice": "en-GB-SoniaNeural",
-      "a": { "word": "think", "ipa": "/θɪŋk/", "hy": "մտածել", "tip_hy": "լեզուն՝ ատամների միջև" },
-      "b": { "word": "sink", "ipa": "/sɪŋk/", "hy": "լվացարան", "tip_hy": "սովորական «ս», լեզուն՝ ներսում" },
+      "id": "think-sink",
+      "number": 9,
+      "focus": "/θ/ · /s/",
+      "voice": "en-GB-SoniaNeural",
+      "a": {
+        "word": "think",
+        "ipa": "/θɪŋk/",
+        "hy": "մտածել",
+        "tip_hy": "լեզուն՝ ատամների միջև"
+      },
+      "b": {
+        "word": "sink",
+        "ipa": "/sɪŋk/",
+        "hy": "լվացարան",
+        "tip_hy": "սովորական «ս», լեզուն՝ ներսում"
+      },
       "test": "a",
-      "sentence": "I think the sink is broken.", "sentence_hy": "Կարծում եմ՝ լվացարանը կոտրված է։"
+      "sentence": "I think the sink is broken.",
+      "sentence_hy": "Կարծում եմ՝ լվացարանը կոտրված է։"
     },
     {
-      "id": "hat-hut", "number": 10, "focus": "/æ/ · /ʌ/", "voice": "en-GB-RyanNeural",
-      "a": { "word": "hat", "ipa": "/hæt/", "hy": "գլխարկ", "tip_hy": "բերանը լայն, «ա»-ի և «է»-ի միջև" },
-      "b": { "word": "hut", "ipa": "/hʌt/", "hy": "խրճիթ", "tip_hy": "կարճ, հանգիստ «ա»" },
+      "id": "hat-hut",
+      "number": 10,
+      "focus": "/æ/ · /ʌ/",
+      "voice": "en-GB-RyanNeural",
+      "a": {
+        "word": "hat",
+        "ipa": "/hæt/",
+        "hy": "գլխարկ",
+        "tip_hy": "բերանը լայն, «ա»-ի և «է»-ի միջև"
+      },
+      "b": {
+        "word": "hut",
+        "ipa": "/hʌt/",
+        "hy": "խրճիթ",
+        "tip_hy": "կարճ, հանգիստ «ա»"
+      },
       "test": "b",
-      "sentence": "There is a hat in the hut.", "sentence_hy": "Խրճիթում գլխարկ կա։"
+      "sentence": "There is a hat in the hut.",
+      "sentence_hy": "Խրճիթում գլխարկ կա։"
     }
   ]
 }
