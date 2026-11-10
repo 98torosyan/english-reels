@@ -43,7 +43,7 @@
   "id": "quiz",
   "tag": "QUIZ",
   "title": "Which is <em>correct</em>?",
-  "en": "✕ I have 20 years.<br>✓ I am 20 years old.",
+  "en": "Wrong: I have 20 years.<br>Right: I am 20 years old.",
   "hy": "Տարիքը անգլերենում արտահայտվում է be բայով։",
   "foot": "Did you know?"
  },
