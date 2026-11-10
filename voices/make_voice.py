@@ -33,7 +33,7 @@ def align(tokens, bounds):
         while j < len(bounds) and len(got) < len(target):
             w, bs, be = bounds[j]; got += norm(w); s = bs if s is None else s; e = be; j += 1
         if got != target or s is None:
-            raise SystemExit(f"alignment failed at token {tok!r} (got {got!r})")
+            raise ValueError(f"alignment failed at token {tok!r} (got {got!r})")
         out.append([round(s, 2), round(e, 2)])
     return out
 
@@ -52,11 +52,22 @@ def main():
         lid = lp.name[:-len(".lesson.json")]
         mp3, tj = LESSONS / f"{lid}.mp3", LESSONS / f"{lid}.json"
         if mp3.exists() and tj.exists() and (lid in KEEP or json.loads(tj.read_text()).get("pace") == "v2"): continue
+        try:
+            made += voice_lesson(lp, lid, mp3, tj)
+        except Exception as error:  # keep going: one bad lesson must not block the others
+            print(f"SKIPPED {lid}: {error}")
+            for f in (mp3, tj): f.unlink(missing_ok=True)
+    made += voice_cards()
+    print(f"{made} file(s) voiced.")
+
+
+def voice_lesson(lp, lid, mp3, tj):
+    if True:
         lesson = json.loads(lp.read_text(encoding="utf-8"))
         voice = lesson.get("voice", "en-GB-SoniaNeural"); rate = lesson.get("rate", "-18%")
         text = " ".join(lesson["text"])
         # one sentence at a time + a calm pause after each, so learners can read along
-        sents = [x for x in re.split(r'(?<=[.!?][”"]?)\s+', text) if x]
+        sents = [x for x in re.split(r'(?<=[.!?])\s+|(?<=[.!?][”"])\s+', text) if x]
         pieces, words, t0 = [], [], 0.0
         for k, sent in enumerate(sents):
             part = mp3.with_suffix(f".{k}.mp3")
@@ -80,7 +91,12 @@ def main():
             new = bool(re.search(r"[.!?][”\"']?$", tok))
         tj.write_text(json.dumps({"start": words[0][0], "end": words[-1][1], "starts": starts, "tag": f"words-1|{voice}",
             "words": words, "env": envelope(mp3), "hop": 0.05, "pace": "v2"}, ensure_ascii=False), encoding="utf-8")
-        print(f"voiced {lid}: {len(tokens)} words, {words[-1][1]:.1f}s, {voice}"); made += 1
+        print(f"voiced {lid}: {len(tokens)} words, {words[-1][1]:.1f}s, {voice}")
+        return 1
+
+
+def voice_cards():
+    made = 0
     # short card sentences (mistake corrections)
     root = LESSONS.parents[1]
     cards = json.loads((root / "reels/data/cards.json").read_text(encoding="utf-8"))
@@ -91,10 +107,13 @@ def main():
         mp3, tj = root / "assets" / f"{f}.mp3", root / "assets" / f"{f}.json"
         if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("pace") == "v2": continue
         voice = ["en-GB-SoniaNeural", "en-GB-RyanNeural", "en-GB-LibbyNeural", "en-GB-ThomasNeural"][i % 4]
-        bounds = asyncio.run(synth(m["correct"], voice, "-18%", mp3))
-        words = align(m["correct"].split(), bounds)
+        try:
+            bounds = asyncio.run(synth(m["correct"], voice, "-18%", mp3))
+            words = align(m["correct"].split(), bounds)
+        except Exception as error:
+            print(f"SKIPPED card {m['id']}: {error}"); mp3.unlink(missing_ok=True); continue
         tj.write_text(json.dumps({"text": m["correct"], "words": words, "tag": voice, "pace": "v2"}), encoding="utf-8"); made += 1
-    print(f"{made} file(s) voiced.")
+    return made
 
 if __name__ == "__main__":
     main()
