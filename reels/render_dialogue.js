@@ -32,21 +32,21 @@ function timeline(d) {
     const c = clips[n]; const at = t + 0.35;
     bubbles.push({ set: 1, s: l.s, en: l.en, hy: l.hy, appear: r3(t), words: c.words.map(([a, b]) => [r3(a + at), r3(b + at)]) });
     plays.push({ at: r3(at), clip: c });
-    t = at + c.len + 0.9;
+    t = at + c.len + 0.7;
   });
   const p1End = t;
-  const p2 = p1End + 3.2;
+  const p2 = p1End + 2.9;
   t = p2 + 0.2;
   d.lines.forEach((l, n) => {
     const c = clips[n]; const at = t + 0.35;
     if (l.s === 'B') {
-      const pause = c.len * 1.3 + 1.3;
+      const pause = c.len * 1.2 + 1.1;
       bubbles.push({ set: 2, s: l.s, en: l.en, hy: l.hy, appear: r3(t), words: null, pause: [r3(at), r3(at + pause)] });
       t = at + pause + 0.6;
     } else {
       bubbles.push({ set: 2, s: l.s, en: l.en, hy: l.hy, appear: r3(t), words: c.words.map(([a, b]) => [r3(a + at), r3(b + at)]) });
       plays.push({ at: r3(at), clip: c });
-      t = at + c.len + 0.9;
+      t = at + c.len + 0.7;
     }
   });
   const total = t + 2.6;
@@ -89,7 +89,7 @@ async function renderDialogue(browser, baseUrl, d) {
     return {
       armenian: document.fonts.check('32px NotoArmenian', 'Հայ'),
       headlineFits: hl.scrollWidth <= 916,
-      wide: [...document.querySelectorAll('.bubble')].filter((b) => b.getBoundingClientRect().width > 956).length,
+      wide: [...document.querySelectorAll('.bubble')].filter((b) => b.getBoundingClientRect().width > 957).length,
       roles: document.getElementById('roles').scrollWidth <= 960,
     };
   });

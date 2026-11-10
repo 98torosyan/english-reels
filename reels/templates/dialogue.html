@@ -34,15 +34,15 @@
  .who{display:flex;gap:12px}
  .who i{font:800 22px Inter,sans-serif;font-style:normal;letter-spacing:2px;padding:8px 16px;border-radius:99px;background:#ffffff12;color:#C9C2E3}
  .who i.b{background:#E9C46A22;color:#E9C46A}
- .chat{position:absolute;top:650px;left:62px;right:62px;height:1000px;overflow:hidden;mask-image:linear-gradient(180deg,transparent 0,#000 60px,#000 100%)}
+ .chat{position:absolute;top:650px;left:62px;right:62px;height:920px;overflow:hidden;mask-image:linear-gradient(180deg,transparent 0,#000 60px,#000 100%)}
  .set{position:absolute;left:0;right:0;top:0}
- .bubble{position:absolute;max-width:830px;padding:24px 32px 26px;border-radius:34px;box-shadow:0 20px 50px #07061566;opacity:0}
+ .bubble{position:absolute;max-width:900px;padding:28px 36px 30px;border-radius:36px;box-shadow:0 20px 50px #07061566;opacity:0}
  .bubble.A{left:0;background:linear-gradient(155deg,#6A49E244,#ffffff0c 70%);border:1.5px solid #A891F766;border-bottom-left-radius:10px}
  .bubble.B{right:0;background:linear-gradient(155deg,#E9C46A26,#ffffff08 70%);border:1.5px solid #E9C46A77;border-bottom-right-radius:10px}
- .bubble .r{font:800 21px Inter,sans-serif;letter-spacing:3px;color:#A891F7;text-transform:uppercase}
+ .bubble .r{font:800 23px Inter,sans-serif;letter-spacing:3px;color:#A891F7;text-transform:uppercase}
  .bubble.B .r{color:#E9C46A;text-align:right}
- .bubble .en{margin-top:10px;font:600 48px/1.28 Literata,serif}
- .bubble .hy{margin-top:12px;font:500 31px/1.4 NotoArmenian,sans-serif;color:#E4DEFA}
+ .bubble .en{margin-top:10px;font:600 56px/1.26 Literata,serif}
+ .bubble .hy{margin-top:12px;font:500 36px/1.4 NotoArmenian,sans-serif;color:#E4DEFA}
  .bubble.B .en,.bubble.B .hy{text-align:right}
  .w{opacity:.5;padding:0 2px;border-radius:7px}
  .w.done{opacity:1}
@@ -101,7 +101,7 @@
    const host=document.getElementById('set'+set);
    host.innerHTML=T.bubbles.map((b,i)=>b.set!==set?'':`<div class="bubble ${b.s}${b.pause?' mine':''}" id="bb${i}"><div class="r">${b.s} · ${esc(D.speakers[b.s].role)}</div><div class="en">${b.en.split(/\s+/).map((w,k)=>`<span class="w" data-k="${k}">${esc(w)}</span>`).join(' ')}</div><div class="hy">${esc(b.hy)}</div><div class="bar"><i></i></div></div>`).join('');
    let y=0; const targets=[];
-   T.bubbles.forEach((b,i)=>{if(b.set!==set) return; const el=document.getElementById('bb'+i); el.style.top=y+'px'; y+=el.offsetHeight+24; targets.push({at:b.appear,off:Math.max(0,y-24-1000)});});
+   T.bubbles.forEach((b,i)=>{if(b.set!==set) return; const el=document.getElementById('bb'+i); el.style.top=y+'px'; y+=el.offsetHeight+24; targets.push({at:b.appear,off:Math.max(0,y-24-920)});});
    LAYOUT[set]=targets;
   }
  };
