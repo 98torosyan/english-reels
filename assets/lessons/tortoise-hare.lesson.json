@@ -1,0 +1,39 @@
+{
+ "id": "tortoise-hare",
+ "level": "A2",
+ "topic": "Fable",
+ "title": "The Tortoise and the Hare",
+ "voice": "en-GB-RyanNeural",
+ "rate": "-10%",
+ "text": [
+  "Once upon a time, there was a very fast hare. He liked to laugh at the slow tortoise. Every day he said, “You are so slow!” One morning, the tortoise smiled. “Let’s have a race,” she said. All the animals came to watch.",
+  "The race started, and the hare ran very fast. Soon he was far ahead. “The tortoise is so slow,” he thought. “I have time for a little sleep.” He lay down under a tree and closed his eyes. The tortoise did not stop. She walked slowly, step by step.",
+  "When the hare woke up, the sun was going down. He ran to the finish line as fast as he could. But the tortoise was already there! All the animals were cheering for her. Slow and steady wins the race."
+ ],
+ "words": [
+  [
+   "hare",
+   "նապաստակ"
+  ],
+  [
+   "tortoise",
+   "կրիա"
+  ],
+  [
+   "race",
+   "մրցավազք"
+  ],
+  [
+   "ahead",
+   "առջևում"
+  ],
+  [
+   "cheer",
+   "ոգևորել, բացականչել"
+  ],
+  [
+   "steady",
+   "հաստատուն"
+  ]
+ ]
+}
