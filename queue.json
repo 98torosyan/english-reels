@@ -230,11 +230,12 @@
       "content_id": "cafe",
       "title": "Everyday English 01",
       "caption": "Խոսակցական անգլերեն · Everyday English dialogue\n\nAt the café · Սրճարանում · A2\n\nA: Hi! What can I get you?\nB: A latte, please. To take away.\nA: Of course. Anything else?\nB: No, thanks. How much is it?\nA: That's three pounds fifty.\n\nՆախ լսի՛ր, հետո դու ես B-ն. ասա՛ քո տողերը բարձրաձայն։\n\nՊահպանի՛ր և կրկնի՛ր, մինչև ազատ ասես։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
-      "review_status": "staged",
+      "review_status": "published",
       "thumb_offset": 6000,
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-dialogue-cafe/dialogue-cafe.mp4"
-      }
+      },
+      "published_at": "2026-11-10T23:03+04:00"
     },
     {
       "id": "2026-11-10-story-grammar",
@@ -247,10 +248,11 @@
       "content_id": "grammar",
       "title": "grammar",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-stories/story-grammar.jpg"
-      }
+      },
+      "published_at": "2026-11-10T23:03+04:00"
     },
     {
       "id": "2026-11-10-story-ufar",
@@ -263,10 +265,11 @@
       "content_id": "ufar",
       "title": "ufar",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-stories/story-ufar.jpg"
-      }
+      },
+      "published_at": "2026-11-10T23:03+04:00"
     },
     {
       "id": "2026-11-12-rule-tenses",
@@ -279,7 +282,7 @@
       "content_id": "tenses",
       "title": "Grammar",
       "caption": "Անգլերենի քերականություն · English grammar\n\nPresent simple & continuous\n\nՍովորություն կամ փաստ արտահայտելու համար օգտագործում ենք Present Simple-ը։ Հենց հիմա կատարվող գործողության համար՝ Present Continuous-ը։\nՕրինակ՝ “The library opens at nine. / The library is opening now.” — «Գրադարանը ժամը իննին է բացվում։ / Գրադարանն այժմ բացվում է։»։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishGrammar #Yerevan",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "slides": [
           "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/01-tenses.jpg",
@@ -290,7 +293,8 @@
           "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/06-tenses.jpg",
           "https://98torosyan.github.io/english-reels-media/2026-11-12-rule-tenses/07-tenses.jpg"
         ]
-      }
+      },
+      "published_at": "2026-11-10T23:03+04:00"
     },
     {
       "id": "2026-11-12-word-lazy",
