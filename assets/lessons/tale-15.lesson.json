@@ -1,0 +1,26 @@
+{
+ "id": "tale-15",
+ "level": "B1",
+ "topic": "Story",
+ "title": "The Fox and the Grapes",
+ "author": "Aesop",
+ "voice": "en-GB-SoniaNeural",
+ "rate": "-8%",
+ "text": [
+  "A hungry fox sees ripe grapes hanging high above him. He jumps many times but cannot reach them. Finally, he walks away, saying that the grapes must be sour. He pretends he never wanted what he could not get."
+ ],
+ "words": [
+  [
+   "fox",
+   "աղվես"
+  ],
+  [
+   "grapes",
+   "խաղող"
+  ],
+  [
+   "reach",
+   "հասնել"
+  ]
+ ]
+}

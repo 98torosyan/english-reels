@@ -1,0 +1,26 @@
+{
+ "id": "tale-03",
+ "level": "B1",
+ "topic": "Story",
+ "title": "The Nightingale and the Rose",
+ "author": "Oscar Wilde",
+ "voice": "en-GB-LibbyNeural",
+ "rate": "-8%",
+ "text": [
+  "A student needs a red rose to win the heart of someone he loves. A nightingale sacrifices everything to create one. Yet the student’s gift is rejected, and he throws the rose away. The tale contrasts deep devotion with shallow values."
+ ],
+ "words": [
+  [
+   "nightingale",
+   "սոխակ"
+  ],
+  [
+   "rose",
+   "վարդ"
+  ],
+  [
+   "gift",
+   "նվեր"
+  ]
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "id": "tale-20",
+ "level": "B1",
+ "topic": "Story",
+ "title": "The Emperor's New Clothes",
+ "author": "Hans Christian Andersen",
+ "voice": "en-GB-RyanNeural",
+ "rate": "-8%",
+ "text": [
+  "Two tricksters tell an emperor that only clever people can see their magical cloth. The emperor and his ministers pretend to see it because they fear looking foolish. During a parade, a child says what everyone can see: the emperor is wearing nothing. Honesty breaks the spell of fear."
+ ],
+ "words": [
+  [
+   "emperor",
+   "կայսր"
+  ],
+  [
+   "clothes",
+   "հագուստ"
+  ],
+  [
+   "truth",
+   "ճշմարտություն"
+  ]
+ ]
+}

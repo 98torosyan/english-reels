@@ -64,7 +64,20 @@ def main():
         tj.write_text(json.dumps({"start": words[0][0], "end": words[-1][1], "starts": starts, "tag": f"words-1|{voice}",
             "words": words, "env": envelope(mp3), "hop": 0.05}, ensure_ascii=False), encoding="utf-8")
         print(f"voiced {lid}: {len(tokens)} words, {words[-1][1]:.1f}s, {voice}"); made += 1
-    print(f"{made} lesson(s) voiced.")
+    # short card sentences (mistake corrections)
+    root = LESSONS.parents[1]
+    cards = json.loads((root / "reels/data/cards.json").read_text(encoding="utf-8"))
+    out = root / "assets" / "cards"; out.mkdir(exist_ok=True)
+    for i, m in enumerate(cards["mistakes"]):
+        f = (m.get("audio") or {}).get("file")
+        if not f: continue
+        mp3, tj = root / "assets" / f"{f}.mp3", root / "assets" / f"{f}.json"
+        if mp3.exists() and tj.exists(): continue
+        voice = ["en-GB-SoniaNeural", "en-GB-RyanNeural", "en-GB-LibbyNeural", "en-GB-ThomasNeural"][i % 4]
+        bounds = asyncio.run(synth(m["correct"], voice, "-12%", mp3))
+        words = align(m["correct"].split(), bounds)
+        tj.write_text(json.dumps({"text": m["correct"], "words": words, "tag": voice}), encoding="utf-8"); made += 1
+    print(f"{made} file(s) voiced.")
 
 if __name__ == "__main__":
     main()

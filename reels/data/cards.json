@@ -1,175 +1,1466 @@
 {
-  "mistakes": [
-    {
-      "id": "plural-subject",
-      "keyword": "Present simple · plural subjects",
-      "wrong": "The monkeys jumps and play.",
-      "correct": "The monkeys jump and play.",
-      "explanation_hy": "Հոգնակի ենթակայի հետ Present Simple-ում բայը մնում է սկզբնական ձևով։",
-      "audio": {"lesson": "zoo", "sentence": 6}
-    },
-    {
-      "id": "does-base-form",
-      "keyword": "Doesn’t + base verb",
-      "wrong": "The cat doesn’t likes milk.",
-      "correct": "The cat doesn’t like milk.",
-      "explanation_hy": "Doesn’t-ից հետո բայը դնում ենք սկզբնական ձևով՝ առանց -s-ի։"
-    },
-    {
-      "id": "did-base-form",
-      "keyword": "Questions in the past",
-      "wrong": "Did you went home?",
-      "correct": "Did you go home?",
-      "explanation_hy": "Did-ն արդեն ցույց է տալիս անցյալը, դրա համար հիմնական բայը մնում է սկզբնական ձևով։"
-    },
-    {
-      "id": "age-with-be",
-      "keyword": "Talking about age",
-      "wrong": "I have twelve years.",
-      "correct": "I am twelve years old.",
-      "explanation_hy": "Անգլերենում տարիքը ասում ենք be բայով՝ I am … years old։"
-    },
-    {
-      "id": "go-home",
-      "keyword": "Go home",
-      "wrong": "We went to home.",
-      "correct": "We went home.",
-      "explanation_hy": "Home-ը դեպի տուն ուղղության իմաստով սովորաբար գործածվում է առանց to-ի։"
-    },
-    {
-      "id": "a-or-an",
-      "keyword": "A or an?",
-      "wrong": "I saw a owl.",
-      "correct": "I saw an owl.",
-      "explanation_hy": "An-ը դնում ենք ձայնավոր հնչյունով սկսվող բառից առաջ։"
-    },
-    {
-      "id": "there-are",
-      "keyword": "There is or there are?",
-      "wrong": "There is three books on the desk.",
-      "correct": "There are three books on the desk.",
-      "explanation_hy": "Հոգնակի գոյականի հետ գործածում ենք there are։"
-    },
-    {
-      "id": "first-conditional",
-      "keyword": "The first conditional",
-      "wrong": "If it will rain, we will stay inside.",
-      "correct": "If it rains, we will stay inside.",
-      "explanation_hy": "Առաջին պայմանականում if-մասի բայը Present Simple-ով է, ոչ թե will-ով։"
-    },
-    {
-      "id": "adjective-order",
-      "keyword": "Comparatives",
-      "wrong": "This path is more shorter.",
-      "correct": "This path is shorter.",
-      "explanation_hy": "Կարճ ածականի համեմատական ձևում -er-ից առաջ more չենք դնում։"
-    }
-  ],
-  "quizzes": [
-    {
-      "id": "plural-verb",
-      "keyword": "Present simple quiz",
-      "prompt": "The monkeys ___ and play.",
-      "options": ["jumps", "jump", "jumping"],
-      "answer": "jump",
-      "explanation_hy": "Monkeys-ը հոգնակի ենթակա է, ուստի բայը սկզբնական ձևով է։",
-      "audio": {"lesson": "zoo", "sentence": 6}
-    },
-    {
-      "id": "past-simple",
-      "keyword": "Past simple quiz",
-      "prompt": "Yesterday, we ___ a new book.",
-      "options": ["see", "saw", "seen"],
-      "answer": "saw",
-      "explanation_hy": "Yesterday-ը ցույց է տալիս անցյալը, իսկ see բայի Past Simple ձևը saw է։"
-    },
-    {
-      "id": "third-person",
-      "keyword": "Present simple · he, she, it",
-      "prompt": "The library ___ at nine.",
-      "options": ["open", "opens", "is open"],
-      "answer": "opens",
-      "explanation_hy": "Եզակի երրորդ դեմքով սովորության մասին խոսելիս բային ավելացնում ենք -s։"
-    },
-    {
-      "id": "any-milk",
-      "keyword": "Some or any?",
-      "prompt": "There isn’t ___ milk in the fridge.",
-      "options": ["some", "any", "many"],
-      "answer": "any",
-      "explanation_hy": "Ժխտական նախադասություններում սովորաբար գործածում ենք any։"
-    },
-    {
-      "id": "first-conditional",
-      "keyword": "The first conditional",
-      "prompt": "If it rains, we ___ inside.",
-      "options": ["stay", "will stay", "stayed"],
-      "answer": "will stay",
-      "explanation_hy": "Արդյունքի մասում գործածում ենք will և բայի սկզբնական ձևը։"
-    },
-    {
-      "id": "time-preposition",
-      "keyword": "Time prepositions",
-      "prompt": "The lesson starts ___ 9:00.",
-      "options": ["in", "on", "at"],
-      "answer": "at",
-      "explanation_hy": "Ժամերի հետ գործածում ենք at։"
-    }
-  ],
-  "words": [
-    {
-      "id": "lazy",
-      "word": "lazy",
-      "part_of_speech": "adjective",
-      "armenian": "ծույլ",
-      "example": "They are big, but they are very lazy.",
-      "example_hy": "Նրանք մեծ են, բայց շատ ծույլ են։",
-      "audio": {"lesson": "zoo", "sentence": 3}
-    },
-    {
-      "id": "sky",
-      "word": "sky",
-      "part_of_speech": "noun",
-      "armenian": "երկինք",
-      "example": "The sun is hot, and the sky is blue.",
-      "example_hy": "Արևը շոգ է, իսկ երկինքը՝ կապույտ։",
-      "audio": {"lesson": "zoo", "sentence": 1}
-    },
-    {
-      "id": "jump",
-      "word": "jump",
-      "part_of_speech": "verb",
-      "armenian": "ցատկել",
-      "example": "The monkeys jump and play.",
-      "example_hy": "Կապիկները ցատկում ու խաղում են։",
-      "audio": {"lesson": "zoo", "sentence": 6}
-    },
-    {
-      "id": "market",
-      "word": "market",
-      "part_of_speech": "noun",
-      "armenian": "շուկա",
-      "example": "Every Saturday, my grandmother and I go to the market.",
-      "example_hy": "Ամեն շաբաթ օր տատիկս ու ես գնում ենք շուկա։",
-      "audio": {"lesson": "saturday-market", "sentence": 0}
-    },
-    {
-      "id": "price",
-      "word": "price",
-      "part_of_speech": "noun",
-      "armenian": "գին",
-      "example": "She always asks the price.",
-      "example_hy": "Նա միշտ հարցնում է գինը։",
-      "audio": {"lesson": "saturday-market", "sentence": 8}
-    },
-    {
-      "id": "fence",
-      "word": "fence",
-      "part_of_speech": "noun",
-      "armenian": "ցանկապատ",
-      "example": "Small birds often sit on the fence and watch me.",
-      "example_hy": "Փոքրիկ թռչունները հաճախ նստում են ցանկապատին ու նայում ինձ։",
-      "audio": {"lesson": "my-garden", "sentence": 6}
-    }
-  ]
+ "mistakes": [
+  {
+   "id": "plural-subject",
+   "keyword": "Present simple · plural subjects",
+   "wrong": "The monkeys jumps and play.",
+   "correct": "The monkeys jump and play.",
+   "explanation_hy": "Հոգնակի ենթակայի հետ Present Simple-ում բայը մնում է սկզբնական ձևով։",
+   "audio": {
+    "lesson": "zoo",
+    "sentence": 6
+   }
+  },
+  {
+   "id": "does-base-form",
+   "keyword": "Doesn’t + base verb",
+   "wrong": "The cat doesn’t likes milk.",
+   "correct": "The cat doesn’t like milk.",
+   "explanation_hy": "Doesn’t-ից հետո բայը դնում ենք սկզբնական ձևով՝ առանց -s-ի։"
+  },
+  {
+   "id": "did-base-form",
+   "keyword": "Questions in the past",
+   "wrong": "Did you went home?",
+   "correct": "Did you go home?",
+   "explanation_hy": "Did-ն արդեն ցույց է տալիս անցյալը, դրա համար հիմնական բայը մնում է սկզբնական ձևով։"
+  },
+  {
+   "id": "age-with-be",
+   "keyword": "Talking about age",
+   "wrong": "I have twelve years.",
+   "correct": "I am twelve years old.",
+   "explanation_hy": "Անգլերենում տարիքը ասում ենք be բայով՝ I am … years old։"
+  },
+  {
+   "id": "go-home",
+   "keyword": "Go home",
+   "wrong": "We went to home.",
+   "correct": "We went home.",
+   "explanation_hy": "Home-ը դեպի տուն ուղղության իմաստով սովորաբար գործածվում է առանց to-ի։"
+  },
+  {
+   "id": "a-or-an",
+   "keyword": "A or an?",
+   "wrong": "I saw a owl.",
+   "correct": "I saw an owl.",
+   "explanation_hy": "An-ը դնում ենք ձայնավոր հնչյունով սկսվող բառից առաջ։"
+  },
+  {
+   "id": "there-are",
+   "keyword": "There is or there are?",
+   "wrong": "There is three books on the desk.",
+   "correct": "There are three books on the desk.",
+   "explanation_hy": "Հոգնակի գոյականի հետ գործածում ենք there are։"
+  },
+  {
+   "id": "first-conditional",
+   "keyword": "The first conditional",
+   "wrong": "If it will rain, we will stay inside.",
+   "correct": "If it rains, we will stay inside.",
+   "explanation_hy": "Առաջին պայմանականում if-մասի բայը Present Simple-ով է, ոչ թե will-ով։"
+  },
+  {
+   "id": "adjective-order",
+   "keyword": "Comparatives",
+   "wrong": "This path is more shorter.",
+   "correct": "This path is shorter.",
+   "explanation_hy": "Կարճ ածականի համեմատական ձևում -er-ից առաջ more չենք դնում։"
+  },
+  {
+   "id": "i-agree",
+   "keyword": "Common mistake",
+   "wrong": "I am agree.",
+   "correct": "I agree.",
+   "explanation_hy": "Agree-ը բայ է, ուստի am պետք չէ։",
+   "audio": {
+    "file": "cards/i-agree"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "she-doesn-t-like-tea",
+   "keyword": "Common mistake",
+   "wrong": "She don't like tea.",
+   "correct": "She doesn't like tea.",
+   "explanation_hy": "He/she/it-ի հետ օգտագործում ենք doesn't։",
+   "audio": {
+    "file": "cards/she-doesn-t-like-tea"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "he-goes-to-work-every-day",
+   "keyword": "Common mistake",
+   "wrong": "He go to work every day.",
+   "correct": "He goes to work every day.",
+   "explanation_hy": "Երրորդ դեմք եզակի թվի դեպքում բային ավելանում է -s/-es։",
+   "audio": {
+    "file": "cards/he-goes-to-work-every-day"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "did-you-go-there",
+   "keyword": "Common mistake",
+   "wrong": "Did you went there?",
+   "correct": "Did you go there?",
+   "explanation_hy": "Did-ից հետո բայը դրվում է սկզբնական ձևով։",
+   "audio": {
+    "file": "cards/did-you-go-there"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-didn-t-see-him",
+   "keyword": "Common mistake",
+   "wrong": "I didn't saw him.",
+   "correct": "I didn't see him.",
+   "explanation_hy": "Didn't + բայի սկզբնական ձև։",
+   "audio": {
+    "file": "cards/i-didn-t-see-him"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-am-years-old",
+   "keyword": "Common mistake",
+   "wrong": "I have 20 years.",
+   "correct": "I am 20 years old.",
+   "explanation_hy": "Տարիքը անգլերենում արտահայտվում է be բայով։",
+   "audio": {
+    "file": "cards/i-am-years-old"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-know-the-answer",
+   "keyword": "Common mistake",
+   "wrong": "I am knowing the answer.",
+   "correct": "I know the answer.",
+   "explanation_hy": "Know-ը սովորաբար Continuous ձևով չի գործածվում։",
+   "audio": {
+    "file": "cards/i-know-the-answer"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-want-coffee",
+   "keyword": "Common mistake",
+   "wrong": "I am wanting coffee.",
+   "correct": "I want coffee.",
+   "explanation_hy": "Want-ը սովորաբար Simple ձևով է գործածվում։",
+   "audio": {
+    "file": "cards/i-want-coffee"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-saw-him-yesterday",
+   "keyword": "Common mistake",
+   "wrong": "I have seen him yesterday.",
+   "correct": "I saw him yesterday.",
+   "explanation_hy": "Yesterday-ի նման ավարտված անցյալի հետ՝ Past Simple։",
+   "audio": {
+    "file": "cards/i-saw-him-yesterday"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-have-lived-here-since",
+   "keyword": "Common mistake",
+   "wrong": "I live here since 2020.",
+   "correct": "I have lived here since 2020.",
+   "explanation_hy": "Մինչև հիմա շարունակվող իրավիճակի համար՝ Present Perfect։",
+   "audio": {
+    "file": "cards/i-have-lived-here-since"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-have-lived-here-for-five-years",
+   "keyword": "Common mistake",
+   "wrong": "I am living here for five years.",
+   "correct": "I have lived here for five years.",
+   "explanation_hy": "For + ժամանակահատված՝ անցյալից մինչև հիմա։",
+   "audio": {
+    "file": "cards/i-have-lived-here-for-five-years"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-will-call-when-i-arrive",
+   "keyword": "Common mistake",
+   "wrong": "I will call when I will arrive.",
+   "correct": "I will call when I arrive.",
+   "explanation_hy": "Ժամանակի ստորադաս նախադասությունում future իմաստի համար՝ Present Simple։",
+   "audio": {
+    "file": "cards/i-will-call-when-i-arrive"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "if-i-see-him-i-will-tell-him",
+   "keyword": "Common mistake",
+   "wrong": "If I will see him, I will tell him.",
+   "correct": "If I see him, I will tell him.",
+   "explanation_hy": "First Conditional-ում if-ից հետո սովորաբար Present Simple է։",
+   "audio": {
+    "file": "cards/if-i-see-him-i-will-tell-him"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-used-to-play-football",
+   "keyword": "Common mistake",
+   "wrong": "I used to playing football.",
+   "correct": "I used to play football.",
+   "explanation_hy": "Used to + բայի սկզբնական ձև։",
+   "audio": {
+    "file": "cards/i-used-to-play-football"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-am-used-to-waking-up-early",
+   "keyword": "Common mistake",
+   "wrong": "I am used to wake up early.",
+   "correct": "I am used to waking up early.",
+   "explanation_hy": "Be used to + գոյական կամ բայ-ing։",
+   "audio": {
+    "file": "cards/i-am-used-to-waking-up-early"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-look-forward-to-seeing-you",
+   "keyword": "Common mistake",
+   "wrong": "I look forward to see you.",
+   "correct": "I look forward to seeing you.",
+   "explanation_hy": "Look forward to-ից հետո -ing է։",
+   "audio": {
+    "file": "cards/i-look-forward-to-seeing-you"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-enjoy-reading",
+   "keyword": "Common mistake",
+   "wrong": "I enjoy to read.",
+   "correct": "I enjoy reading.",
+   "explanation_hy": "Enjoy-ից հետո օգտագործվում է -ing։",
+   "audio": {
+    "file": "cards/i-enjoy-reading"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-can-swim",
+   "keyword": "Common mistake",
+   "wrong": "I can to swim.",
+   "correct": "I can swim.",
+   "explanation_hy": "Modal բայերից հետո to չի դրվում։",
+   "audio": {
+    "file": "cards/i-can-swim"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "he-should-go-home",
+   "keyword": "Common mistake",
+   "wrong": "He should goes home.",
+   "correct": "He should go home.",
+   "explanation_hy": "Should-ից հետո բայը սկզբնական ձևով է։",
+   "audio": {
+    "file": "cards/he-should-go-home"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "she-has-a-car",
+   "keyword": "Common mistake",
+   "wrong": "She is have a car.",
+   "correct": "She has a car.",
+   "explanation_hy": "Սեփականություն արտահայտող have-ը Present Simple-ում՝ has։",
+   "audio": {
+    "file": "cards/she-has-a-car"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-am-a-teacher",
+   "keyword": "Common mistake",
+   "wrong": "I am teacher.",
+   "correct": "I am a teacher.",
+   "explanation_hy": "Եզակի հաշվելի մասնագիտությունից առաջ՝ a/an։",
+   "audio": {
+    "file": "cards/i-am-a-teacher"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-bought-an-apple",
+   "keyword": "Common mistake",
+   "wrong": "I bought a apple.",
+   "correct": "I bought an apple.",
+   "explanation_hy": "Ձայնավոր հնչյունից առաջ՝ an։",
+   "audio": {
+    "file": "cards/i-bought-an-apple"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "she-is-a-university-student",
+   "keyword": "Common mistake",
+   "wrong": "She is an university student.",
+   "correct": "She is a university student.",
+   "explanation_hy": "University-ն սկսվում է /յու/ հնչյունով, հետևաբար՝ a։",
+   "audio": {
+    "file": "cards/she-is-a-university-student"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "life-is-beautiful",
+   "keyword": "Common mistake",
+   "wrong": "The life is beautiful.",
+   "correct": "Life is beautiful.",
+   "explanation_hy": "Ընդհանուր իմաստով life-ից առաջ սովորաբար the չի դրվում։",
+   "audio": {
+    "file": "cards/life-is-beautiful"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-like-music",
+   "keyword": "Common mistake",
+   "wrong": "I like the music.",
+   "correct": "I like music.",
+   "explanation_hy": "Երաժշտությունը ընդհանուր առմամբ նկատի ունենալիս՝ առանց the-ի։",
+   "audio": {
+    "file": "cards/i-like-music"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "the-sun-is-bright",
+   "keyword": "Common mistake",
+   "wrong": "Sun is bright.",
+   "correct": "The sun is bright.",
+   "explanation_hy": "Sun-ի առաջ սովորաբար the է։",
+   "audio": {
+    "file": "cards/the-sun-is-bright"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-go-to-school-every-day",
+   "keyword": "Common mistake",
+   "wrong": "I go to the school every day.",
+   "correct": "I go to school every day.",
+   "explanation_hy": "Go to school՝ դպրոց հաճախելու իմաստով։",
+   "audio": {
+    "file": "cards/i-go-to-school-every-day"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-go-home",
+   "keyword": "Common mistake",
+   "wrong": "I go to home.",
+   "correct": "I go home.",
+   "explanation_hy": "Go home՝ առանց to-ի։",
+   "audio": {
+    "file": "cards/i-go-home"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-have-breakfast-at",
+   "keyword": "Common mistake",
+   "wrong": "I have the breakfast at 8.",
+   "correct": "I have breakfast at 8.",
+   "explanation_hy": "Սովորական սնվելու գործողությունների առաջ հաճախ հոդ չի դրվում։",
+   "audio": {
+    "file": "cards/i-have-breakfast-at"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "she-plays-the-piano",
+   "keyword": "Common mistake",
+   "wrong": "She plays piano.",
+   "correct": "She plays the piano.",
+   "explanation_hy": "Երաժշտական գործիքի հետ սովորաբար the է։",
+   "audio": {
+    "file": "cards/she-plays-the-piano"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-am-good-at-english",
+   "keyword": "Common mistake",
+   "wrong": "I am good in English.",
+   "correct": "I am good at English.",
+   "explanation_hy": "Good at՝ որևէ բանում լավ լինել։",
+   "audio": {
+    "file": "cards/i-am-good-at-english"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "it-depends-on-you",
+   "keyword": "Common mistake",
+   "wrong": "It depends of you.",
+   "correct": "It depends on you.",
+   "explanation_hy": "Depend on՝ կախված լինել։",
+   "audio": {
+    "file": "cards/it-depends-on-you"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-am-interested-in-art",
+   "keyword": "Common mistake",
+   "wrong": "I am interested on art.",
+   "correct": "I am interested in art.",
+   "explanation_hy": "Interested in՝ հետաքրքրված լինել։",
+   "audio": {
+    "file": "cards/i-am-interested-in-art"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-am-married-to-him",
+   "keyword": "Common mistake",
+   "wrong": "I am married with him.",
+   "correct": "I am married to him.",
+   "explanation_hy": "Married to՝ ամուսնացած լինել։",
+   "audio": {
+    "file": "cards/i-am-married-to-him"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-arrived-in-london",
+   "keyword": "Common mistake",
+   "wrong": "I arrived to London.",
+   "correct": "I arrived in London.",
+   "explanation_hy": "Քաղաքների և երկրների հետ՝ arrive in։",
+   "audio": {
+    "file": "cards/i-arrived-in-london"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-arrived-at-the-airport",
+   "keyword": "Common mistake",
+   "wrong": "I arrived to the airport.",
+   "correct": "I arrived at the airport.",
+   "explanation_hy": "Կոնկրետ վայրի/կետի հետ՝ arrive at։",
+   "audio": {
+    "file": "cards/i-arrived-at-the-airport"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "we-discussed-the-problem",
+   "keyword": "Common mistake",
+   "wrong": "We discussed about the problem.",
+   "correct": "We discussed the problem.",
+   "explanation_hy": "Discuss բայից հետո about պետք չէ։",
+   "audio": {
+    "file": "cards/we-discussed-the-problem"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "she-explained-the-rule-to-me",
+   "keyword": "Common mistake",
+   "wrong": "She explained me the rule.",
+   "correct": "She explained the rule to me.",
+   "explanation_hy": "Explain something to someone։",
+   "audio": {
+    "file": "cards/she-explained-the-rule-to-me"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-entered-the-room",
+   "keyword": "Common mistake",
+   "wrong": "I entered into the room.",
+   "correct": "I entered the room.",
+   "explanation_hy": "Enter-ից հետո սովորաբար into չի օգտագործվում։",
+   "audio": {
+    "file": "cards/i-entered-the-room"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-am-waiting-for-you",
+   "keyword": "Common mistake",
+   "wrong": "I am waiting you.",
+   "correct": "I am waiting for you.",
+   "explanation_hy": "Wait for someone։",
+   "audio": {
+    "file": "cards/i-am-waiting-for-you"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "listen-to-me",
+   "keyword": "Common mistake",
+   "wrong": "Listen me!",
+   "correct": "Listen to me!",
+   "explanation_hy": "Listen-ից հետո to է պետք։",
+   "audio": {
+    "file": "cards/listen-to-me"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-asked-him-a-question",
+   "keyword": "Common mistake",
+   "wrong": "I asked to him a question.",
+   "correct": "I asked him a question.",
+   "explanation_hy": "Ask someone a question՝ առանց to-ի։",
+   "audio": {
+    "file": "cards/i-asked-him-a-question"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-went-there-on-foot",
+   "keyword": "Common mistake",
+   "wrong": "I went there by foot.",
+   "correct": "I went there on foot.",
+   "explanation_hy": "Ճիշտ կայուն արտահայտությունը on foot է։",
+   "audio": {
+    "file": "cards/i-went-there-on-foot"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "on-monday",
+   "keyword": "Common mistake",
+   "wrong": "At Monday",
+   "correct": "On Monday",
+   "explanation_hy": "Շաբաթվա օրերի հետ՝ on։",
+   "audio": {
+    "file": "cards/on-monday"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "at-night",
+   "keyword": "Common mistake",
+   "wrong": "In night",
+   "correct": "At night",
+   "explanation_hy": "Կայուն արտահայտությունը at night է։",
+   "audio": {
+    "file": "cards/at-night"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-took-a-photo",
+   "keyword": "Common mistake",
+   "wrong": "I made a photo.",
+   "correct": "I took a photo.",
+   "explanation_hy": "Լուսանկարել՝ take a photo։",
+   "audio": {
+    "file": "cards/i-took-a-photo"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-made-a-mistake",
+   "keyword": "Common mistake",
+   "wrong": "I did a mistake.",
+   "correct": "I made a mistake.",
+   "explanation_hy": "Սխալ անել՝ make a mistake։",
+   "audio": {
+    "file": "cards/i-made-a-mistake"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-had-a-party-threw-a-party",
+   "keyword": "Common mistake",
+   "wrong": "I did a party.",
+   "correct": "I had a party / threw a party.",
+   "explanation_hy": "Խնջույք կազմակերպել՝ have/throw a party։",
+   "audio": {
+    "file": "cards/i-had-a-party-threw-a-party"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-am-bored",
+   "keyword": "Common mistake",
+   "wrong": "I am boring.",
+   "correct": "I am bored.",
+   "explanation_hy": "Bored՝ ձանձրացած, boring՝ ձանձրալի։",
+   "audio": {
+    "file": "cards/i-am-bored"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "the-film-was-boring",
+   "keyword": "Common mistake",
+   "wrong": "The film was bored.",
+   "correct": "The film was boring.",
+   "explanation_hy": "Ֆիլմը ձանձրալի էր՝ boring։",
+   "audio": {
+    "file": "cards/the-film-was-boring"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-am-excited",
+   "keyword": "Common mistake",
+   "wrong": "I am exciting.",
+   "correct": "I am excited.",
+   "explanation_hy": "Excited՝ ոգևորված, exciting՝ ոգևորիչ։",
+   "audio": {
+    "file": "cards/i-am-excited"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-really-like-it",
+   "keyword": "Common mistake",
+   "wrong": "I very like it.",
+   "correct": "I really like it.",
+   "explanation_hy": "Very-ն սովորաբար չի դրվում like բայից առաջ։",
+   "audio": {
+    "file": "cards/i-really-like-it"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-have-a-lot-of-homework",
+   "keyword": "Common mistake",
+   "wrong": "I have many homeworks.",
+   "correct": "I have a lot of homework.",
+   "explanation_hy": "Homework-ը անհաշվելի գոյական է։",
+   "audio": {
+    "file": "cards/i-have-a-lot-of-homework"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-need-some-advice-a-piece-of-advice",
+   "keyword": "Common mistake",
+   "wrong": "I need an advice.",
+   "correct": "I need some advice / a piece of advice.",
+   "explanation_hy": "Advice-ը անհաշվելի է։",
+   "audio": {
+    "file": "cards/i-need-some-advice-a-piece-of-advice"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "give-me-some-information",
+   "keyword": "Common mistake",
+   "wrong": "Give me an information.",
+   "correct": "Give me some information.",
+   "explanation_hy": "Information-ը անհաշվելի է։",
+   "audio": {
+    "file": "cards/give-me-some-information"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "there-are-many-people",
+   "keyword": "Common mistake",
+   "wrong": "There are many peoples.",
+   "correct": "There are many people.",
+   "explanation_hy": "People-ն արդեն հոգնակի է։",
+   "audio": {
+    "file": "cards/there-are-many-people"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-bought-two-loaves-of-bread",
+   "keyword": "Common mistake",
+   "wrong": "I bought two breads.",
+   "correct": "I bought two loaves of bread.",
+   "explanation_hy": "Bread-ը սովորաբար անհաշվելի է։",
+   "audio": {
+    "file": "cards/i-bought-two-loaves-of-bread"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-have-a-lot-of-work-today",
+   "keyword": "Common mistake",
+   "wrong": "I have many works today.",
+   "correct": "I have a lot of work today.",
+   "explanation_hy": "Work-ը աշխատանքի իմաստով հաճախ անհաշվելի է։",
+   "audio": {
+    "file": "cards/i-have-a-lot-of-work-today"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-lent-him-money",
+   "keyword": "Common mistake",
+   "wrong": "I borrowed him money.",
+   "correct": "I lent him money.",
+   "explanation_hy": "Lend՝ տալ, borrow՝ վերցնել ժամանակավոր։",
+   "audio": {
+    "file": "cards/i-lent-him-money"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "can-you-lend-me-your-pen",
+   "keyword": "Common mistake",
+   "wrong": "Can you borrow me your pen?",
+   "correct": "Can you lend me your pen?",
+   "explanation_hy": "Lend me / borrow something from someone։",
+   "audio": {
+    "file": "cards/can-you-lend-me-your-pen"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-missed-the-bus",
+   "keyword": "Common mistake",
+   "wrong": "I lost the bus.",
+   "correct": "I missed the bus.",
+   "explanation_hy": "Տրանսպորտից ուշանալ՝ miss the bus։",
+   "audio": {
+    "file": "cards/i-missed-the-bus"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-spent-time-with-friends",
+   "keyword": "Common mistake",
+   "wrong": "I passed time with friends.",
+   "correct": "I spent time with friends.",
+   "explanation_hy": "Ժամանակ անցկացնել՝ spend time։",
+   "audio": {
+    "file": "cards/i-spent-time-with-friends"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-am-sensitive-to-cold",
+   "keyword": "Common mistake",
+   "wrong": "I am sensible to cold.",
+   "correct": "I am sensitive to cold.",
+   "explanation_hy": "Sensitive՝ զգայուն, sensible՝ խելամիտ։",
+   "audio": {
+    "file": "cards/i-am-sensitive-to-cold"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "in-fact-i-live-in-yerevan",
+   "keyword": "Common mistake",
+   "wrong": "Actually, I live in Yerevan.",
+   "correct": "In fact, I live in Yerevan.",
+   "explanation_hy": "Actually նշանակում է «իրականում», ոչ թե «ներկայումս»։",
+   "audio": {
+    "file": "cards/in-fact-i-live-in-yerevan"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-am-attending-the-lesson",
+   "keyword": "Common mistake",
+   "wrong": "I am assisting the lesson.",
+   "correct": "I am attending the lesson.",
+   "explanation_hy": "Attend՝ մասնակցել, assist՝ օգնել։",
+   "audio": {
+    "file": "cards/i-am-attending-the-lesson"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-like-this-song-very-much",
+   "keyword": "Common mistake",
+   "wrong": "I like very much this song.",
+   "correct": "I like this song very much.",
+   "explanation_hy": "Սովորական շարադասությամբ լրացումը գալիս է բայից հետո։",
+   "audio": {
+    "file": "cards/i-like-this-song-very-much"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-always-drink-coffee",
+   "keyword": "Common mistake",
+   "wrong": "Always I drink coffee.",
+   "correct": "I always drink coffee.",
+   "explanation_hy": "Հաճախականության մակբայը սովորաբար հիմնական բայից առաջ է։",
+   "audio": {
+    "file": "cards/i-always-drink-coffee"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-don-t-know-where-he-is",
+   "keyword": "Common mistake",
+   "wrong": "I don't know where is he.",
+   "correct": "I don't know where he is.",
+   "explanation_hy": "Անուղղակի հարցում՝ ենթակա + բայ։",
+   "audio": {
+    "file": "cards/i-don-t-know-where-he-is"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "tell-me-what-you-want",
+   "keyword": "Common mistake",
+   "wrong": "Tell me what do you want.",
+   "correct": "Tell me what you want.",
+   "explanation_hy": "Անուղղակի հարցում do/does-ը չի շրջում շարադասությունը։",
+   "audio": {
+    "file": "cards/tell-me-what-you-want"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "why-are-you-late",
+   "keyword": "Common mistake",
+   "wrong": "Why you are late?",
+   "correct": "Why are you late?",
+   "explanation_hy": "Be բայը հարցում գալիս է ենթակայից առաջ։",
+   "audio": {
+    "file": "cards/why-are-you-late"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "where-do-you-live",
+   "keyword": "Common mistake",
+   "wrong": "Where you live?",
+   "correct": "Where do you live?",
+   "explanation_hy": "Present Simple հարցում՝ do/does։",
+   "audio": {
+    "file": "cards/where-do-you-live"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "she-doesn-t-like-tea-2",
+   "keyword": "Common mistake",
+   "wrong": "She not likes tea.",
+   "correct": "She doesn't like tea.",
+   "explanation_hy": "Doesn't + բայի սկզբնական ձև։",
+   "audio": {
+    "file": "cards/she-doesn-t-like-tea-2"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-don-t-understand",
+   "keyword": "Common mistake",
+   "wrong": "I no understand.",
+   "correct": "I don't understand.",
+   "explanation_hy": "Բայական ժխտման համար անհրաժեշտ է օժանդակ բայ։",
+   "audio": {
+    "file": "cards/i-don-t-understand"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "because-i-was-tired-i-slept",
+   "keyword": "Common mistake",
+   "wrong": "Because I was tired, so I slept.",
+   "correct": "Because I was tired, I slept.",
+   "explanation_hy": "Այս կառուցվածքում because և so-ն միասին պետք չեն։",
+   "audio": {
+    "file": "cards/because-i-was-tired-i-slept"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "although-it-was-cold-we-went-out",
+   "keyword": "Common mistake",
+   "wrong": "Although it was cold, but we went out.",
+   "correct": "Although it was cold, we went out.",
+   "explanation_hy": "Although և but-ը նույն հակադրությունը կրկնակի չեն կապում։",
+   "audio": {
+    "file": "cards/although-it-was-cold-we-went-out"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-have-been-here-for-two-hours",
+   "keyword": "Common mistake",
+   "wrong": "I am here from two hours.",
+   "correct": "I have been here for two hours.",
+   "explanation_hy": "Տևողություն՝ for two hours։",
+   "audio": {
+    "file": "cards/i-have-been-here-for-two-hours"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "it-is-very-important-to-study",
+   "keyword": "Common mistake",
+   "wrong": "Is very important to study.",
+   "correct": "It is very important to study.",
+   "explanation_hy": "Անգլերեն նախադասությանը հաճախ անհրաժեշտ է it ենթական։",
+   "audio": {
+    "file": "cards/it-is-very-important-to-study"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "people-who-live-here-are-friendly",
+   "keyword": "Common mistake",
+   "wrong": "People which live here are friendly.",
+   "correct": "People who live here are friendly.",
+   "explanation_hy": "Մարդկանց համար սովորաբար who։",
+   "audio": {
+    "file": "cards/people-who-live-here-are-friendly"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "one-of-my-friends-is-here",
+   "keyword": "Common mistake",
+   "wrong": "One of my friend is here.",
+   "correct": "One of my friends is here.",
+   "explanation_hy": "One of + հոգնակի գոյական։",
+   "audio": {
+    "file": "cards/one-of-my-friends-is-here"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "what-does-this-word-mean",
+   "keyword": "Common mistake",
+   "wrong": "What means this word?",
+   "correct": "What does this word mean?",
+   "explanation_hy": "Հարցի ճիշտ կառուցվածքը՝ What does \\... mean?",
+   "audio": {
+    "file": "cards/what-does-this-word-mean"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "how-do-you-say-this-in-english",
+   "keyword": "Common mistake",
+   "wrong": "How to say this in English?",
+   "correct": "How do you say this in English?",
+   "explanation_hy": "Ամբողջական հարցում պետք է do + you։",
+   "audio": {
+    "file": "cards/how-do-you-say-this-in-english"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "could-you-repeat-that-please",
+   "keyword": "Common mistake",
+   "wrong": "Repeat again, please.",
+   "correct": "Could you repeat that, please?",
+   "explanation_hy": "Repeat-ն արդեն կրկնելու իմաստ ունի, again-ը հաճախ ավելորդ է։",
+   "audio": {
+    "file": "cards/could-you-repeat-that-please"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-didn-t-catch-that",
+   "keyword": "Common mistake",
+   "wrong": "I didn't catch you.",
+   "correct": "I didn't catch that.",
+   "explanation_hy": "Չհասկացա ասվածը՝ I didn't catch that։",
+   "audio": {
+    "file": "cards/i-didn-t-catch-that"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-don-t-understand-anything",
+   "keyword": "Common mistake",
+   "wrong": "I don't understand nothing.",
+   "correct": "I don't understand anything.",
+   "explanation_hy": "Ստանդարտ անգլերենում կրկնակի ժխտումից խուսափում ենք։",
+   "audio": {
+    "file": "cards/i-don-t-understand-anything"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-have-a-question-for-you",
+   "keyword": "Common mistake",
+   "wrong": "I have a question to you.",
+   "correct": "I have a question for you.",
+   "explanation_hy": "Question for someone։",
+   "audio": {
+    "file": "cards/i-have-a-question-for-you"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "can-you-explain-it-to-me",
+   "keyword": "Common mistake",
+   "wrong": "Can you explain me?",
+   "correct": "Can you explain it to me?",
+   "explanation_hy": "Explain something to someone։",
+   "audio": {
+    "file": "cards/can-you-explain-it-to-me"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "let-s-meet-at-o-clock",
+   "keyword": "Common mistake",
+   "wrong": "Let's meet in 5 o'clock.",
+   "correct": "Let's meet at 5 o'clock.",
+   "explanation_hy": "Ժամի հետ՝ at։",
+   "audio": {
+    "file": "cards/let-s-meet-at-o-clock"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-ll-go-home",
+   "keyword": "Common mistake",
+   "wrong": "I will go to my home.",
+   "correct": "I'll go home.",
+   "explanation_hy": "Go home՝ առանց my և to-ի։",
+   "audio": {
+    "file": "cards/i-ll-go-home"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "could-i-have-some-water-please",
+   "keyword": "Common mistake",
+   "wrong": "Give me water.",
+   "correct": "Could I have some water, please?",
+   "explanation_hy": "Քաղաքավարի խնդրանքի ավելի բնական ձև։",
+   "audio": {
+    "file": "cards/could-i-have-some-water-please"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "you-re-right-aren-t-you-right",
+   "keyword": "Common mistake",
+   "wrong": "You are right, yes?",
+   "correct": "You're right, aren't you? / Right?",
+   "explanation_hy": "Հաստատում խնդրելիս օգտագործվում է tag question կամ right?։",
+   "audio": {
+    "file": "cards/you-re-right-aren-t-you-right"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-want-you-to-come",
+   "keyword": "Common mistake",
+   "wrong": "I want that you come.",
+   "correct": "I want you to come.",
+   "explanation_hy": "Want + մարդ + to + բայ։",
+   "audio": {
+    "file": "cards/i-want-you-to-come"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-am-happy",
+   "keyword": "Common mistake",
+   "wrong": "i am happy.",
+   "correct": "I am happy.",
+   "explanation_hy": "I դերանունը միշտ մեծատառ է։",
+   "audio": {
+    "file": "cards/i-am-happy"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-live-in-yerevan",
+   "keyword": "Common mistake",
+   "wrong": "I live in yerevan.",
+   "correct": "I live in Yerevan.",
+   "explanation_hy": "Քաղաքների և անունների սկզբնատառը մեծատառ է։",
+   "audio": {
+    "file": "cards/i-live-in-yerevan"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-like-english",
+   "keyword": "Common mistake",
+   "wrong": "I like english.",
+   "correct": "I like English.",
+   "explanation_hy": "Լեզուների անունները մեծատառով են գրվում։",
+   "audio": {
+    "file": "cards/i-like-english"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "you-re-welcome",
+   "keyword": "Common mistake",
+   "wrong": "Your welcome.",
+   "correct": "You're welcome.",
+   "explanation_hy": "You're = you are, your = քո/ձեր։",
+   "audio": {
+    "file": "cards/you-re-welcome"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "it-s-a-nice-day",
+   "keyword": "Common mistake",
+   "wrong": "Its a nice day.",
+   "correct": "It's a nice day.",
+   "explanation_hy": "It's = it is, its = պատկանելություն։",
+   "audio": {
+    "file": "cards/it-s-a-nice-day"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-bought-two-books",
+   "keyword": "Common mistake",
+   "wrong": "I bought two book.",
+   "correct": "I bought two books.",
+   "explanation_hy": "Թվից հետո հաշվելի գոյականը սովորաբար հոգնակի է։",
+   "audio": {
+    "file": "cards/i-bought-two-books"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "children-are-playing",
+   "keyword": "Common mistake",
+   "wrong": "Childs are playing.",
+   "correct": "Children are playing.",
+   "explanation_hy": "Child-ի հոգնակին children է։",
+   "audio": {
+    "file": "cards/children-are-playing"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "women",
+   "keyword": "Common mistake",
+   "wrong": "Womans",
+   "correct": "Women",
+   "explanation_hy": "Woman-ի հոգնակին women է։",
+   "audio": {
+    "file": "cards/women"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "information",
+   "keyword": "Common mistake",
+   "wrong": "Informations",
+   "correct": "Information",
+   "explanation_hy": "Information-ը անհաշվելի է, -s չի ստանում։",
+   "audio": {
+    "file": "cards/information"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "he-goes-to-work",
+   "keyword": "Common mistake",
+   "wrong": "He go's to work.",
+   "correct": "He goes to work.",
+   "explanation_hy": "Go-ի երրորդ դեմքը goes է, ոչ թե go's։",
+   "audio": {
+    "file": "cards/he-goes-to-work"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-don-t-know",
+   "keyword": "Common mistake",
+   "wrong": "I dont know.",
+   "correct": "I don't know.",
+   "explanation_hy": "Կրճատ ձևում պետք է ապոստրոֆ։",
+   "audio": {
+    "file": "cards/i-don-t-know"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "hello-how-are-you",
+   "keyword": "Common mistake",
+   "wrong": "Hello , how are you?",
+   "correct": "Hello, how are you?",
+   "explanation_hy": "Ստորակետից առաջ բացատ չի դրվում։",
+   "audio": {
+    "file": "cards/hello-how-are-you"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "tell-me-the-truth",
+   "keyword": "Common mistake",
+   "wrong": "Say me the truth.",
+   "correct": "Tell me the truth.",
+   "explanation_hy": "Tell someone something, say something to someone։",
+   "audio": {
+    "file": "cards/tell-me-the-truth"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "say-that-you-are-tired",
+   "keyword": "Common mistake",
+   "wrong": "Tell that you are tired.",
+   "correct": "Say that you are tired.",
+   "explanation_hy": "Say + ասվածք, tell + մարդ կամ tell someone something։",
+   "audio": {
+    "file": "cards/say-that-you-are-tired"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "many-people",
+   "keyword": "Common mistake",
+   "wrong": "Much people",
+   "correct": "Many people",
+   "explanation_hy": "Many՝ հաշվելի հոգնակի, much՝ անհաշվելի։",
+   "audio": {
+    "file": "cards/many-people"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "little-money",
+   "keyword": "Common mistake",
+   "wrong": "Few money",
+   "correct": "Little money",
+   "explanation_hy": "Money-ն անհաշվելի է․ little money։",
+   "audio": {
+    "file": "cards/little-money"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "fewer-people",
+   "keyword": "Common mistake",
+   "wrong": "Less people",
+   "correct": "Fewer people",
+   "explanation_hy": "Ստանդարտ տարբերակում fewer՝ հաշվելի հոգնակիի հետ։",
+   "audio": {
+    "file": "cards/fewer-people"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "other-people",
+   "keyword": "Common mistake",
+   "wrong": "Another people",
+   "correct": "Other people",
+   "explanation_hy": "Another + եզակի, other + հոգնակի/անհաշվելի։",
+   "audio": {
+    "file": "cards/other-people"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "every-student",
+   "keyword": "Common mistake",
+   "wrong": "Every students",
+   "correct": "Every student",
+   "explanation_hy": "Every-ից հետո եզակի գոյական։",
+   "audio": {
+    "file": "cards/every-student"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "the-easiest",
+   "keyword": "Common mistake",
+   "wrong": "The most easiest",
+   "correct": "The easiest",
+   "explanation_hy": "-est և most-ը միասին չեն օգտագործվում։",
+   "audio": {
+    "file": "cards/the-easiest"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "better",
+   "keyword": "Common mistake",
+   "wrong": "More better",
+   "correct": "Better",
+   "explanation_hy": "Better-ն արդեն comparative է։",
+   "audio": {
+    "file": "cards/better"
+   },
+   "needs_voice": true
+  },
+  {
+   "id": "i-prefer-tea-to-coffee",
+   "keyword": "Common mistake",
+   "wrong": "I prefer tea than coffee.",
+   "correct": "I prefer tea to coffee.",
+   "explanation_hy": "Prefer A to B։",
+   "audio": {
+    "file": "cards/i-prefer-tea-to-coffee"
+   },
+   "needs_voice": true
+  }
+ ],
+ "quizzes": [
+  {
+   "id": "plural-verb",
+   "keyword": "Present simple quiz",
+   "prompt": "The monkeys ___ and play.",
+   "options": [
+    "jumps",
+    "jump",
+    "jumping"
+   ],
+   "answer": "jump",
+   "explanation_hy": "Monkeys-ը հոգնակի ենթակա է, ուստի բայը սկզբնական ձևով է։",
+   "audio": {
+    "lesson": "zoo",
+    "sentence": 6
+   }
+  },
+  {
+   "id": "past-simple",
+   "keyword": "Past simple quiz",
+   "prompt": "Yesterday, we ___ a new book.",
+   "options": [
+    "see",
+    "saw",
+    "seen"
+   ],
+   "answer": "saw",
+   "explanation_hy": "Yesterday-ը ցույց է տալիս անցյալը, իսկ see բայի Past Simple ձևը saw է։"
+  },
+  {
+   "id": "third-person",
+   "keyword": "Present simple · he, she, it",
+   "prompt": "The library ___ at nine.",
+   "options": [
+    "open",
+    "opens",
+    "is open"
+   ],
+   "answer": "opens",
+   "explanation_hy": "Եզակի երրորդ դեմքով սովորության մասին խոսելիս բային ավելացնում ենք -s։"
+  },
+  {
+   "id": "any-milk",
+   "keyword": "Some or any?",
+   "prompt": "There isn’t ___ milk in the fridge.",
+   "options": [
+    "some",
+    "any",
+    "many"
+   ],
+   "answer": "any",
+   "explanation_hy": "Ժխտական նախադասություններում սովորաբար գործածում ենք any։"
+  },
+  {
+   "id": "first-conditional",
+   "keyword": "The first conditional",
+   "prompt": "If it rains, we ___ inside.",
+   "options": [
+    "stay",
+    "will stay",
+    "stayed"
+   ],
+   "answer": "will stay",
+   "explanation_hy": "Արդյունքի մասում գործածում ենք will և բայի սկզբնական ձևը։"
+  },
+  {
+   "id": "time-preposition",
+   "keyword": "Time prepositions",
+   "prompt": "The lesson starts ___ 9:00.",
+   "options": [
+    "in",
+    "on",
+    "at"
+   ],
+   "answer": "at",
+   "explanation_hy": "Ժամերի հետ գործածում ենք at։"
+  }
+ ],
+ "words": [
+  {
+   "id": "lazy",
+   "word": "lazy",
+   "part_of_speech": "adjective",
+   "armenian": "ծույլ",
+   "example": "They are big, but they are very lazy.",
+   "example_hy": "Նրանք մեծ են, բայց շատ ծույլ են։",
+   "audio": {
+    "lesson": "zoo",
+    "sentence": 3
+   }
+  },
+  {
+   "id": "sky",
+   "word": "sky",
+   "part_of_speech": "noun",
+   "armenian": "երկինք",
+   "example": "The sun is hot, and the sky is blue.",
+   "example_hy": "Արևը շոգ է, իսկ երկինքը՝ կապույտ։",
+   "audio": {
+    "lesson": "zoo",
+    "sentence": 1
+   }
+  },
+  {
+   "id": "jump",
+   "word": "jump",
+   "part_of_speech": "verb",
+   "armenian": "ցատկել",
+   "example": "The monkeys jump and play.",
+   "example_hy": "Կապիկները ցատկում ու խաղում են։",
+   "audio": {
+    "lesson": "zoo",
+    "sentence": 6
+   }
+  },
+  {
+   "id": "market",
+   "word": "market",
+   "part_of_speech": "noun",
+   "armenian": "շուկա",
+   "example": "Every Saturday, my grandmother and I go to the market.",
+   "example_hy": "Ամեն շաբաթ օր տատիկս ու ես գնում ենք շուկա։",
+   "audio": {
+    "lesson": "saturday-market",
+    "sentence": 0
+   }
+  },
+  {
+   "id": "price",
+   "word": "price",
+   "part_of_speech": "noun",
+   "armenian": "գին",
+   "example": "She always asks the price.",
+   "example_hy": "Նա միշտ հարցնում է գինը։",
+   "audio": {
+    "lesson": "saturday-market",
+    "sentence": 8
+   }
+  },
+  {
+   "id": "fence",
+   "word": "fence",
+   "part_of_speech": "noun",
+   "armenian": "ցանկապատ",
+   "example": "Small birds often sit on the fence and watch me.",
+   "example_hy": "Փոքրիկ թռչունները հաճախ նստում են ցանկապատին ու նայում ինձ։",
+   "audio": {
+    "lesson": "my-garden",
+    "sentence": 6
+   }
+  }
+ ]
 }

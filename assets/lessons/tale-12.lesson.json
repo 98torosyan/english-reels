@@ -1,0 +1,26 @@
+{
+ "id": "tale-12",
+ "level": "B1",
+ "topic": "Story",
+ "title": "The Boy Who Cried Wolf",
+ "author": "Aesop",
+ "voice": "en-GB-ThomasNeural",
+ "rate": "-8%",
+ "text": [
+  "A young shepherd repeatedly tricks villagers by shouting that a wolf is attacking his sheep. When a real wolf finally comes, nobody believes him. The sheep are lost. The boy learns that trust is difficult to rebuild once people have been lied to too many times."
+ ],
+ "words": [
+  [
+   "wolf",
+   "գայլ"
+  ],
+  [
+   "shout",
+   "գոռալ"
+  ],
+  [
+   "believe",
+   "հավատալ"
+  ]
+ ]
+}

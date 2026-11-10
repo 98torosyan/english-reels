@@ -39,7 +39,15 @@ async function main() {
     else if (kind === 'word') item = findById(CARDS.words, id, 'word');
     else throw new Error(`Unknown reel kind: ${kind}`);
 
-    const audio = item.audio
+    const cardAudio = (file) => {
+      const t = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'assets', `${file}.json`), 'utf8'));
+      const off = t.words[0][0];
+      const wordTimings = t.words.map(([a, b]) => [Number((a - off).toFixed(3)), Number((b - off).toFixed(3))]);
+      return { audioPath: path.join(__dirname, '..', 'assets', `${file}.mp3`), audioStart: off, wordTimings, sentenceText: t.text, duration: wordTimings.at(-1)[1] + 2.6 };
+    };
+    const audio = item.audio && item.audio.file
+      ? cardAudio(item.audio.file)
+      : item.audio
       ? sentenceAudio(item.audio.lesson, item.audio.sentence)
       : { audioPath: null, audioStart: 0, wordTimings: [], duration: 9 };
     let data;

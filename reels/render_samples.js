@@ -95,12 +95,12 @@ function buildStoryHtml(payload, baseUrl) {
 
   const level = escapeHtml(payload.lesson.level);
   const part = payload.part;
-  html = html.replace(/<div id="chip">[\s\S]*?<\/div>/, `<div id="chip"><i class="a">${level}</i><i>SHORT STORY</i><i>PART ${part}</i></div>`);
+  html = html.replace(/<div id="chip">[\s\S]*?<\/div>/, `<div id="chip"><i class="a">${level}</i><i>SHORT STORY</i>${payload.lesson.text.length > 1 ? `<i>PART ${part}</i>` : ''}</div>`);
   const words = payload.lesson.words.slice(0, 3).map(([word, hy]) => `<div><b>${escapeHtml(word)}</b><span>${escapeHtml(hy)}</span></div>`).join('');
   const titleWords = payload.lesson.title.split(/\s+/);
   const last = titleWords.pop();
   const title = `${escapeHtml(titleWords.join(' '))}<br><em>${escapeHtml(last)}</em>`;
-  const storyEnd = part < 3 ? `<h2>Part ${part + 1} <em>tomorrow</em></h2>` : '<h2>Story <em>complete</em></h2>';
+  const storyEnd = part < payload.lesson.text.length ? `<h2>Part ${part + 1} <em>tomorrow</em></h2>` : '<h2>Story <em>complete</em></h2>';
   html = html.replace(/<div id="title">[\s\S]*?<\/div>/, `<div id="title">${title}</div>`);
   html = html.replace(/<div id="words">[\s\S]*?<\/div><div id="card">/, `<div id="words"><h4>NEW WORDS · ՆՈՐ ԲԱՌԵՐ</h4>${words}</div><div id="card">`);
   html = html.replace(/<h2>Part 2 <em>tomorrow<\/em><\/h2>/, storyEnd);

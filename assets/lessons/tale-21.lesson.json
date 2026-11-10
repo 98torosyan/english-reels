@@ -1,0 +1,26 @@
+{
+ "id": "tale-21",
+ "level": "B1",
+ "topic": "Story",
+ "title": "The Ugly Duckling",
+ "author": "Hans Christian Andersen",
+ "voice": "en-GB-LibbyNeural",
+ "rate": "-8%",
+ "text": [
+  "A little bird is rejected because he looks different from the other ducklings. He faces a lonely winter, but survives. In spring, he sees beautiful swans and discovers that he has grown into one of them. He learns that being different does not mean being less worthy."
+ ],
+ "words": [
+  [
+   "duckling",
+   "բադիկ"
+  ],
+  [
+   "swan",
+   "կարապ"
+  ],
+  [
+   "ugly",
+   "տգեղ"
+  ]
+ ]
+}

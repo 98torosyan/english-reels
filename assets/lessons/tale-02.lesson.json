@@ -1,0 +1,26 @@
+{
+ "id": "tale-02",
+ "level": "B1",
+ "topic": "Story",
+ "title": "The Selfish Giant",
+ "author": "Oscar Wilde",
+ "voice": "en-GB-RyanNeural",
+ "rate": "-8%",
+ "text": [
+  "A giant builds a wall around his garden and refuses to let children play there. Soon the garden is trapped in endless winter. When he finally welcomes the children, spring returns. The giant discovers that sharing brings more happiness than keeping everything for himself."
+ ],
+ "words": [
+  [
+   "giant",
+   "հսկա"
+  ],
+  [
+   "wall",
+   "պատ"
+  ],
+  [
+   "share",
+   "կիսվել"
+  ]
+ ]
+}

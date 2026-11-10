@@ -1,0 +1,26 @@
+{
+ "id": "tale-01",
+ "level": "B1",
+ "topic": "Story",
+ "title": "The Happy Prince",
+ "author": "Oscar Wilde",
+ "voice": "en-GB-SoniaNeural",
+ "rate": "-8%",
+ "text": [
+  "A golden statue sees the suffering of poor people in his city. With the help of a little swallow, he gives away his jewels and gold to help them. The statue becomes plain, but the people become happier. Their kindness teaches the city that true beauty is found in compassion."
+ ],
+ "words": [
+  [
+   "statue",
+   "արձան"
+  ],
+  [
+   "swallow",
+   "ծիծեռնակ"
+  ],
+  [
+   "kindness",
+   "բարություն"
+  ]
+ ]
+}
