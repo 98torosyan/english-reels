@@ -123,17 +123,6 @@
    "needs_voice": true
   },
   {
-   "id": "i-am-years-old",
-   "keyword": "Common mistake",
-   "wrong": "I have 20 years.",
-   "correct": "I am 20 years old.",
-   "explanation_hy": "Տարիքը անգլերենում արտահայտվում է be բայով։",
-   "audio": {
-    "file": "cards/i-am-years-old"
-   },
-   "needs_voice": true
-  },
-  {
    "id": "i-know-the-answer",
    "keyword": "Common mistake",
    "wrong": "I am knowing the answer.",
@@ -163,17 +152,6 @@
    "explanation_hy": "Yesterday-ի նման ավարտված անցյալի հետ՝ Past Simple։",
    "audio": {
     "file": "cards/i-saw-him-yesterday"
-   },
-   "needs_voice": true
-  },
-  {
-   "id": "i-have-lived-here-since",
-   "keyword": "Common mistake",
-   "wrong": "I live here since 2020.",
-   "correct": "I have lived here since 2020.",
-   "explanation_hy": "Մինչև հիմա շարունակվող իրավիճակի համար՝ Present Perfect։",
-   "audio": {
-    "file": "cards/i-have-lived-here-since"
    },
    "needs_voice": true
   },
@@ -585,17 +563,6 @@
    "needs_voice": true
   },
   {
-   "id": "i-had-a-party-threw-a-party",
-   "keyword": "Common mistake",
-   "wrong": "I did a party.",
-   "correct": "I had a party / threw a party.",
-   "explanation_hy": "Խնջույք կազմակերպել՝ have/throw a party։",
-   "audio": {
-    "file": "cards/i-had-a-party-threw-a-party"
-   },
-   "needs_voice": true
-  },
-  {
    "id": "i-am-bored",
    "keyword": "Common mistake",
    "wrong": "I am boring.",
@@ -647,17 +614,6 @@
    "explanation_hy": "Homework-ը անհաշվելի գոյական է։",
    "audio": {
     "file": "cards/i-have-a-lot-of-homework"
-   },
-   "needs_voice": true
-  },
-  {
-   "id": "i-need-some-advice-a-piece-of-advice",
-   "keyword": "Common mistake",
-   "wrong": "I need an advice.",
-   "correct": "I need some advice / a piece of advice.",
-   "explanation_hy": "Advice-ը անհաշվելի է։",
-   "audio": {
-    "file": "cards/i-need-some-advice-a-piece-of-advice"
    },
    "needs_voice": true
   },
@@ -1014,17 +970,6 @@
    "needs_voice": true
   },
   {
-   "id": "let-s-meet-at-o-clock",
-   "keyword": "Common mistake",
-   "wrong": "Let's meet in 5 o'clock.",
-   "correct": "Let's meet at 5 o'clock.",
-   "explanation_hy": "Ժամի հետ՝ at։",
-   "audio": {
-    "file": "cards/let-s-meet-at-o-clock"
-   },
-   "needs_voice": true
-  },
-  {
    "id": "i-ll-go-home",
    "keyword": "Common mistake",
    "wrong": "I will go to my home.",
@@ -1043,17 +988,6 @@
    "explanation_hy": "Քաղաքավարի խնդրանքի ավելի բնական ձև։",
    "audio": {
     "file": "cards/could-i-have-some-water-please"
-   },
-   "needs_voice": true
-  },
-  {
-   "id": "you-re-right-aren-t-you-right",
-   "keyword": "Common mistake",
-   "wrong": "You are right, yes?",
-   "correct": "You're right, aren't you? / Right?",
-   "explanation_hy": "Հաստատում խնդրելիս օգտագործվում է tag question կամ right?։",
-   "audio": {
-    "file": "cards/you-re-right-aren-t-you-right"
    },
    "needs_voice": true
   },
