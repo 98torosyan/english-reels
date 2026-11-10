@@ -206,6 +206,7 @@ async function renderCard(browser, baseUrl, input, audio, outputName, correctInd
   const videoPath = path.join(output, `${outputName}.mp4`);
   const posterPath = path.join(output, `${outputName}.png`);
   const htmlPath = path.join(utils.ROOT, '.render-work', 'card.html');
+  utils.ensureDirectory(path.dirname(htmlPath));
   fs.writeFileSync(htmlPath, buildCardHtml(baseUrl), 'utf8');
   const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
@@ -218,6 +219,7 @@ async function renderCard(browser, baseUrl, input, audio, outputName, correctInd
     window.CORRECT_INDEX = data.correctIndex;
     window.seek(0);
   }, { data: config, duration: audio.duration });
+  await page.evaluate(() => Promise.all([document.fonts.load('40px NotoArmenian', 'Աբգ'), document.fonts.load('40px Literata', 'Ab'), document.fonts.load('40px Inter', 'Ab')]).then(() => document.fonts.ready));
   const layout = await measureCard(page);
   console.log(`${input.kind} card: ${JSON.stringify(layout)}`);
   if (layout.width !== 1080 || layout.height !== 1920 || !layout.armenianFont || !layout.latinFont) {

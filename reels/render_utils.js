@@ -100,6 +100,17 @@ async function renderFrames(page, duration, framesDirectory, posterPath, posterT
   return { totalFrames, fps };
 }
 
+// Original background loops from music/make_music.py; picked per video so the feed varies.
+function pickMusic(outputPath) {
+  if (process.env.NO_MUSIC === '1') return null;
+  const dir = path.join(ROOT, 'music');
+  const tracks = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.m4a')).sort() : [];
+  if (!tracks.length) return null;
+  const name = path.basename(outputPath);
+  let h = 0; for (const c of name) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  return path.join(dir, tracks[h % tracks.length]);
+}
+
 function encodeVideo(framesDirectory, audioPath, audioStart, duration, outputPath, fps = 30) {
   const framePattern = path.join(framesDirectory, 'f%05d.jpg').replace(/\\/g, '/');
   const args = [
@@ -108,11 +119,25 @@ function encodeVideo(framesDirectory, audioPath, audioStart, duration, outputPat
   ];
   if (audioPath) args.push('-ss', Number(audioStart || 0).toFixed(3), '-i', path.resolve(audioPath));
   else args.push('-f', 'lavfi', '-i', 'anullsrc=channel_layout=stereo:sample_rate=48000');
+  const music = pickMusic(outputPath);
+  const fadeOut = Math.max(0, duration - 1.2).toFixed(3);
+  if (music) {
+    args.push('-stream_loop', '-1', '-i', music);
+    const voice = audioPath ? 1.0 : 0.0;
+    args.push('-filter_complex',
+      `[1:a]aresample=48000,apad,volume=${voice},asplit=2[v][sc];` +
+      `[2:a]aresample=48000,volume=${audioPath ? 0.16 : 0.45},afade=t=in:d=0.8,afade=t=out:st=${fadeOut}:d=1.2[m];` +
+      `[m][sc]sidechaincompress=threshold=0.02:ratio=5:attack=25:release=450[md];` +
+      `[v][md]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]`);
+    args.push('-map', '0:v:0', '-map', '[a]');
+  } else {
+    args.push('-map', '0:v:0', '-map', '1:a:0', '-af', 'apad');
+  }
   args.push(
-    '-map', '0:v:0', '-map', '1:a:0', '-t', duration.toFixed(3),
+    '-t', duration.toFixed(3),
     '-vf', 'scale=1080:1920:flags=lanczos,setsar=1',
     '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p',
-    '-af', 'apad', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
+    '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
     '-movflags', '+faststart', path.resolve(outputPath),
   );
   const result = spawnSync(FFmpeg, args, { encoding: 'utf8', maxBuffer: 8 * 1024 * 1024 });
