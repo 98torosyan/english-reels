@@ -6,6 +6,18 @@ const utils = require('../reels/render_utils');
 const RULES = JSON.parse(fs.readFileSync(path.join(utils.ROOT, 'carousels/data/rules.json'), 'utf8'));
 const LISTS = JSON.parse(fs.readFileSync(path.join(utils.ROOT, 'carousels/data/lists.json'), 'utf8'));
 
+const TESTS = JSON.parse(fs.readFileSync(path.join(utils.ROOT, 'carousels/data/tests.json'), 'utf8'));
+
+function testPlan(test) {
+  const base = { level: 'UFAR · EXAM PREP', total: test.items.length + 3, series: `UFAR MINI-TEST · №${test.num}`, rule: '' };
+  return [
+    { ...base, kind: 'testhook', title: "Can you pass this <em>UFAR</em> test?", subtitle: 'Իսկական UFAR ձևաչափով 5 հարց։ Լուծի՛ր և ստուգի՛ր պատասխաններդ վերջին սլայդում։', count: test.items.length },
+    ...test.items.map((it, i) => ({ ...base, kind: 'q', title: `Question <em>${i + 1}</em>`, q: escapeHtml(it.q), opts: it.o.map(escapeHtml), num: i + 1 })),
+    { ...base, kind: 'answers', title: 'Check your <em>answers</em>', answers: test.items.map((it, i) => `${i + 1} — ${String.fromCharCode(65 + it.a)} · ${escapeHtml(it.o[it.a])}`) },
+    { ...base, kind: 'save', title: '', rule: 'Քանի՞ ճիշտ պատասխան ունեցար։ Գրի՛ր մեկնաբանություններում 👇 Պահպանի՛ր և ուղարկի՛ր քննությանը պատրաստվող ընկերոջդ։' },
+  ].map((slide, index) => ({ ...slide, index }));
+}
+
 function listPlan(set) {
   const n = set.items.length + 2;
   const base = { level: set.chip, total: n, series: set.series, rule: '' };
@@ -73,7 +85,8 @@ function measure(page) {
 }
 
 async function renderCarousel({ browser, baseUrl, ruleId, outputDirectory }) {
-  const list = LISTS.find((item) => item.id === ruleId);
+  const test = TESTS.find((item) => item.id === ruleId);
+  const list = LISTS.find((item) => item.id === ruleId) || test;
   const rule = RULES.find((item) => item.id === ruleId) || list;
   if (!rule) throw new Error(`Unknown carousel rule: ${ruleId}`);
   const template = fs.readFileSync(path.join(utils.ROOT, 'carousels/templates/carousel.html'), 'utf8');
@@ -87,7 +100,7 @@ async function renderCarousel({ browser, baseUrl, ruleId, outputDirectory }) {
   utils.ensureDirectory(target);
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1350);
-  const plan = list ? listPlan(list) : slidePlan(rule).map((x) => ({ ...x, total: 7, level: `${rule.level} · GRAMMAR` }));
+  const plan = test ? testPlan(test) : list ? listPlan(list) : slidePlan(rule).map((x) => ({ ...x, total: 7, level: `${rule.level} · GRAMMAR` }));
   const firstLayout = await (async () => {
     await page.evaluate((slide) => window.setSlide(slide), plan[0]);
     await page.evaluate(async () => {

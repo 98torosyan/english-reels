@@ -1,0 +1,410 @@
+[
+ {
+  "id": "ufar-mini-1",
+  "num": 1,
+  "items": [
+   {
+    "q": "She ___ in Yerevan since 2018.",
+    "o": [
+     "has lived",
+     "lives",
+     "is living"
+    ],
+    "a": 0
+   },
+   {
+    "q": "If I ___ you, I would apologise to her.",
+    "o": [
+     "will be",
+     "am",
+     "were"
+    ],
+    "a": 2
+   },
+   {
+    "q": "The parcel ___ yesterday morning.",
+    "o": [
+     "was delivered",
+     "has been delivered",
+     "delivered"
+    ],
+    "a": 0
+   },
+   {
+    "q": "He asked me where ___.",
+    "o": [
+     "do I live",
+     "did I live",
+     "I lived"
+    ],
+    "a": 2
+   },
+   {
+    "q": "I'm looking forward to ___ you next week.",
+    "o": [
+     "see",
+     "have seen",
+     "seeing"
+    ],
+    "a": 2
+   }
+  ]
+ },
+ {
+  "id": "ufar-mini-2",
+  "num": 2,
+  "items": [
+   {
+    "q": "This is ___ most interesting book I have ever read.",
+    "o": [
+     "an",
+     "a",
+     "the"
+    ],
+    "a": 2
+   },
+   {
+    "q": "By the time we arrived at the cinema, the film ___.",
+    "o": [
+     "has already started",
+     "already starts",
+     "had already started"
+    ],
+    "a": 2
+   },
+   {
+    "q": "You ___ smoke here. It's against the rules.",
+    "o": [
+     "don't have to",
+     "needn't",
+     "mustn't"
+    ],
+    "a": 2
+   },
+   {
+    "q": "My father is used to ___ up early.",
+    "o": [
+     "getting",
+     "got",
+     "get"
+    ],
+    "a": 0
+   },
+   {
+    "q": "There ___ much traffic in the city centre this morning.",
+    "o": [
+     "are",
+     "were",
+     "was"
+    ],
+    "a": 2
+   }
+  ]
+ },
+ {
+  "id": "ufar-mini-3",
+  "num": 3,
+  "items": [
+   {
+    "q": "I wish I ___ more time to prepare for yesterday's test.",
+    "o": [
+     "would have",
+     "had had",
+     "have"
+    ],
+    "a": 1
+   },
+   {
+    "q": "The man ___ car was stolen called the police.",
+    "o": [
+     "which",
+     "who",
+     "whose"
+    ],
+    "a": 2
+   },
+   {
+    "q": "Aram is ___ than his older brother.",
+    "o": [
+     "more tall",
+     "tallest",
+     "taller"
+    ],
+    "a": 2
+   },
+   {
+    "q": "We have very ___ milk left, so let's buy some.",
+    "o": [
+     "little",
+     "few",
+     "a few"
+    ],
+    "a": 0
+   },
+   {
+    "q": "You've finished your homework, ___?",
+    "o": [
+     "haven't you",
+     "don't you",
+     "didn't you"
+    ],
+    "a": 0
+   }
+  ]
+ },
+ {
+  "id": "ufar-mini-4",
+  "num": 4,
+  "items": [
+   {
+    "q": "Not only ___ late, but he also forgot his books.",
+    "o": [
+     "was he",
+     "he was",
+     "he is"
+    ],
+    "a": 0
+   },
+   {
+    "q": "She suggested ___ to the museum on Sunday.",
+    "o": [
+     "going",
+     "go",
+     "to go"
+    ],
+    "a": 0
+   },
+   {
+    "q": "I'll call you as soon as I ___ home.",
+    "o": [
+     "get",
+     "would get",
+     "will get"
+    ],
+    "a": 0
+   },
+   {
+    "q": "The children ___ football for two hours when it started to rain.",
+    "o": [
+     "have been playing",
+     "had been playing",
+     "are playing"
+    ],
+    "a": 1
+   },
+   {
+    "q": "He denied ___ the window.",
+    "o": [
+     "to break",
+     "break",
+     "breaking"
+    ],
+    "a": 2
+   }
+  ]
+ },
+ {
+  "id": "ufar-mini-5",
+  "num": 5,
+  "items": [
+   {
+    "q": "This bridge ___ in 1960.",
+    "o": [
+     "was built",
+     "built",
+     "has built"
+    ],
+    "a": 0
+   },
+   {
+    "q": "She can't ___ at home. Her car isn't outside.",
+    "o": [
+     "to be",
+     "being",
+     "be"
+    ],
+    "a": 2
+   },
+   {
+    "q": "It's high time we ___ home. It's very late.",
+    "o": [
+     "go",
+     "went",
+     "will go"
+    ],
+    "a": 1
+   },
+   {
+    "q": "I have never seen ___ beautiful sunset.",
+    "o": [
+     "such",
+     "such a",
+     "so"
+    ],
+    "a": 1
+   },
+   {
+    "q": "My little sister is very interested ___ history.",
+    "o": [
+     "on",
+     "at",
+     "in"
+    ],
+    "a": 2
+   }
+  ]
+ },
+ {
+  "id": "ufar-mini-6",
+  "num": 6,
+  "items": [
+   {
+    "q": "___ you study harder, you will fail the exam.",
+    "o": [
+     "Unless",
+     "If",
+     "Provided"
+    ],
+    "a": 0
+   },
+   {
+    "q": "The more you practise, ___ you become.",
+    "o": [
+     "the better",
+     "the best",
+     "better"
+    ],
+    "a": 0
+   },
+   {
+    "q": "The officer made him ___ the documents.",
+    "o": [
+     "signing",
+     "to sign",
+     "sign"
+    ],
+    "a": 2
+   },
+   {
+    "q": "She told me that she ___ the exam the day before.",
+    "o": [
+     "passes",
+     "had passed",
+     "has passed"
+    ],
+    "a": 1
+   },
+   {
+    "q": "“How long ___ English?” “For five years.”",
+    "o": [
+     "are you learning",
+     "have you been learning",
+     "do you learn"
+    ],
+    "a": 1
+   }
+  ]
+ },
+ {
+  "id": "ufar-mini-7",
+  "num": 7,
+  "items": [
+   {
+    "q": "I don't mind ___ the dishes after dinner.",
+    "o": [
+     "to wash",
+     "washing",
+     "wash"
+    ],
+    "a": 1
+   },
+   {
+    "q": "___ of the two answers is correct. They are both wrong.",
+    "o": [
+     "Neither",
+     "Both",
+     "Either"
+    ],
+    "a": 0
+   },
+   {
+    "q": "He works ___ a doctor in a big hospital.",
+    "o": [
+     "like",
+     "such",
+     "as"
+    ],
+    "a": 2
+   },
+   {
+    "q": "If she had left earlier, she ___ the train.",
+    "o": [
+     "would have caught",
+     "would catch",
+     "will catch"
+    ],
+    "a": 0
+   },
+   {
+    "q": "Let's go to the cinema tonight, ___?",
+    "o": [
+     "shall we",
+     "do we",
+     "don't we"
+    ],
+    "a": 0
+   }
+  ]
+ },
+ {
+  "id": "ufar-mini-8",
+  "num": 8,
+  "items": [
+   {
+    "q": "The news ___ very surprising for all of us.",
+    "o": [
+     "was",
+     "were",
+     "are being"
+    ],
+    "a": 0
+   },
+   {
+    "q": "I'm tired ___ waiting for the bus every morning.",
+    "o": [
+     "from",
+     "of",
+     "for"
+    ],
+    "a": 1
+   },
+   {
+    "q": "She has ___ friends in this city, so she never feels lonely.",
+    "o": [
+     "a lot of",
+     "much",
+     "a little"
+    ],
+    "a": 0
+   },
+   {
+    "q": "The book, ___ I bought last week, is very good.",
+    "o": [
+     "what",
+     "that",
+     "which"
+    ],
+    "a": 2
+   },
+   {
+    "q": "Hardly ___ the house when the phone rang.",
+    "o": [
+     "did I leave",
+     "had I left",
+     "I had left"
+    ],
+    "a": 1
+   }
+  ]
+ }
+]
