@@ -93,22 +93,6 @@ function buildStoryHtml(payload, baseUrl) {
   if (!dataPattern.test(html)) throw new Error('Could not locate the timing data in the story template.');
   html = html.replace(dataPattern, `const D=${serialized}, END=D.end, TOTAL=END+2.6;`);
 
-  // 3D illustrated heroes (Microsoft Fluent Emoji, MIT) floating under the text card.
-  const EMOJI_DIR = path.join(utils.ROOT, 'assets', 'emoji');
-  const auto = payload.lesson.title.toLowerCase().replace(/[^a-z ]/g, ' ').split(/\s+/)
-    .map((w) => ({ tortoise: 'turtle', hare: 'rabbit', geese: 'goose', crow: 'bird', nightingale: 'bird', duckling: 'duck', giant: 'castle', prince: 'crown', princess: 'crown', zoo: 'giraffe', market: 'bread', garden: 'seedling', grapes: 'grapes', leaf: 'fallen_leaf', gift: 'wrapped_gift', necklace: 'gem_stone', emperor: 'crown', snow: 'snowflake', queen: 'crown', fir: 'evergreen_tree', sun: 'sun', wind: 'wind_face', rose: 'rose', library: 'books', clock: 'mantelpiece_clock', seed: 'seedling', bridge: 'house' })[w] || w)
-    .filter((w) => fs.existsSync(path.join(EMOJI_DIR, `${w}.png`)));
-  const heroes = (payload.lesson.emoji || [...new Set(auto)]).slice(0, 2);
-  if (!heroes.length) heroes.push('open_book');
-  const heroHtml = `<div id="heroes">${heroes.map((h, i) => `<img class="hero h${i}" src="/assets/emoji/${h}.png">`).join('')}<img class="spark s0" src="/assets/emoji/sparkles.png"><img class="spark s1" src="/assets/emoji/sparkles.png"></div>`;
-  html = html.replace('</style>', `#heroes{position:absolute;left:0;right:0;top:1290px;height:420px;pointer-events:none}
-.hero{position:absolute;width:300px;height:300px;filter:drop-shadow(0 26px 40px #07061599);opacity:0}
-.hero.h0{left:${heroes.length > 1 ? 200 : 390}px;top:40px}.hero.h1{left:580px;top:70px;width:260px;height:260px}
-.spark{position:absolute;width:90px;height:90px;opacity:0}.spark.s0{left:150px;top:10px}.spark.s1{left:840px;top:200px}</style>`);
-  html = html.replace('</body>', `${heroHtml}<script>(function(){const base=window.seek;const cl=x=>Math.max(0,Math.min(1,x));const back=x=>{const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
-window.seek=function(t){base(t);document.querySelectorAll('.hero').forEach((h,i)=>{const a=cl((t-0.5-i*0.25)/0.6);const fade=1-cl((t-END-0.2)/0.4);h.style.opacity=Math.min(1,a*2)*fade;
-const bob=Math.sin(t*1.6+i*1.3)*14, rot=Math.sin(t*1.1+i)*5;h.style.transform='translateY('+((1-back(a))*160+bob)+'px) rotate('+rot+'deg) scale('+(0.6+0.4*back(a))+')';});
-document.querySelectorAll('.spark').forEach((s,i)=>{const p=(t*0.9+i*0.5)%1;s.style.opacity=(t>1.2&&t<END)?Math.sin(p*Math.PI)*0.9:0;s.style.transform='scale('+(0.5+0.6*Math.sin(p*Math.PI))+') rotate('+(p*90)+'deg)';});};seek(0);})();</script></body>`);
   const level = escapeHtml(payload.lesson.level);
   const part = payload.part;
   html = html.replace(/<div id="chip">[\s\S]*?<\/div>/, `<div id="chip"><i class="a">${level}</i><i>SHORT STORY</i>${payload.lesson.text.length > 1 ? `<i>PART ${part}</i>` : ''}</div>`);
