@@ -18,6 +18,19 @@ function testPlan(test) {
   ].map((slide, index) => ({ ...slide, index }));
 }
 
+function welcomePlan() {
+  const base = { level: 'WELCOME', total: 6, series: 'ENGLISH READING ROOM', rule: '' };
+  const li = (en, hy) => `<div class="wl"><div class="wl-en">${en}</div><div class="wl-hy">${hy}</div></div>`;
+  return [
+    { ...base, kind: 'page', title: 'Welcome to <em>English Reading Room</em>', html: `<div class="big-num" style="font-size:120px">Hello!</div><div class="item-hy" style="font-size:38px">Բարի գալուստ։ Այստեղ անգլերենը սովորում ենք պատմություններով, պարզ կանոններով և ամենօրյա փոքր քայլերով։</div><div class="swipe">Swipe →</div>` },
+    { ...base, kind: 'page', title: 'Who <em>teaches</em> here', html: `<div class="item-en" style="font-size:58px">Gayane Torosyan</div><div class="item-hy">Անգլերենի ուսուցիչ · Երևան</div><div class="item-ex" style="font-style:normal;font-size:34px">Դասեր աշակերտների համար, ներառյալ միասնական քննության և UFAR-ի նախապատրաստում։</div>` },
+    { ...base, kind: 'page', title: 'What you will <em>find</em>', html: li('📖 Story Time', 'Պատմություններ ձայնով և թարգմանությամբ') + li('✅ Fix it', 'Հայախոսների տարածված սխալներ') + li('⏱ 5-second quiz', 'Ստուգի՛ր քեզ 5 վայրկյանում') + li('🎓 UFAR & exam', 'Իսկական ձևաչափով մինի-թեստեր') },
+    { ...base, kind: 'page', title: 'Our <em>week</em>', html: li('Mon · Thu · Sun', 'Story Time՝ նոր պատմության մասեր') + li('Tue · Fri', 'Grammar և UFAR carousel-ներ') + li('Wed · Sat', 'Fix it և Quiz') },
+    { ...base, kind: 'page', title: 'Free <em>lessons</em> online', html: `<div class="big-num" style="font-size:150px">150</div><div class="item-hy">դաս A1-ից C1՝ ձայնով, բառարանով և թեստերով</div><div class="item-ex" style="font-style:normal;font-size:34px">🔗 Հղումը՝ bio-ում</div>` },
+    { ...base, kind: 'save', title: '', rule: 'Հետևի՛ր էջին, պահպանի՛ր դասերը և ուղարկի՛ր ընկերոջդ, ով նույնպես անգլերեն է սովորում 💜' },
+  ].map((slide, index) => ({ ...slide, index }));
+}
+
 function listPlan(set) {
   const n = set.items.length + 2;
   const base = { level: set.chip, total: n, series: set.series, rule: '' };
@@ -87,7 +100,7 @@ function measure(page) {
 async function renderCarousel({ browser, baseUrl, ruleId, outputDirectory }) {
   const test = TESTS.find((item) => item.id === ruleId);
   const list = LISTS.find((item) => item.id === ruleId) || test;
-  const rule = RULES.find((item) => item.id === ruleId) || list;
+  const rule = RULES.find((item) => item.id === ruleId) || list || (ruleId === 'welcome' ? { id: 'welcome' } : null);
   if (!rule) throw new Error(`Unknown carousel rule: ${ruleId}`);
   const template = fs.readFileSync(path.join(utils.ROOT, 'carousels/templates/carousel.html'), 'utf8');
   const html = utils.htmlAssets(template, baseUrl);
@@ -100,7 +113,7 @@ async function renderCarousel({ browser, baseUrl, ruleId, outputDirectory }) {
   utils.ensureDirectory(target);
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1350);
-  const plan = test ? testPlan(test) : list ? listPlan(list) : slidePlan(rule).map((x) => ({ ...x, total: 7, level: `${rule.level} · GRAMMAR` }));
+  const plan = ruleId === 'welcome' ? welcomePlan() : test ? testPlan(test) : list ? listPlan(list) : slidePlan(rule).map((x) => ({ ...x, total: 7, level: `${rule.level} · GRAMMAR` }));
   const firstLayout = await (async () => {
     await page.evaluate((slide) => window.setSlide(slide), plan[0]);
     await page.evaluate(async () => {
