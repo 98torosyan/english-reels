@@ -55,11 +55,12 @@
       "content_id": "zoo-part-1",
       "title": "A Day at the Zoo",
       "caption": "Անգլերեն պատմություն ձայնով · English story for learners\n\nA Day at the Zoo · A1 reading\n\nԿարդա՛ և լսի՛ր պատմության 1-ին մասը։ Այսօր շաբաթ օր է, և ընտանիքս կենդանաբանական այգում է։\nՕրինակ՝ “Today is Saturday, and my family is at the zoo.” — «Այսօր շաբաթ օր է, և ընտանիքս կենդանաբանական այգում է»։\n\nՇարունակությունը՝ շուտով։ Հետևի՛ր էջին, որ բաց չթողնես 🔔\n\n📚 Ամբողջական դասերը ձայնով՝ bio-ի հղումով\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-story-zoo-part-1/story-zoo-part-1.mp4"
       },
-      "thumb_offset": 4200
+      "thumb_offset": 4200,
+      "published_at": "2026-11-10T19:37+04:00"
     },
     {
       "id": "2026-11-10-story-lessons",
@@ -72,10 +73,11 @@
       "content_id": "lessons",
       "title": "lessons",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-stories/story-lessons.jpg"
-      }
+      },
+      "published_at": "2026-11-10T19:37+04:00"
     },
     {
       "id": "2026-11-10-quiz-plural-verb",
