@@ -21,3 +21,10 @@
 ## Մուտքի նշում
 
 Գործածվում է անվերջ ժամկետով Meta System User token՝ `instagram_basic` և `instagram_content_publish` scope-երով։ `business_management` scope-ը հասանելի չէր։ Այս token-ը 60-օրյա Instagram Login token չէ, հետևաբար 60-օրյա փոխանակում կամ թարմացում կիրառելի չէ։ Token-ի արժեքը այստեղ չի պահվում։
+
+## 2026-11-10
+- Animated cards (kinetic headline, 5-second countdown ring, confetti, check draw), human pacing, brand-only colours, own music (8 loops) + sound effects.
+- New list carousels (`carousels/data/lists.json`): dont-know, make-do, feelings, cafe. Slides are JPEG for Instagram.
+- `publish/plan_launch.py` → queue.json (launch burst 10–14 Nov, then weekly rhythm). Items 10–14 Nov are staged in english-reels-media.
+- Merged to `main`; `publish.yml` runs hourly at :07 and publishes for real because `publish/ENABLED` exists (delete it to pause).
+- Open: stage items from 15 Nov on; more stories (only 3 have audio); Exam/UFAR and Kids series; new voices.
