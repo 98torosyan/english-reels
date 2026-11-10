@@ -125,7 +125,7 @@
       "content_id": "thank-you",
       "title": "More than Thank you",
       "caption": "Խոսակցական անգլերեն · Spoken English phrases\n\nMore than “Thank you”\n\n6 բնական եղանակ շնորհակալություն հայտնելու համար։\nՕրինակ՝ “I really appreciate it.” — «Իսկապես գնահատում եմ»։\n\nՊահպանի՛ր և ուղարկի՛ր մեկին, ում շնորհակալ ես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "slides": [
           "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/01-thank-you.jpg",
@@ -137,7 +137,8 @@
           "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/07-thank-you.jpg",
           "https://98torosyan.github.io/english-reels-media/2026-11-11-list-thank-you/08-thank-you.jpg"
         ]
-      }
+      },
+      "published_at": "2026-11-10T21:32+04:00"
     },
     {
       "id": "2026-11-11-mistake-plural-subject",
@@ -150,11 +151,12 @@
       "content_id": "plural-subject",
       "title": "Fix it",
       "caption": "Անգլերենի սխալներ · Common English mistakes\n\nFind the mistake\n\n✕ The monkeys jumps and play.\n✓ The monkeys jump and play.\n\nՀոգնակի ենթակայի հետ Present Simple-ում բայը մնում է սկզբնական ձևով։\n\nՊահպանի՛ր և ուղարկի՛ր ընկերոջդ։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishGrammar #Yerevan",
-      "review_status": "staged",
+      "review_status": "published",
       "thumb_offset": 3300,
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-11-mistake-plural-subject/mistake-plural-subject.mp4"
-      }
+      },
+      "published_at": "2026-11-10T21:32+04:00"
     },
     {
       "id": "2026-11-10-list-dont-know",
