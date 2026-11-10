@@ -1,0 +1,14 @@
+name: English check
+on:
+  push:
+    paths: ["reels/data/**", "qc/**"]
+  workflow_dispatch:
+jobs:
+  english:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python qc/check_english.py

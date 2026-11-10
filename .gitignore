@@ -2,8 +2,10 @@ node_modules/
 assets/rendered/
 assets/frames/
 exports/
+.render-work/
 *.tmp
 *.log
 .env
 .env.*
 !.env.example
+review/index.html
