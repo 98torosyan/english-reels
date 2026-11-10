@@ -65,6 +65,14 @@ NEW = [
     item("2026-11-16", "17:00", "dialogue", "restaurant", "Everyday English 07"),
     item("2026-11-17", "12:00", "rule", "catch", "Collocations: catch"),
     item("2026-11-17", "17:00", "dialogue", "hotel", "Everyday English 08"),
+    # second daily dialogue at 22:00
+    item("2026-11-11", "22:00", "dialogue", "making-plans", "Everyday English 09"),
+    item("2026-11-12", "22:00", "dialogue", "taxi", "Everyday English 10"),
+    item("2026-11-13", "22:00", "dialogue", "sorry-late", "Everyday English 11"),
+    item("2026-11-14", "22:00", "dialogue", "supermarket", "Everyday English 12"),
+    item("2026-11-15", "22:00", "dialogue", "job-interview", "Everyday English 13"),
+    item("2026-11-16", "22:00", "dialogue", "small-talk", "Everyday English 14"),
+    item("2026-11-17", "22:00", "dialogue", "airport", "Everyday English 15"),
 ]
 STORIES = [(f"2026-11-{d}", t, f"{k}-2026-11-{d}") for d in (15, 16, 17) for t, k in (("09:00", "w"), ("18:00", "p"))]
 MOVE = {  # id: (date, time, approve?)
