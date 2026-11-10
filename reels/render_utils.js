@@ -103,6 +103,7 @@ async function renderFrames(page, duration, framesDirectory, posterPath, posterT
 // Original background loops from music/make_music.py; picked per video so the feed varies.
 function pickMusic(outputPath) {
   if (process.env.NO_MUSIC === '1') return null;
+  if (process.env.MUSIC_TRACK && fs.existsSync(process.env.MUSIC_TRACK)) return process.env.MUSIC_TRACK;
   const dir = path.join(ROOT, 'music');
   const tracks = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.m4a')).sort() : [];
   if (!tracks.length) return null;
