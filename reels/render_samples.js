@@ -237,7 +237,11 @@ async function renderCard(browser, baseUrl, input, audio, outputName, correctInd
   await utils.renderFrames(page, audio.duration, frames, posterPath, input.kind === 'quiz' ? 0.5 : 5.2, FPS);
   if (errors.length) throw new Error(`${input.kind} template console errors: ${errors.join(' | ')}`);
   await page.close();
-  utils.encodeVideo(frames, audio.audioPath, audio.audioStart, audio.duration, videoPath, FPS);
+  const sfx = [{ file: 'sfx-whoosh.wav', at: 0.25, gain: 0.35 }, { file: 'sfx-whoosh.wav', at: audio.duration - 1.05, gain: 0.3 }];
+  if (input.kind === 'quiz') sfx.push({ file: 'sfx-tick.wav', at: 0.05, gain: 0.5 }, { file: 'sfx-tick.wav', at: 1.4, gain: 0.5 }, { file: 'sfx-tick.wav', at: 2.3, gain: 0.5 }, { file: 'sfx-ding.wav', at: 3.35, gain: 0.55 });
+  if (input.kind === 'mistake') sfx.push({ file: 'sfx-pop.wav', at: 1.1, gain: 0.4 }, { file: 'sfx-ding.wav', at: 3.3, gain: 0.5 });
+  if (input.kind === 'word') sfx.push({ file: 'sfx-pop.wav', at: 0.9, gain: 0.4 });
+  utils.encodeVideo(frames, audio.audioPath, audio.audioStart, audio.duration, videoPath, FPS, sfx);
   const info = utils.verifyVideo(videoPath);
   fs.rmSync(frames, { recursive: true, force: true });
   console.log(`Rendered ${videoPath}: ${JSON.stringify(info)}`);

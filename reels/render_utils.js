@@ -111,7 +111,7 @@ function pickMusic(outputPath) {
   return path.join(dir, tracks[h % tracks.length]);
 }
 
-function encodeVideo(framesDirectory, audioPath, audioStart, duration, outputPath, fps = 30) {
+function encodeVideo(framesDirectory, audioPath, audioStart, duration, outputPath, fps = 30, sfx = []) {
   const framePattern = path.join(framesDirectory, 'f%05d.jpg').replace(/\\/g, '/');
   const args = [
     '-y', '-hide_banner', '-loglevel', 'error',
@@ -124,11 +124,15 @@ function encodeVideo(framesDirectory, audioPath, audioStart, duration, outputPat
   if (music) {
     args.push('-stream_loop', '-1', '-i', music);
     const voice = audioPath ? 1.0 : 0.0;
+    const fx = (sfx || []).filter((e) => fs.existsSync(path.join(ROOT, 'music', e.file)));
+    fx.forEach((e) => args.push('-i', path.join(ROOT, 'music', e.file)));
+    const fxChains = fx.map((e, i) => `[${3 + i}:a]aresample=48000,volume=${e.gain || 0.5},adelay=${Math.round(e.at * 1000)}|${Math.round(e.at * 1000)},apad[f${i}];`).join('');
+    const fxLabels = fx.map((_, i) => `[f${i}]`).join('');
     args.push('-filter_complex',
       `[1:a]aresample=48000,apad,volume=${voice},asplit=2[v][sc];` +
       `[2:a]aresample=48000,volume=${audioPath ? 0.16 : 0.45},afade=t=in:d=0.8,afade=t=out:st=${fadeOut}:d=1.2[m];` +
-      `[m][sc]sidechaincompress=threshold=0.02:ratio=5:attack=25:release=450[md];` +
-      `[v][md]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]`);
+      `[m][sc]sidechaincompress=threshold=0.02:ratio=5:attack=25:release=450[md];` + fxChains +
+      `[v][md]${fxLabels}amix=inputs=${2 + fx.length}:duration=first:normalize=0,alimiter=limit=0.95[a]`);
     args.push('-map', '0:v:0', '-map', '[a]');
   } else {
     args.push('-map', '0:v:0', '-map', '1:a:0', '-af', 'apad');

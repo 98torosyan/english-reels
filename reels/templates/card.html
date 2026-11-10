@@ -59,23 +59,84 @@
     .option.ok{border-color:#57D79A!important;background:#2E9E6A33!important;color:#fff!important}
     .option.ok::after{content:"  ✓";color:#57D79A;font-family:Inter,sans-serif;font-weight:800}
     #save[hidden]{display:none}
+    /* ---------- motion layer ---------- */
+    .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;pointer-events:none}
+    .blob.b1{width:760px;height:760px;background:#6A49E2;left:520px;top:-180px}
+    .blob.b2{width:620px;height:620px;background:#B23F78;left:-260px;top:980px;opacity:.28}
+    .blob.b3{width:520px;height:520px;background:#1C8AA3;left:640px;top:1380px;opacity:.22}
+    #dust{position:absolute;inset:0;pointer-events:none}
+    #dust i{position:absolute;width:6px;height:6px;border-radius:50%;background:#C9C2E3}
+    .headline .ln{display:block;will-change:transform}
+    .swoosh{position:absolute;left:0;bottom:-18px;width:100%;height:26px;overflow:visible}
+    .swoosh path{fill:none;stroke:#E9C46A;stroke-width:7;stroke-linecap:round}
+    .gold{position:relative;display:inline-block}
+    .ring{position:absolute;left:50%;top:1300px;width:260px;height:260px;margin-left:-130px;opacity:0}
+    .ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
+    .ring circle{fill:none;stroke-width:14}
+    .ring .trk{stroke:#ffffff1f}.ring .arc{stroke:url(#ringGrad);stroke-linecap:round}
+    .ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 128px/1 Literata,serif;color:#E9C46A}
+    #confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+    #confetti i{position:absolute;display:block;border-radius:3px}
+    .strike{position:absolute;left:84px;right:34px;top:50%;height:6px;border-radius:6px;background:#FF8292;transform-origin:left center;transform:scaleX(0)}
+    .wrong{position:relative}
+    .check{display:inline-block;width:46px;height:46px;vertical-align:-8px;margin-right:12px}
+    .check path{fill:none;stroke:#57D79A;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60}
+    .outro .rays{position:absolute;left:50%;top:42%;width:1400px;height:1400px;margin:-700px 0 0 -700px;background:repeating-conic-gradient(#ffffff0c 0 6deg,transparent 6deg 18deg);border-radius:50%;mask-image:radial-gradient(circle,#000 20%,transparent 62%)}
+    .outro>*{position:relative}
+    .follow{margin-top:22px;color:#fff;font-size:30px;font-weight:700;opacity:.9}
+
   </style>
 </head>
 <body>
-  <div class="grain"></div>
+  <div class="blob b1" id="b1"></div><div class="blob b2" id="b2"></div><div class="blob b3" id="b3"></div><div id="dust"></div><div class="grain"></div>
   <header class="header"><img class="logo" src="__LOGO_DATA__" alt=""><div><div class="brand-name">Gayane Torosyan</div><div class="brand-sub">ENGLISH READING ROOM</div></div></header>
   <div class="rainbow"><i style="background:#B23F78"></i><i style="background:#7A4FD6"></i><i style="background:#3E5FD9"></i><i style="background:#1C8AA3"></i><i style="background:#2E9E6A"></i><i style="background:#E8A317"></i></div>
   <div id="eyebrow" class="eyebrow"></div>
   <h1 id="headline" class="headline"></h1>
   <main id="panel" class="panel"></main>
-  <div id="countdown" class="countdown"></div>
+  <div id="countdown" class="countdown"></div><div id="ring" class="ring"><svg viewBox="0 0 260 260"><defs><linearGradient id="ringGrad"><stop offset="0" stop-color="#A891F7"/><stop offset="1" stop-color="#E9C46A"/></linearGradient></defs><circle class="trk" cx="130" cy="130" r="112"/><circle id="arc" class="arc" cx="130" cy="130" r="112" stroke-dasharray="704" stroke-dashoffset="704"/></svg><b id="ringNum">3</b></div><div id="confetti"></div>
   <div id="armenian" class="armenian"></div>
   <footer class="foot"><span>Let's read together</span><span class="handle">ENGLISH READING ROOM</span></footer>
   <div class="progress"><i id="progress"></i></div>
-  <section id="outro" class="outro"><img src="__LOGO_DATA__" alt=""><h2>Read · Listen · <em>Learn</em></h2><p>Small steps, big English.</p><span class="save">Save 📌</span><span class="signature">GAYANE TOROSYAN · ENGLISH READING ROOM</span></section>
+  <section id="outro" class="outro"><div class="rays" id="rays"></div><img id="outroLogo" src="__LOGO_DATA__" alt=""><h2>Read · Listen · <em>Learn</em></h2><p>Small steps, big English.</p><span class="save" id="saveChip">Save 📌</span><span class="follow" id="followTxt">Follow for a new lesson every day</span><span class="signature">GAYANE TOROSYAN · ENGLISH READING ROOM</span></section>
   <script>
     const clamp=x=>Math.max(0,Math.min(1,x));
     const ease=x=>1-Math.pow(1-x,3);
+
+    const lerp=(a,b,x)=>a+(b-a)*x;
+    const back=x=>{const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+    const rnd=(()=>{let s=7;return()=>{s=(s*16807)%2147483647;return s/2147483647}})();
+    const DUST=[...Array(26)].map(()=>({x:rnd()*1080,y:rnd()*1920,r:2+rnd()*5,v:12+rnd()*28,p:rnd()*6.28,o:.15+rnd()*.35}));
+    const CONF=[...Array(70)].map(()=>({a:rnd()*Math.PI*2,v:500+rnd()*900,w:10+rnd()*12,h:6+rnd()*10,c:['#E9C46A','#A891F7','#57D79A','#B23F78','#3E5FD9','#fff'][Math.floor(rnd()*6)],sp:(rnd()-.5)*900}));
+    function motionSetup(){
+      const d=document.getElementById('dust'); d.innerHTML=DUST.map(()=>'<i></i>').join('');
+      document.getElementById('confetti').innerHTML=CONF.map(c=>`<i style="width:${c.w}px;height:${c.h}px;background:${c.c};opacity:0"></i>`).join('');
+      const h=document.getElementById('headline');
+      h.innerHTML=h.innerHTML.split('<br>').map(l=>`<span class="ln">${l}</span>`).join('');
+      const g=h.querySelector('.gold'); if(g) g.insertAdjacentHTML('beforeend','<svg class="swoosh" viewBox="0 0 300 26" preserveAspectRatio="none"><path id="sw" d="M4 18 C 80 4, 200 4, 296 14" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/></svg>');
+      document.querySelectorAll('#correct .mark').forEach(m=>m.outerHTML='<svg class="check" viewBox="0 0 46 46"><path id="ck" d="M8 24 L19 35 L39 11"/></svg>');
+      const w=document.querySelector('.panel .wrong:not(.option)'); if(w&&document.body.dataset.kind==='mistake') w.insertAdjacentHTML('beforeend','<i class="strike" id="strike"></i>');
+      document.getElementById('countdown').style.display='none';
+    }
+    function burst(t,t0,el){
+      const box=el.getBoundingClientRect(); const cx=box.left+box.width*.5, cy=box.top+box.height*.5; const dt=t-t0;
+      document.querySelectorAll('#confetti i').forEach((n,i)=>{const c=CONF[i];
+        if(dt<0||dt>1.8){n.style.opacity=0;return}
+        const x=cx+Math.cos(c.a)*c.v*dt*.9, y=cy+Math.sin(c.a)*c.v*dt*.75+900*dt*dt;
+        n.style.opacity=Math.max(0,1-dt/1.8); n.style.transform=`translate(${x}px,${y}px) rotate(${c.sp*dt}deg)`;});
+    }
+    function motion(t,total){
+      document.getElementById('b1').style.transform=`translate(${Math.sin(t*.35)*70}px,${Math.cos(t*.3)*50}px)`;
+      document.getElementById('b2').style.transform=`translate(${Math.cos(t*.25)*80}px,${Math.sin(t*.4)*60}px)`;
+      document.getElementById('b3').style.transform=`translate(${Math.sin(t*.3+1)*60}px,${Math.cos(t*.22)*70}px)`;
+      document.querySelectorAll('#dust i').forEach((n,i)=>{const d=DUST[i];const y=(d.y-d.v*t+1920)%1920;n.style.transform=`translate(${d.x+Math.sin(t*.8+d.p)*18}px,${y}px) scale(${d.r/5})`;n.style.opacity=d.o*(.6+.4*Math.sin(t*2+d.p));});
+      document.querySelectorAll('.headline .ln').forEach((l,i)=>{const a=ease(clamp((t-.05-i*.16)/.55));l.style.opacity=a;l.style.transform=`translateY(${(1-a)*60}px)`;});
+      const sw=document.getElementById('sw'); if(sw) sw.style.strokeDashoffset=100-100*ease(clamp((t-.55)/.5));
+      const eb=document.getElementById('eyebrow'); const ea=ease(clamp(t/.4)); eb.style.opacity=ea; eb.style.transform=`translateX(${(1-ea)*-30}px)`;
+      const panel=document.getElementById('panel'); const pa=back(clamp((t-.3)/.55)); panel.style.opacity=clamp((t-.3)/.3); panel.style.transform=`translateY(${(1-pa)*80}px) scale(${lerp(.94,1,pa)})`;
+      document.querySelectorAll('.option').forEach((o,i)=>{const a=back(clamp((t-.65-i*.12)/.45));o.style.transform=`translateX(${(1-a)*-60}px)`;o.style.opacity=clamp((t-.65-i*.12)/.25);});
+      const ck=document.getElementById('ck'); if(ck) ck.style.strokeDashoffset=60-60*ease(clamp((t-3.45)/.4));
+    }
     window.configure=data=>{
       document.body.dataset.kind=data.kind;
       document.getElementById('eyebrow').textContent=data.eyebrow;
@@ -103,6 +164,7 @@
       }
       if(data.kind==='mistake') document.getElementById('armenian').textContent=data.explanation_hy;
       if(data.kind==='quiz') document.getElementById('armenian').innerHTML=`<span id="quizExplanation">${data.explanation_hy}</span>`;
+      motionSetup();
     };
     window.seek=t=>{
       const total=window.REEL_DURATION||10;
@@ -133,7 +195,26 @@
       const outro=ease(clamp((t-(total-1.05))/.85));
       document.getElementById('outro').style.opacity=outro;
       document.getElementById('outro').style.transform=`scale(${1.03-.03*outro})`;
-      panel.style.opacity=1;
+      motion(t,total);
+      if(window.REEL_KIND==='quiz'){
+        const ring=document.getElementById('ring'); const left=3.15-t; const on=t<3.25;
+        ring.style.opacity=on?ease(clamp(t/.4))*ease(clamp((3.25-t)/.2)):0;
+        document.getElementById('arc').style.strokeDashoffset=704*(1-clamp(t/3.15));
+        const sec=Math.max(1,Math.ceil(left/1.05)); const n=document.getElementById('ringNum'); n.textContent=t<1.4?'3':t<2.3?'2':'1';
+        const ph=t<1.4?t:t<2.3?t-1.4:t-2.3; n.style.transform=`scale(${1+.35*Math.exp(-ph*7)})`;
+        document.querySelectorAll('.option').forEach((o,i)=>{if(t>=3.35&&i!==window.CORRECT_INDEX){o.style.opacity=lerp(1,.4,ease(clamp((t-3.35)/.4)))}});
+        const ok=document.querySelector('.option.ok'); if(ok){burst(t,3.4,ok); const g=ease(clamp((t-3.35)/.3)); ok.style.boxShadow=`0 0 ${60*g}px #57D79A66`; ok.style.transform=`scale(${1+.04*Math.sin(clamp((t-3.35)/.5)*Math.PI)})`;}
+      }
+      if(window.REEL_KIND==='mistake'){
+        const w=document.querySelector('.panel .wrong'); const sh=t>1.1&&t<1.6?Math.sin((t-1.1)*60)*10*(1-(t-1.1)/.5):0; w.style.transform=`translateX(${sh}px)`;
+        const st=document.getElementById('strike'); if(st) st.style.transform=`scaleX(${ease(clamp((t-1.6)/.45))})`;
+        burst(t,3.5,document.getElementById('correct'));
+        document.getElementById('armenian').style.opacity=ease(clamp((t-3.6)/.5));
+      }
+      const o2=clamp((t-(total-1.05))/.85);
+      document.getElementById('rays').style.transform=`rotate(${t*12}deg)`;
+      document.getElementById('outroLogo').style.transform=`scale(${back(clamp(o2*1.4))})`;
+      document.getElementById('saveChip').style.transform=`scale(${back(clamp(o2*1.6-.3))})`;
     };
   </script>
 </body>
