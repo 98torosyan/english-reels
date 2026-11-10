@@ -158,5 +158,13 @@
   "en": "“I have an exam tomorrow.” — “Fingers crossed!”",
   "hy": "Հաջողություն եմ մաղթում։ — «Վաղը քննություն ունեմ»։ — «Հաջողություն»։",
   "foot": "Say it today"
+ },
+ {
+  "id": "dm-lessons",
+  "tag": "PRIVATE & GROUP LESSONS",
+  "title": "Learn with <em>Gayane</em>",
+  "en": "Individual and group lessons. Exam and UFAR preparation.",
+  "hy": "Անհատական և խմբային դասեր։ Միասնական քննությունների և UFAR-ի նախապատրաստում։",
+  "foot": "Send a message in Direct"
  }
 ]

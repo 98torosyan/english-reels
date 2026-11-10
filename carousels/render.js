@@ -14,7 +14,7 @@ function testPlan(test) {
  { ...base, kind: 'testhook', title: "Can you pass this <em>UFAR</em> test?", subtitle: 'Իսկական UFAR ձևաչափով 5 հարց։ Լուծի՛ր և ստուգի՛ր պատասխաններդ վերջին սլայդում։', count: test.items.length },
  ...test.items.map((it, i) => ({ ...base, kind: 'q', title: `Question <em>${i + 1}</em>`, q: escapeHtml(it.q), opts: it.o.map(escapeHtml), num: i + 1 })),
  { ...base, kind: 'answers', title: 'Check your <em>answers</em>', answers: test.items.map((it, i) => `${i + 1} — ${String.fromCharCode(65 + it.a)} · ${escapeHtml(it.o[it.a])}`) },
- { ...base, kind: 'save', title: '', rule: 'Քանի՞ ճիշտ պատասխան ունեցար։ Գրի՛ր մեկնաբանություններում Պահպանի՛ր և ուղարկի՛ր քննությանը պատրաստվող ընկերոջդ։' },
+ { ...base, kind: 'save', title: '', rule: 'Քանի՞ ճիշտ պատասխան ունեցար։ Գրի՛ր մեկնաբանություններում։ Պահպանի՛ր և ուղարկի՛ր քննությանը պատրաստվող ընկերոջդ։' },
  ].map((slide, index) => ({ ...slide, index }));
 }
 
@@ -27,7 +27,7 @@ function welcomePlan() {
  { ...base, kind: 'page', title: 'What you will <em>find</em>', html: li('Story Time', 'Պատմություններ ձայնով և թարգմանությամբ') + li('Fix it', 'Հայախոսների տարածված սխալներ') + li('5-second quiz', 'Ստուգի՛ր քեզ 5 վայրկյանում') + li('UFAR & exam', 'Իսկական ձևաչափով մինի-թեստեր') },
  { ...base, kind: 'page', title: 'Our <em>week</em>', html: li('Mon · Thu · Sun', 'Story Time՝ նոր պատմության մասեր') + li('Tue · Fri', 'Grammar և UFAR carousel-ներ') + li('Wed · Sat', 'Fix it և Quiz') },
  { ...base, kind: 'page', title: 'Free <em>lessons</em> online', html: `<div class="big-num" style="font-size:150px">150</div><div class="item-hy">դաս A1-ից C1՝ ձայնով, բառարանով և թեստերով</div><div class="item-ex" style="font-style:normal;font-size:34px"> Հղումը՝ bio-ում</div>` },
- { ...base, kind: 'save', title: '', rule: 'Հետևի՛ր էջին, պահպանի՛ր դասերը և ուղարկի՛ր ընկերոջդ, ով նույնպես անգլերեն է սովորում ' },
+ { ...base, kind: 'save', title: '', rule: 'Հետևի՛ր էջին, պահպանի՛ր դասերը և ուղարկի՛ր ընկերոջդ, ով նույնպես անգլերեն է սովորում։' },
  ].map((slide, index) => ({ ...slide, index }));
 }
 
