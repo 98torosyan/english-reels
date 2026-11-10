@@ -27,7 +27,7 @@ body:before{content:"";position:absolute;left:0;top:0;bottom:0;width:16px;backgr
 .progress{background:#17183A14!important}
 .progress i{background:var(--c)!important}
 /* text highlight while speaking */
-.w.now,.sw.now,.now{background:var(--c)!important;color:#fff!important}
+.w.now,.sw.now{background:var(--c)!important;color:#fff!important}
 .w,.sw{opacity:.42}
 .w.done,.sw.done{opacity:1}
 /* cards and panels become white paper cards */
@@ -135,5 +135,7 @@ h1 em{color:var(--c)!important}
 .tag{border:2px solid var(--c)!important;color:var(--c)!important;background:transparent!important}
 .en{color:var(--ink)!important}
 .hy{border-top-color:var(--line)!important}
-.foot span{background:var(--c)!important;color:#fff!important}
+.foot span:only-child{background:var(--c)!important;color:#fff!important}
 .h{color:var(--c)!important}
+#dots{top:auto!important;bottom:330px!important}
+#wave{top:auto!important;bottom:240px!important}
