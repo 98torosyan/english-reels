@@ -40,3 +40,12 @@
 - `publish/plan_week.py`՝ նոյեմբերի 11–17. 12:00 carousel, 17:00 երկխոսություն, 20:00 հիմնական reel, 09:00/18:00 stories։
 - Saturday Market մաս 2-ի չակերտները ուղղված են (յուրաքանչյուր նախադասություն՝ ամբողջական չակերտներով)։
 - Բաց է. նոյեմբերի 18-ից հետո պլանը, keep/break/word-pairs/goodbye carousel-ները դեռ հերթում չեն, Sound it out 03–10, երկխոսություններ 09–14։
+- Գիշեր (22:00–23:00).
+  - GitHub-ի `schedule`-ը այս պահոցում ոչ մի անգամ չի աշխատել։ Հրապարակումը արթնացնում է ամենօրյա scheduled task-ը (Claude-ի կողմից), որը `publish/TRIGGER`-ը push է անում 11:33, 12:33, 18:33, 19:33, 21:33-ին (Երևան)։ Workflow-ի cron-ը (`7,37 7-18` UTC) մնացել է որպես պահուստ։
+  - Բոլոր գրառումների ժամերը նոյեմբերի 11-ից համապատասխանեցված են :30 ժամերին՝ `publish/retime_slots.py`։
+  - `publish.yml`-ի «Save published status»-ը հիմա կրկնակի փորձ է անում (`git pull --rebase` + push). 21:31-ին push-ի բախման պատճառով նշումը չէր պահպանվել և ձեռքով ուղղվեց։
+  - Stories (օրվա բառ / արտահայտություն) հիմա տեսանյութ են՝ ձայնով և երաժշտությամբ (`stories/story_video.py`, ձայները՝ `voice_stories`)։ `publish.py`-ն ընդունում է STORIES `video_url`-ով։
+  - «Գրե՛ք Direct-ով» կոչը՝ caption-ներում, carousel-ի վերջին սլայդում, reels-ի վերջաբանում, `dm-lessons` story (11, 13, 15, 17 նոյեմբերի, 21:30)։
+  - `qc/system_check.py`՝ ամբողջական ստուգում (հերթ, մեդիա, emoji, ձայներ)։
+  - Ստեղծված, բայց չօգտագործված fine-grained token `publish-ticker` (միայն english-reels, Actions RW). կարելի է ջնջել GitHub → Settings → Fine-grained tokens։
+  - Երկխոսություն pizza/5 («Fifteen Green Street.») ձայնը չի ստեղծվել. ստուգել, մինչ pizza-ն պլան մտնի։
