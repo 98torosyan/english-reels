@@ -4,6 +4,23 @@
   "timezone": "Asia/Yerevan",
   "items": [
     {
+      "id": "2026-11-10-story-about",
+      "date": "2026-11-10",
+      "time": "19:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-image",
+      "content_id": "about",
+      "title": "about",
+      "caption": "",
+      "review_status": "published",
+      "media": {
+        "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-stories/story-about.jpg"
+      },
+      "published_at": "2026-11-10T19:21+04:00"
+    },
+    {
       "id": "2026-11-10-welcome",
       "date": "2026-11-10",
       "time": "19:00",
@@ -28,21 +45,21 @@
       "published_at": "2026-11-10T19:21+04:00"
     },
     {
-      "id": "2026-11-10-story-about",
+      "id": "2026-11-10-story-lessons",
       "date": "2026-11-10",
-      "time": "19:00",
+      "time": "19:30",
       "timezone": "Asia/Yerevan",
       "type": "STORY",
       "format": "STORIES",
       "kind": "story-image",
-      "content_id": "about",
-      "title": "about",
+      "content_id": "lessons",
+      "title": "lessons",
       "caption": "",
       "review_status": "published",
       "media": {
-        "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-stories/story-about.jpg"
+        "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-stories/story-lessons.jpg"
       },
-      "published_at": "2026-11-10T19:21+04:00"
+      "published_at": "2026-11-10T19:37+04:00"
     },
     {
       "id": "2026-11-10-story-zoo-part-1",
@@ -60,23 +77,6 @@
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-story-zoo-part-1/story-zoo-part-1.mp4"
       },
       "thumb_offset": 4200,
-      "published_at": "2026-11-10T19:37+04:00"
-    },
-    {
-      "id": "2026-11-10-story-lessons",
-      "date": "2026-11-10",
-      "time": "19:30",
-      "timezone": "Asia/Yerevan",
-      "type": "STORY",
-      "format": "STORIES",
-      "kind": "story-image",
-      "content_id": "lessons",
-      "title": "lessons",
-      "caption": "",
-      "review_status": "published",
-      "media": {
-        "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-stories/story-lessons.jpg"
-      },
       "published_at": "2026-11-10T19:37+04:00"
     },
     {
@@ -182,22 +182,6 @@
       }
     },
     {
-      "id": "2026-11-10-story-words",
-      "date": "2026-11-10",
-      "time": "22:00",
-      "timezone": "Asia/Yerevan",
-      "type": "STORY",
-      "format": "STORIES",
-      "kind": "story-image",
-      "content_id": "words",
-      "title": "words",
-      "caption": "",
-      "review_status": "staged",
-      "media": {
-        "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-stories/story-words.jpg"
-      }
-    },
-    {
       "id": "2026-11-10-sound-ship-sheep",
       "date": "2026-11-10",
       "time": "22:00",
@@ -215,21 +199,34 @@
       }
     },
     {
-      "id": "2026-11-12-word-lazy",
+      "id": "2026-11-10-story-words",
+      "date": "2026-11-10",
+      "time": "22:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-image",
+      "content_id": "words",
+      "title": "words",
+      "caption": "",
+      "review_status": "staged",
+      "media": {
+        "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-10-stories/story-words.jpg"
+      }
+    },
+    {
+      "id": "2026-11-10-dialogue-cafe",
       "date": "2026-11-10",
       "time": "23:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
-      "kind": "word",
-      "content_id": "lazy",
-      "title": "Word of the day",
-      "caption": "Անգլերեն բառեր · English vocabulary\n\nWord of the day: lazy\n\nlazy (adjective) — ծույլ։\n“They are big, but they are very lazy.” — «Նրանք մեծ են, բայց շատ ծույլ են»։\n\nՕգտագործի՛ր այս բառը քո նախադասությունում։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishVocabulary #Yerevan",
-      "review_status": "staged",
-      "thumb_offset": 6500,
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-12-word-lazy/word-lazy.mp4"
-      }
+      "kind": "dialogue",
+      "content_id": "cafe",
+      "title": "Everyday English 01",
+      "caption": "Խոսակցական անգլերեն · Everyday English dialogue\n\nAt the café · Սրճարանում · A2\n\nA: Hi! What can I get you?\nB: A latte, please. To take away.\nA: Of course. Anything else?\nB: No, thanks. How much is it?\nA: That's three pounds fifty.\n\nՆախ լսի՛ր, հետո դու ես B-ն. ասա՛ քո տողերը բարձրաձայն։\n\nՊահպանի՛ր և կրկնի՛ր, մինչև ազատ ասես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "approved",
+      "thumb_offset": 6000
     },
     {
       "id": "2026-11-10-story-grammar",
@@ -288,6 +285,23 @@
       }
     },
     {
+      "id": "2026-11-12-word-lazy",
+      "date": "2026-11-10",
+      "time": "23:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "word",
+      "content_id": "lazy",
+      "title": "Word of the day",
+      "caption": "Անգլերեն բառեր · English vocabulary\n\nWord of the day: lazy\n\nlazy (adjective) — ծույլ։\n“They are big, but they are very lazy.” — «Նրանք մեծ են, բայց շատ ծույլ են»։\n\nՕգտագործի՛ր այս բառը քո նախադասությունում։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishVocabulary #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 6500,
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-12-word-lazy/word-lazy.mp4"
+      }
+    },
+    {
       "id": "2026-11-11-story-w-2026-11-11",
       "date": "2026-11-11",
       "time": "09:00",
@@ -302,6 +316,45 @@
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-11-stories/story-w-2026-11-11.jpg"
       }
+    },
+    {
+      "id": "2026-11-11-list-get",
+      "date": "2026-11-11",
+      "time": "12:00",
+      "timezone": "Asia/Yerevan",
+      "type": "CAROUSEL",
+      "format": "CAROUSEL",
+      "kind": "rule",
+      "content_id": "get",
+      "title": "Collocations: get",
+      "caption": "Անգլերեն բառակապակցություններ · English collocations\n\nCollocations with GET\n\n6 բառակապակցություն, որ ամեն օր կօգտագործես։\n\nget up — արթնանալ, վեր կենալ\nget ready — պատրաստվել\nget home — տուն հասնել\nget lost — մոլորվել\nget better — լավանալ\nget a job — աշխատանք գտնել\n\nՕրինակ՝ “I get up at seven every day.” — «Ամեն օր ժամը յոթին եմ արթնանում»։\n\nՊահպանի՛ր և ուղարկի՛ր ընկերոջդ։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishVocabulary #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "slides": [
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-get/01-get.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-get/02-get.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-get/03-get.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-get/04-get.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-get/05-get.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-get/06-get.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-get/07-get.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-get/08-get.jpg"
+        ]
+      }
+    },
+    {
+      "id": "2026-11-11-dialogue-directions",
+      "date": "2026-11-11",
+      "time": "17:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "dialogue",
+      "content_id": "directions",
+      "title": "Everyday English 02",
+      "caption": "Խոսակցական անգլերեն · Everyday English dialogue\n\nAsking the way · Ճանապարհ հարցնել · A2\n\nB: Excuse me, where is the station?\nA: Go straight on, then turn left.\nB: Is it far from here?\nA: No, it's about five minutes on foot.\nB: Thank you so much!\nA: You're welcome.\n\nՆախ լսի՛ր, հետո դու ես B-ն. ասա՛ քո տողերը բարձրաձայն։\n\nՊահպանի՛ր և կրկնի՛ր, մինչև ազատ ասես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "approved",
+      "thumb_offset": 6000
     },
     {
       "id": "2026-11-11-story-p-2026-11-11",
@@ -351,6 +404,45 @@
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-12-stories/story-w-2026-11-12.jpg"
       }
+    },
+    {
+      "id": "2026-11-12-list-pay",
+      "date": "2026-11-12",
+      "time": "12:00",
+      "timezone": "Asia/Yerevan",
+      "type": "CAROUSEL",
+      "format": "CAROUSEL",
+      "kind": "rule",
+      "content_id": "pay",
+      "title": "Collocations: pay",
+      "caption": "Անգլերեն բառակապակցություններ · English collocations\n\nCollocations with PAY\n\nՈչ միայն «վճարել». 6 բնական կապակցություն։\n\npay attention — ուշադրություն դարձնել\npay the bill — հաշիվը վճարել\npay by card — քարտով վճարել\npay in cash — կանխիկ վճարել\npay a visit — այցելել\npay a compliment — հաճոյախոսություն անել\n\nՕրինակ՝ “Please pay attention to the board.” — «Խնդրում եմ, ուշադրություն դարձրեք գրատախտակին»։\n\nՊահպանի՛ր և ուղարկի՛ր ընկերոջդ։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishVocabulary #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "slides": [
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-list-pay/01-pay.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-list-pay/02-pay.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-list-pay/03-pay.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-list-pay/04-pay.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-list-pay/05-pay.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-list-pay/06-pay.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-list-pay/07-pay.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-12-list-pay/08-pay.jpg"
+        ]
+      }
+    },
+    {
+      "id": "2026-11-12-dialogue-meeting",
+      "date": "2026-11-12",
+      "time": "17:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "dialogue",
+      "content_id": "meeting",
+      "title": "Everyday English 03",
+      "caption": "Խոսակցական անգլերեն · Everyday English dialogue\n\nNice to meet you · Ծանոթություն · A1\n\nA: Hi, I'm Anna. What's your name?\nB: I'm David. Nice to meet you.\nA: Nice to meet you too. Where are you from?\nB: I'm from Armenia. And you?\nA: I'm from London.\n\nՆախ լսի՛ր, հետո դու ես B-ն. ասա՛ քո տողերը բարձրաձայն։\n\nՊահպանի՛ր և կրկնի՛ր, մինչև ազատ ասես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "approved",
+      "thumb_offset": 6000
     },
     {
       "id": "2026-11-12-story-p-2026-11-12",
@@ -427,29 +519,18 @@
       }
     },
     {
-      "id": "2026-11-11-list-make-do",
+      "id": "2026-11-13-dialogue-clothes-shop",
       "date": "2026-11-13",
       "time": "17:00",
       "timezone": "Asia/Yerevan",
-      "type": "CAROUSEL",
-      "format": "CAROUSEL",
-      "kind": "rule",
-      "content_id": "make-do",
-      "title": "Make or do?",
-      "caption": "Անգլերեն բառեր · English vocabulary\n\nMake or do?\n\nMAKE՝ երբ ինչ-որ բան ստեղծում ենք, DO՝ գործերի և առաջադրանքների համար։\nՕրինակ՝ “Everyone makes mistakes.” — «Բոլորն էլ սխալվում են»։\n\nՊահպանի՛ր և գրի՛ր մեկնաբանություններում քո օրինակը։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishVocabulary #Yerevan",
-      "review_status": "staged",
-      "media": {
-        "slides": [
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/01-make-do.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/02-make-do.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/03-make-do.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/04-make-do.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/05-make-do.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/06-make-do.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/07-make-do.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/08-make-do.jpg"
-        ]
-      }
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "dialogue",
+      "content_id": "clothes-shop",
+      "title": "Everyday English 04",
+      "caption": "Խոսակցական անգլերեն · Everyday English dialogue\n\nIn a clothes shop · Հագուստի խանութում · A2\n\nA: Hello! Can I help you?\nB: Yes, do you have this in a medium?\nA: Let me check. Yes, here you are.\nB: Can I try it on?\nA: Sure. The changing rooms are over there.\n\nՆախ լսի՛ր, հետո դու ես B-ն. ասա՛ քո տողերը բարձրաձայն։\n\nՊահպանի՛ր և կրկնի՛ր, մինչև ազատ ասես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "approved",
+      "thumb_offset": 6000
     },
     {
       "id": "2026-11-13-story-p-2026-11-13",
@@ -526,6 +607,20 @@
       }
     },
     {
+      "id": "2026-11-14-dialogue-doctor",
+      "date": "2026-11-14",
+      "time": "17:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "dialogue",
+      "content_id": "doctor",
+      "title": "Everyday English 05",
+      "caption": "Խոսակցական անգլերեն · Everyday English dialogue\n\nAt the doctor's · Բժշկի մոտ · B1\n\nA: What seems to be the problem?\nB: I have a bad headache.\nA: How long have you had it?\nB: Since yesterday morning.\nA: Drink plenty of water and get some rest.\n\nՆախ լսի՛ր, հետո դու ես B-ն. ասա՛ քո տողերը բարձրաձայն։\n\nՊահպանի՛ր և կրկնի՛ր, մինչև ազատ ասես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "approved",
+      "thumb_offset": 6000
+    },
+    {
       "id": "2026-11-14-story-p-2026-11-14",
       "date": "2026-11-14",
       "time": "18:00",
@@ -542,8 +637,248 @@
       }
     },
     {
-      "id": "2026-11-14-mistake-does-base-form",
+      "id": "2026-11-14-sound-three-tree",
       "date": "2026-11-14",
+      "time": "20:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "sound",
+      "content_id": "three-tree",
+      "title": "Sound it out 02",
+      "caption": "Անգլերենի արտասանություն · English pronunciation\n\nThree or tree? Can you hear the difference?\n\nthree /θriː/ — երեք. լեզվի ծայրը՝ ատամների միջև, փչիր օդը\ntree /triː/ — ծառ. լեզուն՝ ատամների հետևում\n\nԼսի՛ր, ընտրի՛ր A կամ B, ապա բարձրաձայն կրկնի՛ր.\nThere are three trees in the garden.\n\nԳրի՛ր մեկնաբանություններում՝ A, թե B։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishPronunciation #Yerevan",
+      "review_status": "approved",
+      "thumb_offset": 7000
+    },
+    {
+      "id": "2026-11-15-story-w-2026-11-15",
+      "date": "2026-11-15",
+      "time": "09:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-image",
+      "content_id": "w-2026-11-15",
+      "title": "w-2026-11-15",
+      "caption": "",
+      "review_status": "approved"
+    },
+    {
+      "id": "2026-11-11-list-make-do",
+      "date": "2026-11-15",
+      "time": "12:00",
+      "timezone": "Asia/Yerevan",
+      "type": "CAROUSEL",
+      "format": "CAROUSEL",
+      "kind": "rule",
+      "content_id": "make-do",
+      "title": "Make or do?",
+      "caption": "Անգլերեն բառեր · English vocabulary\n\nMake or do?\n\nMAKE՝ երբ ինչ-որ բան ստեղծում ենք, DO՝ գործերի և առաջադրանքների համար։\nՕրինակ՝ “Everyone makes mistakes.” — «Բոլորն էլ սխալվում են»։\n\nՊահպանի՛ր և գրի՛ր մեկնաբանություններում քո օրինակը։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishVocabulary #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "slides": [
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/01-make-do.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/02-make-do.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/03-make-do.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/04-make-do.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/05-make-do.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/06-make-do.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/07-make-do.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-11-list-make-do/08-make-do.jpg"
+        ]
+      }
+    },
+    {
+      "id": "2026-11-15-dialogue-phone",
+      "date": "2026-11-15",
+      "time": "17:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "dialogue",
+      "content_id": "phone",
+      "title": "Everyday English 06",
+      "caption": "Խոսակցական անգլերեն · Everyday English dialogue\n\nOn the phone · Հեռախոսով · B1\n\nA: Hello, can I speak to Mr Smith, please?\nB: I'm sorry, he's not in at the moment.\nA: Could I leave a message?\nB: Of course. Who's calling, please?\nA: It's Maria from the bank.\n\nՆախ լսի՛ր, հետո դու ես B-ն. ասա՛ քո տողերը բարձրաձայն։\n\nՊահպանի՛ր և կրկնի՛ր, մինչև ազատ ասես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "approved",
+      "thumb_offset": 6000
+    },
+    {
+      "id": "2026-11-15-story-p-2026-11-15",
+      "date": "2026-11-15",
+      "time": "18:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-image",
+      "content_id": "p-2026-11-15",
+      "title": "p-2026-11-15",
+      "caption": "",
+      "review_status": "approved"
+    },
+    {
+      "id": "2026-11-16-story-saturday-market-part-1",
+      "date": "2026-11-15",
+      "time": "20:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "story",
+      "content_id": "saturday-market-part-1",
+      "title": "The Saturday Market",
+      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\n\nThe Saturday Market · A1 reading\n\nԿարդա՛ և լսի՛ր պատմության 1-ին մասը։ Ամեն շաբաթ օր տատիկս ու ես գնում ենք շուկա։\nՕրինակ՝ “Every Saturday, my grandmother and I go to the market.” — «Ամեն շաբաթ օր տատիկս ու ես գնում ենք շուկա»։\n\nՇարունակությունը՝ շուտով։ Հետևի՛ր էջին, որ բաց չթողնես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-16-story-saturday-market-part-1/story-saturday-market-part-1.mp4"
+      },
+      "thumb_offset": 4200
+    },
+    {
+      "id": "2026-11-16-story-w-2026-11-16",
+      "date": "2026-11-16",
+      "time": "09:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-image",
+      "content_id": "w-2026-11-16",
+      "title": "w-2026-11-16",
+      "caption": "",
+      "review_status": "approved"
+    },
+    {
+      "id": "2026-11-16-list-polite",
+      "date": "2026-11-16",
+      "time": "12:00",
+      "timezone": "Asia/Yerevan",
+      "type": "CAROUSEL",
+      "format": "CAROUSEL",
+      "kind": "rule",
+      "content_id": "polite",
+      "title": "Ask politely",
+      "caption": "Խոսակցական անգլերեն · Spoken English phrases\n\nAsk politely\n\n6 քաղաքավարի արտահայտություն խնդրանքի համար։\n\nCould you help me, please? — Կարո՞ղ եք ինձ օգնել\nWould you mind…? — Դեմ չե՞ք լինի…\nCan I ask you something? — Կարո՞ղ եմ մի բան հարցնել\nCould you say that again? — Կարո՞ղ եք կրկնել\nDo you have a minute? — Մի րոպե ունե՞ք\nIs this seat free? — Այս տեղն ազա՞տ է\n\nՕրինակ՝ “Could you help me, please? This box is heavy.” — «Կօգնե՞ք, խնդրում եմ։ Այս տուփը ծանր է»։\n\nՊահպանի՛ր և ուղարկի՛ր ընկերոջդ։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "slides": [
+          "https://98torosyan.github.io/english-reels-media/2026-11-16-list-polite/01-polite.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-16-list-polite/02-polite.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-16-list-polite/03-polite.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-16-list-polite/04-polite.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-16-list-polite/05-polite.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-16-list-polite/06-polite.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-16-list-polite/07-polite.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-16-list-polite/08-polite.jpg"
+        ]
+      }
+    },
+    {
+      "id": "2026-11-16-dialogue-restaurant",
+      "date": "2026-11-16",
+      "time": "17:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "dialogue",
+      "content_id": "restaurant",
+      "title": "Everyday English 07",
+      "caption": "Խոսակցական անգլերեն · Everyday English dialogue\n\nAt a restaurant · Ռեստորանում · A2\n\nA: Good evening. Do you have a reservation?\nB: Yes, a table for two, please.\nA: This way, please. Here's the menu.\nB: Thank you. Could we have some water?\nA: Of course. Still or sparkling?\nB: Still, please.\n\nՆախ լսի՛ր, հետո դու ես B-ն. ասա՛ քո տողերը բարձրաձայն։\n\nՊահպանի՛ր և կրկնի՛ր, մինչև ազատ ասես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "approved",
+      "thumb_offset": 6000
+    },
+    {
+      "id": "2026-11-16-story-p-2026-11-16",
+      "date": "2026-11-16",
+      "time": "18:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-image",
+      "content_id": "p-2026-11-16",
+      "title": "p-2026-11-16",
+      "caption": "",
+      "review_status": "approved"
+    },
+    {
+      "id": "2026-11-19-story-saturday-market-part-2",
+      "date": "2026-11-16",
+      "time": "20:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "story",
+      "content_id": "saturday-market-part-2",
+      "title": "The Saturday Market",
+      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\n\nThe Saturday Market · A1 reading\n\nԿարդա՛ և լսի՛ր պատմության 2-րդ մասը։ Վաճառողները մեզ կանչում են․ «Մոտեցե՛ք։\nՕրինակ՝ “The sellers call to us: \"Come here! Try this! It is fresh!\" My grandmother is clever.” — «Վաճառողները մեզ կանչում են․ «Մոտեցե՛ք»։\n\nՇարունակությունը՝ շուտով։ Հետևի՛ր էջին, որ բաց չթողնես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "approved",
+      "thumb_offset": 4200
+    },
+    {
+      "id": "2026-11-17-story-w-2026-11-17",
+      "date": "2026-11-17",
+      "time": "09:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-image",
+      "content_id": "w-2026-11-17",
+      "title": "w-2026-11-17",
+      "caption": "",
+      "review_status": "approved"
+    },
+    {
+      "id": "2026-11-17-list-catch",
+      "date": "2026-11-17",
+      "time": "12:00",
+      "timezone": "Asia/Yerevan",
+      "type": "CAROUSEL",
+      "format": "CAROUSEL",
+      "kind": "rule",
+      "content_id": "catch",
+      "title": "Collocations: catch",
+      "caption": "Անգլերեն բառակապակցություններ · English collocations\n\nCollocations with CATCH\n\nԲռնել ավտոբուս, մրսածություն և ուշադրություն։\n\ncatch a bus — ավտոբուսին հասնել\ncatch a cold — մրսել\ncatch fire — բռնկվել\ncatch up — հասնել, ետ չմնալ\ncatch your breath — շունչ քաշել\ncatch someone’s eye — ուշադրություն գրավել\n\nՕրինակ՝ “I need to catch the eight o’clock bus.” — «Պետք է հասնեմ ժամը ութի ավտոբուսին»։\n\nՊահպանի՛ր և ուղարկի՛ր ընկերոջդ։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishVocabulary #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "slides": [
+          "https://98torosyan.github.io/english-reels-media/2026-11-17-list-catch/01-catch.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-17-list-catch/02-catch.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-17-list-catch/03-catch.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-17-list-catch/04-catch.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-17-list-catch/05-catch.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-17-list-catch/06-catch.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-17-list-catch/07-catch.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-17-list-catch/08-catch.jpg"
+        ]
+      }
+    },
+    {
+      "id": "2026-11-17-dialogue-hotel",
+      "date": "2026-11-17",
+      "time": "17:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "dialogue",
+      "content_id": "hotel",
+      "title": "Everyday English 08",
+      "caption": "Խոսակցական անգլերեն · Everyday English dialogue\n\nChecking in · Հյուրանոցում · A2\n\nA: Good afternoon. How can I help?\nB: Hi, I have a booking for three nights.\nA: Thank you. Here's your key.\nB: What time is breakfast?\nA: From seven to ten.\n\nՆախ լսի՛ր, հետո դու ես B-ն. ասա՛ քո տողերը բարձրաձայն։\n\nՊահպանի՛ր և կրկնի՛ր, մինչև ազատ ասես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "approved",
+      "thumb_offset": 6000
+    },
+    {
+      "id": "2026-11-17-story-p-2026-11-17",
+      "date": "2026-11-17",
+      "time": "18:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-image",
+      "content_id": "p-2026-11-17",
+      "title": "p-2026-11-17",
+      "caption": "",
+      "review_status": "approved"
+    },
+    {
+      "id": "2026-11-14-mistake-does-base-form",
+      "date": "2026-11-17",
       "time": "20:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
@@ -560,7 +895,7 @@
     },
     {
       "id": "2026-11-15-word-sky",
-      "date": "2026-11-15",
+      "date": "2026-11-18",
       "time": "12:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
@@ -574,23 +909,25 @@
       "thumb_offset": 6500
     },
     {
-      "id": "2026-11-16-story-saturday-market-part-1",
-      "date": "2026-11-16",
+      "id": "2026-11-22-story-saturday-market-part-3",
+      "date": "2026-11-18",
       "time": "20:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
       "kind": "story",
-      "content_id": "saturday-market-part-1",
+      "content_id": "saturday-market-part-3",
       "title": "The Saturday Market",
-      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\n\nThe Saturday Market · A1 reading\n\nԿարդա՛ և լսի՛ր պատմության 1-ին մասը։ Ամեն շաբաթ օր տատիկս ու ես գնում ենք շուկա։\nՕրինակ՝ “Every Saturday, my grandmother and I go to the market.” — «Ամեն շաբաթ օր տատիկս ու ես գնում ենք շուկա»։\n\nՇարունակությունը՝ շուտով։ Հետևի՛ր էջին, որ բաց չթողնես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "draft",
-      "media": {},
+      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\n\nThe Saturday Market · A1 reading\n\nԿարդա՛ և լսի՛ր պատմության 3-րդ մասը։ Ես տանում եմ պայուսակը։\nՕրինակ՝ “I carry the bag.” — «Ես տանում եմ պայուսակը»։\n\nՎերջ Ո՞ր մասն էր ամենահետաքրքիրը։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-story-saturday-market-part-3/story-saturday-market-part-3.mp4"
+      },
       "thumb_offset": 4200
     },
     {
       "id": "2026-11-17-rule-relative",
-      "date": "2026-11-17",
+      "date": "2026-11-19",
       "time": "12:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
@@ -603,7 +940,7 @@
     },
     {
       "id": "2026-11-18-mistake-did-base-form",
-      "date": "2026-11-18",
+      "date": "2026-11-19",
       "time": "20:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
@@ -615,21 +952,6 @@
       "review_status": "draft",
       "media": {},
       "thumb_offset": 3300
-    },
-    {
-      "id": "2026-11-19-story-saturday-market-part-2",
-      "date": "2026-11-19",
-      "time": "20:00",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "story",
-      "content_id": "saturday-market-part-2",
-      "title": "The Saturday Market",
-      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\n\nThe Saturday Market · A1 reading\n\nԿարդա՛ և լսի՛ր պատմության 2-րդ մասը։ Վաճառողները մեզ կանչում են․ «Մոտեցե՛ք։\nՕրինակ՝ “The sellers call to us: \"Come here! Try this! It is fresh!\" My grandmother is clever.” — «Վաճառողները մեզ կանչում են․ «Մոտեցե՛ք»։\n\nՇարունակությունը՝ շուտով։ Հետևի՛ր էջին, որ բաց չթողնես։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "draft",
-      "media": {},
-      "thumb_offset": 4200
     },
     {
       "id": "2026-11-20-test-ufar-mini-1",
@@ -673,21 +995,6 @@
       "review_status": "draft",
       "media": {},
       "thumb_offset": 6500
-    },
-    {
-      "id": "2026-11-22-story-saturday-market-part-3",
-      "date": "2026-11-22",
-      "time": "20:00",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "story",
-      "content_id": "saturday-market-part-3",
-      "title": "The Saturday Market",
-      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\n\nThe Saturday Market · A1 reading\n\nԿարդա՛ և լսի՛ր պատմության 3-րդ մասը։ Ես տանում եմ պայուսակը։\nՕրինակ՝ “I carry the bag.” — «Ես տանում եմ պայուսակը»։\n\nՎերջ Ո՞ր մասն էր ամենահետաքրքիրը։\n\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "draft",
-      "media": {},
-      "thumb_offset": 4200
     },
     {
       "id": "2026-11-23-story-my-garden-part-1",

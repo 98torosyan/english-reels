@@ -448,5 +448,365 @@
     "example_hy": "Նա քննություն է հանձնում հունիսին։"
    }
   ]
+ },
+ {
+  "id": "get",
+  "series": "COLLOCATIONS",
+  "chip": "A2–B1 · VOCABULARY",
+  "title": "Collocations with <em>GET</em>",
+  "subtitle_hy": "6 բառակապակցություն, որ ամեն օր կօգտագործես",
+  "items": [
+   {
+    "en": "get up",
+    "hy": "արթնանալ, վեր կենալ",
+    "example": "I get up at seven every day.",
+    "example_hy": "Ամեն օր ժամը յոթին եմ արթնանում։"
+   },
+   {
+    "en": "get ready",
+    "hy": "պատրաստվել",
+    "example": "Get ready, we’re leaving soon.",
+    "example_hy": "Պատրաստվի՛ր, շուտով դուրս ենք գալիս։"
+   },
+   {
+    "en": "get home",
+    "hy": "տուն հասնել",
+    "example": "Call me when you get home.",
+    "example_hy": "Զանգիր ինձ, երբ տուն հասնես։"
+   },
+   {
+    "en": "get lost",
+    "hy": "մոլորվել",
+    "example": "We got lost in the old town.",
+    "example_hy": "Հին քաղաքում մոլորվեցինք։"
+   },
+   {
+    "en": "get better",
+    "hy": "լավանալ",
+    "example": "Your English is getting better!",
+    "example_hy": "Անգլերենդ լավանում է։"
+   },
+   {
+    "en": "get a job",
+    "hy": "աշխատանք գտնել",
+    "example": "He got a job at a bank.",
+    "example_hy": "Նա աշխատանք գտավ բանկում։"
+   }
+  ]
+ },
+ {
+  "id": "pay",
+  "series": "COLLOCATIONS",
+  "chip": "A2–B1 · VOCABULARY",
+  "title": "Collocations with <em>PAY</em>",
+  "subtitle_hy": "Ոչ միայն «վճարել». 6 բնական կապակցություն",
+  "items": [
+   {
+    "en": "pay attention",
+    "hy": "ուշադրություն դարձնել",
+    "example": "Please pay attention to the board.",
+    "example_hy": "Խնդրում եմ, ուշադրություն դարձրեք գրատախտակին։"
+   },
+   {
+    "en": "pay the bill",
+    "hy": "հաշիվը վճարել",
+    "example": "Let me pay the bill this time.",
+    "example_hy": "Այս անգամ թույլ տուր՝ ես վճարեմ հաշիվը։"
+   },
+   {
+    "en": "pay by card",
+    "hy": "քարտով վճարել",
+    "example": "Can I pay by card?",
+    "example_hy": "Կարո՞ղ եմ քարտով վճարել։"
+   },
+   {
+    "en": "pay in cash",
+    "hy": "կանխիկ վճարել",
+    "example": "I always pay in cash at the market.",
+    "example_hy": "Շուկայում միշտ կանխիկ եմ վճարում։"
+   },
+   {
+    "en": "pay a visit",
+    "hy": "այցելել",
+    "example": "Let’s pay a visit to Grandma.",
+    "example_hy": "Եկ այցելենք տատիկին։"
+   },
+   {
+    "en": "pay a compliment",
+    "hy": "հաճոյախոսություն անել",
+    "example": "He paid me a nice compliment.",
+    "example_hy": "Նա ինձ մի հաճելի հաճոյախոսություն արեց։"
+   }
+  ]
+ },
+ {
+  "id": "catch",
+  "series": "COLLOCATIONS",
+  "chip": "A2–B1 · VOCABULARY",
+  "title": "Collocations with <em>CATCH</em>",
+  "subtitle_hy": "Բռնել ավտոբուս, մրսածություն և ուշադրություն",
+  "items": [
+   {
+    "en": "catch a bus",
+    "hy": "ավտոբուսին հասնել",
+    "example": "I need to catch the eight o’clock bus.",
+    "example_hy": "Պետք է հասնեմ ժամը ութի ավտոբուսին։"
+   },
+   {
+    "en": "catch a cold",
+    "hy": "մրսել",
+    "example": "Wear a coat or you’ll catch a cold.",
+    "example_hy": "Վերարկու հագիր, թե չէ կմրսես։"
+   },
+   {
+    "en": "catch fire",
+    "hy": "բռնկվել",
+    "example": "The paper caught fire.",
+    "example_hy": "Թուղթը բռնկվեց։"
+   },
+   {
+    "en": "catch up",
+    "hy": "հասնել, ետ չմնալ",
+    "example": "Walk slowly, I’ll catch up.",
+    "example_hy": "Դանդաղ քայլիր, ես կհասնեմ։"
+   },
+   {
+    "en": "catch your breath",
+    "hy": "շունչ քաշել",
+    "example": "Wait, let me catch my breath.",
+    "example_hy": "Սպասիր, թող շունչ քաշեմ։"
+   },
+   {
+    "en": "catch someone’s eye",
+    "hy": "ուշադրություն գրավել",
+    "example": "This book caught my eye.",
+    "example_hy": "Այս գիրքը գրավեց ուշադրությունս։"
+   }
+  ]
+ },
+ {
+  "id": "keep",
+  "series": "COLLOCATIONS",
+  "chip": "A2–B1 · VOCABULARY",
+  "title": "Collocations with <em>KEEP</em>",
+  "subtitle_hy": "Պահել գաղտնիք, խոստում և հանգստություն",
+  "items": [
+   {
+    "en": "keep calm",
+    "hy": "հանգիստ մնալ",
+    "example": "Keep calm, everything will be fine.",
+    "example_hy": "Հանգիստ մնա, ամեն ինչ լավ կլինի։"
+   },
+   {
+    "en": "keep in touch",
+    "hy": "կապի մեջ մնալ",
+    "example": "Let’s keep in touch!",
+    "example_hy": "Եկ կապի մեջ մնանք։"
+   },
+   {
+    "en": "keep a secret",
+    "hy": "գաղտնիք պահել",
+    "example": "Can you keep a secret?",
+    "example_hy": "Կարո՞ղ ես գաղտնիք պահել։"
+   },
+   {
+    "en": "keep a promise",
+    "hy": "խոստումը պահել",
+    "example": "He always keeps his promises.",
+    "example_hy": "Նա միշտ պահում է իր խոստումները։"
+   },
+   {
+    "en": "keep quiet",
+    "hy": "լուռ մնալ",
+    "example": "Please keep quiet in the library.",
+    "example_hy": "Խնդրում եմ, գրադարանում լուռ մնացեք։"
+   },
+   {
+    "en": "keep going",
+    "hy": "շարունակել",
+    "example": "Don’t stop, keep going!",
+    "example_hy": "Մի՛ կանգնիր, շարունակի՛ր։"
+   }
+  ]
+ },
+ {
+  "id": "break",
+  "series": "COLLOCATIONS",
+  "chip": "A2–B1 · VOCABULARY",
+  "title": "Collocations with <em>BREAK</em>",
+  "subtitle_hy": "Կոտրել ոչ միայն բաժակ",
+  "items": [
+   {
+    "en": "break the ice",
+    "hy": "սառույցը կոտրել",
+    "example": "A friendly joke can break the ice.",
+    "example_hy": "Բարի կատակը կարող է սառույցը կոտրել։"
+   },
+   {
+    "en": "break a promise",
+    "hy": "խոստումը դրժել",
+    "example": "Never break a promise.",
+    "example_hy": "Երբեք մի՛ դրժիր խոստումդ։"
+   },
+   {
+    "en": "break the rules",
+    "hy": "կանոնները խախտել",
+    "example": "He broke the rules and lost the game.",
+    "example_hy": "Նա խախտեց կանոնները և պարտվեց։"
+   },
+   {
+    "en": "break a record",
+    "hy": "ռեկորդ գերազանցել",
+    "example": "She broke the world record.",
+    "example_hy": "Նա գերազանցեց համաշխարհային ռեկորդը։"
+   },
+   {
+    "en": "break the news",
+    "hy": "լուրը հայտնել",
+    "example": "Who will break the news to him?",
+    "example_hy": "Ո՞վ կհայտնի նրան այդ լուրը։"
+   },
+   {
+    "en": "break a habit",
+    "hy": "սովորությունից ազատվել",
+    "example": "It’s hard to break a bad habit.",
+    "example_hy": "Դժվար է ազատվել վատ սովորությունից։"
+   }
+  ]
+ },
+ {
+  "id": "word-pairs",
+  "series": "COLLOCATIONS",
+  "chip": "A2–B1 · VOCABULARY",
+  "title": "Natural <em>word pairs</em>",
+  "subtitle_hy": "Այսպես են ասում անգլիախոսները",
+  "items": [
+   {
+    "en": "heavy rain",
+    "hy": "հորդառատ անձրև",
+    "example": "There was heavy rain all night.",
+    "example_hy": "Ամբողջ գիշեր հորդառատ անձրև էր։"
+   },
+   {
+    "en": "strong coffee",
+    "hy": "թունդ սուրճ",
+    "example": "I need a strong coffee.",
+    "example_hy": "Ինձ թունդ սուրճ է պետք։"
+   },
+   {
+    "en": "fast food",
+    "hy": "արագ սնունդ",
+    "example": "Fast food isn’t very healthy.",
+    "example_hy": "Արագ սնունդն այնքան էլ առողջարար չէ։"
+   },
+   {
+    "en": "high price",
+    "hy": "բարձր գին",
+    "example": "Good quality often comes at a high price.",
+    "example_hy": "Լավ որակը հաճախ բարձր գին ունի։"
+   },
+   {
+    "en": "deep sleep",
+    "hy": "խոր քուն",
+    "example": "The baby is in a deep sleep.",
+    "example_hy": "Երեխան խոր քնած է։"
+   },
+   {
+    "en": "best friend",
+    "hy": "լավագույն ընկեր",
+    "example": "Anna is my best friend.",
+    "example_hy": "Աննան իմ լավագույն ընկերն է։"
+   }
+  ]
+ },
+ {
+  "id": "polite",
+  "series": "SAY IT NATURALLY",
+  "chip": "A2–B1 · SPEAKING",
+  "title": "Ask <em>politely</em>",
+  "subtitle_hy": "6 քաղաքավարի արտահայտություն խնդրանքի համար",
+  "items": [
+   {
+    "en": "Could you help me, please?",
+    "hy": "Կարո՞ղ եք ինձ օգնել։",
+    "example": "Could you help me, please? This box is heavy.",
+    "example_hy": "Կօգնե՞ք, խնդրում եմ։ Այս տուփը ծանր է։"
+   },
+   {
+    "en": "Would you mind…?",
+    "hy": "Դեմ չե՞ք լինի…",
+    "example": "Would you mind closing the window?",
+    "example_hy": "Դեմ չե՞ք լինի պատուհանը փակել։"
+   },
+   {
+    "en": "Can I ask you something?",
+    "hy": "Կարո՞ղ եմ մի բան հարցնել։",
+    "example": "Can I ask you something? Where did you buy it?",
+    "example_hy": "Կարո՞ղ եմ մի բան հարցնել։ Որտեղի՞ց եք գնել։"
+   },
+   {
+    "en": "Could you say that again?",
+    "hy": "Կարո՞ղ եք կրկնել։",
+    "example": "Sorry, could you say that again?",
+    "example_hy": "Ներեցեք, կարո՞ղ եք կրկնել։"
+   },
+   {
+    "en": "Do you have a minute?",
+    "hy": "Մի րոպե ունե՞ք։",
+    "example": "Do you have a minute? I need your advice.",
+    "example_hy": "Մի րոպե ունե՞ք։ Ձեր խորհուրդն է պետք։"
+   },
+   {
+    "en": "Is this seat free?",
+    "hy": "Այս տեղն ազա՞տ է։",
+    "example": "Excuse me, is this seat free?",
+    "example_hy": "Ներեցեք, այս տեղն ազա՞տ է։"
+   }
+  ]
+ },
+ {
+  "id": "goodbye",
+  "series": "SAY IT NATURALLY",
+  "chip": "A2–B1 · SPEAKING",
+  "title": "Stop saying <em>“Bye”</em>",
+  "subtitle_hy": "6 բնական ձև հրաժեշտ տալու համար",
+  "items": [
+   {
+    "en": "See you later.",
+    "hy": "Հետո կտեսնվենք։",
+    "example": "I’m off now. See you later!",
+    "example_hy": "Ես գնացի։ Հետո կտեսնվենք։"
+   },
+   {
+    "en": "Take care.",
+    "hy": "Քեզ լավ պահիր։",
+    "example": "Bye, take care!",
+    "example_hy": "Հաջող, քեզ լավ պահիր։"
+   },
+   {
+    "en": "Have a nice day.",
+    "hy": "Լավ օր եմ մաղթում։",
+    "example": "Thank you, have a nice day!",
+    "example_hy": "Շնորհակալություն, լավ օր եմ մաղթում։"
+   },
+   {
+    "en": "See you soon.",
+    "hy": "Շուտով կտեսնվենք։",
+    "example": "It was great to see you. See you soon!",
+    "example_hy": "Շատ ուրախ էի քեզ տեսնել։ Շուտով կտեսնվենք։"
+   },
+   {
+    "en": "Talk to you later.",
+    "hy": "Հետո կխոսենք։",
+    "example": "I have to go. Talk to you later.",
+    "example_hy": "Պետք է գնամ։ Հետո կխոսենք։"
+   },
+   {
+    "en": "Have a good weekend.",
+    "hy": "Լավ հանգստյան օրեր։",
+    "example": "See you on Monday. Have a good weekend!",
+    "example_hy": "Կհանդիպենք երկուշաբթի։ Լավ հանգստյան օրեր։"
+   }
+  ]
  }
 ]
