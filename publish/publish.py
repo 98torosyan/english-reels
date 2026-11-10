@@ -83,8 +83,10 @@ def load_content(path: Path) -> dict:
         raise PublishError("Caption is required.")
     if kind == "REELS" and not str(content.get("video_url", "")).startswith("https://"):
         raise PublishError("A public HTTPS video_url is required for a Reel.")
-    if kind in {"IMAGE", "STORIES"} and not str(content.get("image_url", "")).startswith("https://"):
+    if kind == "IMAGE" and not str(content.get("image_url", "")).startswith("https://"):
         raise PublishError("A public HTTPS image_url is required for an image.")
+    if kind == "STORIES" and not (str(content.get("image_url", "")).startswith("https://") or str(content.get("video_url", "")).startswith("https://")):
+        raise PublishError("A public HTTPS image_url or video_url is required for a story.")
     if kind == "CAROUSEL":
         slides = content.get("slides")
         if not isinstance(slides, list) or not 2 <= len(slides) <= 10:
@@ -139,7 +141,8 @@ def create_container(client: GraphClient, user_id: str, content: dict) -> str:
     if kind == "IMAGE":
         return create_image(client, user_id, content["image_url"], caption)
     if kind == "STORIES":
-        response = client.request("POST", f"{user_id}/media", {"media_type": "STORIES", "image_url": content["image_url"]})
+        media = {"video_url": content["video_url"]} if content.get("video_url") else {"image_url": content["image_url"]}
+        response = client.request("POST", f"{user_id}/media", {"media_type": "STORIES", **media})
         container_id = str(response.get("id", ""))
         if not container_id:
             raise PublishError("Story container creation returned no ID.")
