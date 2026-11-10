@@ -77,13 +77,13 @@ def load_content(path: Path) -> dict:
     except (OSError, json.JSONDecodeError) as error:
         raise PublishError(f"Could not read content file: {error}") from None
     kind = str(content.get("kind", "")).upper()
-    if kind not in {"REELS", "CAROUSEL", "IMAGE"}:
+    if kind not in {"REELS", "CAROUSEL", "IMAGE", "STORIES"}:
         raise PublishError("Content kind must be REELS, CAROUSEL, or IMAGE.")
-    if not str(content.get("caption", "")).strip():
+    if kind != "STORIES" and not str(content.get("caption", "")).strip():
         raise PublishError("Caption is required.")
     if kind == "REELS" and not str(content.get("video_url", "")).startswith("https://"):
         raise PublishError("A public HTTPS video_url is required for a Reel.")
-    if kind == "IMAGE" and not str(content.get("image_url", "")).startswith("https://"):
+    if kind in {"IMAGE", "STORIES"} and not str(content.get("image_url", "")).startswith("https://"):
         raise PublishError("A public HTTPS image_url is required for an image.")
     if kind == "CAROUSEL":
         slides = content.get("slides")
@@ -137,6 +137,12 @@ def create_container(client: GraphClient, user_id: str, content: dict) -> str:
         return container_id
     if kind == "IMAGE":
         return create_image(client, user_id, content["image_url"], caption)
+    if kind == "STORIES":
+        response = client.request("POST", f"{user_id}/media", {"media_type": "STORIES", "image_url": content["image_url"]})
+        container_id = str(response.get("id", ""))
+        if not container_id:
+            raise PublishError("Story container creation returned no ID.")
+        return container_id
 
     child_ids = []
     for index, image_url in enumerate(content["slides"], start=1):

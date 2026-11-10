@@ -39,16 +39,21 @@ def main() -> int:
     if not items:
         print(f"{now:%Y-%m-%d %H:%M} Yerevan: nothing due.")
         return 0
-    item = items[0]
-    content = {"kind": item["format"], "caption": item["caption"], **item["media"]}
-    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
-        json.dump(content, f, ensure_ascii=False)
-    print(f"Due: {item['id']} ({item['format']}).")
-    code = publish.run(Path(f.name), dry)
-    if code == 0 and not dry:
-        item["published_at"] = now.isoformat(timespec="minutes")
-        item["review_status"] = "published"
-        QUEUE.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    code = 0
+    for item in items[:4]:
+        content = {"kind": item["format"], "caption": item.get("caption", ""), **item["media"]}
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
+            json.dump(content, f, ensure_ascii=False)
+        print(f"Due: {item['id']} ({item['format']}).")
+        try:
+            rc = publish.run(Path(f.name), dry)
+        except publish.PublishError as error:
+            print(f"Publishing failed for {item['id']}: {error}"); code = 1; continue
+        if rc == 0 and not dry:
+            item["published_at"] = now.isoformat(timespec="minutes")
+            item["review_status"] = "published"
+            QUEUE.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        code = code or rc
     return code
 
 
