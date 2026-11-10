@@ -19,7 +19,7 @@ function escapeHtml(value) {
 }
 
 function splitSentences(paragraph) {
-  return paragraph.trim().split(/(?<=[.!?])["”]?[\s]+/).filter(Boolean);
+  return paragraph.trim().split(/(?<=[.!?]["”]?)\s+/).filter(Boolean);
 }
 
 function loadLesson(slug) {
