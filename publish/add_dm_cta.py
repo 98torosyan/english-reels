@@ -43,3 +43,17 @@ for i in items:
 items.sort(key=lambda i: (i["date"], i["time"], i["id"]))
 QUEUE.write_text(json.dumps(q, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(f"{changed} caption(s) updated")
+
+# Reach-based times from 11 Nov (Yerevan): reels just before the 20:00–21:00 peak, stories at midday.
+RETIME = {("dialogue", "17:00"): "18:30", ("dialogue", "22:00"): "21:30", ("story-image", "09:00"): "11:30", ("story-image", "20:30"): "21:00"}
+for i in items:
+    if i["date"] < "2026-11-11" or i.get("review_status") == "published":
+        continue
+    new = RETIME.get((i["kind"], i["time"]))
+    if not new and i["format"] == "REELS" and i["kind"] != "dialogue" and i["time"] == "20:00":
+        new = "19:30"
+    if new:
+        i["time"] = new
+items.sort(key=lambda i: (i["date"], i["time"], i["id"]))
+QUEUE.write_text(json.dumps(q, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+print("times updated")

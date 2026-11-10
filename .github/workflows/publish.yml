@@ -2,7 +2,7 @@ name: Publish due post
 
 on:
   schedule:
-    - cron: "7 * * * *"   # every hour at :07; publishes the item that is due
+    - cron: "7,37 * * * *"   # twice an hour (:07 and :37); publishes the items that are due
   push:
     branches: [main]
     paths: ["publish/TRIGGER"]
