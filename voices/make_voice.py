@@ -60,6 +60,7 @@ def main():
     made += voice_cards()
     made += voice_sounds()
     made += voice_dialogues()
+    made += voice_stories()
     print(f"{made} file(s) voiced.")
 
 
@@ -155,6 +156,30 @@ def voice_dialogues():
             except Exception as error:
                 print(f"SKIPPED dialogue {d['id']}/{n}: {error}"); mp3.unlink(missing_ok=True); continue
             tj.write_text(json.dumps({"text": line["en"], "words": words, "tag": voice}), encoding="utf-8"); made += 1
+    return made
+
+def story_texts(st):
+    clean = lambda x: re.sub(r"<[^>]+>", "", x).replace("“", "").replace("”", "").replace("’", "'").replace(" — ", " ").strip()
+    return clean(st["title"]), clean(st["en"])
+
+
+def voice_stories():
+    """Word / phrase of the day stories: the word, then the example, read calmly."""
+    made = 0
+    root = LESSONS.parents[1]
+    stories = json.loads((root / "stories/stories.json").read_text(encoding="utf-8"))
+    for n, st in enumerate(s for s in stories if re.match(r"[wp]-", s["id"])):
+        out = root / "assets" / "stories" / st["id"]; out.mkdir(parents=True, exist_ok=True)
+        voice = ["en-GB-SoniaNeural", "en-GB-RyanNeural"][n % 2]
+        for key, text in zip(("t", "e"), story_texts(st)):
+            mp3, tj = out / f"{key}.mp3", out / f"{key}.json"
+            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text: continue
+            try:
+                bounds = asyncio.run(synth(text, voice, "-12%", mp3))
+            except Exception as error:
+                print(f"SKIPPED story {st['id']}/{key}: {error}"); mp3.unlink(missing_ok=True); continue
+            start, end = (bounds[0][1], bounds[-1][2]) if bounds else (0.0, 0.0)
+            tj.write_text(json.dumps({"text": text, "start": start, "end": end, "tag": voice}), encoding="utf-8"); made += 1
     return made
 
 if __name__ == "__main__":
