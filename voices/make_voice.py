@@ -62,6 +62,7 @@ def main():
     made += voice_dialogues()
     made += voice_stories()
     made += voice_words10()
+    made += voice_phrasal()
     print(f"{made} file(s) voiced.")
 
 
@@ -200,6 +201,25 @@ def voice_words10():
             except Exception as error:
                 print(f"SKIPPED words10 {lst['id']}/{n}: {error}"); mp3.unlink(missing_ok=True); continue
             tj.write_text(json.dumps({"text": text, "words": words, "tag": lst["voice"]}), encoding="utf-8"); made += 1
+    return made
+
+def voice_phrasal():
+    """Phrasal verbs: the phrasal verb on its own, then the example with word timings."""
+    made = 0
+    root = LESSONS.parents[1]
+    data = json.loads((root / "reels/data/phrasal.json").read_text(encoding="utf-8"))
+    for st in data["sets"]:
+        out = root / "assets" / "phrasal" / st["id"]; out.mkdir(parents=True, exist_ok=True)
+        for n, it in enumerate(st["items"]):
+            for key, text, rate in ((f"{n}p", it["en"] + ".", "-18%"), (f"{n}e", it["example"], "-12%")):
+                mp3, tj = out / f"{key}.mp3", out / f"{key}.json"
+                if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text: continue
+                try:
+                    bounds = asyncio.run(synth(text, st["voice"], rate, mp3))
+                    words = align(text.split(), bounds)
+                except Exception as error:
+                    print(f"SKIPPED phrasal {st['id']}/{key}: {error}"); mp3.unlink(missing_ok=True); continue
+                tj.write_text(json.dumps({"text": text, "words": words, "tag": st["voice"]}), encoding="utf-8"); made += 1
     return made
 
 if __name__ == "__main__":

@@ -1,0 +1,270 @@
+{
+  "series": "Phrasal verbs",
+  "note": "Four phrasal verbs with one base verb. British English. Each: the phrasal verb, its Armenian meaning, an example sentence (voiced, word by word) and its translation. Armenian to be reviewed by the teacher.",
+  "sets": [
+    {
+      "id": "get",
+      "number": 1,
+      "verb": "GET",
+      "level": "A2–B1",
+      "voice": "en-GB-SoniaNeural",
+      "items": [
+        {
+          "en": "get up",
+          "hy": "վեր կենալ (անկողնուց)",
+          "example": "I get up at seven every morning.",
+          "example_hy": "Ես ամեն առավոտ ժամը յոթին եմ վեր կենում։"
+        },
+        {
+          "en": "get on with",
+          "hy": "լավ յոլա գնալ",
+          "example": "I get on well with my neighbours.",
+          "example_hy": "Ես լավ եմ յոլա գնում հարևաններիս հետ։"
+        },
+        {
+          "en": "get over",
+          "hy": "ապաքինվել, հաղթահարել",
+          "example": "It took me a week to get over the flu.",
+          "example_hy": "Մեկ շաբաթ պահանջվեց, որ գրիպից ապաքինվեմ։"
+        },
+        {
+          "en": "get back",
+          "hy": "վերադառնալ",
+          "example": "We got back home very late.",
+          "example_hy": "Մենք տուն շատ ուշ վերադարձանք։"
+        }
+      ]
+    },
+    {
+      "id": "take",
+      "number": 2,
+      "verb": "TAKE",
+      "level": "A2–B1",
+      "voice": "en-GB-RyanNeural",
+      "items": [
+        {
+          "en": "take off",
+          "hy": "հանել (հագուստը)",
+          "example": "Please take off your shoes.",
+          "example_hy": "Խնդրում եմ, հանեք կոշիկները։"
+        },
+        {
+          "en": "take up",
+          "hy": "սկսել զբաղվել",
+          "example": "I've taken up swimming this year.",
+          "example_hy": "Այս տարի սկսել եմ լողով զբաղվել։"
+        },
+        {
+          "en": "take after",
+          "hy": "նմանվել (ծնողին)",
+          "example": "She takes after her grandmother.",
+          "example_hy": "Նա նման է իր տատիկին։"
+        },
+        {
+          "en": "take back",
+          "hy": "հետ տանել (խանութ)",
+          "example": "I took the jacket back to the shop.",
+          "example_hy": "Բաճկոնը հետ տարա խանութ։"
+        }
+      ]
+    },
+    {
+      "id": "put",
+      "number": 3,
+      "verb": "PUT",
+      "level": "A2–B1",
+      "voice": "en-GB-SoniaNeural",
+      "items": [
+        {
+          "en": "put on",
+          "hy": "հագնել",
+          "example": "Put on your coat. It's cold outside.",
+          "example_hy": "Հագիր վերարկուդ, դրսում ցուրտ է։"
+        },
+        {
+          "en": "put off",
+          "hy": "հետաձգել",
+          "example": "Don't put off your homework.",
+          "example_hy": "Տնային աշխատանքդ մի՛ հետաձգիր։"
+        },
+        {
+          "en": "put away",
+          "hy": "տեղը դնել",
+          "example": "Put your books away, please.",
+          "example_hy": "Գրքերդ տեղը դիր, խնդրում եմ։"
+        },
+        {
+          "en": "put up with",
+          "hy": "հանդուրժել",
+          "example": "I can't put up with this noise.",
+          "example_hy": "Ես չեմ կարող հանդուրժել այս աղմուկը։"
+        }
+      ]
+    },
+    {
+      "id": "look",
+      "number": 4,
+      "verb": "LOOK",
+      "level": "A2–B1",
+      "voice": "en-GB-RyanNeural",
+      "items": [
+        {
+          "en": "look for",
+          "hy": "փնտրել",
+          "example": "I'm looking for my keys.",
+          "example_hy": "Ես բանալիներս եմ փնտրում։"
+        },
+        {
+          "en": "look after",
+          "hy": "խնամել",
+          "example": "Grandma looks after the children.",
+          "example_hy": "Տատիկը խնամում է երեխաներին։"
+        },
+        {
+          "en": "look up",
+          "hy": "բառարանում նայել",
+          "example": "Look up the word in a dictionary.",
+          "example_hy": "Բառը բառարանում նայիր։"
+        },
+        {
+          "en": "look forward to",
+          "hy": "անհամբեր սպասել",
+          "example": "I'm looking forward to the holidays.",
+          "example_hy": "Անհամբեր սպասում եմ արձակուրդին։"
+        }
+      ]
+    },
+    {
+      "id": "turn",
+      "number": 5,
+      "verb": "TURN",
+      "level": "A2–B1",
+      "voice": "en-GB-SoniaNeural",
+      "items": [
+        {
+          "en": "turn on",
+          "hy": "միացնել",
+          "example": "Turn on the light, please.",
+          "example_hy": "Լույսը միացրու, խնդրում եմ։"
+        },
+        {
+          "en": "turn off",
+          "hy": "անջատել",
+          "example": "Turn off your phone in class.",
+          "example_hy": "Դասի ժամանակ հեռախոսդ անջատիր։"
+        },
+        {
+          "en": "turn up",
+          "hy": "ավելի բարձր դնել",
+          "example": "Can you turn up the music?",
+          "example_hy": "Կարո՞ղ ես երաժշտությունը բարձրացնել։"
+        },
+        {
+          "en": "turn down",
+          "hy": "մերժել",
+          "example": "She turned down the job offer.",
+          "example_hy": "Նա մերժեց աշխատանքի առաջարկը։"
+        }
+      ]
+    },
+    {
+      "id": "give",
+      "number": 6,
+      "verb": "GIVE",
+      "level": "A2–B1",
+      "voice": "en-GB-RyanNeural",
+      "items": [
+        {
+          "en": "give up",
+          "hy": "հրաժարվել, դադարել",
+          "example": "She gave up sugar for a month.",
+          "example_hy": "Նա մեկ ամսով հրաժարվեց շաքարից։"
+        },
+        {
+          "en": "give back",
+          "hy": "վերադարձնել",
+          "example": "Please give me back my pen.",
+          "example_hy": "Խնդրում եմ, գրիչս վերադարձրու։"
+        },
+        {
+          "en": "give away",
+          "hy": "նվիրել",
+          "example": "I gave away my old books.",
+          "example_hy": "Հին գրքերս նվիրեցի։"
+        },
+        {
+          "en": "give in",
+          "hy": "զիջել",
+          "example": "My parents finally gave in.",
+          "example_hy": "Ծնողներս վերջապես զիջեցին։"
+        }
+      ]
+    },
+    {
+      "id": "come",
+      "number": 7,
+      "verb": "COME",
+      "level": "A2–B1",
+      "voice": "en-GB-SoniaNeural",
+      "items": [
+        {
+          "en": "come in",
+          "hy": "ներս մտնել",
+          "example": "Come in and sit down.",
+          "example_hy": "Ներս եկեք և նստեք։"
+        },
+        {
+          "en": "come back",
+          "hy": "վերադառնալ",
+          "example": "Come back soon!",
+          "example_hy": "Շուտ վերադարձիր։"
+        },
+        {
+          "en": "come across",
+          "hy": "պատահաբար գտնել",
+          "example": "I came across an old photo.",
+          "example_hy": "Պատահաբար մի հին լուսանկար գտա։"
+        },
+        {
+          "en": "come up with",
+          "hy": "մտածել, հորինել",
+          "example": "She came up with a great idea.",
+          "example_hy": "Նա հիանալի միտք հղացավ։"
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "number": 8,
+      "verb": "GO",
+      "level": "A2–B1",
+      "voice": "en-GB-RyanNeural",
+      "items": [
+        {
+          "en": "go on",
+          "hy": "շարունակել",
+          "example": "Go on, I'm listening.",
+          "example_hy": "Շարունակիր, լսում եմ։"
+        },
+        {
+          "en": "go out",
+          "hy": "դուրս գալ (զբոսնելու)",
+          "example": "We often go out on Fridays.",
+          "example_hy": "Ուրբաթ օրերին հաճախ դուրս ենք գալիս։"
+        },
+        {
+          "en": "go back",
+          "hy": "վերադառնալ",
+          "example": "I want to go back to Dilijan.",
+          "example_hy": "Ուզում եմ վերադառնալ Դիլիջան։"
+        },
+        {
+          "en": "go off",
+          "hy": "զնգալ (զարթուցիչը)",
+          "example": "My alarm went off at six.",
+          "example_hy": "Զարթուցիչս զնգաց ժամը վեցին։"
+        }
+      ]
+    }
+  ]
+}

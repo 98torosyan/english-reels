@@ -34,6 +34,8 @@ def texts():
         for n, it in enumerate(c.get("items", [])):
             for k in ("en", "example"):
                 if it.get(k) and "___" not in it[k]: yield f"carousel:{c['id']}/{n}/{k}", clean(it[k])
+    for st in load("reels/data/phrasal.json")["sets"]:
+        for n, it in enumerate(st["items"]): yield f"phrasal:{st['id']}/{n}", it["example"]
     for l in load("reels/data/words10.json")["lists"]:
         yield f"words10:{l['id']}", ", ".join(w["en"] for w in l["words"]) + "."
 
