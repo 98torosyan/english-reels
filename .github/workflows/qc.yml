@@ -1,14 +1,25 @@
 name: English check
 on:
   push:
-    paths: ["reels/data/**", "qc/**"]
+    paths: ["reels/data/**", "stories/stories.json", "carousels/data/**", "qc/**"]
   workflow_dispatch:
 jobs:
   english:
     runs-on: ubuntu-latest
+    services:
+      languagetool:
+        image: erikvl87/languagetool:latest
+        ports: ["8010:8010"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python qc/check_english.py
+      - name: Wait for LanguageTool
+        run: for i in $(seq 1 60); do curl -sf "http://localhost:8010/v2/languages" >/dev/null && break; sleep 3; done
+      - name: Grammar and spelling (British English)
+        run: python qc/check_english.py
+        env:
+          LT_URL: http://localhost:8010/v2/check
+      - name: Pronunciation (IPA against Britfone)
+        run: python qc/check_ipa.py
