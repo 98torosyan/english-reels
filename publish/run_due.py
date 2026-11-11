@@ -40,7 +40,7 @@ def main() -> int:
         print(f"{now:%Y-%m-%d %H:%M} Yerevan: nothing due.")
         return 0
     code = 0
-    for item in items[:4]:
+    for item in items[:8]:
         content = {"kind": item["format"], "caption": item.get("caption", ""), **item["media"], **({"thumb_offset": item["thumb_offset"]} if item.get("thumb_offset") else {})}
         with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
             json.dump(content, f, ensure_ascii=False)
