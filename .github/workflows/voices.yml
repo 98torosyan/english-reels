@@ -2,7 +2,7 @@ name: Make voices
 on:
   push:
     branches: [main]
-    paths: ["assets/lessons/*.lesson.json", "reels/data/cards.json", "reels/data/sounds.json", "reels/data/dialogues.json", "stories/stories.json", "voices/**"]
+    paths: ["assets/lessons/*.lesson.json", "reels/data/cards.json", "reels/data/sounds.json", "reels/data/dialogues.json", "reels/data/words10.json", "stories/stories.json", "voices/**"]
   workflow_dispatch:
 permissions:
   contents: write
@@ -21,7 +21,7 @@ jobs:
       - run: python voices/make_voice.py
       - name: Save audio
         run: |
-          git add assets/lessons assets/cards assets/sounds assets/dialogues assets/stories
+          git add assets/lessons assets/cards assets/sounds assets/dialogues assets/stories assets/words10
           if ! git diff --cached --quiet; then
             git config user.name 98torosyan
             git config user.email 98torosyan@gmail.com

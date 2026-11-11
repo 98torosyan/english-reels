@@ -1,0 +1,26 @@
+{
+  "series": "10 words",
+  "note": "Ten everyday words on one theme. IPA is standard British (RP). Only the English word is voiced; the viewer repeats in the pause.",
+  "lists": [
+    {
+      "id": "airport",
+      "number": 1,
+      "theme": "At the airport",
+      "theme_hy": "Օդանավակայանում",
+      "level": "A2",
+      "voice": "en-GB-SoniaNeural",
+      "words": [
+        {"en": "passport", "ipa": "/ˈpɑːspɔːt/", "hy": "անձնագիր"},
+        {"en": "ticket", "ipa": "/ˈtɪkɪt/", "hy": "տոմս"},
+        {"en": "luggage", "ipa": "/ˈlʌɡɪdʒ/", "hy": "ուղեբեռ"},
+        {"en": "boarding pass", "ipa": "/ˈbɔːdɪŋ pɑːs/", "hy": "նստեցման կտրոն"},
+        {"en": "gate", "ipa": "/ɡeɪt/", "hy": "ելք (թռիչքի)"},
+        {"en": "flight", "ipa": "/flaɪt/", "hy": "չվերթ"},
+        {"en": "delay", "ipa": "/dɪˈleɪ/", "hy": "ուշացում"},
+        {"en": "departure", "ipa": "/dɪˈpɑːtʃə/", "hy": "մեկնում"},
+        {"en": "arrival", "ipa": "/əˈraɪvl/", "hy": "ժամանում"},
+        {"en": "customs", "ipa": "/ˈkʌstəmz/", "hy": "մաքսատուն"}
+      ]
+    }
+  ]
+}

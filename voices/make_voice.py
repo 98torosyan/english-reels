@@ -61,6 +61,7 @@ def main():
     made += voice_sounds()
     made += voice_dialogues()
     made += voice_stories()
+    made += voice_words10()
     print(f"{made} file(s) voiced.")
 
 
@@ -180,6 +181,25 @@ def voice_stories():
                 print(f"SKIPPED story {st['id']}/{key}: {error}"); mp3.unlink(missing_ok=True); continue
             start, end = (bounds[0][1], bounds[-1][2]) if bounds else (0.0, 0.0)
             tj.write_text(json.dumps({"text": text, "start": start, "end": end, "tag": voice}), encoding="utf-8"); made += 1
+    return made
+
+def voice_words10():
+    """10 words: each English word on its own, slow and clear."""
+    made = 0
+    root = LESSONS.parents[1]
+    data = json.loads((root / "reels/data/words10.json").read_text(encoding="utf-8"))
+    for lst in data["lists"]:
+        out = root / "assets" / "words10" / lst["id"]; out.mkdir(parents=True, exist_ok=True)
+        for n, w in enumerate(lst["words"]):
+            text = w["en"] + "."
+            mp3, tj = out / f"{n}.mp3", out / f"{n}.json"
+            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text: continue
+            try:
+                bounds = asyncio.run(synth(text, lst["voice"], "-15%", mp3))
+                words = align(text.split(), bounds)
+            except Exception as error:
+                print(f"SKIPPED words10 {lst['id']}/{n}: {error}"); mp3.unlink(missing_ok=True); continue
+            tj.write_text(json.dumps({"text": text, "words": words, "tag": lst["voice"]}), encoding="utf-8"); made += 1
     return made
 
 if __name__ == "__main__":
