@@ -360,7 +360,7 @@
     {
       "id": "2026-11-11-dialogue-directions",
       "date": "2026-11-11",
-      "time": "18:30",
+      "time": "15:45",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
@@ -376,43 +376,9 @@
       }
     },
     {
-      "id": "2026-11-11-story-p-2026-11-11",
-      "date": "2026-11-11",
-      "time": "18:30",
-      "timezone": "Asia/Yerevan",
-      "type": "STORY",
-      "format": "STORIES",
-      "kind": "story-image",
-      "content_id": "p-2026-11-11",
-      "title": "p-2026-11-11",
-      "caption": "",
-      "review_status": "staged",
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-11-stories/story-p-2026-11-11.mp4"
-      }
-    },
-    {
-      "id": "2026-11-11-story-zoo-part-2",
-      "date": "2026-11-11",
-      "time": "19:30",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "story",
-      "content_id": "zoo-part-2",
-      "title": "A Day at the Zoo",
-      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\n\nA Day at the Zoo · A1 reading\n\nԿարդա՛ և լսի՛ր պատմության 2-րդ մասը։ Հետո գնում ենք կապիկների մոտ։\nՕրինակ՝ “Next, we go to the monkeys.” — «Հետո գնում ենք կապիկների մոտ»։\n\nՇարունակությունը՝ շուտով։ Հետևի՛ր էջին, որ բաց չթողնես։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "thumb_offset": 4200,
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-11-story-zoo-part-2/story-zoo-part-2.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-11-story-zoo-part-2/cover.jpg"
-      }
-    },
-    {
       "id": "2026-11-11-dialogue-making-plans",
       "date": "2026-11-11",
-      "time": "21:30",
+      "time": "15:45",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
@@ -430,7 +396,7 @@
     {
       "id": "2026-11-11-story-dm-lessons",
       "date": "2026-11-11",
-      "time": "21:30",
+      "time": "15:45",
       "timezone": "Asia/Yerevan",
       "type": "STORY",
       "format": "STORIES",
@@ -441,6 +407,40 @@
       "review_status": "staged",
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/dm-lessons/story-dm-lessons.mp4"
+      }
+    },
+    {
+      "id": "2026-11-11-story-p-2026-11-11",
+      "date": "2026-11-11",
+      "time": "15:45",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-image",
+      "content_id": "p-2026-11-11",
+      "title": "p-2026-11-11",
+      "caption": "",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-11-stories/story-p-2026-11-11.mp4"
+      }
+    },
+    {
+      "id": "2026-11-11-story-zoo-part-2",
+      "date": "2026-11-11",
+      "time": "15:45",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "story",
+      "content_id": "zoo-part-2",
+      "title": "A Day at the Zoo",
+      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\n\nA Day at the Zoo · A1 reading\n\nԿարդա՛ և լսի՛ր պատմության 2-րդ մասը։ Հետո գնում ենք կապիկների մոտ։\nՕրինակ՝ “Next, we go to the monkeys.” — «Հետո գնում ենք կապիկների մոտ»։\n\nՇարունակությունը՝ շուտով։ Հետևի՛ր էջին, որ բաց չթողնես։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 4200,
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-11-story-zoo-part-2/story-zoo-part-2.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-11-story-zoo-part-2/cover.jpg"
       }
     },
     {
