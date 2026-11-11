@@ -139,3 +139,4 @@ h1 em{color:var(--c)!important}
 .h{color:var(--c)!important}
 #dots{top:auto!important;bottom:330px!important}
 #wave{top:auto!important;bottom:240px!important}
+.top img,.logo,.foot img,.outro img,#outroLogo,.save-panel img,.header img{box-shadow:0 0 0 2px #17183A1f!important;background:#FFFCF6}

@@ -51,7 +51,7 @@ function fontUrls(baseUrl) {
 
 function htmlAssets(html, baseUrl) {
   const fonts = fontUrls(baseUrl);
-  const logo = fs.readFileSync(path.join(ROOT, 'assets', 'icon.svg')).toString('base64');
+  const logo = fs.readFileSync(path.join(ROOT, 'assets', process.env.THEME === 'dark' ? 'icon.svg' : 'logo-ig.svg')).toString('base64');
   return html
     .replaceAll('__INTER_FONT__', fonts.inter)
     .replaceAll('__LITERATA_FONT__', fonts.literata)
