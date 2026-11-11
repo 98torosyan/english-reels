@@ -13,52 +13,62 @@
         {
           "en": "passport",
           "ipa": "/ˈpɑːspɔːt/",
-          "hy": "անձնագիր"
+          "hy": "անձնագիր",
+          "icon": "identification-card"
         },
         {
           "en": "ticket",
           "ipa": "/ˈtɪkɪt/",
-          "hy": "տոմս"
+          "hy": "տոմս",
+          "icon": "ticket"
         },
         {
           "en": "luggage",
           "ipa": "/ˈlʌɡɪdʒ/",
-          "hy": "ուղեբեռ"
+          "hy": "ուղեբեռ",
+          "icon": "suitcase-rolling"
         },
         {
           "en": "boarding pass",
           "ipa": "/ˈbɔːdɪŋ pɑːs/",
-          "hy": "նստեցման կտրոն"
+          "hy": "նստեցման կտրոն",
+          "icon": "barcode"
         },
         {
           "en": "gate",
           "ipa": "/ɡeɪt/",
-          "hy": "նստեցման ելք"
+          "hy": "նստեցման ելք",
+          "icon": "door-open"
         },
         {
           "en": "flight",
           "ipa": "/flaɪt/",
-          "hy": "չվերթ"
+          "hy": "չվերթ",
+          "icon": "airplane-in-flight"
         },
         {
           "en": "delay",
           "ipa": "/dɪˈleɪ/",
-          "hy": "ուշացում"
+          "hy": "ուշացում",
+          "icon": "clock-countdown"
         },
         {
           "en": "departure",
           "ipa": "/dɪˈpɑːtʃə/",
-          "hy": "մեկնում"
+          "hy": "մեկնում",
+          "icon": "airplane-takeoff"
         },
         {
           "en": "arrival",
           "ipa": "/əˈraɪvl/",
-          "hy": "ժամանում"
+          "hy": "ժամանում",
+          "icon": "airplane-landing"
         },
         {
           "en": "customs",
           "ipa": "/ˈkʌstəmz/",
-          "hy": "մաքսատուն"
+          "hy": "մաքսատուն",
+          "icon": "shield-check"
         }
       ]
     },

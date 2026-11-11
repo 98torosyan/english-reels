@@ -15,7 +15,10 @@ const FPS = 30;
 const r3 = (x) => Number(x.toFixed(3));
 // one accent per day, from the brand palette, so neighbouring posts never look the same
 const PALETTE = ['#B9790B', '#1C8AA3', '#B23F78', '#3E5FD9', '#2E9E6A', '#6A49E2'];
-const withColor = (list) => ({ ...list, color: PALETTE[(list.number - 1) % PALETTE.length] });
+const ICONS = path.join(utils.ROOT, 'node_modules/@phosphor-icons/core/assets/duotone');
+const iconSvg = (name) => (name ? fs.readFileSync(path.join(ICONS, `${name}-duotone.svg`), 'utf8') : null);
+const withColor = (list) => ({ ...list, color: PALETTE[(list.number - 1) % PALETTE.length],
+  words: list.words.map((w) => ({ ...w, svg: iconSvg(w.icon) })) });
 
 function clip(id, n, text) {
   const dir = path.join(utils.ROOT, 'assets', 'words10', id);
