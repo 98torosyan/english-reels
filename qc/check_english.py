@@ -11,10 +11,11 @@ ROOT = Path(__file__).resolve().parents[1]
 LT = os.environ.get("LT_URL", "https://api.languagetool.org/v2/check")
 PUBLIC = "api.languagetool.org" in LT
 IGNORE = {"WHITESPACE_RULE", "EN_QUOTES", "DASH_RULE", "UPPERCASE_SENTENCE_START", "PUNCTUATION_PARAGRAPH_END",
-          "COMMA_PARENTHESIS_WHITESPACE", "EN_UNPAIRED_BRACKETS", "SENTENCE_FRAGMENT", "I_LOWERCASE"}
-NAMES = {"gayane", "torosyan", "ufar", "yerevan", "armenia", "armenian", "ani", "aram", "lilit", "narek", "mane", "davit", "tigran", "anna", "sona", "hayk", "gor"}
+          "COMMA_PARENTHESIS_WHITESPACE", "EN_UNPAIRED_BRACKETS", "SENTENCE_FRAGMENT", "I_LOWERCASE",
+          "INTERJECTIONS_PUNCTUATION", "SERIAL_COMMA_ON", "PASSIVE_VOICE_SIMPLE"}  # style preferences, not errors
+NAMES = {"gayane", "torosyan", "ufar", "yerevan", "armenia", "armenian", "ani", "aram", "lilit", "narek", "mane", "davit", "tigran", "anna", "sona", "hayk", "gor", "sevan"}
 load = lambda p: json.loads((ROOT / p).read_text(encoding="utf-8"))
-clean = lambda s: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", s)).replace("___", "…").strip()
+clean = lambda s: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s)).replace("___", "…").strip()
 
 def texts():
     cards = load("reels/data/cards.json")
@@ -25,7 +26,10 @@ def texts():
         for n, l in enumerate(d["lines"]): yield f"dialogue:{d['id']}/{n}", l["en"]
     for s in load("reels/data/sounds.json")["sounds"]: yield f"sound:{s['id']}", s["sentence"]
     for st in load("stories/stories.json"):
-        if st.get("en"): yield f"story:{st['id']}", clean(st["en"])
+        for k, line in enumerate(re.split(r"<br\s*/?>", st.get("en") or "")):
+            line = clean(line)
+            if line and not line.startswith("Wrong") and "+" not in line and " / " not in line and not re.match(r"^[A-C]\)", line):
+                yield f"story:{st['id']}/{k}", line
     for c in load("carousels/data/lists.json") if isinstance(load("carousels/data/lists.json"), list) else load("carousels/data/lists.json").get("lists", []):
         for n, it in enumerate(c.get("items", [])):
             for k in ("en", "example"):
