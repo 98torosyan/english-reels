@@ -32,6 +32,8 @@
  .row .n{font:italic 600 32px Literata,serif;color:var(--soft)}
  .row .ic{display:flex;align-items:center;justify-content:center;width:62px;height:62px;color:var(--c)}
  .row .ic svg{width:56px;height:56px}
+ .row .ic img{width:70px;height:70px;object-fit:contain;filter:drop-shadow(0 6px 8px #3a2f1426)}
+ .row:has(.ic img){grid-template-columns:76px 1fr auto}
  .row .en{font:700 48px/1 Literata,serif;color:var(--ink);white-space:nowrap}
  .row .ipa{margin-left:16px;font:500 30px IPA,sans-serif;color:var(--c);white-space:nowrap}
  .row .hy{font:500 34px NotoArmenian,sans-serif;color:var(--muted);text-align:right;white-space:nowrap}
@@ -71,7 +73,7 @@
   level.textContent=data.level; const tw=data.theme.split(' '); theme.innerHTML=tw.length>1?tw.slice(0,-1).join(' ')+' <em>'+tw.at(-1)+'</em>':'<em>'+data.theme+'</em>';
   if(data.color) document.documentElement.style.setProperty('--c',data.color);
   if(data.story){document.body.classList.add('story');sayEn.textContent='LISTEN IN OUR REELS';sayHy.textContent='· Ձայնով՝ մեր Reels-ում';} themeHy.textContent=data.theme_hy;
-  list.innerHTML=data.words.map((w,i)=>`<div class="row" id="r${i}"><div class="bg"></div>${w.svg?`<span class="ic">${w.svg}</span>`:`<span class="n">${i+1}</span>`}<span><span class="en">${w.en}</span><span class="ipa">${w.ipa}</span></span><span class="hy">${w.hy}</span><div class="wv">${'<i></i>'.repeat(5)}</div></div>`).join('');
+  list.innerHTML=data.words.map((w,i)=>`<div class="row" id="r${i}"><div class="bg"></div>${w.img?`<span class="ic"><img src="${w.img}"></span>`:w.svg?`<span class="ic">${w.svg}</span>`:`<span class="n">${i+1}</span>`}<span><span class="en">${w.en}</span><span class="ipa">${w.ipa}</span></span><span class="hy">${w.hy}</span><div class="wv">${'<i></i>'.repeat(5)}</div></div>`).join('');
  };
  window.fit=()=>{document.querySelectorAll('.row').forEach(r=>{const en=r.querySelector('.en'),ip=r.querySelector('.ipa'),hy=r.querySelector('.hy');let f=48,g=30;
   while(ip.getBoundingClientRect().right>hy.getBoundingClientRect().left-28&&f>34){f-=2;g=Math.max(24,g-1);en.style.fontSize=f+'px';ip.style.fontSize=g+'px';}})};
