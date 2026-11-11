@@ -21,6 +21,11 @@
  .eyebrow span{font:700 24px Inter;letter-spacing:3px;padding:6px 20px;border-radius:99px}
  .title{position:absolute;top:322px;left:82px;right:82px}
  .title h1{font:700 96px/1.02 Literata,serif;letter-spacing:-2px}
+ .title h1 em{color:var(--c);font-style:italic}
+ .big10{position:absolute;right:90px;top:318px;font:italic 700 230px/1 Literata,serif;color:var(--c);opacity:.08;letter-spacing:-8px}
+ .cnt{font:italic 600 30px Literata,serif;letter-spacing:0;color:var(--muted);margin-left:8px}
+ body.story .progress,body.story .outro,body.story .header{display:none}
+ .row:nth-child(even):not(.on){background:#17183A05}
  .title .t-hy{margin-top:14px;font:500 38px NotoArmenian,sans-serif;color:var(--muted)}
  .list{position:absolute;top:548px;left:62px;right:62px}
  .row{position:relative;height:94px;display:grid;grid-template-columns:62px 1fr auto;align-items:center;column-gap:14px;padding:0 26px;border-bottom:1.5px solid var(--line);border-radius:18px}
@@ -49,9 +54,9 @@
 <body>
  <header class="header" id="hd"><img class="logo" src="__LOGO_DATA__" alt=""><div><div class="brand-name">Gayane Torosyan</div><div class="brand-sub">ENGLISH READING ROOM</div></div><div class="handle">@english.readingroom</div></header>
  <div class="eyebrow" id="eyebrow"><b id="series"></b><span id="level" class="chip"></span></div>
- <div class="title" id="title"><h1 id="theme"></h1><div class="t-hy" id="themeHy"></div></div>
+ <div class="big10" id="big10">10</div><div class="title" id="title"><h1 id="theme"></h1><div class="t-hy" id="themeHy"></div></div>
  <div class="list" id="list"></div>
- <div class="say" id="say">LISTEN AND REPEAT <em>· Լսի՛ր և կրկնի՛ր</em></div>
+ <div class="say" id="say"><span id="sayEn">LISTEN AND REPEAT</span> <em id="sayHy">· Լսի՛ր և կրկնի՛ր</em><span class="cnt" id="cnt"></span></div>
  <footer class="foot"><span>Save it · Share it</span><span class="handle">@english.readingroom</span></footer>
  <div class="progress"><i id="progress"></i></div>
  <section id="outro" class="outro"><img id="outroLogo" src="__LOGO_DATA__" alt=""><h2>Save it · <em>share it</em></h2><p>Պահի՛ր և ուղարկի՛ր ընկերոջդ</p><span class="save" id="saveChip">Save</span><span class="follow">Անհատական և խմբային դասեր · գրե՛ք Direct-ով</span><span class="signature">@ENGLISH.READINGROOM</span></section>
@@ -61,7 +66,9 @@
  let D=null,T=null;
  window.configure=(data,timeline)=>{D=data;T=timeline;
   series.textContent=`10 WORDS · ${String(data.number).padStart(2,'0')}`;
-  level.textContent=data.level; theme.textContent=data.theme; themeHy.textContent=data.theme_hy;
+  level.textContent=data.level; const tw=data.theme.split(' '); theme.innerHTML=tw.length>1?tw.slice(0,-1).join(' ')+' <em>'+tw.at(-1)+'</em>':'<em>'+data.theme+'</em>';
+  if(data.color) document.documentElement.style.setProperty('--c',data.color);
+  if(data.story){document.body.classList.add('story');sayEn.textContent='LISTEN IN OUR REELS';sayHy.textContent='· Ձայնով՝ մեր Reels-ում';} themeHy.textContent=data.theme_hy;
   list.innerHTML=data.words.map((w,i)=>`<div class="row" id="r${i}"><div class="bg"></div><span class="n">${i+1}</span><span><span class="en">${w.en}</span><span class="ipa">${w.ipa}</span></span><span class="hy">${w.hy}</span><div class="wv">${'<i></i>'.repeat(5)}</div></div>`).join('');
  };
  window.fit=()=>{document.querySelectorAll('.row').forEach(r=>{const en=r.querySelector('.en'),ip=r.querySelector('.ipa'),hy=r.querySelector('.hy');let f=48,g=30;
@@ -71,6 +78,8 @@
   const a=ease(clamp(t/.45)); eyebrow.style.opacity=a; eyebrow.style.transform=`translateX(${(1-a)*-30}px)`;
   const b=ease(clamp((t-.1)/.55)); title.style.opacity=b; title.style.transform=`translateY(${(1-b)*50}px)`;
   const s=ease(clamp((t-1.4)/.5)); say.style.opacity=s;
+  const g=ease(clamp((t-.2)/.9)); big10.style.opacity=.08*g; big10.style.transform=`translateY(${(1-g)*40}px)`;
+  const cur=T.rows.findIndex(p=>t>=p.at&&t<p.end); cnt.textContent=cur>=0?` ${cur+1}/10`:'';
   D.words.forEach((w,i)=>{const r=document.getElementById('r'+i);
    const e=clamp((t-.45-i*.09)/.5);
    const p=T.rows[i]; const on=t>=p.at&&t<p.end; const k=on?ease(clamp((t-p.at)/.25)):(t>=p.end?Math.max(0,1-clamp((t-p.end)/.3)):0);

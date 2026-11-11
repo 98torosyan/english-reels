@@ -13,6 +13,9 @@ const CHROME = process.env.CHROME_PATH || [
 ].find((candidate) => fs.existsSync(candidate));
 const FPS = 30;
 const r3 = (x) => Number(x.toFixed(3));
+// one accent per day, from the brand palette, so neighbouring posts never look the same
+const PALETTE = ['#B9790B', '#1C8AA3', '#B23F78', '#3E5FD9', '#2E9E6A', '#6A49E2'];
+const withColor = (list) => ({ ...list, color: PALETTE[(list.number - 1) % PALETTE.length] });
 
 function clip(id, n, text) {
   const dir = path.join(utils.ROOT, 'assets', 'words10', id);
@@ -53,7 +56,8 @@ function voiceTrack(T, out) {
   if (r.status !== 0) throw new Error(`Voice track failed: ${r.stderr}`);
 }
 
-async function renderWords10(browser, baseUrl, list) {
+async function renderWords10(browser, baseUrl, list0) {
+  const list = withColor(list0);
   const T = timeline(list);
   const name = `words10-${list.id}`;
   const output = utils.OUTPUT;
@@ -90,11 +94,19 @@ async function renderWords10(browser, baseUrl, list) {
   voiceTrack(T, voice);
   const sfx = [{ file: 'sfx-whoosh.wav', at: 0.25, gain: 0.3 }, ...T.rows.map((r) => ({ file: 'sfx-pop.wav', at: r.at, gain: 0.12 })),
     { file: 'sfx-whoosh.wav', at: T.total - 2.2, gain: 0.3 }];
+  // story image: the same list, still, pointing to the reel
+  const sp = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+  await utils.preparePage(sp, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
+  await sp.evaluate(({ d, t }) => { window.configure({ ...d, story: true }, t); window.seek(0); window.fit(); window.seek(1.9); }, { d: list, t: plain });
+  await sp.evaluate(() => document.fonts.ready);
+  const storyPath = path.join(output, `${name}-story.jpg`);
+  await sp.screenshot({ path: storyPath, type: 'jpeg', quality: 93 });
+  await sp.close();
   utils.encodeVideo(frames, voice, 0, T.total, videoPath, FPS, sfx);
   const info = utils.verifyVideo(videoPath);
   fs.rmSync(frames, { recursive: true, force: true });
   console.log(`Rendered ${videoPath}: ${JSON.stringify(info)}`);
-  return { videoPath, posterPath, info, thumbOffsetMs: 1900 };
+  return { videoPath, posterPath, storyPath, info, thumbOffsetMs: 1900 };
 }
 
 async function main() {
