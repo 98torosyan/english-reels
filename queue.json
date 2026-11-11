@@ -595,10 +595,11 @@
       "content_id": "hl-sounds-3",
       "title": "hl-sounds-3",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://raw.githubusercontent.com/98torosyan/english-reels-media/media/highlights/story-hl-sounds-3.jpg"
-      }
+      },
+      "published_at": "2026-11-12T01:28+04:00"
     },
     {
       "id": "2026-11-12-story-hl-grammar-1",
@@ -611,10 +612,11 @@
       "content_id": "hl-grammar-1",
       "title": "hl-grammar-1",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://raw.githubusercontent.com/98torosyan/english-reels-media/media/highlights/story-hl-grammar-1.jpg"
-      }
+      },
+      "published_at": "2026-11-12T01:28+04:00"
     },
     {
       "id": "2026-11-12-story-hl-grammar-2",
@@ -627,10 +629,11 @@
       "content_id": "hl-grammar-2",
       "title": "hl-grammar-2",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://raw.githubusercontent.com/98torosyan/english-reels-media/media/highlights/story-hl-grammar-2.jpg"
-      }
+      },
+      "published_at": "2026-11-12T01:28+04:00"
     },
     {
       "id": "2026-11-12-story-hl-grammar-3",
@@ -643,10 +646,11 @@
       "content_id": "hl-grammar-3",
       "title": "hl-grammar-3",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://raw.githubusercontent.com/98torosyan/english-reels-media/media/highlights/story-hl-grammar-3.jpg"
-      }
+      },
+      "published_at": "2026-11-12T01:28+04:00"
     },
     {
       "id": "2026-11-12-story-hl-speaking-1",
@@ -659,10 +663,11 @@
       "content_id": "hl-speaking-1",
       "title": "hl-speaking-1",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://raw.githubusercontent.com/98torosyan/english-reels-media/media/highlights/story-hl-speaking-1.jpg"
-      }
+      },
+      "published_at": "2026-11-12T01:28+04:00"
     },
     {
       "id": "2026-11-12-story-hl-speaking-2",
@@ -675,10 +680,11 @@
       "content_id": "hl-speaking-2",
       "title": "hl-speaking-2",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://raw.githubusercontent.com/98torosyan/english-reels-media/media/highlights/story-hl-speaking-2.jpg"
-      }
+      },
+      "published_at": "2026-11-12T01:28+04:00"
     },
     {
       "id": "2026-11-12-story-hl-speaking-3",
@@ -691,10 +697,11 @@
       "content_id": "hl-speaking-3",
       "title": "hl-speaking-3",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://raw.githubusercontent.com/98torosyan/english-reels-media/media/highlights/story-hl-speaking-3.jpg"
-      }
+      },
+      "published_at": "2026-11-12T01:28+04:00"
     },
     {
       "id": "2026-11-12-story-hl-words-1",
@@ -707,10 +714,11 @@
       "content_id": "hl-words-1",
       "title": "hl-words-1",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://raw.githubusercontent.com/98torosyan/english-reels-media/media/highlights/story-hl-words-1.jpg"
-      }
+      },
+      "published_at": "2026-11-12T01:28+04:00"
     },
     {
       "id": "2026-11-12-story-hl-words-2",
