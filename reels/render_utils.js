@@ -112,6 +112,9 @@ function pickMusic(outputPath) {
   return path.join(dir, tracks[h % tracks.length]);
 }
 
+// Broadcast-style voice polish: clean lows, less mud, clearer presence, soft de-essing, gentle compression.
+const VOICE_FX = 'highpass=f=80,equalizer=f=250:t=q:w=1:g=-2,equalizer=f=3200:t=q:w=1.2:g=2,equalizer=f=9000:t=q:w=1:g=1.5,deesser=i=0.35,acompressor=threshold=-21dB:ratio=2.5:attack=6:release=140:makeup=2.5';
+
 function encodeVideo(framesDirectory, audioPath, audioStart, duration, outputPath, fps = 30, sfx = [], voiceDelay = 0, voiceLen = 0) {
   const framePattern = path.join(framesDirectory, 'f%05d.jpg').replace(/\\/g, '/');
   const args = [
@@ -130,10 +133,10 @@ function encodeVideo(framesDirectory, audioPath, audioStart, duration, outputPat
     const fxChains = fx.map((e, i) => `[${3 + i}:a]aresample=48000,volume=${e.gain || 0.5},adelay=${Math.round(e.at * 1000)}|${Math.round(e.at * 1000)},apad[f${i}];`).join('');
     const fxLabels = fx.map((_, i) => `[f${i}]`).join('');
     args.push('-filter_complex',
-      `[1:a]aresample=48000,${voiceLen ? `atrim=0:${voiceLen.toFixed(3)},afade=t=out:st=${Math.max(0, voiceLen - 0.25).toFixed(3)}:d=0.25,` : ''}${voiceDelay ? `adelay=${Math.round(voiceDelay * 1000)}|${Math.round(voiceDelay * 1000)},` : ''}apad,volume=${voice},asplit=2[v][sc];` +
+      `[1:a]aresample=48000,${voiceLen ? `atrim=0:${voiceLen.toFixed(3)},afade=t=out:st=${Math.max(0, voiceLen - 0.25).toFixed(3)}:d=0.25,` : ''}${voiceDelay ? `adelay=${Math.round(voiceDelay * 1000)}|${Math.round(voiceDelay * 1000)},` : ''}${audioPath ? `${VOICE_FX},` : ''}apad,volume=${voice},asplit=2[v][sc];` +
       `[2:a]aresample=48000,volume=${audioPath ? 0.16 : 0.45},afade=t=in:d=0.8,afade=t=out:st=${fadeOut}:d=1.2[m];` +
       `[m][sc]sidechaincompress=threshold=0.02:ratio=5:attack=25:release=450[md];` + fxChains +
-      `[v][md]${fxLabels}amix=inputs=${2 + fx.length}:duration=first:normalize=0,alimiter=limit=0.95[a]`);
+      `[v][md]${fxLabels}amix=inputs=${2 + fx.length}:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000,alimiter=limit=0.95[a]`);
     args.push('-map', '0:v:0', '-map', '[a]');
   } else {
     args.push('-map', '0:v:0', '-map', '1:a:0', '-af', 'apad');
