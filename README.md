@@ -73,10 +73,12 @@ Real publishing remains off until the owner approves it explicitly.
 | 10 words (reel + story) | `reels/render_words10.js` | `reels/data/words10.json` | `publish/plan_words10.py` |
 | Phrasal verbs (reel + story, animated captions) | `reels/render_phrasal.js` | `reels/data/phrasal.json` | `publish/plan_phrasal.py` |
 | Weekly review (Sundays) | `reels/render_review.js` | `reels/data/reviews.json` | `publish/plan_review.py` |
+| Daily reading / Did you know? (illustrated story, read aloud) | `reels/render_reading.js` | `reels/data/reading.json` + `assets/reading/<id>.jpg` | `publish/plan_reading.py` |
 | Weekly PDF word book | `books/render_book.js` | `books/books.json` | copy the PDF to `english-reels-media/books/` |
 
 Quality gates: `qc/check_english.py` (LanguageTool, British English, run in CI with its own server),
 `qc/check_ipa.py` (Britfone), `qc/system_check.py --media-repo ../english-reels-media` before every push.
-Voices: edge-tts, plus Kokoro (`kokoro:bf_emma`) for the female voice in the new series.
+Voices: edge-tts, plus Kokoro British voices (`kokoro:bf_emma`, `bm_george`, `bm_lewis`, `bf_isabella`, `bm_fable`, `bf_alice`); reading stories rotate them and are read sentence by sentence at a slower pace.
+Illustrations for reading come from the owner (3:2, no text); crop to 1080×720 and soften any made-up lettering before use.
 Analytics: `analytics/insights.py` daily; Monday report opens a GitHub issue.
 Cross-posting: `publish/crosspost.py` (YouTube Shorts / Facebook Page) when the YT_* / FB_* secrets exist.
