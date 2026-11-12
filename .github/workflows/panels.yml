@@ -1,7 +1,7 @@
 name: Sharpen panels
 on:
   push:
-    paths: ["assets/picstory/*/src.png", "assets/storyvideo/*/src.png", "assets/routine/*/src.png", "tools/upscale_panels.py"]
+    paths: ["assets/picstory/*/src.png", "assets/storyvideo/*/src.png", "assets/routine/*/src.png", "assets/routine/*/photo", "tools/upscale_panels.py"]
   workflow_dispatch:
 permissions:
   contents: write
@@ -22,6 +22,7 @@ jobs:
           pip install -q spandrel pillow numpy
           mkdir -p weights
           curl -sSLf -o weights/RealESRGAN_x4plus_anime_6B.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth
+          curl -sSLf -o weights/RealESRGAN_x4plus.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth
       - name: Cut and sharpen
         run: python tools/upscale_panels.py --sharp
       - name: Save

@@ -105,9 +105,12 @@
   // backgrounds and pictures
   S.forEach((s,i)=>{const a=clamp((t-s.at)/.6), nx=i+1<n?clamp((t-S[i+1].at)/.6):0;
    const bg=document.getElementById('bg'+i); bg.style.opacity=(i===0&&t<S[0].at)?1:(a*(1-nx));
-   const sh=document.getElementById('s'+i); const vis=(i===0&&t<S[0].at)?ease(clamp(t/.6)):io(a); const nextIn=i===cur-1?clamp((t-S[cur].at)/.6):1; sh.style.opacity=i===cur?vis:(i===cur-1&&nextIn<1?1:0);   // the old picture stays under the new one while it slides in
-   const local=Math.max(0,t-s.at), dir=i%2?1:-1; const m=(i===0&&t<S[0].at)?1:io(a);
-   sh.style.transform=`translateX(${(1-m)*dir*70}px) scale(${1.06-0.04*m+0.03*clamp(local/(s.end-s.at))})`;});
+   const sh=document.getElementById('s'+i); const intro0=i===0&&t<S[0].at; const nextIn=i===cur-1?clamp((t-S[cur].at)/.7):1;
+   sh.style.opacity=i===cur?(intro0?ease(clamp(t/.6)):1):(i===cur-1&&nextIn<1?1:0);   // never see-through: the new picture covers the old one
+   const local=Math.max(0,t-s.at), dir=i%2?1:-1; const m=intro0?1:io(clamp((t-s.at)/.7));
+   const X=(1-m)*100, mc=io(clamp((t-S[cur].at)/.7)), Xc=(1-mc)*100, dc=cur%2?1:-1;
+   sh.style.clipPath=i===cur&&m<1?(dir>0?`inset(0 0 0 ${X}%)`:`inset(0 ${X}% 0 0)`):(i===cur-1&&mc<1?(dc>0?`inset(0 ${100-Xc}% 0 0)`:`inset(0 0 0 ${100-Xc}%)`):'none');
+   sh.style.transform=`translateX(${(1-m)*dir*40}px) scale(${1.05-0.03*m+0.03*clamp(local/(s.end-s.at))})`;});
   setScene(cur);
   const s=S[cur];
   // card in/out
