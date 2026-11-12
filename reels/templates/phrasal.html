@@ -65,6 +65,7 @@
  <footer class="foot"><span>Save it · Share it</span><span class="handle">@english.readingroom</span></footer>
  <div class="progress"><i id="progress"></i></div>
  <section id="outro" class="outro"><img id="outroLogo" src="__LOGO_DATA__" alt=""><h2>Save it · <em>share it</em></h2><p>Պահի՛ր և ուղարկի՛ր ընկերոջդ</p><span class="save" id="saveChip">Save</span><span class="follow">Անհատական և խմբային դասեր · գրե՛ք Direct-ով</span><span class="signature">@ENGLISH.READINGROOM</span></section>
+ <script src="__GSAP__/gsap.min.js"></script><script src="__GSAP__/SplitText.min.js"></script><script src="__GSAP__/../../../reels/templates/kinetic.js"></script>
  <script>
  const clamp=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-x,3);
  const back=x=>{const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
@@ -84,7 +85,7 @@
    let need=[...parts]; for(const x of spans.slice(v+1)){if(need.length&&bare(x)===need[0]){x.classList.add('key');need.shift();}}});
   if(data.story){document.body.classList.add('story');sayEn.textContent='LISTEN IN OUR REELS';sayHy.textContent='· Ձայնով՝ մեր Reels-ում';}
  };
- window.fit=()=>{document.querySelectorAll('.pc').forEach(c=>{const ex=c.querySelector('.ex');let f=38;while(ex.scrollHeight>52*1.0+2&&f>28){f-=1;ex.style.fontSize=f+'px';}
+ window.fit=()=>{if(window.K){K.init();K.title(theme,.1);}document.querySelectorAll('.pc').forEach(c=>{const ex=c.querySelector('.ex');let f=38;while(ex.scrollHeight>52*1.0+2&&f>28){f-=1;ex.style.fontSize=f+'px';}
    const ph=c.querySelector('.ph'),m=c.querySelector('.mean');let g=58;while(ph.getBoundingClientRect().right>m.getBoundingClientRect().left-16&&g>40){g-=2;ph.style.fontSize=g+'px';}})};
  window.seek=t=>{
   progress.style.width=(clamp(t/T.total)*100)+'%';
@@ -106,7 +107,7 @@
     s.style.transform=`scale(${1+.12*pop}) translateY(${-4*pop}px)`;});
   });
   const o=ease(clamp((t-(T.total-2.2))/.8)); outro.style.opacity=o; outro.style.transform=`scale(${1.03-.03*o})`;
-  const o2=clamp((t-(T.total-2.2))/.8); outroLogo.style.transform=`scale(${back(clamp(o2*1.4))})`; saveChip.style.transform=`scale(${back(clamp(o2*1.6-.3))})`;
+  if(window.K&&K.ok){K.seek(t);K.outro(t-(T.total-2.2));} else {const o2=clamp((t-(T.total-2.2))/.8); outroLogo.style.transform=`scale(${back(clamp(o2*1.4))})`; saveChip.style.transform=`scale(${back(clamp(o2*1.6-.3))})`;}
  };
  </script>
 </body>

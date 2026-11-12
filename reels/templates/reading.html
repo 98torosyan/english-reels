@@ -52,6 +52,7 @@
  <div class="story" id="story"></div>
  <div class="progress"><i id="progress"></i></div>
  <section id="outro" class="outro"><img id="outroLogo" src="__LOGO_DATA__" alt=""><h2>Read it <em>again</em></h2><p>Կարդա՛ բարձրաձայն և պահի՛ր</p><span class="save" id="saveChip">Save</span><span class="follow">Անհատական և խմբային դասեր · գրե՛ք Direct-ով</span><span class="signature">@ENGLISH.READINGROOM</span></section>
+ <script src="__GSAP__/gsap.min.js"></script><script src="__GSAP__/SplitText.min.js"></script><script src="__GSAP__/../../../reels/templates/kinetic.js"></script>
  <script>
  const clamp=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-x,3);
  const back=x=>{const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
@@ -62,7 +63,7 @@
   const tw=data.title.split(' '); theme.innerHTML=tw.length>1?tw.slice(0,-1).join(' ')+' <em>'+tw.at(-1)+'</em>':'<em>'+data.title+'</em>';
   story.innerHTML=data.en.split(' ').map((w,j)=>`<span data-j="${j}">${w}</span>`).join(' ');
  };
- window.fit=()=>{let f=43;while(story.getBoundingClientRect().bottom>1640&&f>32){f-=1;story.style.fontSize=f+'px';}};
+ window.fit=()=>{if(window.K){K.init();K.title(theme,.15);}let f=43;while(story.getBoundingClientRect().bottom>1640&&f>32){f-=1;story.style.fontSize=f+'px';}};
  window.seek=t=>{
   progress.style.width=(clamp(t/T.total)*100)+'%';
   pic.style.transform=`scale(${1.04+0.06*clamp(t/T.total)})`;
@@ -73,7 +74,7 @@
    s.style.background=now?'var(--c)':'transparent'; s.style.color=now?'#fff':''; s.style.opacity=now||done||t<T.start?1:.5;
    s.style.transform=pop?`translateY(${-3*pop}px) scale(${1+.06*pop})`:'';});
   const o=ease(clamp((t-(T.total-2.4))/.8)); outro.style.opacity=o; outro.style.transform=`scale(${1.03-.03*o})`;
-  const o2=clamp((t-(T.total-2.4))/.8); outroLogo.style.transform=`scale(${back(clamp(o2*1.4))})`; saveChip.style.transform=`scale(${back(clamp(o2*1.6-.3))})`;
+  if(window.K&&K.ok){K.seek(t);K.outro(t-(T.total-2.4));} else {const o2=clamp((t-(T.total-2.4))/.8); outroLogo.style.transform=`scale(${back(clamp(o2*1.4))})`; saveChip.style.transform=`scale(${back(clamp(o2*1.6-.3))})`;}
  };
  </script>
 </body>

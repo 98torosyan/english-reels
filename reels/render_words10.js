@@ -72,7 +72,8 @@ async function renderWords10(browser, baseUrl, list0) {
   const fonts = `${baseUrl}/node_modules/@fontsource-variable/inter/files`;
   const html = utils.paperTheme(utils.htmlAssets(fs.readFileSync(path.join(__dirname, 'templates', 'words10.html'), 'utf8'), baseUrl), 'vocabulary')
     .replaceAll('__INTER_EXT_FONT__', `${fonts}/inter-latin-ext-wght-normal.woff2`)
-    .replaceAll('__INTER_GREEK_FONT__', `${fonts}/inter-greek-wght-normal.woff2`);
+    .replaceAll('__INTER_GREEK_FONT__', `${fonts}/inter-greek-wght-normal.woff2`)
+    .replaceAll('__GSAP__', `${baseUrl}/node_modules/gsap/dist`);
   const htmlPath = path.join(work, 'words10.html');
   fs.writeFileSync(htmlPath, html, 'utf8');
   const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });

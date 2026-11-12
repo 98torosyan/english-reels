@@ -60,6 +60,7 @@
  <footer class="foot"><span>Save it · Share it</span><span class="handle">@english.readingroom</span></footer>
  <div class="progress"><i id="progress"></i></div>
  <section id="outro" class="outro"><img id="outroLogo" src="__LOGO_DATA__" alt=""><h2>How many <em>did you get?</em></h2><p>Գրի՛ր մեկնաբանություններում՝ քանի՞սը գուշակեցիր</p><span class="save" id="saveChip">Save</span><span class="follow">Անհատական և խմբային դասեր · գրե՛ք Direct-ով</span><span class="signature">@ENGLISH.READINGROOM</span></section>
+ <script src="__GSAP__/gsap.min.js"></script><script src="__GSAP__/SplitText.min.js"></script><script src="__GSAP__/../../../reels/templates/kinetic.js"></script>
  <script>
  const clamp=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-x,3);
  const back=x=>{const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
@@ -72,7 +73,7 @@
    <div class="ans"><div class="qen">${w.en}</div><div class="qipa">${w.ipa}</div></div></div>`).join('');
   dots.innerHTML=data.words.map(()=>'<i></i>').join('');
  };
- window.fit=()=>{document.querySelectorAll('.q').forEach(q=>{const en=q.querySelector('.qen');let f=110;while(en.scrollWidth>860&&f>60){f-=4;en.style.fontSize=f+'px';}
+ window.fit=()=>{if(window.K){K.init();K.title(document.querySelector('#title h1'),.1);}document.querySelectorAll('.q').forEach(q=>{const en=q.querySelector('.qen');let f=110;while(en.scrollWidth>860&&f>60){f-=4;en.style.fontSize=f+'px';}
   const hy=q.querySelector('.qhy');let g=92;while(hy.scrollHeight>230&&g>56){g-=4;hy.style.fontSize=g+'px';}})};
  window.seek=t=>{
   progress.style.width=(clamp(t/T.total)*100)+'%';
@@ -90,7 +91,7 @@
    const d=dots.children[i]; d.className=t>=p.end?'done':vis?'on':'';
   });
   const o=ease(clamp((t-(T.total-2.6))/.8)); outro.style.opacity=o; outro.style.transform=`scale(${1.03-.03*o})`;
-  const o2=clamp((t-(T.total-2.6))/.8); outroLogo.style.transform=`scale(${back(clamp(o2*1.4))})`; saveChip.style.transform=`scale(${back(clamp(o2*1.6-.3))})`;
+  if(window.K&&K.ok){K.seek(t);K.outro(t-(T.total-2.6));} else {const o2=clamp((t-(T.total-2.6))/.8); outroLogo.style.transform=`scale(${back(clamp(o2*1.4))})`; saveChip.style.transform=`scale(${back(clamp(o2*1.6-.3))})`;}
  };
  </script>
 </body>
