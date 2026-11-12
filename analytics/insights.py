@@ -15,7 +15,7 @@ TZ = ZoneInfo("Asia/Yerevan")
 API = f"https://graph.facebook.com/{os.environ.get('META_GRAPH_API_VERSION', 'v27.0')}"
 TOKEN, USER = os.environ.get("IG_TOKEN", ""), os.environ.get("IG_USER_ID", "")
 METRICS = {"REELS": "views,reach,saved,shares,total_interactions", "FEED": "views,reach,saved,shares,total_interactions"}
-SERIES = {"words10": "10 words", "phrasal": "Phrasal verbs", "review": "Weekly review", "dialogue": "Everyday English", "sound": "Sound it out",
+SERIES = {"reading": "Daily reading", "words10": "10 words", "phrasal": "Phrasal verbs", "review": "Weekly review", "dialogue": "Everyday English", "sound": "Sound it out",
           "story": "Story time", "rule": "Carousels", "mistake": "Common mistakes", "quiz": "Quiz", "word": "Word of the day"}
 
 

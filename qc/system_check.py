@@ -100,7 +100,13 @@ def main():
             for k, text in ((f"{n}p", it["en"] + "."), (f"{n}e", it["example"])):
                 tj = ROOT / "assets/phrasal" / st["id"] / f"{k}.json"
                 if not tj.exists() or json.loads(tj.read_text()).get("text") != text: fail(f"phrasal {st['id']}/{k}: voice missing or stale")
-    for f in [ROOT / "reels/data/dialogues.json", ROOT / "reels/data/sounds.json", ROOT / "carousels/data/lists.json", ROOT / "stories/stories.json",
+    for st in json.loads((ROOT / "reels/data/reading.json").read_text(encoding="utf-8"))["stories"]:
+        tj = ROOT / "assets/reading" / st["id"] / "p.json"
+        if not (ROOT / "assets/reading" / f"{st['id']}.jpg").exists(): fail(f"reading {st['id']}: picture missing")
+        if not tj.exists(): fail(f"reading {st['id']}: voice missing"); continue
+        j = json.loads(tj.read_text())
+        if j.get("text") != st["en"] or j.get("tag") != st["voice"] or len(j.get("words", [])) != len(st["en"].split()): fail(f"reading {st['id']}: voice stale")
+    for f in [ROOT / "reels/data/reading.json", ROOT / "reels/data/dialogues.json", ROOT / "reels/data/sounds.json", ROOT / "carousels/data/lists.json", ROOT / "stories/stories.json",
               ROOT / "reels/data/words10.json", ROOT / "reels/data/phrasal.json"]:
         txt = f.read_text(encoding="utf-8")
         if EMOJI.search(txt): fail(f"{f.name}: emoji in content")
