@@ -2,7 +2,7 @@
 
 An item is due when review_status == "staged", it has media URLs, it is not yet
 published, and its date/time (Asia/Yerevan) is in the past but less than
-MAX_LATE_HOURS ago. Publishes at most one item per run. DRY_RUN=1 sends nothing.
+MAX_LATE_HOURS ago. Publishes up to eight due items per run, oldest first. DRY_RUN=1 sends nothing.
 """
 import json, os, sys, tempfile
 from datetime import datetime, timedelta
@@ -45,6 +45,7 @@ def main() -> int:
         with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
             json.dump(content, f, ensure_ascii=False)
         print(f"Due: {item['id']} ({item['format']}).")
+        publish.LAST_MEDIA_ID = None
         try:
             rc = publish.run(Path(f.name), dry)
         except publish.PublishError as error:
@@ -52,6 +53,7 @@ def main() -> int:
         if rc == 0 and not dry:
             item["published_at"] = now.isoformat(timespec="minutes")
             item["review_status"] = "published"
+            if publish.LAST_MEDIA_ID: item["ig_media_id"] = publish.LAST_MEDIA_ID
             QUEUE.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         code = code or rc
     return code

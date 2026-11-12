@@ -14,6 +14,7 @@ from pathlib import Path
 
 API_VERSION = os.environ.get("META_GRAPH_API_VERSION", "v27.0")
 GRAPH_BASE = f"https://graph.facebook.com/{API_VERSION}"
+LAST_MEDIA_ID = None  # set after a real publish, so the queue can keep the media ID for analytics
 RETRY_DELAYS = (2, 4, 8)
 POLL_SECONDS = 10
 POLL_TIMEOUT = 600
@@ -183,6 +184,8 @@ def run(content_path: Path, dry_run: bool) -> int:
 
     response = client.request("POST", f"{user_id}/media_publish", {"creation_id": container_id})
     media_id = response.get("id")
+    global LAST_MEDIA_ID
+    LAST_MEDIA_ID = media_id
     print(f"Published successfully; Instagram media ID: {media_id}.")
     return 0
 
