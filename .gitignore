@@ -13,3 +13,4 @@ __pycache__/
 *.pyc
 weights/
 watchdog.md
+voice_report.md

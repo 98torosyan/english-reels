@@ -1,0 +1,43 @@
+name: Voice check
+# Listens to every voice clip and warns when the audio does not say its text. Report only: never touches publishing.
+on:
+  workflow_run:
+    workflows: ["Make voices"]
+    types: [completed]
+  schedule:
+    - cron: "17 2 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: voice-qc
+jobs:
+  listen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q "faster-whisper>=1.1"
+      - name: Listen
+        id: v
+        run: python qc/check_voice.py || echo "flag=1" >> "$GITHUB_OUTPUT"
+      - name: Save what was heard (so next time only new clips are checked)
+        run: |
+          git add qc/data/voice_heard.json
+          if ! git diff --cached --quiet; then
+            git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
+            git commit -m "Ձայնի ստուգում՝ քեշ"
+            for k in 1 2 3 4 5; do git pull --rebase && git push && break; sleep 7; done
+          fi
+      - name: Warn the owner
+        if: steps.v.outputs.flag == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "Ձայնի ստուգում · $(TZ=Asia/Yerevan date +%Y-%m-%d)" --body-file voice_report.md
