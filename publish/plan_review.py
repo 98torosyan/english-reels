@@ -15,7 +15,7 @@ def caption(r, w10):
     rows = "\n".join(f"{i}. {w10[lid]['words'][n]['hy']} → {w10[lid]['words'][n]['en']}" for i, (lid, n) in enumerate(r["picks"], 1))
     return ("Շաբաթվա կրկնություն · Weekly review\n\nՀիշո՞ւմ ես այս շաբաթվա բառերը։ Ասա՛ անգլերեն, մինչև պատասխանը կհայտնվի։\n\n"
             f"Պատասխանները՝\n{rows}\n\nԳրի՛ր մեկնաբանություններում՝ քանի՞սը գուշակեցիր 6-ից։\n\n"
-            "Անհատական և խմբային դասերի համար գրե՛ք Direct-ով։\n\n"
+            "Անհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n"
             "#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishVocabulary #Yerevan")
 
 

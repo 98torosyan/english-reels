@@ -27,14 +27,23 @@ async def synth(text, voice, rate, mp3):
     return bounds
 
 def align(tokens, bounds):
-    out, j = [], 0
+    """Word timings for each token. Works at character level, so a boundary that covers several
+    tokens (e.g. "fifteen green street" read as one chunk) is split in proportion to their length."""
+    chars = []  # (start, end) for every normalised character, in order
+    for w, bs, be in bounds:
+        n = norm(w)
+        for k in range(len(n)):
+            chars.append((bs + (be - bs) * k / len(n), bs + (be - bs) * (k + 1) / len(n)))
+    total = "".join(norm(w) for w, _, _ in bounds)
+    out, pos = [], 0
     for tok in tokens:
-        target, got, s, e = norm(tok), "", None, None
-        while j < len(bounds) and len(got) < len(target):
-            w, bs, be = bounds[j]; got += norm(w); s = bs if s is None else s; e = be; j += 1
-        if got != target or s is None:
-            raise ValueError(f"alignment failed at token {tok!r} (got {got!r})")
-        out.append([round(s, 2), round(e, 2)])
+        target = norm(tok)
+        if not target:
+            out.append(out[-1] if out else [0.0, 0.0]); continue
+        if total[pos:pos + len(target)] != target:
+            raise ValueError(f"alignment failed at token {tok!r} (got {total[pos:pos + len(target) + 10]!r})")
+        s0, e0 = chars[pos][0], chars[pos + len(target) - 1][1]
+        out.append([round(s0, 2), round(e0, 2)]); pos += len(target)
     return out
 
 def envelope(mp3, hop=0.05):
