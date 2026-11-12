@@ -1,0 +1,116 @@
+[
+ {
+  "file": "edge-Libby.mp3",
+  "engine": "Microsoft",
+  "name": "Libby",
+  "gender": "Female"
+ },
+ {
+  "file": "edge-Maisie.mp3",
+  "engine": "Microsoft",
+  "name": "Maisie",
+  "gender": "Female"
+ },
+ {
+  "file": "edge-Ryan.mp3",
+  "engine": "Microsoft",
+  "name": "Ryan",
+  "gender": "Male"
+ },
+ {
+  "file": "edge-Sonia.mp3",
+  "engine": "Microsoft",
+  "name": "Sonia",
+  "gender": "Female"
+ },
+ {
+  "file": "edge-Thomas.mp3",
+  "engine": "Microsoft",
+  "name": "Thomas",
+  "gender": "Male"
+ },
+ {
+  "file": "piper-cori.mp3",
+  "engine": "Piper",
+  "name": "Cori",
+  "gender": ""
+ },
+ {
+  "file": "piper-jenny_dioco.mp3",
+  "engine": "Piper",
+  "name": "Jenny Dioco",
+  "gender": ""
+ },
+ {
+  "file": "piper-alba.mp3",
+  "engine": "Piper",
+  "name": "Alba",
+  "gender": ""
+ },
+ {
+  "file": "piper-alan.mp3",
+  "engine": "Piper",
+  "name": "Alan",
+  "gender": ""
+ },
+ {
+  "file": "piper-northern_english_male.mp3",
+  "engine": "Piper",
+  "name": "Northern English Male",
+  "gender": ""
+ },
+ {
+  "file": "piper-southern_english_female.mp3",
+  "engine": "Piper",
+  "name": "Southern English Female",
+  "gender": ""
+ },
+ {
+  "file": "kokoro-bf_emma.mp3",
+  "engine": "Kokoro",
+  "name": "Emma",
+  "gender": "Female"
+ },
+ {
+  "file": "kokoro-bf_isabella.mp3",
+  "engine": "Kokoro",
+  "name": "Isabella",
+  "gender": "Female"
+ },
+ {
+  "file": "kokoro-bf_alice.mp3",
+  "engine": "Kokoro",
+  "name": "Alice",
+  "gender": "Female"
+ },
+ {
+  "file": "kokoro-bf_lily.mp3",
+  "engine": "Kokoro",
+  "name": "Lily",
+  "gender": "Female"
+ },
+ {
+  "file": "kokoro-bm_george.mp3",
+  "engine": "Kokoro",
+  "name": "George",
+  "gender": "Male"
+ },
+ {
+  "file": "kokoro-bm_fable.mp3",
+  "engine": "Kokoro",
+  "name": "Fable",
+  "gender": "Male"
+ },
+ {
+  "file": "kokoro-bm_lewis.mp3",
+  "engine": "Kokoro",
+  "name": "Lewis",
+  "gender": "Male"
+ },
+ {
+  "file": "kokoro-bm_daniel.mp3",
+  "engine": "Kokoro",
+  "name": "Daniel",
+  "gender": "Male"
+ }
+]
