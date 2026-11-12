@@ -65,3 +65,18 @@ Real publishing remains off until the owner approves it explicitly.
 3. `python publish/stage_media.py --media-repo ../english-reels-media` → renders approved items, copies media to the public media repo, fills `media` URLs (`staged`).
 4. Commit + push both repositories.
 5. `publish.yml` runs at 13:07 and 19:07 Yerevan and publishes the one item that is due. It publishes for real only while the file `publish/ENABLED` exists — delete it to pause everything.
+
+## Series added in November 2026
+
+| Series | Renderer | Data | Schedule script |
+|---|---|---|---|
+| 10 words (reel + story) | `reels/render_words10.js` | `reels/data/words10.json` | `publish/plan_words10.py` |
+| Phrasal verbs (reel + story, animated captions) | `reels/render_phrasal.js` | `reels/data/phrasal.json` | `publish/plan_phrasal.py` |
+| Weekly review (Sundays) | `reels/render_review.js` | `reels/data/reviews.json` | `publish/plan_review.py` |
+| Weekly PDF word book | `books/render_book.js` | `books/books.json` | copy the PDF to `english-reels-media/books/` |
+
+Quality gates: `qc/check_english.py` (LanguageTool, British English, run in CI with its own server),
+`qc/check_ipa.py` (Britfone), `qc/system_check.py --media-repo ../english-reels-media` before every push.
+Voices: edge-tts, plus Kokoro (`kokoro:bf_emma`) for the female voice in the new series.
+Analytics: `analytics/insights.py` daily; Monday report opens a GitHub issue.
+Cross-posting: `publish/crosspost.py` (YouTube Shorts / Facebook Page) when the YT_* / FB_* secrets exist.
