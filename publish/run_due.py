@@ -11,6 +11,7 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import publish  # noqa: E402
+import crosspost  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "queue.json"
@@ -54,6 +55,7 @@ def main() -> int:
             item["published_at"] = now.isoformat(timespec="minutes")
             item["review_status"] = "published"
             if publish.LAST_MEDIA_ID: item["ig_media_id"] = publish.LAST_MEDIA_ID
+            item.update(crosspost.run(item))
             QUEUE.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         code = code or rc
     return code
