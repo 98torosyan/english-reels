@@ -76,6 +76,7 @@ def main() -> int:
         item["review_status"] = "staged"
         staged += 1
         print(f"staged {item['id']}: {len(urls)} file(s)")
+        QUEUE.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")  # save as we go
     QUEUE.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"{staged} item(s) staged. Commit and push both repositories.")
     return 0
