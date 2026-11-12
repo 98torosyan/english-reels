@@ -1,7 +1,7 @@
 """Watchdog: list every staged item that should already be on Instagram but is not.
 Exit code 1 (and a short Armenian report in watchdog.md) when something is more than 40 minutes late,
 so the workflow can open an issue — GitHub then e-mails the owner."""
-import datetime as dt, json, os, sys, urllib.parse, urllib.request
+import datetime as dt, json, os, sys, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -32,8 +32,18 @@ def token_warning(days=10):
         req = urllib.request.Request(url, headers={"Authorization": f"Bearer {tok}"})
         with urllib.request.urlopen(req, timeout=30) as r:
             d = json.loads(r.read().decode()).get("data", {})
-    except Exception as e:   # the check itself must never break anything
-        print("token check skipped:", type(e).__name__); return ""
+    except Exception as e:   # some token types cannot call debug_token: fall back to a plain validity check
+        print("debug_token unavailable:", type(e).__name__, getattr(e, "code", ""))
+        try:
+            req = urllib.request.Request(f"https://graph.facebook.com/{ver}/me?fields=id", headers={"Authorization": f"Bearer {tok}"})
+            with urllib.request.urlopen(req, timeout=30):
+                print("token ok (valid)"); return ""
+        except urllib.error.HTTPError as h:
+            if h.code in (400, 401, 403):
+                return "Instagram token-ը **այլևս չի աշխատում**։ Հրապարակումները կանգնած են, պետք է նոր token։"
+            return ""
+        except Exception:
+            return ""
     if not d.get("is_valid", True):
         return "Instagram token-ը **անվավեր է**։ Հրապարակումները կանգնած են, պետք է նոր token։"
     now = dt.datetime.now(dt.timezone.utc).timestamp(); out = []
