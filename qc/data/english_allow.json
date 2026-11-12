@@ -1,0 +1,4 @@
+{
+  "note": "Sentences checked by hand where LanguageTool is wrong (usually because it does not know a name). Key: rule id, value: exact sentences.",
+  "AGREEMENT_SENT_START": ["Ani is going to school, and Aram is going to nursery."]
+}

@@ -14,6 +14,7 @@ IGNORE = {"WHITESPACE_RULE", "EN_QUOTES", "DASH_RULE", "UPPERCASE_SENTENCE_START
           "COMMA_PARENTHESIS_WHITESPACE", "EN_UNPAIRED_BRACKETS", "SENTENCE_FRAGMENT", "I_LOWERCASE",
           "INTERJECTIONS_PUNCTUATION", "SERIAL_COMMA_ON", "PASSIVE_VOICE_SIMPLE"}  # style preferences, not errors
 NAMES = {"gayane", "torosyan", "ufar", "yerevan", "armenia", "armenian", "ani", "aram", "lilit", "narek", "mane", "davit", "tigran", "anna", "sona", "hayk", "gor", "sevan", "dilijan", "gata", "toto", "lavash"}
+ALLOW = json.loads((ROOT / "qc/data/english_allow.json").read_text(encoding="utf-8"))
 load = lambda p: json.loads((ROOT / p).read_text(encoding="utf-8"))
 clean = lambda s: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s)).replace("___", "…").strip()
 
@@ -46,7 +47,7 @@ def check(text):
     for attempt in range(4):
         try:
             with urllib.request.urlopen(urllib.request.Request(LT, data=data), timeout=60) as r:
-                return [m for m in json.load(r)["matches"] if m["rule"]["id"] not in IGNORE
+                return [m for m in json.load(r)["matches"] if m["rule"]["id"] not in IGNORE and text not in ALLOW.get(m["rule"]["id"], [])
                         and text[m["offset"]:m["offset"] + m["length"]].lower() not in NAMES]
         except Exception:
             time.sleep(5 * (attempt + 1))
