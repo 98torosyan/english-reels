@@ -32,7 +32,7 @@ def render(item: dict) -> list[Path]:
         args, name = ["story", m.group(1), m.group(2)], f"story-{cid}"
     elif kind in {"mistake", "quiz", "word"}:
         args, name = [kind, cid], f"{kind}-{cid}"
-    elif kind in {"sound", "dialogue", "words10", "phrasal", "review", "reading"}:
+    elif kind in {"sound", "dialogue", "words10", "phrasal", "review", "reading", "storyvideo"}:
         subprocess.run(["node", f"reels/render_{kind}.js", cid], cwd=ROOT, check=True, env=music_env(item))
         return [OUTPUT / f"{kind}-{cid}.mp4"]
     elif kind == "rule":
