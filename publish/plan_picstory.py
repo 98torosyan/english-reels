@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "queue.json"
 OUT = (ROOT / ".." / ".." / "outputs" / "english-reels-samples").resolve()
 BASE = "https://98torosyan.github.io/english-reels-media"
-AT = "16:30"
+AT, STORY_AT = "16:30", "16:50"
 
 
 def caption(st):
@@ -41,11 +41,18 @@ def main():
         iid = f"{day}-picstory-{st['id']}"; folder = media / iid
         if folder.exists(): shutil.rmtree(folder)
         shutil.copytree(OUT / f"picstory-{st['id']}", folder)
-        slides = sorted(p.name for p in folder.glob("*.jpg"))
+        slides = sorted(p.name for p in folder.glob("[0-9][0-9].jpg"))
         new.append({"id": iid, "date": day, "time": AT, "timezone": "Asia/Yerevan", "type": "CAROUSEL", "format": "CAROUSEL", "kind": "picstory",
                     "content_id": st["id"], "title": f"Picture story {st['number']:02d}", "caption": caption(st), "review_status": "staged",
                     "media": {"slides": [f"{BASE}/{iid}/{s}" for s in slides], "alt_texts": alt_texts(st)}})
-        print("scheduled", day, st["id"], len(slides), "slides")
+        # a story the same afternoon sends story viewers to the new carousel
+        sid = f"{day}-story-picstory-{st['id']}"; sfolder = media / sid; sfolder.mkdir(exist_ok=True)
+        if (folder / "story.jpg").exists():
+            shutil.move(str(folder / "story.jpg"), sfolder / "story.jpg")
+        new.append({"id": sid, "date": day, "time": STORY_AT, "timezone": "Asia/Yerevan", "type": "STORY", "format": "STORIES",
+                    "kind": "story-image", "content_id": f"picstory-{st['id']}", "title": f"Picture story {st['number']:02d} story", "caption": "",
+                    "review_status": "staged", "media": {"image_url": f"{BASE}/{sid}/story.jpg"}})
+        print("scheduled", day, st["id"], len(slides), "slides + story")
     subprocess.run(["git", "pull", "-q", "--rebase", "--autostash"], cwd=ROOT, check=False)
     q = json.loads(QUEUE.read_text(encoding="utf-8")); ids = {i["id"] for i in new}
     q["items"] = [i for i in q["items"] if i["id"] not in ids] + new

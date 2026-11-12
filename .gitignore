@@ -12,3 +12,4 @@ review/index.html
 __pycache__/
 *.pyc
 weights/
+watchdog.md

@@ -33,6 +33,10 @@ body:after{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;backgro
 .en{font:500 50px/1.3 Lit;color:var(--ink)}
 .hy{font:500 31px/1.45 Arm;color:var(--muted)}
 .foot{position:absolute;left:64px;right:64px;bottom:40px;display:flex;justify-content:space-between;font:700 21px Inter;color:var(--soft)}.foot b{color:var(--c)}
+mark{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--c) 28%,transparent) 62%);color:inherit;padding:0 2px}
+.wcs{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+.wc{display:inline-flex;align-items:baseline;gap:14px;padding:12px 24px;border-radius:18px;background:var(--card);border:2px solid var(--c);box-shadow:0 10px 24px #3a2f1414}
+.wc b{font:700 34px Lit}.wc i{font:500 25px IPA;font-style:normal;color:var(--c)}.wc span{font:500 27px Arm;color:var(--muted)}
 .swipe{display:inline-flex;align-items:center;gap:12px;background:var(--c);color:#fff;font:800 24px Inter;letter-spacing:3px;padding:16px 30px;border-radius:99px}
 </style></head><body>${body}</body></html>`;
 }
@@ -40,6 +44,19 @@ body:after{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;backgro
 const LOGO = () => `data:image/svg+xml;base64,${fs.readFileSync(path.join(utils.ROOT, 'assets/logo-ig.svg')).toString('base64')}`;
 const pill = () => `<div class="pill"><img src="${LOGO()}"><div><b>Gayane Torosyan</b><span>@ENGLISH.READINGROOM</span></div></div>`;
 const foot = (n, total) => `<div class="foot"><span>Gayane Torosyan · English Reading Room</span><b>${n} / ${total}</b></div>`;
+
+// New words are highlighted in the sentence; the first time a word appears, its card (IPA + Armenian) sits under the text.
+function marked(st, en, seen) {
+  let html = esc(en).replace(/(^|[\s(])'/g, '$1‘').replace(/'/g, '’'); const cards = [];
+  for (const w of st.words) {
+    const re = new RegExp(`\\b(${w.en.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})(s|es|ed|d)?\\b`, 'i');
+    if (!re.test(html)) continue;
+    html = html.replace(new RegExp(re.source, 'gi'), (m) => `<mark>${m}</mark>`);
+    if (!seen.has(w.en)) { seen.add(w.en); cards.push(w); }
+  }
+  return { html, cards };
+}
+const wordCard = (w) => `<div class="wc"><b>${esc(w.en)}</b><i>${esc(w.ipa)}</i><span>${esc(w.hy)}</span></div>`;
 
 function slides(st) {
   const total = st.scenes.length + 2;
@@ -53,11 +70,14 @@ function slides(st) {
       <div class="hy" style="margin-top:14px">${esc(st.title_hy)} · կարդա՛ անգլերեն, հայերենը՝ օգնության համար</div>
       <div style="margin-top:34px" class="swipe">SWIPE <span style="font-size:30px">→</span></div>
     </div>${foot(1, total)}`);
+  const seen = new Set();
   st.scenes.forEach((en, i) => {
+    const m = marked(st, en, seen);
     out.push(`<div class="pic" style="height:900px"><img src="${img(st.id, i + 1)}" style="object-position:50% 40%"></div>${pill()}
       <div style="position:absolute;left:64px;right:64px;top:860px">
-        <div class="en" data-fit>${esc(en)}</div>
+        <div class="en" data-fit>${m.html}</div>
         <div class="hy" style="margin-top:22px">${esc(st.scenes_hy[i])}</div>
+        ${m.cards.length ? `<div class="wcs">${m.cards.map(wordCard).join('')}</div>` : ''}
       </div>${foot(i + 2, total)}`);
   });
   out.push(`${pill()}<div style="position:absolute;left:64px;right:64px;top:128px">
@@ -74,6 +94,29 @@ function slides(st) {
       <div class="hy" style="margin-top:26px;color:var(--ink);font-weight:700;font-size:28px">Պահի՛ր և ուղարկի՛ր ընկերոջդ · Անհատական և խմբային դասեր՝ գրե՛ք Direct-ով</div>
     </div>${foot(total, total)}`);
   return out;
+}
+
+// Story that announces the new carousel: blurred picture behind, the cover card in front.
+function storyPage(st, baseUrl) {
+  const c = PALETTE[(st.number - 1) % PALETTE.length]; const f = utils.fontUrls(baseUrl);
+  const cover = `data:image/jpeg;base64,${fs.readFileSync(path.join(utils.OUTPUT, `picstory-${st.id}`, '01.jpg')).toString('base64')}`;
+  return `<!doctype html><html><head><meta charset="utf-8"><link rel="icon" href="data:,"><style>
+@font-face{font-family:Lit;src:url(${f.literata})}@font-face{font-family:Inter;src:url(${f.inter})}@font-face{font-family:Arm;src:url(${f.armenian})}
+*{margin:0;box-sizing:border-box}html,body{width:1080px;height:1920px;overflow:hidden;background:#17183A}
+.bg{position:absolute;inset:-60px;background:url(${img(st.id, 1)}) center/cover;filter:blur(38px) brightness(.62) saturate(1.2)}
+.k{position:absolute;top:190px;left:0;right:0;text-align:center;font:800 30px Inter;letter-spacing:8px;color:#fff}
+.k i{display:block;margin-top:14px;font:500 36px Arm;letter-spacing:0;font-style:normal;color:#ffffffcc}
+.card{position:absolute;left:110px;top:360px;width:860px;height:1075px;border-radius:44px;overflow:hidden;box-shadow:0 50px 110px #0009;transform:rotate(-2deg);border:10px solid #FFFCF6}
+.card img{width:100%;height:100%;object-fit:cover}
+.go{position:absolute;left:0;right:0;top:1545px;text-align:center}
+.go b{display:inline-block;background:${c};color:#fff;font:800 36px Inter;letter-spacing:3px;padding:24px 50px;border-radius:99px;box-shadow:0 20px 50px #0006}
+.go span{display:block;margin-top:26px;font:600 34px Arm;color:#fff}
+.h{position:absolute;bottom:120px;left:0;right:0;text-align:center;font:800 26px Inter;letter-spacing:5px;color:#ffffffb3}
+</style></head><body><div class="bg"></div>
+<div class="k">NEW PICTURE STORY<i>Նոր պատմություն նկարներով</i></div>
+<div class="card"><img src="${cover}"></div>
+<div class="go"><b>READ IT ON OUR PAGE →</b><span>Կարդա՛ անգլերեն՝ մեր էջում</span></div>
+<div class="h">@ENGLISH.READINGROOM</div></body></html>`;
 }
 
 async function main() {
@@ -93,13 +136,21 @@ async function main() {
       const bad = await p.evaluate(() => {
         for (const el of document.querySelectorAll('[data-fit]')) { let s = 50; while (el.scrollHeight > 200 && s > 38) { s -= 2; el.style.fontSize = `${s}px`; } }
         const foot = document.querySelector('.foot').getBoundingClientRect().top;
-        return [...document.querySelectorAll('.en,.hy,.k,.swipe')].filter((e) => e.getBoundingClientRect().bottom > foot - 6 || e.getBoundingClientRect().right > 1030).map((e) => e.textContent.slice(0, 40));
+        return [...document.querySelectorAll('.en,.hy,.k,.swipe,.wc')].filter((e) => e.getBoundingClientRect().bottom > foot - 6 || e.getBoundingClientRect().right > 1030).map((e) => e.textContent.slice(0, 40));
       });
       if (errors.length || bad.length) throw new Error(`slide ${i + 1}: ${errors.join(' | ')} ${JSON.stringify(bad)}`);
       await p.screenshot({ path: path.join(out, `${String(i + 1).padStart(2, '0')}.jpg`), type: 'jpeg', quality: 92 });
       await p.close();
     }
-    console.log(`${st.id}: ${list.length} slides → ${out}`);
+    const sp = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
+    const sw = path.join(utils.ROOT, '.render-work', 'picstory-story.html');
+    fs.writeFileSync(sw, storyPage(st, baseUrl));
+    const se = await utils.preparePage(sp, `${baseUrl}${utils.renderHtmlPath(sw)}`, 1080, 1920);
+    await sp.evaluate(() => document.fonts.ready);
+    if (se.length) throw new Error(`story: ${se.join(' | ')}`);
+    await sp.screenshot({ path: path.join(out, 'story.jpg'), type: 'jpeg', quality: 93 });
+    await sp.close();
+    console.log(`${st.id}: ${list.length} slides + story → ${out}`);
   } finally { await browser.close(); server.close(); }
 }
 main().catch((e) => { console.error(e.stack || e.message); process.exitCode = 1; });
