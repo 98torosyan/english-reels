@@ -5,7 +5,7 @@ For every assets/lessons/<id>.lesson.json without <id>.mp3 it writes:
   <id>.json  {start, end, starts, tag, words:[[s,e],…], env, hop} — same format as the site.
 Words are matched to the whitespace-separated tokens of the lesson text, so karaoke highlighting works.
 """
-import asyncio, json, re, subprocess, sys
+import asyncio, json, re, subprocess
 from pathlib import Path
 import edge_tts
 

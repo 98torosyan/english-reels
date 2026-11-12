@@ -1,6 +1,6 @@
 """Weekly review: render each Sunday recap, copy it to the public repo and schedule it (reel only, 12:00 Asia/Yerevan, on its own date).
 Usage: python publish/plan_review.py --media-repo ../english-reels-media [--only id ...]"""
-import argparse, datetime as dt, json, os, shutil, subprocess
+import argparse, json, os, shutil, subprocess
 from pathlib import Path
 from PIL import Image
 
