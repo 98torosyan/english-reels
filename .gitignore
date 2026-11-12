@@ -11,3 +11,4 @@ exports/
 review/index.html
 __pycache__/
 *.pyc
+weights/

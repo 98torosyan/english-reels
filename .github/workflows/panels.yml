@@ -1,0 +1,32 @@
+name: Sharpen panels
+on:
+  push:
+    paths: ["assets/picstory/*/src.png", "assets/storyvideo/*/src.png", "tools/upscale_panels.py"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: panels
+jobs:
+  sharpen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Real-ESRGAN (CPU)
+        run: |
+          pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          pip install -q "git+https://github.com/ai-forever/Real-ESRGAN.git" pillow numpy
+      - name: Cut and sharpen
+        run: mkdir -p weights && python tools/upscale_panels.py --sharp
+      - name: Save
+        run: |
+          git add assets/picstory assets/storyvideo
+          if ! git diff --cached --quiet; then
+            git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
+            git commit -m "Կադրեր՝ սրված (Real-ESRGAN)"
+            for k in 1 2 3 4 5; do git pull --rebase && git push && break; sleep 7; done
+          fi
