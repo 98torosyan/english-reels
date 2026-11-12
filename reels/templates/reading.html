@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <link rel="icon" href="data:,">
+ <style>
+ @font-face{font-family:Inter;src:url("__INTER_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ @font-face{font-family:IPA;src:url("__INTER_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0000-00FF}
+ @font-face{font-family:IPA;src:url("__INTER_EXT_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0100-02FF}
+ @font-face{font-family:IPA;src:url("__INTER_GREEK_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0370-03FF}
+ @font-face{font-family:Literata;src:url("__LITERATA_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ @font-face{font-family:NotoArmenian;src:url("__ARMENIAN_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ *{box-sizing:border-box;margin:0}
+ html,body{width:1080px;height:1920px;overflow:hidden;font-family:Inter,sans-serif}
+ .pic{position:absolute;left:0;top:0;width:1080px;height:760px;overflow:hidden}
+ .pic img{width:100%;height:100%;object-fit:cover;transform-origin:50% 40%}
+ .pic:after{content:"";position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(transparent,var(--paper))}
+ .pill{position:absolute;top:96px;left:56px;display:flex;align-items:center;gap:14px;padding:10px 22px 10px 10px;border-radius:99px;background:#FFFCF6ee;box-shadow:0 10px 30px #17183A26}
+ .pill img{width:56px;height:56px;border-radius:16px}
+ .pill b{font:700 24px Literata,serif;color:var(--ink)}.pill span{display:block;font:800 15px Inter;letter-spacing:3px;color:var(--soft)}
+ .eyebrow{position:absolute;top:740px;left:82px;right:82px;display:flex;align-items:center;justify-content:space-between;font:800 26px Inter;letter-spacing:5px}
+ .eyebrow span{font:700 24px Inter;letter-spacing:3px;padding:6px 20px;border-radius:99px}
+ .title{position:absolute;top:800px;left:82px;right:82px;text-align:center}
+ .title h1{font:700 76px/1.02 Literata,serif;letter-spacing:-1.5px;color:var(--ink)}
+ .title h1 em{color:var(--c);font-style:italic}
+ .orn{margin:18px auto 0;display:flex;align-items:center;justify-content:center;gap:16px}
+ .orn i{display:block;width:150px;height:2px;background:var(--ink);opacity:.5}.orn b{width:14px;height:14px;transform:rotate(45deg);background:var(--c)}
+ .wm{position:absolute;left:50%;top:1010px;width:560px;margin-left:-280px;text-align:center;opacity:.06;pointer-events:none}
+ .wm img{width:560px;height:560px;filter:grayscale(1)}
+ .wm div{margin-top:-40px;font:800 30px Inter;letter-spacing:6px;color:var(--ink);white-space:nowrap}
+ .story{position:absolute;top:1000px;left:70px;right:70px;font:500 43px/1.5 Literata,serif;color:var(--ink)}
+ .story span{display:inline-block;padding:0 4px;margin:0 -1px;border-radius:9px}
+ .foot{position:absolute;left:82px;right:82px;bottom:190px;display:flex;justify-content:space-between;font-size:26px;font-weight:700}
+ .progress{position:absolute;left:82px;right:82px;bottom:140px;height:7px;border-radius:99px;overflow:hidden}
+ .progress i{display:block;height:100%;width:0}
+ .outro{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;opacity:0}
+ .outro img{width:170px;height:170px;border-radius:42px}
+ .outro h2{margin-top:44px;font:700 82px/1.06 Literata,serif}
+ .outro p{margin-top:22px;font:600 38px NotoArmenian,Inter,sans-serif}
+ .save{margin-top:46px;padding:16px 34px;border-radius:99px;font-size:34px;font-weight:800}
+ .follow{margin-top:26px;font:700 30px NotoArmenian,Inter,sans-serif}
+ .signature{margin-top:58px;font-size:24px;font-weight:800;letter-spacing:5px}
+ body:before{z-index:6}
+ </style>
+</head>
+<body>
+ <div class="pic"><img id="pic" src="" alt=""></div>
+ <div class="pill"><img src="__LOGO_DATA__" alt=""><div><b>Gayane Torosyan</b><span>@ENGLISH.READINGROOM</span></div></div>
+ <div class="eyebrow" id="eyebrow"><b id="series"></b><span id="level" class="chip"></span></div>
+ <div class="title" id="title"><h1 id="theme"></h1><div class="orn"><i></i><b></b><i></i></div></div>
+ <div class="wm"><img src="__LOGO_DATA__" alt=""><div>ENGLISH READING ROOM</div></div>
+ <div class="story" id="story"></div>
+ <div class="progress"><i id="progress"></i></div>
+ <section id="outro" class="outro"><img id="outroLogo" src="__LOGO_DATA__" alt=""><h2>Read it <em>again</em></h2><p>Կարդա՛ բարձրաձայն և պահի՛ր</p><span class="save" id="saveChip">Save</span><span class="follow">Անհատական և խմբային դասեր · գրե՛ք Direct-ով</span><span class="signature">@ENGLISH.READINGROOM</span></section>
+ <script>
+ const clamp=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-x,3);
+ const back=x=>{const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+ let D=null,T=null;
+ window.configure=(data,timeline)=>{D=data;T=timeline;
+  if(data.color) document.documentElement.style.setProperty('--c',data.color);
+  pic.src=data.img; series.textContent=`DAILY READING · ${String(data.number).padStart(2,'0')}`; level.textContent=data.level;
+  const tw=data.title.split(' '); theme.innerHTML=tw.length>1?tw.slice(0,-1).join(' ')+' <em>'+tw.at(-1)+'</em>':'<em>'+data.title+'</em>';
+  story.innerHTML=data.en.split(' ').map((w,j)=>`<span data-j="${j}">${w}</span>`).join(' ');
+ };
+ window.fit=()=>{let f=43;while(story.getBoundingClientRect().bottom>1640&&f>32){f-=1;story.style.fontSize=f+'px';}};
+ window.seek=t=>{
+  progress.style.width=(clamp(t/T.total)*100)+'%';
+  pic.style.transform=`scale(${1.04+0.06*clamp(t/T.total)})`;
+  const a=ease(clamp(t/.5)); eyebrow.style.opacity=a; title.style.opacity=ease(clamp((t-.15)/.6)); title.style.transform=`translateY(${(1-ease(clamp((t-.15)/.6)))*40}px)`;
+  story.style.opacity=ease(clamp((t-.5)/.6));
+  story.querySelectorAll('span').forEach(s=>{const w=T.words[+s.dataset.j]; const now=t>=w[0]&&t<w[1]; const done=t>=w[1];
+   const pop=now?Math.sin(Math.PI*Math.min(1,(t-w[0])/.25)):0;
+   s.style.background=now?'var(--c)':'transparent'; s.style.color=now?'#fff':''; s.style.opacity=now||done||t<T.start?1:.5;
+   s.style.transform=pop?`translateY(${-3*pop}px) scale(${1+.06*pop})`:'';});
+  const o=ease(clamp((t-(T.total-2.4))/.8)); outro.style.opacity=o; outro.style.transform=`scale(${1.03-.03*o})`;
+  const o2=clamp((t-(T.total-2.4))/.8); outroLogo.style.transform=`scale(${back(clamp(o2*1.4))})`; saveChip.style.transform=`scale(${back(clamp(o2*1.6-.3))})`;
+ };
+ </script>
+</body>
+</html>
