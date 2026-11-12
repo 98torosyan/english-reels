@@ -97,6 +97,7 @@ if __name__ == "__main__":
     feed = sorted((i for i in q if i["format"] in ("REELS", "CAROUSEL")), key=lambda i: (i["date"], i["time"], i["id"]))
     counts, out = {}, []
     for i in feed:
+        if i["kind"] in ("words10", "phrasal", "review"): continue  # these series render their own cover frame
         key = series_key(i); counts[key] = counts.get(key, 0) + 1
         if i.get("review_status") == "published": continue
         s = spec(i, counts[key]); s.update(id=i["id"], h=1920 if i["format"] == "REELS" else 1350)
