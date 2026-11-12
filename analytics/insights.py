@@ -40,9 +40,11 @@ def snapshot():
         except urllib.error.HTTPError as e:
             failed += 1; row["error"] = e.code
         posts.append(row)
-    if failed == len(posts) and posts:
-        raise SystemExit("Insights are not available: the token needs the instagram_manage_insights permission.")
-    snap = {"date": datetime.now(TZ).date().isoformat(), "followers": acct.get("followers_count"), "media_count": acct.get("media_count"), "posts": posts}
+    insights = not (failed == len(posts) and posts)
+    if not insights:  # keep going with likes, comments and followers until the token gets instagram_manage_insights
+        print("NOTE: post insights are not available yet (the token needs the instagram_manage_insights permission); saving likes, comments and followers only.")
+        for p in posts: p.pop("error", None)
+    snap = {"date": datetime.now(TZ).date().isoformat(), "followers": acct.get("followers_count"), "media_count": acct.get("media_count"), "insights": insights, "posts": posts}
     SNAP.mkdir(parents=True, exist_ok=True)
     (SNAP / f"{snap['date']}.json").write_text(json.dumps(snap, ensure_ascii=False, indent=1), encoding="utf-8")
     return snap
@@ -65,7 +67,7 @@ def report(snap):
     old = SNAP / f"{week_ago.isoformat()}.json"
     gained = snap["followers"] - json.loads(old.read_text())["followers"] if old.exists() and snap.get("followers") is not None else None
     recent = [p for p in snap["posts"] if datetime.fromisoformat(p["timestamp"].replace("+0000", "+00:00")).astimezone(TZ).date() > week_ago and "error" not in p]
-    score = lambda p: (p.get("shares") or 0) * 3 + (p.get("saved") or 0) * 2 + (p.get("comments_count") or 0) + (p.get("reach") or 0) / 100
+    score = lambda p: (p.get("shares") or 0) * 3 + (p.get("saved") or 0) * 2 + (p.get("comments_count") or 0) * 2 + (p.get("like_count") or 0) + (p.get("reach") or 0) / 100
     by = defaultdict(list); hours = defaultdict(list)
     for p in recent:
         by[series_of(p, queue)].append(p)
@@ -74,15 +76,17 @@ def report(snap):
     lines = [f"# Շաբաթական հաշվետվություն · {snap['date']}", "",
              f"**Հետևորդներ՝** {snap['followers']}" + (f" ({'+' if gained >= 0 else ''}{gained} շաբաթում)" if gained is not None else ""),
              f"**Գրառումներ այս շաբաթ՝** {len(recent)}", "", "## Շարքերը (միջինը մեկ գրառման համար)", "",
-             "| Շարք | Գրառում | Դիտում | Հասանելիություն | Պահել | Share |", "|---|---|---|---|---|---|"]
+             "| Շարք | Գրառում | Դիտում | Հասանելիություն | Պահել | Share | Լայք | Մեկնաբ. |", "|---|---|---|---|---|---|---|---|"]
     for name, ps in sorted(by.items(), key=lambda kv: -sum(score(p) for p in kv[1]) / len(kv[1])):
-        lines.append(f"| {name} | {len(ps)} | {avg(ps, 'views')} | {avg(ps, 'reach')} | {avg(ps, 'saved')} | {avg(ps, 'shares')} |")
+        lines.append(f"| {name} | {len(ps)} | {avg(ps, 'views')} | {avg(ps, 'reach')} | {avg(ps, 'saved')} | {avg(ps, 'shares')} | {avg(ps, 'like_count')} | {avg(ps, 'comments_count')} |")
     lines += ["", "## Լավագույն 5 գրառումը", ""]
     for p in sorted(recent, key=score, reverse=True)[:5]:
-        lines.append(f"- [{p['title'] or p['id']}]({p['permalink']}) · դիտում {p.get('views') or 0}, պահել {p.get('saved') or 0}, share {p.get('shares') or 0}")
+        lines.append(f"- [{p['title'] or p['id']}]({p['permalink']}) · դիտում {p.get('views') or 0}, պահել {p.get('saved') or 0}, share {p.get('shares') or 0}, լայք {p.get('like_count') or 0}")
     if hours:
         best = sorted(hours.items(), key=lambda kv: -sum(kv[1]) / len(kv[1]))[:3]
         lines += ["", "## Լավագույն ժամերը", "", ", ".join(f"{h:02d}:00" for h, _ in best)]
+    if not snap.get("insights"):
+        lines += ["", "_Դիտումները, պահումներն ու share-երը կերևան, երբ token-ը ստանա instagram_manage_insights թույլտվությունը։_"]
     (ROOT / "analytics" / "report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 
