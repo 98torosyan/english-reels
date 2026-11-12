@@ -6,7 +6,7 @@ from pathlib import Path
 QUEUE = Path(__file__).resolve().parents[1] / "queue.json"
 SERIES_TAG = {"words10": "#EnglishVocabulary", "phrasal": "#PhrasalVerbs", "reading": "#EnglishReading", "review": "#EnglishVocabulary",
               "dialogue": "#SpokenEnglish", "story": "#EnglishStories", "sound": "#EnglishPronunciation", "mistake": "#EnglishGrammar",
-              "quiz": "#EnglishQuiz", "word": "#EnglishVocabulary", "rule": None}
+              "quiz": "#EnglishQuiz", "word": "#EnglishVocabulary", "rule": None, "routine": "#SpokenEnglish"}
 ASK = {"words10": "Ո՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։",
        "phrasal": "Կազմի՛ր քո նախադասությունը այս դարձվածներից մեկով և գրի՛ր մեկնաբանություններում։",
        "reading": "Ո՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։"}

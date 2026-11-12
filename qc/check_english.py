@@ -40,6 +40,9 @@ def texts():
         if st.get("question"): yield f"picstory:{st['id']}/q", st["question"]
     for st in load("reels/data/storyvideo.json")["stories"]:
         for k, sc in enumerate(st["scenes"]): yield f"storyvideo:{st['id']}/{k}", sc
+    for st in load("reels/data/routine.json")["stories"]:
+        yield f"routine:{st['id']}/q", st["question"]
+        for k, ln in enumerate(st["lines"]): yield f"routine:{st['id']}/{k}", ln.replace("[", "").replace("]", "")
     for st in load("reels/data/reading.json")["stories"]:
         for k, sent in enumerate(re.split(r"(?<=[.!?'])\s+(?=[A-Z'])", st["en"])): yield f"reading:{st['id']}/{k}", sent
     for st in load("reels/data/phrasal.json")["sets"]:
