@@ -105,6 +105,7 @@ def main():
     made += voice_words10()
     made += voice_phrasal()
     made += voice_reading()
+    made += voice_storyvideo()
     print(f"{made} file(s) voiced.")
 
 
@@ -299,6 +300,40 @@ def voice_reading():
         except Exception as error:
             print(f"SKIPPED reading {st['id']}: {error}"); mp3.unlink(missing_ok=True); continue
         tj.write_text(json.dumps({"text": st["en"], "words": words, "tag": st["voice"], "pace": pace}), encoding="utf-8"); made += 1
+    return made
+
+def voice_storyvideo():
+    """Story video: each scene voiced separately (calm pace); one track with scene starts and word timings."""
+    made = 0
+    root = LESSONS.parents[1]
+    data = json.loads((root / "reels/data/storyvideo.json").read_text(encoding="utf-8"))
+    PAUSE = 0.8
+    for st in data["stories"]:
+        out = root / "assets" / "storyvideo" / st["id"]; out.mkdir(parents=True, exist_ok=True)
+        mp3, tj = out / "p.mp3", out / "p.json"
+        text = " ".join(st["scenes"])
+        if mp3.exists() and tj.exists():
+            old = json.loads(tj.read_text())
+            if old.get("text") == text and old.get("tag") == st["voice"]: continue
+        try:
+            parts, words, scenes, t = [], [], [], 0.0
+            for k, sc in enumerate(st["scenes"]):
+                part = out / f"s{k}.mp3"
+                b = asyncio.run(synth(sc, st["voice"], "-15%", part))
+                w = align(sc.split(), b)
+                end = w[-1][1] + 0.15
+                scenes.append(round(t, 2)); words += [[round(a + t, 2), round(c + t, 2)] for a, c in w]
+                parts.append((part, end)); t += end + PAUSE
+            inputs, chains = [], []
+            for k, (part, end) in enumerate(parts):
+                inputs += ["-i", str(part)]
+                chains.append(f"[{k}:a]aresample=24000,atrim=0:{end:.3f},apad=pad_dur={PAUSE},asetpts=PTS-STARTPTS[a{k}]")
+            subprocess.run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", ";".join(chains) + ";" + "".join(f"[a{k}]" for k in range(len(parts))) + f"concat=n={len(parts)}:v=0:a=1[o]",
+                            "-map", "[o]", "-b:a", "160k", str(mp3)], check=True)
+            for part, _ in parts: part.unlink()
+        except Exception as error:
+            print(f"SKIPPED storyvideo {st['id']}: {error}"); mp3.unlink(missing_ok=True); continue
+        tj.write_text(json.dumps({"text": text, "words": words, "scenes": scenes, "tag": st["voice"]}), encoding="utf-8"); made += 1
     return made
 
 if __name__ == "__main__":

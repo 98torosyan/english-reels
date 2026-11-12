@@ -1,0 +1,23 @@
+{
+  "series": "Story video",
+  "note": "Illustrated story told scene by scene: one owner-supplied picture per scene (assets/storyvideo/<id>/<n>.jpg, 1080x1080), narrated, word highlight.",
+  "stories": [
+    {
+      "id": "lost-dog",
+      "number": 1,
+      "title": "The lost dog",
+      "title_hy": "Կորած շունը",
+      "level": "A2",
+      "voice": "kokoro:bf_emma",
+      "scenes": [
+        "One rainy morning, Leo found a small wet dog outside his house.",
+        "The dog was cold and hungry, so Leo gave it some warm milk and a soft towel.",
+        "On its blue collar, there was a name: Biscuit.",
+        "Leo wanted to help Biscuit go home, so he made posters and put them on every street in his town.",
+        "The next day, an old woman knocked on the door. 'That's my Biscuit!' she cried happily.",
+        "She thanked Leo with a big chocolate cake, and now they have tea together every Sunday."
+      ],
+      "hy": "Մի անձրևոտ առավոտ Լեոն իր տան մոտ գտավ մի փոքրիկ թրջված շուն։ Շունը մրսած էր ու քաղցած, ու Լեոն նրան տաք կաթ ու փափուկ սրբիչ տվեց։ Նրա կապույտ վզնոցին գրված էր անունը՝ Բիսքվիթ։ Լեոն ուզում էր օգնել Բիսքվիթին տուն վերադառնալ, ու նա հայտարարություններ պատրաստեց և փակցրեց իր քաղաքի բոլոր փողոցներում։ Հաջորդ օրը մի տարեց կին թակեց դուռը։ «Սա իմ Բիսքվիթն է»,— ուրախ բացականչեց նա։ Նա Լեոյին շնորհակալություն հայտնեց մի մեծ շոկոլադե տորթով, և հիմա նրանք ամեն կիրակի միասին թեյ են խմում։"
+    }
+  ]
+}
