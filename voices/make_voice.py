@@ -37,7 +37,14 @@ def synth_kokoro(text, voice, rate, mp3):
     sf.write(wav, np.concatenate(audio), 24000)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", wav, "-af", "adelay=100|100", "-b:a", "160k", str(mp3)], check=True)
     Path(wav).unlink()
-    return [(w, s + 0.1, e + 0.1) for w, s, e in bounds]
+    # Kokoro's last token often runs into the trailing silence: clamp every end to where speech really stops
+    det = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(mp3), "-af", "silencedetect=n=-40dB:d=0.08", "-f", "null", "-"], capture_output=True, text=True).stderr
+    starts = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", det) if float(x) > 0.3]
+    speech_end = starts[-1] + 0.05 if starts else None
+    out = [(w, s + 0.1, e + 0.1) for w, s, e in bounds]
+    if speech_end:
+        out = [(w, min(s, speech_end - 0.05), min(e, speech_end)) for w, s, e in out]
+    return out
 
 async def synth(text, voice, rate, mp3):
     if voice.startswith("kokoro:"):
