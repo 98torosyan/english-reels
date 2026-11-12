@@ -23,8 +23,8 @@ function clip(id, key, text) {
 function timeline(st) {
   const plays = []; const scenes = []; const words = [];
   const q = clip(st.id, 'q', st.question);
-  plays.push({ at: 0.9, clip: q });
-  let t = 0.9 + q.len + 1.1;
+  plays.push({ at: 1.5, clip: q });   // after the music has settled (an early voice makes the loudness filter overshoot)
+  let t = 1.5 + q.len + 1.1;
   st.lines.forEach((line, n) => {
     const c = clip(st.id, String(n), line.replace(/[[\]]/g, ''));
     const v0 = t + 0.55;

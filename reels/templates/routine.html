@@ -26,6 +26,7 @@
  .say{position:relative}
  .say .en{font:600 66px/1.18 Literata,serif;color:var(--ink);letter-spacing:-.5px}
  .say .en .w{display:inline-block;opacity:.32;transition:none}
+ .say .en .pt{color:var(--ink)}
  .say .en .hl{position:relative;display:inline;color:var(--c);font-style:italic;font-weight:700}
  .say .en .hl:after{content:"";position:absolute;left:-4px;right:-4px;bottom:4px;height:16px;border-radius:6px;background:color-mix(in srgb,var(--c) 22%,transparent);transform-origin:left;transform:scaleX(var(--p,0));z-index:-1}
  .say .hy{margin-top:22px;font:500 36px/1.4 NotoArmenian,sans-serif;color:var(--muted)}
@@ -71,7 +72,8 @@
  let D=null,T=null;
  const lastEm=s=>{const w=s.split(' ');return w.slice(0,-1).join(' ')+' <em>'+w.at(-1)+'</em>';};
  // "I [turn off] the alarm." -> words with the bracketed phrase marked
- function words(line){const out=[];let hl=false;line.split(/(\[|\])/).forEach(p=>{if(p==='[')hl=true;else if(p===']')hl=false;else p.split(' ').filter(Boolean).forEach(w=>out.push({w,hl}));});return out;}
+ function words(line){const out=[];let hl=false;line.split(/(\[|\])/).forEach(p=>{if(p==='[')hl=true;else if(p===']')hl=false;else p.split(' ').filter(Boolean).forEach(w=>{
+   if(/^[.,!?;:]+$/.test(w)&&out.length){out[out.length-1].tail=(out[out.length-1].tail||'')+w;} else out.push({w,hl});});});return out;}
  window.configure=(data,timeline)=>{D=data;T=timeline;
   document.documentElement.style.setProperty('--c',data.color);
   chip.textContent=`MY DAY · ${String(data.number).padStart(2,'0')}`;
@@ -85,10 +87,10 @@
  let shown=-1;
  function setScene(i){ if(i===shown) return; shown=i;
   const ws=words(D.lines[i]); let k=0;
-  en.innerHTML=ws.map((x,j)=>{const span=`<span class="w" data-j="${j}">${x.w}</span>`;return span;}).join(' ');
+  en.innerHTML=ws.map((x,j)=>{const span=`<span class="w" data-j="${j}">${x.w}</span>${x.tail?`<span class="pt">${x.tail}</span>`:''}`;return span;}).join(' ');
   // wrap highlighted runs
   const spans=[...en.querySelectorAll('.w')]; let run=null;
-  spans.forEach((s,j)=>{ if(ws[j].hl){ if(!run){run=document.createElement('span');run.className='hl';s.before(run);} run.append(s); if(j+1<spans.length&&ws[j+1].hl) run.append(' '); } else run=null; });
+  spans.forEach((s,j)=>{ if(ws[j].hl){ if(!run){run=document.createElement('span');run.className='hl';s.before(run);} const pt=s.nextElementSibling&&s.nextElementSibling.classList.contains('pt')?s.nextElementSibling:null; run.append(s); if(j+1<spans.length&&ws[j+1].hl) run.append(' '); else if(pt) run.after(pt); } else run=null; });
   hy.textContent=D.lines_hy[i]; count.textContent=`${i+1} / ${D.lines.length}`;
   dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j===i));
  }
@@ -110,7 +112,7 @@
   // card in/out
   const cin=ease(clamp((t-s.at)/.45)), cout=cur+1<n?clamp((t-(S[cur+1].at-.25))/.25):0;
   say.style.opacity=cin*(1-cout); say.style.transform=`translateY(${(1-cin)*30-cout*20}px)`;
-  card.style.transform=`translateY(${(1-ease(clamp((t-(S[0].at-.4))/.6)))*500}px)`;
+  const cv=ease(clamp((t-(S[0].at-.4))/.6)); card.style.transform=`translateY(${(1-cv)*160}px)`; card.style.opacity=cv; dots.style.opacity=cv;
   // karaoke + highlight sweep
   const W=T.words[cur]; let hlStart=null,hlEnd=null;
   en.querySelectorAll('.w').forEach(w=>{const j=+w.dataset.j, tw=W[j]; if(!tw) return; const on=t>=tw[0]-.05;
