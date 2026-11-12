@@ -13,15 +13,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Find late posts
+      - name: Find late posts and check the token
         id: w
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
         run: python publish/watchdog.py || echo "late=1" >> "$GITHUB_OUTPUT"
       - name: Open an issue (GitHub e-mails the owner)
         if: steps.w.outputs.late == '1'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          title="Ուշացած գրառումներ · $(TZ=Asia/Yerevan date +%Y-%m-%d)"
+          title="Էջի պահակ · ուշադրություն · $(TZ=Asia/Yerevan date +%Y-%m-%d)"
           if ! gh issue list --state open --search "$title in:title" --json number -q '.[0].number' | grep -q .; then
             gh issue create --title "$title" --body-file watchdog.md
           fi

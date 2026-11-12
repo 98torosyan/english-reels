@@ -1,7 +1,7 @@
 """Watchdog: list every staged item that should already be on Instagram but is not.
 Exit code 1 (and a short Armenian report in watchdog.md) when something is more than 40 minutes late,
 so the workflow can open an issue — GitHub then e-mails the owner."""
-import datetime as dt, json, sys
+import datetime as dt, json, os, sys, urllib.parse, urllib.request
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -21,15 +21,44 @@ def late(now=None):
     return out
 
 
+def token_warning(days=10):
+    """Warn well before the Instagram token (or its data access) expires, so posting never stops by surprise."""
+    tok = os.environ.get("IG_TOKEN", "").strip()
+    if not tok:
+        return ""
+    ver = os.environ.get("META_GRAPH_API_VERSION", "v27.0")
+    url = f"https://graph.facebook.com/{ver}/debug_token?" + urllib.parse.urlencode({"input_token": tok})
+    try:
+        req = urllib.request.Request(url, headers={"Authorization": f"Bearer {tok}"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            d = json.loads(r.read().decode()).get("data", {})
+    except Exception as e:   # the check itself must never break anything
+        print("token check skipped:", type(e).__name__); return ""
+    if not d.get("is_valid", True):
+        return "Instagram token-ը **անվավեր է**։ Հրապարակումները կանգնած են, պետք է նոր token։"
+    now = dt.datetime.now(dt.timezone.utc).timestamp(); out = []
+    for key, what in (("expires_at", "token-ի ժամկետը"), ("data_access_expires_at", "տվյալների հասանելիության ժամկետը")):
+        ts = d.get(key) or 0
+        if ts and ts - now < days * 86400:
+            out.append(f"Instagram {what} լրանում է {dt.datetime.fromtimestamp(ts, dt.timezone.utc):%Y-%m-%d}-ին։ Թարմացրե՛ք IG_TOKEN-ը մինչ այդ։")
+    print("token ok" if not out else "\n".join(out))
+    return "\n".join(out)
+
+
 def main():
-    items = late()
-    if not items:
+    items = late(); warn = token_warning()
+    if not items and not warn:
         print("All due posts are published."); return 0
-    rows = "\n".join(f"- {d.astimezone(ZoneInfo('Asia/Yerevan')):%Y-%m-%d %H:%M} · {i['title']} (`{i['id']}`)" for d, i in items)
-    (ROOT / "watchdog.md").write_text(
-        "Այս գրառումները ժամանակին չեն հրապարակվել.\n\n" + rows +
-        "\n\nՍտուգե՛ք **Actions → Publish due posts** վերջին գործարկումը (հաճախ պատճառը ժամկետանց token-ն է)։\n", encoding="utf-8")
-    print(rows); return 1
+    body = ""
+    if items:
+        rows = "\n".join(f"- {d.astimezone(ZoneInfo('Asia/Yerevan')):%Y-%m-%d %H:%M} · {i['title']} (`{i['id']}`)" for d, i in items)
+        body += ("Այս գրառումները ժամանակին չեն հրապարակվել.\n\n" + rows +
+                 "\n\nՍտուգե՛ք **Actions → Publish due posts** վերջին գործարկումը (հաճախ պատճառը ժամկետանց token-ն է)։\n")
+        print(rows)
+    if warn:
+        body += "\n" + warn + "\n"
+    (ROOT / "watchdog.md").write_text(body, encoding="utf-8")
+    return 1
 
 
 if __name__ == "__main__":

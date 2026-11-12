@@ -162,7 +162,23 @@ function verifyVideo(videoPath) {
   if (!dimensions || dimensions[1] !== '1080' || dimensions[2] !== '1920' || !hasAudio) {
     throw new Error(`Rendered video failed format validation: ${path.basename(videoPath)}`);
   }
-  return { width: Number(dimensions[1]), height: Number(dimensions[2]), fps: fps ? fps[1] : 'unknown', duration: duration ? duration[1] : 'unknown', hasAudio };
+  const q = qualityCheck(videoPath);
+  return { width: Number(dimensions[1]), height: Number(dimensions[2]), fps: fps ? fps[1] : 'unknown', duration: duration ? duration[1] : 'unknown', hasAudio, ...q };
+}
+
+// Broadcast checks on the finished file: loudness close to the -14 LUFS target, no clipping, no black frames.
+function qualityCheck(videoPath) {
+  const run = (args) => { const r = spawnSync(FFmpeg, ['-hide_banner', '-nostats', '-i', path.resolve(videoPath), ...args, '-f', 'null', '-'], { encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 }); return r.stderr || ''; };
+  const loud = run(['-vn', '-af', 'ebur128=peak=true']);
+  const lufs = Number((loud.match(/I:\s+(-?[\d.]+) LUFS/g) || []).pop()?.match(/-?[\d.]+/)[0]);
+  const peak = Number((loud.match(/Peak:\s+(-?[\d.inf]+) dBFS/g) || []).pop()?.match(/-?[\d.]+|-inf/)[0]);
+  const black = (run(['-an', '-vf', 'blackdetect=d=0.3:pic_th=0.95']).match(/black_start/g) || []).length;
+  const problems = [];
+  if (!(lufs >= -18 && lufs <= -11)) problems.push(`loudness ${lufs} LUFS (target -14)`);
+  if (!(peak <= 0)) problems.push(`clipping (peak ${peak} dBFS)`);
+  if (black) problems.push(`${black} black segment(s)`);
+  if (problems.length) throw new Error(`Quality check failed for ${path.basename(videoPath)}: ${problems.join('; ')}`);
+  return { lufs, peak };
 }
 
 const SKILL = {
