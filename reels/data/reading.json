@@ -32,7 +32,7 @@
       "en": "The Great Wall of China is one of the most famous buildings in the world. In fact, it is not one wall but many walls, built over more than two thousand years. All the parts together are about twenty-one thousand kilometres long. Soldiers used the towers to watch for enemies, and they sent messages with smoke and fire. Many people believe that you can see the wall from space, but this is a myth. It is too narrow to see with your eyes.",
       "hy": "Չինական մեծ պարիսպը աշխարհի ամենահայտնի կառույցներից է։ Իրականում այն մեկ պատ չէ, այլ բազմաթիվ պատեր, որոնք կառուցվել են ավելի քան երկու հազար տարվա ընթացքում։ Բոլոր մասերը միասին մոտ քսանմեկ հազար կիլոմետր երկարություն ունեն։ Զինվորները աշտարակներից հետևում էին թշնամիներին և հաղորդագրություններ էին ուղարկում ծխով ու կրակով։ Շատերը կարծում են, որ պարիսպը երևում է տիեզերքից, բայց դա առասպել է։ Այն չափազանց նեղ է աչքով տեսնելու համար։",
       "number": 3,
-      "voice": "kokoro:bf_isabella"
+      "voice": "kokoro:bm_daniel"
     },
     {
       "id": "breakfast",
@@ -40,7 +40,7 @@
       "title": "Breakfast together",
       "title_hy": "Նախաճաշը միասին",
       "level": "A2",
-      "voice": "kokoro:bm_george",
+      "voice": "kokoro:bf_lily",
       "en": "Every morning, Ani has breakfast with her family. Her mum puts warm lavash, white cheese and fresh herbs on the table. Her dad pours the tea, and her little brother, Aram, laughs and asks for more tomatoes. They talk about their plans for the day. Ani is going to school, and Aram is going to nursery. Breakfast is Ani's favourite meal, because everyone is together and nobody is in a hurry.",
       "hy": "Ամեն առավոտ Անին նախաճաշում է ընտանիքի հետ։ Մայրիկը սեղանին է դնում տաք լավաշ, սպիտակ պանիր և թարմ կանաչի։ Հայրիկը թեյ է լցնում, իսկ փոքր եղբայրը՝ Արամը, ծիծաղում է ու էլի լոլիկ խնդրում։ Նրանք խոսում են օրվա ծրագրերի մասին։ Անին գնում է դպրոց, իսկ Արամը՝ մանկապարտեզ։ Նախաճաշը Անիի սիրելի ճաշն է, որովհետև բոլորը միասին են, և ոչ ոք չի շտապում։"
     },
@@ -53,7 +53,7 @@
       "en": "Venice is a city in Italy with no cars. Instead of streets, it has about one hundred and fifty canals and more than four hundred bridges. People travel by boat, and the most famous boat is the gondola. A gondola is always black, and one side is a little longer than the other, so the gondolier can row with only one oar. The city is built on more than one hundred small islands. Every year, millions of tourists visit Venice.",
       "hy": "Վենետիկը Իտալիայի քաղաք է, որտեղ մեքենաներ չկան։ Փողոցների փոխարեն այնտեղ կա մոտ հարյուր հիսուն ջրանցք և ավելի քան չորս հարյուր կամուրջ։ Մարդիկ նավակներով են տեղաշարժվում, և ամենահայտնի նավակը գոնդոլան է։ Գոնդոլան միշտ սև է, իսկ մի կողմը մի փոքր ավելի երկար է մյուսից, որպեսզի գոնդոլավարը կարողանա թիավարել միայն մեկ թիով։ Քաղաքը կառուցված է հարյուրից ավելի փոքր կղզիների վրա։ Ամեն տարի միլիոնավոր զբոսաշրջիկներ են այցելում Վենետիկ։",
       "number": 5,
-      "voice": "kokoro:bf_emma"
+      "voice": "en-GB-SoniaNeural"
     },
     {
       "id": "market",
@@ -61,7 +61,7 @@
       "title": "At the market",
       "title_hy": "Շուկայում",
       "level": "A2",
-      "voice": "kokoro:bf_isabella",
+      "voice": "kokoro:bm_lewis",
       "en": "On Saturday, Ani goes to the market with her mum. The market is big, busy and full of colours. There are red pomegranates, sweet grapes and orange apricots. Ani also loves the colourful sweets on long strings. A kind man gives her a bag of apricots to try. 'Thank you very much!' says Ani. They buy fruit, nuts and bread, and then they walk home slowly in the sunshine.",
       "hy": "Շաբաթ օրը Անին մայրիկի հետ գնում է շուկա։ Շուկան մեծ է, աշխույժ ու գույներով լի։ Կան կարմիր նռներ, քաղցր խաղող և նարնջագույն ծիրան։ Անին սիրում է նաև թելերին շարված գունավոր քաղցրավենիքը։ Մի բարի մարդ նրան մի տոպրակ ծիրան է տալիս համտեսելու։ «Շատ շնորհակալություն»,— ասում է Անին։ Նրանք գնում են միրգ, ընկույզ և հաց, հետո արևի տակ դանդաղ քայլում են տուն։"
     },
@@ -71,7 +71,7 @@
       "title": "A rainy day",
       "title_hy": "Անձրևոտ օր",
       "level": "A2",
-      "voice": "kokoro:bm_george",
+      "voice": "kokoro:bf_alice",
       "en": "Today it is raining, so Ani stays at home. She sits by the window with a blanket and a cup of hot chocolate. Outside, people are walking quickly under their umbrellas. Inside, it is warm and quiet. Ani opens her favourite storybook and starts to read. Sometimes she looks up and watches the raindrops on the glass. 'I love rainy days,' she says. 'They are perfect for reading.'",
       "hy": "Այսօր անձրև է գալիս, ու Անին մնում է տանը։ Նա նստում է պատուհանի մոտ՝ վերմակով և մի բաժակ տաք շոկոլադով։ Դրսում մարդիկ արագ քայլում են հովանոցների տակ։ Ներսում տաք է ու հանգիստ։ Անին բացում է իր սիրելի հեքիաթների գիրքը և սկսում կարդալ։ Երբեմն նա նայում է ապակու վրայի անձրևի կաթիլներին։ «Ես սիրում եմ անձրևոտ օրերը,— ասում է նա։— Դրանք կատարյալ են կարդալու համար»։"
     },
@@ -81,7 +81,7 @@
       "title": "An English lesson",
       "title_hy": "Անգլերենի դաս",
       "level": "A2",
-      "voice": "kokoro:bf_emma",
+      "voice": "kokoro:bm_fable",
       "en": "Ani's favourite lesson is English. Today the class is learning new words about animals. The teacher asks, 'What is this in English?' Ani raises her hand and answers, 'It's a dog!' 'Well done, Ani!' says the teacher. After that, the children read a short story and answer some questions. Ani writes the new words in her notebook. At home, she wants to practise them with her little brother.",
       "hy": "Անիի սիրելի դասը անգլերենն է։ Այսօր դասարանը սովորում է կենդանիների մասին նոր բառեր։ Ուսուցիչը հարցնում է. «Սա ի՞նչ է անգլերեն»։ Անին բարձրացնում է ձեռքը և պատասխանում. «Դա շուն է»։ «Ապրե՛ս, Անի»,— ասում է ուսուցիչը։ Դրանից հետո երեխաները կարդում են կարճ պատմություն և պատասխանում հարցերի։ Անին նոր բառերը գրում է տետրում։ Տանը նա ուզում է դրանք կրկնել փոքր եղբոր հետ։"
     },
@@ -91,7 +91,7 @@
       "title": "A walk in the park",
       "title_hy": "Զբոսանք այգում",
       "level": "A2",
-      "voice": "kokoro:bf_isabella",
+      "voice": "en-GB-LibbyNeural",
       "en": "Every evening, Ani takes her dog, Toto, for a walk in the park. It is autumn now, and the trees are yellow and orange. The leaves are falling, and they make a soft sound under Ani's feet. Toto runs, jumps and plays with the leaves. Ani laughs. They sit on a bench for a few minutes and watch the sunset. Then they go home, because it is getting cold.",
       "hy": "Ամեն երեկո Անին իր շանը՝ Տոտոյին, զբոսնելու է տանում այգի։ Հիմա աշուն է, ծառերը դեղին ու նարնջագույն են։ Տերևները թափվում են և մեղմ խշշում Անիի ոտքերի տակ։ Տոտոն վազում է, ցատկում և խաղում տերևների հետ։ Անին ծիծաղում է։ Նրանք մի քանի րոպե նստում են նստարանին և նայում մայրամուտին։ Հետո գնում են տուն, որովհետև ցուրտ է դառնում։"
     },

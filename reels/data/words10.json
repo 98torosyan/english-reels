@@ -188,7 +188,7 @@
       "theme": "At the doctor's",
       "theme_hy": "Բժշկի մոտ",
       "level": "A2",
-      "voice": "en-GB-RyanNeural",
+      "voice": "kokoro:bm_daniel",
       "words": [
         {
           "en": "appointment",
@@ -248,7 +248,7 @@
       "theme": "Shopping",
       "theme_hy": "Գնումներ",
       "level": "A2",
-      "voice": "kokoro:bf_emma",
+      "voice": "en-GB-SoniaNeural",
       "words": [
         {
           "en": "cash",
@@ -308,7 +308,7 @@
       "theme": "At work",
       "theme_hy": "Աշխատանքում",
       "level": "B1",
-      "voice": "en-GB-RyanNeural",
+      "voice": "kokoro:bf_isabella",
       "words": [
         {
           "en": "colleague",
@@ -368,7 +368,7 @@
       "theme": "Family",
       "theme_hy": "Ընտանիք",
       "level": "A1",
-      "voice": "kokoro:bf_emma",
+      "voice": "en-GB-ThomasNeural",
       "words": [
         {
           "en": "parents",
@@ -428,7 +428,7 @@
       "theme": "In the city",
       "theme_hy": "Քաղաքում",
       "level": "A1",
-      "voice": "en-GB-RyanNeural",
+      "voice": "kokoro:bf_lily",
       "words": [
         {
           "en": "street",
@@ -488,7 +488,7 @@
       "theme": "Feelings",
       "theme_hy": "Զգացմունքներ",
       "level": "A2",
-      "voice": "kokoro:bf_emma",
+      "voice": "en-GB-LibbyNeural",
       "words": [
         {
           "en": "happy",
@@ -548,7 +548,7 @@
       "theme": "At the hotel",
       "theme_hy": "Հյուրանոցում",
       "level": "A2",
-      "voice": "en-GB-RyanNeural",
+      "voice": "kokoro:bm_lewis",
       "words": [
         {
           "en": "reception",
@@ -608,7 +608,7 @@
       "theme": "Clothes",
       "theme_hy": "Հագուստ",
       "level": "A1",
-      "voice": "kokoro:bf_emma",
+      "voice": "kokoro:bf_alice",
       "words": [
         {
           "en": "shirt",
@@ -668,7 +668,7 @@
       "theme": "At school",
       "theme_hy": "Դպրոցում",
       "level": "A1",
-      "voice": "en-GB-RyanNeural",
+      "voice": "kokoro:bm_fable",
       "words": [
         {
           "en": "teacher",
@@ -728,7 +728,7 @@
       "theme": "Time words",
       "theme_hy": "Ժամանակ",
       "level": "A1",
-      "voice": "kokoro:bf_emma",
+      "voice": "en-GB-MaisieNeural",
       "words": [
         {
           "en": "yesterday",
@@ -788,7 +788,7 @@
       "theme": "At the café",
       "theme_hy": "Սրճարանում",
       "level": "A1",
-      "voice": "en-GB-RyanNeural",
+      "voice": "kokoro:bm_george",
       "words": [
         {
           "en": "menu",

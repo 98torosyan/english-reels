@@ -40,7 +40,7 @@
       "number": 2,
       "verb": "TAKE",
       "level": "A2–B1",
-      "voice": "en-GB-RyanNeural",
+      "voice": "kokoro:bf_isabella",
       "items": [
         {
           "en": "take off",
@@ -73,7 +73,7 @@
       "number": 3,
       "verb": "PUT",
       "level": "A2–B1",
-      "voice": "kokoro:bf_emma",
+      "voice": "kokoro:bm_daniel",
       "items": [
         {
           "en": "put on",
@@ -106,7 +106,7 @@
       "number": 4,
       "verb": "LOOK",
       "level": "A2–B1",
-      "voice": "en-GB-RyanNeural",
+      "voice": "en-GB-SoniaNeural",
       "items": [
         {
           "en": "look for",
@@ -139,7 +139,7 @@
       "number": 5,
       "verb": "TURN",
       "level": "A2–B1",
-      "voice": "kokoro:bf_emma",
+      "voice": "kokoro:bf_lily",
       "items": [
         {
           "en": "turn on",
@@ -172,7 +172,7 @@
       "number": 6,
       "verb": "GIVE",
       "level": "A2–B1",
-      "voice": "en-GB-RyanNeural",
+      "voice": "kokoro:bm_lewis",
       "items": [
         {
           "en": "give up",
@@ -205,7 +205,7 @@
       "number": 7,
       "verb": "COME",
       "level": "A2–B1",
-      "voice": "kokoro:bf_emma",
+      "voice": "en-GB-LibbyNeural",
       "items": [
         {
           "en": "come in",
@@ -238,7 +238,7 @@
       "number": 8,
       "verb": "GO",
       "level": "A2–B1",
-      "voice": "en-GB-RyanNeural",
+      "voice": "kokoro:bm_george",
       "items": [
         {
           "en": "go on",
