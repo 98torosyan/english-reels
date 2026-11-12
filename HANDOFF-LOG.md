@@ -54,3 +54,22 @@
 - Նոր դիզայն՝ «բառարանի էջ». թղթի ֆոն, ամեն հմտություն իր գույնով (`reels/render_utils.js` → `SKILL`, `paperTheme`, `reels/templates/paper.css`). Մուգ տարբերակը՝ `THEME=dark`։
 - Ամեն սերիա ունի իր շապիկի կոմպոզիցիան (`covers/cover.html`, `covers/specs.py`, `covers/render_covers.js`)։ Reels-ը հրապարակվում են `cover_url`-ով (`publish.py`), carousel-ների 01 սլայդը շապիկն է (`covers/attach_covers.py`)։
 - Նոյեմբերի 11–18-ի բոլոր նյութերը (29 + stories) վերապատրաստված են նոր ոճով։
+
+## 2026-11-12 (night)
+Done:
+- Highlights: 21 stories published (GitHub Actions outage delayed them; republished at 01:00–01:20). Owner created highlights; English names.
+- New series, all staged in queue.json:
+  - 10 words (reels/render_words10.js): reel 20:30 + story 14:30 daily, Nov 12–25 (14 themes). Colour rotates per day.
+  - Phrasal verbs (reels/render_phrasal.js): animated word-by-word captions, reel 13:30 + story 17:30 every other day, Nov 14–28 (8 verbs).
+  - Weekly review (reels/render_review.js): Sundays 12:00, Nov 15/22/29, reuses 10-words audio.
+  - Weekly PDF word books (books/render_book.js) → english-reels-media/books/english-reading-room-week-{1,2}.pdf.
+- Dialogue template: pop animation on the spoken word.
+- QC: LanguageTool now self-hosted in CI (qc.yml) over all on-screen English (found sweater → jumper); IPA checked against Britfone (qc/check_ipa.py, allow-list hand-checked against Oxford).
+- Voices: character-level alignment (fixed pizza/5). Kokoro voice test samples in assets/voice-test (owner to choose).
+- Analytics (analytics/insights.py, analytics.yml): daily snapshot, Monday report as a GitHub issue. Post insights need instagram_manage_insights on IG_TOKEN (currently only likes/comments/followers).
+- Cross-posting (publish/crosspost.py): YouTube Shorts and Facebook Page, active only when YT_* / FB_* secrets are set.
+- Plan scripts re-read the queue before writing (no more overwriting published marks).
+- system_check: 0 fail, 0 warn.
+Open:
+- Owner: token with instagram_manage_insights; YouTube OAuth secrets; FB page token; PDF link in bio; choose Kokoro voice; mother to review Armenian of words10/phrasal.
+- Content after Nov 18 for dialogues/stories/carousels still draft; plan next week.
