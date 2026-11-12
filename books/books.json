@@ -1,0 +1,7 @@
+{
+  "note": "Weekly word books (PDF). Each book collects the week's 10-words lists and phrasal verbs.",
+  "books": [
+    {"id": "week-1", "number": 1, "dates": "12–18 November 2026", "dates_hy": "նոյեմբերի 12–18", "lists": ["airport", "kitchen", "weather", "doctor", "shopping", "work", "family"], "phrasal": ["get", "take", "put"]},
+    {"id": "week-2", "number": 2, "dates": "19–25 November 2026", "dates_hy": "նոյեմբերի 19–25", "lists": ["city", "feelings", "hotel", "clothes", "school", "time", "cafe"], "phrasal": ["look", "turn", "give"]}
+  ]
+}
