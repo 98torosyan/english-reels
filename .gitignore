@@ -9,3 +9,5 @@ exports/
 .env.*
 !.env.example
 review/index.html
+__pycache__/
+*.pyc
