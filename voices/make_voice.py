@@ -16,7 +16,32 @@ GAP = 0.9  # seconds of silence after each sentence
 
 def norm(s): return CLEAN.sub("", s.replace("’", "'")).lower()
 
+_KOKORO = None
+
+def synth_kokoro(text, voice, rate, mp3):
+    """British Kokoro voice (Apache 2.0), e.g. voice="kokoro:bf_emma". Returns word bounds like edge-tts."""
+    global _KOKORO
+    import numpy as np, soundfile as sf
+    if _KOKORO is None:
+        from kokoro import KPipeline
+        _KOKORO = KPipeline(lang_code="b")
+    speed = 1 + int(rate.rstrip("%")) / 100 if rate else 1.0
+    audio, bounds, t0 = [], [], 0.0
+    for res in _KOKORO(text, voice=voice.split(":", 1)[1], speed=speed):
+        a = res.audio.numpy() if hasattr(res.audio, "numpy") else np.asarray(res.audio)
+        for tok in res.tokens or []:
+            if tok.start_ts is not None and tok.end_ts is not None and norm(tok.text):
+                bounds.append((tok.text, t0 + tok.start_ts, t0 + tok.end_ts))
+        audio.append(a); t0 += len(a) / 24000
+    wav = str(mp3) + ".wav"
+    sf.write(wav, np.concatenate(audio), 24000)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", wav, "-af", "adelay=100|100", "-b:a", "160k", str(mp3)], check=True)
+    Path(wav).unlink()
+    return [(w, s + 0.1, e + 0.1) for w, s, e in bounds]
+
 async def synth(text, voice, rate, mp3):
+    if voice.startswith("kokoro:"):
+        return synth_kokoro(text, voice, rate, mp3)
     com = edge_tts.Communicate(text, voice, rate=rate, boundary="WordBoundary")
     bounds = []
     with open(mp3, "wb") as f:
@@ -203,7 +228,7 @@ def voice_words10():
         for n, w in enumerate(lst["words"]):
             text = w["en"] + "."
             mp3, tj = out / f"{n}.mp3", out / f"{n}.json"
-            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text: continue
+            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text and json.loads(tj.read_text()).get("tag") == lst["voice"]: continue
             try:
                 bounds = asyncio.run(synth(text, lst["voice"], "-15%", mp3))
                 words = align(text.split(), bounds)
@@ -222,7 +247,7 @@ def voice_phrasal():
         for n, it in enumerate(st["items"]):
             for key, text, rate in ((f"{n}p", it["en"] + ".", "-18%"), (f"{n}e", it["example"], "-12%")):
                 mp3, tj = out / f"{key}.mp3", out / f"{key}.json"
-                if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text: continue
+                if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text and json.loads(tj.read_text()).get("tag") == st["voice"]: continue
                 try:
                     bounds = asyncio.run(synth(text, st["voice"], rate, mp3))
                     words = align(text.split(), bounds)

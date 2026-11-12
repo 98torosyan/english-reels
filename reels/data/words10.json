@@ -8,7 +8,7 @@
       "theme": "At the airport",
       "theme_hy": "Օդանավակայանում",
       "level": "A2",
-      "voice": "en-GB-SoniaNeural",
+      "voice": "kokoro:bf_emma",
       "words": [
         {
           "en": "passport",
@@ -128,7 +128,7 @@
       "theme": "The weather",
       "theme_hy": "Եղանակը",
       "level": "A1",
-      "voice": "en-GB-SoniaNeural",
+      "voice": "kokoro:bf_emma",
       "words": [
         {
           "en": "sunny",
@@ -248,7 +248,7 @@
       "theme": "Shopping",
       "theme_hy": "Գնումներ",
       "level": "A2",
-      "voice": "en-GB-SoniaNeural",
+      "voice": "kokoro:bf_emma",
       "words": [
         {
           "en": "cash",
@@ -368,7 +368,7 @@
       "theme": "Family",
       "theme_hy": "Ընտանիք",
       "level": "A1",
-      "voice": "en-GB-SoniaNeural",
+      "voice": "kokoro:bf_emma",
       "words": [
         {
           "en": "parents",
@@ -488,7 +488,7 @@
       "theme": "Feelings",
       "theme_hy": "Զգացմունքներ",
       "level": "A2",
-      "voice": "en-GB-SoniaNeural",
+      "voice": "kokoro:bf_emma",
       "words": [
         {
           "en": "happy",
@@ -608,7 +608,7 @@
       "theme": "Clothes",
       "theme_hy": "Հագուստ",
       "level": "A1",
-      "voice": "en-GB-SoniaNeural",
+      "voice": "kokoro:bf_emma",
       "words": [
         {
           "en": "shirt",
@@ -728,7 +728,7 @@
       "theme": "Time words",
       "theme_hy": "Ժամանակ",
       "level": "A1",
-      "voice": "en-GB-SoniaNeural",
+      "voice": "kokoro:bf_emma",
       "words": [
         {
           "en": "yesterday",

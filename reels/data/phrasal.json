@@ -7,7 +7,7 @@
       "number": 1,
       "verb": "GET",
       "level": "A2–B1",
-      "voice": "en-GB-SoniaNeural",
+      "voice": "kokoro:bf_emma",
       "items": [
         {
           "en": "get up",
@@ -73,7 +73,7 @@
       "number": 3,
       "verb": "PUT",
       "level": "A2–B1",
-      "voice": "en-GB-SoniaNeural",
+      "voice": "kokoro:bf_emma",
       "items": [
         {
           "en": "put on",
@@ -139,7 +139,7 @@
       "number": 5,
       "verb": "TURN",
       "level": "A2–B1",
-      "voice": "en-GB-SoniaNeural",
+      "voice": "kokoro:bf_emma",
       "items": [
         {
           "en": "turn on",
@@ -205,7 +205,7 @@
       "number": 7,
       "verb": "COME",
       "level": "A2–B1",
-      "voice": "en-GB-SoniaNeural",
+      "voice": "kokoro:bf_emma",
       "items": [
         {
           "en": "come in",
