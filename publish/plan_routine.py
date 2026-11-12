@@ -42,7 +42,7 @@ def main():
         shutil.copy2(OUT / f"routine-{st['id']}.mp4", rdir / f"routine-{st['id']}.mp4")
         Image.open(OUT / f"routine-{st['id']}.png").convert("RGB").save(rdir / "cover.jpg", "JPEG", quality=92)
         new.append({"id": rid, "date": day, "time": AT, "timezone": "Asia/Yerevan", "type": "REEL", "format": "REELS", "kind": "routine",
-                    "content_id": st["id"], "title": f"My day {st['number']:02d}", "caption": caption(st), "review_status": "staged",
+                    "content_id": st["id"], "title": f"My day {st['number']:02d}", "caption": caption(st), "review_status": "draft",   # held: published only after the owner says so
                     "media": {"video_url": f"{BASE}/{rid}/routine-{st['id']}.mp4", "cover_url": f"{BASE}/{rid}/cover.jpg"}})
         print("scheduled", day, st["id"])
     subprocess.run(["git", "pull", "-q", "--rebase", "--autostash"], cwd=ROOT, check=False)
