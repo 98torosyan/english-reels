@@ -26,7 +26,7 @@ def music(day_index):
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--media-repo", required=True); 
+    ap = argparse.ArgumentParser(); ap.add_argument("--media-repo", required=True); ap.add_argument("--start", required=True)
     ap.add_argument("--only", nargs="*"); a = ap.parse_args()
     media = Path(a.media_repo).resolve()
     lists = json.loads((ROOT / "reels/data/reading.json").read_text(encoding="utf-8"))["stories"]
