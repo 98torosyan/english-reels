@@ -31,7 +31,7 @@ def main():
     ap.add_argument("--only", nargs="*"); a = ap.parse_args()
     media = Path(a.media_repo).resolve()
     lists = json.loads((ROOT / "reels/data/words10.json").read_text(encoding="utf-8"))["lists"]
-    q = json.loads(QUEUE.read_text(encoding="utf-8"))
+    new = []
     start = dt.date.fromisoformat(a.start)
     for k, l in enumerate(lists):
         if a.only and l["id"] not in a.only: continue
@@ -44,15 +44,19 @@ def main():
         shutil.copy2(OUT / f"words10-{l['id']}.mp4", rdir / f"words10-{l['id']}.mp4")
         Image.open(OUT / f"words10-{l['id']}.png").convert("RGB").save(rdir / "cover.jpg", "JPEG", quality=92)
         shutil.copy2(OUT / f"words10-{l['id']}-story.jpg", sdir / "story.jpg")
-        q["items"] = [i for i in q["items"] if i["id"] not in (rid, sid)]
-        q["items"].append({"id": rid, "date": day, "time": REEL_AT, "timezone": "Asia/Yerevan", "type": "REEL", "format": "REELS",
+        new.append({"id": rid, "date": day, "time": REEL_AT, "timezone": "Asia/Yerevan", "type": "REEL", "format": "REELS",
                            "kind": "words10", "content_id": l["id"], "title": f"10 words {l['number']:02d}", "caption": caption(l),
                            "review_status": "staged", "thumb_offset": 1900,
                            "media": {"video_url": f"{BASE}/{rid}/words10-{l['id']}.mp4", "cover_url": f"{BASE}/{rid}/cover.jpg"}})
-        q["items"].append({"id": sid, "date": day, "time": STORY_AT, "timezone": "Asia/Yerevan", "type": "STORY", "format": "STORIES",
+        new.append({"id": sid, "date": day, "time": STORY_AT, "timezone": "Asia/Yerevan", "type": "STORY", "format": "STORIES",
                            "kind": "story-image", "content_id": f"words10-{l['id']}", "title": f"10 words {l['number']:02d} story", "caption": "",
                            "review_status": "staged", "media": {"image_url": f"{BASE}/{sid}/story.jpg"}})
         print("scheduled", day, l["id"])
+    # re-read the queue just before writing: the publisher may have updated it while we rendered
+    subprocess.run(["git", "pull", "-q", "--rebase", "--autostash"], cwd=ROOT, check=False)
+    q = json.loads(QUEUE.read_text(encoding="utf-8"))
+    ids = {i["id"] for i in new}
+    q["items"] = [i for i in q["items"] if i["id"] not in ids] + new
     q["items"].sort(key=lambda i: (i["date"], i["time"], i["id"]))
     QUEUE.write_text(json.dumps(q, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

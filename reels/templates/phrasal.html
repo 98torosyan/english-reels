@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <link rel="icon" href="data:,">
+ <style>
+ @font-face{font-family:Inter;src:url("__INTER_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ @font-face{font-family:IPA;src:url("__INTER_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0000-00FF}
+ @font-face{font-family:IPA;src:url("__INTER_EXT_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0100-02FF}
+ @font-face{font-family:IPA;src:url("__INTER_GREEK_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0370-03FF}
+ @font-face{font-family:Literata;src:url("__LITERATA_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ @font-face{font-family:NotoArmenian;src:url("__ARMENIAN_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ *{box-sizing:border-box;margin:0}
+ html,body{width:1080px;height:1920px;overflow:hidden;font-family:Inter,sans-serif}
+ .header{position:absolute;top:100px;left:82px;right:82px;display:flex;align-items:center;gap:22px}
+ .logo{width:84px;height:84px;border-radius:22px}
+ .brand-name{font:700 34px Literata,serif;letter-spacing:-.5px}
+ .brand-sub{margin-top:6px;font-size:20px;font-weight:800;letter-spacing:5px}
+ .header .handle{margin-left:auto;font:800 24px Inter;letter-spacing:2px;color:var(--c)}
+ .eyebrow{position:absolute;top:236px;left:82px;right:82px;display:flex;align-items:center;justify-content:space-between;font:800 26px Inter;letter-spacing:5px}
+ .eyebrow span{font:700 24px Inter;letter-spacing:3px;padding:6px 20px;border-radius:99px}
+ .title{position:absolute;top:318px;left:82px;right:82px}
+ .title h1{font:700 84px/1.02 Literata,serif;letter-spacing:-2px}
+ .title h1 em{color:var(--c);font-style:italic}
+ .title .t-hy{margin-top:12px;font:500 34px NotoArmenian,sans-serif;color:var(--muted)}
+ .cards{position:absolute;top:500px;left:58px;right:58px;display:grid;gap:18px}
+ .pc{position:relative;height:244px;border-radius:30px;background:var(--card);border:1.5px solid var(--line);box-shadow:0 14px 30px #3a2f1410;padding:26px 34px;overflow:hidden}
+ .pc .top{display:flex;align-items:baseline;justify-content:space-between;gap:20px}
+ .pc .ph{font:700 58px/1 Literata,serif;letter-spacing:-1px;white-space:nowrap;color:var(--ink)}
+ .pc .ph em{font-style:italic;color:var(--c)}
+ .pc .mean{font:600 30px NotoArmenian,sans-serif;color:var(--muted);text-align:right}
+ .pc .ex{margin-top:22px;font:500 38px/1.3 Literata,serif;color:var(--ink)}
+ .pc .ex span{display:inline-block;padding:0 4px;border-radius:9px;transition:none}
+ .pc .ex span.key{font-weight:700;box-shadow:inset 0 -7px 0 color-mix(in srgb,var(--c) 30%,transparent)}
+ .pc .exhy{margin-top:8px;font:500 27px NotoArmenian,sans-serif;color:var(--soft)}
+ .pc .num{position:absolute;right:28px;bottom:20px;font:italic 600 26px Literata,serif;color:var(--soft)}
+ .pc .turn{position:absolute;left:34px;bottom:20px;display:flex;align-items:center;gap:14px;font:800 20px Inter;letter-spacing:3px;color:var(--c);opacity:0}
+ .pc .turn i{display:block;width:180px;height:6px;border-radius:9px;background:#17183A14;overflow:hidden}
+ .pc .turn i b{display:block;height:100%;width:0;background:var(--c)}
+ .pc .turn em{font:600 22px NotoArmenian,sans-serif;font-style:normal;letter-spacing:0;color:var(--muted)}
+ .turnbar{position:absolute;left:50%;top:1628px;width:420px;margin-left:-210px;height:8px;border-radius:9px;background:#17183A14;overflow:hidden;opacity:0}
+ .turnbar b{display:block;height:100%;width:0;background:var(--c)}
+ .say{position:absolute;left:82px;right:82px;top:1572px;display:flex;align-items:center;justify-content:center;gap:16px;font:800 26px Inter;letter-spacing:4px;color:var(--c)}
+ .say em{font:600 28px NotoArmenian,sans-serif;font-style:normal;letter-spacing:0;color:var(--muted)}
+ .cnt{font:italic 600 30px Literata,serif;letter-spacing:0;color:var(--muted)}
+ .foot{position:absolute;left:82px;right:82px;bottom:190px;display:flex;justify-content:space-between;font-size:26px;font-weight:700}
+ .progress{position:absolute;left:82px;right:82px;bottom:140px;height:7px;border-radius:99px;overflow:hidden}
+ .progress i{display:block;height:100%;width:0}
+ .outro{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;opacity:0}
+ .outro img{width:170px;height:170px;border-radius:42px}
+ .outro h2{margin-top:44px;font:700 82px/1.06 Literata,serif}
+ .outro p{margin-top:22px;font:600 38px NotoArmenian,Inter,sans-serif}
+ .save{margin-top:46px;padding:16px 34px;border-radius:99px;font-size:34px;font-weight:800}
+ .follow{margin-top:26px;font:700 30px NotoArmenian,Inter,sans-serif}
+ .signature{margin-top:58px;font-size:24px;font-weight:800;letter-spacing:5px}
+ body.story .progress,body.story .outro,body.story .header{display:none}
+ </style>
+</head>
+<body>
+ <header class="header"><img class="logo" src="__LOGO_DATA__" alt=""><div><div class="brand-name">Gayane Torosyan</div><div class="brand-sub">ENGLISH READING ROOM</div></div><div class="handle">@english.readingroom</div></header>
+ <div class="eyebrow" id="eyebrow"><b id="series"></b><span id="level" class="chip"></span></div>
+ <div class="title" id="title"><h1 id="theme"></h1><div class="t-hy" id="themeHy"></div></div>
+ <div class="cards" id="cards"></div>
+ <div class="turnbar" id="turnbar"><b id="turnfill"></b></div><div class="say" id="say"><span id="sayEn">LISTEN AND REPEAT</span> <em id="sayHy">· Լսի՛ր և կրկնի՛ր</em> <span class="cnt" id="cnt"></span></div>
+ <footer class="foot"><span>Save it · Share it</span><span class="handle">@english.readingroom</span></footer>
+ <div class="progress"><i id="progress"></i></div>
+ <section id="outro" class="outro"><img id="outroLogo" src="__LOGO_DATA__" alt=""><h2>Save it · <em>share it</em></h2><p>Պահի՛ր և ուղարկի՛ր ընկերոջդ</p><span class="save" id="saveChip">Save</span><span class="follow">Անհատական և խմբային դասեր · գրե՛ք Direct-ով</span><span class="signature">@ENGLISH.READINGROOM</span></section>
+ <script>
+ const clamp=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-x,3);
+ const back=x=>{const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+ let D=null,T=null;
+ const phHtml=(en,verb)=>{const w=en.split(' ');return w[0]+' <em>'+w.slice(1).join(' ')+'</em>'};
+ window.configure=(data,timeline)=>{D=data;T=timeline;
+  if(data.color) document.documentElement.style.setProperty('--c',data.color);
+  series.textContent=`PHRASAL VERBS · ${String(data.number).padStart(2,'0')}`; level.textContent=data.level;
+  theme.innerHTML=`Phrasal verbs with <em>${data.verb.toLowerCase()}</em>`; themeHy.textContent=`4 դարձված՝ «${data.verb.toLowerCase()}» բայով`;
+  cards.innerHTML=data.items.map((it,i)=>`<div class="pc" id="c${i}"><div class="top"><div class="ph">${phHtml(it.en)}</div><div class="mean">${it.hy}</div></div>
+   <div class="ex">${it.example.split(' ').map((w,j)=>`<span data-j="${j}">${w}</span>`).join(' ')}</div><div class="exhy">${it.example_hy}</div>
+   </div>`).join('');
+  const FORMS={get:'get gets got getting',take:'take takes took taken taking',put:'put puts putting',look:'look looks looked looking',turn:'turn turns turned turning',give:'give gives gave given giving',come:'come comes came coming',go:'go goes went gone going'};
+  data.items.forEach((it,i)=>{const forms=(FORMS[data.verb.toLowerCase()]||'').split(' '); const parts=it.en.split(' ').slice(1);
+   const spans=[...document.querySelectorAll(`#c${i} .ex span`)]; const bare=x=>x.textContent.toLowerCase().replace(/[^a-z']/g,'');
+   const v=spans.findIndex(x=>forms.includes(bare(x))); if(v<0) return; spans[v].classList.add('key');
+   let need=[...parts]; for(const x of spans.slice(v+1)){if(need.length&&bare(x)===need[0]){x.classList.add('key');need.shift();}}});
+  if(data.story){document.body.classList.add('story');sayEn.textContent='LISTEN IN OUR REELS';sayHy.textContent='· Ձայնով՝ մեր Reels-ում';}
+ };
+ window.fit=()=>{document.querySelectorAll('.pc').forEach(c=>{const ex=c.querySelector('.ex');let f=38;while(ex.scrollHeight>52*1.0+2&&f>28){f-=1;ex.style.fontSize=f+'px';}
+   const ph=c.querySelector('.ph'),m=c.querySelector('.mean');let g=58;while(ph.getBoundingClientRect().right>m.getBoundingClientRect().left-16&&g>40){g-=2;ph.style.fontSize=g+'px';}})};
+ window.seek=t=>{
+  progress.style.width=(clamp(t/T.total)*100)+'%';
+  const a=ease(clamp(t/.45)); eyebrow.style.opacity=a; eyebrow.style.transform=`translateX(${(1-a)*-30}px)`;
+  const b=ease(clamp((t-.1)/.55)); title.style.opacity=b; title.style.transform=`translateY(${(1-b)*50}px)`;
+  say.style.opacity=ease(clamp((t-1.4)/.5));
+  const cur=T.items.findIndex(p=>t>=p.at&&t<p.end); cnt.textContent=cur>=0?`${cur+1}/4`:'';
+  const tp=cur>=0&&t>=T.items[cur].turn?T.items[cur]:null;
+  if(!D.story){sayEn.textContent=tp?'YOUR TURN':'LISTEN AND REPEAT'; sayHy.textContent=tp?'· Քո հերթն է':'· Լսի՛ր և կրկնի՛ր';}
+  turnbar.style.opacity=tp?1:0; turnfill.style.width=tp?(clamp((t-tp.turn)/(tp.end-tp.turn))*100)+'%':'0';
+  D.items.forEach((it,i)=>{const c=document.getElementById('c'+i), p=T.items[i];
+   const e=ease(clamp((t-.45-i*.12)/.55));
+   const on=t>=p.at&&t<p.end; const k=on?ease(clamp((t-p.at)/.3)):(t>=p.end?Math.max(0,1-clamp((t-p.end)/.35)):0);
+   c.style.opacity=e*(cur>=0&&!on?.62:1); c.style.transform=`translateY(${(1-e)*60}px) scale(${1+.025*k})`;
+   c.style.borderColor=k>.05?'var(--c)':''; c.style.borderWidth=k>.05?'2.5px':''; c.style.boxShadow=k>.05?'0 22px 48px #3a2f1426':'';
+   c.querySelectorAll('.ex span').forEach(s=>{const w=p.words[+s.dataset.j]; const now=t>=w[0]&&t<w[1]; const done=t>=w[1];
+    const pop=now?back(clamp((t-w[0])/.18)):0;
+    s.style.background=now?'var(--c)':'transparent'; s.style.color=now?'#fff':(on&&!done&&t<p.turn?'var(--soft)':'');
+    s.style.transform=`scale(${1+.12*pop}) translateY(${-4*pop}px)`;});
+  });
+  const o=ease(clamp((t-(T.total-2.2))/.8)); outro.style.opacity=o; outro.style.transform=`scale(${1.03-.03*o})`;
+  const o2=clamp((t-(T.total-2.2))/.8); outroLogo.style.transform=`scale(${back(clamp(o2*1.4))})`; saveChip.style.transform=`scale(${back(clamp(o2*1.6-.3))})`;
+ };
+ </script>
+</body>
+</html>
