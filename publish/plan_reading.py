@@ -12,7 +12,8 @@ REEL_AT = "10:30"
 
 
 def caption(st):
-    return (f"Կարդանք միասին · Daily reading\n{st['title']} · {st['title_hy']} ({st['level']})\n\n{st['en']}\n\n"
+    head = "Գիտե՞իր · Did you know?" if st.get("series") == "DID YOU KNOW?" else "Կարդանք միասին · Daily reading"
+    return (f"{head}\n{st['title']} · {st['title_hy']} ({st['level']})\n\n{st['en']}\n\n"
             f"Թարգմանություն՝\n{st['hy']}\n\n"
             "Լսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\n"
             "Պահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\n"
