@@ -2,7 +2,7 @@
 
 Report only: it never blocks or delays publishing. Results are cached by audio hash in qc/data/voice_heard.json,
 so only new clips are transcribed. Writes voice_report.md and exits 0 when nothing is clear, 3 when something sounds wrong."""
-import difflib, hashlib, json, re, sys
+import difflib, hashlib, json, re, subprocess, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,6 +26,14 @@ def score(expected, heard):
     return difflib.SequenceMatcher(None, a, b).ratio()
 
 
+def pcm(path):
+    """16 kHz mono float audio via ffmpeg (avoids PyAV version issues)."""
+    import numpy as np
+    raw = subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-i", str(path), "-f", "f32le", "-ac", "1", "-ar", "16000", "-"],
+                         capture_output=True, check=True).stdout
+    return np.frombuffer(raw, dtype=np.float32)
+
+
 def main():
     from faster_whisper import WhisperModel
     model = WhisperModel("small.en", device="cpu", compute_type="int8")
@@ -41,7 +49,7 @@ def main():
                 continue
             key = hashlib.sha1(mp3.read_bytes()).hexdigest()
             if key not in cache:
-                segs, _ = model.transcribe(str(mp3), language="en", beam_size=5, condition_on_previous_text=False, vad_filter=False)
+                segs, _ = model.transcribe(pcm(mp3), language="en", beam_size=5, condition_on_previous_text=False, vad_filter=False)
                 cache[key] = " ".join(s.text.strip() for s in segs)
             heard = cache[key]
             sc = score(text, heard)

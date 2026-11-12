@@ -16,7 +16,6 @@ jobs:
   listen:
     runs-on: ubuntu-latest
     timeout-minutes: 120
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
         with:
@@ -24,10 +23,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -q "faster-whisper>=1.1"
+      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null && pip install -q "faster-whisper>=1.1"
       - name: Listen
         id: v
-        run: python qc/check_voice.py || echo "flag=1" >> "$GITHUB_OUTPUT"
+        run: |
+          set +e; python qc/check_voice.py; code=$?; set -e
+          if [ $code -eq 3 ]; then echo "flag=1" >> "$GITHUB_OUTPUT"; elif [ $code -ne 0 ]; then exit $code; fi
       - name: Save what was heard (so next time only new clips are checked)
         run: |
           git add qc/data/voice_heard.json
