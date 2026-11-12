@@ -1,0 +1,119 @@
+{
+  "series": "Weekly review",
+  "note": "Sunday recap of the week's 10-words lists: Armenian shown, viewer says the English word, then it is revealed and voiced. Audio is reused from assets/words10.",
+  "reviews": [
+    {
+      "id": "week1",
+      "number": 1,
+      "date": "2026-11-15",
+      "lists": [
+        "airport",
+        "kitchen",
+        "weather"
+      ],
+      "picks": [
+        [
+          "airport",
+          1
+        ],
+        [
+          "kitchen",
+          3
+        ],
+        [
+          "weather",
+          5
+        ],
+        [
+          "airport",
+          4
+        ],
+        [
+          "kitchen",
+          6
+        ],
+        [
+          "weather",
+          8
+        ]
+      ]
+    },
+    {
+      "id": "week2",
+      "number": 2,
+      "date": "2026-11-22",
+      "lists": [
+        "doctor",
+        "shopping",
+        "work",
+        "family",
+        "city",
+        "feelings",
+        "hotel"
+      ],
+      "picks": [
+        [
+          "doctor",
+          1
+        ],
+        [
+          "shopping",
+          3
+        ],
+        [
+          "work",
+          5
+        ],
+        [
+          "family",
+          7
+        ],
+        [
+          "city",
+          9
+        ],
+        [
+          "feelings",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "week3",
+      "number": 3,
+      "date": "2026-11-29",
+      "lists": [
+        "clothes",
+        "school",
+        "time",
+        "cafe"
+      ],
+      "picks": [
+        [
+          "clothes",
+          1
+        ],
+        [
+          "school",
+          3
+        ],
+        [
+          "time",
+          5
+        ],
+        [
+          "cafe",
+          7
+        ],
+        [
+          "clothes",
+          4
+        ],
+        [
+          "school",
+          6
+        ]
+      ]
+    }
+  ]
+}

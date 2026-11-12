@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <link rel="icon" href="data:,">
+ <style>
+ @font-face{font-family:Inter;src:url("__INTER_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ @font-face{font-family:IPA;src:url("__INTER_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0000-00FF}
+ @font-face{font-family:IPA;src:url("__INTER_EXT_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0100-02FF}
+ @font-face{font-family:IPA;src:url("__INTER_GREEK_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0370-03FF}
+ @font-face{font-family:Literata;src:url("__LITERATA_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ @font-face{font-family:NotoArmenian;src:url("__ARMENIAN_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ *{box-sizing:border-box;margin:0}
+ html,body{width:1080px;height:1920px;overflow:hidden;font-family:Inter,sans-serif}
+ .header{position:absolute;top:100px;left:82px;right:82px;display:flex;align-items:center;gap:22px}
+ .logo{width:84px;height:84px;border-radius:22px}
+ .brand-name{font:700 34px Literata,serif;letter-spacing:-.5px}
+ .brand-sub{margin-top:6px;font-size:20px;font-weight:800;letter-spacing:5px}
+ .header .handle{margin-left:auto;font:800 24px Inter;letter-spacing:2px;color:var(--c)}
+ .eyebrow{position:absolute;top:236px;left:82px;right:82px;display:flex;align-items:center;justify-content:space-between;font:800 26px Inter;letter-spacing:5px}
+ .eyebrow span{font:700 24px Inter;letter-spacing:3px;padding:6px 20px;border-radius:99px}
+ .title{position:absolute;top:318px;left:82px;right:82px}
+ .title h1{font:700 84px/1.02 Literata,serif;letter-spacing:-2px}
+ .title h1 em{color:var(--c);font-style:italic}
+ .title .t-hy{margin-top:12px;font:500 34px NotoArmenian,sans-serif;color:var(--muted)}
+ .stage{position:absolute;top:520px;left:70px;right:70px;height:780px}
+ .q{position:absolute;inset:0;border-radius:44px;background:var(--card);border:1.5px solid var(--line);box-shadow:0 26px 60px #3a2f1418;display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:80px;opacity:0}
+ .q .k{font:800 24px Inter;letter-spacing:6px;color:var(--soft)}
+ .q .qhy{margin-top:40px;font:700 92px/1.1 NotoArmenian,sans-serif;color:var(--ink);padding:0 40px}
+ .q .ask{margin-top:24px;font:italic 500 40px Literata,serif;color:var(--muted)}
+ .q .ring{position:relative;width:200px;height:200px;margin-top:60px}
+ .q .ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
+ .q .ring circle{fill:none;stroke-width:12}
+ .q .ring .trk{stroke:#17183A14}.q .ring .arc{stroke:var(--c);stroke-linecap:round}
+ .q .ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:700 96px Literata,serif;color:var(--c)}
+ .q .ans{position:absolute;left:0;right:0;top:440px;opacity:0}
+ .q .ans .qen{display:inline-block;font:700 110px/1 Literata,serif;color:var(--c);letter-spacing:-2px;white-space:nowrap}
+ .q .ans .qipa{margin-top:18px;font:500 44px IPA,sans-serif;color:var(--muted)}
+ .dots{position:absolute;top:1352px;left:0;right:0;display:flex;justify-content:center;gap:14px}
+ .dots i{width:18px;height:18px;border-radius:50%;background:#17183A1f}
+ .dots i.on{background:var(--c);transform:scale(1.25)}.dots i.done{background:color-mix(in srgb,var(--c) 45%,transparent)}
+ .foot{position:absolute;left:82px;right:82px;bottom:190px;display:flex;justify-content:space-between;font-size:26px;font-weight:700}
+ .progress{position:absolute;left:82px;right:82px;bottom:140px;height:7px;border-radius:99px;overflow:hidden}
+ .progress i{display:block;height:100%;width:0}
+ .outro{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;opacity:0}
+ .outro img{width:170px;height:170px;border-radius:42px}
+ .outro h2{margin-top:44px;font:700 82px/1.06 Literata,serif}
+ .outro p{margin-top:22px;font:600 38px NotoArmenian,Inter,sans-serif}
+ .save{margin-top:46px;padding:16px 34px;border-radius:99px;font-size:34px;font-weight:800}
+ .follow{margin-top:26px;font:700 30px NotoArmenian,Inter,sans-serif}
+ .signature{margin-top:58px;font-size:24px;font-weight:800;letter-spacing:5px}
+ </style>
+</head>
+<body>
+ <header class="header"><img class="logo" src="__LOGO_DATA__" alt=""><div><div class="brand-name">Gayane Torosyan</div><div class="brand-sub">ENGLISH READING ROOM</div></div><div class="handle">@english.readingroom</div></header>
+ <div class="eyebrow" id="eyebrow"><b id="series"></b><span id="level" class="chip"></span></div>
+ <div class="title" id="title"><h1>Do you <em>remember?</em></h1><div class="t-hy">Հիշո՞ւմ ես այս շաբաթվա բառերը</div></div>
+ <div class="stage" id="stage"></div>
+ <div class="dots" id="dots"></div>
+ <footer class="foot"><span>Save it · Share it</span><span class="handle">@english.readingroom</span></footer>
+ <div class="progress"><i id="progress"></i></div>
+ <section id="outro" class="outro"><img id="outroLogo" src="__LOGO_DATA__" alt=""><h2>How many <em>did you get?</em></h2><p>Գրի՛ր մեկնաբանություններում՝ քանի՞սը գուշակեցիր</p><span class="save" id="saveChip">Save</span><span class="follow">Անհատական և խմբային դասեր · գրե՛ք Direct-ով</span><span class="signature">@ENGLISH.READINGROOM</span></section>
+ <script>
+ const clamp=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-x,3);
+ const back=x=>{const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+ let D=null,T=null;
+ window.configure=(data,timeline)=>{D=data;T=timeline;
+  if(data.color) document.documentElement.style.setProperty('--c',data.color);
+  series.textContent=`WEEKLY REVIEW · ${String(data.number).padStart(2,'0')}`; level.textContent=data.level;
+  stage.innerHTML=data.words.map((w,i)=>`<div class="q" id="q${i}"><div class="k">WORD ${i+1} OF ${data.words.length}</div><div class="qhy">${w.hy}</div><div class="ask">in English?</div>
+   <div class="ring"><svg viewBox="0 0 200 200"><circle class="trk" cx="100" cy="100" r="86"/><circle class="arc" cx="100" cy="100" r="86" stroke-dasharray="540" stroke-dashoffset="540"/></svg><b>3</b></div>
+   <div class="ans"><div class="qen">${w.en}</div><div class="qipa">${w.ipa}</div></div></div>`).join('');
+  dots.innerHTML=data.words.map(()=>'<i></i>').join('');
+ };
+ window.fit=()=>{document.querySelectorAll('.q').forEach(q=>{const en=q.querySelector('.qen');let f=110;while(en.scrollWidth>860&&f>60){f-=4;en.style.fontSize=f+'px';}
+  const hy=q.querySelector('.qhy');let g=92;while(hy.scrollHeight>230&&g>56){g-=4;hy.style.fontSize=g+'px';}})};
+ window.seek=t=>{
+  progress.style.width=(clamp(t/T.total)*100)+'%';
+  const a=ease(clamp(t/.45)); eyebrow.style.opacity=a; eyebrow.style.transform=`translateX(${(1-a)*-30}px)`;
+  const b=ease(clamp((t-.1)/.55)); title.style.opacity=b; title.style.transform=`translateY(${(1-b)*50}px)`;
+  D.words.forEach((w,i)=>{const q=document.getElementById('q'+i),p=T.items[i];
+   const inn=ease(clamp((t-p.at)/.4)), out=clamp((t-p.end+.35)/.35);
+   const vis=t>=p.at&&t<p.end; q.style.opacity=vis?inn*(1-out):0; q.style.transform=`translateX(${(1-inn)*80-out*80}px) scale(${.96+.04*inn})`;
+   const cd=clamp((t-p.ask)/3); const ring=q.querySelector('.ring');
+   ring.querySelector('.arc').style.strokeDashoffset=540*(1-cd); const n=Math.min(3,Math.max(1,Math.ceil(3-(t-p.ask))));
+   ring.querySelector('b').textContent=t<p.ask?'3':String(n);
+   const r=ease(clamp((t-p.reveal)/.4)); ring.style.opacity=1-r; q.querySelector('.ask').style.opacity=1-r;
+   const ans=q.querySelector('.ans'); ans.style.opacity=r; ans.style.transform=`translateY(${(1-r)*-60}px) scale(${t>=p.reveal?back(clamp((t-p.reveal)/.45)):0.9})`;
+   q.style.borderColor=t>=p.reveal?'var(--c)':''; q.style.borderWidth=t>=p.reveal?'3px':'';
+   const d=dots.children[i]; d.className=t>=p.end?'done':vis?'on':'';
+  });
+  const o=ease(clamp((t-(T.total-2.6))/.8)); outro.style.opacity=o; outro.style.transform=`scale(${1.03-.03*o})`;
+  const o2=clamp((t-(T.total-2.6))/.8); outroLogo.style.transform=`scale(${back(clamp(o2*1.4))})`; saveChip.style.transform=`scale(${back(clamp(o2*1.6-.3))})`;
+ };
+ </script>
+</body>
+</html>
