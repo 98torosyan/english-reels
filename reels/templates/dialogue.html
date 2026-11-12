@@ -44,7 +44,7 @@
  .bubble .en{margin-top:10px;font:600 56px/1.26 Literata,serif}
  .bubble .hy{margin-top:12px;font:500 36px/1.4 NotoArmenian,sans-serif;color:#E4DEFA}
  .bubble.B .en,.bubble.B .hy{text-align:right}
- .w{opacity:.5;padding:0 2px;border-radius:7px}
+ .w{opacity:.5;padding:0 3px;border-radius:8px;display:inline-block}
  .w.done{opacity:1}
  .w.now{opacity:1;background:#E9C46A;color:#17183A}
  .bar{margin-top:18px;height:10px;border-radius:99px;background:#ffffff1a;overflow:hidden;display:none}
@@ -126,7 +126,8 @@
   T.bubbles.forEach((b,i)=>{
    const el=document.getElementById('bb'+i); const a=clamp((t-b.appear)/.45);
    el.style.opacity=ease(clamp(a*1.6)); el.style.transform=`translateY(${(1-ease(a))*34}px) scale(${lerp(.96,1,back(a))})`;
-   if(b.words) el.querySelectorAll('.w').forEach(w=>{const tm=b.words[+w.dataset.k]; w.className='w'+(t>=tm[1]?' done':t>=tm[0]?' now':'')});
+   if(b.words) el.querySelectorAll('.w').forEach(w=>{const tm=b.words[+w.dataset.k]; const now=t>=tm[0]&&t<tm[1]; w.className='w'+(t>=tm[1]?' done':now?' now':'');
+    const pop=now?Math.sin(Math.PI*Math.min(1,(t-tm[0])/.22)):0; w.style.transform=pop?`translateY(${-4*pop}px) scale(${1+.1*pop})`:'';});
    if(b.pause){const f=clamp((t-b.pause[0])/(b.pause[1]-b.pause[0])); el.querySelector('.bar i').style.width=(f*100)+'%';
     const on=t>=b.pause[0]&&t<=b.pause[1]; el.style.boxShadow=on?`0 0 ${40+20*Math.sin(t*5)}px #E9C46A55, 0 20px 50px #07061566`:'0 20px 50px #07061566'; el.style.borderColor=on?'#E9C46A':'#E9C46A77';}
   });
