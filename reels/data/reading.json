@@ -18,7 +18,7 @@
       "title": "Breakfast together",
       "title_hy": "Նախաճաշը միասին",
       "level": "A2",
-      "voice": "kokoro:bf_emma",
+      "voice": "kokoro:bm_george",
       "en": "Every morning, Ani has breakfast with her family. Her mum puts warm lavash, white cheese and fresh herbs on the table. Her dad pours the tea, and her little brother, Aram, laughs and asks for more tomatoes. They talk about their plans for the day. Ani is going to school, and Aram is going to nursery. Breakfast is Ani's favourite meal, because everyone is together and nobody is in a hurry.",
       "hy": "Ամեն առավոտ Անին նախաճաշում է ընտանիքի հետ։ Մայրիկը սեղանին է դնում տաք լավաշ, սպիտակ պանիր և թարմ կանաչի։ Հայրիկը թեյ է լցնում, իսկ փոքր եղբայրը՝ Արամը, ծիծաղում է ու էլի լոլիկ խնդրում։ Նրանք խոսում են օրվա ծրագրերի մասին։ Անին գնում է դպրոց, իսկ Արամը՝ մանկապարտեզ։ Նախաճաշը Անիի սիրելի ճաշն է, որովհետև բոլորը միասին են, և ոչ ոք չի շտապում։"
     },
@@ -28,7 +28,7 @@
       "title": "At the market",
       "title_hy": "Շուկայում",
       "level": "A2",
-      "voice": "kokoro:bf_emma",
+      "voice": "kokoro:bf_isabella",
       "en": "On Saturday, Ani goes to the market with her mum. The market is big, busy and full of colours. There are red pomegranates, sweet grapes and orange apricots. Ani also loves the colourful sweets on long strings. A kind man gives her a bag of apricots to try. 'Thank you very much!' says Ani. They buy fruit, nuts and bread, and then they walk home slowly in the sunshine.",
       "hy": "Շաբաթ օրը Անին մայրիկի հետ գնում է շուկա։ Շուկան մեծ է, աշխույժ ու գույներով լի։ Կան կարմիր նռներ, քաղցր խաղող և նարնջագույն ծիրան։ Անին սիրում է նաև թելերին շարված գունավոր քաղցրավենիքը։ Մի բարի մարդ նրան մի տոպրակ ծիրան է տալիս համտեսելու։ «Շատ շնորհակալություն»,— ասում է Անին։ Նրանք գնում են միրգ, ընկույզ և հաց, հետո արևի տակ դանդաղ քայլում են տուն։"
     },
@@ -38,7 +38,7 @@
       "title": "A rainy day",
       "title_hy": "Անձրևոտ օր",
       "level": "A2",
-      "voice": "kokoro:bf_emma",
+      "voice": "kokoro:bm_lewis",
       "en": "Today it is raining, so Ani stays at home. She sits by the window with a blanket and a cup of hot chocolate. Outside, people are walking quickly under their umbrellas. Inside, it is warm and quiet. Ani opens her favourite storybook and starts to read. Sometimes she looks up and watches the raindrops on the glass. 'I love rainy days,' she says. 'They are perfect for reading.'",
       "hy": "Այսօր անձրև է գալիս, ու Անին մնում է տանը։ Նա նստում է պատուհանի մոտ՝ վերմակով և մի բաժակ տաք շոկոլադով։ Դրսում մարդիկ արագ քայլում են հովանոցների տակ։ Ներսում տաք է ու հանգիստ։ Անին բացում է իր սիրելի հեքիաթների գիրքը և սկսում կարդալ։ Երբեմն նա նայում է ապակու վրայի անձրևի կաթիլներին։ «Ես սիրում եմ անձրևոտ օրերը,— ասում է նա։— Դրանք կատարյալ են կարդալու համար»։"
     },
@@ -48,7 +48,7 @@
       "title": "An English lesson",
       "title_hy": "Անգլերենի դաս",
       "level": "A2",
-      "voice": "kokoro:bf_emma",
+      "voice": "kokoro:bf_alice",
       "en": "Ani's favourite lesson is English. Today the class is learning new words about animals. The teacher asks, 'What is this in English?' Ani raises her hand and answers, 'It's a dog!' 'Well done, Ani!' says the teacher. After that, the children read a short story and answer some questions. Ani writes the new words in her notebook. At home, she wants to practise them with her little brother.",
       "hy": "Անիի սիրելի դասը անգլերենն է։ Այսօր դասարանը սովորում է կենդանիների մասին նոր բառեր։ Ուսուցիչը հարցնում է. «Սա ի՞նչ է անգլերեն»։ Անին բարձրացնում է ձեռքը և պատասխանում. «Դա շուն է»։ «Ապրե՛ս, Անի»,— ասում է ուսուցիչը։ Դրանից հետո երեխաները կարդում են կարճ պատմություն և պատասխանում հարցերի։ Անին նոր բառերը գրում է տետրում։ Տանը նա ուզում է դրանք կրկնել փոքր եղբոր հետ։"
     },
@@ -58,7 +58,7 @@
       "title": "A walk in the park",
       "title_hy": "Զբոսանք այգում",
       "level": "A2",
-      "voice": "kokoro:bf_emma",
+      "voice": "kokoro:bm_fable",
       "en": "Every evening, Ani takes her dog, Toto, for a walk in the park. It is autumn now, and the trees are yellow and orange. The leaves are falling, and they make a soft sound under Ani's feet. Toto runs, jumps and plays with the leaves. Ani laughs. They sit on a bench for a few minutes and watch the sunset. Then they go home, because it is getting cold.",
       "hy": "Ամեն երեկո Անին իր շանը՝ Տոտոյին, զբոսնելու է տանում այգի։ Հիմա աշուն է, ծառերը դեղին ու նարնջագույն են։ Տերևները թափվում են և մեղմ խշշում Անիի ոտքերի տակ։ Տոտոն վազում է, ցատկում և խաղում տերևների հետ։ Անին ծիծաղում է։ Նրանք մի քանի րոպե նստում են նստարանին և նայում մայրամուտին։ Հետո գնում են տուն, որովհետև ցուրտ է դառնում։"
     },
