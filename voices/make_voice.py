@@ -14,7 +14,7 @@ CLEAN = re.compile(r"[^\w']+", re.UNICODE)
 KEEP = {"zoo", "saturday-market", "my-garden"}  # original site lessons
 GAP = 0.9  # seconds of silence after each sentence
 
-def norm(s): return CLEAN.sub("", s.replace("’", "'")).lower()
+def norm(s): return CLEAN.sub("", s.replace("’", "'")).lower().strip("'")
 
 _KOKORO = None
 
@@ -104,6 +104,7 @@ def main():
     made += voice_stories()
     made += voice_words10()
     made += voice_phrasal()
+    made += voice_reading()
     print(f"{made} file(s) voiced.")
 
 
@@ -261,6 +262,25 @@ def voice_phrasal():
                 except Exception as error:
                     print(f"SKIPPED phrasal {st['id']}/{key}: {error}"); mp3.unlink(missing_ok=True); continue
                 tj.write_text(json.dumps({"text": text, "words": words, "tag": st["voice"]}), encoding="utf-8"); made += 1
+    return made
+
+def voice_reading():
+    """Daily reading: the whole story, calmly, with word timings for the highlight."""
+    made = 0
+    root = LESSONS.parents[1]
+    data = json.loads((root / "reels/data/reading.json").read_text(encoding="utf-8"))
+    for st in data["stories"]:
+        out = root / "assets" / "reading" / st["id"]; out.mkdir(parents=True, exist_ok=True)
+        mp3, tj = out / "p.mp3", out / "p.json"
+        if mp3.exists() and tj.exists():
+            old = json.loads(tj.read_text())
+            if old.get("text") == st["en"] and old.get("tag") == st["voice"]: continue
+        try:
+            bounds = asyncio.run(synth(st["en"], st["voice"], "-8%", mp3))
+            words = align(st["en"].split(), bounds)
+        except Exception as error:
+            print(f"SKIPPED reading {st['id']}: {error}"); mp3.unlink(missing_ok=True); continue
+        tj.write_text(json.dumps({"text": st["en"], "words": words, "tag": st["voice"]}), encoding="utf-8"); made += 1
     return made
 
 if __name__ == "__main__":
