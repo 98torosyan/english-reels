@@ -13,7 +13,7 @@ PUBLIC = "api.languagetool.org" in LT
 IGNORE = {"WHITESPACE_RULE", "EN_QUOTES", "DASH_RULE", "UPPERCASE_SENTENCE_START", "PUNCTUATION_PARAGRAPH_END",
           "COMMA_PARENTHESIS_WHITESPACE", "EN_UNPAIRED_BRACKETS", "SENTENCE_FRAGMENT", "I_LOWERCASE",
           "INTERJECTIONS_PUNCTUATION", "SERIAL_COMMA_ON", "PASSIVE_VOICE_SIMPLE"}  # style preferences, not errors
-NAMES = {"gayane", "torosyan", "ufar", "yerevan", "armenia", "armenian", "ani", "aram", "lilit", "narek", "mane", "davit", "tigran", "anna", "sona", "hayk", "gor", "sevan", "dilijan", "gata", "toto", "lavash", "leo", "biscuit"}
+NAMES = {"gayane", "torosyan", "ufar", "yerevan", "armenia", "armenian", "ani", "aram", "lilit", "narek", "mane", "davit", "tigran", "anna", "sona", "hayk", "gor", "sevan", "dilijan", "gata", "toto", "lavash", "leo", "biscuit", "sam", "yuki", "ella", "noah", "lily", "zara", "ben", "mia"}
 ALLOW = json.loads((ROOT / "qc/data/english_allow.json").read_text(encoding="utf-8"))
 load = lambda p: json.loads((ROOT / p).read_text(encoding="utf-8"))
 clean = lambda s: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s)).replace("___", "…").strip()
@@ -35,6 +35,9 @@ def texts():
         for n, it in enumerate(c.get("items", [])):
             for k in ("en", "example"):
                 if it.get(k) and "___" not in it[k]: yield f"carousel:{c['id']}/{n}/{k}", clean(it[k])
+    for st in load("carousels/data/picture_stories.json")["stories"]:
+        for k, sc in enumerate(st["scenes"]): yield f"picstory:{st['id']}/{k}", sc
+        if st.get("question"): yield f"picstory:{st['id']}/q", st["question"]
     for st in load("reels/data/storyvideo.json")["stories"]:
         for k, sc in enumerate(st["scenes"]): yield f"storyvideo:{st['id']}/{k}", sc
     for st in load("reels/data/reading.json")["stories"]:
