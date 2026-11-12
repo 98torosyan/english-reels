@@ -14,37 +14,38 @@
  /* per-scene background: the scene's own picture, blurred, so every sentence sits on its own colours */
  .bg{position:absolute;inset:-120px;background-size:cover;background-position:center;filter:blur(60px) saturate(1.35) brightness(.92);opacity:0;will-change:opacity}
  .shade{position:absolute;inset:0;background:linear-gradient(180deg,#0000 0%,#0000 55%,#0b0a1a40 100%),radial-gradient(1200px 900px at 50% 38%,#ffffff22,#0000 70%)}
- .pill{position:absolute;top:74px;left:64px;display:flex;align-items:center;gap:16px;padding:10px 26px 10px 10px;border-radius:99px;background:#FFFCF6e6;box-shadow:0 12px 30px #0003;z-index:5}
+ .pill{display:none!important;position:absolute;align-items:center;gap:16px;padding:10px 26px 10px 10px;border-radius:99px;background:#FFFCF6e6;box-shadow:0 12px 30px #0003;z-index:5}
  .pill img{width:60px;height:60px;border-radius:16px}.pill b{display:block;font:700 26px Literata,serif;color:var(--ink)}.pill span{display:block;margin-top:3px;font:800 15px Inter;letter-spacing:3.5px;color:#8C89A0}
- .chip{position:absolute;top:86px;right:64px;z-index:5;font:800 22px Inter;letter-spacing:4px;color:#fff;background:#17183Acc;padding:14px 24px;border-radius:99px}
- .frame{position:absolute;left:80px;top:250px;width:920px;height:920px;border-radius:52px;overflow:hidden;border:10px solid #FFFCF6;box-shadow:0 40px 90px #0b0a1a66;background:#FFFCF6;z-index:3}
+ .chip{display:none;position:absolute;top:86px;right:64px;z-index:5;font:800 22px Inter;letter-spacing:4px;color:#fff;background:#17183Acc;padding:14px 24px;border-radius:99px}
+ .frame{position:absolute;inset:0;overflow:hidden;background:#2a2433;z-index:1}
  .shot{position:absolute;inset:0;opacity:0;will-change:transform,opacity}
  .shot img{width:100%;height:100%;object-fit:cover;display:block}
- .count{position:absolute;right:26px;top:26px;z-index:4;font:800 24px Inter;letter-spacing:2px;color:#fff;background:#17183Ab3;padding:10px 18px;border-radius:99px}
- .card{position:absolute;left:70px;right:70px;top:1215px;min-height:330px;padding:44px 50px 40px;border-radius:44px;background:var(--card);box-shadow:0 30px 70px #0b0a1a55;z-index:4}
- .card:before{content:"";position:absolute;left:50px;top:0;width:120px;height:8px;border-radius:0 0 8px 8px;background:var(--c)}
+ .count{position:absolute;right:56px;top:640px;z-index:4;font:800 24px Inter;letter-spacing:2px;color:#fff;background:#17183Ab3;padding:10px 18px;border-radius:99px}
+ .topfade{position:absolute;left:0;right:0;top:0;height:900px;z-index:2;background:linear-gradient(180deg,#FFF8EEf5 0%,#FFF8EEe8 34%,#FFF8EE99 52%,#FFF8EE00 72%)}
+ .botfade{position:absolute;left:0;right:0;bottom:0;height:520px;z-index:2;background:linear-gradient(0deg,#0b0a1a99,#0b0a1a00)}
+ .card{position:absolute;left:64px;right:64px;top:190px;min-height:300px;z-index:4;text-align:center}
  .say{position:relative}
- .say .en{font:600 66px/1.18 Literata,serif;color:var(--ink);letter-spacing:-.5px}
+ .say .en{font:700 76px/1.14 Literata,serif;color:var(--ink);letter-spacing:-1px}
  .say .en .w{display:inline-block;opacity:.32;transition:none}
  .say .en .pt{color:var(--ink)}
+ .hand{margin-top:18px;font:800 18px Inter;letter-spacing:5px;color:#8C89A0}
  .say .en .hl{position:relative;display:inline;color:var(--c);font-style:italic;font-weight:700}
  .say .en .hl:after{content:"";position:absolute;left:-4px;right:-4px;bottom:4px;height:16px;border-radius:6px;background:color-mix(in srgb,var(--c) 22%,transparent);transform-origin:left;transform:scaleX(var(--p,0));z-index:-1}
- .say .hy{margin-top:22px;font:500 36px/1.4 NotoArmenian,sans-serif;color:var(--muted)}
- .rep{position:absolute;left:50px;bottom:-34px;display:flex;align-items:center;gap:12px;background:var(--c);color:#fff;font:800 22px Inter;letter-spacing:3px;padding:14px 26px;border-radius:99px;box-shadow:0 12px 26px #0003;opacity:0}
+ .say .hy{margin-top:20px;font:600 38px/1.4 NotoArmenian,sans-serif;color:#4a4760}
+ .rep{position:absolute;left:50%;top:1230px;bottom:auto;margin-left:-170px;width:340px;justify-content:center;display:flex;align-items:center;gap:12px;background:var(--c);color:#fff;font:800 22px Inter;letter-spacing:3px;padding:14px 26px;border-radius:99px;box-shadow:0 12px 26px #0003;opacity:0}
  .rep em{font:600 24px NotoArmenian;font-style:normal;letter-spacing:0;opacity:.9}
- .dots{position:absolute;left:0;right:0;top:1640px;display:flex;justify-content:center;gap:14px;z-index:4}
- .dots i{display:block;width:14px;height:14px;border-radius:99px;background:#ffffff66}
- .dots i.on{width:44px;background:#fff}
+ .dots{position:absolute;left:0;right:0;top:150px;display:flex;justify-content:center;gap:12px;z-index:4}
+ .dots i{display:block;width:12px;height:12px;border-radius:99px;background:#17183A33}
+ .dots i.on{width:40px;background:var(--c)}
  .foot{position:absolute;left:70px;right:70px;bottom:120px;display:flex;justify-content:space-between;font:700 26px Inter;color:#ffffffd9;z-index:4}
  /* intro */
  .intro{position:absolute;inset:0;z-index:8;display:flex;flex-direction:column;align-items:center;text-align:center;opacity:0}
- .intro .k{margin-top:300px;font:800 26px Inter;letter-spacing:9px;color:#fff;text-shadow:0 4px 20px #0006}
- .intro .q{margin-top:26px;width:900px;font:700 92px/1.06 Literata,serif;letter-spacing:-2px;color:#fff;text-shadow:0 10px 40px #0007}
- .intro .q em{color:#FFE29A}
- .intro .qhy{margin-top:22px;font:500 40px NotoArmenian;color:#ffffffe6;text-shadow:0 4px 20px #0006}
- .intro .hero{margin-top:60px;width:560px;height:560px;border-radius:300px;overflow:hidden;border:12px solid #FFFCF6;box-shadow:0 40px 90px #0008}
- .intro .hero img{width:100%;height:100%;object-fit:cover}
- .intro .name{margin-top:-40px;position:relative;font:800 30px Inter;letter-spacing:4px;color:var(--ink);background:#FFFCF6;padding:14px 34px;border-radius:99px;box-shadow:0 14px 30px #0004}
+ .intro .k{margin-top:170px;font:800 24px Inter;letter-spacing:8px;color:var(--c)}
+ .intro .q{margin-top:20px;width:940px;font:700 96px/1.04 Literata,serif;letter-spacing:-2.5px;color:var(--ink)}
+ .intro .q em{color:var(--c)}
+ .intro .qhy{margin-top:20px;font:600 40px NotoArmenian;color:#4a4760}
+ .intro .hero{display:none}
+ .intro .name{position:absolute;top:1300px;left:50%;transform:translateX(-50%);font:800 30px Inter;letter-spacing:4px;color:var(--ink);background:#FFFCF6;padding:14px 34px;border-radius:99px;box-shadow:0 14px 30px #0004}
  /* outro (shared GSAP outro in kinetic.js) */
  .outro{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;opacity:0;z-index:9;background:#F4EFE4}
  .outro img{width:170px;height:170px;border-radius:42px}
@@ -60,10 +61,10 @@
  <div id="bgs"></div><div class="shade"></div>
  <div class="pill"><img src="__LOGO_DATA__" alt=""><div><b>Gayane Torosyan</b><span>@ENGLISH.READINGROOM</span></div></div>
  <div class="chip" id="chip"></div>
- <div class="frame" id="frame"><div class="count" id="count"></div></div>
- <div class="card" id="card"><div class="say" id="say"><div class="en" id="en"></div><div class="hy" id="hy"></div></div><div class="rep" id="rep">YOUR TURN <em>· կրկնի՛ր</em></div></div>
+ <div class="frame" id="frame"></div><div class="topfade" id="topfade"></div><div class="botfade"></div><div class="count" id="count"></div>
+ <div class="card" id="card"><div class="say" id="say"><div class="en" id="en"></div><div class="hy" id="hy"></div></div><div class="hand">@ENGLISH.READINGROOM</div><div class="rep" id="rep">YOUR TURN <em>· կրկնի՛ր</em></div></div>
  <div class="dots" id="dots"></div>
- <footer class="foot"><span>Save it · Share it</span><span>@english.readingroom</span></footer>
+ 
  <section class="intro" id="intro"><div class="k" id="introK"></div><div class="q" id="introQ"></div><div class="qhy" id="introHy"></div><div class="hero"><img id="heroImg" alt=""></div><div class="name" id="heroName"></div></section>
  <section id="outro" class="outro"><img id="outroLogo" src="__LOGO_DATA__" alt=""><h2 id="outroH"></h2><p id="outroP"></p><span class="save" id="saveChip">Save</span><span class="follow">Անհատական և խմբային դասեր · գրե՛ք Direct-ով</span><span class="signature">@ENGLISH.READINGROOM</span></section>
  <script src="__GSAP__/gsap.min.js"></script><script src="__GSAP__/SplitText.min.js"></script><script src="__GSAP__/../../../reels/templates/kinetic.js"></script>
@@ -99,20 +100,20 @@
   const S=T.scenes, n=S.length;
   // intro
   const ia=ease(clamp(t/.5)), io2=clamp((t-(S[0].at-.55))/.45); intro.style.opacity=ia*(1-io2);
-  heroImg.parentNode.style.transform=`scale(${.6+.4*ease(clamp((t-.35)/.6))})`;
+  heroName.style.transform=`translateX(-50%) scale(${ease(clamp((t-.9)/.5))})`;
   const cur=t<S[0].at?0:S.reduce((a,s,i)=>t>=s.at?i:a,0);
   // backgrounds and pictures
   S.forEach((s,i)=>{const a=clamp((t-s.at)/.6), nx=i+1<n?clamp((t-S[i+1].at)/.6):0;
    const bg=document.getElementById('bg'+i); bg.style.opacity=(i===0&&t<S[0].at)?1:(a*(1-nx));
-   const sh=document.getElementById('s'+i); const vis=(i===0&&t<S[0].at)?1:io(a)*(1-0); sh.style.opacity=i<cur?0:(i===cur?vis:0);
-   const local=Math.max(0,t-s.at), dir=i%2?1:-1;
-   sh.style.transform=`translateX(${(1-io(a))*dir*120}px) scale(${1.10-0.06*io(a)+0.035*clamp(local/(s.end-s.at))})`;});
+   const sh=document.getElementById('s'+i); const vis=(i===0&&t<S[0].at)?ease(clamp(t/.6)):io(a); sh.style.opacity=i<cur?0:(i===cur?vis:0);
+   const local=Math.max(0,t-s.at), dir=i%2?1:-1; const m=(i===0&&t<S[0].at)?1:io(a);
+   sh.style.transform=`translateX(${(1-m)*dir*70}px) scale(${1.06-0.04*m+0.03*clamp(local/(s.end-s.at))})`;});
   setScene(cur);
   const s=S[cur];
   // card in/out
   const cin=ease(clamp((t-s.at)/.45)), cout=cur+1<n?clamp((t-(S[cur+1].at-.25))/.25):0;
   say.style.opacity=cin*(1-cout); say.style.transform=`translateY(${(1-cin)*30-cout*20}px)`;
-  const cv=ease(clamp((t-(S[0].at-.4))/.6)); card.style.transform=`translateY(${(1-cv)*160}px)`; card.style.opacity=cv; dots.style.opacity=cv;
+  const cv=ease(clamp((t-(S[0].at-.4))/.6)); card.style.transform=`translateY(${(1-cv)*-40}px)`; card.style.opacity=cv; dots.style.opacity=cv;
   // karaoke + highlight sweep
   const W=T.words[cur]; let hlStart=null,hlEnd=null;
   en.querySelectorAll('.w').forEach(w=>{const j=+w.dataset.j, tw=W[j]; if(!tw) return; const on=t>=tw[0]-.05;
@@ -121,8 +122,7 @@
   const hl=en.querySelector('.hl'); if(hl&&hlStart!=null) hl.style.setProperty('--p',ease(clamp((t-hlStart)/Math.max(.3,hlEnd-hlStart))));
   // "your turn" during the pause after the voice
   const rp=t>=s.v1+.15&&t<s.end-.1; const ra=rp?ease(clamp((t-s.v1-.15)/.3)):0; rep.style.opacity=ra; rep.style.transform=`scale(${.8+.2*ra})`;
-  frame.style.opacity=t<S[0].at-.5?0:ease(clamp((t-(S[0].at-.5))/.5));
-  frame.style.transform=`translateY(${(1-ease(clamp((t-(S[0].at-.5))/.6)))*60}px)`;
+  frame.style.opacity=ease(clamp(t/.6)); topfade.style.opacity=1; count.style.opacity=cv;
   // outro
   const o=ease(clamp((t-(T.total-2.6))/.6)); outro.style.opacity=o;
   if(window.K&&K.ok){K.seek(t);K.outro(t-(T.total-2.6));}

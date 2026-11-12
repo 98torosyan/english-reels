@@ -73,7 +73,7 @@ async function render(browser, baseUrl, st) {
   const over = await page.evaluate((t) => {
     const bad = [];
     t.scenes.forEach((s, i) => { window.seek(s.v1 + 0.2); const c = document.getElementById('card').getBoundingClientRect(); const e = document.getElementById('say').getBoundingClientRect();
-      if (e.bottom > c.bottom - 20 || document.getElementById('en').scrollWidth > 900) bad.push(i); });
+      const en = document.getElementById('en'); if (e.bottom > 620 || en.scrollWidth > en.clientWidth + 1) bad.push(i); });
     return bad;
   }, plain);
   if (over.length) throw new Error(`${name}: sentence too long for the card: ${over}`);
