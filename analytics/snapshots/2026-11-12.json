@@ -1,9 +1,19 @@
 {
  "date": "2026-11-12",
  "followers": 2,
- "media_count": 13,
+ "media_count": 14,
  "insights": false,
  "posts": [
+  {
+   "id": "17965240509251877",
+   "media_product_type": "FEED",
+   "media_type": "CAROUSEL_ALBUM",
+   "timestamp": "2026-11-12T08:37:44+0000",
+   "permalink": "https://www.instagram.com/p/DfopNojjcNJ/",
+   "like_count": 1,
+   "comments_count": 0,
+   "title": "Անգլերեն բառակապակցություններ · English collocations"
+  },
   {
    "id": "17956125354312870",
    "media_product_type": "REELS",
