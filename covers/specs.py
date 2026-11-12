@@ -42,9 +42,9 @@ def spec(i, n):
     if k == "mistake":
         m = MIS[cid]; w, c = m["wrong"].split(), m["correct"].split()
         j = next((x for x in range(min(len(w), len(c))) if w[x] != c[x]), 0)
-        fix = c[j] if len(c) == len(w) else " ".join(c[j:j + 1 + len(c) - len(w)])
         before, after = " ".join(w[:j]), " ".join(w[j + 1:])
-        proof = f'{E(before)} <span style="position:relative;display:inline-block"><s>{E(w[j])}</s><span class="fix" style="left:0;top:0">{E(fix)}</span></span> {E(after)}'
+        # the cover marks where the mistake is, but never gives the answer away
+        proof = f'{E(before)} <span style="position:relative;display:inline-block;text-decoration:underline wavy #B23F78;text-decoration-thickness:4px;text-underline-offset:12px">{E(w[j])}<span class="fix" style="left:20%;top:0">?</span></span> {E(after)}'
         body = f'<h1>Find the<br><i>mistake</i></h1><div class="proof">{proof}</div><div class="hy">Գտի՛ր սխալը և ասա ճիշտ ձևը</div>'
         return dict(c=SKILL["grammar"], layout="mis", label="FIND THE MISTAKE", right="", body=body, num=f"No. {n:02d}")
     if k == "quiz":
