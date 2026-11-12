@@ -265,22 +265,40 @@ def voice_phrasal():
     return made
 
 def voice_reading():
-    """Daily reading: the whole story, calmly, with word timings for the highlight."""
+    """Daily reading: sentence by sentence at a learner's pace, with a pause after each sentence,
+    joined into one track with word timings for the highlight."""
     made = 0
     root = LESSONS.parents[1]
     data = json.loads((root / "reels/data/reading.json").read_text(encoding="utf-8"))
+    PAUSE = 0.65
     for st in data["stories"]:
         out = root / "assets" / "reading" / st["id"]; out.mkdir(parents=True, exist_ok=True)
         mp3, tj = out / "p.mp3", out / "p.json"
+        pace = "v2-slow"
         if mp3.exists() and tj.exists():
             old = json.loads(tj.read_text())
-            if old.get("text") == st["en"] and old.get("tag") == st["voice"]: continue
+            if old.get("text") == st["en"] and old.get("tag") == st["voice"] and old.get("pace") == pace: continue
+        sents = re.split(r"(?<=[.!?'])\s+(?=[A-Z'])", st["en"])
         try:
-            bounds = asyncio.run(synth(st["en"], st["voice"], "-8%", mp3))
-            words = align(st["en"].split(), bounds)
+            parts, words, t = [], [], 0.0
+            for k, sent in enumerate(sents):
+                part = out / f"s{k}.mp3"
+                b = asyncio.run(synth(sent, st["voice"], "-18%", part))
+                w = align(sent.split(), b)
+                end = w[-1][1] + 0.15
+                words += [[round(a + t, 2), round(c + t, 2)] for a, c in w]
+                parts.append((part, end)); t += end + PAUSE
+            inputs, chains = [], []
+            for k, (part, end) in enumerate(parts):
+                inputs += ["-i", str(part)]
+                chains.append(f"[{k}:a]aresample=24000,atrim=0:{end:.3f},apad=pad_dur={PAUSE},asetpts=PTS-STARTPTS[a{k}]")
+            subprocess.run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", ";".join(chains) + ";" + "".join(f"[a{k}]" for k in range(len(parts))) + f"concat=n={len(parts)}:v=0:a=1[o]",
+                            "-map", "[o]", "-b:a", "160k", str(mp3)], check=True)
+            for part, _ in parts: part.unlink()
+            if len(words) != len(st["en"].split()): raise ValueError("word count mismatch")
         except Exception as error:
             print(f"SKIPPED reading {st['id']}: {error}"); mp3.unlink(missing_ok=True); continue
-        tj.write_text(json.dumps({"text": st["en"], "words": words, "tag": st["voice"]}), encoding="utf-8"); made += 1
+        tj.write_text(json.dumps({"text": st["en"], "words": words, "tag": st["voice"], "pace": pace}), encoding="utf-8"); made += 1
     return made
 
 if __name__ == "__main__":
