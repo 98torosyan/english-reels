@@ -1397,6 +1397,23 @@
       }
     },
     {
+      "id": "2026-11-14-routine-morning",
+      "date": "2026-11-14",
+      "time": "17:45",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "routine",
+      "content_id": "morning",
+      "title": "My day 01",
+      "caption": "Անգլերեն ամեն օր · Իմ առավոտը\nMy day · My morning (A1)\n\nWhat do you do in the morning?\nԻ՞նչ ես անում առավոտյան\n\nMy alarm goes off at seven. — Զարթուցիչս զնգում է ժամը յոթին։\nI turn off the alarm. — Անջատում եմ զարթուցիչը։\nI get up and stretch. — Վեր եմ կենում և ձգվում։\nI open the curtains. — Բացում եմ վարագույրները։\nI brush my teeth. — Լվանում եմ ատամներս։\nI wash my face. — Լվանում եմ դեմքս։\nI get dressed. — Հագնվում եմ։\nI have breakfast. — Նախաճաշում եմ։\nI put on my shoes. — Հագնում եմ կոշիկներս։\n\nԿարևոր արտահայտություններ՝ goes off, turn off, get up, open the curtains, brush my teeth, wash my face, get dressed, have breakfast, put on\n\nԼսի՛ր, կրկնի՛ր յուրաքանչյուր նախադասությունը, ապա պատմի՛ր քո օրվա մասին։\nՊահի՛ր, որ չկորցնես, և ուղարկի՛ր ընկերոջդ։\n\nWhat do you do in the morning? Պատասխանի՛ր անգլերեն մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-14-routine-morning/routine-morning.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-14-routine-morning/cover.jpg"
+      }
+    },
+    {
       "id": "2026-11-14-dialogue-doctor",
       "date": "2026-11-14",
       "time": "18:30",
@@ -1626,6 +1643,23 @@
       "review_status": "staged",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-15-story-picstory-lost-ticket/story.jpg"
+      }
+    },
+    {
+      "id": "2026-11-15-routine-home",
+      "date": "2026-11-15",
+      "time": "17:45",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "routine",
+      "content_id": "home",
+      "title": "My day 02",
+      "caption": "Անգլերեն ամեն օր · Տուն եմ գալիս\nMy day · Coming home (A1)\n\nWhat do you do when you get home?\nԻ՞նչ ես անում, երբ տուն ես գալիս\n\nI unlock the door. — Բացում եմ դռան կողպեքը։\nI take off my shoes. — Հանում եմ կոշիկներս։\nI hang up my bag. — Կախում եմ պայուսակս։\nI wash my hands. — Լվանում եմ ձեռքերս։\nI take out some milk. — Սառնարանից կաթ եմ հանում։\nI do my homework. — Անում եմ տնային աշխատանքս։\nI water the plants. — Ջրում եմ բույսերը։\nI call my friend. — Զանգում եմ ընկերոջս։\nI relax on the sofa with a book. — Հանգստանում եմ բազմոցին՝ գիրքը ձեռքիս։\n\nԿարևոր արտահայտություններ՝ unlock, take off, hang up, wash my hands, take out, do my homework, water, call, relax\n\nԼսի՛ր, կրկնի՛ր յուրաքանչյուր նախադասությունը, ապա պատմի՛ր քո օրվա մասին։\nՊահի՛ր, որ չկորցնես, և ուղարկի՛ր ընկերոջդ։\n\nWhat do you do when you get home? Պատասխանի՛ր անգլերեն մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-15-routine-home/routine-home.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-15-routine-home/cover.jpg"
       }
     },
     {
@@ -1893,6 +1927,23 @@
       }
     },
     {
+      "id": "2026-11-16-routine-cooking",
+      "date": "2026-11-16",
+      "time": "17:45",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "routine",
+      "content_id": "cooking",
+      "title": "My day 03",
+      "caption": "Անգլերեն ամեն օր · Ընթրիք եմ պատրաստում\nMy day · Cooking dinner (A2)\n\nCan you cook dinner?\nԿարո՞ղ ես ընթրիք պատրաստել\n\nI put on my apron. — Կապում եմ գոգնոցս։\nI wash the vegetables. — Լվանում եմ բանջարեղենը։\nI chop an onion. — Մանր կտրատում եմ սոխը։\nI turn on the cooker. — Միացնում եմ սալօջախը։\nI boil the pasta. — Եփում եմ մակարոնը։\nI stir the sauce. — Խառնում եմ սոուսը։\nI taste the sauce. Mmm! — Համտեսում եմ սոուսը։ Մմմ՜\nI set the table. — Սեղան եմ գցում։\nI do the washing-up. — Լվանում եմ ամանները։\n\nԿարևոր արտահայտություններ՝ put on, wash, chop, turn on, boil, stir, taste, set the table, do the washing-up\n\nԼսի՛ր, կրկնի՛ր յուրաքանչյուր նախադասությունը, ապա պատմի՛ր քո օրվա մասին։\nՊահի՛ր, որ չկորցնես, և ուղարկի՛ր ընկերոջդ։\n\nCan you cook dinner? Պատասխանի՛ր անգլերեն մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-16-routine-cooking/routine-cooking.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-16-routine-cooking/cover.jpg"
+      }
+    },
+    {
       "id": "2026-11-16-dialogue-restaurant",
       "date": "2026-11-16",
       "time": "18:30",
@@ -2104,6 +2155,23 @@
       "review_status": "staged",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-17-story-picstory-broken-bike/story.jpg"
+      }
+    },
+    {
+      "id": "2026-11-17-routine-tidy",
+      "date": "2026-11-17",
+      "time": "17:45",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "routine",
+      "content_id": "tidy",
+      "title": "My day 04",
+      "caption": "Անգլերեն ամեն օր · Հավաքում եմ սենյակս\nMy day · Tidying my room (A2)\n\nHow do you tidy your room?\nԻնչպե՞ս ես հավաքում սենյակդ\n\nOh no! My room is a mess! — Վա՜յ, սենյակս խառնաշփոթ է։\nI open the window. — Բացում եմ պատուհանը։\nI make the bed. — Հավաքում եմ անկողինս։\nI pick up my clothes. — Հավաքում եմ հագուստս հատակից։\nI put away my books. — Գրքերս դնում եմ տեղը։\nI hang up my jacket. — Կախում եմ բաճկոնս։\nI hoover the carpet. — Փոշեկուլով մաքրում եմ գորգը։\nI take out the rubbish. — Դուրս եմ հանում աղբը։\nNow my room is clean and tidy! — Հիմա սենյակս մաքուր ու կոկիկ է։\n\nԿարևոր արտահայտություններ՝ mess, open, make the bed, pick up, put away, hang up, hoover, take out, clean and tidy\n\nԼսի՛ր, կրկնի՛ր յուրաքանչյուր նախադասությունը, ապա պատմի՛ր քո օրվա մասին։\nՊահի՛ր, որ չկորցնես, և ուղարկի՛ր ընկերոջդ։\n\nHow do you tidy your room? Պատասխանի՛ր անգլերեն մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-17-routine-tidy/routine-tidy.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-17-routine-tidy/cover.jpg"
       }
     },
     {
@@ -2345,6 +2413,23 @@
       "review_status": "staged",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-18-story-phrasal-put/story.jpg"
+      }
+    },
+    {
+      "id": "2026-11-18-routine-supermarket",
+      "date": "2026-11-18",
+      "time": "17:45",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "routine",
+      "content_id": "supermarket",
+      "title": "My day 05",
+      "caption": "Անգլերեն ամեն օր · Սուպերմարկետում\nMy day · At the supermarket (A2)\n\nWhat do you do at the supermarket?\nԻ՞նչ ես անում սուպերմարկետում\n\nI write a shopping list. — Գրում եմ գնումների ցուցակը։\nI pick up a basket. — Վերցնում եմ զամբյուղը։\nI choose some apples. — Ընտրում եմ խնձորներ։\nI get a loaf of bread. — Վերցնում եմ մի բոքոն հաց։\nI check the price. — Ստուգում եմ գինը։\nI wait in the queue. — Հերթ եմ կանգնում։\nI pay by card. — Վճարում եմ քարտով։\nI pack my bag. — Գնումները դնում եմ պայուսակիս մեջ։\nI walk home with my shopping. — Գնումներով տուն եմ գնում։\n\nԿարևոր արտահայտություններ՝ write, pick up, choose, get, check, wait in the queue, pay, pack, walk home\n\nԼսի՛ր, կրկնի՛ր յուրաքանչյուր նախադասությունը, ապա պատմի՛ր քո օրվա մասին։\nՊահի՛ր, որ չկորցնես, և ուղարկի՛ր ընկերոջդ։\n\nWhat do you do at the supermarket? Պատասխանի՛ր անգլերեն մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-18-routine-supermarket/routine-supermarket.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-18-routine-supermarket/cover.jpg"
       }
     },
     {
