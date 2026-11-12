@@ -30,7 +30,7 @@ function clip(id, n, text) {
 // Title and first picture in, then each scene: picture changes as its sentence starts.
 function timeline(st) {
   const c = clip(st.id, 'p', st.scenes.join(' '));
-  const at = 1.4;
+  const at = 2.2;
   return { plays: [{ at, clip: c }], sceneStart: c.scenes.map((s) => r3(s + at)), words: c.words.map(([a, b]) => [r3(a + at), r3(b + at)]), total: r3(at + c.len + 1.6 + 2.6) };
 }
 
@@ -72,10 +72,10 @@ async function renderStoryvideo(browser, baseUrl, list0) {
     document.fonts.load('30px IPA', 'ʃɪiːθðɜɔæʌɒəʊɡŋ')]).then(() => document.fonts.ready));
   await page.evaluate(() => { window.seek(0); window.fit(); window.seek(1.9); });
   const check = await page.evaluate(() => ({ armenian: document.fonts.check('32px NotoArmenian', 'Հայ'),
-    over: [...document.querySelectorAll('.cap p')].filter((p) => p.scrollHeight > 336).length, imgs: [...document.querySelectorAll('.stage img')].map((i) => i.naturalWidth) }));
+    over: [...document.querySelectorAll('.cap p')].filter((p) => p.scrollHeight > 336).length, imgs: [...document.querySelectorAll('#stage img')].map((i) => i.naturalWidth) }));
   console.log(`${name}: ${JSON.stringify(check)} total ${T.total}s`);
   if (!check.armenian || check.over || check.imgs.some((w) => w !== 1080)) throw new Error(`${name}: layout check failed`);
-  await utils.renderFrames(page, T.total, frames, posterPath, 1.2, FPS);
+  await utils.renderFrames(page, T.total, frames, posterPath, 1.3, FPS);
   if (errors.length) throw new Error(`Template errors: ${errors.join(' | ')}`);
   await page.close();
   const voice = path.join(work, `${name}.wav`);
