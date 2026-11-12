@@ -1,4 +1,4 @@
-"""My day: render each daily-routine reel, copy it to the public repo and schedule one a day at 17:45 Asia/Yerevan.
+"""My day: render each daily-routine reel, copy it to the public repo and schedule one a day at 19:00 Asia/Yerevan (each story has its own date).
 Usage: python publish/plan_routine.py --media-repo ../english-reels-media --start 2026-11-14 [--only id ...]"""
 import argparse, datetime as dt, json, os, re, shutil, subprocess
 from pathlib import Path
@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "queue.json"
 OUT = (ROOT / ".." / ".." / "outputs" / "english-reels-samples").resolve()
 BASE = "https://98torosyan.github.io/english-reels-media"
-AT = "17:45"
+AT = "19:00"   # evening peak in Yerevan
 
 
 def music(day_index):
@@ -19,9 +19,9 @@ def music(day_index):
 def caption(st):
     rows = "\n".join(f"{re.sub(r'[\[\]]', '', en)} — {hy}" for en, hy in zip(st["lines"], st["lines_hy"]))
     phrases = ", ".join(re.findall(r"\[([^\]]+)\]", " ".join(st["lines"])))
-    return (f"Անգլերեն ամեն օր · {st['title_hy']}\nMy day · {st['title']} ({st['level']})\n\n{st['question']}\n{st['question_hy']}\n\n{rows}\n\n"
+    return (f"Անգլերեն ամեն օր · {st['title_hy']}\nEveryday English · {st['title']} ({st['level']})\n\n{st['question']}\n{st['question_hy']}\n\n{rows}\n\n"
             f"Կարևոր արտահայտություններ՝ {phrases}\n\n"
-            "Լսի՛ր, կրկնի՛ր յուրաքանչյուր նախադասությունը, ապա պատմի՛ր քո օրվա մասին։\n"
+            "Լսի՛ր և կրկնի՛ր յուրաքանչյուր նախադասությունը։\n"
             "Պահի՛ր, որ չկորցնես, և ուղարկի՛ր ընկերոջդ։\n\n"
             f"{st['question']} Պատասխանի՛ր անգլերեն մեկնաբանություններում։\n\n"
             "Անհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n"
@@ -36,7 +36,7 @@ def main():
     new = []
     for k, st in enumerate(stories):
         if a.only and st["id"] not in a.only: continue
-        day = (start + dt.timedelta(days=k)).isoformat()
+        day = st.get("date") or (start + dt.timedelta(days=k)).isoformat()
         subprocess.run(["node", "reels/render_routine.js", st["id"]], cwd=ROOT, check=True, env={**os.environ, "MUSIC_TRACK": music(k)})
         rid = f"{day}-routine-{st['id']}"; rdir = media / rid; rdir.mkdir(parents=True, exist_ok=True)
         shutil.copy2(OUT / f"routine-{st['id']}.mp4", rdir / f"routine-{st['id']}.mp4")
@@ -47,6 +47,10 @@ def main():
         print("scheduled", day, st["id"])
     subprocess.run(["git", "pull", "-q", "--rebase", "--autostash"], cwd=ROOT, check=False)
     q = json.loads(QUEUE.read_text(encoding="utf-8")); ids = {i["id"] for i in new}
+    redone = {i["content_id"] for i in new}
+    # a story that moved to another day: drop its old, unpublished slot and files
+    for old in [i for i in q["items"] if i.get("kind") == "routine" and i["content_id"] in redone and i["id"] not in ids and not i.get("published_at")]:
+        shutil.rmtree(media / old["id"], ignore_errors=True); q["items"].remove(old)
     q["items"] = [i for i in q["items"] if i["id"] not in ids] + new
     q["items"].sort(key=lambda i: (i["date"], i["time"], i["id"]))
     QUEUE.write_text(json.dumps(q, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

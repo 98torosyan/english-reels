@@ -81,9 +81,9 @@
   bgs.innerHTML=data.pics.map((p,i)=>`<div class="bg" id="bg${i}" style="background-image:url(${p})"></div>`).join('');
   frame.insertAdjacentHTML('afterbegin',data.pics.map((p,i)=>`<div class="shot" id="s${i}"><img src="${p}"></div>`).join(''));
   dots.innerHTML=data.lines.map(()=>'<i></i>').join('');
-  introK.textContent=`MY DAY · ${data.title.toUpperCase()}`; introQ.innerHTML=lastEm(data.question); introHy.textContent=data.question_hy;
-  heroImg.src=data.pics[0]; heroName.textContent=`Meet ${data.hero}!`;
-  outroH.innerHTML=`Now tell us about <em>your day!</em>`; outroP.textContent='Գրի՛ր անգլերեն մեկնաբանություններում';
+  introK.textContent=`EVERYDAY ENGLISH · ${data.title.toUpperCase()}`; introQ.innerHTML=lastEm(data.question); introHy.textContent=data.question_hy;
+  heroImg.src=data.pics[0]; heroName.textContent=data.hero?`Meet ${data.hero}!`:''; heroName.style.display=data.hero?'':'none';
+  outroH.innerHTML=`Now it's <em>your turn!</em>`; outroP.textContent=`${data.question} · Պատասխանի՛ր անգլերեն մեկնաբանություններում`;
  };
  let shown=-1;
  function setScene(i){ if(i===shown) return; shown=i;

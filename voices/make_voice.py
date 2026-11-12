@@ -344,16 +344,17 @@ def voice_routine():
     data = json.loads((root / "reels/data/routine.json").read_text(encoding="utf-8"))
     for st in data["stories"]:
         out = root / "assets" / "routine" / st["id"]; out.mkdir(parents=True, exist_ok=True)
-        for key, raw in [("q", st["question"])] + [(str(n), l) for n, l in enumerate(st["lines"])]:
+        per = st.get("voices") or []   # optional: a different speaker for each picture
+        for key, raw, voice in [("q", st["question"], st["voice"])] + [(str(n), l, per[n] if n < len(per) else st["voice"]) for n, l in enumerate(st["lines"])]:
             text = raw.replace("[", "").replace("]", "")
             mp3, tj = out / f"v{key}.mp3", out / f"v{key}.json"
-            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text and json.loads(tj.read_text()).get("tag") == st["voice"]: continue
+            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text and json.loads(tj.read_text()).get("tag") == voice: continue
             try:
-                bounds = asyncio.run(synth(text, st["voice"], "-12%", mp3))
+                bounds = asyncio.run(synth(text, voice, "-12%", mp3))
                 words = align(text.split(), bounds)
             except Exception as error:
                 print(f"SKIPPED routine {st['id']}/{key}: {error}"); mp3.unlink(missing_ok=True); continue
-            tj.write_text(json.dumps({"text": text, "words": words, "tag": st["voice"]}), encoding="utf-8"); made += 1
+            tj.write_text(json.dumps({"text": text, "words": words, "tag": voice}), encoding="utf-8"); made += 1
     return made
 
 if __name__ == "__main__":

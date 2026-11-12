@@ -3,8 +3,42 @@
   "note": "Daily-routine reels from a 3x3 storyboard (assets/routine/<id>/1..9.jpg). One short first-person sentence per picture; the key verb phrase is in [brackets] and is highlighted. Armenian lines to be reviewed by Gayane.",
   "stories": [
     {
-      "id": "morning",
+      "id": "airport",
+      "level": "A2",
+      "hero": "",
+      "voice": "kokoro:bm_george",
+      "title": "At the airport",
+      "title_hy": "Օդանավակայանում",
+      "question": "What do you do at the airport?",
+      "question_hy": "Ի՞նչ ես անում օդանավակայանում",
+      "lines": [
+        "I [check in] at the airline desk.",
+        "I [drop off] my suitcase.",
+        "I [go through security].",
+        "I [check] the departures board.",
+        "I [grab a coffee] before my flight.",
+        "I [wait at the gate].",
+        "I [show my boarding pass].",
+        "I [put my bag in] the overhead locker.",
+        "I [relax] and enjoy the view."
+      ],
+      "lines_hy": [
+        "Գրանցվում եմ ավիաընկերության գրասեղանի մոտ։",
+        "Հանձնում եմ ճամպրուկս։",
+        "Անցնում եմ անվտանգության ստուգումը։",
+        "Նայում եմ մեկնումների ցուցատախտակին։",
+        "Թռիչքից առաջ սուրճ եմ վերցնում։",
+        "Սպասում եմ ելքի մոտ։",
+        "Ցույց եմ տալիս նստեցման տալոնս։",
+        "Պայուսակս դնում եմ վերևի դարակում։",
+        "Հանգստանում եմ և վայելում տեսարանը։"
+      ],
       "number": 1,
+      "date": "2026-11-14"
+    },
+    {
+      "id": "morning",
+      "number": 2,
       "level": "A1",
       "hero": "Pip",
       "voice": "kokoro:bf_lily",
@@ -33,11 +67,46 @@
         "Հագնվում եմ։",
         "Նախաճաշում եմ։",
         "Հագնում եմ կոշիկներս։"
-      ]
+      ],
+      "date": "2026-11-15"
+    },
+    {
+      "id": "cafe",
+      "level": "A2",
+      "hero": "",
+      "voice": "en-GB-RyanNeural",
+      "title": "At a London café",
+      "title_hy": "Լոնդոնյան սրճարանում",
+      "question": "How do you order coffee in English?",
+      "question_hy": "Ինչպե՞ս պատվիրել սուրճ անգլերեն",
+      "lines": [
+        "I [walk into] a café on a rainy day.",
+        "I [look at] the menu.",
+        "[Could I have] a cappuccino, please?",
+        "I [pay by phone].",
+        "I [wait for] my coffee.",
+        "I [take] my coffee to a table.",
+        "I [work on] my laptop.",
+        "[Thanks a lot]! See you tomorrow!",
+        "I [leave] the café with my umbrella."
+      ],
+      "lines_hy": [
+        "Անձրևոտ օրը մտնում եմ սրճարան։",
+        "Նայում եմ ճաշացանկին։",
+        "Կարո՞ղ եմ մեկ կապուչինո ստանալ։",
+        "Վճարում եմ հեռախոսով։",
+        "Սպասում եմ սուրճիս։",
+        "Սուրճս տանում եմ սեղանի մոտ։",
+        "Աշխատում եմ նոութբուքով։",
+        "Շատ շնորհակալություն։ Կհանդիպենք վաղը։",
+        "Անձրևանոցով դուրս եմ գալիս սրճարանից։"
+      ],
+      "number": 3,
+      "date": "2026-11-16"
     },
     {
       "id": "home",
-      "number": 2,
+      "number": 4,
       "level": "A1",
       "hero": "Bruno",
       "voice": "kokoro:bm_daniel",
@@ -66,11 +135,46 @@
         "Ջրում եմ բույսերը։",
         "Զանգում եմ ընկերոջս։",
         "Հանգստանում եմ բազմոցին՝ գիրքը ձեռքիս։"
-      ]
+      ],
+      "date": "2026-11-17"
+    },
+    {
+      "id": "work",
+      "level": "B1",
+      "hero": "",
+      "voice": "kokoro:bm_lewis",
+      "title": "My working day",
+      "title_hy": "Իմ աշխատանքային օրը",
+      "question": "What do you do at work?",
+      "question_hy": "Ի՞նչ ես անում աշխատանքի ժամանակ",
+      "lines": [
+        "I [arrive at] the office at nine.",
+        "I [say good morning] to my colleagues.",
+        "I [check my emails].",
+        "I [lead a meeting].",
+        "I [make a phone call].",
+        "I [have lunch] with my team.",
+        "I [come up with] new ideas.",
+        "I [finish] my work.",
+        "I [head home] at six."
+      ],
+      "lines_hy": [
+        "Ժամը իննին հասնում եմ գրասենյակ։",
+        "Բարի լույս եմ ասում գործընկերներիս։",
+        "Ստուգում եմ նամակներս։",
+        "Հանդիպում եմ վարում։",
+        "Զանգ եմ անում։",
+        "Ճաշում եմ թիմիս հետ։",
+        "Նոր գաղափարներ եմ մտածում։",
+        "Ավարտում եմ աշխատանքս։",
+        "Ժամը վեցին գնում եմ տուն։"
+      ],
+      "number": 5,
+      "date": "2026-11-18"
     },
     {
       "id": "cooking",
-      "number": 3,
+      "number": 6,
       "level": "A2",
       "hero": "Mia",
       "voice": "en-GB-MaisieNeural",
@@ -99,11 +203,46 @@
         "Համտեսում եմ սոուսը։ Մմմ՜",
         "Սեղան եմ գցում։",
         "Լվանում եմ ամանները։"
-      ]
+      ],
+      "date": "2026-11-19"
+    },
+    {
+      "id": "london",
+      "level": "A2",
+      "hero": "",
+      "voice": "kokoro:bf_emma",
+      "title": "A weekend in London",
+      "title_hy": "Հանգստյան օրեր Լոնդոնում",
+      "question": "What did you do last weekend?",
+      "question_hy": "Ի՞նչ արեցիր անցած հանգստյան օրերին",
+      "lines": [
+        "I [arrived] in London on Friday.",
+        "I [took a photo] of Big Ben.",
+        "I [went] on a double-decker bus.",
+        "I [walked] in Hyde Park.",
+        "I [visited] a big museum.",
+        "I [ate] fish and chips.",
+        "I [went shopping] in Camden.",
+        "I [saw] London from the London Eye.",
+        "I [wrote] a postcard home."
+      ],
+      "lines_hy": [
+        "Ուրբաթ օրը հասա Լոնդոն։",
+        "Լուսանկարեցի Բիգ Բենը։",
+        "Նստեցի երկհարկանի ավտոբուս։",
+        "Զբոսնեցի Հայդ պարկում։",
+        "Այցելեցի մի մեծ թանգարան։",
+        "Կերա ձուկ և կարտոֆիլ ֆրի։",
+        "Գնումներ արեցի Քեմդենում։",
+        "Լոնդոնը տեսա «Լոնդոնի աչքից»։",
+        "Բացիկ գրեցի տուն։"
+      ],
+      "number": 7,
+      "date": "2026-11-20"
     },
     {
       "id": "tidy",
-      "number": 4,
+      "number": 8,
       "level": "A2",
       "hero": "Ollie",
       "voice": "kokoro:bm_fable",
@@ -132,11 +271,46 @@
         "Փոշեկուլով մաքրում եմ գորգը։",
         "Դուրս եմ հանում աղբը։",
         "Հիմա սենյակս մաքուր ու կոկիկ է։"
-      ]
+      ],
+      "date": "2026-11-21"
+    },
+    {
+      "id": "kitten",
+      "level": "A1",
+      "hero": "Smudge",
+      "voice": "kokoro:bf_alice",
+      "title": "Where is Smudge?",
+      "title_hy": "Որտե՞ղ է Սմաջը",
+      "question": "Where is Smudge?",
+      "question_hy": "Որտե՞ղ է Սմաջը",
+      "lines": [
+        "Smudge is [in] the box.",
+        "Smudge is [on] the box.",
+        "Smudge is [under] the table.",
+        "Smudge is [behind] the box.",
+        "Smudge is [in front of] the box.",
+        "Smudge is [next to] the box.",
+        "Smudge is [between] the boxes.",
+        "Smudge is [above] the box.",
+        "Smudge jumps [out of] the box!"
+      ],
+      "lines_hy": [
+        "Սմաջը տուփի մեջ է։",
+        "Սմաջը տուփի վրա է։",
+        "Սմաջը սեղանի տակ է։",
+        "Սմաջը տուփի ետևում է։",
+        "Սմաջը տուփի առջևում է։",
+        "Սմաջը տուփի կողքին է։",
+        "Սմաջը տուփերի միջև է։",
+        "Սմաջը տուփից վերև է։",
+        "Սմաջը ցատկում է տուփից դուրս։"
+      ],
+      "number": 9,
+      "date": "2026-11-22"
     },
     {
       "id": "supermarket",
-      "number": 5,
+      "number": 10,
       "level": "A2",
       "hero": "Penny",
       "voice": "en-GB-SoniaNeural",
@@ -165,7 +339,53 @@
         "Վճարում եմ քարտով։",
         "Գնումները դնում եմ պայուսակիս մեջ։",
         "Գնումներով տուն եմ գնում։"
-      ]
+      ],
+      "date": "2026-11-23"
+    },
+    {
+      "id": "jobs",
+      "level": "A1",
+      "hero": "",
+      "voice": "kokoro:bf_isabella",
+      "voices": [
+        "kokoro:bf_isabella",
+        "kokoro:bm_george",
+        "kokoro:bm_daniel",
+        "en-GB-RyanNeural",
+        "kokoro:bm_lewis",
+        "en-GB-ThomasNeural",
+        "en-GB-SoniaNeural",
+        "kokoro:bf_lily",
+        "kokoro:bm_fable"
+      ],
+      "title": "What do you do?",
+      "title_hy": "Ի՞նչ աշխատանք ես անում",
+      "question": "What do you do?",
+      "question_hy": "Ի՞նչ աշխատանք ես անում",
+      "lines": [
+        "I'm a [doctor]. I help sick people.",
+        "I'm a [teacher]. I teach children.",
+        "I'm a [chef]. I cook in a restaurant.",
+        "I'm a [firefighter]. I put out fires.",
+        "I'm a [pilot]. I fly planes.",
+        "I'm a [farmer]. I feed the animals.",
+        "I'm a [police officer]. I keep people safe.",
+        "I'm an [artist]. I paint pictures.",
+        "I'm a [builder]. I build houses."
+      ],
+      "lines_hy": [
+        "Ես բժիշկ եմ։ Օգնում եմ հիվանդներին։",
+        "Ես ուսուցիչ եմ։ Երեխաներին դաս եմ տալիս։",
+        "Ես խոհարար եմ։ Ճաշ եմ պատրաստում ռեստորանում։",
+        "Ես հրշեջ եմ։ Հանգցնում եմ հրդեհները։",
+        "Ես օդաչու եմ։ Ինքնաթիռ եմ վարում։",
+        "Ես ֆերմեր եմ։ Կերակրում եմ կենդանիներին։",
+        "Ես ոստիկան եմ։ Պաշտպանում եմ մարդկանց։",
+        "Ես նկարիչ եմ։ Նկարներ եմ նկարում։",
+        "Ես շինարար եմ։ Տներ եմ կառուցում։"
+      ],
+      "number": 11,
+      "date": "2026-11-24"
     }
   ]
 }
