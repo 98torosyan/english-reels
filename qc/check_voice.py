@@ -12,8 +12,27 @@ ALIAS = {"annie": "ani", "anny": "ani", "mum's": "mum's", "mom": "mum", "colour"
 NUM = {"0": "zero", "1": "one", "2": "two", "3": "three", "4": "four", "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine", "10": "ten"}
 
 
+ONES = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split()
+TENS = "_ _ twenty thirty forty fifty sixty seventy eighty ninety".split()
+
+
+def num(n):
+    n = int(n)
+    if n < 20: return ONES[n]
+    if n < 100: return TENS[n // 10] + ("" if n % 10 == 0 else " " + ONES[n % 10])
+    if n < 1000: return ONES[n // 100] + " hundred" + ("" if n % 100 == 0 else " and " + num(n % 100))
+    if 1000 < n < 2100 and n % 100: return num(n // 100) + " " + num(n % 100)   # years: 1859 -> eighteen fifty nine
+    return str(n)
+
+
+def spell(s):
+    s = re.sub(r"£(\d+)\.(\d\d)", lambda m: f"{num(m.group(1))} pounds {num(m.group(2))}", s)
+    s = re.sub(r"£(\d+)", lambda m: f"{num(m.group(1))} pounds", s)
+    return re.sub(r"\d+", lambda m: num(m.group(0)), s)
+
+
 def words(s):
-    s = s.lower().replace("’", "'").replace("-", " ")
+    s = spell(s.lower().replace("’", "'").replace("-", " "))
     return [ALIAS.get(w, NUM.get(w, w)) for w in re.findall(r"[a-z0-9']+", s)]
 
 
@@ -21,8 +40,8 @@ def score(expected, heard):
     a, b = [ALIAS.get(w, w) for w in words(expected)], words(heard)
     if not a:
         return 1.0
-    if len(a) <= 3:   # single words and short phrases: every word must be heard
-        return 1.0 if all(w in b for w in a) else difflib.SequenceMatcher(None, " ".join(a), " ".join(b)).ratio() * 0.9
+    if len(a) <= 3:   # single words and short phrases: every word must be heard (plural/ending allowed)
+        return 1.0 if all(any(h.startswith(w) or w.startswith(h) and len(h) >= len(w) - 1 for h in b) for w in a) else difflib.SequenceMatcher(None, " ".join(a), " ".join(b)).ratio() * 0.9
     return difflib.SequenceMatcher(None, a, b).ratio()
 
 
@@ -31,7 +50,8 @@ def pcm(path):
     import numpy as np
     raw = subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-i", str(path), "-f", "f32le", "-ac", "1", "-ar", "16000", "-"],
                          capture_output=True, check=True).stdout
-    return np.frombuffer(raw, dtype=np.float32)
+    pad = np.zeros(12800, dtype=np.float32)   # 0.8 s of silence each side: Whisper hears isolated words far better
+    return np.concatenate([pad, np.frombuffer(raw, dtype=np.float32), pad])
 
 
 def main():
@@ -47,9 +67,11 @@ def main():
             text = json.loads(meta.read_text(encoding="utf-8")).get("text", "")
             if not text or not re.search(r"[A-Za-z]", text):
                 continue
-            key = hashlib.sha1(mp3.read_bytes()).hexdigest()
+            key = "v2:" + hashlib.sha1(mp3.read_bytes()).hexdigest()
             if key not in cache:
-                segs, _ = model.transcribe(pcm(mp3), language="en", beam_size=5, condition_on_previous_text=False, vad_filter=False)
+                short = len(words(text)) <= 3
+                segs, _ = model.transcribe(pcm(mp3), language="en", beam_size=5, temperature=0, condition_on_previous_text=False, vad_filter=False,
+                                           initial_prompt="A teacher reads one English word slowly and clearly." if short else None)
                 cache[key] = " ".join(s.text.strip() for s in segs)
             heard = cache[key]
             sc = score(text, heard)
