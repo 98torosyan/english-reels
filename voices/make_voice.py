@@ -106,6 +106,7 @@ def main():
     made += voice_phrasal()
     made += voice_reading()
     made += voice_storyvideo()
+    made += voice_routine()
     print(f"{made} file(s) voiced.")
 
 
@@ -334,6 +335,25 @@ def voice_storyvideo():
         except Exception as error:
             print(f"SKIPPED storyvideo {st['id']}: {error}"); mp3.unlink(missing_ok=True); continue
         tj.write_text(json.dumps({"text": text, "words": words, "scenes": scenes, "tag": st["voice"]}), encoding="utf-8"); made += 1
+    return made
+
+def voice_routine():
+    """My day: the opening question and each sentence as its own clip (brackets removed), with word timings."""
+    made = 0
+    root = LESSONS.parents[1]
+    data = json.loads((root / "reels/data/routine.json").read_text(encoding="utf-8"))
+    for st in data["stories"]:
+        out = root / "assets" / "routine" / st["id"]; out.mkdir(parents=True, exist_ok=True)
+        for key, raw in [("q", st["question"])] + [(str(n), l) for n, l in enumerate(st["lines"])]:
+            text = raw.replace("[", "").replace("]", "")
+            mp3, tj = out / f"v{key}.mp3", out / f"v{key}.json"
+            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text and json.loads(tj.read_text()).get("tag") == st["voice"]: continue
+            try:
+                bounds = asyncio.run(synth(text, st["voice"], "-12%", mp3))
+                words = align(text.split(), bounds)
+            except Exception as error:
+                print(f"SKIPPED routine {st['id']}/{key}: {error}"); mp3.unlink(missing_ok=True); continue
+            tj.write_text(json.dumps({"text": text, "words": words, "tag": st["voice"]}), encoding="utf-8"); made += 1
     return made
 
 if __name__ == "__main__":

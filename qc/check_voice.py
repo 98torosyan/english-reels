@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "qc/data/voice_heard.json"
-SERIES = ["words10", "phrasal", "reading", "storyvideo", "dialogues", "stories", "cards"]   # "sounds" are single phonemes: skipped
+SERIES = ["words10", "phrasal", "reading", "storyvideo", "routine", "dialogues", "stories", "cards"]   # "sounds" are single phonemes: skipped
 ALIAS = {"annie": "ani", "anny": "ani", "mum's": "mum's", "mom": "mum", "colour": "color", "neighbour": "neighbor", "favourite": "favorite", "centre": "center", "tyre": "tire", "jewellery": "jewelry", "practise": "practice", "okay": "ok"}
 NUM = {"0": "zero", "1": "one", "2": "two", "3": "three", "4": "four", "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine", "10": "ten"}
 
