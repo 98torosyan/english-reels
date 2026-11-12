@@ -58,7 +58,7 @@
  let D=null,T=null;
  window.configure=(data,timeline)=>{D=data;T=timeline;
   if(data.color) document.documentElement.style.setProperty('--c',data.color);
-  pic.src=data.img; series.textContent=`DAILY READING · ${String(data.number).padStart(2,'0')}`; level.textContent=data.level;
+  pic.src=data.img; series.textContent=`${data.series||'DAILY READING'} · ${String(data.number).padStart(2,'0')}`; level.textContent=data.level;
   const tw=data.title.split(' '); theme.innerHTML=tw.length>1?tw.slice(0,-1).join(' ')+' <em>'+tw.at(-1)+'</em>':'<em>'+data.title+'</em>';
   story.innerHTML=data.en.split(' ').map((w,j)=>`<span data-j="${j}">${w}</span>`).join(' ');
  };
