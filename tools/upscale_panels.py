@@ -1,4 +1,4 @@
-"""Cut a 2x3 storyboard (src.png) into six square panels and sharpen them with Real-ESRGAN (BSD-3).
+"""Cut a 2x3 storyboard (src.png) into six square panels and sharpen them with Real-ESRGAN (BSD-3, anime-6B weights for illustrations; loaded with spandrel, MIT).
 
 For every assets/picstory/<id>/src.png and assets/storyvideo/<id>/src.png whose panels are missing or older
 than the source, writes 1.jpg … 6.jpg at 1080x1080. Runs in CI (GitHub Actions) where PyTorch is available.
@@ -40,15 +40,21 @@ def main():
     model = None
     if sharp:
         import torch
-        from RealESRGAN import RealESRGAN
-        model = RealESRGAN(torch.device("cpu"), scale=4)
-        model.load_weights("weights/RealESRGAN_x4.pth", download=True)
+        from spandrel import ModelLoader
+        torch.set_num_threads(4)
+        net = ModelLoader().load_from_file("weights/RealESRGAN_x4plus_anime_6B.pth").eval()
+        def _up(p):
+            x = torch.from_numpy(np.asarray(p).copy()).permute(2, 0, 1).float().div(255).unsqueeze(0)
+            with torch.inference_mode():
+                y = net(x).clamp(0, 1)[0].permute(1, 2, 0).mul(255).round().byte().numpy()
+            return Image.fromarray(y)
+        model = _up
     done = 0
     for src in sorted(list(ROOT.glob("assets/picstory/*/src.png")) + list(ROOT.glob("assets/storyvideo/*/src.png"))):
         d = src.parent; mark = d / "panels.json"; h = hashlib.sha1(src.read_bytes()).hexdigest()
         if mark.exists() and json.loads(mark.read_text()).get("src") == h and json.loads(mark.read_text()).get("sharp") == sharp: continue
         for n, p in enumerate(panels(src), 1):
-            if model is not None: p = model.predict(p)
+            if model is not None: p = model(p)
             p.resize((1080, 1080), Image.LANCZOS).save(d / f"{n}.jpg", quality=93)
         mark.write_text(json.dumps({"src": h, "sharp": sharp})); done += 1; print("panels:", d.name, "sharp" if sharp else "plain")
     print(done, "storyboard(s) processed")
