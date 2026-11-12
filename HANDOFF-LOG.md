@@ -73,3 +73,4 @@ Done:
 Open:
 - Owner: token with instagram_manage_insights; YouTube OAuth secrets; FB page token; PDF link in bio; choose Kokoro voice; mother to review Armenian of words10/phrasal.
 - Content after Nov 18 for dialogues/stories/carousels still draft; plan next week.
+- (05:00–06:00) Emma (Kokoro bf_emma) now the female voice of 10 words / phrasal / review; all staged items re-rendered. Nov 18–26 filled: one dialogue a day at 18:30 (remaining 9 dialogues) + prepared drafts staged with covers. Mistake covers no longer reveal the answer. stage_media saves the queue after each item. system_check: 0 fail, 0 warn, 161 items.
