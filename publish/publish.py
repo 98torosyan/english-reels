@@ -111,13 +111,21 @@ def wait_until_finished(client: GraphClient, container_id: str) -> dict:
     raise PublishError(f"Container {container_id} did not finish within {POLL_TIMEOUT} seconds.")
 
 
-def create_image(client: GraphClient, user_id: str, image_url: str, caption: str, is_item: bool = False) -> str:
+def create_image(client: GraphClient, user_id: str, image_url: str, caption: str, is_item: bool = False, alt_text: str = "") -> str:
     params = {"image_url": image_url}
     if is_item:
         params["is_carousel_item"] = "true"
     else:
         params["caption"] = caption
-    response = client.request("POST", f"{user_id}/media", params)
+    response = None
+    if alt_text:
+        # alt text helps Instagram search and screen readers; never let it block a post
+        try:
+            response = client.request("POST", f"{user_id}/media", {**params, "alt_text": alt_text[:1000]})
+        except PublishError as error:
+            print(f"Alt text was not accepted ({error}); publishing without it.")
+    if response is None:
+        response = client.request("POST", f"{user_id}/media", params)
     container_id = str(response.get("id", ""))
     if not container_id:
         raise PublishError("Image container creation returned no ID.")
@@ -141,7 +149,7 @@ def create_container(client: GraphClient, user_id: str, content: dict) -> str:
             raise PublishError("Reel container creation returned no ID.")
         return container_id
     if kind == "IMAGE":
-        return create_image(client, user_id, content["image_url"], caption)
+        return create_image(client, user_id, content["image_url"], caption, alt_text=str(content.get("alt_text", "")))
     if kind == "STORIES":
         media = {"video_url": content["video_url"]} if content.get("video_url") else {"image_url": content["image_url"]}
         response = client.request("POST", f"{user_id}/media", {"media_type": "STORIES", **media})
@@ -151,8 +159,9 @@ def create_container(client: GraphClient, user_id: str, content: dict) -> str:
         return container_id
 
     child_ids = []
+    alts = list(content.get("alt_texts") or [])
     for index, image_url in enumerate(content["slides"], start=1):
-        child_id = create_image(client, user_id, image_url, caption, is_item=True)
+        child_id = create_image(client, user_id, image_url, caption, is_item=True, alt_text=str(alts[index - 1]) if index <= len(alts) else "")
         print(f"Created carousel item {index}/{len(content['slides'])}.")
         wait_until_finished(client, child_id)
         child_ids.append(child_id)

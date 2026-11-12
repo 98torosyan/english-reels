@@ -20,6 +20,14 @@ def caption(st):
             "#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan")
 
 
+def alt_texts(st):
+    """One description per slide, in English: Instagram uses alt text for search and screen readers."""
+    words = ", ".join(w["en"] for w in st["words"])
+    return ([f"Cover of the picture story \"{st['title']}\", an illustrated English reading lesson ({st['level']}) by Gayane Torosyan."]
+            + [f"Illustration {n} of 6: {s}" for n, s in enumerate(st["scenes"], 1)]
+            + [f"New words from the story: {words}. Question: {st['question']}"])
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--media-repo", required=True); ap.add_argument("--start", required=True)
     ap.add_argument("--only", nargs="*"); a = ap.parse_args()
@@ -36,7 +44,7 @@ def main():
         slides = sorted(p.name for p in folder.glob("*.jpg"))
         new.append({"id": iid, "date": day, "time": AT, "timezone": "Asia/Yerevan", "type": "CAROUSEL", "format": "CAROUSEL", "kind": "picstory",
                     "content_id": st["id"], "title": f"Picture story {st['number']:02d}", "caption": caption(st), "review_status": "staged",
-                    "media": {"slides": [f"{BASE}/{iid}/{s}" for s in slides]}})
+                    "media": {"slides": [f"{BASE}/{iid}/{s}" for s in slides], "alt_texts": alt_texts(st)}})
         print("scheduled", day, st["id"], len(slides), "slides")
     subprocess.run(["git", "pull", "-q", "--rebase", "--autostash"], cwd=ROOT, check=False)
     q = json.loads(QUEUE.read_text(encoding="utf-8")); ids = {i["id"] for i in new}
