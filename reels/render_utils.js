@@ -220,4 +220,5 @@ module.exports = {
   renderFrames,
   encodeVideo,
   verifyVideo,
+  levelLoudness,
 };
