@@ -161,7 +161,7 @@ function levelLoudness(outputPath) {
   if (!Number.isFinite(lufs) || Math.abs(lufs + 14) <= 1) return;
   const tmp = `${outputPath}.level.mp4`;
   const fix = spawnSync(FFmpeg, ['-y', '-hide_banner', '-loglevel', 'error', '-i', path.resolve(outputPath), '-c:v', 'copy',
-    '-af', `volume=${(-14 - lufs).toFixed(2)}dB,alimiter=limit=0.89:level=disabled`, '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', tmp], { encoding: 'utf8' });
+    '-af', `volume=${(-14 - lufs).toFixed(2)}dB,alimiter=limit=0.7:level=disabled`, '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', tmp], { encoding: 'utf8' });
   if (fix.status !== 0) throw new Error(`Loudness correction failed: ${fix.stderr}`);
   fs.renameSync(tmp, outputPath);
 }
