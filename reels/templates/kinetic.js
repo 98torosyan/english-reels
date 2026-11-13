@@ -2,6 +2,8 @@
 // and the closing card animates piece by piece. Templates call K.title(el, start) / K.outro(localTime).
 (function () {
   const K = { ok: false, tl: [] };
+  // a mask clips the letters as they rise; give it room so descenders (p, g, y) and accents are never cut
+  K.roomy = (sp) => (sp.masks || []).forEach((m) => { m.style.padding = '.12em .04em .26em'; m.style.margin = '-.12em -.04em -.26em'; });
   K.init = function () {
     if (K.ok || !window.gsap || !window.SplitText) return; gsap.registerPlugin(SplitText); K.ok = true;
     const o = document.getElementById('outro'); if (!o) return;
@@ -19,7 +21,7 @@
   };
   K.title = function (el, start) {
     if (!K.ok || !el || el.dataset.k) return; el.dataset.k = '1';
-    const sp = SplitText.create(el, { type: 'chars,words', mask: 'chars' });
+    const sp = SplitText.create(el, { type: 'chars,words', mask: 'chars' }); K.roomy(sp);
     const tl = gsap.timeline({ paused: true }).from(sp.chars, { yPercent: 115, rotate: 7, duration: 0.75, ease: 'expo.out', stagger: 0.028 });
     K.tl.push({ tl, start });
   };

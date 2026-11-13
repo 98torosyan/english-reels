@@ -95,7 +95,7 @@
   let lk=0; for(let i=1;i<n;i++){const d=t-(st[i]-.45); if(d>-.2&&d<.9) lk=Math.max(lk,Math.sin(Math.PI*clamp((d+.2)/1.1))*.55);}
   leak.style.opacity=lk; leak.style.setProperty('--lx',(60+20*Math.sin(t))+'%');
   const e=ease(clamp((t-.2)/.6)); eyebrow.style.opacity=e; title.style.opacity=e; title.style.transform=`translateY(${(1-e)*30}px)`;
-  D.scenes.forEach((sc,i)=>{const p=document.getElementById('p'+i); const a=i==0?1.9:st[i]-.3, b=i<n-1?st[i+1]-.3:T.total;
+  D.scenes.forEach((sc,i)=>{const p=document.getElementById('p'+i); const a=i==0?1.9:st[i]-.03, b=i<n-1?st[i+1]-.3:T.total;   // the next sentence appears only after the previous one has gone
    const o=t<a?0:t<b?ease(clamp((t-a)/.4)):1-clamp((t-b)/.25); p.style.opacity=o; p.style.transform=`translateY(${(1-ease(clamp((t-a)/.4)))*24}px)`;});
   document.querySelectorAll('.cap span').forEach(s=>{const w=T.words[+s.dataset.k]; const now=t>=w[0]&&t<w[1]; const done=t>=w[1];
    const pop=now?Math.sin(Math.PI*Math.min(1,(t-w[0])/.25)):0;
