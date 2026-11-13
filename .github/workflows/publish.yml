@@ -44,7 +44,8 @@ jobs:
           if [ -f publish/ENABLED ] && [ "$MANUAL_DRY" = "0" ]; then export DRY_RUN=0; else export DRY_RUN=1; fi
           echo "DRY_RUN=$DRY_RUN"
           python publish/run_due.py
-      - name: Save published status
+      - name: Save published status (always, even when one post failed, so nothing is ever published twice)
+        if: always()
         run: |
           if ! git diff --quiet queue.json; then
             git config user.name 98torosyan

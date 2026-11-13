@@ -187,16 +187,50 @@ def run(content_path: Path, dry_run: bool) -> int:
     if not user_id:
         raise PublishError("IG_USER_ID is missing.")
     client = GraphClient(os.environ.get("IG_TOKEN", ""))
+    global LAST_MEDIA_ID
+    # Safety 1: never post the same thing twice. If a post with this caption is already on the account, stop here.
+    existing = find_existing(client, user_id, content.get("caption", ""))
+    if existing:
+        LAST_MEDIA_ID = existing
+        print(f"Already on Instagram (media ID {existing}); not publishing again.")
+        return 0
     print(f"Creating {content['kind']} container for account {user_id}.")
     container_id = create_container(client, user_id, content)
     wait_until_finished(client, container_id)
 
-    response = client.request("POST", f"{user_id}/media_publish", {"creation_id": container_id})
+    try:
+        response = client.request("POST", f"{user_id}/media_publish", {"creation_id": container_id})
+    except PublishError as error:
+        # Safety 2: Instagram sometimes publishes and still answers with an error. Ask the container before giving up.
+        time.sleep(20)
+        try:
+            state = str(client.request("GET", container_id, {"fields": "status_code"}).get("status_code", ""))
+        except PublishError:
+            state = "UNKNOWN"
+        if state == "PUBLISHED":
+            LAST_MEDIA_ID = find_existing(client, user_id, content.get("caption", "")) or None
+            print(f"Instagram answered with an error, but the post is live ({error}).")
+            return 0
+        raise PublishError(f"{error} [container {container_id}: {state}]") from error
     media_id = response.get("id")
-    global LAST_MEDIA_ID
     LAST_MEDIA_ID = media_id
     print(f"Published successfully; Instagram media ID: {media_id}.")
     return 0
+
+
+def find_existing(client: GraphClient, user_id: str, caption: str) -> str:
+    """Media ID of a recent post with the same caption (first 150 characters), or "" if there is none."""
+    key = " ".join(caption.split())[:150]
+    if len(key) < 20:   # stories have no caption: nothing reliable to compare
+        return ""
+    try:
+        recent = client.request("GET", f"{user_id}/media", {"fields": "id,caption", "limit": "30"}).get("data", [])
+    except PublishError as error:
+        raise PublishError(f"Could not check recent posts, so nothing was published ({error}).") from error
+    for media in recent:
+        if " ".join(str(media.get("caption", "")).split())[:150] == key:
+            return str(media.get("id"))
+    return ""
 
 
 def main() -> int:

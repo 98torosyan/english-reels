@@ -13,7 +13,7 @@ def late(now=None):
     now = now or dt.datetime.now(dt.timezone.utc)
     out = []
     for i in json.loads((ROOT / "queue.json").read_text(encoding="utf-8"))["items"]:
-        if i.get("review_status") != "staged" or i.get("published_at") or not i.get("media"):
+        if i.get("review_status") not in ("staged", "failed") or i.get("published_at") or not i.get("media"):
             continue
         due = dt.datetime.fromisoformat(f"{i['date']}T{i['time']}").replace(tzinfo=ZoneInfo(i.get("timezone", "Asia/Yerevan")))
         if now - due > GRACE and now - due < dt.timedelta(days=2):

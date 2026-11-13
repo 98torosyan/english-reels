@@ -50,7 +50,12 @@ def main() -> int:
         try:
             rc = publish.run(Path(f.name), dry)
         except publish.PublishError as error:
-            print(f"Publishing failed for {item['id']}: {error}"); code = 1; continue
+            print(f"Publishing failed for {item['id']}: {error}"); code = 1
+            # Safety 3: at most 3 attempts per post, then it waits for a person (the watchdog e-mails the owner).
+            item["attempts"] = item.get("attempts", 0) + 1; item["last_error"] = str(error)[:300]
+            if item["attempts"] >= 3: item["review_status"] = "failed"
+            if not dry: QUEUE.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            continue
         if rc == 0 and not dry:
             item["published_at"] = now.isoformat(timespec="minutes")
             item["review_status"] = "published"
