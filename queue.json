@@ -1142,7 +1142,10 @@
           "Illustration 6 of 6: Mum laughed and gave him a big hug. 'The best breakfast ever!'",
           "New words from the story: flour, mess, hug. Question: What did Noah cook for Mum?"
         ]
-      }
+      },
+      "attempts": 1,
+      "last_error": "Graph API request failed (HTTP 403, code 4). [container 17930365644242156: ERROR]",
+      "container_id": "17930365644242156"
     },
     {
       "id": "2026-11-13-story-picstory-little-chef",
