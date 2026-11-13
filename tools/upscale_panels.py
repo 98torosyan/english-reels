@@ -31,13 +31,12 @@ def panels(src):
     if (len(cols), len(rows)) not in ((2, 3), (3, 2), (3, 3), (2, 4)): raise ValueError(f"{src}: expected a 2x3, 3x3 or 2x4 grid, found {len(cols)}x{len(rows)}")
     pick = src.parent / "pick"   # optional: which panels to keep (1-based), e.g. when the grid repeats a picture
     keep = [int(x) for x in pick.read_text().split()] if pick.exists() else None
-    k = 0
+    cells = []
     for r in rows:
         for c in cols:
-            k += 1
-            if keep and k not in keep: continue
             p = im.crop((c[0] + 3, r[0] + 3, c[1] - 3, r[1] - 3)); w, h = p.size; s = min(w, h)
-            yield p.crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s))
+            cells.append(p.crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s)))
+    yield from ([cells[k - 1] for k in keep] if keep else cells)   # the pick order is the story order
 
 
 def main():

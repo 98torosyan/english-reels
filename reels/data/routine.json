@@ -386,6 +386,42 @@
       ],
       "number": 11,
       "date": "2026-11-24"
+    },
+    {
+      "id": "restaurant",
+      "level": "A2",
+      "hero": "",
+      "voice": "en-GB-SoniaNeural",
+      "voices": [
+        "kokoro:bm_lewis",
+        "kokoro:bm_lewis",
+        "kokoro:bf_emma",
+        "kokoro:bf_emma",
+        "kokoro:bm_lewis",
+        "kokoro:bf_emma"
+      ],
+      "title": "At the restaurant",
+      "title_hy": "Ռեստորանում",
+      "question": "What do you say in a restaurant?",
+      "question_hy": "Ի՞նչ ենք ասում ռեստորանում",
+      "lines": [
+        "Good evening! [Do you have a reservation]?",
+        "[Right this way], please. Here's your table.",
+        "[What do you recommend]?",
+        "[I'd like] the spaghetti, please.",
+        "[Here you are]. Enjoy your meal!",
+        "[Could I have the bill], please?"
+      ],
+      "lines_hy": [
+        "Բարի երեկո։ Սեղան ամրագրե՞լ եք։",
+        "Խնդրեմ, այս կողմով։ Ահա ձեր սեղանը։",
+        "Ի՞նչ կխորհուրդ տաք։",
+        "Սպագետի կուզենայի, խնդրեմ։",
+        "Խնդրեմ։ Բարի ախորժակ։",
+        "Կարո՞ղ եմ հաշիվը ստանալ, խնդրեմ։"
+      ],
+      "number": 12,
+      "date": "2026-11-25"
     }
   ]
 }

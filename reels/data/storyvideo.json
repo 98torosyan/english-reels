@@ -135,6 +135,106 @@
       ],
       "number": 6,
       "hy": "Արևոտ մի առավոտ Բենը լողափում կանաչ շիշ գտավ։ Շշի մեջ մի հին նամակ կար։ Այն մի աղջկանից էր, ով ապրում էր այլ երկրում և նոր ընկեր էր ուզում։ Այդ երեկո Բենը նրան երկար նամակ գրեց։ Հաջորդ օրը նրա նամակը հայտնվեց կարմիր փոստարկղում։ Երկու ամիս անց ծանրոց եկավ՝ բացիկով և փոքրիկ փայտե նավակով։"
+    },
+    {
+      "id": "english-life",
+      "title": "English changed my life",
+      "title_hy": "Անգլերենը փոխեց իմ կյանքը",
+      "level": "B1",
+      "voice": "en-GB-LibbyNeural",
+      "scenes": [
+        "Two years ago, I started to learn English. I studied every evening after work.",
+        "On the bus, I listened to English lessons and repeated the words.",
+        "One day, I helped two tourists in a café. I was nervous, but they understood me!",
+        "Then I had a job interview in English, and I spoke with confidence.",
+        "A few months later, I arrived in a new country for my new job.",
+        "Now I work in an international team. English really changed my life!"
+      ],
+      "scenes_hy": [
+        "Երկու տարի առաջ ես սկսեցի անգլերեն սովորել։ Ամեն երեկո աշխատանքից հետո պարապում էի։",
+        "Ավտոբուսում ես լսում էի անգլերենի դասեր և կրկնում բառերը։",
+        "Մի օր ես սրճարանում օգնեցի երկու զբոսաշրջիկի։ Հուզված էի, բայց նրանք ինձ հասկացան։",
+        "Հետո անգլերենով աշխատանքային հարցազրույց ունեցա և վստահ էի խոսում։",
+        "Մի քանի ամիս անց ես նոր աշխատանքի համար ժամանեցի նոր երկիր։",
+        "Հիմա ես աշխատում եմ միջազգային թիմում։ Անգլերենն իսկապես փոխեց իմ կյանքը։"
+      ],
+      "number": 7,
+      "hy": "Երկու տարի առաջ ես սկսեցի անգլերեն սովորել։ Ամեն երեկո աշխատանքից հետո պարապում էի։ Ավտոբուսում ես լսում էի անգլերենի դասեր և կրկնում բառերը։ Մի օր ես սրճարանում օգնեցի երկու զբոսաշրջիկի։ Հուզված էի, բայց նրանք ինձ հասկացան։ Հետո անգլերենով աշխատանքային հարցազրույց ունեցա և վստահ էի խոսում։ Մի քանի ամիս անց ես նոր աշխատանքի համար ժամանեցի նոր երկիր։ Հիմա ես աշխատում եմ միջազգային թիմում։ Անգլերենն իսկապես փոխեց իմ կյանքը։"
+    },
+    {
+      "id": "london-day",
+      "title": "My first day in London",
+      "title_hy": "Առաջին օրս Լոնդոնում",
+      "level": "A2",
+      "voice": "en-GB-SoniaNeural",
+      "scenes": [
+        "Ani arrived in London on a grey Monday morning with a small suitcase.",
+        "She looked at her map, but the streets were very confusing.",
+        "So she asked a friendly young man, 'Excuse me, could you help me? I'm looking for the Rose Hotel.'",
+        "He showed her the way, and soon she was walking down a beautiful white street.",
+        "At last, she found the little hotel and rang the bell.",
+        "In the evening, she watched the sunset over the Thames and felt proud of herself."
+      ],
+      "scenes_hy": [
+        "Մի մոխրագույն երկուշաբթի առավոտ Անին փոքրիկ ճամպրուկով հասավ Լոնդոն։",
+        "Նա նայեց քարտեզին, բայց փողոցները շատ շփոթեցնող էին։",
+        "Ուստի նա դիմեց մի բարեհամբույր երիտասարդի. «Կներեք, կօգնե՞ք։ Ես «Ռոուզ» հյուրանոցն եմ փնտրում»։",
+        "Երիտասարդը ցույց տվեց ճանապարհը, և շուտով Անին քայլում էր մի գեղեցիկ սպիտակ փողոցով։",
+        "Վերջապես նա գտավ փոքրիկ հյուրանոցը և սեղմեց զանգը։",
+        "Երեկոյան նա դիտում էր մայրամուտը Թեմզայի վրա և հպարտ էր իրենով։"
+      ],
+      "number": 8,
+      "hy": "Մի մոխրագույն երկուշաբթի առավոտ Անին փոքրիկ ճամպրուկով հասավ Լոնդոն։ Նա նայեց քարտեզին, բայց փողոցները շատ շփոթեցնող էին։ Ուստի նա դիմեց մի բարեհամբույր երիտասարդի. «Կներեք, կօգնե՞ք։ Ես «Ռոուզ» հյուրանոցն եմ փնտրում»։ Երիտասարդը ցույց տվեց ճանապարհը, և շուտով Անին քայլում էր մի գեղեցիկ սպիտակ փողոցով։ Վերջապես նա գտավ փոքրիկ հյուրանոցը և սեղմեց զանգը։ Երեկոյան նա դիտում էր մայրամուտը Թեմզայի վրա և հպարտ էր իրենով։"
+    },
+    {
+      "id": "wallet",
+      "title": "The lost wallet",
+      "title_hy": "Կորած դրամապանակը",
+      "level": "A2",
+      "voice": "kokoro:bf_alice",
+      "scenes": [
+        "On a windy autumn afternoon, an old man dropped his wallet in the street.",
+        "A young woman called Sarah saw it and picked it up.",
+        "She ran after him and called, 'Excuse me, sir! Wait, please!'",
+        "'I think this is yours,' she said, and she gave him the wallet.",
+        "The old man was so happy that he shook her hand and thanked her again and again.",
+        "A week later, they met for tea and cake, and now they are good friends."
+      ],
+      "scenes_hy": [
+        "Քամոտ մի աշնանային կեսօր մի տարեց տղամարդ փողոցում գցեց իր դրամապանակը։",
+        "Սառա անունով մի երիտասարդ կին տեսավ այն և վերցրեց։",
+        "Նա վազեց նրա հետևից ու կանչեց. «Կներեք, պարոն։ Սպասե՛ք, խնդրում եմ»։",
+        "«Կարծում եմ՝ սա ձերն է»,— ասաց նա ու տվեց դրամապանակը։",
+        "Տարեց տղամարդն այնքան ուրախ էր, որ սեղմեց նրա ձեռքը և նորից ու նորից շնորհակալություն հայտնեց։",
+        "Մեկ շաբաթ անց նրանք հանդիպեցին թեյի ու տորթի, և հիմա լավ ընկերներ են։"
+      ],
+      "number": 9,
+      "hy": "Քամոտ մի աշնանային կեսօր մի տարեց տղամարդ փողոցում գցեց իր դրամապանակը։ Սառա անունով մի երիտասարդ կին տեսավ այն և վերցրեց։ Նա վազեց նրա հետևից ու կանչեց. «Կներեք, պարոն։ Սպասե՛ք, խնդրում եմ»։ «Կարծում եմ՝ սա ձերն է»,— ասաց նա ու տվեց դրամապանակը։ Տարեց տղամարդն այնքան ուրախ էր, որ սեղմեց նրա ձեռքը և նորից ու նորից շնորհակալություն հայտնեց։ Մեկ շաբաթ անց նրանք հանդիպեցին թեյի ու տորթի, և հիմա լավ ընկերներ են։"
+    },
+    {
+      "id": "interview",
+      "title": "The job interview",
+      "title_hy": "Աշխատանքային հարցազրույցը",
+      "level": "B1",
+      "voice": "kokoro:bm_lewis",
+      "scenes": [
+        "The night before his job interview, David practised his answers in front of the mirror.",
+        "In the morning, he was late, so he ran to catch the bus.",
+        "At the office, he waited nervously in reception.",
+        "In the interview, he knocked over a glass of water!",
+        "But David just laughed and said, 'Sorry, I'm a bit nervous today.' Everyone laughed too.",
+        "Two days later, he got an email: 'Congratulations! You've got the job!'"
+      ],
+      "scenes_hy": [
+        "Աշխատանքային հարցազրույցից մեկ օր առաջ Դեյվիդը հայելու առջև փորձեց իր պատասխանները։",
+        "Առավոտյան նա ուշանում էր, ուստի վազեց, որ հասնի ավտոբուսին։",
+        "Գրասենյակում նա անհանգիստ սպասում էր ընդունարանում։",
+        "Հարցազրույցի ժամանակ նա շուռ տվեց ջրի բաժակը։",
+        "Բայց Դեյվիդը պարզապես ծիծաղեց և ասաց. «Ներեցեք, այսօր մի քիչ հուզված եմ»։ Բոլորն էլ ծիծաղեցին։",
+        "Երկու օր անց նա նամակ ստացավ. «Շնորհավորում ենք։ Դուք ընդունված եք աշխատանքի»։"
+      ],
+      "number": 10,
+      "hy": "Աշխատանքային հարցազրույցից մեկ օր առաջ Դեյվիդը հայելու առջև փորձեց իր պատասխանները։ Առավոտյան նա ուշանում էր, ուստի վազեց, որ հասնի ավտոբուսին։ Գրասենյակում նա անհանգիստ սպասում էր ընդունարանում։ Հարցազրույցի ժամանակ նա շուռ տվեց ջրի բաժակը։ Բայց Դեյվիդը պարզապես ծիծաղեց և ասաց. «Ներեցեք, այսօր մի քիչ հուզված եմ»։ Բոլորն էլ ծիծաղեցին։ Երկու օր անց նա նամակ ստացավ. «Շնորհավորում ենք։ Դուք ընդունված եք աշխատանքի»։"
     }
   ]
 }
