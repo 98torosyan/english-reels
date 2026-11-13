@@ -1256,12 +1256,14 @@
       "content_id": "sorry-late",
       "title": "Everyday English 11",
       "caption": "Խոսակցական անգլերեն · Everyday English dialogue\n\nSorry I'm late · Ներողություն ուշանալու համար · A2\n\nA: Sorry I'm late!\nB: Don't worry. What happened?\nA: I missed the bus.\nB: It happens. Shall we start?\nA: Yes, let's.\n\nՆախ լսի՛ր, հետո դու ես B-ն. ասա՛ քո տողերը բարձրաձայն։\n\nՊահպանի՛ր և կրկնի՛ր, մինչև ազատ ասես։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
-      "review_status": "staged",
+      "review_status": "published",
       "thumb_offset": 6000,
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-13-dialogue-sorry-late/dialogue-sorry-late.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-13-dialogue-sorry-late/cover.jpg"
-      }
+      },
+      "published_at": "2026-11-13T21:35+04:00",
+      "ig_media_id": "18110081213264678"
     },
     {
       "id": "2026-11-13-story-dm-lessons",
@@ -1274,10 +1276,12 @@
       "content_id": "dm-lessons",
       "title": "dm-lessons",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/dm-lessons/story-dm-lessons.mp4"
-      }
+      },
+      "published_at": "2026-11-13T21:35+04:00",
+      "ig_media_id": "18111649718229212"
     },
     {
       "id": "2026-11-14-reading-morning",
