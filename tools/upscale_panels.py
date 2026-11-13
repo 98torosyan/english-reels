@@ -28,9 +28,14 @@ def panels(src):
         if p < n: e.append((p, n))
         return [x for x in e if x[1] - x[0] > 200]
     cols, rows = spans(runs(white.mean(axis=0)), im.size[0]), spans(runs(white.mean(axis=1)), im.size[1])
-    if (len(cols), len(rows)) not in ((2, 3), (3, 2), (3, 3)): raise ValueError(f"{src}: expected a 2x3 or 3x3 grid, found {len(cols)}x{len(rows)}")
+    if (len(cols), len(rows)) not in ((2, 3), (3, 2), (3, 3), (2, 4)): raise ValueError(f"{src}: expected a 2x3, 3x3 or 2x4 grid, found {len(cols)}x{len(rows)}")
+    pick = src.parent / "pick"   # optional: which panels to keep (1-based), e.g. when the grid repeats a picture
+    keep = [int(x) for x in pick.read_text().split()] if pick.exists() else None
+    k = 0
     for r in rows:
         for c in cols:
+            k += 1
+            if keep and k not in keep: continue
             p = im.crop((c[0] + 3, r[0] + 3, c[1] - 3, r[1] - 3)); w, h = p.size; s = min(w, h)
             yield p.crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s))
 
@@ -55,7 +60,7 @@ def main():
         model = _up
     done = 0
     for src in sorted(p for d in ("picstory", "storyvideo", "routine") for p in ROOT.glob(f"assets/{d}/*/src.png")):
-        d = src.parent; mark = d / "panels.json"; h = hashlib.sha1(src.read_bytes()).hexdigest()
+        d = src.parent; mark = d / "panels.json"; h = hashlib.sha1(src.read_bytes() + ((d / "pick").read_bytes() if (d / "pick").exists() else b"")).hexdigest()
         kind = "photo" if (d / "photo").exists() else "art"   # photorealistic storyboards get the natural-photo model
         want = {"src": h, "sharp": sharp, "model": kind}
         if mark.exists() and all(json.loads(mark.read_text()).get(k, "art" if k == "model" else None) == v for k, v in want.items()): continue

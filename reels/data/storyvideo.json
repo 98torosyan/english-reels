@@ -35,6 +35,106 @@
         "In the evening, they flew the red kite again, and this time Mia held the string very tightly."
       ],
       "hy": "Քամոտ մի շաբաթ օր Միան ու պապիկը կարմիր օդապարուկը տարան բլրի գագաթ։ Պապիկը արագ վազեց, ու օդապարուկը բարձրացավ ծառերից վեր։ Հանկարծ թելը կտրվեց, ու օդապարուկը թռավ քաղաքի վրայով։ Միան շատ տխրեց, բայց պապիկը ժպտաց ու ասաց. «Մի՛ անհանգստացիր, եկ գտնենք այն»։ Նրանք օդապարուկը գտան այգում՝ մի բարձր ծառի վրա, և մի բարի մարդ երկար սանդուղքով օգնեց իջեցնել այն։ Երեկոյան նրանք նորից թռցրին կարմիր օդապարուկը, և այս անգամ Միան թելը շատ ամուր էր բռնել։"
+    },
+    {
+      "id": "paper-boat",
+      "title": "The paper boat",
+      "title_hy": "Թղթե նավակը",
+      "level": "A2",
+      "voice": "kokoro:bm_george",
+      "scenes": [
+        "On a rainy afternoon, Lena and her grandad made a white paper boat.",
+        "When the rain stopped, Lena put the boat into a little stream.",
+        "The boat sailed very fast, and Lena ran next to it, laughing.",
+        "Suddenly, the boat got stuck between two big stones.",
+        "Grandad found a long stick and gently pushed the boat free.",
+        "In the evening, the little boat floated on the pond with the ducklings."
+      ],
+      "scenes_hy": [
+        "Անձրևոտ մի կեսօր Լենան ու պապիկը սպիտակ թղթե նավակ սարքեցին։",
+        "Երբ անձրևը դադարեց, Լենան նավակը դրեց մի փոքրիկ առվակի մեջ։",
+        "Նավակը շատ արագ էր լողում, իսկ Լենան ծիծաղելով վազում էր կողքից։",
+        "Հանկարծ նավակը խրվեց երկու մեծ քարերի արանքում։",
+        "Պապիկը մի երկար փայտ գտավ և զգուշությամբ ազատեց նավակը։",
+        "Երեկոյան փոքրիկ նավակը լողում էր լճակում՝ բադիկների հետ։"
+      ],
+      "number": 3,
+      "hy": "Անձրևոտ մի կեսօր Լենան ու պապիկը սպիտակ թղթե նավակ սարքեցին։ Երբ անձրևը դադարեց, Լենան նավակը դրեց մի փոքրիկ առվակի մեջ։ Նավակը շատ արագ էր լողում, իսկ Լենան ծիծաղելով վազում էր կողքից։ Հանկարծ նավակը խրվեց երկու մեծ քարերի արանքում։ Պապիկը մի երկար փայտ գտավ և զգուշությամբ ազատեց նավակը։ Երեկոյան փոքրիկ նավակը լողում էր լճակում՝ բադիկների հետ։"
+    },
+    {
+      "id": "picnic",
+      "title": "The rainy-day picnic",
+      "title_hy": "Անձրևոտ օրվա պիկնիկը",
+      "level": "A2",
+      "voice": "en-GB-LibbyNeural",
+      "scenes": [
+        "Tom and Mia packed a picnic basket with sandwiches and apples.",
+        "But then it started to rain, and the children felt very sad.",
+        "Suddenly, Mum had a great idea.",
+        "They built a big blanket tent in the living room.",
+        "They had their picnic inside the tent under the fairy lights.",
+        "Later, the tired children fell asleep, and Mum covered them with a blanket."
+      ],
+      "scenes_hy": [
+        "Թոմն ու Միան պիկնիկի զամբյուղը լցրին սենդվիչներով ու խնձորներով։",
+        "Բայց հետո անձրև սկսվեց, և երեխաները շատ տխրեցին։",
+        "Հանկարծ մայրիկի մտքով մի հիանալի գաղափար անցավ։",
+        "Նրանք հյուրասենյակում ծածկոցներից մեծ վրան սարքեցին։",
+        "Պիկնիկն արեցին վրանի ներսում՝ գունավոր լույսերի տակ։",
+        "Ավելի ուշ հոգնած երեխաները քնեցին, և մայրիկը նրանց ծածկեց վերմակով։"
+      ],
+      "number": 4,
+      "hy": "Թոմն ու Միան պիկնիկի զամբյուղը լցրին սենդվիչներով ու խնձորներով։ Բայց հետո անձրև սկսվեց, և երեխաները շատ տխրեցին։ Հանկարծ մայրիկի մտքով մի հիանալի գաղափար անցավ։ Նրանք հյուրասենյակում ծածկոցներից մեծ վրան սարքեցին։ Պիկնիկն արեցին վրանի ներսում՝ գունավոր լույսերի տակ։ Ավելի ուշ հոգնած երեխաները քնեցին, և մայրիկը նրանց ծածկեց վերմակով։"
+    },
+    {
+      "id": "concert",
+      "title": "The school concert",
+      "title_hy": "Դպրոցական համերգը",
+      "level": "A2",
+      "voice": "kokoro:bf_isabella",
+      "scenes": [
+        "Every evening, Anna practised the violin in her bedroom.",
+        "On the day of the concert, she felt very nervous.",
+        "Her best friend Leo smiled and gave her a thumbs-up.",
+        "Anna walked slowly onto the big stage.",
+        "She closed her eyes and played beautifully.",
+        "Everyone clapped, and Leo cheered louder than anyone!"
+      ],
+      "scenes_hy": [
+        "Ամեն երեկո Աննան իր սենյակում ջութակ էր պարապում։",
+        "Համերգի օրը նա շատ էր հուզվում։",
+        "Նրա լավագույն ընկերը՝ Լեոն, ժպտաց ու բութ մատը վեր բարձրացրեց։",
+        "Աննան դանդաղ դուրս եկավ մեծ բեմ։",
+        "Նա փակեց աչքերը և հրաշալի նվագեց։",
+        "Բոլորը ծափահարեցին, իսկ Լեոն բոլորից բարձր էր ուրախանում։"
+      ],
+      "number": 5,
+      "hy": "Ամեն երեկո Աննան իր սենյակում ջութակ էր պարապում։ Համերգի օրը նա շատ էր հուզվում։ Նրա լավագույն ընկերը՝ Լեոն, ժպտաց ու բութ մատը վեր բարձրացրեց։ Աննան դանդաղ դուրս եկավ մեծ բեմ։ Նա փակեց աչքերը և հրաշալի նվագեց։ Բոլորը ծափահարեցին, իսկ Լեոն բոլորից բարձր էր ուրախանում։"
+    },
+    {
+      "id": "bottle",
+      "title": "The message in a bottle",
+      "title_hy": "Նամակ շշի մեջ",
+      "level": "A2",
+      "voice": "kokoro:bm_daniel",
+      "scenes": [
+        "One sunny morning, Ben found a green bottle on the beach.",
+        "Inside the bottle, there was an old letter.",
+        "It was from a girl in another country who wanted a new friend.",
+        "That evening, Ben wrote her a long letter.",
+        "The next day, his letter went into the red post box.",
+        "Two months later, a parcel arrived with a postcard and a little wooden boat."
+      ],
+      "scenes_hy": [
+        "Արևոտ մի առավոտ Բենը լողափում կանաչ շիշ գտավ։",
+        "Շշի մեջ մի հին նամակ կար։",
+        "Այն մի աղջկանից էր, ով ապրում էր այլ երկրում և նոր ընկեր էր ուզում։",
+        "Այդ երեկո Բենը նրան երկար նամակ գրեց։",
+        "Հաջորդ օրը նրա նամակը հայտնվեց կարմիր փոստարկղում։",
+        "Երկու ամիս անց ծանրոց եկավ՝ բացիկով և փոքրիկ փայտե նավակով։"
+      ],
+      "number": 6,
+      "hy": "Արևոտ մի առավոտ Բենը լողափում կանաչ շիշ գտավ։ Շշի մեջ մի հին նամակ կար։ Այն մի աղջկանից էր, ով ապրում էր այլ երկրում և նոր ընկեր էր ուզում։ Այդ երեկո Բենը նրան երկար նամակ գրեց։ Հաջորդ օրը նրա նամակը հայտնվեց կարմիր փոստարկղում։ Երկու ամիս անց ծանրոց եկավ՝ բացիկով և փոքրիկ փայտե նավակով։"
     }
   ]
 }
