@@ -42,17 +42,19 @@ def main() -> int:
         return 0
     code = 0
     for item in items[:8]:
-        content = {"kind": item["format"], "caption": item.get("caption", ""), **item["media"], **({"thumb_offset": item["thumb_offset"]} if item.get("thumb_offset") else {})}
+        content = {"kind": item["format"], "caption": item.get("caption", ""), **item["media"], **({"thumb_offset": item["thumb_offset"]} if item.get("thumb_offset") else {}),
+                   **({"_container": item["container_id"]} if item.get("container_id") else {})}
         with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
             json.dump(content, f, ensure_ascii=False)
         print(f"Due: {item['id']} ({item['format']}).")
-        publish.LAST_MEDIA_ID = None
+        publish.LAST_MEDIA_ID = None; publish.LAST_CONTAINER_ID = None
         try:
             rc = publish.run(Path(f.name), dry)
         except publish.PublishError as error:
             print(f"Publishing failed for {item['id']}: {error}"); code = 1
             # Safety 3: at most 3 attempts per post, then it waits for a person (the watchdog e-mails the owner).
             item["attempts"] = item.get("attempts", 0) + 1; item["last_error"] = str(error)[:300]
+            if publish.LAST_CONTAINER_ID: item["container_id"] = publish.LAST_CONTAINER_ID
             if item["attempts"] >= 3: item["review_status"] = "failed"
             if not dry: QUEUE.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             continue

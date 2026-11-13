@@ -15,6 +15,7 @@ from pathlib import Path
 API_VERSION = os.environ.get("META_GRAPH_API_VERSION", "v27.0")
 GRAPH_BASE = f"https://graph.facebook.com/{API_VERSION}"
 LAST_MEDIA_ID = None  # set after a real publish, so the queue can keep the media ID for analytics
+LAST_CONTAINER_ID = None  # kept in the queue after a failed attempt: the next attempt checks it first (works for stories too)
 RETRY_DELAYS = (2, 4, 8)
 POLL_SECONDS = 10
 POLL_TIMEOUT = 600
@@ -194,8 +195,25 @@ def run(content_path: Path, dry_run: bool) -> int:
         LAST_MEDIA_ID = existing
         print(f"Already on Instagram (media ID {existing}); not publishing again.")
         return 0
-    print(f"Creating {content['kind']} container for account {user_id}.")
-    container_id = create_container(client, user_id, content)
+    global LAST_CONTAINER_ID
+    container_id = ""
+    previous = str(content.get("_container", "")).strip()
+    if previous:   # Safety 1b: a previous attempt left a container; if it went live, we are done; if it is ready, reuse it
+        try:
+            state = str(client.request("GET", previous, {"fields": "status_code"}).get("status_code", ""))
+        except PublishError:
+            state = "UNKNOWN"
+        print(f"Previous container {previous}: {state}.")
+        if state == "PUBLISHED":
+            LAST_MEDIA_ID = find_existing(client, user_id, content.get("caption", "")) or None
+            print("The previous attempt is already live; not publishing again.")
+            return 0
+        if state == "FINISHED":
+            container_id = previous
+    if not container_id:
+        print(f"Creating {content['kind']} container for account {user_id}.")
+        container_id = create_container(client, user_id, content)
+    LAST_CONTAINER_ID = container_id
     wait_until_finished(client, container_id)
 
     try:
