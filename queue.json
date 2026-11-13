@@ -1484,18 +1484,21 @@
       }
     },
     {
-      "id": "2026-11-14-storyvideo-english-life",
+      "id": "2026-11-14-storyvideo-paper-boat",
       "date": "2026-11-14",
       "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
       "kind": "storyvideo",
-      "content_id": "english-life",
-      "title": "Story video 07",
-      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nEnglish changed my life · Անգլերենը փոխեց իմ կյանքը (B1)\n\nTwo years ago, I started to learn English. I studied every evening after work. On the bus, I listened to English lessons and repeated the words. One day, I helped two tourists in a café. I was nervous, but they understood me! Then I had a job interview in English, and I spoke with confidence. A few months later, I arrived in a new country for my new job. Now I work in an international team. English really changed my life!\n\nԹարգմանություն՝\nԵրկու տարի առաջ ես սկսեցի անգլերեն սովորել։ Ամեն երեկո աշխատանքից հետո պարապում էի։ Ավտոբուսում ես լսում էի անգլերենի դասեր և կրկնում բառերը։ Մի օր ես սրճարանում օգնեցի երկու զբոսաշրջիկի։ Հուզված էի, բայց նրանք ինձ հասկացան։ Հետո անգլերենով աշխատանքային հարցազրույց ունեցա և վստահ էի խոսում։ Մի քանի ամիս անց ես նոր աշխատանքի համար ժամանեցի նոր երկիր։ Հիմա ես աշխատում եմ միջազգային թիմում։ Անգլերենն իսկապես փոխեց իմ կյանքը։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "draft",
-      "thumb_offset": 1300
+      "content_id": "paper-boat",
+      "title": "Story video 03",
+      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nThe paper boat · Թղթե նավակը (A2)\n\nOn a rainy afternoon, Lena and her grandad made a white paper boat. When the rain stopped, Lena put the boat into a little stream. The boat sailed very fast, and Lena ran next to it, laughing. Suddenly, the boat got stuck between two big stones. Grandad found a long stick and gently pushed the boat free. In the evening, the little boat floated on the pond with the ducklings.\n\nԹարգմանություն՝\nԱնձրևոտ մի կեսօր Լենան ու պապիկը սպիտակ թղթե նավակ սարքեցին։ Երբ անձրևը դադարեց, Լենան նավակը դրեց մի փոքրիկ առվակի մեջ։ Նավակը շատ արագ էր լողում, իսկ Լենան ծիծաղելով վազում էր կողքից։ Հանկարծ նավակը խրվեց երկու մեծ քարերի արանքում։ Պապիկը մի երկար փայտ գտավ և զգուշությամբ ազատեց նավակը։ Երեկոյան փոքրիկ նավակը լողում էր լճակում՝ բադիկների հետ։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 1300,
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-14-storyvideo-paper-boat/storyvideo-paper-boat.mp4"
+      }
     },
     {
       "id": "2026-11-14-dialogue-supermarket",
@@ -1747,18 +1750,21 @@
       }
     },
     {
-      "id": "2026-11-15-storyvideo-paper-boat",
+      "id": "2026-11-15-storyvideo-picnic",
       "date": "2026-11-15",
       "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
       "kind": "storyvideo",
-      "content_id": "paper-boat",
-      "title": "Story video 03",
-      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nThe paper boat · Թղթե նավակը (A2)\n\nOn a rainy afternoon, Lena and her grandad made a white paper boat. When the rain stopped, Lena put the boat into a little stream. The boat sailed very fast, and Lena ran next to it, laughing. Suddenly, the boat got stuck between two big stones. Grandad found a long stick and gently pushed the boat free. In the evening, the little boat floated on the pond with the ducklings.\n\nԹարգմանություն՝\nԱնձրևոտ մի կեսօր Լենան ու պապիկը սպիտակ թղթե նավակ սարքեցին։ Երբ անձրևը դադարեց, Լենան նավակը դրեց մի փոքրիկ առվակի մեջ։ Նավակը շատ արագ էր լողում, իսկ Լենան ծիծաղելով վազում էր կողքից։ Հանկարծ նավակը խրվեց երկու մեծ քարերի արանքում։ Պապիկը մի երկար փայտ գտավ և զգուշությամբ ազատեց նավակը։ Երեկոյան փոքրիկ նավակը լողում էր լճակում՝ բադիկների հետ։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "draft",
-      "thumb_offset": 1300
+      "content_id": "picnic",
+      "title": "Story video 04",
+      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nThe rainy-day picnic · Անձրևոտ օրվա պիկնիկը (A2)\n\nTom and Mia packed a picnic basket with sandwiches and apples. But then it started to rain, and the children felt very sad. Suddenly, Mum had a great idea. They built a big blanket tent in the living room. They had their picnic inside the tent under the fairy lights. Later, the tired children fell asleep, and Mum covered them with a blanket.\n\nԹարգմանություն՝\nԹոմն ու Միան պիկնիկի զամբյուղը լցրին սենդվիչներով ու խնձորներով։ Բայց հետո անձրև սկսվեց, և երեխաները շատ տխրեցին։ Հանկարծ մայրիկի մտքով մի հիանալի գաղափար անցավ։ Նրանք հյուրասենյակում ծածկոցներից մեծ վրան սարքեցին։ Պիկնիկն արեցին վրանի ներսում՝ գունավոր լույսերի տակ։ Ավելի ուշ հոգնած երեխաները քնեցին, և մայրիկը նրանց ծածկեց վերմակով։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 1300,
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-15-storyvideo-picnic/storyvideo-picnic.mp4"
+      }
     },
     {
       "id": "2026-11-15-dialogue-job-interview",
@@ -2042,18 +2048,21 @@
       }
     },
     {
-      "id": "2026-11-16-storyvideo-london-day",
+      "id": "2026-11-16-storyvideo-concert",
       "date": "2026-11-16",
       "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
       "kind": "storyvideo",
-      "content_id": "london-day",
-      "title": "Story video 08",
-      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nMy first day in London · Առաջին օրս Լոնդոնում (A2)\n\nAni arrived in London on a grey Monday morning with a small suitcase. She looked at her map, but the streets were very confusing. So she asked a friendly young man, 'Excuse me, could you help me? I'm looking for the Rose Hotel.' He showed her the way, and soon she was walking down a beautiful white street. At last, she found the little hotel and rang the bell. In the evening, she watched the sunset over the Thames and felt proud of herself.\n\nԹարգմանություն՝\nՄի մոխրագույն երկուշաբթի առավոտ Անին փոքրիկ ճամպրուկով հասավ Լոնդոն։ Նա նայեց քարտեզին, բայց փողոցները շատ շփոթեցնող էին։ Ուստի նա դիմեց մի բարեհամբույր երիտասարդի. «Կներեք, կօգնե՞ք։ Ես «Ռոուզ» հյուրանոցն եմ փնտրում»։ Երիտասարդը ցույց տվեց ճանապարհը, և շուտով Անին քայլում էր մի գեղեցիկ սպիտակ փողոցով։ Վերջապես նա գտավ փոքրիկ հյուրանոցը և սեղմեց զանգը։ Երեկոյան նա դիտում էր մայրամուտը Թեմզայի վրա և հպարտ էր իրենով։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "draft",
-      "thumb_offset": 1300
+      "content_id": "concert",
+      "title": "Story video 05",
+      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nThe school concert · Դպրոցական համերգը (A2)\n\nEvery evening, Anna practised the violin in her bedroom. On the day of the concert, she felt very nervous. Her best friend Leo smiled and gave her a thumbs-up. Anna walked slowly onto the big stage. She closed her eyes and played beautifully. Everyone clapped, and Leo cheered louder than anyone!\n\nԹարգմանություն՝\nԱմեն երեկո Աննան իր սենյակում ջութակ էր պարապում։ Համերգի օրը նա շատ էր հուզվում։ Նրա լավագույն ընկերը՝ Լեոն, ժպտաց ու բութ մատը վեր բարձրացրեց։ Աննան դանդաղ դուրս եկավ մեծ բեմ։ Նա փակեց աչքերը և հրաշալի նվագեց։ Բոլորը ծափահարեցին, իսկ Լեոն բոլորից բարձր էր ուրախանում։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 1300,
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-16-storyvideo-concert/storyvideo-concert.mp4"
+      }
     },
     {
       "id": "2026-11-16-dialogue-small-talk",
@@ -2287,18 +2296,21 @@
       }
     },
     {
-      "id": "2026-11-17-storyvideo-picnic",
+      "id": "2026-11-17-storyvideo-bottle",
       "date": "2026-11-17",
       "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
       "kind": "storyvideo",
-      "content_id": "picnic",
-      "title": "Story video 04",
-      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nThe rainy-day picnic · Անձրևոտ օրվա պիկնիկը (A2)\n\nTom and Mia packed a picnic basket with sandwiches and apples. But then it started to rain, and the children felt very sad. Suddenly, Mum had a great idea. They built a big blanket tent in the living room. They had their picnic inside the tent under the fairy lights. Later, the tired children fell asleep, and Mum covered them with a blanket.\n\nԹարգմանություն՝\nԹոմն ու Միան պիկնիկի զամբյուղը լցրին սենդվիչներով ու խնձորներով։ Բայց հետո անձրև սկսվեց, և երեխաները շատ տխրեցին։ Հանկարծ մայրիկի մտքով մի հիանալի գաղափար անցավ։ Նրանք հյուրասենյակում ծածկոցներից մեծ վրան սարքեցին։ Պիկնիկն արեցին վրանի ներսում՝ գունավոր լույսերի տակ։ Ավելի ուշ հոգնած երեխաները քնեցին, և մայրիկը նրանց ծածկեց վերմակով։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "draft",
-      "thumb_offset": 1300
+      "content_id": "bottle",
+      "title": "Story video 06",
+      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nThe message in a bottle · Նամակ շշի մեջ (A2)\n\nOne sunny morning, Ben found a green bottle on the beach. Inside the bottle, there was an old letter. It was from a girl in another country who wanted a new friend. That evening, Ben wrote her a long letter. The next day, his letter went into the red post box. Two months later, a parcel arrived with a postcard and a little wooden boat.\n\nԹարգմանություն՝\nԱրևոտ մի առավոտ Բենը լողափում կանաչ շիշ գտավ։ Շշի մեջ մի հին նամակ կար։ Այն մի աղջկանից էր, ով ապրում էր այլ երկրում և նոր ընկեր էր ուզում։ Այդ երեկո Բենը նրան երկար նամակ գրեց։ Հաջորդ օրը նրա նամակը հայտնվեց կարմիր փոստարկղում։ Երկու ամիս անց ծանրոց եկավ՝ բացիկով և փոքրիկ փայտե նավակով։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 1300,
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-17-storyvideo-bottle/storyvideo-bottle.mp4"
+      }
     },
     {
       "id": "2026-11-17-dialogue-airport",
@@ -2542,16 +2554,16 @@
       }
     },
     {
-      "id": "2026-11-18-storyvideo-wallet",
+      "id": "2026-11-18-storyvideo-english-life",
       "date": "2026-11-18",
       "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
       "kind": "storyvideo",
-      "content_id": "wallet",
-      "title": "Story video 09",
-      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nThe lost wallet · Կորած դրամապանակը (A2)\n\nOn a windy autumn afternoon, an old man dropped his wallet in the street. A young woman called Sarah saw it and picked it up. She ran after him and called, 'Excuse me, sir! Wait, please!' 'I think this is yours,' she said, and she gave him the wallet. The old man was so happy that he shook her hand and thanked her again and again. A week later, they met for tea and cake, and now they are good friends.\n\nԹարգմանություն՝\nՔամոտ մի աշնանային կեսօր մի տարեց տղամարդ փողոցում գցեց իր դրամապանակը։ Սառա անունով մի երիտասարդ կին տեսավ այն և վերցրեց։ Նա վազեց նրա հետևից ու կանչեց. «Կներեք, պարոն։ Սպասե՛ք, խնդրում եմ»։ «Կարծում եմ՝ սա ձերն է»,— ասաց նա ու տվեց դրամապանակը։ Տարեց տղամարդն այնքան ուրախ էր, որ սեղմեց նրա ձեռքը և նորից ու նորից շնորհակալություն հայտնեց։ Մեկ շաբաթ անց նրանք հանդիպեցին թեյի ու տորթի, և հիմա լավ ընկերներ են։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "content_id": "english-life",
+      "title": "Story video 07",
+      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nEnglish changed my life · Անգլերենը փոխեց իմ կյանքը (B1)\n\nTwo years ago, I started to learn English. I studied every evening after work. On the bus, I listened to English lessons and repeated the words. One day, I helped two tourists in a café. I was nervous, but they understood me! Then I had a job interview in English, and I spoke with confidence. A few months later, I arrived in a new country for my new job. Now I work in an international team. English really changed my life!\n\nԹարգմանություն՝\nԵրկու տարի առաջ ես սկսեցի անգլերեն սովորել։ Ամեն երեկո աշխատանքից հետո պարապում էի։ Ավտոբուսում ես լսում էի անգլերենի դասեր և կրկնում բառերը։ Մի օր ես սրճարանում օգնեցի երկու զբոսաշրջիկի։ Հուզված էի, բայց նրանք ինձ հասկացան։ Հետո անգլերենով աշխատանքային հարցազրույց ունեցա և վստահ էի խոսում։ Մի քանի ամիս անց ես նոր աշխատանքի համար ժամանեցի նոր երկիր։ Հիմա ես աշխատում եմ միջազգային թիմում։ Անգլերենն իսկապես փոխեց իմ կյանքը։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
       "review_status": "draft",
       "thumb_offset": 1300
     },
@@ -2735,16 +2747,16 @@
       }
     },
     {
-      "id": "2026-11-19-storyvideo-concert",
+      "id": "2026-11-19-storyvideo-london-day",
       "date": "2026-11-19",
       "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
       "kind": "storyvideo",
-      "content_id": "concert",
-      "title": "Story video 05",
-      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nThe school concert · Դպրոցական համերգը (A2)\n\nEvery evening, Anna practised the violin in her bedroom. On the day of the concert, she felt very nervous. Her best friend Leo smiled and gave her a thumbs-up. Anna walked slowly onto the big stage. She closed her eyes and played beautifully. Everyone clapped, and Leo cheered louder than anyone!\n\nԹարգմանություն՝\nԱմեն երեկո Աննան իր սենյակում ջութակ էր պարապում։ Համերգի օրը նա շատ էր հուզվում։ Նրա լավագույն ընկերը՝ Լեոն, ժպտաց ու բութ մատը վեր բարձրացրեց։ Աննան դանդաղ դուրս եկավ մեծ բեմ։ Նա փակեց աչքերը և հրաշալի նվագեց։ Բոլորը ծափահարեցին, իսկ Լեոն բոլորից բարձր էր ուրախանում։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "content_id": "london-day",
+      "title": "Story video 08",
+      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nMy first day in London · Առաջին օրս Լոնդոնում (A2)\n\nAni arrived in London on a grey Monday morning with a small suitcase. She looked at her map, but the streets were very confusing. So she asked a friendly young man, 'Excuse me, could you help me? I'm looking for the Rose Hotel.' He showed her the way, and soon she was walking down a beautiful white street. At last, she found the little hotel and rang the bell. In the evening, she watched the sunset over the Thames and felt proud of herself.\n\nԹարգմանություն՝\nՄի մոխրագույն երկուշաբթի առավոտ Անին փոքրիկ ճամպրուկով հասավ Լոնդոն։ Նա նայեց քարտեզին, բայց փողոցները շատ շփոթեցնող էին։ Ուստի նա դիմեց մի բարեհամբույր երիտասարդի. «Կներեք, կօգնե՞ք։ Ես «Ռոուզ» հյուրանոցն եմ փնտրում»։ Երիտասարդը ցույց տվեց ճանապարհը, և շուտով Անին քայլում էր մի գեղեցիկ սպիտակ փողոցով։ Վերջապես նա գտավ փոքրիկ հյուրանոցը և սեղմեց զանգը։ Երեկոյան նա դիտում էր մայրամուտը Թեմզայի վրա և հպարտ էր իրենով։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
       "review_status": "draft",
       "thumb_offset": 1300
     },
@@ -2894,16 +2906,16 @@
       }
     },
     {
-      "id": "2026-11-20-storyvideo-interview",
+      "id": "2026-11-20-storyvideo-wallet",
       "date": "2026-11-20",
       "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
       "kind": "storyvideo",
-      "content_id": "interview",
-      "title": "Story video 10",
-      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nThe job interview · Աշխատանքային հարցազրույցը (B1)\n\nThe night before his job interview, David practised his answers in front of the mirror. In the morning, he was late, so he ran to catch the bus. At the office, he waited nervously in reception. In the interview, he knocked over a glass of water! But David just laughed and said, 'Sorry, I'm a bit nervous today.' Everyone laughed too. Two days later, he got an email: 'Congratulations! You've got the job!'\n\nԹարգմանություն՝\nԱշխատանքային հարցազրույցից մեկ օր առաջ Դեյվիդը հայելու առջև փորձեց իր պատասխանները։ Առավոտյան նա ուշանում էր, ուստի վազեց, որ հասնի ավտոբուսին։ Գրասենյակում նա անհանգիստ սպասում էր ընդունարանում։ Հարցազրույցի ժամանակ նա շուռ տվեց ջրի բաժակը։ Բայց Դեյվիդը պարզապես ծիծաղեց և ասաց. «Ներեցեք, այսօր մի քիչ հուզված եմ»։ Բոլորն էլ ծիծաղեցին։ Երկու օր անց նա նամակ ստացավ. «Շնորհավորում ենք։ Դուք ընդունված եք աշխատանքի»։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "content_id": "wallet",
+      "title": "Story video 09",
+      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nThe lost wallet · Կորած դրամապանակը (A2)\n\nOn a windy autumn afternoon, an old man dropped his wallet in the street. A young woman called Sarah saw it and picked it up. She ran after him and called, 'Excuse me, sir! Wait, please!' 'I think this is yours,' she said, and she gave him the wallet. The old man was so happy that he shook her hand and thanked her again and again. A week later, they met for tea and cake, and now they are good friends.\n\nԹարգմանություն՝\nՔամոտ մի աշնանային կեսօր մի տարեց տղամարդ փողոցում գցեց իր դրամապանակը։ Սառա անունով մի երիտասարդ կին տեսավ այն և վերցրեց։ Նա վազեց նրա հետևից ու կանչեց. «Կներեք, պարոն։ Սպասե՛ք, խնդրում եմ»։ «Կարծում եմ՝ սա ձերն է»,— ասաց նա ու տվեց դրամապանակը։ Տարեց տղամարդն այնքան ուրախ էր, որ սեղմեց նրա ձեռքը և նորից ու նորից շնորհակալություն հայտնեց։ Մեկ շաբաթ անց նրանք հանդիպեցին թեյի ու տորթի, և հիմա լավ ընկերներ են։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
       "review_status": "draft",
       "thumb_offset": 1300
     },
@@ -3012,16 +3024,16 @@
       }
     },
     {
-      "id": "2026-11-21-storyvideo-bottle",
+      "id": "2026-11-21-storyvideo-interview",
       "date": "2026-11-21",
       "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
       "kind": "storyvideo",
-      "content_id": "bottle",
-      "title": "Story video 06",
-      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nThe message in a bottle · Նամակ շշի մեջ (A2)\n\nOne sunny morning, Ben found a green bottle on the beach. Inside the bottle, there was an old letter. It was from a girl in another country who wanted a new friend. That evening, Ben wrote her a long letter. The next day, his letter went into the red post box. Two months later, a parcel arrived with a postcard and a little wooden boat.\n\nԹարգմանություն՝\nԱրևոտ մի առավոտ Բենը լողափում կանաչ շիշ գտավ։ Շշի մեջ մի հին նամակ կար։ Այն մի աղջկանից էր, ով ապրում էր այլ երկրում և նոր ընկեր էր ուզում։ Այդ երեկո Բենը նրան երկար նամակ գրեց։ Հաջորդ օրը նրա նամակը հայտնվեց կարմիր փոստարկղում։ Երկու ամիս անց ծանրոց եկավ՝ բացիկով և փոքրիկ փայտե նավակով։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "content_id": "interview",
+      "title": "Story video 10",
+      "caption": "Անգլերեն պատմություն ձայնով · English story for learners\nThe job interview · Աշխատանքային հարցազրույցը (B1)\n\nThe night before his job interview, David practised his answers in front of the mirror. In the morning, he was late, so he ran to catch the bus. At the office, he waited nervously in reception. In the interview, he knocked over a glass of water! But David just laughed and said, 'Sorry, I'm a bit nervous today.' Everyone laughed too. Two days later, he got an email: 'Congratulations! You've got the job!'\n\nԹարգմանություն՝\nԱշխատանքային հարցազրույցից մեկ օր առաջ Դեյվիդը հայելու առջև փորձեց իր պատասխանները։ Առավոտյան նա ուշանում էր, ուստի վազեց, որ հասնի ավտոբուսին։ Գրասենյակում նա անհանգիստ սպասում էր ընդունարանում։ Հարցազրույցի ժամանակ նա շուռ տվեց ջրի բաժակը։ Բայց Դեյվիդը պարզապես ծիծաղեց և ասաց. «Ներեցեք, այսօր մի քիչ հուզված եմ»։ Բոլորն էլ ծիծաղեցին։ Երկու օր անց նա նամակ ստացավ. «Շնորհավորում ենք։ Դուք ընդունված եք աշխատանքի»։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
       "review_status": "draft",
       "thumb_offset": 1300
     },
