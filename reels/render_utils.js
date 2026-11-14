@@ -158,7 +158,8 @@ function encodeVideo(framesDirectory, audioPath, audioStart, duration, outputPat
 function levelLoudness(outputPath) {
   const r = spawnSync(FFmpeg, ['-hide_banner', '-nostats', '-i', path.resolve(outputPath), '-vn', '-af', 'ebur128=peak=true', '-f', 'null', '-'], { encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 });
   const lufs = Number(((r.stderr || '').match(/I:\s+(-?[\d.]+) LUFS/g) || []).pop()?.match(/-?[\d.]+/)[0]);
-  if (!Number.isFinite(lufs) || Math.abs(lufs + 14) <= 1) return;
+  const peak = Number(((r.stderr || '').match(/Peak:\s+(-?[\d.]+) dBFS/g) || []).pop()?.match(/-?[\d.]+/)[0]);
+  if (!Number.isFinite(lufs) || (Math.abs(lufs + 14) <= 1 && !(peak > -1))) return;   // also fix overshooting peaks
   const tmp = `${outputPath}.level.mp4`;
   const fix = spawnSync(FFmpeg, ['-y', '-hide_banner', '-loglevel', 'error', '-i', path.resolve(outputPath), '-c:v', 'copy',
     '-af', `volume=${(-14 - lufs).toFixed(2)}dB,alimiter=limit=0.7:level=disabled`, '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', tmp], { encoding: 'utf8' });
