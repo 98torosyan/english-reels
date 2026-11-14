@@ -1344,7 +1344,10 @@
           "https://98torosyan.github.io/english-reels-media/2026-11-14-list-cafe/07-cafe.jpg",
           "https://98torosyan.github.io/english-reels-media/2026-11-14-list-cafe/08-cafe.jpg"
         ]
-      }
+      },
+      "attempts": 1,
+      "last_error": "Graph API request failed (HTTP 403, code 4). [container 17930664390242156: ERROR]",
+      "container_id": "17930664390242156"
     },
     {
       "id": "2026-11-14-phrasal-get",
