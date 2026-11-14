@@ -28,7 +28,7 @@ def panels(src):
         if p < n: e.append((p, n))
         return [x for x in e if x[1] - x[0] > 200]
     cols, rows = spans(runs(white.mean(axis=0)), im.size[0]), spans(runs(white.mean(axis=1)), im.size[1])
-    if (len(cols), len(rows)) not in ((2, 3), (3, 2), (3, 3), (2, 4)): raise ValueError(f"{src}: expected a 2x3, 3x3 or 2x4 grid, found {len(cols)}x{len(rows)}")
+    if (len(cols), len(rows)) not in ((2, 3), (3, 2), (3, 3), (2, 4), (2, 5), (5, 2)): raise ValueError(f"{src}: expected a 2x3, 3x3 or 2x4 grid, found {len(cols)}x{len(rows)}")
     pick = src.parent / "pick"   # optional: which panels to keep (1-based), e.g. when the grid repeats a picture
     keep = [int(x) for x in pick.read_text().split()] if pick.exists() else None
     cells = []

@@ -17,8 +17,10 @@ const r3 = (x) => Number(x.toFixed(3));
 const PALETTE = ['#B9790B', '#1C8AA3', '#B23F78', '#3E5FD9', '#2E9E6A', '#6A49E2'];
 const ICONS = path.join(utils.ROOT, 'node_modules/@phosphor-icons/core/assets/duotone');
 const iconSvg = (name) => (name ? fs.readFileSync(path.join(ICONS, `${name}-duotone.svg`), 'utf8') : null);
+// painted pictures for a list (assets/words10_art/<id>/<n>.png) replace the line icons when they exist
+const art = (id, n) => { const f = path.join(utils.ROOT, 'assets/words10_art', id, `${n}.png`); return fs.existsSync(f) ? `data:image/png;base64,${fs.readFileSync(f).toString('base64')}` : null; };
 const withColor = (list) => ({ ...list, color: PALETTE[(list.number - 1) % PALETTE.length],
-  words: list.words.map((w) => ({ ...w, svg: iconSvg(w.icon) })) });
+  words: list.words.map((w, n) => ({ ...w, img: art(list.id, n), svg: iconSvg(w.icon) })) });
 
 function clip(id, n, text) {
   const dir = path.join(utils.ROOT, 'assets', 'words10', id);
