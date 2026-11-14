@@ -15,7 +15,7 @@ const FPS = 30;
 const r3 = (x) => Number(x.toFixed(3));
 // one accent per day, from the brand palette, so neighbouring posts never look the same
 const PALETTE = ['#B9790B', '#1C8AA3', '#B23F78', '#3E5FD9', '#2E9E6A', '#6A49E2'];
-const withColor = (st) => ({ ...st, color: PALETTE[(st.number + 1) % PALETTE.length],
+const withColor = (st) => ({ ...st, color: st.classic ? '#A8741A' : PALETTE[(st.number + 1) % PALETTE.length],
   imgs: st.scenes.map((_, i) => `data:image/jpeg;base64,${fs.readFileSync(path.join(utils.ROOT, 'assets', 'storyvideo', st.id, `${i + 1}.jpg`)).toString('base64')}`) });
 
 function clip(id, n, text) {
@@ -31,7 +31,7 @@ function clip(id, n, text) {
 function timeline(st) {
   const c = clip(st.id, 'p', st.scenes.join(' '));
   const at = 2.2;
-  return { plays: [{ at, clip: c }], sceneStart: c.scenes.map((s) => r3(s + at)), words: c.words.map(([a, b]) => [r3(a + at), r3(b + at)]), total: r3(at + c.len + 1.6 + 2.6) };
+  return { plays: [{ at, clip: c }], sceneStart: c.scenes.map((s) => r3(s + at)), words: c.words.map(([a, b]) => [r3(a + at), r3(b + at)]), total: r3(at + c.len + 1.6 + 2.6 + (st.classic ? 2.2 : 0)), outro: st.classic ? 4.6 : 2.4 };
 }
 
 function voiceTrack(T, out) {
@@ -82,7 +82,7 @@ async function renderStoryvideo(browser, baseUrl, list0) {
   const voice = path.join(work, `${name}.wav`);
   voiceTrack(T, voice);
   const sfx = [{ file: 'sfx-whoosh.wav', at: 0.25, gain: 0.3 }, { file: 'sfx-pop.wav', at: 0.6, gain: 0.15 },
-    { file: 'sfx-whoosh.wav', at: T.total - 2.2, gain: 0.3 }];
+    { file: 'sfx-whoosh.wav', at: T.total - T.outro + 0.2, gain: 0.3 }];
   utils.encodeVideo(frames, voice, 0, T.total, videoPath, FPS, sfx);
   const info = utils.verifyVideo(videoPath);
   fs.rmSync(frames, { recursive: true, force: true });
