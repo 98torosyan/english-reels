@@ -155,16 +155,17 @@ function encodeVideo(framesDirectory, audioPath, audioStart, duration, outputPat
 
 // Second pass: one-pass loudnorm can miss the target on videos with long pauses (e.g. 10 words).
 // Measure the finished file and, if it is more than 1 LU off -14 LUFS, correct the audio gain (video copied untouched).
-function levelLoudness(outputPath) {
+function levelLoudness(outputPath, pass = 0) {
   const r = spawnSync(FFmpeg, ['-hide_banner', '-nostats', '-i', path.resolve(outputPath), '-vn', '-af', 'ebur128=peak=true', '-f', 'null', '-'], { encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 });
   const lufs = Number(((r.stderr || '').match(/I:\s+(-?[\d.]+) LUFS/g) || []).pop()?.match(/-?[\d.]+/)[0]);
   const peak = Number(((r.stderr || '').match(/Peak:\s+(-?[\d.]+) dBFS/g) || []).pop()?.match(/-?[\d.]+/)[0]);
   if (!Number.isFinite(lufs) || (Math.abs(lufs + 14) <= 1 && !(peak > -1))) return;   // also fix overshooting peaks
   const tmp = `${outputPath}.level.mp4`;
   const fix = spawnSync(FFmpeg, ['-y', '-hide_banner', '-loglevel', 'error', '-i', path.resolve(outputPath), '-c:v', 'copy',
-    '-af', `volume=${(-14 - lufs).toFixed(2)}dB,alimiter=limit=0.7:level=disabled`, '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', tmp], { encoding: 'utf8' });
+    '-af', `volume=${(-14 - lufs - (peak > -1 ? Math.min(3, peak + 1.5) : 0)).toFixed(2)}dB,alimiter=limit=0.7:level=disabled`, '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', tmp], { encoding: 'utf8' });
   if (fix.status !== 0) throw new Error(`Loudness correction failed: ${fix.stderr}`);
   fs.renameSync(tmp, outputPath);
+  if (pass < 2) levelLoudness(outputPath, pass + 1);   // re-measure: AAC can bring back a peak
 }
 
 function verifyVideo(videoPath) {
