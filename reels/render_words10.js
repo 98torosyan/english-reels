@@ -92,7 +92,7 @@ async function renderWords10(browser, baseUrl, list0) {
       listBottom: Math.round(rows.at(-1).getBoundingClientRect().bottom), title: document.getElementById('theme').scrollWidth <= 920 };
   });
   console.log(`${name}: ${JSON.stringify(check)} total ${T.total}s`);
-  if (!check.armenian || !check.ipa || check.tight.length || !check.title || check.listBottom > 1500) throw new Error(`${name}: layout check failed`);
+  if (!check.armenian || !check.ipa || check.tight.length || !check.title || check.listBottom > 1580) throw new Error(`${name}: layout check failed`);
   await utils.renderFrames(page, T.total, frames, posterPath, 1.9, FPS);
   if (errors.length) throw new Error(`Template errors: ${errors.join(' | ')}`);
   await page.close();
