@@ -185,7 +185,7 @@
     {
       "id": "doctor",
       "number": 4,
-      "theme": "At the doctor's",
+      "theme": "Seeing a doctor",
       "theme_hy": "Բժշկի մոտ",
       "level": "A2",
       "voice": "kokoro:bm_daniel",

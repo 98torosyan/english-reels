@@ -34,7 +34,7 @@ function clip(id, n, text) {
 // List slides in, then each row: highlight, word, a pause to repeat it.
 function timeline(list) {   // list.mode === 'spot': one big word at a time
   const plays = []; const rows = [];
-  let t = 2.0;
+  let t = list.words.some((w) => w.img) ? 2.8 : 2.0;   // with pictures, let them land before the first word
   list.words.forEach((w, n) => {
     const c = clip(list.id, n, `${w.en}.`);
     const at = t + 0.3;
@@ -93,7 +93,8 @@ async function renderWords10(browser, baseUrl, list0) {
   });
   console.log(`${name}: ${JSON.stringify(check)} total ${T.total}s`);
   if (!check.armenian || !check.ipa || check.tight.length || !check.title || check.listBottom > 1600) throw new Error(`${name}: layout check failed`);
-  await utils.renderFrames(page, T.total, frames, posterPath, 1.9, FPS);
+  const still = T.rows.at(-1).end + 0.3;   // everything in place, nothing highlighted
+  await utils.renderFrames(page, T.total, frames, posterPath, still, FPS);
   if (errors.length) throw new Error(`Template errors: ${errors.join(' | ')}`);
   await page.close();
   const voice = path.join(work, `${name}.wav`);
@@ -103,7 +104,7 @@ async function renderWords10(browser, baseUrl, list0) {
   // story image: the same list, still, pointing to the reel
   const sp = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
   await utils.preparePage(sp, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
-  await sp.evaluate(({ d, t }) => { window.configure({ ...d, story: true }, t); window.seek(0); window.fit(); window.seek(1.9); }, { d: list, t: plain });
+  await sp.evaluate(({ d, t, s }) => { window.configure({ ...d, story: true }, t); window.seek(0); window.fit(); window.seek(s); }, { d: list, t: plain, s: T.rows.at(-1).end + 0.3 });
   await sp.evaluate(() => document.fonts.ready);
   const storyPath = path.join(output, `${name}-story.jpg`);
   await sp.screenshot({ path: storyPath, type: 'jpeg', quality: 93 });
