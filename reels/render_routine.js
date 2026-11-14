@@ -34,7 +34,8 @@ function timeline(st) {
     words.push(c.words.map(([a, b]) => [r3(a + v0), r3(b + v0)]));
     t = end;
   });
-  return { plays, scenes, words, total: r3(t + 2.9) };
+  const outro = st.grammar ? 5.2 : 2.6;   // a quiz needs time to read
+  return { plays, scenes, words, total: r3(t + outro + 0.3), outro };
 }
 
 function voiceTrack(T, out) {
@@ -82,7 +83,7 @@ async function render(browser, baseUrl, st) {
   await page.close();
   const voice = path.join(work, `${name}.wav`); voiceTrack(T, voice);
   const sfx = [{ file: 'sfx-whoosh.wav', at: 0.2, gain: 0.25 }, ...T.scenes.map((s) => ({ file: 'sfx-whoosh.wav', at: s.at, gain: 0.12 })),
-    { file: 'sfx-whoosh.wav', at: T.total - 2.6, gain: 0.25 }];
+    { file: 'sfx-whoosh.wav', at: T.total - T.outro, gain: 0.25 }];
   utils.encodeVideo(frames, voice, 0, T.total, videoPath, FPS, sfx);
   const info = utils.verifyVideo(videoPath);
   fs.rmSync(frames, { recursive: true, force: true });

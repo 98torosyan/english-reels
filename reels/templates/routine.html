@@ -40,6 +40,8 @@
  .foot{position:absolute;left:70px;right:70px;bottom:120px;display:flex;justify-content:space-between;font:700 26px Inter;color:#ffffffd9;z-index:4}
  /* intro */
  .intro{position:absolute;inset:0;z-index:8;display:flex;flex-direction:column;align-items:center;text-align:center;opacity:0}
+ .intro .k:empty{display:none}
+ .intro .k:empty + .q{margin-top:240px}
  .intro .k{margin-top:170px;font:800 24px Inter;letter-spacing:8px;color:var(--c)}
  .intro .q{margin-top:20px;width:940px;font:700 96px/1.04 Literata,serif;letter-spacing:-2.5px;color:var(--ink)}
  .intro .q em{color:var(--c)}
@@ -48,7 +50,7 @@
  .intro .rule{margin-top:26px;width:900px;padding:26px 34px;border-radius:30px;background:#FFFCF6e8;box-shadow:0 18px 40px #3a2f1426;font:600 40px/1.3 Literata,serif;color:var(--ink)}
  .intro .rule:empty{display:none}
  .intro .rule i{display:block;margin-top:12px;font:500 34px/1.35 NotoArmenian,sans-serif;font-style:normal;color:#4a4760}
- .outro .quiz{display:inline-block;margin-top:6px;padding:6px 22px;border-radius:14px;background:color-mix(in srgb,var(--c) 14%,transparent);font-style:normal}
+ .outro .quiz{display:inline-block;font-size:58px;line-height:1.25;padding:10px 26px;margin-top:6px;padding:6px 22px;border-radius:14px;background:color-mix(in srgb,var(--c) 14%,transparent);font-style:normal}
  .intro .name{position:absolute;top:1300px;left:50%;transform:translateX(-50%);font:800 30px Inter;letter-spacing:4px;color:var(--ink);background:#FFFCF6;padding:14px 34px;border-radius:99px;box-shadow:0 14px 30px #0004}
  /* outro (shared GSAP outro in kinetic.js) */
  .outro{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;opacity:0;z-index:9;background:#F4EFE4}
@@ -87,7 +89,7 @@
   bgs.innerHTML=data.pics.map((p,i)=>`<div class="bg" id="bg${i}" style="background-image:url(${p})"></div>`).join('');
   frame.insertAdjacentHTML('afterbegin',data.pics.map((p,i)=>`<div class="shot" id="s${i}"><img src="${p}"></div>`).join(''));
   dots.innerHTML=data.lines.map(()=>'<i></i>').join('');
-  introK.textContent=data.grammar?'GRAMMAR · ENGLISH TENSES':`EVERYDAY ENGLISH · ${data.title.toUpperCase()}`;
+  introK.textContent='';
   if(data.grammar){ introQ.innerHTML=lastEm(data.title); introHy.textContent=data.title_hy; introR.innerHTML=`${data.grammar.rule_en}<i>${data.grammar.rule_hy}</i>`; }
   else { introQ.innerHTML=lastEm(data.question); introHy.textContent=data.question_hy; }
   heroImg.src=data.pics[0]; heroName.textContent=data.hero?`Meet ${data.hero}!`:''; heroName.style.display=data.hero?'':'none';
@@ -136,8 +138,8 @@
   const rp=t>=s.v1+.15&&t<s.end-.1; const ra=rp?ease(clamp((t-s.v1-.15)/.3)):0; rep.style.opacity=ra; rep.style.transform=`scale(${.8+.2*ra})`;
   frame.style.opacity=ease(clamp(t/.6)); topfade.style.opacity=1; count.style.opacity=cv;
   // outro
-  const o=ease(clamp((t-(T.total-2.6))/.6)); outro.style.opacity=o;
-  if(window.K&&K.ok){K.seek(t);K.outro(t-(T.total-2.6));}
+  const OL=T.outro||2.6; const o=ease(clamp((t-(T.total-OL))/.6)); outro.style.opacity=o;
+  if(window.K&&K.ok){K.seek(t);K.outro(t-(T.total-OL));}
  };
  </script>
 </body>
