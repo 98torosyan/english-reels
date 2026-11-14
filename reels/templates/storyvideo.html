@@ -25,9 +25,9 @@
  .intro .it em{font-style:italic;color:#FFD58A}
  .intro i{display:block;margin-top:26px;width:0;height:3px;background:#FFD58A}
  .intro .ia{margin-top:22px;font:italic 500 36px Literata,serif;color:#FFE7B0;text-shadow:0 4px 18px #0009;opacity:0}
- .outro.classic h2{width:900px;font:italic 600 68px/1.16 Literata,serif;color:var(--ink,#17183A)}
+ .outro.classic h2{width:920px;font:italic 600 84px/1.12 Literata,serif;color:var(--ink,#17183A)}
  .outro.classic h2:before{content:"“";display:block;font:700 160px/0.6 Literata,serif;color:var(--c);margin-bottom:10px}
- .outro.classic p{max-width:880px;font:600 34px/1.4 NotoArmenian,Inter,sans-serif;color:#5E5B74}
+ .outro.classic p{max-width:880px;font:600 40px/1.4 NotoArmenian,Inter,sans-serif;color:#5E5B74}
  .outro.classic .by{margin-top:18px;font:800 22px Inter;letter-spacing:5px;color:var(--c)}
  .pill{position:absolute;top:96px;left:56px;display:flex;align-items:center;gap:14px;padding:10px 22px 10px 10px;border-radius:99px;background:#FFFCF6ee;box-shadow:0 10px 30px #17183A26;z-index:3}
  .pill img{width:56px;height:56px;border-radius:16px}
@@ -79,10 +79,11 @@
   sdots.innerHTML=data.imgs.map(()=>'<i></i>').join('');
   series.textContent=data.classic?`CLASSICS · ${data.classic.author.toUpperCase()}`:`${data.series||'STORY TIME'} · ${String(data.number).padStart(2,'0')}`; level.textContent=data.level;
   if(data.classic){ introK.textContent='CLASSICS MADE EASY'; introA.textContent=`${data.classic.author} · ${data.classic.year}`;
-   outro.classList.add('classic'); const h2=outro.querySelector('h2'); h2.textContent=data.classic.quote+'”';
+   outro.classList.add('classic'); const h2=outro.querySelector('h2'); h2.textContent=data.classic.quote;
    outro.querySelector('p').textContent=`«${data.classic.quote_hy}»`; h2.insertAdjacentHTML('afterend',`<div class="by">— ${data.classic.author.toUpperCase()} · ${data.classic.book.toUpperCase()}</div>`); }
   const tw=data.title.split(' '); title.innerHTML=tw.slice(0,-1).join(' ')+' <em>'+tw.at(-1)+'</em>'; introT.innerHTML=title.innerHTML;
-  let k=0; cap.innerHTML=data.scenes.map((sc,i)=>`<p id="p${i}">${sc.split(' ').map(w=>`<span data-k="${k++}">${w}</span>`).join(' ')}</p>`).join('');
+  let k=0; const curly=w=>w.replace(/^'/,'‘').replace(/'/g,'’');   // typographic quotes and apostrophes
+  cap.innerHTML=data.scenes.map((sc,i)=>`<p id="p${i}">${sc.split(' ').map(w=>`<span data-k="${k++}">${curly(w)}</span>`).join(' ')}</p>`).join('');
  };
  window.fit=()=>{if(window.K){K.init();K.title(introT,.15);}document.querySelectorAll('.cap p').forEach(p=>{let f=46;while(p.scrollHeight>330&&f>34){f-=1;p.style.fontSize=f+'px';}})};
  window.seek=t=>{
