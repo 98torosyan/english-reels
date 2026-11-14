@@ -27,6 +27,8 @@ def items():
         for w in l["words"]: yield f"words10:{l['id']}", w["en"], w["ipa"]
     for st in json.loads((ROOT / "carousels/data/picture_stories.json").read_text(encoding="utf-8"))["stories"]:
         for w in st.get("words", []): yield f"picstory:{st['id']}", w["en"], w["ipa"]
+    for st in json.loads((ROOT / "carousels/data/classic_carousels.json").read_text(encoding="utf-8"))["stories"]:
+        for w in st.get("words", []): yield f"classic:{st['id']}", w["en"], w["ipa"]
     snd = json.loads((ROOT / "reels/data/sounds.json").read_text(encoding="utf-8"))
     for s in snd["sounds"]:
         for k in ("a", "b"): yield f"sound:{s['id']}", s[k]["word"], s[k]["ipa"]

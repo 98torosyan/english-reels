@@ -38,6 +38,9 @@ def texts():
     for st in load("carousels/data/picture_stories.json")["stories"]:
         for k, sc in enumerate(st["scenes"]): yield f"picstory:{st['id']}/{k}", sc
         if st.get("question"): yield f"picstory:{st['id']}/q", st["question"]
+    for st in load("carousels/data/classic_carousels.json")["stories"]:
+        for k, sc in enumerate(st["scenes"]): yield f"classic:{st['id']}/{k}", sc
+        if st.get("mystery"): yield f"classic:{st['id']}/q", st["mystery"]["question"]
     for st in load("reels/data/storyvideo.json")["stories"]:
         for k, sc in enumerate(st["scenes"]): yield f"storyvideo:{st['id']}/{k}", sc
     for st in load("reels/data/routine.json")["stories"]:

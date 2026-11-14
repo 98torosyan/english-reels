@@ -1,22 +1,717 @@
 {
   "note": "Classics made easy, carousel format. Images: assets/storyvideo/<id>/1..6.jpg. For a mystery, 'reveal' is shown after a 'Who did it?' slide. Armenian to be reviewed by Gayane.",
   "stories": [
-    {"id": "blue-carbuncle", "title": "The Blue Carbuncle", "title_hy": "Կապույտ կարբունկուլը", "level": "A2",
-     "author": "Arthur Conan Doyle", "year": "1892", "book": "The Adventure of the Blue Carbuncle",
-     "quote": "It is the season of forgiveness.", "quote_hy": "Ներման ժամանակն է",
-     "mystery": {"question": "Who stole the blue stone?", "question_hy": "Ո՞վ է գողացել կապույտ քարը"},
-     "scenes": ["Two days after Christmas, Holmes was studying an old hat. 'This hat can tell us a lot,' he said.",
-                "Peterson, a commissionaire, had found the hat and a Christmas goose in the street.",
-                "When Peterson's wife cooked the goose, she found something amazing inside: a famous blue stone!",
-                "Holmes and Watson followed the story of the goose to a busy Christmas market.",
-                "There they saw a nervous young man who was asking about the same goose.",
-                "It was James Ryder, a hotel attendant. He had hidden the stone in the goose. It was Christmas, so Holmes let him go."],
-     "scenes_hy": ["Սուրբ Ծննդից երկու օր անց Հոլմսը ուսումնասիրում էր մի հին գլխարկ։ «Այս գլխարկը շատ բան կարող է պատմել»,— ասաց նա։",
-                   "Դռնապան Պետերսոնը փողոցում գտել էր գլխարկը և Սուրբ Ծննդյան մի սագ։",
-                   "Երբ Պետերսոնի կինը սագը պատրաստում էր, նրա ներսում զարմանալի բան գտավ՝ մի հայտնի կապույտ քար։",
-                   "Հոլմսն ու Ուոթսոնը սագի հետքերով հասան Սուրբ Ծննդյան աշխույժ շուկա։",
-                   "Այնտեղ նրանք տեսան մի անհանգիստ երիտասարդի, որը հարցնում էր նույն սագի մասին։",
-                   "Դա Ջեյմս Ռայդերն էր՝ հյուրանոցի սպասավորը։ Նա էր քարը թաքցրել սագի մեջ։ Սուրբ Ծնունդ էր, և Հոլմսը բաց թողեց նրան։"],
-     "words": [{"en": "goose", "ipa": "/ɡuːs/", "hy": "սագ"}, {"en": "steal", "ipa": "/stiːl/", "hy": "գողանալ"}, {"en": "forgive", "ipa": "/fəˈɡɪv/", "hy": "ներել"}]}
+    {
+      "id": "blue-carbuncle",
+      "title": "The Blue Carbuncle",
+      "title_hy": "Կապույտ կարբունկուլը",
+      "level": "A2",
+      "author": "Arthur Conan Doyle",
+      "year": "1892",
+      "book": "The Adventure of the Blue Carbuncle",
+      "quote": "It is the season of forgiveness.",
+      "quote_hy": "Ներման ժամանակն է",
+      "mystery": {
+        "question": "Who stole the blue stone?",
+        "question_hy": "Ո՞վ է գողացել կապույտ քարը"
+      },
+      "scenes": [
+        "Two days after Christmas, Holmes was studying an old hat. 'This hat can tell us a lot,' he said.",
+        "Peterson, a commissionaire, had found the hat and a Christmas goose in the street.",
+        "When Peterson's wife cooked the goose, she found something amazing inside: a famous blue stone!",
+        "Holmes and Watson followed the story of the goose to a busy Christmas market.",
+        "There they saw a nervous young man who was asking about the same goose.",
+        "It was James Ryder, a hotel attendant. He had hidden the stone in the goose. It was Christmas, so Holmes let him go."
+      ],
+      "scenes_hy": [
+        "Սուրբ Ծննդից երկու օր անց Հոլմսը ուսումնասիրում էր մի հին գլխարկ։ «Այս գլխարկը շատ բան կարող է պատմել»,— ասաց նա։",
+        "Դռնապան Պետերսոնը փողոցում գտել էր գլխարկը և Սուրբ Ծննդյան մի սագ։",
+        "Երբ Պետերսոնի կինը սագը պատրաստում էր, նրա ներսում զարմանալի բան գտավ՝ մի հայտնի կապույտ քար։",
+        "Հոլմսն ու Ուոթսոնը սագի հետքերով հասան Սուրբ Ծննդյան աշխույժ շուկա։",
+        "Այնտեղ նրանք տեսան մի անհանգիստ երիտասարդի, որը հարցնում էր նույն սագի մասին։",
+        "Դա Ջեյմս Ռայդերն էր՝ հյուրանոցի սպասավորը։ Նա էր քարը թաքցրել սագի մեջ։ Սուրբ Ծնունդ էր, և Հոլմսը բաց թողեց նրան։"
+      ],
+      "words": [
+        {
+          "en": "goose",
+          "ipa": "/ɡuːs/",
+          "hy": "սագ"
+        },
+        {
+          "en": "steal",
+          "ipa": "/stiːl/",
+          "hy": "գողանալ"
+        },
+        {
+          "en": "forgive",
+          "ipa": "/fəˈɡɪv/",
+          "hy": "ներել"
+        }
+      ]
+    },
+    {
+      "id": "alice",
+      "title": "Alice in Wonderland",
+      "title_hy": "Ալիսը Հրաշքների աշխարհում",
+      "level": "A2",
+      "author": "Lewis Carroll",
+      "year": "1865",
+      "book": "Alice's Adventures in Wonderland",
+      "quote": "Curiouser and curiouser!",
+      "quote_hy": "Ավելի ու ավելի տարօրինակ",
+      "scenes": [
+        "Alice was sitting by the river with her sister. She was bored, because her sister's book had no pictures.",
+        "Suddenly, a White Rabbit with a pocket watch ran past. 'Oh dear! I shall be late!' he said.",
+        "Alice ran after the Rabbit and saw him jump into a big rabbit hole.",
+        "She jumped in too, and she fell down, down, down, past cupboards, maps and jars.",
+        "At the bottom, she found a tiny golden key and a very small door to a beautiful garden.",
+        "Then she found a little bottle. 'Drink me,' it said. Alice drank it, and she became very small!"
+      ],
+      "scenes_hy": [
+        "Ալիսը քրոջ հետ նստած էր գետի ափին։ Նա ձանձրանում էր, որովհետև քրոջ գրքում նկարներ չկային։",
+        "Հանկարծ գրպանի ժամացույցով մի Սպիտակ Նապաստակ վազեց կողքով. «Վա՜յ, ուշանում եմ»,— ասաց նա։",
+        "Ալիսը վազեց Նապաստակի հետևից և տեսավ, թե ինչպես նա ցատկեց մի մեծ բնի մեջ։",
+        "Նա էլ ցատկեց և ընկավ ներքև, ներքև, ներքև՝ պահարանների, քարտեզների և բանկաների կողքով։",
+        "Ներքևում նա գտավ մի փոքրիկ ոսկե բանալի և մի շատ փոքր դուռ, որը տանում էր գեղեցիկ այգի։",
+        "Հետո նա գտավ մի փոքրիկ շիշ, որի վրա գրված էր՝ «Խմի՛ր ինձ»։ Ալիսը խմեց այն և դարձավ շատ փոքրիկ։"
+      ],
+      "words": [
+        {
+          "en": "rabbit",
+          "ipa": "/ˈræbɪt/",
+          "hy": "ճագար"
+        },
+        {
+          "en": "key",
+          "ipa": "/kiː/",
+          "hy": "բանալի"
+        },
+        {
+          "en": "bottle",
+          "ipa": "/ˈbɒtl/",
+          "hy": "շիշ"
+        }
+      ]
+    },
+    {
+      "id": "christmas-carol",
+      "title": "A Christmas Carol",
+      "title_hy": "Սուրբ Ծննդյան երգ",
+      "level": "A2",
+      "author": "Charles Dickens",
+      "year": "1843",
+      "book": "A Christmas Carol",
+      "quote": "God bless us, every one!",
+      "quote_hy": "Աստված օրհնի բոլորիս",
+      "scenes": [
+        "Scrooge was a rich old man, but he loved only money. His poor clerk, Bob, was always cold.",
+        "On Christmas Eve, the ghost of his old friend Marley appeared, covered in heavy chains.",
+        "The first spirit showed Scrooge a happy Christmas party from his past.",
+        "The second spirit showed him a table full of food and people who were happy to share.",
+        "The third spirit, silent and dark, showed him a lonely future.",
+        "On Christmas morning, Scrooge woke up a new man. He laughed and wished everyone a merry Christmas!"
+      ],
+      "scenes_hy": [
+        "Սքրուջը հարուստ ծերունի էր, բայց սիրում էր միայն փողը։ Նրա աղքատ գրագիրը՝ Բոբը, միշտ մրսում էր։",
+        "Սուրբ Ծննդյան նախօրեին հայտնվեց նրա հին ընկերոջ՝ Մարլիի ուրվականը՝ ծանր շղթաներով պատված։",
+        "Առաջին ոգին Սքրուջին ցույց տվեց նրա անցյալի մի ուրախ տոնական երեկույթ։",
+        "Երկրորդ ոգին նրան ցույց տվեց ուտելիքով լի սեղան և մարդկանց, որոնք ուրախ էին կիսվել։",
+        "Երրորդ ոգին՝ լուռ և մութ, նրան ցույց տվեց միայնակ ապագա։",
+        "Սուրբ Ծննդյան առավոտ Սքրուջն արթնացավ բոլորովին այլ մարդ։ Նա ծիծաղում էր և բոլորին շնորհավորում տոնը։"
+      ],
+      "words": [
+        {
+          "en": "ghost",
+          "ipa": "/ɡəʊst/",
+          "hy": "ուրվական"
+        },
+        {
+          "en": "spirit",
+          "ipa": "/ˈspɪrɪt/",
+          "hy": "ոգի"
+        },
+        {
+          "en": "future",
+          "ipa": "/ˈfjuːtʃə/",
+          "hy": "ապագա"
+        }
+      ]
+    },
+    {
+      "id": "sherlock",
+      "title": "Sherlock Holmes",
+      "title_hy": "Շերլոկ Հոլմս",
+      "level": "A2",
+      "author": "Arthur Conan Doyle",
+      "year": "1887",
+      "book": "A Study in Scarlet",
+      "quote": "You have been in Afghanistan, I perceive.",
+      "quote_hy": "Ինչպես տեսնում եմ, դուք Աֆղանստանում եք եղել",
+      "scenes": [
+        "Dr Watson came back to rainy London after the war. He needed a cheap place to live.",
+        "A friend took him to a laboratory, where a tall young man was doing an experiment.",
+        "The man shook his hand and said, 'You have been in Afghanistan, I perceive.' Watson was amazed!",
+        "The man was Sherlock Holmes. Together they rented rooms at 221B Baker Street.",
+        "In the evenings, Holmes played the violin while Watson read by the fire.",
+        "Soon they had their first mystery. Holmes studied the footprints with his magnifying glass."
+      ],
+      "scenes_hy": [
+        "Պատերազմից հետո բժիշկ Ուոթսոնը վերադարձավ անձրևոտ Լոնդոն։ Նրան էժան բնակարան էր պետք։",
+        "Մի ընկեր նրան տարավ լաբորատորիա, որտեղ մի բարձրահասակ երիտասարդ փորձ էր անում։",
+        "Երիտասարդը սեղմեց նրա ձեռքը և ասաց. «Ինչպես տեսնում եմ, դուք Աֆղանստանում եք եղել»։ Ուոթսոնը ապշեց։",
+        "Դա Շերլոկ Հոլմսն էր։ Միասին նրանք սենյակներ վարձեցին Բեյքեր փողոցի 221Բ-ում։",
+        "Երեկոները Հոլմսը ջութակ էր նվագում, իսկ Ուոթսոնը կարդում էր բուխարու մոտ։",
+        "Շուտով նրանք ունեցան իրենց առաջին առեղծվածը։ Հոլմսը խոշորացույցով ուսումնասիրում էր ոտնահետքերը։"
+      ],
+      "words": [
+        {
+          "en": "violin",
+          "ipa": "/ˌvaɪəˈlɪn/",
+          "hy": "ջութակ"
+        },
+        {
+          "en": "footprint",
+          "ipa": "/ˈfʊtprɪnt/",
+          "hy": "ոտնահետք"
+        },
+        {
+          "en": "mystery",
+          "ipa": "/ˈmɪstəri/",
+          "hy": "առեղծված"
+        }
+      ]
+    },
+    {
+      "id": "treasure-island",
+      "title": "Treasure Island",
+      "title_hy": "Գանձերի կղզին",
+      "level": "A2",
+      "author": "Robert Louis Stevenson",
+      "year": "1883",
+      "book": "Treasure Island",
+      "quote": "Pieces of eight! Pieces of eight!",
+      "quote_hy": "Ոսկեդրամներ, ոսկեդրամներ",
+      "scenes": [
+        "In an old sailor's sea chest, young Jim found a map of an island with hidden treasure.",
+        "At the harbour, he met Long John Silver, a friendly cook with a wooden crutch and a green parrot.",
+        "They sailed across the stormy sea on a big ship called the Hispaniola.",
+        "One night, Jim hid in a barrel of apples and heard a terrible secret: the sailors were pirates!",
+        "On the island, Jim ran through the jungle to warn his friends.",
+        "At last, they found the treasure in a cave, a chest full of gold!"
+      ],
+      "scenes_hy": [
+        "Մի ծեր նավաստու սնդուկում փոքրիկ Ջիմը գտավ թաքնված գանձով կղզու քարտեզ։",
+        "Նավահանգստում նա հանդիպեց Երկարլիկ Ջոն Սիլվերին՝ բարեհամբույր խոհարարի, որ փայտե հենակ և կանաչ թութակ ուներ։",
+        "Նրանք «Հիսպանիոլա» կոչվող մեծ նավով լողացին փոթորկոտ ծովով։",
+        "Մի գիշեր Ջիմը թաքնվեց խնձորի տակառում և լսեց մի սարսափելի գաղտնիք. նավաստիները ծովահեններ էին։",
+        "Կղզում Ջիմը վազեց ջունգլիներով, որ զգուշացնի ընկերներին։",
+        "Վերջապես նրանք գտան գանձը քարանձավում՝ ոսկով լի սնդուկ։"
+      ],
+      "words": [
+        {
+          "en": "treasure",
+          "ipa": "/ˈtreʒə/",
+          "hy": "գանձ"
+        },
+        {
+          "en": "map",
+          "ipa": "/mæp/",
+          "hy": "քարտեզ"
+        },
+        {
+          "en": "island",
+          "ipa": "/ˈaɪlənd/",
+          "hy": "կղզի"
+        }
+      ]
+    },
+    {
+      "id": "happy-prince",
+      "title": "The Happy Prince",
+      "title_hy": "Երջանիկ արքայազնը",
+      "level": "A2",
+      "author": "Oscar Wilde",
+      "year": "1888",
+      "book": "The Happy Prince",
+      "quote": "Swallow, Swallow, little Swallow.",
+      "quote_hy": "Ծիծեռնակ, ծիծեռնակ, փոքրիկ ծիծեռնակ",
+      "scenes": [
+        "High above the city stood the statue of the Happy Prince, covered in gold, with sapphire eyes.",
+        "One night, a little swallow rested at his feet, and a tear fell on him. The Prince was crying.",
+        "'I can see all the sadness of my city,' he said. 'Please, take my ruby to a poor family.'",
+        "Every day, the swallow took a leaf of gold to the poor, and the children smiled again.",
+        "Winter came. The statue was grey now, and the tired swallow kissed the Prince's hand.",
+        "But the Prince and the swallow had the most beautiful hearts in the whole city."
+      ],
+      "scenes_hy": [
+        "Քաղաքից վեր կանգնած էր Երջանիկ արքայազնի արձանը՝ ոսկով պատված և շափյուղա աչքերով։",
+        "Մի գիշեր նրա ոտքերի մոտ հանգստացավ մի փոքրիկ ծիծեռնակ, և նրա վրա մի արցունք ընկավ. Արքայազնը լաց էր լինում։",
+        "«Ես տեսնում եմ իմ քաղաքի ողջ տխրությունը,— ասաց նա։— Խնդրում եմ, իմ սուտակը տա՛ր մի աղքատ ընտանիքի»։",
+        "Ամեն օր ծիծեռնակը մի ոսկե տերև էր տանում աղքատներին, և երեխաները նորից ժպտում էին։",
+        "Ձմեռը եկավ։ Արձանն արդեն մոխրագույն էր, և հոգնած ծիծեռնակը համբուրեց Արքայազնի ձեռքը։",
+        "Բայց Արքայազնն ու ծիծեռնակն ունեին ամբողջ քաղաքի ամենագեղեցիկ սրտերը։"
+      ],
+      "words": [
+        {
+          "en": "statue",
+          "ipa": "/ˈstætʃuː/",
+          "hy": "արձան"
+        },
+        {
+          "en": "gold",
+          "ipa": "/ɡəʊld/",
+          "hy": "ոսկի"
+        },
+        {
+          "en": "swallow",
+          "ipa": "/ˈswɒləʊ/",
+          "hy": "ծիծեռնակ"
+        }
+      ]
+    },
+    {
+      "id": "eighty-days",
+      "title": "Around the World in 80 Days",
+      "title_hy": "80 օրում աշխարհի շուրջը",
+      "level": "A2",
+      "author": "Jules Verne",
+      "year": "1873",
+      "book": "Around the World in Eighty Days",
+      "quote": "The unforeseen does not exist.",
+      "quote_hy": "Անկանխատեսելի բան գոյություն չունի",
+      "scenes": [
+        "In a London club, calm Mr Fogg made a bet: 'I can travel around the world in eighty days.'",
+        "That same evening, he and his servant Passepartout ran to catch the train.",
+        "They crossed the ocean on a big steamship at sunset.",
+        "In India, there was no train, so they rode an elephant through the forest!",
+        "In America, their train crossed high bridges over snowy mountains.",
+        "At the very last minute, Mr Fogg walked into the club. He won the bet!"
+      ],
+      "scenes_hy": [
+        "Լոնդոնյան մի ակումբում հանգիստ պարոն Ֆոգը գրազ եկավ. «Ես կարող եմ ութսուն օրում շրջել աշխարհը»։",
+        "Նույն երեկոյան նա և իր ծառան՝ Պասպարտուն, վազեցին գնացքին հասնելու։",
+        "Մայրամուտին նրանք մեծ շոգենավով անցան օվկիանոսը։",
+        "Հնդկաստանում գնացք չկար, ուստի նրանք փղով անցան անտառը։",
+        "Ամերիկայում նրանց գնացքը անցավ ձյունածածկ լեռների վրայի բարձր կամուրջներով։",
+        "Վերջին րոպեին պարոն Ֆոգը ներս մտավ ակումբ։ Նա շահեց գրազը։"
+      ],
+      "words": [
+        {
+          "en": "bet",
+          "ipa": "/bet/",
+          "hy": "գրազ"
+        },
+        {
+          "en": "servant",
+          "ipa": "/ˈsɜːvənt/",
+          "hy": "ծառա"
+        },
+        {
+          "en": "elephant",
+          "ipa": "/ˈelɪfənt/",
+          "hy": "փիղ"
+        }
+      ]
+    },
+    {
+      "id": "little-women",
+      "title": "Little Women",
+      "title_hy": "Փոքրիկ կանայք",
+      "level": "A2",
+      "author": "Louisa May Alcott",
+      "year": "1868",
+      "book": "Little Women",
+      "quote": "Christmas won't be Christmas without any presents.",
+      "quote_hy": "Սուրբ Ծնունդն առանց նվերների Սուրբ Ծնունդ չէ",
+      "scenes": [
+        "On Christmas Eve, the four March sisters sat by the fire with their mother, Marmee.",
+        "Jo loved writing. She wrote stories in the attic, and her sisters loved to listen.",
+        "On Christmas morning, they gave their own breakfast to a poor family.",
+        "Gentle Beth played the piano, and the house was full of music.",
+        "In winter, the sisters went skating on the frozen pond, laughing in the snow.",
+        "In the evening, Marmee read them a letter from their father, and everyone felt warm and happy."
+      ],
+      "scenes_hy": [
+        "Սուրբ Ծննդյան նախօրեին Մարչ ընտանիքի չորս քույրերը մոր՝ Մարմիի հետ նստած էին բուխարու մոտ։",
+        "Ջոն սիրում էր գրել։ Նա ձեղնահարկում պատմություններ էր գրում, իսկ քույրերը սիրում էին լսել։",
+        "Սուրբ Ծննդյան առավոտ նրանք իրենց նախաճաշը տվեցին մի աղքատ ընտանիքի։",
+        "Մեղմ Բեթը դաշնամուր էր նվագում, և տունը լցվում էր երաժշտությամբ։",
+        "Ձմռանը քույրերը սահում էին սառած լճակի վրա՝ ձյան մեջ ծիծաղելով։",
+        "Երեկոյան Մարմին կարդաց նրանց հոր նամակը, և բոլորը ջերմություն ու երջանկություն զգացին։"
+      ],
+      "words": [
+        {
+          "en": "sister",
+          "ipa": "/ˈsɪstə/",
+          "hy": "քույր"
+        },
+        {
+          "en": "piano",
+          "ipa": "/piˈænəʊ/",
+          "hy": "դաշնամուր"
+        },
+        {
+          "en": "letter",
+          "ipa": "/ˈletə/",
+          "hy": "նամակ"
+        }
+      ]
+    },
+    {
+      "id": "jack-beanstalk",
+      "title": "Jack and the Beanstalk",
+      "title_hy": "Ջեքը և լոբու ցողունը",
+      "level": "A2",
+      "author": "English fairy tale",
+      "year": "1807",
+      "book": "Jack and the Beanstalk",
+      "quote": "Fee-fi-fo-fum!",
+      "quote_hy": "Ֆի՜-ֆա՜-ֆո՜-ֆում",
+      "scenes": [
+        "Jack and his mother were very poor, so Jack took their cow to sell. But he swapped her for five magic beans!",
+        "His mother was very angry, and she threw the beans out of the window.",
+        "The next morning, a giant beanstalk stood in the garden, up to the clouds!",
+        "Jack climbed higher and higher, above the fields and the clouds.",
+        "At the top, in a giant's castle, he found a hen that laid golden eggs.",
+        "Jack ran home with the hen and cut down the beanstalk. Now they were never poor again!"
+      ],
+      "scenes_hy": [
+        "Ջեքն ու մայրը շատ աղքատ էին, ուստի Ջեքը կովը տարավ վաճառելու։ Բայց նա այն փոխանակեց հինգ կախարդական լոբու հետ։",
+        "Մայրը շատ բարկացավ և լոբիները դուրս շպրտեց պատուհանից։",
+        "Հաջորդ առավոտ այգում մի հսկա լոբու ցողուն էր կանգնած՝ մինչև ամպերը։",
+        "Ջեքը բարձրանում էր ավելի ու ավելի վեր՝ դաշտերից և ամպերից վեր։",
+        "Վերևում, հսկայի դղյակում, նա գտավ մի հավ, որ ոսկե ձու էր ածում։",
+        "Ջեքը հավով վազեց տուն և կտրեց ցողունը։ Այդ օրվանից նրանք այլևս երբեք աղքատ չէին։"
+      ],
+      "words": [
+        {
+          "en": "bean",
+          "ipa": "/biːn/",
+          "hy": "լոբի"
+        },
+        {
+          "en": "giant",
+          "ipa": "/ˈdʒaɪənt/",
+          "hy": "հսկա"
+        },
+        {
+          "en": "hen",
+          "ipa": "/hen/",
+          "hy": "հավ"
+        }
+      ]
+    },
+    {
+      "id": "ali-baba",
+      "title": "Ali Baba",
+      "title_hy": "Ալի Բաբա",
+      "level": "A2",
+      "author": "One Thousand and One Nights",
+      "year": "18th century",
+      "book": "Ali Baba and the Forty Thieves",
+      "quote": "Open, Sesame!",
+      "quote_hy": "Բացվի՛ր, Սեզամ",
+      "scenes": [
+        "One day, Ali Baba, a poor woodcutter, hid behind a rock and watched forty thieves.",
+        "Their leader shouted, 'Open, Sesame!' and the rock opened like a door!",
+        "When they left, Ali Baba went inside. The cave was full of gold and jewels!",
+        "He took a little gold and went home happily on his donkey.",
+        "But the thieves came to find him. Clever Morgiana noticed the big oil jars in the yard.",
+        "Morgiana saved the family, and everyone celebrated her cleverness at a big feast."
+      ],
+      "scenes_hy": [
+        "Մի օր աղքատ փայտահատ Ալի Բաբան թաքնվեց ժայռի ետևում և հետևեց քառասուն ավազակներին։",
+        "Նրանց պարագլուխը գոռաց. «Բացվի՛ր, Սեզամ», և ժայռը դռան պես բացվեց։",
+        "Երբ նրանք հեռացան, Ալի Բաբան ներս մտավ։ Քարանձավը լի էր ոսկով ու թանկարժեք քարերով։",
+        "Նա մի քիչ ոսկի վերցրեց և ուրախ վերադարձավ տուն իր էշով։",
+        "Բայց ավազակները եկան նրան փնտրելու։ Խելացի Մորջանան նկատեց բակի մեծ ձիթայուղի կարասները։",
+        "Մորջանան փրկեց ընտանիքը, և բոլորը մեծ խնջույքով տոնեցին նրա խելամտությունը։"
+      ],
+      "words": [
+        {
+          "en": "cave",
+          "ipa": "/keɪv/",
+          "hy": "քարանձավ"
+        },
+        {
+          "en": "thief",
+          "ipa": "/θiːf/",
+          "hy": "գող"
+        },
+        {
+          "en": "jewel",
+          "ipa": "/ˈdʒuːəl/",
+          "hy": "թանկարժեք քար"
+        }
+      ]
+    },
+    {
+      "id": "selfish-giant",
+      "title": "The Selfish Giant",
+      "title_hy": "Եսասեր հսկան",
+      "level": "A2",
+      "author": "Oscar Wilde",
+      "year": "1888",
+      "book": "The Selfish Giant",
+      "quote": "The children are the most beautiful flowers of all.",
+      "quote_hy": "Երեխաները բոլոր ծաղիկներից ամենագեղեցիկն են",
+      "scenes": [
+        "Every afternoon, the children played in the Giant's beautiful garden.",
+        "One day, the Giant came home. 'My garden is my garden!' he shouted, and the children ran away.",
+        "He built a high wall around it, and winter stayed in his garden all year.",
+        "One morning, the children climbed in through a hole in the wall, and spring came back!",
+        "The Giant smiled and gently lifted a little boy into a tree, which burst into flowers.",
+        "Then he knocked down the wall. 'It is your garden now, little children,' he said."
+      ],
+      "scenes_hy": [
+        "Ամեն կեսօր երեխաները խաղում էին հսկայի գեղեցիկ այգում։",
+        "Մի օր հսկան վերադարձավ տուն. «Իմ այգին իմն է»,— գոռաց նա, և երեխաները փախան։",
+        "Նա այգու շուրջը բարձր պատ կառուցեց, և ձմեռը ամբողջ տարի մնաց նրա այգում։",
+        "Մի առավոտ երեխաները պատի անցքից ներս մտան, և գարունը վերադարձավ։",
+        "Հսկան ժպտաց և զգուշությամբ մի փոքրիկ տղայի բարձրացրեց ծառի վրա, որն իսկույն ծաղկեց։",
+        "Հետո նա քանդեց պատը. «Հիմա սա ձեր այգին է, փոքրիկներ»,— ասաց նա։"
+      ],
+      "words": [
+        {
+          "en": "garden",
+          "ipa": "/ˈɡɑːdn/",
+          "hy": "այգի"
+        },
+        {
+          "en": "wall",
+          "ipa": "/wɔːl/",
+          "hy": "պատ"
+        },
+        {
+          "en": "spring",
+          "ipa": "/sprɪŋ/",
+          "hy": "գարուն"
+        }
+      ]
+    },
+    {
+      "id": "don-quixote",
+      "title": "Don Quixote",
+      "title_hy": "Դոն Կիխոտ",
+      "level": "A2",
+      "author": "Miguel de Cervantes",
+      "year": "1605",
+      "book": "Don Quixote",
+      "quote": "What we see there are not giants but windmills.",
+      "quote_hy": "Այն, ինչ տեսնում ենք, հսկաներ չեն, այլ հողմաղացներ",
+      "scenes": [
+        "Don Quixote read so many books about brave knights that he decided to become one.",
+        "He put on some old armour, and his friend Sancho Panza looked at him in surprise.",
+        "Together they rode out across the golden plains of Spain to find adventures.",
+        "Suddenly, Don Quixote saw giants on a hill! 'Those are windmills!' cried Sancho.",
+        "But Don Quixote attacked, and a windmill threw him high into the air.",
+        "In the evening, by the fire, Sancho laughed, and Don Quixote smiled. He was still a proud knight."
+      ],
+      "scenes_hy": [
+        "Դոն Կիխոտն այնքան գրքեր էր կարդացել քաջ ասպետների մասին, որ որոշեց ինքն էլ ասպետ դառնալ։",
+        "Նա հագավ մի հին զրահ, և նրա ընկերը՝ Սանչո Պանսան, զարմացած նայում էր նրան։",
+        "Միասին նրանք ճամփա ընկան Իսպանիայի ոսկեգույն հարթավայրերով՝ արկածներ փնտրելու։",
+        "Հանկարծ Դոն Կիխոտը բլրի վրա հսկաներ տեսավ։ «Դրանք հողմաղացներ են»,— գոռաց Սանչոն։",
+        "Բայց Դոն Կիխոտը հարձակվեց, և հողմաղացը նրան օդ նետեց։",
+        "Երեկոյան, խարույկի մոտ, Սանչոն ծիծաղում էր, իսկ Դոն Կիխոտը ժպտում էր։ Նա դեռ հպարտ ասպետ էր։"
+      ],
+      "words": [
+        {
+          "en": "knight",
+          "ipa": "/naɪt/",
+          "hy": "ասպետ"
+        },
+        {
+          "en": "armour",
+          "ipa": "/ˈɑːmə/",
+          "hy": "զրահ"
+        },
+        {
+          "en": "windmill",
+          "ipa": "/ˈwɪndmɪl/",
+          "hy": "հողմաղաց"
+        }
+      ]
+    },
+    {
+      "id": "wizard-oz",
+      "title": "The Wizard of Oz",
+      "title_hy": "Օզի կախարդը",
+      "level": "A2",
+      "author": "L. Frank Baum",
+      "year": "1900",
+      "book": "The Wonderful Wizard of Oz",
+      "quote": "There is no place like home.",
+      "quote_hy": "Տան պես տեղ չկա",
+      "scenes": [
+        "Dorothy lived on a farm in Kansas. One day, a huge storm came, and she held her little dog, Toto.",
+        "The wind carried her house far away, to the magical Land of Oz.",
+        "On her way, she met a Scarecrow who wanted a brain.",
+        "Then she met a Tin Woodman who wanted a heart. They walked together along the yellow brick road.",
+        "In the forest, they found a Cowardly Lion who wanted to be brave.",
+        "At last, the friends saw the shining Emerald City. Maybe the Wizard could help them!"
+      ],
+      "scenes_hy": [
+        "Դորոթին ապրում էր Կանզասի մի ֆերմայում։ Մի օր մեծ փոթորիկ եկավ, և նա գրկեց իր փոքրիկ շանը՝ Տոտոյին։",
+        "Քամին նրա տունը տարավ շատ հեռու՝ Օզի կախարդական երկիր։",
+        "Ճանապարհին նա հանդիպեց մի Խրտվիլակի, որը խելք էր ուզում։",
+        "Հետո նա հանդիպեց Թիթեղյա Փայտահատին, որը սիրտ էր ուզում։ Նրանք միասին քայլեցին դեղին աղյուսե ճանապարհով։",
+        "Անտառում նրանք գտան մի Վախկոտ Առյուծի, որը ուզում էր քաջ լինել։",
+        "Վերջապես ընկերները տեսան փայլող Զմրուխտե քաղաքը։ Գուցե Կախարդը կօգներ նրանց։"
+      ],
+      "words": [
+        {
+          "en": "storm",
+          "ipa": "/stɔːm/",
+          "hy": "փոթորիկ"
+        },
+        {
+          "en": "brave",
+          "ipa": "/breɪv/",
+          "hy": "քաջ"
+        },
+        {
+          "en": "heart",
+          "ipa": "/hɑːt/",
+          "hy": "սիրտ"
+        }
+      ]
+    },
+    {
+      "id": "emperor-clothes",
+      "title": "The Emperor's New Clothes",
+      "title_hy": "Թագավորի նոր զգեստը",
+      "level": "A2",
+      "author": "Hans Christian Andersen",
+      "year": "1837",
+      "book": "The Emperor's New Clothes",
+      "quote": "But he hasn't got anything on!",
+      "quote_hy": "Բայց նա ոչինչ չի հագել",
+      "scenes": [
+        "There was once an Emperor who loved new clothes more than anything.",
+        "Two tricksters said, 'We can make magic cloth. Foolish people cannot see it!'",
+        "The ministers saw nothing on the loom, but they said, 'How beautiful!'",
+        "The Emperor could not see the clothes either, but he did not want to look foolish.",
+        "He walked through the town in his 'new clothes', and everyone pretended to admire them.",
+        "Then a little boy shouted, 'But he hasn't got anything on!' And everyone started to laugh."
+      ],
+      "scenes_hy": [
+        "Ժամանակին մի թագավոր կար, որ նոր հագուստն ամեն ինչից շատ էր սիրում։",
+        "Երկու խաբեբա ասացին. «Մենք կարող ենք կախարդական կտոր գործել։ Հիմար մարդիկ այն չեն տեսնի»։",
+        "Նախարարները ջուլհակահաստոցի վրա ոչինչ չտեսան, բայց ասացին. «Ինչ գեղեցիկ է»։",
+        "Թագավորն էլ չէր տեսնում հագուստը, բայց չէր ուզում հիմար երևալ։",
+        "Նա իր «նոր զգեստով» անցավ քաղաքով, և բոլորը ձևացնում էին, թե հիանում են։",
+        "Հետո մի փոքրիկ տղա բղավեց. «Բայց նա ոչինչ չի հագել»։ Եվ բոլորը սկսեցին ծիծաղել։"
+      ],
+      "words": [
+        {
+          "en": "clothes",
+          "ipa": "/kləʊðz/",
+          "hy": "հագուստ"
+        },
+        {
+          "en": "pretend",
+          "ipa": "/prɪˈtend/",
+          "hy": "ձևացնել"
+        },
+        {
+          "en": "crowd",
+          "ipa": "/kraʊd/",
+          "hy": "ամբոխ"
+        }
+      ]
+    },
+    {
+      "id": "red-headed-league",
+      "title": "The Red-Headed League",
+      "title_hy": "Շիկահերների միությունը",
+      "level": "A2",
+      "author": "Arthur Conan Doyle",
+      "year": "1891",
+      "book": "The Red-Headed League",
+      "quote": "It is quite a three-pipe problem.",
+      "quote_hy": "Սա երեք ծխամորճի խնդիր է",
+      "mystery": {
+        "question": "What was the assistant doing?",
+        "question_hy": "Ի՞նչ էր անում օգնականը"
+      },
+      "scenes": [
+        "Mr Wilson, a man with bright red hair, told Holmes a very strange story.",
+        "A newspaper advertisement offered a job for red-headed men. Hundreds of them came to the office!",
+        "Mr Wilson got the job. Every day, he copied an old encyclopedia by hand, and he was paid well.",
+        "Holmes visited Wilson's little shop and tapped the pavement with his stick.",
+        "He noticed that the young assistant's trousers were dirty at the knees.",
+        "The assistant was digging a tunnel to the bank! That night, Holmes and the police caught him."
+      ],
+      "scenes_hy": [
+        "Պարոն Ուիլսոնը՝ վառ կարմիր մազերով մի մարդ, Հոլմսին մի շատ տարօրինակ պատմություն պատմեց։",
+        "Թերթում հայտարարություն կար՝ աշխատանք շիկահեր տղամարդկանց համար։ Հարյուրավոր շիկահերներ եկան գրասենյակ։",
+        "Պարոն Ուիլսոնը ստացավ աշխատանքը։ Ամեն օր նա ձեռքով արտագրում էր մի հին հանրագիտարան և լավ վարձատրվում էր։",
+        "Հոլմսն այցելեց Ուիլսոնի փոքրիկ խանութը և ձեռնափայտով թակեց մայթը։",
+        "Նա նկատեց, որ երիտասարդ օգնականի տաբատը ծնկների մոտ կեղտոտ էր։",
+        "Օգնականը թունել էր փորում դեպի բանկ։ Այդ գիշեր Հոլմսը և ոստիկանությունը բռնեցին նրան։"
+      ],
+      "words": [
+        {
+          "en": "hair",
+          "ipa": "/heə/",
+          "hy": "մազեր"
+        },
+        {
+          "en": "bank",
+          "ipa": "/bæŋk/",
+          "hy": "բանկ"
+        },
+        {
+          "en": "tunnel",
+          "ipa": "/ˈtʌnl/",
+          "hy": "թունել"
+        }
+      ]
+    },
+    {
+      "id": "baskervilles",
+      "title": "The Hound of the Baskervilles",
+      "title_hy": "Բասկերվիլների շունը",
+      "level": "A2",
+      "author": "Arthur Conan Doyle",
+      "year": "1902",
+      "book": "The Hound of the Baskervilles",
+      "quote": "Mr Holmes, they were the footprints of a gigantic hound!",
+      "quote_hy": "Պարոն Հոլմս, դրանք հսկայական շան ոտնահետքեր էին",
+      "scenes": [
+        "Dr Mortimer showed Holmes an old paper about a terrible hound and the Baskerville family.",
+        "Watson and young Sir Henry travelled to Baskerville Hall, an old house on the dark moor.",
+        "On the moor, Watson met Mr Stapleton, a friendly man who loved butterflies.",
+        "One night, under the full moon, a huge black hound ran across the moor.",
+        "In an old stone hut, Watson found a surprise: Holmes had been there all the time!",
+        "In the end, Holmes solved the mystery, and Sir Henry was safe."
+      ],
+      "scenes_hy": [
+        "Բժիշկ Մորտիմերը Հոլմսին ցույց տվեց մի հին թուղթ՝ սարսափելի շան և Բասկերվիլների ընտանիքի մասին։",
+        "Ուոթսոնն ու երիտասարդ սըր Հենրին մեկնեցին Բասկերվիլ-հոլ՝ մութ ճահճոտ հարթավայրում կանգնած մի հին տուն։",
+        "Հարթավայրում Ուոթսոնը հանդիպեց պարոն Սթեյփլթոնին՝ բարեհամբույր մի մարդու, որ թիթեռներ էր սիրում։",
+        "Մի գիշեր, լիալուսնի տակ, մի հսկա սև շուն վազեց հարթավայրով։",
+        "Մի հին քարե խրճիթում Ուոթսոնին անակնկալ էր սպասում. Հոլմսն ամբողջ ժամանակ այնտեղ էր եղել։",
+        "Վերջում Հոլմսը լուծեց առեղծվածը, և սըր Հենրին փրկված էր։"
+      ],
+      "words": [
+        {
+          "en": "hound",
+          "ipa": "/haʊnd/",
+          "hy": "որսկան շուն"
+        },
+        {
+          "en": "moon",
+          "ipa": "/muːn/",
+          "hy": "լուսին"
+        },
+        {
+          "en": "legend",
+          "ipa": "/ˈledʒənd/",
+          "hy": "լեգենդ"
+        }
+      ]
+    }
   ]
 }
