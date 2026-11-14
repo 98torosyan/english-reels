@@ -15,7 +15,11 @@ def cut_out(im):
     """White background -> transparent, with a soft edge; then crop to the object."""
     a = np.asarray(im.convert("RGB")).astype(int)
     white = (a.min(axis=2) > 236) & (a.max(axis=2) - a.min(axis=2) < 14)
-    alpha = Image.fromarray(np.where(white, 0, 255).astype("uint8")).filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(1.2))
+    from scipy import ndimage
+    lab, _ = ndimage.label(white)   # only white that touches the edge is background: a white T-shirt stays
+    edge = set(np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))) - {0}
+    bg = np.isin(lab, list(edge))
+    alpha = Image.fromarray(np.where(bg, 0, 255).astype("uint8")).filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(1.2))
     out = im.convert("RGBA"); out.putalpha(alpha)
     box = alpha.point(lambda v: 255 if v > 40 else 0).getbbox()
     if box: out = out.crop(box)
