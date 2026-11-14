@@ -79,12 +79,14 @@ function slides(st) {
     </div>${foot(1, total)}`);
   for (let i = 0; i < shown; i += 1) out.push(scene(i));
   if (st.mystery) {
-    out.push(`${pill()}<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 90px;background:radial-gradient(800px 700px at 50% 45%,#2A1E4D,#0E0B1D)">
-      <div class="k" style="color:#F2C86B">WHO DID IT?</div>
-      <div style="margin-top:26px;font:700 84px/1.08 Lit;color:#FFF8EA">${esc(st.mystery.question)}</div>
-      <div class="hy" style="margin-top:22px;color:#C9C2E3;font-size:38px">${esc(st.mystery.question_hy)}</div>
-      <div style="margin-top:46px;font:600 32px/1.4 Arm;color:#FFF8EA">Գրի՛ր քո պատասխանը մեկնաբանություններում,<br>հետո թերթի՛ր լուծումը տեսնելու համար</div>
-      <div style="margin-top:40px" class="swipe">THE ANSWER <span style="font-size:30px">→</span></div></div>${foot(++k, total)}`);
+    out.push(`<div style="position:absolute;inset:-60px;background:url(${img(st.id, n - 1)}) center/cover;filter:blur(34px) saturate(.9)"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(170deg,#F6F0E2f0,#ECE2CDea)"></div>${pill()}
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 90px">
+      <div class="q1" style="font-size:150px">?</div>
+      <div style="margin-top:20px;font:700 84px/1.08 Lit;color:var(--ink)">${esc(st.mystery.question)}</div>
+      <div class="hy" style="margin-top:22px;font-size:40px">${esc(st.mystery.question_hy)}</div>
+      <div style="margin-top:42px;font:600 32px/1.4 Arm;color:var(--ink)">Գրի՛ր քո պատասխանը մեկնաբանություններում,<br>հետո թերթի՛ր լուծումը տեսնելու համար</div>
+      <div style="margin-top:40px" class="swipe">THE ANSWER <span style="font-size:30px">→</span></div></div>${foot()}`);
     out.push(scene(n - 1));
   }
   out.push(`${pill()}<div style="position:absolute;left:64px;right:64px;top:130px">
