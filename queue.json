@@ -1332,7 +1332,7 @@
       "content_id": "cafe",
       "title": "Order in a café",
       "caption": "Խոսակցական անգլերեն · Spoken English phrases\n\nOrder in a café like a local\n\n6 արտահայտություն, որ պետք կգան ճամփորդելիս։\nՕրինակ՝ “Could I have the bill, please?” — «Կարո՞ղ եմ հաշիվը ստանալ, խնդրում եմ»։\n\nՊահպանի՛ր հաջորդ ճամփորդության համար։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #SpokenEnglish #Yerevan",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "slides": [
           "https://98torosyan.github.io/english-reels-media/2026-11-14-list-cafe/01-cafe.jpg",
@@ -1347,7 +1347,9 @@
       },
       "attempts": 1,
       "last_error": "Graph API request failed (HTTP 403, code 4). [container 17930664390242156: ERROR]",
-      "container_id": "17930664390242156"
+      "container_id": "17930664390242156",
+      "published_at": "2026-11-14T13:05+04:00",
+      "ig_media_id": "18107779283212375"
     },
     {
       "id": "2026-11-14-phrasal-get",
