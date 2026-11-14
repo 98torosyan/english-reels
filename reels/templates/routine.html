@@ -45,6 +45,10 @@
  .intro .q em{color:var(--c)}
  .intro .qhy{margin-top:20px;font:600 40px NotoArmenian;color:#4a4760}
  .intro .hero{display:none}
+ .intro .rule{margin-top:26px;width:900px;padding:26px 34px;border-radius:30px;background:#FFFCF6e8;box-shadow:0 18px 40px #3a2f1426;font:600 40px/1.3 Literata,serif;color:var(--ink)}
+ .intro .rule:empty{display:none}
+ .intro .rule i{display:block;margin-top:12px;font:500 34px/1.35 NotoArmenian,sans-serif;font-style:normal;color:#4a4760}
+ .outro .quiz{display:inline-block;margin-top:6px;padding:6px 22px;border-radius:14px;background:color-mix(in srgb,var(--c) 14%,transparent);font-style:normal}
  .intro .name{position:absolute;top:1300px;left:50%;transform:translateX(-50%);font:800 30px Inter;letter-spacing:4px;color:var(--ink);background:#FFFCF6;padding:14px 34px;border-radius:99px;box-shadow:0 14px 30px #0004}
  /* outro (shared GSAP outro in kinetic.js) */
  .outro{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;opacity:0;z-index:9;background:#F4EFE4}
@@ -67,7 +71,7 @@
  <div class="card" id="card"><div class="say" id="say"><div class="en" id="en"></div><div class="hy" id="hy"></div></div><div class="hand">@ENGLISH.READINGROOM</div><div class="rep" id="rep">YOUR TURN <em>· կրկնի՛ր</em></div></div>
  <div class="dots" id="dots"></div>
  
- <section class="intro" id="intro"><div class="k" id="introK"></div><div class="q" id="introQ"></div><div class="qhy" id="introHy"></div><div class="hero"><img id="heroImg" alt=""></div><div class="name" id="heroName"></div></section>
+ <section class="intro" id="intro"><div class="k" id="introK"></div><div class="q" id="introQ"></div><div class="qhy" id="introHy"></div><div class="rule" id="introR"></div><div class="hero"><img id="heroImg" alt=""></div><div class="name" id="heroName"></div></section>
  <section id="outro" class="outro"><img id="outroLogo" src="__LOGO_DATA__" alt=""><h2 id="outroH"></h2><p id="outroP"></p><span class="save" id="saveChip">Save</span><span class="follow">Անհատական և խմբային դասեր · գրե՛ք Direct-ով</span><span class="signature">@ENGLISH.READINGROOM</span></section>
  <script src="__GSAP__/gsap.min.js"></script><script src="__GSAP__/SplitText.min.js"></script><script src="__GSAP__/../../../reels/templates/kinetic.js"></script>
  <script>
@@ -83,9 +87,12 @@
   bgs.innerHTML=data.pics.map((p,i)=>`<div class="bg" id="bg${i}" style="background-image:url(${p})"></div>`).join('');
   frame.insertAdjacentHTML('afterbegin',data.pics.map((p,i)=>`<div class="shot" id="s${i}"><img src="${p}"></div>`).join(''));
   dots.innerHTML=data.lines.map(()=>'<i></i>').join('');
-  introK.textContent=`EVERYDAY ENGLISH · ${data.title.toUpperCase()}`; introQ.innerHTML=lastEm(data.question); introHy.textContent=data.question_hy;
+  introK.textContent=data.grammar?'GRAMMAR · ENGLISH TENSES':`EVERYDAY ENGLISH · ${data.title.toUpperCase()}`;
+  if(data.grammar){ introQ.innerHTML=lastEm(data.title); introHy.textContent=data.title_hy; introR.innerHTML=`${data.grammar.rule_en}<i>${data.grammar.rule_hy}</i>`; }
+  else { introQ.innerHTML=lastEm(data.question); introHy.textContent=data.question_hy; }
   heroImg.src=data.pics[0]; heroName.textContent=data.hero?`Meet ${data.hero}!`:''; heroName.style.display=data.hero?'':'none';
-  outroH.innerHTML=`Now it's <em>your turn!</em>`; outroP.textContent=`${data.question} · Պատասխանի՛ր անգլերեն մեկնաբանություններում`;
+  if(data.grammar){ outroH.innerHTML=`Quick test<br><em class="quiz">${data.grammar.quiz}</em>`; outroP.textContent='Write your answer in the comments · Պատասխանը գրի՛ր մեկնաբանություններում'; }
+  else { outroH.innerHTML=`Now it's <em>your turn!</em>`; outroP.textContent=`${data.question} · Պատասխանի՛ր անգլերեն մեկնաբանություններում`; }
  };
  let shown=-1;
  function setScene(i){ if(i===shown) return; shown=i;

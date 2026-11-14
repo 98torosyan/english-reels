@@ -422,6 +422,244 @@
       ],
       "number": 12,
       "date": "2026-11-25"
+    },
+    {
+      "id": "g-present-simple",
+      "level": "A2",
+      "hero": "",
+      "voice": "kokoro:bm_george",
+      "title": "Present Simple",
+      "title_hy": "Ներկա պարզ ժամանակ",
+      "question": "For habits and things we do every day.",
+      "question_hy": "Սովորությունների և ամեն օր արվող գործողությունների համար",
+      "grammar": {
+        "rule_en": "For habits and things we do every day.",
+        "rule_hy": "Սովորությունների և ամեն օր արվող գործողությունների համար",
+        "quiz": "She ___ (drink) tea every morning."
+      },
+      "lines": [
+        "Leo [wakes up] at four o'clock every morning.",
+        "He [cycles] to work.",
+        "He [makes] bread in his little bakery.",
+        "He [takes] the bread out of the oven.",
+        "He [sells] bread to his customers.",
+        "In the evening, he [reads] a book with his cat."
+      ],
+      "lines_hy": [
+        "Լեոն ամեն առավոտ արթնանում է ժամը չորսին։",
+        "Նա հեծանիվով է գնում աշխատանքի։",
+        "Նա իր փոքրիկ փռում հաց է թխում։",
+        "Նա հացը հանում է վառարանից։",
+        "Նա հաց է վաճառում հաճախորդներին։",
+        "Երեկոյան նա գիրք է կարդում՝ կատվի հետ։"
+      ],
+      "number": 13,
+      "date": "2026-12-31",
+      "held": true
+    },
+    {
+      "id": "g-present-continuous",
+      "level": "A2",
+      "hero": "",
+      "voice": "kokoro:bf_lily",
+      "title": "Present Continuous",
+      "title_hy": "Ներկա շարունակական ժամանակ",
+      "question": "For actions that are happening right now.",
+      "question_hy": "Գործողությունների համար, որոնք կատարվում են հենց հիմա",
+      "grammar": {
+        "rule_en": "For actions that are happening right now.",
+        "rule_hy": "Գործողությունների համար, որոնք կատարվում են հենց հիմա",
+        "quiz": "Look! It ___ (snow)!"
+      },
+      "lines": [
+        "A little girl [is feeding] the ducks.",
+        "A young man [is running] in the park.",
+        "An old man [is painting] the lake.",
+        "The children [are flying] a kite.",
+        "A woman [is reading] a book.",
+        "A family [is having] a picnic."
+      ],
+      "lines_hy": [
+        "Մի փոքրիկ աղջիկ բադերին կեր է տալիս։",
+        "Մի երիտասարդ վազում է այգում։",
+        "Մի ծեր մարդ նկարում է լիճը։",
+        "Երեխաները օդապարիկ են թռցնում։",
+        "Մի կին գիրք է կարդում։",
+        "Մի ընտանիք պիկնիկ է անում։"
+      ],
+      "number": 14,
+      "date": "2026-12-31",
+      "held": true
+    },
+    {
+      "id": "g-past-simple",
+      "level": "A2",
+      "hero": "",
+      "voice": "en-GB-SoniaNeural",
+      "title": "Past Simple",
+      "title_hy": "Անցյալ պարզ ժամանակ",
+      "question": "For finished actions in the past, like yesterday or last summer.",
+      "question_hy": "Անցյալում ավարտված գործողությունների համար՝ երեկ, անցյալ ամառ",
+      "grammar": {
+        "rule_en": "For finished actions in the past, like yesterday or last summer.",
+        "rule_hy": "Անցյալում ավարտված գործողությունների համար՝ երեկ, անցյալ ամառ",
+        "quiz": "Yesterday I ___ (go) to the cinema."
+      },
+      "lines": [
+        "Last summer, Mia and her dad [went] to the seaside by train.",
+        "They [built] a big sandcastle.",
+        "Mia [swam] in the sea.",
+        "They [ate] ice creams.",
+        "Mia [found] a beautiful shell.",
+        "She [fell asleep] on the train home."
+      ],
+      "lines_hy": [
+        "Անցյալ ամառ Միան ու հայրիկը գնացքով գնացին ծովափ։",
+        "Նրանք մեծ ավազե դղյակ կառուցեցին։",
+        "Միան լողաց ծովում։",
+        "Նրանք պաղպաղակ կերան։",
+        "Միան մի գեղեցիկ խեցի գտավ։",
+        "Տուն վերադառնալիս նա քնեց գնացքում։"
+      ],
+      "number": 15,
+      "date": "2026-12-31",
+      "held": true
+    },
+    {
+      "id": "g-present-perfect",
+      "level": "A2",
+      "hero": "",
+      "voice": "kokoro:bm_daniel",
+      "title": "Present Perfect",
+      "title_hy": "Ներկա կատարյալ ժամանակ",
+      "question": "For past actions with a result now.",
+      "question_hy": "Անցյալի գործողությունների համար, որոնց արդյունքը երևում է հիմա",
+      "grammar": {
+        "rule_en": "For past actions with a result now.",
+        "rule_hy": "Անցյալի գործողությունների համար, որոնց արդյունքը երևում է հիմա",
+        "quiz": "I ___ (finish) my homework. Can I play now?"
+      },
+      "lines": [
+        "Sam [has painted] the fence.",
+        "Oh no! He [has broken] a vase.",
+        "He [has lost] his keys.",
+        "He [has eaten] all the cake.",
+        "He [has grown] a lot this year.",
+        "He [has never seen] snow before!"
+      ],
+      "lines_hy": [
+        "Սեմը ներկել է ցանկապատը։",
+        "Վա՜յ, նա ծաղկաման է կոտրել։",
+        "Նա կորցրել է իր բանալիները։",
+        "Նա կերել է ամբողջ տորթը։",
+        "Այս տարի նա շատ է մեծացել։",
+        "Նա նախկինում երբեք ձյուն չի տեսել։"
+      ],
+      "number": 16,
+      "date": "2026-12-31",
+      "held": true
+    },
+    {
+      "id": "g-past-continuous",
+      "level": "A2",
+      "hero": "",
+      "voice": "kokoro:bf_isabella",
+      "title": "Past Continuous",
+      "title_hy": "Անցյալ շարունակական ժամանակ",
+      "question": "For an action in progress when something else happened.",
+      "question_hy": "Անցյալում ընթացող գործողության համար, երբ ինչ-որ բան պատահեց",
+      "grammar": {
+        "rule_en": "For an action in progress when something else happened.",
+        "rule_hy": "Անցյալում ընթացող գործողության համար, երբ ինչ-որ բան պատահեց",
+        "quiz": "I ___ (watch) TV when you called."
+      },
+      "lines": [
+        "Nora [was taking] a shower when the lights went out.",
+        "She [was walking] in the park when it started to rain.",
+        "She [was cooking] pasta when the phone rang.",
+        "She [was reading] on the train when a dog came to say hello.",
+        "She [was painting] the wall when the ladder moved.",
+        "She [was sleeping] when her cat jumped on the bed."
+      ],
+      "lines_hy": [
+        "Նորան լոգանք էր ընդունում, երբ լույսերը հանգան։",
+        "Նա քայլում էր այգում, երբ անձրև սկսվեց։",
+        "Նա մակարոն էր եփում, երբ հեռախոսը զանգեց։",
+        "Նա գնացքում կարդում էր, երբ մի շուն մոտեցավ բարևելու։",
+        "Նա պատն էր ներկում, երբ սանդուղքը շարժվեց։",
+        "Նա քնած էր, երբ կատուն ցատկեց անկողնու վրա։"
+      ],
+      "number": 17,
+      "date": "2026-12-31",
+      "held": true
+    },
+    {
+      "id": "g-past-perfect",
+      "level": "A2",
+      "hero": "",
+      "voice": "kokoro:bm_lewis",
+      "title": "Past Perfect",
+      "title_hy": "Անցյալ վաղակատար ժամանակ",
+      "question": "For an action that happened before another past action.",
+      "question_hy": "Անցյալում մեկ այլ գործողությունից առաջ կատարված գործողության համար",
+      "grammar": {
+        "rule_en": "For an action that happened before another past action.",
+        "rule_hy": "Անցյալում մեկ այլ գործողությունից առաջ կատարված գործողության համար",
+        "quiz": "When I arrived, the lesson ___ (start)."
+      },
+      "lines": [
+        "When Ben got to the station, the train [had already left].",
+        "When he arrived at the cinema, the film [had finished].",
+        "When he got to the party, his friends [had eaten] most of the cake.",
+        "When he reached the bakery, they [had sold] all the bread.",
+        "When he got to the bus stop, the bus [had gone].",
+        "When he got home, his family [had made] dinner for him."
+      ],
+      "lines_hy": [
+        "Երբ Բենը հասավ կայարան, գնացքն արդեն մեկնել էր։",
+        "Երբ նա հասավ կինոթատրոն, ֆիլմն ավարտվել էր։",
+        "Երբ նա հասավ երեկույթին, ընկերներն արդեն կերել էին տորթի մեծ մասը։",
+        "Երբ նա հասավ փուռ, ամբողջ հացն արդեն վաճառել էին։",
+        "Երբ նա հասավ կանգառ, ավտոբուսն արդեն գնացել էր։",
+        "Երբ նա տուն հասավ, ընտանիքն արդեն ընթրիք էր պատրաստել նրա համար։"
+      ],
+      "number": 18,
+      "date": "2026-12-31",
+      "held": true
+    },
+    {
+      "id": "g-first-conditional",
+      "level": "A2",
+      "hero": "",
+      "voice": "en-GB-LibbyNeural",
+      "title": "First Conditional",
+      "title_hy": "Առաջին տիպի պայմանական",
+      "question": "If + present, will + verb: for real possibilities.",
+      "question_hy": "If + ներկա, will + բայ՝ իրական հնարավորությունների համար",
+      "grammar": {
+        "rule_en": "If + present, will + verb: for real possibilities.",
+        "rule_hy": "If + ներկա, will + բայ՝ իրական հնարավորությունների համար",
+        "quiz": "If you ___ (study), you will pass."
+      },
+      "lines": [
+        "If it rains, Lily [will take] her umbrella.",
+        "If she takes her umbrella, she [won't get] wet.",
+        "If she studies hard, she [will pass] the test.",
+        "If she passes, her mum [will be] very proud.",
+        "If she waters the plant, it [will grow].",
+        "If it grows, it [will have] beautiful flowers."
+      ],
+      "lines_hy": [
+        "Եթե անձրև գա, Լիլին անձրևանոց կվերցնի։",
+        "Եթե նա անձրևանոց վերցնի, չի թրջվի։",
+        "Եթե նա լավ սովորի, կհանձնի թեստը։",
+        "Եթե նա հանձնի, մայրիկը շատ կհպարտանա։",
+        "Եթե նա ջրի բույսը, այն կմեծանա։",
+        "Եթե այն մեծանա, գեղեցիկ ծաղիկներ կունենա։"
+      ],
+      "number": 19,
+      "date": "2026-12-31",
+      "held": true
     }
   ]
 }
