@@ -57,6 +57,13 @@
  /* clean reels: no progress bars, scene dots, counters or small label lines */
  .header .handle,.big10,.foot{display:none!important}
  .blob{position:absolute;width:900px;height:900px;border-radius:50%;filter:blur(90px);opacity:.16;background:var(--c);pointer-events:none;z-index:0}
+ #spot{position:absolute;left:70px;right:70px;top:560px;height:1080px;z-index:5;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+ body.spot #spot{display:flex}
+ #spot .sp-img{width:600px;height:600px;border-radius:60px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,#FFFCF6,color-mix(in srgb,var(--c) 10%,#F4EFE4) 70%);box-shadow:0 40px 90px #3a2f1422}
+ #spot img{width:490px;height:490px;object-fit:contain;filter:drop-shadow(0 26px 30px #3a2f1430)}
+ #spEn{margin-top:56px;font:700 132px/1 Literata,serif;letter-spacing:-3px;color:var(--ink)}
+ #spIpa{margin-top:22px;font:500 50px IPA,sans-serif;color:var(--c)}
+ #spHy{margin-top:26px;font:600 58px NotoArmenian,sans-serif;color:#4a4760}
  #fly{position:absolute;inset:0;pointer-events:none;z-index:6}
  #fly img{position:absolute;left:0;top:0;width:150px;height:150px;object-fit:contain;filter:drop-shadow(0 14px 18px #3a2f1433);will-change:transform,opacity}
  .header,.title,.eyebrow,.list,.say,.outro{position:absolute;z-index:2}
@@ -70,6 +77,7 @@
  <div class="big10" id="big10">10</div><div class="title" id="title"><h1 id="theme"></h1><div class="t-hy" id="themeHy"></div></div>
  <div class="blob" id="blob1"></div><div class="blob" id="blob2"></div>
  <div class="list" id="list"></div><div id="fly"></div>
+ <div id="spot"><div class="sp-img"><img id="spImg" alt=""></div><div id="spEn"></div><div id="spIpa"></div><div id="spHy"></div></div>
  <div class="say" id="say"><span id="sayEn">LISTEN AND REPEAT</span> <em id="sayHy">· Լսի՛ր և կրկնի՛ր</em><span class="cnt" id="cnt"></span></div>
  <footer class="foot"><span>Save it · Share it</span><span class="handle">@english.readingroom</span></footer>
  <div class="progress"><i id="progress"></i></div>
@@ -111,13 +119,27 @@
  }
  // opening hook: the ten pictures pop up as a grid, then each flies into its own row
  let FLY=null;
- function flyInit(){ if(FLY!==null) return; FLY=[]; if(!D.words.some(w=>w.img)) return;
+ function flyInit(){ if(FLY!==null) return; FLY=[]; if(D.mode==='spot'||!D.words.some(w=>w.img)) return;
   D.words.forEach((w,i)=>{ const r=document.getElementById('r'+i), ic=r.querySelector('.ic'); if(!ic||!w.img) return;
    const tx=list.offsetLeft+r.offsetLeft+ic.offsetLeft+ic.offsetWidth/2, ty=list.offsetTop+r.offsetTop+ic.offsetTop+ic.offsetHeight/2;
    const el=document.createElement('img'); el.src=w.img; fly.appendChild(el);
    FLY.push({el,ic,i,gx:150+(i%5)*195,gy:900+Math.floor(i/5)*230,tx,ty}); }); }
  window.seek=t=>{
   flyInit();
+  if(D.mode==='spot'){ document.body.classList.add('spot');
+   const lastEnd=T.rows.at(-1).end, ci=T.rows.findIndex(q=>t>=q.at-.05&&t<q.end), show=t<lastEnd;
+   spot.style.display=show?'flex':'none'; list.style.visibility=show?'hidden':'visible';
+   if(ci>=0){ const q=T.rows[ci], w=D.words[ci];
+    if(spImg.dataset.i!=String(ci)){ spImg.src=w.img||''; spImg.dataset.i=ci; spEn.textContent=w.en; spIpa.textContent=w.ipa; spHy.textContent=w.hy; }
+    const a=clamp((t-q.at+.05)/.45), b=clamp((t-(q.end-.32))/.32), ia=back(a), sp=t>=q.v0&&t<=q.v1;
+    spot.style.opacity=ease(a)*(1-b); spot.style.transform=`translateX(${-b*120}px)`;
+    spot.querySelector('.sp-img').style.transform=`scale(${.7+.3*ia}) rotate(${(1-ia)*-6}deg)`;
+    spImg.style.transform=`translateY(${sp?-14*Math.abs(Math.sin(t*7)):0}px) scale(${sp?1.04:1})`;
+    spEn.style.transform=`translateY(${(1-ease(clamp((t-q.at-.1)/.4)))*40}px)`; spEn.style.opacity=ease(clamp((t-q.at-.1)/.4));
+    spIpa.style.opacity=ease(clamp((t-q.at-.25)/.4)); spHy.style.opacity=ease(clamp((t-q.v1)/.4));
+    spHy.style.transform=`translateY(${(1-ease(clamp((t-q.v1)/.4)))*24}px)`;
+   } else spot.style.opacity=0;
+  }
   blob1.style.transform=`translate(${-260+80*Math.sin(t*.35)}px,${180+60*Math.cos(t*.27)}px)`;
   blob2.style.transform=`translate(${520+70*Math.cos(t*.31)}px,${1120+80*Math.sin(t*.22)}px)`;
   (FLY||[]).forEach(f=>{ const a=back(clamp((t-.25-f.i*.05)/.45)), m=clamp((t-1.15-f.i*.05)/.6), mm=m<.5?4*m*m*m:1-Math.pow(-2*m+2,3)/2;
@@ -132,11 +154,11 @@
   const g=ease(clamp((t-.2)/.9)); big10.style.opacity=.08*g; big10.style.transform=`translateY(${(1-g)*40}px)`; }
   const cur=T.rows.findIndex(p=>t>=p.at&&t<p.end); cnt.textContent=cur>=0?` ${cur+1}/10`:'';
   D.words.forEach((w,i)=>{const r=document.getElementById('r'+i);
-   const d0=FLY&&FLY.length?1.55+i*.06:.45+i*.09; const e=clamp((t-d0)/.5);
+   const d0=D.mode==='spot'?T.rows.at(-1).end+.1+i*.06:(FLY&&FLY.length?1.55+i*.06:.45+i*.09); const e=clamp((t-d0)/.5);
    const p=T.rows[i]; const on=t>=p.at&&t<p.end; const k=on?ease(clamp((t-p.at)/.25)):(t>=p.end?Math.max(0,1-clamp((t-p.end)/.3)):0);
    // entrance: rows rise one by one with a soft overshoot; while a word plays, the other rows step back
    const en=back(clamp((t-d0)/.55)); const cur=T.rows.findIndex(q=>t>=q.at&&t<q.end);
-   const focus=cur<0||cur===i?1:.42;
+   const focus=D.mode==='spot'||cur<0||cur===i?1:.42;
    r.style.opacity=ease(e)*focus; r.style.transform=`translateY(${(1-en)*46}px) scale(${(.96+.04*en)*(1+.035*k)})`;
    r.style.filter=cur>=0&&cur!==i?'saturate(.6)':'none';
    r.querySelector('.bg').style.opacity=k;

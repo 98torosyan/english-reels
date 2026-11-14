@@ -19,7 +19,7 @@ const ICONS = path.join(utils.ROOT, 'node_modules/@phosphor-icons/core/assets/du
 const iconSvg = (name) => (name ? fs.readFileSync(path.join(ICONS, `${name}-duotone.svg`), 'utf8') : null);
 // painted pictures for a list (assets/words10_art/<id>/<n>.png) replace the line icons when they exist
 const art = (id, n) => { const f = path.join(utils.ROOT, 'assets/words10_art', id, `${n}.png`); return fs.existsSync(f) ? `data:image/png;base64,${fs.readFileSync(f).toString('base64')}` : null; };
-const withColor = (list) => ({ ...list, color: PALETTE[(list.number - 1) % PALETTE.length],
+const withColor = (list) => ({ ...list, mode: process.env.WORDS10_MODE || list.mode, color: PALETTE[(list.number - 1) % PALETTE.length],
   words: list.words.map((w, n) => ({ ...w, img: art(list.id, n), svg: iconSvg(w.icon) })) });
 
 function clip(id, n, text) {
@@ -32,7 +32,7 @@ function clip(id, n, text) {
 }
 
 // List slides in, then each row: highlight, word, a pause to repeat it.
-function timeline(list) {
+function timeline(list) {   // list.mode === 'spot': one big word at a time
   const plays = []; const rows = [];
   let t = 2.0;
   list.words.forEach((w, n) => {
@@ -43,7 +43,7 @@ function timeline(list) {
     rows.push({ at: r3(t), v0: r3(at), v1: r3(at + c.len), end: r3(end) });
     t = end + 0.15;
   });
-  const total = t + 2.8;
+  const total = t + 2.8 + (list.mode === 'spot' ? 3.2 : 0);   // spotlight: the whole list as a summary before the end
   return { plays, rows, total: r3(total) };
 }
 
@@ -63,7 +63,7 @@ function voiceTrack(T, out) {
 
 async function renderWords10(browser, baseUrl, list0) {
   const list = withColor(list0);
-  const T = timeline(list);
+  const T = timeline(list);   // list carries mode
   const name = `words10-${list.id}`;
   const output = utils.OUTPUT;
   const frames = path.join(output, `.frames-${name}`);
