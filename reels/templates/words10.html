@@ -56,6 +56,10 @@
  .signature{margin-top:58px;font-size:24px;font-weight:800;letter-spacing:5px}
  /* clean reels: no progress bars, scene dots, counters or small label lines */
  .header .handle,.big10,.foot{display:none!important}
+ .blob{position:absolute;width:900px;height:900px;border-radius:50%;filter:blur(90px);opacity:.16;background:var(--c);pointer-events:none;z-index:0}
+ #fly{position:absolute;inset:0;pointer-events:none;z-index:6}
+ #fly img{position:absolute;left:0;top:0;width:150px;height:150px;object-fit:contain;filter:drop-shadow(0 14px 18px #3a2f1433);will-change:transform,opacity}
+ .header,.title,.eyebrow,.list,.say,.outro{position:absolute;z-index:2}
  .title{top:350px} .eyebrow{top:264px} .list{top:600px} .say{top:1600px}
  .progress,.sdots,.eyebrow,.dots,.count{display:none!important}
  </style>
@@ -64,7 +68,8 @@
  <header class="header" id="hd"><img class="logo" src="__LOGO_DATA__" alt=""><div><div class="brand-name">Gayane Torosyan</div><div class="brand-sub">ENGLISH READING ROOM</div></div><div class="handle">@english.readingroom</div></header>
  <div class="eyebrow" id="eyebrow"><b id="series"></b><span id="level" class="chip"></span></div>
  <div class="big10" id="big10">10</div><div class="title" id="title"><h1 id="theme"></h1><div class="t-hy" id="themeHy"></div></div>
- <div class="list" id="list"></div>
+ <div class="blob" id="blob1"></div><div class="blob" id="blob2"></div>
+ <div class="list" id="list"></div><div id="fly"></div>
  <div class="say" id="say"><span id="sayEn">LISTEN AND REPEAT</span> <em id="sayHy">· Լսի՛ր և կրկնի՛ր</em><span class="cnt" id="cnt"></span></div>
  <footer class="foot"><span>Save it · Share it</span><span class="handle">@english.readingroom</span></footer>
  <div class="progress"><i id="progress"></i></div>
@@ -104,7 +109,21 @@
    .from(outro.querySelector('.follow'),{opacity:0,y:14,duration:.4},.85)
    .from(outro.querySelector('.signature'),{letterSpacing:'22px',opacity:0,duration:.8,ease:'power3.out'},.9);
  }
+ // opening hook: the ten pictures pop up as a grid, then each flies into its own row
+ let FLY=null;
+ function flyInit(){ if(FLY!==null) return; FLY=[]; if(!D.words.some(w=>w.img)) return;
+  D.words.forEach((w,i)=>{ const r=document.getElementById('r'+i), ic=r.querySelector('.ic'); if(!ic||!w.img) return;
+   const tx=list.offsetLeft+r.offsetLeft+ic.offsetLeft+ic.offsetWidth/2, ty=list.offsetTop+r.offsetTop+ic.offsetTop+ic.offsetHeight/2;
+   const el=document.createElement('img'); el.src=w.img; fly.appendChild(el);
+   FLY.push({el,ic,i,gx:150+(i%5)*195,gy:900+Math.floor(i/5)*230,tx,ty}); }); }
  window.seek=t=>{
+  flyInit();
+  blob1.style.transform=`translate(${-260+80*Math.sin(t*.35)}px,${180+60*Math.cos(t*.27)}px)`;
+  blob2.style.transform=`translate(${520+70*Math.cos(t*.31)}px,${1120+80*Math.sin(t*.22)}px)`;
+  (FLY||[]).forEach(f=>{ const a=back(clamp((t-.25-f.i*.05)/.45)), m=clamp((t-1.15-f.i*.05)/.6), mm=m<.5?4*m*m*m:1-Math.pow(-2*m+2,3)/2;
+   const x=f.gx+(f.tx-f.gx)*mm, y=f.gy+(f.ty-f.gy)*mm, sc=(1-mm)*a+mm*(88/150);
+   f.el.style.opacity=m>=1?0:clamp(a*1.4); f.el.style.transform=`translate(${x-75}px,${y-75}px) scale(${sc}) rotate(${(1-mm)*(f.i%2?-8:8)*a}deg)`;
+   f.ic.style.opacity=m>=1?1:0; });
   progress.style.width=(clamp(t/T.total)*100)+'%';
   if(TL){TL.seek(Math.min(t,TL.duration()));} else {
   const a=ease(clamp(t/.45)); eyebrow.style.opacity=a; eyebrow.style.transform=`translateX(${(1-a)*-30}px)`;
@@ -113,10 +132,10 @@
   const g=ease(clamp((t-.2)/.9)); big10.style.opacity=.08*g; big10.style.transform=`translateY(${(1-g)*40}px)`; }
   const cur=T.rows.findIndex(p=>t>=p.at&&t<p.end); cnt.textContent=cur>=0?` ${cur+1}/10`:'';
   D.words.forEach((w,i)=>{const r=document.getElementById('r'+i);
-   const e=clamp((t-.45-i*.09)/.5);
+   const d0=FLY&&FLY.length?1.55+i*.06:.45+i*.09; const e=clamp((t-d0)/.5);
    const p=T.rows[i]; const on=t>=p.at&&t<p.end; const k=on?ease(clamp((t-p.at)/.25)):(t>=p.end?Math.max(0,1-clamp((t-p.end)/.3)):0);
    // entrance: rows rise one by one with a soft overshoot; while a word plays, the other rows step back
-   const en=back(clamp((t-.45-i*.09)/.55)); const cur=T.rows.findIndex(q=>t>=q.at&&t<q.end);
+   const en=back(clamp((t-d0)/.55)); const cur=T.rows.findIndex(q=>t>=q.at&&t<q.end);
    const focus=cur<0||cur===i?1:.42;
    r.style.opacity=ease(e)*focus; r.style.transform=`translateY(${(1-en)*46}px) scale(${(.96+.04*en)*(1+.035*k)})`;
    r.style.filter=cur>=0&&cur!==i?'saturate(.6)':'none';
