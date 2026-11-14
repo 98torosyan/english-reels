@@ -1,0 +1,22 @@
+{
+  "note": "Classics made easy, carousel format. Images: assets/storyvideo/<id>/1..6.jpg. For a mystery, 'reveal' is shown after a 'Who did it?' slide. Armenian to be reviewed by Gayane.",
+  "stories": [
+    {"id": "blue-carbuncle", "title": "The Blue Carbuncle", "title_hy": "Կապույտ կարբունկուլը", "level": "A2",
+     "author": "Arthur Conan Doyle", "year": "1892", "book": "The Adventure of the Blue Carbuncle",
+     "quote": "It is the season of forgiveness.", "quote_hy": "Ներման ժամանակն է",
+     "mystery": {"question": "Who stole the blue stone?", "question_hy": "Ո՞վ է գողացել կապույտ քարը"},
+     "scenes": ["Two days after Christmas, Holmes was studying an old hat. 'This hat can tell us a lot,' he said.",
+                "Peterson, a commissionaire, had found the hat and a Christmas goose in the street.",
+                "When Peterson's wife cooked the goose, she found something amazing inside: a famous blue stone!",
+                "Holmes and Watson followed the story of the goose to a busy Christmas market.",
+                "There they saw a nervous young man who was asking about the same goose.",
+                "It was James Ryder, a hotel attendant. He had hidden the stone in the goose. It was Christmas, so Holmes let him go."],
+     "scenes_hy": ["Սուրբ Ծննդից երկու օր անց Հոլմսը ուսումնասիրում էր մի հին գլխարկ։ «Այս գլխարկը շատ բան կարող է պատմել»,— ասաց նա։",
+                   "Դռնապան Պետերսոնը փողոցում գտել էր գլխարկը և Սուրբ Ծննդյան մի սագ։",
+                   "Երբ Պետերսոնի կինը սագը պատրաստում էր, նրա ներսում զարմանալի բան գտավ՝ մի հայտնի կապույտ քար։",
+                   "Հոլմսն ու Ուոթսոնը սագի հետքերով հասան Սուրբ Ծննդյան աշխույժ շուկա։",
+                   "Այնտեղ նրանք տեսան մի անհանգիստ երիտասարդի, որը հարցնում էր նույն սագի մասին։",
+                   "Դա Ջեյմս Ռայդերն էր՝ հյուրանոցի սպասավորը։ Նա էր քարը թաքցրել սագի մեջ։ Սուրբ Ծնունդ էր, և Հոլմսը բաց թողեց նրան։"],
+     "words": [{"en": "goose", "ipa": "/ɡuːs/", "hy": "սագ"}, {"en": "steal", "ipa": "/stiːl/", "hy": "գողանալ"}, {"en": "forgive", "ipa": "/fəˈɡɪv/", "hy": "ներել"}]}
+  ]
+}
