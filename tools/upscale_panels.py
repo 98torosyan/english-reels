@@ -41,6 +41,9 @@ def panels(src):
 
 def main():
     sharp = "--sharp" in sys.argv
+    import time
+    budget = float(sys.argv[sys.argv.index("--budget") + 1]) * 60 if "--budget" in sys.argv else 1e9   # seconds
+    t0 = time.monotonic(); left = 0
     model = None
     if sharp:
         import torch
@@ -63,11 +66,14 @@ def main():
         kind = "photo" if (d / "photo").exists() else "art"   # photorealistic storyboards get the natural-photo model
         want = {"src": h, "sharp": sharp, "model": kind}
         if mark.exists() and all(json.loads(mark.read_text()).get(k, "art" if k == "model" else None) == v for k, v in want.items()): continue
+        if time.monotonic() - t0 > budget:   # out of time: the workflow saves what is done and starts again
+            left += 1; continue
         for n, p in enumerate(panels(src), 1):
             if model is not None: p = model(p, kind)
             p.resize((1080, 1080), Image.LANCZOS).save(d / f"{n}.jpg", quality=93)
         mark.write_text(json.dumps(want)); done += 1; print("panels:", d.name, kind, "sharp" if sharp else "plain")
-    print(done, "storyboard(s) processed")
+    print(done, "storyboard(s) processed,", left, "left")
+    Path("panels_left.txt").write_text(str(left))
 
 
 if __name__ == "__main__":

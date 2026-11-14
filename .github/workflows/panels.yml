@@ -5,12 +5,13 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: panels
 jobs:
   sharpen:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -24,7 +25,7 @@ jobs:
           curl -sSLf -o weights/RealESRGAN_x4plus_anime_6B.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth
           curl -sSLf -o weights/RealESRGAN_x4plus.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth
       - name: Cut and sharpen
-        run: python tools/upscale_panels.py --sharp
+        run: python tools/upscale_panels.py --sharp --budget 75
       - name: Save
         run: |
           git add assets/picstory assets/storyvideo assets/routine
@@ -33,3 +34,8 @@ jobs:
             git commit -m "Կադրեր՝ սրված (Real-ESRGAN)"
             for k in 1 2 3 4 5; do git pull --rebase && git push && break; sleep 7; done
           fi
+      - name: Continue if more storyboards are waiting
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$(cat panels_left.txt 2>/dev/null || echo 0)" != "0" ]; then gh workflow run panels.yml --ref main; fi
