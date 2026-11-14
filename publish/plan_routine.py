@@ -36,6 +36,7 @@ def main():
     new = []
     for k, st in enumerate(stories):
         if a.only and st["id"] not in a.only: continue
+        if st.get("held") and not a.only: continue   # grammar lessons wait for the owner's go-ahead
         day = st.get("date") or (start + dt.timedelta(days=k)).isoformat()
         subprocess.run(["node", "reels/render_routine.js", st["id"]], cwd=ROOT, check=True, env={**os.environ, "MUSIC_TRACK": music(k)})
         rid = f"{day}-routine-{st['id']}"; rdir = media / rid; rdir.mkdir(parents=True, exist_ok=True)
