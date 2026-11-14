@@ -24,10 +24,11 @@ def push(media, msg):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--media-repo", required=True); ap.add_argument("--kinds", nargs="*", default=list(KINDS))
-    ap.add_argument("--from-date", help="only items on or after this date (YYYY-MM-DD)"); a = ap.parse_args()
+    ap.add_argument("--from-date", help="only items on or after this date (YYYY-MM-DD)")
+    ap.add_argument("--to-date", default="9999", help="only items on or before this date"); a = ap.parse_args()
     media = Path(a.media_repo).resolve(); today = dt.date.today().isoformat()
     q = json.loads((ROOT / "queue.json").read_text(encoding="utf-8"))
-    todo = [i for i in q["items"] if i.get("kind") in a.kinds and not i.get("published_at") and i["date"] >= max(today, a.from_date or today) and i.get("media", {}).get("video_url")]
+    todo = [i for i in q["items"] if i.get("kind") in a.kinds and not i.get("published_at") and max(today, a.from_date or today) <= i["date"] <= a.to_date and i.get("media", {}).get("video_url")]
     for n, i in enumerate(todo, 1):
         data, key, mod, off = KINDS[i["kind"]]
         ids = [x["id"] for x in json.loads((ROOT / "reels/data" / data).read_text(encoding="utf-8"))[key]]
