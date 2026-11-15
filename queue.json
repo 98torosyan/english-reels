@@ -1902,7 +1902,10 @@
       "thumb_offset": 1300,
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-15-storyvideo-picnic/storyvideo-picnic.mp4"
-      }
+      },
+      "attempts": 1,
+      "last_error": "Container 17931227334242156 ended with status ERROR.",
+      "container_id": "17931227334242156"
     },
     {
       "id": "2026-11-15-dialogue-job-interview",
