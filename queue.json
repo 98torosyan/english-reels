@@ -1711,10 +1711,12 @@
       "content_id": "words10-doctor",
       "title": "10 words 04 story",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-15-story-words10-doctor/story.jpg"
-      }
+      },
+      "published_at": "2026-11-15T14:35+04:00",
+      "ig_media_id": "18498486025111104"
     },
     {
       "id": "2026-11-15-picstory-lost-ticket",
