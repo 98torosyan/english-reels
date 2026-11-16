@@ -2098,10 +2098,12 @@
       "content_id": "picstory-snowy-morning",
       "title": "Picture story 04 story",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-16-story-picstory-snowy-morning/story.jpg"
-      }
+      },
+      "published_at": "2026-11-16T17:05+04:00",
+      "ig_media_id": "18018173360967814"
     },
     {
       "id": "2026-11-16-story-phrasal-take",
