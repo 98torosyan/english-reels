@@ -1,6 +1,6 @@
 """Control panel: one page that shows the whole page's state at a glance (queue + analytics), in Armenian.
 Usage: python tools/build_panel.py OUT.html"""
-import json, sys, html
+import base64, io, json, subprocess, sys, html
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -15,6 +15,33 @@ NAMES = {"feelstory": "Զգացմունքային պատմություն", "oppo
 WD = ["Երկ", "Երք", "Չրք", "Հնգ", "Ուրբ", "Շբթ", "Կիր"]
 FMT = {"REELS": "Reel", "CAROUSEL": "Կարուսել", "STORIES": "Story", "IMAGE": "Նկար"}
 e = lambda s: html.escape(str(s))
+
+
+MEDIA = ROOT.parent / "english-reels-media"
+BASE = "https://98torosyan.github.io/english-reels-media/"
+
+
+def thumb(i):
+    """A small 3:4 picture of how the post will look on the profile grid (data URI), or None."""
+    m = i.get("media") or {}
+    src = m.get("cover_url") or (m.get("slides") or [None])[0] or m.get("image_url") or m.get("video_url")
+    if not src or not src.startswith(BASE): return None
+    f = MEDIA / src[len(BASE):]
+    if not f.exists(): return None
+    if f.suffix == ".mp4":
+        t = (i.get("thumb_offset") or 1500) / 1000
+        r = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{t:.2f}", "-i", str(f), "-frames:v", "1", "-f", "image2pipe", "-vcodec", "mjpeg", "-"], capture_output=True)
+        data = r.stdout
+    else:
+        data = f.read_bytes()
+    try:
+        from PIL import Image
+        im = Image.open(io.BytesIO(data)).convert("RGB"); w, h = im.size; th = int(w * 4 / 3)
+        if h > th: im = im.crop((0, (h - th) // 2, w, (h - th) // 2 + th))
+        im = im.resize((240, 320)); b = io.BytesIO(); im.save(b, "JPEG", quality=78)
+        return "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode()
+    except Exception:
+        return None
 
 
 def main(out):
@@ -35,6 +62,8 @@ def main(out):
     last_day = max((i["date"] for i in upcoming if i.get("format") != "STORIES"), default="—")
     by_kind = Counter(NAMES.get(i.get("kind"), i.get("kind")) for i in upcoming if i.get("format") != "STORIES")
 
+    nxt = sorted([i for i in upcoming if i.get("format") != "STORIES"], key=lambda i: (i["date"], i["time"]))[:12]
+    grid = [(i, u) for i in reversed(nxt) if (u := thumb(i))]
     days = defaultdict(list)
     for i in sorted(q, key=lambda i: (i["date"], i["time"])):
         d = date.fromisoformat(i["date"])
@@ -82,6 +111,9 @@ ul{{list-style:none;margin:0;padding:0}}
 .box{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;min-width:0}}
 .bar{{display:grid;grid-template-columns:1fr auto;gap:8px;padding:7px 0;border-top:1px solid var(--line);font-size:14px}} .bar b{{font-variant-numeric:tabular-nums}}
 .foot{{color:var(--muted);font-size:12px}}
+.grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;max-width:520px}}
+.grid figure{{margin:0;position:relative}} .grid img{{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}}
+.grid figcaption{{position:absolute;left:6px;bottom:6px;font-size:11px;font-weight:600;color:#fff;background:#0008;padding:2px 6px;border-radius:6px;font-variant-numeric:tabular-nums}}
 </style>
 <div class="wrap">
 <header><h1>English Reading Room · <em>կառավարման վահանակ</em></h1>
@@ -96,6 +128,9 @@ ul{{list-style:none;margin:0;padding:0}}
 <section><h2>Վիճակ</h2><ul>{alerts}</ul></section>
 <section><h2>Առաջիկա 7 օրը</h2><div class="days">
 {"".join(f'<div class="day"><h3>{d:%d.%m}<span>{WD[d.weekday()]}</span></h3><ul>{"".join(row(i) for i in days[d])}</ul></div>' for d in sorted(days))}
+</div></section>
+<section><h2>Էջի տեսքը՝ հաջորդ 12 գրառումը (վերևում՝ ամենավերջինը)</h2><div class="grid">
+{"".join(f'<figure><img src="{u}" alt=""><figcaption>{e(i["date"][5:])} {e(i["time"])}</figcaption></figure>' for i, u in grid)}
 </div></section>
 <section class="inv">
 <div class="box"><h2>Հերթում՝ ըստ շարքի</h2>{"".join(f'<div class="bar"><span>{e(k)}</span><b>{v}</b></div>' for k, v in by_kind.most_common())}</div>
