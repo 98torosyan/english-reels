@@ -21,6 +21,7 @@ def panels(src):
     if boxes.exists():
         for x0, y0, x1, y1 in json.loads(boxes.read_text()):
             p = im.crop((x0, y0, x1, y1)); w, h = p.size; s = min(w, h)
+            if (src.parent / "wide").exists(): yield p; continue   # landscape panels stay whole (shown with a soft blurred surround)
             yield p.crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s))
         return
     def runs(v, th=.95):
@@ -81,7 +82,7 @@ def main():
             left += 1; continue
         for n, p in enumerate(panels(src), 1):
             if model is not None: p = model(p, kind)
-            if (d / "single").exists():   # single pictures are kept at 4K width (2160 px) for the 1872x3328 reels
+            if (d / "single").exists() or (d / "wide").exists():   # single pictures are kept at 4K width (2160 px) for the 1872x3328 reels
                 p.resize((2160, round(2160 * p.size[1] / p.size[0])), Image.LANCZOS).save(d / f"{n}.jpg", quality=94)
             else:
                 p.resize((1080, 1080), Image.LANCZOS).save(d / f"{n}.jpg", quality=93)

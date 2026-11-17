@@ -2560,6 +2560,128 @@
      "Բարության մի պարզ արարք ընկերություն է ստեղծում։"
     ]
    ]
+  },
+  {
+   "id": "xmas-train",
+   "style": "2d",
+   "title": "The Christmas train",
+   "title_hy": "Սուրբ Ծննդյան գնացքը",
+   "level": "A2",
+   "voice": "en-GB-SoniaNeural",
+   "wide": true,
+   "scenes": [
+    [
+     "On Christmas Eve, Leo and Mia [saw a red train]",
+     "at the snowy station with their dog, Max."
+    ],
+    [
+     "They sat by the window",
+     "and [dreamed about] snow, lights and presents."
+    ],
+    [
+     "At the last stop, Santa [gave them]",
+     "a big red box with a golden bow."
+    ],
+    [
+     "In the forest, a [friendly snowman]",
+     "waved his hat and smiled."
+    ],
+    [
+     "Then the train [flew up] into the sky,",
+     "past the moon and the stars."
+    ],
+    [
+     "At home, they hugged Max and laughed:",
+     "‘[The best gift] is being together!’"
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Սուրբ Ծննդյան նախօրեին Լեոն ու Միան կարմիր գնացք տեսան",
+     "ձյունոտ կայարանում՝ իրենց շան՝ Մաքսի հետ։"
+    ],
+    [
+     "Նրանք նստեցին պատուհանի մոտ",
+     "և երազեցին ձյան, լույսերի ու նվերների մասին։"
+    ],
+    [
+     "Վերջին կանգառում Ձմեռ պապը նրանց նվիրեց",
+     "ոսկե ժապավենով մի մեծ կարմիր տուփ։"
+    ],
+    [
+     "Անտառում մի բարի ձնեմարդ",
+     "թափահարեց գլխարկը և ժպտաց։"
+    ],
+    [
+     "Հետո գնացքը թռավ երկինք՝",
+     "լուսնի ու աստղերի կողքով։"
+    ],
+    [
+     "Տանը նրանք գրկեցին Մաքսին ու ծիծաղեցին.",
+     "«Լավագույն նվերը միասին լինելն է»։"
+    ]
+   ]
+  },
+  {
+   "id": "xmas-bear",
+   "style": "2d",
+   "title": "The polar bear's Christmas",
+   "title_hy": "Սպիտակ արջի Սուրբ Ծնունդը",
+   "level": "A2",
+   "voice": "en-GB-RyanNeural",
+   "wide": true,
+   "scenes": [
+    [
+     "On a snowy evening, a [red truck]",
+     "came into our little town."
+    ],
+    [
+     "Santa waved from the window:",
+     "‘[Merry Christmas], children!’"
+    ],
+    [
+     "Then a big [polar bear]",
+     "gave us a warm, [friendly hug]."
+    ],
+    [
+     "We sat together",
+     "and [shared a drink] under the tree."
+    ],
+    [
+     "We laughed and sang",
+     "and [threw our arms up] in the snow."
+    ],
+    [
+     "Later, we [watched the lights] together,",
+     "and the cold night felt warm."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Ձյունոտ մի երեկո մի կարմիր բեռնատար",
+     "մտավ մեր փոքրիկ քաղաքը։"
+    ],
+    [
+     "Ձմեռ պապը ձեռքով արեց պատուհանից.",
+     "«Շնորհավոր Սուրբ Ծնունդ, երեխանե՛ր»։"
+    ],
+    [
+     "Հետո մի մեծ սպիտակ արջ",
+     "մեզ ջերմորեն, ընկերաբար գրկեց։"
+    ],
+    [
+     "Մենք նստեցինք միասին",
+     "և տոնածառի տակ ըմպելիք կիսեցինք։"
+    ],
+    [
+     "Մենք ծիծաղում էինք ու երգում",
+     "և ձյան տակ ձեռքներս վեր էինք պարզում։"
+    ],
+    [
+     "Հետո միասին նայեցինք լույսերին,",
+     "և ցուրտ գիշերը ջերմ թվաց։"
+    ]
+   ]
   }
  ]
 }
