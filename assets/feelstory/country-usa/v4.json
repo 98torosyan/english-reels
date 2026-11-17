@@ -1,0 +1,1 @@
+{"text": "The Golden Gate Bridge in San Francisco is red, not gold.", "words": [[0.24, 0.32], [0.4, 0.76], [0.86, 1.1], [1.12, 1.42], [1.48, 1.56], [1.66, 1.88], [1.96, 2.56], [2.74, 2.84], [2.96, 3.18], [3.52, 3.68], [3.76, 4.354]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
