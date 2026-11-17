@@ -1,0 +1,23 @@
+{
+  "note": "Short emotional stories, one picture per scene (assets/feelstory/<id>/1..6.jpg, the lower third left calm for text). [brackets] = highlighted phrase. Armenian translation goes in the caption.",
+  "stories": [
+    {"id": "dog-window", "title": "The dog at the window", "title_hy": "Շունը պատուհանի մոտ", "level": "A2", "voice": "kokoro:bm_george",
+     "hook": "Can you understand this story?", "hook_hy": "Կհասկանա՞ս այս պատմությունը",
+     "scenes": [
+       ["Every morning, I leave for work.", "Bella watches me [from the door]."],
+       ["Then she goes to the window,", "and she [waits]."],
+       ["Hours pass.", "The sun moves across the sky.", "She [doesn't move]."],
+       ["On the bus home, I [check my phone].", "Messages. Emails. News.", "I don't even [look up]."],
+       ["But when I open the door,", "she runs to me", "like I'm [the best thing in the world]."],
+       ["Tonight, I [put my phone down].", "Maybe someone is [waiting for you], too."]
+     ],
+     "scenes_hy": [
+       ["Ամեն առավոտ ես գնում եմ աշխատանքի։", "Բելլան ինձ նայում է դռան մոտից։"],
+       ["Հետո նա գնում է պատուհանի մոտ", "և սպասում։"],
+       ["Ժամեր են անցնում։", "Արևը շարժվում է երկնքով։", "Նա տեղից չի շարժվում։"],
+       ["Տուն վերադառնալիս ավտոբուսում ես նայում եմ հեռախոսս։", "Նամակներ։ Էլ. նամակներ։ Լուրեր։", "Ես նույնիսկ գլուխս չեմ բարձրացնում։"],
+       ["Բայց երբ բացում եմ դուռը,", "նա վազում է դեպի ինձ,", "կարծես ես աշխարհում ամենալավն եմ։"],
+       ["Այս երեկո ես մի կողմ եմ դնում հեռախոսս։", "Գուցե ինչ-որ մեկը քեզ էլ է սպասում։"]
+     ]}
+  ]
+}
