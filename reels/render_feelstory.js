@@ -75,7 +75,7 @@ async function main() {
       ...[...document.images].map((i) => i.decode().catch(() => null))]).then(() => document.fonts.ready));
     const wide = await page.evaluate(() => [...document.querySelectorAll('.ln')].filter((e) => e.scrollWidth > e.clientWidth + 1).map((e) => e.textContent));
     if (wide.length) throw new Error(`${name}: line too long: ${wide.join(' | ')}`);
-    await utils.renderFrames(page, T.total, frames, posterPath, T.lines[0].at + 0.4, FPS);
+    await utils.renderFrames(page, T.total, frames, posterPath, T.lines[1].at - 0.3, FPS);
     if (errors.length) throw new Error(`Template errors: ${errors.join(' | ')}`);
     await page.close();
     const voice = path.join(work, `${name}.wav`); voiceTrack(T, voice);
