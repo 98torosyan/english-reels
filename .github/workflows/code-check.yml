@@ -1,0 +1,43 @@
+name: Code check
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 21 * * *"   # every night, 01:17 Yerevan: the full system check with the media files
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: code-check-${{ github.event_name }}
+  cancel-in-progress: true
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Code, data and queue
+        run: |
+          set -o pipefail
+          pip install -q ruff && python tools/check_code.py | tee code-check.txt
+      - name: Full system check (every night)
+        if: github.event_name != 'push'
+        run: |
+          set -o pipefail
+          npm ci --no-audit --no-fund >/dev/null
+          git clone -q --depth 1 --branch media https://github.com/98torosyan/english-reels-media.git ../english-reels-media
+          python qc/system_check.py --media-repo ../english-reels-media | tee -a code-check.txt
+      - name: Open an issue (GitHub e-mails the owner)
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Կոդի ստուգում · խնդիր · $(TZ=Asia/Yerevan date +%Y-%m-%d)"
+          { echo "Ավտոմատ ստուգումը խնդիր գտավ.";  echo; echo '```'; tail -60 code-check.txt 2>/dev/null; echo '```'; } > body.md
+          if ! gh issue list --state open --search "$title in:title" --json number -q '.[0].number' | grep -q .; then gh issue create --title "$title" --body-file body.md; fi
