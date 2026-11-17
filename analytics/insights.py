@@ -16,7 +16,9 @@ API = f"https://graph.facebook.com/{os.environ.get('META_GRAPH_API_VERSION', 'v2
 TOKEN, USER = os.environ.get("IG_TOKEN", ""), os.environ.get("IG_USER_ID", "")
 METRICS = {"REELS": "views,reach,saved,shares,total_interactions", "FEED": "views,reach,saved,shares,total_interactions"}
 SERIES = {"reading": "Daily reading", "words10": "10 words", "phrasal": "Phrasal verbs", "review": "Weekly review", "dialogue": "Everyday English", "sound": "Sound it out",
-          "story": "Story time", "rule": "Carousels", "mistake": "Common mistakes", "quiz": "Quiz", "word": "Word of the day"}
+          "story": "Story time", "rule": "Carousels", "mistake": "Common mistakes", "quiz": "Quiz", "word": "Word of the day",
+          "storyvideo": "Story videos & Classics", "classic": "Classic carousels", "picstory": "Picture stories", "feelstory": "Emotional stories",
+          "opposites": "A Day in Opposites", "routine": "Everyday English (pictures)", "list": "Carousels", "test": "Tests"}
 
 
 def get(path, **params):
