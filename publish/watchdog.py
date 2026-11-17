@@ -55,8 +55,20 @@ def token_warning(days=10):
     return "\n".join(out)
 
 
+def runway(min_days=4):
+    """Warn early when the plan is about to run dry, so the page never goes quiet."""
+    today = dt.datetime.now(ZoneInfo("Asia/Yerevan")).date()
+    ready = sorted({i["date"] for i in json.loads((ROOT / "queue.json").read_text(encoding="utf-8"))["items"]
+                    if i.get("review_status") == "staged" and not i.get("published_at") and i.get("format") != "STORIES" and i["date"] >= today.isoformat()})
+    left = (dt.date.fromisoformat(ready[-1]) - today).days if ready else -1
+    if left < min_days:
+        return f"Պատրաստ գրառումները բավական են միայն **{max(left, 0)} օր**ի համար (մինչև {ready[-1] if ready else '—'})։ Ժամանակն է նոր նյութ պատրաստելու։"
+    return ""
+
+
 def main():
-    items = late(); warn = token_warning()
+    items = late(); warn = token_warning(); dry = runway()
+    if dry and dt.datetime.now(ZoneInfo("Asia/Yerevan")).hour < 13: warn = (warn + "\n" + dry).strip()   # once a day is enough
     if not items and not warn:
         print("All due posts are published."); return 0
     body = ""
