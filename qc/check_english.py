@@ -13,7 +13,7 @@ PUBLIC = "api.languagetool.org" in LT
 IGNORE = {"WHITESPACE_RULE", "EN_QUOTES", "DASH_RULE", "UPPERCASE_SENTENCE_START", "PUNCTUATION_PARAGRAPH_END",
           "COMMA_PARENTHESIS_WHITESPACE", "EN_UNPAIRED_BRACKETS", "SENTENCE_FRAGMENT", "I_LOWERCASE",
           "INTERJECTIONS_PUNCTUATION", "SERIAL_COMMA_ON", "PASSIVE_VOICE_SIMPLE"}  # style preferences, not errors
-NAMES = {"gayane", "torosyan", "ufar", "yerevan", "armenia", "armenian", "ani", "aram", "lilit", "narek", "mane", "davit", "tigran", "anna", "sona", "hayk", "gor", "sevan", "dilijan", "gata", "toto", "lavash", "leo", "biscuit", "sam", "yuki", "ella", "noah", "lily", "zara", "ben", "mia"}
+NAMES = {"gayane", "torosyan", "ufar", "yerevan", "armenia", "armenian", "ani", "aram", "lilit", "narek", "mane", "davit", "tigran", "anna", "sona", "hayk", "gor", "sevan", "dilijan", "gata", "toto", "lavash", "leo", "biscuit", "sam", "yuki", "ella", "noah", "lily", "zara", "ben", "mia", "passepartout", "marmee", "morgiana", "bella", "nora"}
 ALLOW = json.loads((ROOT / "qc/data/english_allow.json").read_text(encoding="utf-8"))
 load = lambda p: json.loads((ROOT / p).read_text(encoding="utf-8"))
 clean = lambda s: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s)).replace("___", "…").strip()
@@ -50,6 +50,11 @@ def texts():
         for k, sent in enumerate(re.split(r"(?<=[.!?'])\s+(?=[A-Z'])", st["en"])): yield f"reading:{st['id']}/{k}", sent
     for st in load("reels/data/phrasal.json")["sets"]:
         for n, it in enumerate(st["items"]): yield f"phrasal:{st['id']}/{n}", it["example"]
+    for st in load("reels/data/feelstory.json")["stories"]:
+        for k, sc in enumerate(st["scenes"]): yield f"feelstory:{st['id']}/{k}", " ".join(sc).replace("[", "").replace("]", "")
+    for d in load("carousels/data/opposites.json")["days"]:
+        for k, p in enumerate(d["pairs"]): yield f"opposites:{d['id']}/{k}", p["sentence"].replace("[", "").replace("]", "")
+        for k, q in enumerate(d.get("quiz", [])): yield f"opposites:{d['id']}/q{k}", q["q"].replace("___", q["a"])
     for l in load("reels/data/words10.json")["lists"]:
         yield f"words10:{l['id']}", ", ".join(w["en"] for w in l["words"]) + "."
 
