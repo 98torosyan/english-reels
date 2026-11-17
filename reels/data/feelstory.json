@@ -301,6 +301,366 @@
      "Հիմա այն թխում եմ աղջկաս հետ։"
     ]
    ]
+  },
+  {
+   "id": "rooftop-painter",
+   "style": "2d",
+   "title": "The rooftop painter",
+   "title_hy": "Տանիքի նկարիչը",
+   "level": "A2",
+   "voice": "en-GB-RyanNeural",
+   "scenes": [
+    [
+     "Every evening, Luca [climbed onto] the roof",
+     "and painted the sunset over the city."
+    ],
+    [
+     "Nobody [bought] his pictures.",
+     "Only his cat [watched him] work."
+    ],
+    [
+     "One day, a little girl [knocked on] his door.",
+     "She had five coins in her hand."
+    ],
+    [
+     "‘Can I buy [the smallest one]?’ she asked.",
+     "Luca smiled and [gave it to her] for free."
+    ],
+    [
+     "Twenty years later, [a letter arrived].",
+     "Inside, there was a ticket to [an art show]."
+    ],
+    [
+     "On the wall, he saw [his little sunset].",
+     "Under it: ‘Thank you for [my first painting].’"
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Ամեն երեկո Լուկան բարձրանում էր տանիք",
+     "և նկարում քաղաքի վրա իջնող մայրամուտը։"
+    ],
+    [
+     "Ոչ ոք չէր գնում նրա նկարները։",
+     "Միայն կատուն էր նայում, թե ինչպես է նա աշխատում։"
+    ],
+    [
+     "Մի օր մի փոքրիկ աղջիկ թակեց նրա դուռը։",
+     "Ձեռքին հինգ մետաղադրամ ուներ։"
+    ],
+    [
+     "«Կարո՞ղ եմ գնել ամենափոքրը»,— հարցրեց նա։",
+     "Լուկան ժպտաց և այն նվիրեց նրան։"
+    ],
+    [
+     "Քսան տարի անց մի նամակ եկավ։",
+     "Ներսում ցուցահանդեսի տոմս կար։"
+    ],
+    [
+     "Պատին նա տեսավ իր փոքրիկ մայրամուտը։",
+     "Տակը գրված էր. «Շնորհակալություն իմ առաջին նկարի համար»։"
+    ]
+   ]
+  },
+  {
+   "id": "tiny-bakery",
+   "style": "clay",
+   "title": "The tiny bakery",
+   "title_hy": "Փոքրիկ հացատունը",
+   "level": "A2",
+   "voice": "en-GB-SoniaNeural",
+   "scenes": [
+    [
+     "Rosa opened [a tiny bakery]",
+     "at the end of a quiet street."
+    ],
+    [
+     "On the first day, [nobody came].",
+     "Her cat Pepper [watched the door] all day."
+    ],
+    [
+     "In the evening, it [started to rain].",
+     "An old man stood outside, [wet and cold]."
+    ],
+    [
+     "Rosa [invited him in]",
+     "and gave him warm bread and tea."
+    ],
+    [
+     "‘This is [the best bread] in the city!’",
+     "The next morning, he [came back] with a friend."
+    ],
+    [
+     "Soon, there was [a long queue] every day,",
+     "and one chair by the window was [always his]."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Ռոզան մի փոքրիկ հացատուն բացեց",
+     "մի հանգիստ փողոցի վերջում։"
+    ],
+    [
+     "Առաջին օրը ոչ ոք չեկավ։",
+     "Նրա Պեպեր կատուն ամբողջ օրը նայում էր դռանը։"
+    ],
+    [
+     "Երեկոյան անձրև սկսվեց։",
+     "Դրսում մի ծեր մարդ էր կանգնած՝ թրջված ու մրսած։"
+    ],
+    [
+     "Ռոզան նրան ներս հրավիրեց",
+     "և տաք հաց ու թեյ տվեց։"
+    ],
+    [
+     "«Սա քաղաքի ամենահամեղ հացն է»։",
+     "Հաջորդ առավոտ նա եկավ ընկերոջ հետ։"
+    ],
+    [
+     "Շուտով ամեն օր երկար հերթ էր գոյանում,",
+     "իսկ պատուհանի մոտի աթոռը միշտ նրանն էր։"
+    ]
+   ]
+  },
+  {
+   "id": "rabbit-maps",
+   "style": "watercolour",
+   "title": "The rabbit who collected maps",
+   "title_hy": "Քարտեզներ հավաքող ճագարը",
+   "level": "A2",
+   "voice": "en-GB-ThomasNeural",
+   "scenes": [
+    [
+     "Pip the rabbit [collected maps].",
+     "He wanted to find [the most beautiful place]."
+    ],
+    [
+     "He walked through [golden fields]",
+     "and climbed [snowy mountains]."
+    ],
+    [
+     "He sailed across [a silver lake]",
+     "and slept under [a thousand stars]."
+    ],
+    [
+     "Every place was beautiful,",
+     "but something was [missing]."
+    ],
+    [
+     "One evening, he [smelled carrot soup]",
+     "and saw [a little round door]."
+    ],
+    [
+     "It was [his own home].",
+     "The most beautiful place was [where he started]."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Փիփ ճագարը քարտեզներ էր հավաքում։",
+     "Նա ուզում էր գտնել ամենագեղեցիկ վայրը։"
+    ],
+    [
+     "Նա քայլեց ոսկեգույն դաշտերով",
+     "և բարձրացավ ձյունոտ լեռները։"
+    ],
+    [
+     "Նա նավարկեց արծաթափայլ լճով",
+     "և քնեց հազարավոր աստղերի տակ։"
+    ],
+    [
+     "Ամեն վայր գեղեցիկ էր,",
+     "բայց ինչ-որ բան պակասում էր։"
+    ],
+    [
+     "Մի երեկո նա գազարով ապուրի բույր զգաց",
+     "և տեսավ մի փոքրիկ կլոր դուռ։"
+    ],
+    [
+     "Դա իր սեփական տունն էր։",
+     "Ամենագեղեցիկ վայրը այնտեղ էր, որտեղից նա սկսել էր։"
+    ]
+   ]
+  },
+  {
+   "id": "paper-boat",
+   "style": "2d",
+   "title": "The paper boat",
+   "title_hy": "Թղթե նավակը",
+   "level": "A2",
+   "voice": "en-GB-LibbyNeural",
+   "scenes": [
+    [
+     "On a rainy morning, Nina [made a paper boat].",
+     "She wrote on it: ‘Hello! Who are you?’"
+    ],
+    [
+     "The boat [sailed away] down the street,",
+     "past the shops and [under the bridge]."
+    ],
+    [
+     "A boy called Tom [found it] by the river.",
+     "He read the message and [smiled]."
+    ],
+    [
+     "He [wrote back] on the other side:",
+     "‘Hello! I’m Tom. [Let’s be friends].’"
+    ],
+    [
+     "Then he [followed the street] up the hill",
+     "and knocked on [a yellow door]."
+    ],
+    [
+     "Now they [meet every Saturday] by the bridge,",
+     "and they make paper boats [together]."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Անձրևոտ մի առավոտ Նինան թղթե նավակ սարքեց։",
+     "Վրան գրեց. «Բարև։ Ո՞վ ես դու»։"
+    ],
+    [
+     "Նավակը լողաց փողոցով ներքև,",
+     "խանութների կողքով և կամրջի տակով։"
+    ],
+    [
+     "Թոմ անունով մի տղա այն գտավ գետի մոտ։",
+     "Նա կարդաց գրությունը և ժպտաց։"
+    ],
+    [
+     "Նա պատասխանեց մյուս կողմում.",
+     "«Բարև։ Ես Թոմն եմ։ Եկ ընկերներ լինենք»։"
+    ],
+    [
+     "Հետո նա փողոցով բարձրացավ բլուրը",
+     "և թակեց մի դեղին դուռ։"
+    ],
+    [
+     "Հիմա նրանք ամեն շաբաթ հանդիպում են կամրջի մոտ",
+     "և միասին թղթե նավակներ են սարքում։"
+    ]
+   ]
+  },
+  {
+   "id": "red-balloon",
+   "style": "clay",
+   "title": "My red balloon",
+   "title_hy": "Իմ կարմիր փուչիկը",
+   "level": "A2",
+   "voice": "en-GB-MaisieNeural",
+   "scenes": [
+    [
+     "On my birthday, I got [a red balloon].",
+     "But the wind [took it away]."
+    ],
+    [
+     "It flew over the market.",
+     "A baker [looked up] and smiled."
+    ],
+    [
+     "It flew past the school.",
+     "The children [stopped playing] and waved."
+    ],
+    [
+     "It flew over the park.",
+     "An old couple [held hands] and watched it."
+    ],
+    [
+     "In the evening, it [got stuck] in a tree",
+     "next to a little girl’s window."
+    ],
+    [
+     "She had [a cold] and couldn’t go out.",
+     "But now she had [a red balloon], too."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Ծննդյանս օրը ես կարմիր փուչիկ ստացա։",
+     "Բայց քամին այն տարավ։"
+    ],
+    [
+     "Այն թռավ շուկայի վրայով։",
+     "Մի հացթուխ վեր նայեց և ժպտաց։"
+    ],
+    [
+     "Այն թռավ դպրոցի կողքով։",
+     "Երեխաները դադարեցին խաղալ և ձեռքով արեցին։"
+    ],
+    [
+     "Այն թռավ այգու վրայով։",
+     "Մի տարեց զույգ բռնեց իրար ձեռք և նայում էր նրան։"
+    ],
+    [
+     "Երեկոյան այն խրվեց մի ծառի մեջ՝",
+     "մի փոքրիկ աղջկա պատուհանի մոտ։"
+    ],
+    [
+     "Նա մրսել էր և չէր կարող դուրս գալ։",
+     "Բայց հիմա նա էլ կարմիր փուչիկ ուներ։"
+    ]
+   ]
+  },
+  {
+   "id": "fox-snow",
+   "style": "watercolour",
+   "title": "The fox and the first snow",
+   "title_hy": "Աղվեսը և առաջին ձյունը",
+   "level": "A2",
+   "voice": "en-GB-SoniaNeural",
+   "scenes": [
+    [
+     "One morning, the forest was [white].",
+     "Little Fern had never [seen snow] before."
+    ],
+    [
+     "She [was afraid] to leave her home.",
+     "‘What is this cold thing?’ she asked."
+    ],
+    [
+     "Old Bear [laughed softly].",
+     "‘It’s snow. Come, I’ll [show you].’"
+    ],
+    [
+     "Fern took [one small step],",
+     "then another, and another."
+    ],
+    [
+     "She [rolled in the snow]",
+     "and caught snowflakes [on her nose]."
+    ],
+    [
+     "Behind them, two lines of [footprints]:",
+     "one big, one small, [side by side]."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Մի առավոտ անտառը սպիտակ էր։",
+     "Փոքրիկ Ֆեռնը երբեք ձյուն չէր տեսել։"
+    ],
+    [
+     "Նա վախենում էր դուրս գալ իր բնից։",
+     "«Ի՞նչ է այս սառը բանը»,— հարցրեց նա։"
+    ],
+    [
+     "Ծեր Արջը մեղմ ծիծաղեց։",
+     "«Սա ձյուն է։ Արի, ցույց տամ»։"
+    ],
+    [
+     "Ֆեռնը մի փոքրիկ քայլ արեց,",
+     "հետո ևս մեկը, և ևս մեկը։"
+    ],
+    [
+     "Նա թավալվեց ձյան մեջ",
+     "և ձյան փաթիլներ բռնեց քթի վրա։"
+    ],
+    [
+     "Նրանց հետևում հետքերի երկու շարք կար՝",
+     "մեկը մեծ, մեկը փոքր, կողք կողքի։"
+    ]
+   ]
   }
  ]
 }
