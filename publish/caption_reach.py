@@ -3,12 +3,40 @@ the Armenian text kept below it, and five hashtags that mix broad English reach 
 Applied at publish time (run_due.py), so every post gets it; running it twice changes nothing."""
 import re
 
-BROAD = ["#learnenglish", "#englishlearning", "#esl"]
-LOCAL = "#անգլերեն"
-TOPIC = {"mistake": "#englishgrammar", "rule": "#englishgrammar", "quiz": "#englishquiz", "words10": "#englishvocabulary",
-         "word": "#englishvocabulary", "review": "#englishvocabulary", "phrasal": "#phrasalverbs", "dialogue": "#spokenenglish",
-         "reading": "#englishreading", "storyvideo": "#englishstories", "story": "#englishstories", "picstory": "#englishstories",
-         "feelstory": "#englishstories", "classic": "#englishliterature", "opposites": "#englishvocabulary", "countries": "#englishstories"}
+import hashlib
+
+# Instagram allows at most five hashtags per post (since December 2025), so every post gets five, chosen for that post:
+# one big learning tag, two that fit the topic, one about the format or level, one for the local audience.
+# The choice changes from post to post (seeded by the post's id), so the page reaches different searches.
+BROAD = ["#learnenglish", "#englishlearning", "#learningenglish", "#englishonline", "#esl", "#englishteacher", "#studyenglish"]
+TOPICS = {
+    "grammar": ["#englishgrammar", "#grammartips", "#englishtips", "#englishmistakes", "#grammar"],
+    "words": ["#englishvocabulary", "#englishwords", "#vocabulary", "#newwords", "#wordoftheday", "#englishtips"],
+    "stories": ["#englishstories", "#shortstories", "#storytime", "#readinenglish", "#englishreading", "#easyenglish"],
+    "speaking": ["#spokenenglish", "#englishconversation", "#speakenglish", "#dailyenglish", "#englishphrases"],
+    "books": ["#englishliterature", "#classicbooks", "#bookstagram", "#readinenglish", "#booklovers"],
+    "travel": ["#travelenglish", "#englishfortravel", "#watercolortravel", "#easyenglish", "#englishvocabulary"],
+    "quiz": ["#englishquiz", "#englishtest", "#englishpractice", "#englishtips"],
+}
+KIND = {"mistake": "grammar", "rule": "grammar", "quiz": "quiz", "words10": "words", "word": "words", "review": "words", "phrasal": "speaking",
+        "dialogue": "speaking", "reading": "stories", "storyvideo": "stories", "story": "stories", "picstory": "stories", "feelstory": "stories",
+        "classic": "books", "opposites": "words", "countries": "travel"}
+FORMAT = {"REELS": ["#englishreels", "#learnenglishwithreels", "#englishlesson", "#a2english", "#englishforbeginners"],
+          "CAROUSEL": ["#englishlesson", "#englishnotes", "#englishforbeginners", "#a2english", "#englishpractice"]}
+LOCAL = ["#անգլերեն", "#անգլերենիդասեր", "#անգլերենսովորել"]
+
+
+def tags(item):
+    h = int(hashlib.sha1(item.get("id", "").encode()).hexdigest(), 16)
+    pick = lambda pool, k, skip=(): [t for t in (pool[(h // (7 ** n)) % len(pool)] for n in range(len(pool) * 3)) if t not in skip][:k]
+    topic = TOPICS[KIND.get(item.get("kind"), "words")]
+    out = pick(BROAD, 1)
+    out += [t for t in dict.fromkeys(pick(topic, 4, out))][:2]
+    out += pick(FORMAT.get(item.get("format"), FORMAT["REELS"]), 1, out)
+    out += pick(LOCAL, 1)
+    return list(dict.fromkeys(out))[:5]
+
+
 HOOK = {"mistake": "Common English mistake: can you spot it?", "rule": "English grammar, made simple: {t}", "quiz": "Quick English quiz: can you get it right?",
         "words10": "10 English words about {t}", "word": "English word of the day: {t}", "review": "Weekly English review: how many do you remember?",
         "phrasal": "Phrasal verbs you will use every day: {t}", "dialogue": "Everyday English conversation: {t}", "reading": "Read and listen in English: {t}",
@@ -39,8 +67,7 @@ def improve(item):
     if cap.startswith(hook): return cap
     lines = cap.rstrip().split("\n")
     if lines and lines[-1].lstrip().startswith("#"): lines = lines[:-1]
-    tags = [BROAD[0], TOPIC.get(kind, "#englishvocabulary"), BROAD[1], BROAD[2], LOCAL]
-    return f"{hook}\n" + "\n".join(lines).rstrip() + "\n\n" + " ".join(dict.fromkeys(tags))
+    return f"{hook}\n" + "\n".join(lines).rstrip() + "\n\n" + " ".join(tags(item))
 
 
 if __name__ == "__main__":   # preview: python publish/caption_reach.py
