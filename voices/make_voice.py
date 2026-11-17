@@ -108,6 +108,7 @@ def main():
     made += voice_storyvideo()
     made += voice_routine()
     made += voice_feelstory()
+    made += voice_opposites()
     print(f"{made} file(s) voiced.")
 
 
@@ -376,6 +377,29 @@ def voice_feelstory():
             except Exception as error:
                 print(f"SKIPPED feelstory {st['id']}/{n}: {error}"); mp3.unlink(missing_ok=True); continue
             tj.write_text(json.dumps({"text": text, "words": words, "tag": st["voice"]}), encoding="utf-8"); made += 1
+    return made
+
+def voice_opposites():
+    """A Day in Opposites: each word of a pair and the example sentence, one clip each."""
+    made = 0
+    root = LESSONS.parents[1]
+    data = json.loads((root / "carousels/data/opposites.json").read_text(encoding="utf-8"))
+    for day in data["days"]:
+        voice = day.get("voice", "en-GB-SoniaNeural")
+        out = root / "assets" / "opposites" / day["id"]; out.mkdir(parents=True, exist_ok=True)
+        jobs = [("title", f"{day['title']} {day['title_em']}.", "-8%")]
+        for i, p in enumerate(day["pairs"]):
+            jobs += [(f"p{i}l", p["left"]["en"], "-12%"), (f"p{i}r", p["right"]["en"], "-12%"),
+                     (f"p{i}s", p["sentence"].replace("[", "").replace("]", ""), "-6%")]
+        for name, text, rate in jobs:
+            mp3, tj = out / f"{name}.mp3", out / f"{name}.json"
+            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text and json.loads(tj.read_text()).get("tag") == voice: continue
+            try:
+                bounds = asyncio.run(synth(text, voice, rate, mp3))
+                words = align(text.split(), bounds)
+            except Exception as error:
+                print(f"SKIPPED opposites {day['id']}/{name}: {error}"); mp3.unlink(missing_ok=True); continue
+            tj.write_text(json.dumps({"text": text, "words": words, "tag": voice}), encoding="utf-8"); made += 1
     return made
 
 if __name__ == "__main__":
