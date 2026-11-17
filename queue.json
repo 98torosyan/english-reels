@@ -2444,10 +2444,12 @@
       "content_id": "picstory-broken-bike",
       "title": "Picture story 05 story",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-17-story-picstory-broken-bike/story.jpg"
-      }
+      },
+      "published_at": "2026-11-17T17:05+04:00",
+      "ig_media_id": "18114981614580280"
     },
     {
       "id": "2026-11-17-classic-treasure-island",
