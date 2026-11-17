@@ -1,1 +1,1 @@
-{"text": "take back.", "words": [[0.46, 0.8], [0.86, 2.04]], "tag": "kokoro:bf_isabella", "fx": "pb1", "aligned": "ctc1"}
+{"text": "take back.", "words": [[0.46, 0.8], [0.86, 1.531]], "tag": "kokoro:bf_isabella", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "I get up and stretch.", "words": [[0.54, 0.56], [0.64, 0.84], [0.9, 1.06], [1.16, 1.28], [1.42, 2.56]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I get up and stretch.", "words": [[0.54, 0.57], [0.64, 0.84], [0.9, 1.06], [1.16, 1.28], [1.42, 2.187]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "Is it far from here?", "words": [[0.24, 0.34], [0.4, 0.5], [0.62, 0.86], [0.94, 1.16], [1.24, 2.04]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Is it far from here?", "words": [[0.24, 0.34], [0.4, 0.5], [0.62, 0.86], [0.94, 1.16], [1.24, 1.697]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

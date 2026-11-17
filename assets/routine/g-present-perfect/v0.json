@@ -1,1 +1,1 @@
-{"text": "Sam has painted the fence.", "words": [[0.48, 0.8], [0.92, 1.04], [1.12, 1.52], [1.54, 1.62], [1.68, 2.8]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Sam has painted the fence.", "words": [[0.48, 0.8], [0.92, 1.04], [1.12, 1.52], [1.54, 1.62], [1.68, 2.329]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "look up.", "words": [[0.28, 0.5], [0.62, 1.86]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "look up.", "words": [[0.28, 0.5], [0.62, 1.028]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

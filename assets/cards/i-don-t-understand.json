@@ -1,1 +1,1 @@
-{"text": "I don't understand.", "words": [[0.34, 0.36], [0.4, 0.6], [0.66, 2.52]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I don't understand.", "words": [[0.34, 0.37], [0.4, 0.6], [0.66, 1.538]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

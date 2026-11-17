@@ -1,1 +1,1 @@
-{"text": "delay.", "words": [[0.48, 1.38]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1"}
+{"text": "delay.", "words": [[0.48, 1.075]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

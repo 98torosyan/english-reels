@@ -1,1 +1,1 @@
-{"text": "I missed the bus.", "words": [[0.36, 0.38], [0.46, 0.7], [0.72, 0.8], [0.88, 2.44]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I missed the bus.", "words": [[0.36, 0.39], [0.46, 0.7], [0.72, 0.8], [0.88, 1.44]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

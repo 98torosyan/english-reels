@@ -1,1 +1,1 @@
-{"text": "The sun is bright.", "words": [[0.22, 0.3], [0.42, 0.68], [0.84, 0.96], [1.04, 2.64]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "The sun is bright.", "words": [[0.22, 0.3], [0.42, 0.68], [0.84, 0.96], [1.04, 1.651]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

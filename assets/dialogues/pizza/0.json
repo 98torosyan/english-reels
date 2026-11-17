@@ -1,1 +1,1 @@
-{"text": "Hello, Pizza Roma. How can I help?", "words": [[0.28, 0.52], [0.98, 1.36], [1.48, 1.8], [3.1, 3.24], [3.3, 3.42], [3.54, 3.56], [3.66, 5.02]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Hello, Pizza Roma. How can I help?", "words": [[0.28, 0.52], [0.98, 1.36], [1.48, 1.8], [3.1, 3.24], [3.3, 3.42], [3.54, 3.57], [3.66, 4.088]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "I went there on foot.", "words": [[0.32, 0.34], [0.4, 0.62], [0.66, 0.86], [0.92, 1.0], [1.12, 2.52]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I went there on foot.", "words": [[0.32, 0.35], [0.4, 0.62], [0.66, 0.86], [0.92, 1.0], [1.12, 1.536]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "I am good at English.", "words": [[0.32, 0.34], [0.4, 0.5], [0.58, 0.78], [0.82, 0.92], [1.0, 2.58]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I am good at English.", "words": [[0.32, 0.35], [0.4, 0.5], [0.58, 0.78], [0.82, 0.92], [1.0, 1.591]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "week.", "words": [[0.22, 1.86]], "tag": "en-GB-MaisieNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "week.", "words": [[0.22, 0.726]], "tag": "en-GB-MaisieNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

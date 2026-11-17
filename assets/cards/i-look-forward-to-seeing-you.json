@@ -1,1 +1,1 @@
-{"text": "I look forward to seeing you.", "words": [[0.38, 0.4], [0.44, 0.62], [0.72, 1.14], [1.2, 1.28], [1.4, 1.76], [1.82, 2.52]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I look forward to seeing you.", "words": [[0.38, 0.41], [0.44, 0.62], [0.72, 1.14], [1.2, 1.28], [1.4, 1.76], [1.82, 2.128]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

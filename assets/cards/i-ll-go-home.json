@@ -1,1 +1,1 @@
-{"text": "I'll go home.", "words": [[0.28, 0.42], [0.5, 0.6], [0.78, 1.86]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I'll go home.", "words": [[0.28, 0.42], [0.5, 0.6], [0.78, 1.315]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

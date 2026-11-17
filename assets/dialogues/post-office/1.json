@@ -1,1 +1,1 @@
-{"text": "Sure. Put it on the scale, please.", "words": [[0.28, 0.54], [1.68, 1.78], [1.86, 1.96], [2.02, 2.1], [2.14, 2.22], [2.3, 2.72], [3.08, 4.54]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Sure. Put it on the scale, please.", "words": [[0.28, 0.54], [1.68, 1.78], [1.86, 1.96], [2.02, 2.1], [2.14, 2.22], [2.3, 2.72], [3.08, 3.613]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

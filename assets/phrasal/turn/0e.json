@@ -1,1 +1,1 @@
-{"text": "Turn on the light, please.", "words": [[0.44, 0.8], [0.9, 0.98], [1.02, 1.1], [1.16, 1.46], [1.54, 2.72]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Turn on the light, please.", "words": [[0.44, 0.8], [0.9, 0.98], [1.02, 1.1], [1.16, 1.46], [1.54, 2.342]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

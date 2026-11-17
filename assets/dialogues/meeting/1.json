@@ -1,1 +1,1 @@
-{"text": "I'm David. Nice to meet you.", "words": [[0.36, 0.44], [0.52, 1.02], [2.3, 2.6], [2.64, 2.7], [2.78, 2.98], [3.06, 4.28]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I'm David. Nice to meet you.", "words": [[0.36, 0.44], [0.52, 1.02], [2.3, 2.6], [2.64, 2.7], [2.78, 2.98], [3.06, 3.351]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

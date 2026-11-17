@@ -1,1 +1,1 @@
-{"text": "What do you do at the supermarket?", "words": [[0.24, 0.4], [0.46, 0.54], [0.6, 0.68], [0.76, 0.86], [1.04, 1.14], [1.18, 1.26], [1.38, 2.82]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "What do you do at the supermarket?", "words": [[0.24, 0.4], [0.46, 0.54], [0.6, 0.68], [0.76, 0.86], [1.04, 1.14], [1.18, 1.26], [1.38, 2.437]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

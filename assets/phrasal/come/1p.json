@@ -1,1 +1,1 @@
-{"text": "come back.", "words": [[0.2, 0.52], [0.58, 2.1]], "tag": "en-GB-LibbyNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "come back.", "words": [[0.2, 0.52], [0.58, 1.103]], "tag": "en-GB-LibbyNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

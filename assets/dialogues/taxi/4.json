@@ -1,1 +1,1 @@
-{"text": "About twenty minutes, if there's no traffic.", "words": [[0.22, 0.5], [0.56, 0.9], [1.0, 1.36], [1.68, 1.76], [1.8, 2.0], [2.1, 2.18], [2.34, 3.88]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "About twenty minutes, if there's no traffic.", "words": [[0.22, 0.5], [0.56, 0.9], [1.0, 1.36], [1.68, 1.76], [1.8, 2.0], [2.1, 2.18], [2.34, 2.911]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

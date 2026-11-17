@@ -1,1 +1,1 @@
-{"text": "It depends on you.", "words": [[0.3, 0.4], [0.46, 1.0], [1.08, 1.2], [1.28, 2.02]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "It depends on you.", "words": [[0.3, 0.4], [0.46, 1.0], [1.08, 1.2], [1.28, 1.623]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

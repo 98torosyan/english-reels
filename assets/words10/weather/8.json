@@ -1,1 +1,1 @@
-{"text": "forecast.", "words": [[0.5, 1.74]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1"}
+{"text": "forecast.", "words": [[0.5, 1.343]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

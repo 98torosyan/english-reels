@@ -1,1 +1,1 @@
-{"text": "I relax on the sofa with a book.", "words": [[0.52, 0.54], [0.6, 0.98], [1.08, 1.16], [1.18, 1.24], [1.34, 1.72], [1.9, 2.02], [2.06, 2.08], [2.18, 3.18]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I relax on the sofa with a book.", "words": [[0.52, 0.55], [0.6, 0.98], [1.08, 1.16], [1.18, 1.24], [1.34, 1.72], [1.9, 2.02], [2.06, 2.09], [2.18, 2.687]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

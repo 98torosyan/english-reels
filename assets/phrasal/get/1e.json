@@ -1,1 +1,1 @@
-{"text": "I get on well with my neighbours.", "words": [[0.54, 0.56], [0.62, 0.76], [0.8, 0.9], [0.98, 1.18], [1.24, 1.38], [1.42, 1.54], [1.62, 2.94]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I get on well with my neighbours.", "words": [[0.54, 0.57], [0.62, 0.76], [0.8, 0.9], [0.98, 1.18], [1.24, 1.38], [1.42, 1.54], [1.62, 2.279]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "sunny.", "words": [[0.5, 1.38]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1"}
+{"text": "sunny.", "words": [[0.5, 1.028]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "towel.", "words": [[0.6, 1.68]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1"}
+{"text": "towel.", "words": [[0.6, 1.229]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

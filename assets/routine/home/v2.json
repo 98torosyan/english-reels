@@ -1,1 +1,1 @@
-{"text": "I hang up my bag.", "words": [[0.52, 0.54], [0.64, 0.84], [0.9, 1.0], [1.08, 1.22], [1.32, 2.36]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I hang up my bag.", "words": [[0.52, 0.55], [0.64, 0.84], [0.9, 1.0], [1.08, 1.22], [1.32, 1.973]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

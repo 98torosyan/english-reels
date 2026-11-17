@@ -1,1 +1,1 @@
-{"text": "A latte, please. To take away.", "words": [[0.28, 0.3], [0.42, 0.78], [1.14, 1.62], [2.8, 2.88], [2.94, 3.16], [3.2, 4.68]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "A latte, please. To take away.", "words": [[0.28, 0.31], [0.42, 0.78], [1.14, 1.62], [2.8, 2.88], [2.94, 3.16], [3.2, 3.749]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

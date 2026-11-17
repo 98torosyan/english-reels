@@ -1,1 +1,1 @@
-{"text": "I pay by phone.", "words": [[0.3, 0.32], [0.38, 0.56], [0.62, 0.82], [0.94, 2.38]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I pay by phone.", "words": [[0.3, 0.33], [0.38, 0.56], [0.62, 0.82], [0.94, 1.448]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

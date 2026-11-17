@@ -1,1 +1,1 @@
-{"text": "That's three pounds fifty.", "words": [[0.24, 0.56], [0.66, 0.88], [0.96, 1.38], [1.46, 2.38]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "That's three pounds fifty.", "words": [[0.24, 0.56], [0.66, 0.88], [0.96, 1.38], [1.46, 2.043]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

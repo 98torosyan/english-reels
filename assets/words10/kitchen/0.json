@@ -1,1 +1,1 @@
-{"text": "knife.", "words": [[0.32, 1.86]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "knife.", "words": [[0.32, 0.893]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

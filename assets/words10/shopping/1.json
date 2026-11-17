@@ -1,1 +1,1 @@
-{"text": "card.", "words": [[0.2, 1.86]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "card.", "words": [[0.2, 0.832]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

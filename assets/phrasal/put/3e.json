@@ -1,1 +1,1 @@
-{"text": "I can't put up with this noise.", "words": [[0.5, 0.52], [0.56, 0.82], [0.9, 1.08], [1.12, 1.22], [1.28, 1.4], [1.44, 1.6], [1.7, 2.76]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I can't put up with this noise.", "words": [[0.5, 0.53], [0.56, 0.82], [0.9, 1.08], [1.12, 1.22], [1.28, 1.4], [1.44, 1.6], [1.7, 2.331]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

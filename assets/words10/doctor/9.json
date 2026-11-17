@@ -1,1 +1,1 @@
-{"text": "healthy.", "words": [[0.48, 1.52]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1"}
+{"text": "healthy.", "words": [[0.48, 1.233]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

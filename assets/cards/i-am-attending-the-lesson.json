@@ -1,1 +1,1 @@
-{"text": "I am attending the lesson.", "words": [[0.34, 0.36], [0.4, 0.46], [0.5, 1.02], [1.06, 1.14], [1.2, 2.74]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I am attending the lesson.", "words": [[0.34, 0.37], [0.4, 0.46], [0.5, 1.02], [1.06, 1.14], [1.2, 1.738]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

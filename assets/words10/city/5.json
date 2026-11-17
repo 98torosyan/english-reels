@@ -1,1 +1,1 @@
-{"text": "bus stop.", "words": [[0.48, 0.74], [0.88, 1.88]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}
+{"text": "bus stop.", "words": [[0.48, 0.74], [0.88, 1.578]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

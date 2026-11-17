@@ -1,1 +1,1 @@
-{"text": "put off.", "words": [[0.46, 0.62], [0.76, 1.66]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1"}
+{"text": "put off.", "words": [[0.46, 0.62], [0.76, 1.343]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

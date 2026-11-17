@@ -1,1 +1,1 @@
-{"text": "spoon.", "words": [[0.34, 1.86]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "spoon.", "words": [[0.34, 0.904]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

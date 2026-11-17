@@ -1,1 +1,1 @@
-{"text": "Hi, I'm Anna. What's your name?", "words": [[0.26, 0.56], [1.14, 1.22], [1.3, 1.54], [2.26, 2.54], [2.6, 2.74], [2.84, 3.68]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Hi, I'm Anna. What's your name?", "words": [[0.26, 0.56], [1.14, 1.22], [1.3, 1.54], [2.26, 2.54], [2.6, 2.74], [2.84, 3.36]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

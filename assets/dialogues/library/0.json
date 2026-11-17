@@ -1,1 +1,1 @@
-{"text": "Excuse me, I'd like to borrow this book.", "words": [[0.26, 0.84], [0.88, 0.98], [1.58, 1.66], [1.72, 1.94], [2.0, 2.08], [2.16, 2.5], [2.58, 2.78], [2.86, 3.68]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Excuse me, I'd like to borrow this book.", "words": [[0.26, 0.84], [0.88, 0.98], [1.58, 1.66], [1.72, 1.94], [2.0, 2.08], [2.16, 2.5], [2.58, 2.78], [2.86, 3.316]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

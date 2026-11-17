@@ -1,1 +1,1 @@
-{"text": "When can you start?", "words": [[0.24, 0.4], [0.48, 0.64], [0.68, 0.78], [0.9, 1.96]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "When can you start?", "words": [[0.24, 0.4], [0.48, 0.64], [0.68, 0.78], [0.9, 1.566]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

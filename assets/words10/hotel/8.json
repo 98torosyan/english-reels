@@ -1,1 +1,1 @@
-{"text": "check out.", "words": [[0.64, 0.9], [1.06, 1.96]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1"}
+{"text": "check out.", "words": [[0.64, 0.9], [1.06, 1.449]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

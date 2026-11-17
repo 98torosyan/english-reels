@@ -1,1 +1,1 @@
-{"text": "I relax and enjoy the view.", "words": [[0.52, 0.54], [0.6, 1.02], [1.46, 1.58], [1.64, 2.12], [2.22, 2.3], [2.36, 3.42]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I relax and enjoy the view.", "words": [[0.52, 0.55], [0.6, 1.02], [1.46, 1.58], [1.64, 2.12], [2.22, 2.3], [2.36, 2.892]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

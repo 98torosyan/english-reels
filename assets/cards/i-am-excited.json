@@ -1,1 +1,1 @@
-{"text": "I am excited.", "words": [[0.36, 0.38], [0.42, 0.52], [0.6, 2.44]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I am excited.", "words": [[0.36, 0.39], [0.42, 0.52], [0.6, 1.415]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "give away.", "words": [[0.66, 0.88], [0.92, 2.02]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1"}
+{"text": "give away.", "words": [[0.66, 0.88], [0.92, 1.471]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

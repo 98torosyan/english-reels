@@ -1,1 +1,1 @@
-{"text": "I am bored.", "words": [[0.38, 0.4], [0.44, 0.54], [0.64, 2.2]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I am bored.", "words": [[0.38, 0.41], [0.44, 0.54], [0.64, 1.193]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "Great. Should I bring anything?", "words": [[0.26, 0.68], [1.96, 2.1], [2.2, 2.22], [2.3, 2.48], [2.54, 4.04]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Great. Should I bring anything?", "words": [[0.26, 0.68], [1.96, 2.1], [2.2, 2.23], [2.3, 2.48], [2.54, 3.047]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

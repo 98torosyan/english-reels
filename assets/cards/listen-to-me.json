@@ -1,1 +1,1 @@
-{"text": "Listen to me!", "words": [[0.32, 0.6], [0.7, 0.78], [0.86, 2.22]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Listen to me!", "words": [[0.32, 0.6], [0.7, 0.78], [0.86, 1.293]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

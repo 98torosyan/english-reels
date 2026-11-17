@@ -1,1 +1,1 @@
-{"text": "Still, please.", "words": [[0.32, 0.68], [1.14, 2.16]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Still, please.", "words": [[0.32, 0.68], [1.14, 1.815]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "I'm from Armenia. And you?", "words": [[0.34, 0.42], [0.48, 0.64], [0.72, 1.26], [2.58, 2.66], [2.68, 3.9]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I'm from Armenia. And you?", "words": [[0.34, 0.42], [0.48, 0.64], [0.72, 1.26], [2.58, 2.66], [2.68, 2.925]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

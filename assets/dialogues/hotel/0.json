@@ -1,1 +1,1 @@
-{"text": "Good afternoon. How can I help?", "words": [[0.2, 0.38], [0.48, 1.18], [1.9, 2.04], [2.1, 2.24], [2.42, 2.44], [2.56, 3.44]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Good afternoon. How can I help?", "words": [[0.2, 0.38], [0.48, 1.18], [1.9, 2.04], [2.1, 2.24], [2.42, 2.45], [2.56, 3.062]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

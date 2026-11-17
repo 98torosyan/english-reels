@@ -1,1 +1,1 @@
-{"text": "I took the jacket back to the shop.", "words": [[0.52, 0.54], [0.62, 0.8], [0.86, 0.94], [1.02, 1.4], [1.48, 1.66], [1.74, 1.78], [1.82, 1.9], [1.96, 3.18]], "tag": "kokoro:bf_isabella", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I took the jacket back to the shop.", "words": [[0.52, 0.55], [0.62, 0.8], [0.86, 0.94], [1.02, 1.4], [1.48, 1.66], [1.74, 1.78], [1.82, 1.9], [1.96, 2.485]], "tag": "kokoro:bf_isabella", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

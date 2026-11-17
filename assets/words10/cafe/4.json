@@ -1,1 +1,1 @@
-{"text": "tea.", "words": [[0.5, 1.52]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1"}
+{"text": "tea.", "words": [[0.5, 1.137]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

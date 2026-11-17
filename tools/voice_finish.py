@@ -55,6 +55,17 @@ class Aligner:
         return [(float(w["start"]), float(w["end"])) for w in postprocess_results(starred, spans, stride, scores)]
 
 
+def clamp_to_speech(mp3, words):
+    """Forced alignment lets the last word run into the silence after it: end every word where the speech really ends."""
+    import re, subprocess
+    det = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(mp3), "-af", "silencedetect=n=-35dB:d=0.12", "-f", "null", "-"], capture_output=True, text=True).stderr
+    starts = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", det) if float(x) > 0.3]
+    if not starts: return words
+    end = starts[-1] + 0.04
+    out = [[min(a, end - 0.05), min(b, end)] for a, b in words]
+    return [[round(a, 3), round(max(b, a + 0.03), 3)] for a, b in out]
+
+
 def main():
     budget = float(sys.argv[sys.argv.index("--budget") + 1]) * 60 if "--budget" in sys.argv else 1e9
     t0 = time.monotonic(); polished = aligned = kept = 0; aligner = None
@@ -79,6 +90,8 @@ def main():
                 meta["aligned"] = ALIGN; changed = True
             except Exception as error:
                 print(f"align skipped {js.relative_to(ROOT)}: {error}")
+        if meta.get("clamped") != 1 and meta.get("aligned") == ALIGN:
+            meta["words"] = clamp_to_speech(mp3, meta["words"]); meta["clamped"] = 1; changed = True
         if changed: js.write_text(json.dumps(meta, ensure_ascii=False), encoding="utf-8")
     print(f"polished {polished}, aligned {aligned}, kept original times {kept}")
 

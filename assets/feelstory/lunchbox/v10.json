@@ -1,1 +1,1 @@
-{"text": "Today, I wrote a note for her.", "words": [[0.24, 0.68], [1.26, 1.28], [1.32, 1.6], [1.64, 1.66], [1.74, 2.02], [2.08, 2.24], [2.32, 3.0]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Today, I wrote a note for her.", "words": [[0.24, 0.68], [1.26, 1.29], [1.32, 1.6], [1.64, 1.67], [1.74, 2.02], [2.08, 2.24], [2.32, 2.649]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

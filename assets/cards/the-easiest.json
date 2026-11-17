@@ -1,1 +1,1 @@
-{"text": "The easiest", "words": [[0.22, 0.3], [0.44, 2.1]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "The easiest", "words": [[0.22, 0.3], [0.44, 1.087]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "Nora was taking a shower when the lights went out.", "words": [[0.48, 0.78], [0.84, 0.96], [1.02, 1.36], [1.4, 1.42], [1.52, 1.88], [1.94, 2.04], [2.06, 2.14], [2.18, 2.48], [2.52, 2.7], [2.78, 3.92]], "tag": "kokoro:bf_isabella", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Nora was taking a shower when the lights went out.", "words": [[0.48, 0.78], [0.84, 0.96], [1.02, 1.36], [1.4, 1.43], [1.52, 1.88], [1.94, 2.04], [2.06, 2.14], [2.18, 2.48], [2.52, 2.7], [2.78, 3.147]], "tag": "kokoro:bf_isabella", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

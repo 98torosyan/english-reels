@@ -1,1 +1,1 @@
-{"text": "get over.", "words": [[0.48, 0.66], [0.84, 1.76]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1"}
+{"text": "get over.", "words": [[0.48, 0.66], [0.84, 1.309]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "give up.", "words": [[0.64, 0.98], [1.0, 1.88]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1"}
+{"text": "give up.", "words": [[0.64, 0.98], [1.0, 1.366]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

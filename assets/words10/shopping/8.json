@@ -1,1 +1,1 @@
-{"text": "try on.", "words": [[0.22, 0.54], [0.66, 1.86]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "try on.", "words": [[0.22, 0.54], [0.66, 1.004]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

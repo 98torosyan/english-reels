@@ -1,1 +1,1 @@
-{"text": "Because I was tired, I slept.", "words": [[0.2, 0.52], [0.66, 0.68], [0.74, 0.88], [0.96, 1.5], [1.86, 1.88], [1.98, 3.58]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Because I was tired, I slept.", "words": [[0.2, 0.52], [0.66, 0.69], [0.74, 0.88], [0.96, 1.5], [1.86, 1.89], [1.98, 2.601]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

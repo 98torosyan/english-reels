@@ -1,1 +1,1 @@
-{"text": "fridge.", "words": [[0.32, 1.86]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "fridge.", "words": [[0.32, 0.856]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "grandfather.", "words": [[0.22, 2.02]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "grandfather.", "words": [[0.22, 1.075]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

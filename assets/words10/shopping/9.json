@@ -1,1 +1,1 @@
-{"text": "afford.", "words": [[0.28, 1.86]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "afford.", "words": [[0.28, 0.978]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

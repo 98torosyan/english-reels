@@ -1,1 +1,1 @@
-{"text": "slow", "words": [[0.32, 1.86]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "slow", "words": [[0.32, 0.842]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

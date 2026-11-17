@@ -1,1 +1,1 @@
-{"text": "look forward to.", "words": [[0.32, 0.52], [0.62, 1.04], [1.14, 1.92]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "look forward to.", "words": [[0.32, 0.52], [0.62, 1.04], [1.14, 1.552]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

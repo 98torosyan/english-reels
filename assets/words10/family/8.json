@@ -1,1 +1,1 @@
-{"text": "son.", "words": [[0.24, 1.86]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "son.", "words": [[0.24, 0.627]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "traffic lights.", "words": [[0.44, 0.94], [1.04, 2.04]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}
+{"text": "traffic lights.", "words": [[0.44, 0.94], [1.04, 1.727]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "I drop off my suitcase.", "words": [[0.52, 0.54], [0.62, 0.88], [0.96, 1.12], [1.22, 1.38], [1.54, 2.88]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I drop off my suitcase.", "words": [[0.52, 0.55], [0.62, 0.88], [0.96, 1.12], [1.22, 1.38], [1.54, 2.344]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

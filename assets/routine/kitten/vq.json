@@ -1,1 +1,1 @@
-{"text": "Where is Smudge?", "words": [[0.48, 0.7], [0.72, 0.8], [0.9, 2.12]], "tag": "kokoro:bf_alice", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Where is Smudge?", "words": [[0.48, 0.7], [0.72, 0.8], [0.9, 1.717]], "tag": "kokoro:bf_alice", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

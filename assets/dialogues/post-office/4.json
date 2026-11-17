@@ -1,1 +1,1 @@
-{"text": "OK. How much is it?", "words": [[0.24, 0.42], [1.38, 1.52], [1.58, 1.84], [1.92, 2.04], [2.14, 2.88]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "OK. How much is it?", "words": [[0.24, 0.42], [1.38, 1.52], [1.58, 1.84], [1.92, 2.04], [2.14, 2.499]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

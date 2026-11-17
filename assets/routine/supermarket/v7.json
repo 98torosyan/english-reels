@@ -1,1 +1,1 @@
-{"text": "I pack my bag.", "words": [[0.32, 0.34], [0.4, 0.64], [0.74, 0.88], [0.94, 1.86]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I pack my bag.", "words": [[0.32, 0.35], [0.4, 0.64], [0.74, 0.88], [0.94, 1.444]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "I am married to him.", "words": [[0.34, 0.36], [0.42, 0.5], [0.56, 0.98], [1.06, 1.16], [1.24, 2.56]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I am married to him.", "words": [[0.34, 0.37], [0.42, 0.5], [0.56, 0.98], [1.06, 1.16], [1.24, 1.622]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "I enjoy working with people.", "words": [[0.38, 0.4], [0.46, 0.86], [0.98, 1.36], [1.4, 1.52], [1.58, 3.06]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I enjoy working with people.", "words": [[0.38, 0.41], [0.46, 0.86], [0.98, 1.36], [1.4, 1.52], [1.58, 2.125]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

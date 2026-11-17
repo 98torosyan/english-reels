@@ -1,1 +1,1 @@
-{"text": "At night", "words": [[0.28, 0.4], [0.5, 1.98]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "At night", "words": [[0.28, 0.4], [0.5, 0.991]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

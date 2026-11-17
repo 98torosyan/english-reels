@@ -1,1 +1,1 @@
-{"text": "He makes bread in his little bakery.", "words": [[0.44, 0.5], [0.56, 0.8], [0.92, 1.26], [1.62, 1.7], [1.74, 1.86], [1.92, 2.16], [2.22, 3.46]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1"}
+{"text": "He makes bread in his little bakery.", "words": [[0.44, 0.5], [0.56, 0.8], [0.92, 1.26], [1.62, 1.7], [1.74, 1.86], [1.92, 2.16], [2.22, 2.971]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

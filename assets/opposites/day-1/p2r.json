@@ -1,1 +1,1 @@
-{"text": "forget", "words": [[0.24, 1.86]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "forget", "words": [[0.24, 0.954]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

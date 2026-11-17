@@ -1,1 +1,1 @@
-{"text": "This year, her kitchen", "words": [[0.3, 0.52], [0.62, 0.84], [1.26, 1.38], [1.46, 2.48]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "This year, her kitchen", "words": [[0.3, 0.52], [0.62, 0.84], [1.26, 1.38], [1.46, 2.102]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

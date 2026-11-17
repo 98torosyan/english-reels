@@ -1,1 +1,1 @@
-{"text": "A little girl is feeding the ducks.", "words": [[0.46, 0.48], [0.58, 0.82], [0.88, 1.24], [1.34, 1.44], [1.58, 1.96], [2.02, 2.12], [2.2, 3.24]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}
+{"text": "A little girl is feeding the ducks.", "words": [[0.46, 0.49], [0.58, 0.82], [0.88, 1.24], [1.34, 1.44], [1.58, 1.96], [2.02, 2.12], [2.2, 2.853]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

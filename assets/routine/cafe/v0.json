@@ -1,1 +1,1 @@
-{"text": "I walk into a café on a rainy day.", "words": [[0.34, 0.36], [0.42, 0.66], [0.72, 0.92], [1.0, 1.02], [1.12, 1.42], [1.62, 1.7], [1.74, 1.76], [1.88, 2.16], [2.24, 3.64]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I walk into a café on a rainy day.", "words": [[0.34, 0.37], [0.42, 0.66], [0.72, 0.92], [1.0, 1.03], [1.12, 1.42], [1.62, 1.7], [1.74, 1.77], [1.88, 2.16], [2.24, 2.705]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

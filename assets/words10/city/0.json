@@ -1,1 +1,1 @@
-{"text": "street.", "words": [[0.48, 1.6]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}
+{"text": "street.", "words": [[0.48, 1.354]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

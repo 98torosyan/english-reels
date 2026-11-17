@@ -1,1 +1,1 @@
-{"text": "A margherita, please.", "words": [[0.24, 0.26], [0.34, 1.02], [1.48, 2.48]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "A margherita, please.", "words": [[0.24, 0.27], [0.34, 1.02], [1.48, 2.121]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "There are many people.", "words": [[0.26, 0.44], [0.48, 0.6], [0.64, 0.88], [0.98, 2.04]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "There are many people.", "words": [[0.26, 0.44], [0.48, 0.6], [0.64, 0.88], [0.98, 1.633]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

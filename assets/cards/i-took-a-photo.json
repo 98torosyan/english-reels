@@ -1,1 +1,1 @@
-{"text": "I took a photo.", "words": [[0.32, 0.34], [0.46, 0.66], [0.7, 0.72], [0.8, 2.4]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I took a photo.", "words": [[0.32, 0.35], [0.46, 0.66], [0.7, 0.73], [0.8, 1.462]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

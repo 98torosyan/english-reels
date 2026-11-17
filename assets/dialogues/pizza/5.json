@@ -1,1 +1,1 @@
-{"text": "Fifteen Green Street.", "words": [[0.28, 0.82], [0.94, 1.24], [1.38, 2.34]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Fifteen Green Street.", "words": [[0.28, 0.82], [0.94, 1.24], [1.38, 1.964]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

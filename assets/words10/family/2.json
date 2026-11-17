@@ -1,1 +1,1 @@
-{"text": "sister.", "words": [[0.26, 1.86]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "sister.", "words": [[0.26, 0.716]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

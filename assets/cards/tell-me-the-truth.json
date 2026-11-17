@@ -1,1 +1,1 @@
-{"text": "Tell me the truth.", "words": [[0.26, 0.5], [0.56, 0.64], [0.74, 0.84], [0.94, 1.98]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Tell me the truth.", "words": [[0.26, 0.5], [0.56, 0.64], [0.74, 0.84], [0.94, 1.592]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "Years later, I found the coat.", "words": [[0.3, 0.52], [0.62, 1.0], [1.42, 1.44], [1.52, 1.82], [1.86, 1.94], [2.0, 3.44]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Years later, I found the coat.", "words": [[0.3, 0.52], [0.62, 1.0], [1.42, 1.45], [1.52, 1.82], [1.86, 1.94], [2.0, 2.479]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

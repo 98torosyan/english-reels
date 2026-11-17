@@ -1,1 +1,1 @@
-{"text": "I check my emails.", "words": [[0.72, 0.74], [0.86, 1.12], [1.34, 1.52], [1.7, 2.7]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I check my emails.", "words": [[0.72, 0.75], [0.86, 1.12], [1.34, 1.52], [1.7, 2.171]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

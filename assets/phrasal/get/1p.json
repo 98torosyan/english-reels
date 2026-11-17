@@ -1,1 +1,1 @@
-{"text": "get on with.", "words": [[0.48, 0.66], [0.74, 0.86], [0.92, 2.08]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1"}
+{"text": "get on with.", "words": [[0.48, 0.66], [0.74, 0.86], [0.92, 1.518]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

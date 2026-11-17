@@ -1,1 +1,1 @@
-{"text": "But when I open the door,", "words": [[0.24, 0.36], [0.42, 0.54], [0.66, 0.68], [0.76, 0.98], [1.04, 1.12], [1.2, 2.68]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "But when I open the door,", "words": [[0.24, 0.36], [0.42, 0.54], [0.66, 0.69], [0.76, 0.98], [1.04, 1.12], [1.2, 1.711]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

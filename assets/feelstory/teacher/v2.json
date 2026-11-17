@@ -1,1 +1,1 @@
-{"text": "Miss Anna sat down next to me.", "words": [[0.3, 0.48], [0.64, 0.8], [0.92, 1.14], [1.22, 1.46], [1.56, 1.82], [1.86, 1.92], [2.0, 3.2]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Miss Anna sat down next to me.", "words": [[0.3, 0.48], [0.64, 0.8], [0.92, 1.14], [1.22, 1.46], [1.56, 1.82], [1.86, 1.92], [2.0, 2.306]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

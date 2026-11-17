@@ -1,1 +1,1 @@
-{"text": "Today, a boy stayed at his desk.", "words": [[0.26, 0.68], [1.06, 1.08], [1.2, 1.42], [1.54, 1.88], [1.92, 1.98], [2.04, 2.2], [2.3, 3.8]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Today, a boy stayed at his desk.", "words": [[0.26, 0.68], [1.06, 1.09], [1.2, 1.42], [1.54, 1.88], [1.92, 1.98], [2.04, 2.2], [2.3, 2.865]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

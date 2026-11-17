@@ -1,1 +1,1 @@
-{"text": "How long will it take?", "words": [[0.26, 0.42], [0.5, 0.74], [0.8, 0.96], [1.0, 1.1], [1.18, 2.14]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "How long will it take?", "words": [[0.26, 0.42], [0.5, 0.74], [0.8, 0.96], [1.0, 1.1], [1.18, 1.765]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "Yes, it's really warm today.", "words": [[0.28, 0.56], [0.86, 1.0], [1.06, 1.32], [1.42, 1.64], [1.72, 3.22]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Yes, it's really warm today.", "words": [[0.28, 0.56], [0.86, 1.0], [1.06, 1.32], [1.42, 1.64], [1.72, 2.234]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

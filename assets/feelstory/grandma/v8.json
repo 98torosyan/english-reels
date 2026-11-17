@@ -1,1 +1,1 @@
-{"text": "Yesterday, I tried to bake her bread.", "words": [[0.26, 0.88], [1.42, 1.44], [1.52, 1.84], [1.9, 1.98], [2.04, 2.3], [2.34, 2.44], [2.5, 3.36]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Yesterday, I tried to bake her bread.", "words": [[0.26, 0.88], [1.42, 1.45], [1.52, 1.84], [1.9, 1.98], [2.04, 2.3], [2.34, 2.44], [2.5, 2.985]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "turn up.", "words": [[0.48, 0.84], [1.02, 1.84]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}
+{"text": "turn up.", "words": [[0.48, 0.84], [1.02, 1.539]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

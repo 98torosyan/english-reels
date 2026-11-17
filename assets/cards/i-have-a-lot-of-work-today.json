@@ -1,1 +1,1 @@
-{"text": "I have a lot of work today.", "words": [[0.34, 0.36], [0.44, 0.6], [0.66, 0.68], [0.76, 0.96], [1.02, 1.12], [1.2, 1.48], [1.6, 3.16]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I have a lot of work today.", "words": [[0.34, 0.37], [0.44, 0.6], [0.66, 0.69], [0.76, 0.96], [1.02, 1.12], [1.2, 1.48], [1.6, 2.18]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

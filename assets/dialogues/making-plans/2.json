@@ -1,1 +1,1 @@
-{"text": "Let's go to the cinema.", "words": [[0.28, 0.5], [0.52, 0.6], [0.72, 0.8], [0.84, 0.9], [1.0, 2.44]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Let's go to the cinema.", "words": [[0.28, 0.5], [0.52, 0.6], [0.72, 0.8], [0.84, 0.9], [1.0, 1.501]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

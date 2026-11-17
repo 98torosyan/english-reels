@@ -1,1 +1,1 @@
-{"text": "Little money", "words": [[0.26, 0.6], [0.64, 2.0]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Little money", "words": [[0.26, 0.6], [0.64, 1.057]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

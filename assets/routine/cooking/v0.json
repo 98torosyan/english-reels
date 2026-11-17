@@ -1,1 +1,1 @@
-{"text": "I put on my apron.", "words": [[0.26, 0.28], [0.36, 0.54], [0.62, 0.72], [0.78, 0.94], [1.06, 2.5]], "tag": "en-GB-MaisieNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I put on my apron.", "words": [[0.26, 0.29], [0.36, 0.54], [0.62, 0.72], [0.78, 0.94], [1.06, 1.586]], "tag": "en-GB-MaisieNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

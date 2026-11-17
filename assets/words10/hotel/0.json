@@ -1,1 +1,1 @@
-{"text": "reception.", "words": [[0.66, 2.1]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1"}
+{"text": "reception.", "words": [[0.66, 1.564]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "I pay by card.", "words": [[0.36, 0.38], [0.48, 0.68], [0.76, 0.94], [1.04, 1.96]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I pay by card.", "words": [[0.36, 0.39], [0.48, 0.68], [0.76, 0.94], [1.04, 1.615]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "lift.", "words": [[0.68, 1.72]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1"}
+{"text": "lift.", "words": [[0.68, 1.28]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

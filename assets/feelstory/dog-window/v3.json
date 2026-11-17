@@ -1,1 +1,1 @@
-{"text": "and she waits.", "words": [[0.3, 0.42], [0.46, 0.56], [0.7, 2.28]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "and she waits.", "words": [[0.3, 0.42], [0.46, 0.56], [0.7, 1.318]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

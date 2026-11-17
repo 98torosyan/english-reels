@@ -1,1 +1,1 @@
-{"text": "Grandma looks after the children.", "words": [[0.2, 0.64], [0.84, 1.1], [1.22, 1.5], [1.54, 1.62], [1.72, 2.74]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Grandma looks after the children.", "words": [[0.2, 0.64], [0.84, 1.1], [1.22, 1.5], [1.54, 1.62], [1.72, 2.375]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

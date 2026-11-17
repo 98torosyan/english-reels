@@ -1,1 +1,1 @@
-{"text": "Yes, here it is.", "words": [[0.26, 0.6], [1.0, 1.22], [1.26, 1.36], [1.48, 2.26]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Yes, here it is.", "words": [[0.26, 0.6], [1.0, 1.22], [1.26, 1.36], [1.48, 1.903]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "I know the answer.", "words": [[0.32, 0.34], [0.36, 0.52], [0.72, 0.82], [0.9, 2.34]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I know the answer.", "words": [[0.32, 0.35], [0.36, 0.52], [0.72, 0.82], [0.9, 1.362]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

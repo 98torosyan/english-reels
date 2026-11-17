@@ -1,1 +1,1 @@
-{"text": "expensive.", "words": [[0.3, 1.86]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "expensive.", "words": [[0.3, 1.365]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

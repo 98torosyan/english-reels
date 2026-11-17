@@ -1,1 +1,1 @@
-{"text": "I have lived here for five years.", "words": [[0.32, 0.34], [0.4, 0.54], [0.6, 0.84], [0.92, 1.14], [1.22, 1.36], [1.44, 1.84], [1.92, 3.48]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I have lived here for five years.", "words": [[0.32, 0.35], [0.4, 0.54], [0.6, 0.84], [0.92, 1.14], [1.22, 1.36], [1.44, 1.84], [1.92, 2.491]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

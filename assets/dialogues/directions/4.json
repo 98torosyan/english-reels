@@ -1,1 +1,1 @@
-{"text": "Thank you so much!", "words": [[0.2, 0.48], [0.54, 0.64], [0.78, 0.9], [1.04, 1.86]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Thank you so much!", "words": [[0.2, 0.48], [0.54, 0.64], [0.78, 0.9], [1.04, 1.54]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

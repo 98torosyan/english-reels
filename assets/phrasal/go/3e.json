@@ -1,1 +1,1 @@
-{"text": "My alarm went off at six.", "words": [[0.46, 0.6], [0.66, 1.06], [1.26, 1.42], [1.48, 1.6], [1.66, 1.76], [1.86, 2.92]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1"}
+{"text": "My alarm went off at six.", "words": [[0.46, 0.6], [0.66, 1.06], [1.26, 1.42], [1.48, 1.6], [1.66, 1.76], [1.86, 2.42]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

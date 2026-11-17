@@ -1,1 +1,1 @@
-{"text": "I leave the café with my umbrella.", "words": [[0.34, 0.36], [0.42, 0.6], [0.62, 0.68], [0.74, 1.06], [1.22, 1.36], [1.42, 1.56], [1.64, 3.18]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I leave the café with my umbrella.", "words": [[0.34, 0.37], [0.42, 0.6], [0.62, 0.68], [0.74, 1.06], [1.22, 1.36], [1.42, 1.56], [1.64, 2.265]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

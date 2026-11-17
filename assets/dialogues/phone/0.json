@@ -1,1 +1,1 @@
-{"text": "Hello, can I speak to Mr Smith, please?", "words": [[0.24, 0.5], [1.04, 1.18], [1.32, 1.34], [1.42, 1.72], [1.8, 1.86], [1.94, 2.26], [2.34, 2.72], [3.12, 4.04]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Hello, can I speak to Mr Smith, please?", "words": [[0.24, 0.5], [1.04, 1.18], [1.32, 1.35], [1.42, 1.72], [1.8, 1.86], [1.94, 2.26], [2.34, 2.72], [3.12, 3.687]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "late.", "words": [[0.26, 1.86]], "tag": "en-GB-MaisieNeural", "fx": "pb1", "aligned": "ctc1"}
+{"text": "late.", "words": [[0.26, 0.83]], "tag": "en-GB-MaisieNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "put up with.", "words": [[0.46, 0.62], [0.72, 0.86], [0.96, 1.98]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1"}
+{"text": "put up with.", "words": [[0.46, 0.62], [0.72, 0.86], [0.96, 1.615]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

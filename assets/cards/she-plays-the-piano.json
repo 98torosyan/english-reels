@@ -1,1 +1,1 @@
-{"text": "She plays the piano.", "words": [[0.3, 0.4], [0.5, 0.88], [0.96, 1.02], [1.08, 2.76]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "She plays the piano.", "words": [[0.3, 0.4], [0.5, 0.88], [0.96, 1.02], [1.08, 1.815]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "Why are you late?", "words": [[0.3, 0.54], [0.6, 0.72], [0.76, 0.84], [0.94, 2.46]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "Why are you late?", "words": [[0.3, 0.54], [0.6, 0.72], [0.76, 0.84], [0.94, 1.454]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

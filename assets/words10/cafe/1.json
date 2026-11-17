@@ -1,1 +1,1 @@
-{"text": "waiter.", "words": [[0.5, 1.72]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1"}
+{"text": "waiter.", "words": [[0.5, 1.293]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

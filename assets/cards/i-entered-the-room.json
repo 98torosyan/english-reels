@@ -1,1 +1,1 @@
-{"text": "I entered the room.", "words": [[0.32, 0.34], [0.42, 0.68], [0.72, 0.8], [0.9, 2.38]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}
+{"text": "I entered the room.", "words": [[0.32, 0.35], [0.42, 0.68], [0.72, 0.8], [0.9, 1.364]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

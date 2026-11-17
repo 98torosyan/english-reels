@@ -1,1 +1,1 @@
-{"text": "jacket.", "words": [[0.46, 1.56]], "tag": "kokoro:bf_alice", "fx": "pb1", "aligned": "ctc1"}
+{"text": "jacket.", "words": [[0.46, 1.293]], "tag": "kokoro:bf_alice", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
