@@ -67,6 +67,8 @@ def main():
             text = json.loads(meta.read_text(encoding="utf-8")).get("text", "")
             if not text or not re.search(r"[A-Za-z]", text):
                 continue
+            if len(words(text)) <= 3:   # isolated words: speech recognition is unreliable here, so they are not judged
+                continue
             key = "v2:" + hashlib.sha1(mp3.read_bytes()).hexdigest()
             if key not in cache:
                 short = len(words(text)) <= 3
