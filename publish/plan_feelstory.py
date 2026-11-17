@@ -24,12 +24,12 @@ def caption(s):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--media-repo", required=True); ap.add_argument("--render", action="store_true")
-    ap.add_argument("--start", default="2026-11-18"); ap.add_argument("--time", default="22:00"); ap.add_argument("--only", nargs="*"); a = ap.parse_args()
+    ap.add_argument("--start", default="2026-11-18"); ap.add_argument("--time", default="22:00"); ap.add_argument("--only", nargs="*")
+    ap.add_argument("--hold", action="store_true", help="queue as draft: nothing is published until the owner approves"); a = ap.parse_args()
     mrepo = Path(a.media_repo).resolve()
     data = {s["id"]: s for s in json.loads((ROOT / "reels/data/feelstory.json").read_text(encoding="utf-8"))["stories"]}
     new = []
-    for k, i in enumerate(ORDER):
-        if a.only and i not in a.only: continue
+    for k, i in enumerate(a.only or ORDER):   # --only keeps the given order (any story id, e.g. minute-...)
         day = (dt.date.fromisoformat(a.start) + dt.timedelta(days=k)).isoformat()
         if a.render: subprocess.run(["node", "reels/render_feelstory.js", i], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
         rid = f"{day}-feelstory-{i}"; folder = mrepo / rid; folder.mkdir(parents=True, exist_ok=True)
@@ -38,7 +38,7 @@ def main():
         if (OUT / f"feelstory-{i}-cover.jpg").exists():   # a designed cover keeps the profile grid beautiful
             shutil.copy2(OUT / f"feelstory-{i}-cover.jpg", folder / "cover.jpg"); media["cover_url"] = f"{BASE}/{rid}/cover.jpg"
         new.append({"id": rid, "date": day, "time": a.time, "timezone": "Asia/Yerevan", "type": "REEL", "format": "REELS", "kind": "feelstory",
-                    "content_id": i, "title": f"Story {data[i]['title']}", "caption": caption(data[i]), "review_status": "staged",
+                    "content_id": i, "title": f"Story {data[i]['title']}", "caption": caption(data[i]), "review_status": "draft" if a.hold else "staged",
                     **({} if "cover_url" in media else {"thumb_offset": 4000}), "media": media})
         print("feelstory", day, i, flush=True)
     subprocess.run(["git", "pull", "-q", "--rebase", "--autostash"], cwd=ROOT, check=False)

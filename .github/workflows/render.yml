@@ -1,0 +1,65 @@
+name: Render in the cloud
+# Renders and queues content without any computer or chat session: runs one of the publish/plan_*.py scripts with --render,
+# puts the videos into the public media repo and the new posts into queue.json (held items stay held).
+# Needs one secret, MEDIA_TOKEN: a fine-grained GitHub token with "Contents: read and write" on english-reels-media only.
+on:
+  workflow_dispatch:
+    inputs:
+      plan:
+        description: "Plan script, e.g. plan_feelstory.py"
+        required: true
+        default: plan_feelstory.py
+      args:
+        description: "Arguments after --media-repo media, e.g. --render --only minute-the-happy-prince --start 2026-12-01"
+        required: true
+        default: --render
+permissions:
+  contents: write
+concurrency:
+  group: render
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      CHROME_PATH: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the media token
+        env:
+          MEDIA_TOKEN: ${{ secrets.MEDIA_TOKEN }}
+          PLAN: ${{ inputs.plan }}
+        run: |
+          if [ -z "$MEDIA_TOKEN" ]; then echo "::error::Secret MEDIA_TOKEN is missing (token with write access to english-reels-media)"; exit 1; fi
+          case "$PLAN" in plan_*.py) ;; *) echo "::error::plan must be a publish/plan_*.py script"; exit 1;; esac
+      - uses: actions/checkout@v4
+        with:
+          repository: 98torosyan/english-reels-media
+          ref: media
+          path: media
+          token: ${{ secrets.MEDIA_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null && npm ci --no-audit --no-fund && pip install -q pillow numpy
+      - name: Render and queue
+        env:
+          PLAN: ${{ inputs.plan }}
+          ARGS: ${{ inputs.args }}
+        run: python "publish/$PLAN" --media-repo media $ARGS
+      - name: Save media
+        working-directory: media
+        run: |
+          git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
+          git add -A
+          if ! git diff --cached --quiet; then git commit -qm "Նոր տեսանյութեր (ամպում ռենդեր)"; git push; fi
+      - name: Save queue
+        run: |
+          git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
+          git add queue.json
+          if ! git diff --cached --quiet; then git commit -qm "Հերթ՝ նոր նյութեր (ամպում ռենդեր)"; git pull --rebase && git push; fi
