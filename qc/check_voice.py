@@ -33,7 +33,8 @@ def spell(s):
 
 def words(s):
     s = spell(s.lower().replace("’", "'").replace("-", " "))
-    return [ALIAS.get(w, NUM.get(w, w)) for w in re.findall(r"[a-z0-9']+", s)]
+    s = s.replace("‘", "'").replace("'", "")   # quotes and apostrophes are not heard: friends' = friend's = friends
+    return [ALIAS.get(w, NUM.get(w, w)) for w in re.findall(r"[a-z0-9]+", s)]
 
 
 def score(expected, heard):
@@ -42,6 +43,8 @@ def score(expected, heard):
         return 1.0
     if len(a) <= 3:   # single words and short phrases: every word must be heard (plural/ending allowed)
         return 1.0 if all(any(h.startswith(w) or w.startswith(h) and len(h) >= len(w) - 1 for h in b) for w in a) else difflib.SequenceMatcher(None, " ".join(a), " ".join(b)).ratio() * 0.9
+    if difflib.SequenceMatcher(None, "".join(a), "".join(b)).ratio() >= 0.97:   # only spacing differs: "lunchbox" = "lunch box"
+        return 1.0
     return difflib.SequenceMatcher(None, a, b).ratio()
 
 
