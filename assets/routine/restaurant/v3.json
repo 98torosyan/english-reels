@@ -1,1 +1,1 @@
-{"text": "I'd like the spaghetti, please.", "words": [[0.4, 0.62], [0.62, 0.85], [0.85, 0.95], [0.95, 1.55], [1.6, 2.29]], "tag": "kokoro:bf_emma"}
+{"text": "I'd like the spaghetti, please.", "words": [[0.58, 0.66], [0.72, 0.9], [0.94, 1.0], [1.06, 1.54], [1.68, 2.98]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1"}

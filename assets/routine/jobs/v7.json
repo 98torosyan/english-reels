@@ -1,1 +1,1 @@
-{"text": "I'm an artist. I paint pictures.", "words": [[0.38, 0.54], [0.54, 0.7], [0.7, 1.35], [1.39, 1.53], [1.53, 1.83], [1.83, 2.68]], "tag": "kokoro:bf_lily"}
+{"text": "I'm an artist. I paint pictures.", "words": [[0.52, 0.6], [0.64, 0.72], [0.86, 1.4], [1.54, 1.56], [1.62, 1.88], [1.94, 3.12]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}

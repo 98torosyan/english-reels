@@ -1,1 +1,1 @@
-{"text": "She didn't ask why.", "words": [[0.1, 0.37], [0.38, 0.72], [0.74, 1.07], [1.08, 1.6]], "tag": "en-GB-RyanNeural"}
+{"text": "She didn't ask why.", "words": [[0.32, 0.42], [0.5, 0.78], [0.9, 1.1], [1.18, 2.62]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}

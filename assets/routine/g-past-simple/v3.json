@@ -1,1 +1,1 @@
-{"text": "They ate ice creams.", "words": [[0.12, 0.33], [0.35, 0.65], [0.66, 0.93], [0.94, 1.6]], "tag": "en-GB-SoniaNeural"}
+{"text": "They ate ice creams.", "words": [[0.2, 0.34], [0.48, 0.78], [0.84, 0.98], [1.04, 2.0]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

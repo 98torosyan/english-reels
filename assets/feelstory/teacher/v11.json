@@ -1,1 +1,1 @@
-{"text": "So I sat down next to him.", "words": [[0.1, 0.4], [0.41, 0.55], [0.56, 0.9], [0.92, 1.19], [1.2, 1.51], [1.53, 1.63], [1.65, 2.02]], "tag": "en-GB-RyanNeural"}
+{"text": "So I sat down next to him.", "words": [[0.32, 0.4], [0.6, 0.62], [0.74, 0.94], [1.0, 1.24], [1.32, 1.58], [1.62, 1.68], [1.76, 3.06]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}

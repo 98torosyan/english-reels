@@ -1,1 +1,1 @@
-{"text": "My alarm goes off at seven.", "words": [[0.4, 0.6], [0.6, 1.1], [1.1, 1.43], [1.43, 1.68], [1.68, 1.85], [1.85, 2.57]], "tag": "kokoro:bf_lily"}
+{"text": "My alarm goes off at seven.", "words": [[0.48, 0.64], [0.68, 1.08], [1.2, 1.46], [1.56, 1.7], [1.76, 1.86], [1.98, 3.04]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}

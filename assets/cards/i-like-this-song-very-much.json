@@ -1,1 +1,1 @@
-{"text": "I like this song very much.", "words": [[0.11, 0.14], [0.28, 0.55], [0.61, 0.81], [0.83, 1.12], [1.25, 1.64], [1.68, 2.02]], "tag": "en-GB-LibbyNeural", "pace": "v2"}
+{"text": "I like this song very much.", "words": [[0.32, 0.34], [0.4, 0.7], [0.76, 0.92], [1.0, 1.26], [1.42, 1.72], [1.8, 3.42]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

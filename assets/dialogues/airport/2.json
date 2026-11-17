@@ -1,1 +1,1 @@
-{"text": "Do you have any bags to check in?", "words": [[0.1, 0.27], [0.28, 0.43], [0.44, 0.68], [0.69, 0.91], [0.93, 1.44], [1.46, 1.6], [1.62, 1.94], [1.96, 2.32]], "tag": "en-GB-SoniaNeural"}
+{"text": "Do you have any bags to check in?", "words": [[0.24, 0.32], [0.38, 0.46], [0.56, 0.74], [0.78, 0.92], [1.04, 1.48], [1.56, 1.64], [1.72, 1.98], [2.08, 2.74]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

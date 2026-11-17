@@ -1,1 +1,1 @@
-{"text": "Don't put off your homework.", "words": [[0.38, 0.65], [0.65, 0.88], [0.88, 1.12], [1.12, 1.33], [1.33, 2.23]], "tag": "kokoro:bm_daniel"}
+{"text": "Don't put off your homework.", "words": [[0.46, 0.68], [0.76, 0.92], [1.0, 1.14], [1.22, 1.36], [1.46, 2.7]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1"}

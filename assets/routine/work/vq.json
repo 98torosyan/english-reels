@@ -1,1 +1,1 @@
-{"text": "What do you do at work?", "words": [[0.53, 0.69], [0.69, 0.82], [0.82, 1.0], [1.0, 1.3], [1.3, 1.46], [1.46, 1.97]], "tag": "kokoro:bm_lewis"}
+{"text": "What do you do at work?", "words": [[0.6, 0.74], [0.78, 0.84], [0.9, 0.98], [1.12, 1.22], [1.4, 1.48], [1.58, 2.6]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1"}

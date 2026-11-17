@@ -1,1 +1,1 @@
-{"text": "I eat lunch at my desk, alone.", "words": [[0.15, 0.3], [0.32, 0.62], [0.63, 1.02], [1.03, 1.15], [1.17, 1.33], [1.34, 1.95], [2.21, 2.79]], "tag": "en-GB-SoniaNeural"}
+{"text": "I eat lunch at my desk, alone.", "words": [[0.34, 0.36], [0.44, 0.62], [0.76, 1.04], [1.12, 1.2], [1.26, 1.4], [1.5, 1.96], [2.26, 3.22]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

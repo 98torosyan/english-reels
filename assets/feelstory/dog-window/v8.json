@@ -1,1 +1,1 @@
-{"text": "Messages. Emails. News.", "words": [[0.1, 0.99], [2.03, 2.98], [4.01, 4.8]], "tag": "en-GB-RyanNeural"}
+{"text": "Messages. Emails. News.", "words": [[0.32, 0.92], [2.24, 2.9], [4.22, 5.82]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}

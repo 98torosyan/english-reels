@@ -1,1 +1,1 @@
-{"text": "I say good morning to my colleagues.", "words": [[0.53, 0.69], [0.69, 0.96], [0.96, 1.2], [1.2, 1.76], [1.76, 1.88], [1.88, 2.11], [2.11, 2.8]], "tag": "kokoro:bm_lewis"}
+{"text": "I say good morning to my colleagues.", "words": [[0.7, 0.72], [0.8, 0.96], [1.06, 1.22], [1.32, 1.66], [1.86, 1.92], [1.98, 2.12], [2.2, 3.42]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1"}

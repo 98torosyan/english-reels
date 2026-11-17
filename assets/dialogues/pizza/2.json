@@ -1,1 +1,1 @@
-{"text": "Which one would you like?", "words": [[0.1, 0.41], [0.42, 0.66], [0.67, 0.81], [0.82, 0.92], [0.94, 1.41]], "tag": "en-GB-RyanNeural"}
+{"text": "Which one would you like?", "words": [[0.3, 0.48], [0.6, 0.74], [0.76, 0.88], [0.92, 1.0], [1.06, 2.44]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}

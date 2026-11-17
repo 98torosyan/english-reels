@@ -1,1 +1,1 @@
-{"text": "I check the departures board.", "words": [[0.35, 0.56], [0.56, 0.99], [0.99, 1.12], [1.12, 1.98], [1.98, 2.63]], "tag": "kokoro:bm_george"}
+{"text": "I check the departures board.", "words": [[0.54, 0.56], [0.66, 0.96], [1.08, 1.18], [1.22, 1.96], [2.1, 3.24]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1"}

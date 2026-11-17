@@ -1,1 +1,1 @@
-{"text": "I open the window.", "words": [[0.4, 0.59], [0.59, 0.96], [0.96, 1.07], [1.07, 1.93]], "tag": "kokoro:bm_fable"}
+{"text": "I open the window.", "words": [[0.58, 0.6], [0.72, 0.98], [1.04, 1.14], [1.18, 2.38]], "tag": "kokoro:bm_fable", "fx": "pb1", "aligned": "ctc1"}

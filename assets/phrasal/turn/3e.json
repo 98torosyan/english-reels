@@ -1,1 +1,1 @@
-{"text": "She turned down the job offer.", "words": [[0.4, 0.59], [0.59, 1.03], [1.03, 1.35], [1.35, 1.5], [1.5, 1.83], [1.83, 2.56]], "tag": "kokoro:bf_lily"}
+{"text": "She turned down the job offer.", "words": [[0.46, 0.58], [0.68, 1.06], [1.14, 1.36], [1.42, 1.5], [1.6, 1.84], [1.98, 2.98]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}

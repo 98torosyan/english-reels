@@ -1,1 +1,1 @@
-{"text": "Here you are.", "words": [[0.1, 0.34], [0.35, 0.54], [0.56, 0.98]], "tag": "en-GB-RyanNeural"}
+{"text": "Here you are.", "words": [[0.26, 0.42], [0.44, 0.6], [0.74, 2.0]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}

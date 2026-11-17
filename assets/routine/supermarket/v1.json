@@ -1,1 +1,1 @@
-{"text": "I pick up a basket.", "words": [[0.15, 0.26], [0.28, 0.56], [0.58, 0.73], [0.75, 0.83], [0.85, 1.71]], "tag": "en-GB-SoniaNeural"}
+{"text": "I pick up a basket.", "words": [[0.3, 0.32], [0.4, 0.6], [0.66, 0.78], [0.82, 0.84], [0.92, 2.12]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

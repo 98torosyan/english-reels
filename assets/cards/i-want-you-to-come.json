@@ -1,1 +1,1 @@
-{"text": "I want you to come.", "words": [[0.11, 0.2], [0.22, 0.51], [0.52, 0.67], [0.69, 0.81], [0.83, 1.28]], "tag": "en-GB-ThomasNeural", "pace": "v2"}
+{"text": "I want you to come.", "words": [[0.28, 0.3], [0.34, 0.52], [0.64, 0.72], [0.76, 0.84], [0.92, 2.34]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

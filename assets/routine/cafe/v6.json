@@ -1,1 +1,1 @@
-{"text": "I work on my laptop.", "words": [[0.1, 0.26], [0.27, 0.63], [0.64, 0.78], [0.8, 0.95], [0.97, 1.75]], "tag": "en-GB-RyanNeural"}
+{"text": "I work on my laptop.", "words": [[0.32, 0.34], [0.4, 0.66], [0.74, 0.82], [0.88, 1.04], [1.12, 2.72]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}

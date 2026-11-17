@@ -1,1 +1,1 @@
-{"text": "I'm looking for my keys.", "words": [[0.15, 0.35], [0.36, 0.75], [0.76, 0.89], [0.9, 1.09], [1.1, 1.78]], "tag": "en-GB-SoniaNeural"}
+{"text": "I'm looking for my keys.", "words": [[0.3, 0.38], [0.44, 0.76], [0.84, 0.94], [1.0, 1.14], [1.22, 2.2]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

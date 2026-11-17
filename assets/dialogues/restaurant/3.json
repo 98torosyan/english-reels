@@ -1,1 +1,1 @@
-{"text": "Thank you. Could we have some water?", "words": [[0.12, 0.51], [0.52, 0.95], [1.4, 1.59], [1.6, 1.72], [1.74, 2.03], [2.04, 2.29], [2.31, 2.99]], "tag": "en-GB-SoniaNeural"}
+{"text": "Thank you. Could we have some water?", "words": [[0.22, 0.54], [0.64, 0.76], [1.46, 1.62], [1.68, 1.76], [1.88, 2.08], [2.14, 2.36], [2.42, 3.4]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

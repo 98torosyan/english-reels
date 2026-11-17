@@ -1,1 +1,1 @@
-{"text": "Smudge is between the boxes.", "words": [[0.4, 0.8], [0.8, 0.95], [0.95, 1.39], [1.39, 1.49], [1.49, 2.42]], "tag": "kokoro:bf_alice"}
+{"text": "Smudge is between the boxes.", "words": [[0.46, 0.9], [0.92, 0.98], [1.04, 1.44], [1.46, 1.54], [1.6, 2.92]], "tag": "kokoro:bf_alice", "fx": "pb1", "aligned": "ctc1"}

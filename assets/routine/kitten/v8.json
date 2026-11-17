@@ -1,1 +1,1 @@
-{"text": "Smudge jumps out of the box!", "words": [[0.4, 0.85], [0.85, 1.23], [1.23, 1.39], [1.39, 1.46], [1.46, 1.59], [1.59, 2.32]], "tag": "kokoro:bf_alice"}
+{"text": "Smudge jumps out of the box!", "words": [[0.46, 0.84], [0.96, 1.26], [1.32, 1.46], [1.48, 1.52], [1.56, 1.62], [1.7, 2.8]], "tag": "kokoro:bf_alice", "fx": "pb1", "aligned": "ctc1"}

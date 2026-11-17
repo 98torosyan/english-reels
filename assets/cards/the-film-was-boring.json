@@ -1,1 +1,1 @@
-{"text": "The film was boring.", "words": [[0.11, 0.22], [0.25, 0.67], [0.77, 0.95], [0.98, 1.56]], "tag": "en-GB-LibbyNeural", "pace": "v2"}
+{"text": "The film was boring.", "words": [[0.22, 0.32], [0.42, 0.8], [0.92, 1.08], [1.16, 2.8]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

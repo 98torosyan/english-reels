@@ -1,1 +1,1 @@
-{"text": "I put away my books.", "words": [[0.4, 0.53], [0.53, 0.72], [0.72, 1.03], [1.03, 1.26], [1.26, 1.91]], "tag": "kokoro:bm_fable"}
+{"text": "I put away my books.", "words": [[0.54, 0.56], [0.62, 0.78], [0.82, 1.04], [1.12, 1.28], [1.36, 2.58]], "tag": "kokoro:bm_fable", "fx": "pb1", "aligned": "ctc1"}

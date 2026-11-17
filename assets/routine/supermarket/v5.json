@@ -1,1 +1,1 @@
-{"text": "I wait in the queue.", "words": [[0.15, 0.29], [0.31, 0.67], [0.69, 0.8], [0.82, 0.93], [0.94, 1.48]], "tag": "en-GB-SoniaNeural"}
+{"text": "I wait in the queue.", "words": [[0.34, 0.36], [0.42, 0.7], [0.78, 0.84], [0.88, 0.96], [1.04, 1.88]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

@@ -1,1 +1,1 @@
-{"text": "We often go out on Fridays.", "words": [[0.38, 0.53], [0.53, 0.88], [0.88, 1.1], [1.1, 1.62], [1.62, 1.9], [1.9, 2.77]], "tag": "kokoro:bm_george"}
+{"text": "We often go out on Fridays.", "words": [[0.44, 0.52], [0.66, 0.9], [0.98, 1.06], [1.24, 1.44], [1.78, 1.88], [2.0, 3.34]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1"}

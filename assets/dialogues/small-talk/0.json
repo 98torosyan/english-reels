@@ -1,1 +1,1 @@
-{"text": "Lovely day, isn't it?", "words": [[0.14, 0.64], [0.65, 1.11], [1.45, 1.81], [1.83, 2.27]], "tag": "en-GB-SoniaNeural"}
+{"text": "Lovely day, isn't it?", "words": [[0.28, 0.64], [0.76, 1.04], [1.54, 1.84], [1.94, 2.7]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

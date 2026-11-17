@@ -1,1 +1,1 @@
-{"text": "Can I take them with food?", "words": [[0.12, 0.33], [0.34, 0.45], [0.46, 0.83], [0.84, 1.02], [1.04, 1.23], [1.24, 1.87]], "tag": "en-GB-SoniaNeural"}
+{"text": "Can I take them with food?", "words": [[0.2, 0.36], [0.5, 0.52], [0.58, 0.88], [0.92, 1.06], [1.12, 1.26], [1.34, 2.28]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

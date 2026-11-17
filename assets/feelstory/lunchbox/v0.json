@@ -1,1 +1,1 @@
-{"text": "Every day, in my lunchbox,", "words": [[0.12, 0.47], [0.48, 0.94], [1.23, 1.36], [1.37, 1.54], [1.55, 2.61]], "tag": "en-GB-SoniaNeural"}
+{"text": "Every day, in my lunchbox,", "words": [[0.24, 0.48], [0.58, 0.86], [1.32, 1.42], [1.48, 1.62], [1.72, 3.04]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

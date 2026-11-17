@@ -1,1 +1,1 @@
-{"text": "I turn off the alarm.", "words": [[0.38, 0.55], [0.55, 0.92], [0.92, 1.18], [1.18, 1.33], [1.33, 2.16]], "tag": "kokoro:bf_lily"}
+{"text": "I turn off the alarm.", "words": [[0.54, 0.56], [0.66, 0.96], [1.04, 1.18], [1.26, 1.34], [1.4, 2.6]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}

@@ -1,1 +1,1 @@
-{"text": "That sounds lovely.", "words": [[0.14, 0.42], [0.43, 0.92], [0.93, 1.54]], "tag": "en-GB-SoniaNeural"}
+{"text": "That sounds lovely.", "words": [[0.22, 0.42], [0.56, 0.96], [1.04, 1.96]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

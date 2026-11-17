@@ -1,1 +1,1 @@
-{"text": "I'd like to send this parcel to France.", "words": [[0.15, 0.34], [0.36, 0.62], [0.64, 0.76], [0.77, 1.18], [1.2, 1.4], [1.42, 1.95], [1.96, 2.08], [2.09, 2.86]], "tag": "en-GB-SoniaNeural"}
+{"text": "I'd like to send this parcel to France.", "words": [[0.32, 0.38], [0.46, 0.68], [0.72, 0.8], [0.9, 1.18], [1.26, 1.44], [1.52, 1.96], [2.04, 2.12], [2.2, 3.28]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

@@ -1,1 +1,1 @@
-{"text": "I arrived at the airport.", "words": [[0.16, 0.29], [0.31, 0.93], [0.95, 1.07], [1.09, 1.25], [1.27, 2.09]], "tag": "en-GB-SoniaNeural", "pace": "v2"}
+{"text": "I arrived at the airport.", "words": [[0.32, 0.34], [0.4, 0.98], [1.02, 1.1], [1.16, 1.24], [1.36, 2.52]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

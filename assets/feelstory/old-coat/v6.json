@@ -1,1 +1,1 @@
-{"text": "But every winter, I got", "words": [[0.1, 0.32], [0.34, 0.61], [0.62, 1.13], [1.41, 1.51], [1.53, 2.09]], "tag": "en-GB-RyanNeural"}
+{"text": "But every winter, I got", "words": [[0.26, 0.38], [0.42, 0.66], [0.76, 1.16], [1.58, 1.6], [1.7, 3.12]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}

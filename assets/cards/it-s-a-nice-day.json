@@ -1,1 +1,1 @@
-{"text": "It's a nice day.", "words": [[0.13, 0.35], [0.37, 0.43], [0.45, 0.86], [0.87, 1.36]], "tag": "en-GB-SoniaNeural", "pace": "v2"}
+{"text": "It's a nice day.", "words": [[0.26, 0.4], [0.46, 0.48], [0.58, 0.9], [0.96, 1.86]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

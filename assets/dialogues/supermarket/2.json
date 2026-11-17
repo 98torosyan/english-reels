@@ -1,1 +1,1 @@
-{"text": "And do you sell fresh fish?", "words": [[0.12, 0.29], [0.3, 0.42], [0.43, 0.59], [0.61, 0.96], [0.98, 1.36], [1.37, 1.98]], "tag": "en-GB-SoniaNeural"}
+{"text": "And do you sell fresh fish?", "words": [[0.22, 0.34], [0.38, 0.46], [0.54, 0.62], [0.76, 0.98], [1.08, 1.4], [1.46, 2.4]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

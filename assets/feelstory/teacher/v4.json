@@ -1,1 +1,1 @@
-{"text": "She opened a book,", "words": [[0.1, 0.41], [0.43, 0.77], [0.78, 0.84], [0.86, 1.32]], "tag": "en-GB-RyanNeural"}
+{"text": "She opened a book,", "words": [[0.32, 0.4], [0.54, 0.84], [0.88, 0.9], [0.96, 2.36]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}

@@ -1,1 +1,1 @@
-{"text": "He sells bread to his customers.", "words": [[0.35, 0.51], [0.51, 1.0], [1.0, 1.65], [1.65, 1.83], [1.83, 2.01], [2.01, 2.88]], "tag": "kokoro:bm_george"}
+{"text": "He sells bread to his customers.", "words": [[0.44, 0.48], [0.62, 1.0], [1.12, 1.44], [1.76, 1.84], [1.92, 2.04], [2.1, 3.44]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1"}

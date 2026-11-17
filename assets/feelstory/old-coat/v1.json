@@ -1,1 +1,1 @@
-{"text": "the same old coat.", "words": [[0.1, 0.28], [0.29, 0.61], [0.62, 0.87], [0.89, 1.36]], "tag": "en-GB-RyanNeural"}
+{"text": "the same old coat.", "words": [[0.24, 0.32], [0.42, 0.68], [0.76, 0.92], [0.98, 2.38]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}

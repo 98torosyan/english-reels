@@ -1,1 +1,1 @@
-{"text": "Lily opens the curtains. Sam closes the window.", "words": [[0.13, 0.52], [0.53, 0.99], [1.01, 1.11], [1.13, 1.94], [2.35, 2.77], [2.78, 3.28], [3.3, 3.4], [3.42, 4.02]], "tag": "en-GB-SoniaNeural"}
+{"text": "Lily opens the curtains. Sam closes the window.", "words": [[0.26, 0.48], [0.64, 1.04], [1.08, 1.16], [1.22, 1.86], [2.5, 2.76], [2.86, 3.32], [3.36, 3.46], [3.5, 4.4]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

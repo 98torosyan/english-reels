@@ -1,1 +1,1 @@
-{"text": "I bought two books.", "words": [[0.1, 0.25], [0.27, 0.65], [0.66, 0.91], [0.92, 1.53]], "tag": "en-GB-RyanNeural", "pace": "v2"}
+{"text": "I bought two books.", "words": [[0.34, 0.36], [0.44, 0.66], [0.74, 0.94], [1.04, 2.6]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

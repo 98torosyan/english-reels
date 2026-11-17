@@ -1,1 +1,1 @@
-{"text": "I wait at the gate.", "words": [[0.38, 0.56], [0.56, 0.9], [0.9, 1.03], [1.03, 1.16], [1.16, 1.78]], "tag": "kokoro:bm_george"}
+{"text": "I wait at the gate.", "words": [[0.54, 0.56], [0.68, 0.94], [1.0, 1.08], [1.12, 1.2], [1.26, 2.32]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1"}

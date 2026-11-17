@@ -1,1 +1,1 @@
-{"text": "He has grown a lot this year.", "words": [[0.35, 0.46], [0.46, 0.64], [0.64, 1.0], [1.0, 1.11], [1.11, 1.51], [1.51, 1.79], [1.79, 2.36]], "tag": "kokoro:bm_daniel"}
+{"text": "He has grown a lot this year.", "words": [[0.42, 0.48], [0.56, 0.66], [0.74, 1.04], [1.1, 1.12], [1.24, 1.5], [1.6, 1.8], [1.9, 2.86]], "tag": "kokoro:bm_daniel", "fx": "pb1", "aligned": "ctc1"}

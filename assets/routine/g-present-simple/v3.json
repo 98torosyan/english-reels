@@ -1,1 +1,1 @@
-{"text": "He takes the bread out of the oven.", "words": [[0.35, 0.47], [0.47, 0.82], [0.82, 0.96], [0.96, 1.66], [1.66, 1.91], [1.91, 2.0], [2.0, 2.16], [2.16, 2.77]], "tag": "kokoro:bm_george"}
+{"text": "He takes the bread out of the oven.", "words": [[0.44, 0.48], [0.58, 0.86], [0.92, 1.0], [1.06, 1.42], [1.84, 1.98], [2.0, 2.06], [2.1, 2.18], [2.3, 3.32]], "tag": "kokoro:bm_george", "fx": "pb1", "aligned": "ctc1"}

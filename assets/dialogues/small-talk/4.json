@@ -1,1 +1,1 @@
-{"text": "Oh no! I'd better take an umbrella.", "words": [[0.12, 0.3], [0.31, 0.7], [1.16, 1.41], [1.43, 1.85], [1.87, 2.18], [2.19, 2.29], [2.31, 3.04]], "tag": "en-GB-SoniaNeural"}
+{"text": "Oh no! I'd better take an umbrella.", "words": [[0.24, 0.36], [0.46, 0.54], [1.32, 1.42], [1.5, 1.84], [1.96, 2.22], [2.26, 2.32], [2.38, 3.46]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

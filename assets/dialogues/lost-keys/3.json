@@ -1,1 +1,1 @@
-{"text": "Did you check your coat pocket?", "words": [[0.1, 0.37], [0.38, 0.53], [0.54, 0.87], [0.88, 1.06], [1.07, 1.47], [1.48, 2.23]], "tag": "en-GB-SoniaNeural"}
+{"text": "Did you check your coat pocket?", "words": [[0.26, 0.4], [0.46, 0.54], [0.66, 0.92], [0.98, 1.12], [1.2, 1.48], [1.58, 2.68]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

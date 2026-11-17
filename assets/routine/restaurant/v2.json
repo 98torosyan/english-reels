@@ -1,1 +1,1 @@
-{"text": "What do you recommend?", "words": [[0.38, 0.56], [0.56, 0.69], [0.69, 0.8], [0.8, 1.69]], "tag": "kokoro:bf_emma"}
+{"text": "What do you recommend?", "words": [[0.46, 0.6], [0.66, 0.72], [0.76, 0.84], [0.9, 2.34]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1"}

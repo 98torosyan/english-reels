@@ -1,1 +1,1 @@
-{"text": "Next Monday, if that's OK.", "words": [[0.1, 0.54], [0.56, 1.07], [1.28, 1.44], [1.45, 1.76], [1.78, 2.45]], "tag": "en-GB-RyanNeural"}
+{"text": "Next Monday, if that's OK.", "words": [[0.3, 0.6], [0.66, 1.08], [1.38, 1.48], [1.54, 1.82], [1.9, 3.46]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}

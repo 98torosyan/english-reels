@@ -1,1 +1,1 @@
-{"text": "Sorry I'm late!", "words": [[0.1, 0.61], [0.63, 0.85], [0.86, 1.42]], "tag": "en-GB-RyanNeural"}
+{"text": "Sorry I'm late!", "words": [[0.34, 0.62], [0.82, 0.9], [1.0, 2.44]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}

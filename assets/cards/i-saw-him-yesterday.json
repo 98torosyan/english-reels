@@ -1,1 +1,1 @@
-{"text": "I saw him yesterday.", "words": [[0.1, 0.31], [0.33, 0.6], [0.62, 0.88], [0.89, 1.62]], "tag": "en-GB-RyanNeural", "pace": "v2"}
+{"text": "I saw him yesterday.", "words": [[0.38, 0.4], [0.48, 0.68], [0.78, 0.92], [1.0, 2.68]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

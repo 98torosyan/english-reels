@@ -1,1 +1,1 @@
-{"text": "He goes to work every day.", "words": [[0.11, 0.28], [0.29, 0.6], [0.61, 0.72], [0.74, 1.1], [1.12, 1.42], [1.44, 1.94]], "tag": "en-GB-ThomasNeural", "pace": "v2"}
+{"text": "He goes to work every day.", "words": [[0.24, 0.32], [0.4, 0.64], [0.68, 0.76], [0.86, 1.12], [1.22, 1.46], [1.54, 3.0]], "tag": "en-GB-ThomasNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

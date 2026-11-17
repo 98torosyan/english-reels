@@ -1,1 +1,1 @@
-{"text": "For finished actions in the past, like yesterday or last summer.", "words": [[0.14, 0.29], [0.31, 0.82], [0.83, 1.36], [1.37, 1.48], [1.5, 1.61], [1.63, 2.22], [2.54, 2.76], [2.78, 3.52], [3.63, 3.71], [3.73, 4.2], [4.21, 4.67]], "tag": "en-GB-SoniaNeural"}
+{"text": "For finished actions in the past, like yesterday or last summer.", "words": [[0.24, 0.36], [0.44, 0.84], [0.94, 1.4], [1.44, 1.52], [1.56, 1.64], [1.7, 2.22], [2.6, 2.82], [2.88, 3.46], [3.74, 3.84], [3.9, 4.24], [4.3, 5.08]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

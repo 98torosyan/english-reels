@@ -1,1 +1,1 @@
-{"text": "Smudge is on the box.", "words": [[0.4, 0.8], [0.8, 0.94], [0.94, 1.09], [1.09, 1.21], [1.21, 1.99]], "tag": "kokoro:bf_alice"}
+{"text": "Smudge is on the box.", "words": [[0.46, 0.9], [0.92, 0.98], [1.06, 1.14], [1.16, 1.24], [1.32, 2.44]], "tag": "kokoro:bf_alice", "fx": "pb1", "aligned": "ctc1"}

@@ -1,1 +1,1 @@
-{"text": "I get up at seven every morning.", "words": [[0.38, 0.53], [0.53, 0.69], [0.69, 0.86], [0.86, 1.01], [1.01, 1.41], [1.41, 1.75], [1.75, 2.37]], "tag": "kokoro:bf_emma"}
+{"text": "I get up at seven every morning.", "words": [[0.54, 0.56], [0.62, 0.76], [0.8, 0.9], [0.96, 1.04], [1.12, 1.4], [1.54, 1.76], [1.86, 3.12]], "tag": "kokoro:bf_emma", "fx": "pb1", "aligned": "ctc1"}

@@ -1,1 +1,1 @@
-{"text": "I am a teacher.", "words": [[0.1, 0.27], [0.28, 0.4], [0.42, 0.48], [0.5, 1.17]], "tag": "en-GB-RyanNeural", "pace": "v2"}
+{"text": "I am a teacher.", "words": [[0.34, 0.36], [0.38, 0.46], [0.5, 0.52], [0.62, 2.22]], "tag": "en-GB-RyanNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

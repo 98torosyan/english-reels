@@ -1,1 +1,1 @@
-{"text": "Every student", "words": [[0.11, 0.43], [0.51, 1.15]], "tag": "en-GB-LibbyNeural", "pace": "v2"}
+{"text": "Every student", "words": [[0.24, 0.5], [0.64, 2.44]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

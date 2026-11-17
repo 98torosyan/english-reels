@@ -1,1 +1,1 @@
-{"text": "I wash my face.", "words": [[0.38, 0.59], [0.59, 0.97], [0.97, 1.28], [1.28, 2.04]], "tag": "kokoro:bf_lily"}
+{"text": "I wash my face.", "words": [[0.58, 0.6], [0.7, 0.98], [1.08, 1.24], [1.38, 2.48]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}

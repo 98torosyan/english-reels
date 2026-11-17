@@ -1,1 +1,1 @@
-{"text": "I have breakfast.", "words": [[0.38, 0.59], [0.59, 0.91], [0.91, 1.98]], "tag": "kokoro:bf_lily"}
+{"text": "I have breakfast.", "words": [[0.58, 0.6], [0.7, 0.94], [1.0, 2.36]], "tag": "kokoro:bf_lily", "fx": "pb1", "aligned": "ctc1"}

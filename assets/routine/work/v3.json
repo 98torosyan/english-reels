@@ -1,1 +1,1 @@
-{"text": "I lead a meeting.", "words": [[0.55, 0.74], [0.74, 1.1], [1.1, 1.2], [1.2, 1.74]], "tag": "kokoro:bm_lewis"}
+{"text": "I lead a meeting.", "words": [[0.74, 0.76], [0.86, 1.14], [1.18, 1.2], [1.3, 2.38]], "tag": "kokoro:bm_lewis", "fx": "pb1", "aligned": "ctc1"}

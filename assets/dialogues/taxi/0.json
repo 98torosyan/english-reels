@@ -1,1 +1,1 @@
-{"text": "Hello! Where to?", "words": [[0.11, 0.64], [1.66, 1.91], [1.93, 2.24]], "tag": "en-GB-ThomasNeural"}
+{"text": "Hello! Where to?", "words": [[0.24, 0.48], [1.78, 1.96], [2.04, 3.22]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1"}

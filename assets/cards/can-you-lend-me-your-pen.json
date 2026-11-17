@@ -1,1 +1,1 @@
-{"text": "Can you lend me your pen?", "words": [[0.13, 0.35], [0.37, 0.52], [0.54, 0.93], [0.95, 1.06], [1.07, 1.28], [1.3, 1.91]], "tag": "en-GB-SoniaNeural", "pace": "v2"}
+{"text": "Can you lend me your pen?", "words": [[0.2, 0.38], [0.46, 0.54], [0.66, 0.94], [1.02, 1.1], [1.18, 1.34], [1.44, 2.34]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

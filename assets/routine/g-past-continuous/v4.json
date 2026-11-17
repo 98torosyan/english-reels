@@ -1,1 +1,1 @@
-{"text": "She was painting the wall when the ladder moved.", "words": [[0.4, 0.51], [0.51, 0.67], [0.67, 1.11], [1.11, 1.24], [1.24, 1.59], [1.59, 1.71], [1.71, 1.8], [1.8, 2.1], [2.1, 2.66]], "tag": "kokoro:bf_isabella"}
+{"text": "She was painting the wall when the ladder moved.", "words": [[0.46, 0.54], [0.6, 0.7], [0.76, 1.18], [1.2, 1.28], [1.34, 1.62], [1.68, 1.76], [1.8, 1.86], [1.9, 2.16], [2.22, 3.46]], "tag": "kokoro:bf_isabella", "fx": "pb1", "aligned": "ctc1"}

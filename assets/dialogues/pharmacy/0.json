@@ -1,1 +1,1 @@
-{"text": "Hello. Do you have something for a sore throat?", "words": [[0.14, 0.81], [1.24, 1.42], [1.43, 1.58], [1.6, 1.85], [1.86, 2.43], [2.45, 2.61], [2.63, 2.71], [2.73, 3.04], [3.05, 3.74]], "tag": "en-GB-SoniaNeural"}
+{"text": "Hello. Do you have something for a sore throat?", "words": [[0.26, 0.56], [1.38, 1.46], [1.52, 1.62], [1.7, 1.9], [1.98, 2.44], [2.54, 2.66], [2.72, 2.74], [2.86, 3.12], [3.16, 4.16]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

@@ -1,1 +1,1 @@
-{"text": "At seven, at my place.", "words": [[0.12, 0.33], [0.34, 0.9], [1.14, 1.33], [1.34, 1.54], [1.55, 2.24]], "tag": "en-GB-SoniaNeural"}
+{"text": "At seven, at my place.", "words": [[0.24, 0.36], [0.48, 0.84], [1.24, 1.36], [1.42, 1.58], [1.66, 2.68]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

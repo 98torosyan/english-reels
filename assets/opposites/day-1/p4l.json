@@ -1,1 +1,1 @@
-{"text": "turn on", "words": [[0.1, 0.53], [0.54, 0.98]], "tag": "en-GB-SoniaNeural"}
+{"text": "turn on", "words": [[0.24, 0.56], [0.68, 1.86]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

@@ -1,1 +1,1 @@
-{"text": "What would you like today?", "words": [[0.12, 0.39], [0.4, 0.59], [0.61, 0.74], [0.76, 1.08], [1.09, 1.74]], "tag": "en-GB-SoniaNeural"}
+{"text": "What would you like today?", "words": [[0.24, 0.42], [0.48, 0.64], [0.68, 0.76], [0.86, 1.14], [1.2, 2.16]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

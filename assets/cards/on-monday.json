@@ -1,1 +1,1 @@
-{"text": "On Monday", "words": [[0.13, 0.37], [0.39, 1.19]], "tag": "en-GB-SoniaNeural", "pace": "v2"}
+{"text": "On Monday", "words": [[0.26, 0.38], [0.5, 1.64]], "tag": "en-GB-SoniaNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

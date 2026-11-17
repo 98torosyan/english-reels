@@ -1,1 +1,1 @@
-{"text": "It means \u201cvery tired\u201d.", "words": [[0.15, 0.34], [0.36, 0.79], [0.8, 1.14], [1.15, 1.89]], "tag": "en-GB-SoniaNeural"}
+{"text": "It means “very tired”.", "words": [[0.26, 0.36], [0.44, 0.82], [0.88, 1.14], [1.26, 2.32]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

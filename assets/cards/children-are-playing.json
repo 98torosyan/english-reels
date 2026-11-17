@@ -1,1 +1,1 @@
-{"text": "Children are playing.", "words": [[0.11, 0.64], [0.71, 0.8], [0.9, 1.44]], "tag": "en-GB-LibbyNeural", "pace": "v2"}
+{"text": "Children are playing.", "words": [[0.24, 0.74], [0.9, 1.0], [1.04, 2.72]], "tag": "en-GB-LibbyNeural", "pace": "v2", "fx": "pb1", "aligned": "ctc1"}

@@ -1,1 +1,1 @@
-{"text": "She doesn't move.", "words": [[0.1, 0.38], [0.4, 0.74], [0.75, 1.39]], "tag": "en-GB-RyanNeural"}
+{"text": "She doesn't move.", "words": [[0.32, 0.42], [0.52, 0.82], [0.88, 2.44]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}

@@ -1,1 +1,1 @@
-{"text": "I get a loaf of bread.", "words": [[0.15, 0.26], [0.28, 0.58], [0.59, 0.66], [0.68, 1.0], [1.02, 1.19], [1.2, 1.73]], "tag": "en-GB-SoniaNeural"}
+{"text": "I get a loaf of bread.", "words": [[0.32, 0.34], [0.4, 0.6], [0.68, 0.7], [0.78, 1.02], [1.1, 1.18], [1.28, 2.14]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

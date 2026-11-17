@@ -1,1 +1,1 @@
-{"text": "Good morning. Can I see your passport, please?", "words": [[0.1, 0.38], [0.4, 1.06], [1.51, 1.72], [1.74, 1.85], [1.87, 2.1], [2.12, 2.29], [2.31, 3.18], [3.44, 4.03]], "tag": "en-GB-SoniaNeural"}
+{"text": "Good morning. Can I see your passport, please?", "words": [[0.22, 0.4], [0.5, 0.96], [1.58, 1.74], [1.88, 1.9], [2.0, 2.16], [2.2, 2.36], [2.42, 3.12], [3.52, 4.44]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

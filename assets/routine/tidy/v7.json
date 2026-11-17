@@ -1,1 +1,1 @@
-{"text": "I take out the rubbish.", "words": [[0.4, 0.54], [0.54, 0.82], [0.82, 1.01], [1.01, 1.12], [1.12, 2.25]], "tag": "kokoro:bm_fable"}
+{"text": "I take out the rubbish.", "words": [[0.56, 0.58], [0.64, 0.88], [0.94, 1.08], [1.1, 1.16], [1.24, 2.64]], "tag": "kokoro:bm_fable", "fx": "pb1", "aligned": "ctc1"}

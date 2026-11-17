@@ -1,1 +1,1 @@
-{"text": "Do you have a library card?", "words": [[0.11, 0.23], [0.24, 0.42], [0.43, 0.62], [0.64, 0.7], [0.71, 1.33], [1.34, 1.89]], "tag": "en-GB-ThomasNeural"}
+{"text": "Do you have a library card?", "words": [[0.2, 0.3], [0.36, 0.44], [0.52, 0.7], [0.72, 0.74], [0.84, 1.34], [1.44, 2.88]], "tag": "en-GB-ThomasNeural", "fx": "pb1", "aligned": "ctc1"}

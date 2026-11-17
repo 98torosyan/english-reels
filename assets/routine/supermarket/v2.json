@@ -1,1 +1,1 @@
-{"text": "I choose some apples.", "words": [[0.15, 0.29], [0.31, 0.66], [0.68, 0.87], [0.89, 1.63]], "tag": "en-GB-SoniaNeural"}
+{"text": "I choose some apples.", "words": [[0.32, 0.34], [0.42, 0.72], [0.76, 0.94], [1.02, 2.02]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

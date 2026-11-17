@@ -1,1 +1,1 @@
-{"text": "Yes, a table for two, please.", "words": [[0.15, 0.7], [0.93, 0.98], [0.99, 1.48], [1.49, 1.67], [1.68, 2.14], [2.4, 3.06]], "tag": "en-GB-SoniaNeural"}
+{"text": "Yes, a table for two, please.", "words": [[0.28, 0.64], [0.98, 1.0], [1.08, 1.52], [1.58, 1.72], [1.8, 2.08], [2.48, 3.48]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1"}

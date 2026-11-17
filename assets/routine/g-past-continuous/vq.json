@@ -1,1 +1,1 @@
-{"text": "For an action in progress when something else happened.", "words": [[0.35, 0.46], [0.46, 0.6], [0.6, 1.1], [1.1, 1.25], [1.25, 1.9], [1.9, 2.08], [2.08, 2.45], [2.45, 2.7], [2.7, 3.28]], "tag": "kokoro:bf_isabella"}
+{"text": "For an action in progress when something else happened.", "words": [[0.42, 0.52], [0.56, 0.62], [0.76, 1.12], [1.18, 1.26], [1.34, 1.92], [2.0, 2.1], [2.18, 2.5], [2.58, 2.78], [2.82, 4.12]], "tag": "kokoro:bf_isabella", "fx": "pb1", "aligned": "ctc1"}

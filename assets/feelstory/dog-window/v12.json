@@ -1,1 +1,1 @@
-{"text": "like I'm the best thing in the world.", "words": [[0.1, 0.44], [0.46, 0.62], [0.64, 0.72], [0.74, 1.14], [1.16, 1.39], [1.41, 1.5], [1.51, 1.6], [1.62, 2.29]], "tag": "en-GB-RyanNeural"}
+{"text": "like I'm the best thing in the world.", "words": [[0.3, 0.5], [0.62, 0.68], [0.7, 0.78], [0.88, 1.18], [1.24, 1.44], [1.5, 1.56], [1.6, 1.68], [1.76, 3.32]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1"}
