@@ -59,7 +59,7 @@ def main():
             if not f.exists(): fail(f"{iid}: media file missing in media repo: {u[len(BASE):]}"); continue
             if f.suffix == ".mp4":
                 dim, secs, audio = ffprobe(f)
-                if dim not in ((1080, 1920), (1872, 3328)): fail(f"{iid}: video size {dim}")
+                if dim not in ((1080, 1920), (1872, 3328), (1080, 1350), (1872, 2340)): fail(f"{iid}: video size {dim}")
                 if not audio: fail(f"{iid}: video has no audio")
                 if not 3 <= secs <= 90: fail(f"{iid}: video length {secs:.1f}s outside 3–90 s")
                 off = i.get("thumb_offset")
