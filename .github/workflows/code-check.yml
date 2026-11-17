@@ -30,7 +30,7 @@ jobs:
         if: github.event_name != 'push'
         run: |
           set -o pipefail
-          npm ci --no-audit --no-fund >/dev/null
+          pip install -q pillow && npm ci --no-audit --no-fund >/dev/null
           git clone -q --depth 1 --branch media https://github.com/98torosyan/english-reels-media.git ../english-reels-media
           python qc/system_check.py --media-repo ../english-reels-media | tee -a code-check.txt
       - name: Open an issue (GitHub e-mails the owner)
