@@ -74,9 +74,9 @@ window.seek=t=>{
 function coverBody(c) {
   return `<div style="position:absolute;inset:0;overflow:hidden"><img id="img" src="${img(c.id, 1)}" style="position:absolute;left:0;top:0;width:1080px;height:1080px;object-fit:cover"></div>
     <div style="position:absolute;left:0;right:0;top:640px;bottom:0;background:linear-gradient(transparent,var(--paper) 42%)"></div>
-    <div style="position:absolute;left:70px;right:70px;top:1000px;text-align:center">
+    <div style="position:absolute;left:70px;right:70px;bottom:104px;text-align:center">
       <div id="title" style="font:600 italic 96px/1.02 Lit;letter-spacing:-2px;text-wrap:balance">${esc(c.name)}</div>
-      <div style="margin-top:20px;font:600 38px Arm;color:var(--muted)">${esc(c.name_hy)} · 6 փաստ անգլերենով</div>
+      <div style="margin-top:18px;font:600 38px Arm;color:var(--muted)">${esc(c.name_hy)}</div><div style="margin-top:8px;font:500 30px Arm;color:var(--muted)">6 փաստ՝ պարզ անգլերենով</div>
       <div style="margin-top:34px;display:inline-flex;align-items:center;gap:14px;padding:16px 34px;border-radius:99px;background:var(--ink);color:#FBF8F2;font:700 28px Arm">Թերթի՛ր <span id="arrow" style="display:inline-block;font:600 32px Inter">→</span></div>
     </div><div class="brand">@ENGLISH.READINGROOM</div>`;
 }
@@ -119,7 +119,7 @@ async function page(browser, baseUrl, name, body, script) {
   const p = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
   const errors = await utils.preparePage(p, `${baseUrl}${utils.renderHtmlPath(work)}`, 1080, 1350);
   await p.evaluate(() => Promise.all([document.fonts.load('500 48px Lit', 'Ab'), document.fonts.load('italic 600 48px Lit', 'Ab'), document.fonts.load('600 38px Arm', 'Աբ'), document.fonts.load('800 20px Inter', 'Ab'), document.fonts.ready, ...[...document.images].map((i) => i.decode().catch(() => null))]));
-  const bad = await p.evaluate(() => [...document.querySelectorAll('.sent,#title')].filter((e) => e.getBoundingClientRect().bottom > 1290 || e.scrollWidth > e.clientWidth + 2).map((e) => e.textContent.slice(0, 50)));
+  const bad = await p.evaluate(() => [...document.querySelectorAll('.sent,#title')].filter((e) => e.getBoundingClientRect().bottom > 1250 || e.scrollWidth > e.clientWidth + 2).map((e) => e.textContent.slice(0, 50)));
   if (errors.length || bad.length) throw new Error(`${name}: ${errors.join(' | ')} ${JSON.stringify(bad)}`);
   return p;
 }
