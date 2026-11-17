@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <link rel="icon" href="data:,">
+ <style>
+ @font-face{font-family:Inter;src:url("__INTER_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ @font-face{font-family:Literata;src:url("__LITERATA_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ @font-face{font-family:Literata;src:url("__LITERATA_ITALIC__") format("woff2");font-weight:100 900;font-style:italic;font-display:block}
+ @font-face{font-family:NotoArmenian;src:url("__ARMENIAN_FONT__") format("woff2");font-weight:100 900;font-display:block}
+ *{box-sizing:border-box;margin:0}
+ :root{--paper:#F8D2AD;--ink:#2B1E14;--hl:#F3B565}
+ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--paper)}
+ /* the picture fills the top; its own calm lower part melts into the paper colour */
+ .pics{position:absolute;left:0;top:0;width:1080px;height:1200px;overflow:hidden}
+ .pic{position:absolute;inset:0;opacity:0;will-change:transform,opacity}
+ .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+ .melt{position:absolute;left:0;right:0;top:820px;height:400px;background:linear-gradient(180deg,transparent,var(--paper) 85%)}
+ .grain{position:absolute;inset:0;opacity:.06;mix-blend-mode:multiply;background-image:radial-gradient(#000 0.6px,transparent 0.7px);background-size:3px 3px;pointer-events:none}
+ /* text column: lines scroll up, the spoken line is clear, the others fade */
+ .text{position:absolute;left:70px;right:70px;top:1010px;height:780px;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 120px,#000 560px,transparent 760px);mask-image:linear-gradient(180deg,transparent 0,#000 120px,#000 560px,transparent 760px)}
+ .col{position:absolute;left:0;right:0;top:0;will-change:transform}
+ .ln{font:500 60px/1.32 Literata,serif;color:var(--ink);text-align:center;opacity:.28;padding:8px 0}
+ .ln.gap{height:44px;padding:0}
+ .ln .hl{position:relative;font-style:italic;font-weight:600}
+ .ln .hl:before{content:"";position:absolute;left:-6px;right:-6px;top:14%;bottom:8%;border-radius:10px;background:var(--hl);opacity:.75;transform-origin:left;transform:scaleX(var(--p,0));z-index:-1}
+ .ln span{position:relative;z-index:1}
+ /* opening hook, over the picture */
+ .hook{position:absolute;left:0;right:0;top:250px;text-align:center;opacity:0}
+ .hook b{display:inline-block;padding:20px 40px;border-radius:99px;background:#FFF7EEe6;box-shadow:0 18px 40px #4a2a1026;font:600 italic 52px Literata,serif;color:var(--ink)}
+ .hook i{display:block;margin-top:16px;font:600 34px NotoArmenian;font-style:normal;color:#FFF7EE;text-shadow:0 3px 16px #0009}
+ .brand{position:absolute;left:0;right:0;bottom:70px;text-align:center;font:800 22px Inter;letter-spacing:6px;color:#2B1E1466}
+ /* ending */
+ .outro{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--paper);opacity:0;padding:0 90px}
+ .outro img{width:150px;height:150px;border-radius:38px}
+ .outro h2{margin-top:44px;font:700 74px/1.12 Literata,serif;color:var(--ink)}
+ .outro h2 em{color:#B5651D}
+ .outro p{margin-top:24px;font:600 38px/1.4 NotoArmenian,Inter;color:#5b4636}
+ .outro .follow{margin-top:40px;font:700 30px NotoArmenian,Inter;color:var(--ink)}
+ .outro .signature{margin-top:50px;font:800 24px Inter;letter-spacing:5px;color:#2B1E1488}
+ </style>
+</head>
+<body>
+ <div class="pics" id="pics"></div><div class="melt"></div><div class="grain"></div>
+ <div class="hook" id="hook"><b id="hookEn"></b><i id="hookHy"></i></div>
+ <div class="text"><div class="col" id="col"></div></div>
+ <div class="brand">@ENGLISH.READINGROOM</div>
+ <section class="outro" id="outro"><img src="__LOGO_DATA__" alt=""><h2>Did you <em>understand</em> it?</h2><p>Գրի՛ր մեկնաբանություններում, թե որ բառերն էին նոր քեզ համար</p><span class="follow">Անհատական և խմբային դասեր · գրե՛ք Direct-ով</span><span class="signature">@ENGLISH.READINGROOM</span></section>
+ <script>
+ const clamp=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-x,3), io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+ let D=null,T=null,L=[];
+ window.configure=(data,timeline)=>{D=data;T=timeline;
+  document.documentElement.style.setProperty('--paper',data.paper);
+  pics.innerHTML=data.pics.map((p,i)=>`<div class="pic" id="p${i}"><img src="${p}"></div>`).join('');
+  hookEn.textContent=data.hook; hookHy.textContent=data.hook_hy;
+  let html='', k=0;
+  data.scenes.forEach((sc,s)=>{ if(s) html+='<div class="ln gap"></div>';
+   sc.forEach(line=>{ const parts=line.replace(/'/g,'’').split(/(\[[^\]]+\])/).filter(Boolean)
+      .map(p=>p.startsWith('[')?`<span class="hl">${p.slice(1,-1)}</span>`:`<span>${p}</span>`).join('');
+     html+=`<div class="ln" id="l${k++}">${parts}</div>`; }); });
+  col.innerHTML=html; L=[...col.querySelectorAll('.ln:not(.gap)')];
+ };
+ window.fit=()=>{};
+ const anchor=200;   // where the spoken line sits inside the text window
+ window.seek=t=>{
+  // pictures: slow push-in, soft dissolve between scenes
+  T.scenes.forEach((s,i)=>{ const el=document.getElementById('p'+i); const a=i===0?1:io(clamp((t-s.at)/.6)); const next=i+1<T.scenes.length?clamp((t-T.scenes[i+1].at-.6)/.01):0;
+   const vis=t>=s.at-(i===0?99:0)&&!next; el.style.opacity=vis?a:0; el.style.zIndex=i;
+   const k=clamp((t-s.at)/(s.end-s.at+1)); el.style.transform=`scale(${1.04+.06*k}) translateY(${-14*k}px)`; });
+  // which line is being read
+  let cur=0; T.lines.forEach((l,i)=>{ if(t>=l.at-.25) cur=i; });
+  const prev=Math.max(0,cur-1), l=T.lines[cur];
+  const y0=L[prev].offsetTop, y1=L[cur].offsetTop, m=io(clamp((t-(l.at-.45))/.45));
+  col.style.transform=`translateY(${anchor-(y0+(y1-y0)*(cur===0?1:m))}px)`;
+  L.forEach((el,i)=>{ const on=i===cur&&t>=l.at-.35, done=i<cur;
+   el.style.opacity=on?1:(done?.42:.22); el.style.transform=`scale(${on?1:.97})`;
+   const hl=el.querySelector('.hl'); if(hl){ const w=T.lines[i].words, a=w.length?w[0][0]:T.lines[i].at; const p=done?1:(i===cur?clamp((t-a-.15)/.8):0); hl.style.setProperty('--p',ease(p)); } });
+  // hook
+  const h=ease(clamp((t-.15)/.5))*(1-clamp((t-2.2)/.4)); hook.style.opacity=h; hook.style.transform=`translateY(${(1-ease(clamp((t-.15)/.5)))*20}px)`;
+  col.parentNode.style.opacity=ease(clamp((t-.6)/.6));
+  // ending
+  outro.style.opacity=ease(clamp((t-(T.total-3.2))/.7));
+ };
+ </script>
+</body>
+</html>
