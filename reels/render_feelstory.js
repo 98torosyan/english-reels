@@ -20,7 +20,7 @@ function clip(id, n, text) {
 
 function timeline(st) {
   const plays = []; const lines = []; const scenes = [];
-  let t = 1.6; let n = 0;
+  let t = 0.9; let n = 0;
   st.scenes.forEach((sc, s) => {
     if (s) t += 0.5;
     const s0 = t - 0.35;
