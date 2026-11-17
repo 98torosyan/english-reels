@@ -41,12 +41,21 @@ def main():
             if len(w) > 1 and w not in ALLOW: words.setdefault(w, where)
     out = subprocess.run(["hunspell", "-d", DICT, "-l"], input="\n".join(words), capture_output=True, text=True).stdout.split()
     bad = sorted(set(out))
+    def near(a, b):   # one letter typed wrong, missing or extra
+        if abs(len(a) - len(b)) > 1 or a == b: return False
+        if len(a) == len(b): return sum(x != y for x, y in zip(a, b)) == 1
+        s, l = (a, b) if len(a) < len(b) else (b, a)
+        return any(l[:i] + l[i + 1:] == s for i in range(len(l)))
+    typos = []
     for w in bad:
         sug = subprocess.run(["hunspell", "-d", DICT, "-a"], input=w, capture_output=True, text=True).stdout.splitlines()
         hint = next((l.split(":", 1)[1].strip() for l in sug if l.startswith("&")), "")
-        print(f"? {w}  ({words[w]})" + (f"  → {hint[:80]}" if hint else ""))
-    print(f"{len(bad)} unknown word(s) in {len(words)} distinct Armenian words from {len(pairs)} texts.")
-    if "--strict" in sys.argv and bad: sys.exit(1)
+        close = [x for x in (h.strip() for h in hint.split(",")) if x and " " not in x and near(w, x.lower())]
+        # the dictionary misses many inflected forms, so only a near miss of a known word is reported as a likely typo
+        if close and not any(w.startswith(c) or c.startswith(w) for c in close):
+            typos.append(w); print(f"? {w}  ({words[w]})  → {', '.join(close[:4])}")
+    print(f"{len(typos)} likely typo(s), {len(bad)} words not in the dictionary, in {len(words)} distinct Armenian words from {len(pairs)} texts.")
+    if "--strict" in sys.argv and typos: sys.exit(1)
 
 
 if __name__ == "__main__":
