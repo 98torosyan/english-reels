@@ -86,3 +86,14 @@ Open:
 - New series "Everyday English" (reels/render_routine.js, reels/data/routine.json, publish/plan_routine.py): 11 stories from 3x3 storyboards, Nov 14–24 at 19:00. ALL HELD as draft — the owner will say when to publish (set review_status to "staged").
 - Open: owner's go-ahead for Everyday English; mother to review the Armenian of routine.json; next storyboards should ideally be 9:16 panels.
 - (morning) Title mask no longer clips descenders (kinetic.js K.roomy, words10); story videos: next sentence appears only after the previous one has gone. All 94 upcoming videos re-rendered and verified (loudness, clipping, black frames). Loudness levelling limiter at 0.7. Story videos paper-boat/picnic/concert/bottle approved by the owner: Nov 14–17 at 21:00. Held (draft, waiting for the owner): 12 Everyday English incl. restaurant dialogue, 4 real-life story videos (english-life, london-day, wallet, interview). Owner keeps the high daily volume while the page is new.
+
+## 2026-11-17
+- Feelstory (reels/render_feelstory.js, reels/data/feelstory.json, publish/plan_feelstory.py): emotional stories, picture melting into paper, every word lights up as spoken, Microsoft voices, felt-piano bed, designed grid covers. Dog-window published 14:12; teacher / old-coat / lunchbox / grandma daily 22:00 Nov 18–21.
+- A Day in Opposites (carousels/render_opposites.js stills, carousels/render_opposites_video.js animated 4:5 video slides, carousels/data/opposites.json). Day 1 published 14:46 as a carousel of 6 videos + quiz still. publish.py now creates VIDEO carousel items and retries a failed one once.
+- Speed: compact Real-ESRGAN models (panels in ~2 min); renderFrames renders on several identical pages (RENDER_WORKERS), output identical (PSNR 52 dB).
+- Voice: tools/voice_finish.py in voices.yml — Pedalboard polish + ctc-forced-aligner word times, clamped to the end of speech. 718 clips done; start error 0.095 s → 0.043 s.
+- Safety: run_due waits until every media link answers; watchdog warns when the plan runs dry (< 4 days); tools/check_code.py + code-check.yml on every push (Python, JS incl. template scripts, data, queue validation) and the full system check every night (opens an issue on failure).
+- Covers: tools/make_covers.js (classic and story reels, one warm paper); 19 older reels restaged in the clean design (no "No." labels) with fresh covers.
+- QC: English check covers feelstory/opposites (caught Mom → Mum); voice check ignores quotes/spacing. Armenian Hunspell check tried and removed (dictionary misses too many correct forms).
+- Control panel: tools/build_panel.py → private page with alerts, next 7 days, grid preview, queue by series.
+- Open: token with instagram_manage_insights; held Everyday English clips flagged by voice QC (stir/keys/Hyde Park) need re-voicing before release; British vs American and school words10 pictures awaited.
