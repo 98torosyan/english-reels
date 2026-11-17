@@ -44,7 +44,7 @@ body{position:relative;color:var(--ink);font-family:Inter}
 .w{text-align:center}
 .w b{display:block;font:700 76px/1 Lit;letter-spacing:-1.5px;white-space:nowrap}
 .w b .c{display:inline-block;will-change:transform,opacity,filter}
-.w span{display:block;margin-top:14px;font:600 36px Arm}
+.w .sub span{display:block;margin-top:14px;font:600 36px Arm}
 .w small{display:block;margin-top:8px;font:500 27px Arm;color:var(--muted)}
 .w small em{font:500 25px Inter;font-style:normal;opacity:.75}
 .w .sub{will-change:transform,opacity}
@@ -55,7 +55,7 @@ body{position:relative;color:var(--ink);font-family:Inter}
 .sent p .x{display:inline-block;will-change:transform,opacity}
 .sent p mark{position:relative;background:none;color:inherit;font-style:italic;font-weight:600;padding:0 3px}
 .sent p mark:before{content:"";position:absolute;left:0;right:0;top:58%;bottom:4%;background:#F3B56599;transform-origin:left;transform:scaleX(var(--p,0));z-index:-1}
-.sent span{display:block;margin-top:14px;font:500 29px/1.45 Arm;color:var(--muted)}
+.sent > span{display:block;margin-top:14px;font:500 29px/1.45 Arm;color:var(--muted)}
 .brand{position:absolute;left:0;right:0;bottom:34px;text-align:center;font:800 19px Inter;letter-spacing:6px;color:#2B1E1455}`;
 }
 
@@ -147,7 +147,7 @@ async function renderVideo(browser, baseUrl, name, body, script, T, plays, out) 
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(work)}`, 1080, 1350);
   await page.evaluate((t) => { window.configure(t); window.seek(0); }, T);
-  await page.evaluate(() => Promise.all([document.fonts.ready, ...[...document.images].map((i) => i.decode().catch(() => null))]));
+  await page.evaluate(() => Promise.all([document.fonts.load('700 76px Lit', 'Ab'), document.fonts.load('italic 600 41px Lit', 'Ab'), document.fonts.load('500 41px Lit', 'Ab'), document.fonts.load('600 36px Arm', 'Աբ'), document.fonts.load('800 20px Inter', 'Ab'), document.fonts.ready, ...[...document.images].map((i) => i.decode().catch(() => null))]));
   const bad = await page.evaluate(() => [...document.querySelectorAll('.w b,.sent p,#title')].filter((e) => e.getBoundingClientRect().right > 1040 || e.getBoundingClientRect().left < 40).map((e) => e.textContent));
   if (errors.length || bad.length) throw new Error(`${name}: ${errors.join(' | ')} ${JSON.stringify(bad)}`);
   const frames = path.join(utils.OUTPUT, `.frames-${name}`); fs.rmSync(frames, { recursive: true, force: true });
