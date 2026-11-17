@@ -56,7 +56,10 @@ def main():
             if isinstance(u, dict): u = u.get("image_url") or u.get("video_url")
             if not u.startswith(BASE): fail(f"{iid}: media outside the media site: {u}"); continue
             f = media / u[len(BASE):]
-            if not f.exists(): fail(f"{iid}: media file missing in media repo: {u[len(BASE):]}"); continue
+            if not f.exists():
+                # rendered just in time by "Render ahead" (tools/render_ahead.py): fine until 2 days before it is due
+                if i.get("render") and when > now + dt.timedelta(days=2): continue
+                fail(f"{iid}: media file missing in media repo: {u[len(BASE):]}"); continue
             if f.suffix == ".mp4":
                 dim, secs, audio = ffprobe(f)
                 if dim not in ((1080, 1920), (1872, 3328), (1080, 1350), (1872, 2340)): fail(f"{iid}: video size {dim}")

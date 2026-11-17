@@ -13,11 +13,14 @@ TAGS = "#learnenglish #անգլերեն #անգլերենիդասեր #EnglishSt
 TAIL = ("Անհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n" + TAGS)
 
 
+INTRO = {"countries": "Ճամփորդում ենք աշխարհով և սովորում անգլերեն։"}
+
+
 def caption(s):
     en = "\n".join(" ".join(sc).replace("[", "").replace("]", "") for sc in s["scenes"])
     hy = "\n".join(" ".join(sc) for sc in s["scenes_hy"])
     words = sorted({m for sc in s["scenes"] for l in sc for m in re.findall(r"\[([^\]]+)\]", l)}, key=str.lower)
-    return (f"{s['title_hy']} · {s['title']} · {s['level']}\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\n{en}\n\n"
+    return (f"{s['title_hy']} · {s['title']} · {s['level']}\n\n{INTRO.get(s.get('style'), 'Մի կարճ պատմություն, որ կարդում ենք անգլերեն։')}\n\n{en}\n\n"
             f"Թարգմանություն՝\n{hy}\n\nԸնդգծված արտահայտություններ՝ {', '.join(words)}\n\n"
             "Լսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\n" + TAIL)
 
@@ -37,7 +40,7 @@ def main():
         media = {"video_url": f"{BASE}/{rid}/feelstory-{i}.mp4"}
         if (OUT / f"feelstory-{i}-cover.jpg").exists():   # a designed cover keeps the profile grid beautiful
             shutil.copy2(OUT / f"feelstory-{i}-cover.jpg", folder / "cover.jpg"); media["cover_url"] = f"{BASE}/{rid}/cover.jpg"
-        new.append({"id": rid, "date": day, "time": a.time, "timezone": "Asia/Yerevan", "type": "REEL", "format": "REELS", "kind": "feelstory",
+        new.append({"id": rid, "date": day, "time": a.time, "timezone": "Asia/Yerevan", "type": "REEL", "format": "REELS", "kind": "countries" if i.startswith("country-") else "feelstory",
                     "content_id": i, "title": f"Story {data[i]['title']}", "caption": caption(data[i]), "review_status": "draft" if a.hold else "staged",
                     **({} if "cover_url" in media else {"thumb_offset": 4000}), "media": media})
         print("feelstory", day, i, flush=True)
