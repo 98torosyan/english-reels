@@ -70,7 +70,7 @@ function coverHtml(st, baseUrl, paper, pic) {
 
 // paper colour = the average colour of the bottom strip of the first picture, so the picture melts into it
 function paperColour(st) {
-  const f = path.join(utils.ROOT, 'assets', st.pics_dir || `feelstory/${st.id}`, '1.jpg');
+  const f = st.pics ? path.join(utils.ROOT, 'assets', st.pics[0]) : path.join(utils.ROOT, 'assets', st.pics_dir || `feelstory/${st.id}`, '1.jpg');
   const r = spawnSync(utils.FFmpeg, ['-v', 'error', '-i', f, '-vf', 'crop=iw:60:0:ih-60,scale=1:1', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], { encoding: 'buffer' });
   const [R, G, B] = r.stdout; return `rgb(${R},${G},${B})`;
 }
@@ -89,7 +89,7 @@ async function main() {
     const html = utils.htmlAssets(fs.readFileSync(path.join(__dirname, 'templates', 'feelstory.html'), 'utf8'), baseUrl)
       .replaceAll('__LITERATA_ITALIC__', `${baseUrl}/node_modules/@fontsource-variable/literata/files/literata-latin-wght-italic.woff2`);
     const htmlPath = path.join(work, 'feelstory.html'); fs.writeFileSync(htmlPath, html, 'utf8');
-    const pics = st.scenes.map((_, i) => `${baseUrl}/assets/${st.pics_dir || `feelstory/${st.id}`}/${i + 1}.jpg`);   // pics_dir lets a series reuse pictures (e.g. countries)
+    const pics = st.pics ? st.pics.map((f) => `${baseUrl}/assets/${f}`) : st.scenes.map((_, i) => `${baseUrl}/assets/${st.pics_dir || `feelstory/${st.id}`}/${i + 1}.jpg`);   // pics_dir lets a series reuse pictures (e.g. countries)
     const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
     const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
     await page.evaluate(({ d, t }) => { window.configure(d, t); window.seek(0); }, { d: { ...st, pics, paper: paperColour(st) }, t: { ...T, plays: [] } });

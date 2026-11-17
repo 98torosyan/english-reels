@@ -1,7 +1,7 @@
 name: Sharpen panels
 on:
   push:
-    paths: ["assets/picstory/*/src.png", "assets/storyvideo/*/src.png", "assets/routine/*/src.png", "assets/routine/*/photo", "assets/feelstory/*/src.png", "assets/feelstory/*/photo", "assets/opposites/*/src.png", "assets/countries/*/src.png", "assets/countries/*/boxes", "tools/upscale_panels.py"]
+    paths: ["assets/picstory/*/src.png", "assets/storyvideo/*/src.png", "assets/routine/*/src.png", "assets/routine/*/photo", "assets/feelstory/*/src.png", "assets/feelstory/*/photo", "assets/opposites/*/src.png", "assets/countries/*/src.png", "assets/minute/*/src.png", "assets/countries/*/boxes", "tools/upscale_panels.py"]
   workflow_dispatch:
 permissions:
   contents: write
@@ -28,7 +28,7 @@ jobs:
         run: python tools/upscale_panels.py --sharp --budget 75
       - name: Save
         run: |
-          git add assets/picstory assets/storyvideo assets/routine assets/feelstory assets/opposites assets/countries
+          git add assets/picstory assets/storyvideo assets/routine assets/feelstory assets/opposites assets/countries assets/minute
           if ! git diff --cached --quiet; then
             git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
             git commit -m "Կադրեր՝ սրված (Real-ESRGAN)"

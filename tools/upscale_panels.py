@@ -68,7 +68,7 @@ def main():
             return out
         model = _up
     done = 0
-    for src in sorted(p for d in ("picstory", "storyvideo", "routine", "feelstory", "opposites", "countries") for p in ROOT.glob(f"assets/{d}/*/src.png")):
+    for src in sorted(p for d in ("picstory", "storyvideo", "routine", "feelstory", "opposites", "countries", "minute") for p in ROOT.glob(f"assets/{d}/*/src.png")):
         d = src.parent; mark = d / "panels.json"; h = hashlib.sha1(src.read_bytes() + ((d / "pick").read_bytes() if (d / "pick").exists() else b"") + ((d / "boxes").read_bytes() if (d / "boxes").exists() else b"")).hexdigest()
         kind = "photo" if (d / "photo").exists() else "art"   # photorealistic storyboards get the natural-photo model
         want = {"src": h, "sharp": sharp, "model": kind}
