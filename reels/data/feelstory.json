@@ -1,22 +1,306 @@
 {
-  "note": "Short emotional stories, one picture per scene (assets/feelstory/<id>/1..6.jpg, the lower third left calm for text). [brackets] = highlighted phrase. Armenian translation goes in the caption.",
-  "stories": [
-    {"id": "dog-window", "title": "The dog at the window", "title_hy": "Շունը պատուհանի մոտ", "level": "A2", "voice": "en-GB-RyanNeural",
-     "scenes": [
-       ["Every morning, I leave for work.", "Bella watches me [from the door]."],
-       ["Then she goes to the window,", "and she [waits]."],
-       ["Hours pass.", "The sun moves across the sky.", "She [doesn't move]."],
-       ["On the bus home, I [check my phone].", "Messages. Emails. News.", "I don't even [look up]."],
-       ["But when I open the door,", "she runs to me", "like I'm [the best thing in the world]."],
-       ["Tonight, I [put my phone down].", "Maybe someone is [waiting for you], too."]
-     ],
-     "scenes_hy": [
-       ["Ամեն առավոտ ես գնում եմ աշխատանքի։", "Բելլան ինձ նայում է դռան մոտից։"],
-       ["Հետո նա գնում է պատուհանի մոտ", "և սպասում։"],
-       ["Ժամեր են անցնում։", "Արևը շարժվում է երկնքով։", "Նա տեղից չի շարժվում։"],
-       ["Տուն վերադառնալիս ավտոբուսում ես նայում եմ հեռախոսս։", "Նամակներ։ Էլ. նամակներ։ Լուրեր։", "Ես նույնիսկ գլուխս չեմ բարձրացնում։"],
-       ["Բայց երբ բացում եմ դուռը,", "նա վազում է դեպի ինձ,", "կարծես ես աշխարհում ամենալավն եմ։"],
-       ["Այս երեկո ես մի կողմ եմ դնում հեռախոսս։", "Գուցե ինչ-որ մեկը քեզ էլ է սպասում։"]
-     ]}
-  ]
+ "note": "Short emotional stories, one picture per scene (assets/feelstory/<id>/1..6.jpg, the lower third left calm for text). [brackets] = highlighted phrase. Armenian translation goes in the caption.",
+ "stories": [
+  {
+   "id": "dog-window",
+   "title": "The dog at the window",
+   "title_hy": "Շունը պատուհանի մոտ",
+   "level": "A2",
+   "voice": "en-GB-RyanNeural",
+   "scenes": [
+    [
+     "Every morning, I leave for work.",
+     "Bella watches me [from the door]."
+    ],
+    [
+     "Then she goes to the window,",
+     "and she [waits]."
+    ],
+    [
+     "Hours pass.",
+     "The sun moves across the sky.",
+     "She [doesn't move]."
+    ],
+    [
+     "On the bus home, I [check my phone].",
+     "Messages. Emails. News.",
+     "I don't even [look up]."
+    ],
+    [
+     "But when I open the door,",
+     "she runs to me",
+     "like I'm [the best thing in the world]."
+    ],
+    [
+     "Tonight, I [put my phone down].",
+     "Maybe someone is [waiting for you], too."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Ամեն առավոտ ես գնում եմ աշխատանքի։",
+     "Բելլան ինձ նայում է դռան մոտից։"
+    ],
+    [
+     "Հետո նա գնում է պատուհանի մոտ",
+     "և սպասում։"
+    ],
+    [
+     "Ժամեր են անցնում։",
+     "Արևը շարժվում է երկնքով։",
+     "Նա տեղից չի շարժվում։"
+    ],
+    [
+     "Տուն վերադառնալիս ավտոբուսում ես նայում եմ հեռախոսս։",
+     "Նամակներ։ Էլ. նամակներ։ Լուրեր։",
+     "Ես նույնիսկ գլուխս չեմ բարձրացնում։"
+    ],
+    [
+     "Բայց երբ բացում եմ դուռը,",
+     "նա վազում է դեպի ինձ,",
+     "կարծես ես աշխարհում ամենալավն եմ։"
+    ],
+    [
+     "Այս երեկո ես մի կողմ եմ դնում հեռախոսս։",
+     "Գուցե ինչ-որ մեկը քեզ էլ է սպասում։"
+    ]
+   ]
+  },
+  {
+   "id": "teacher",
+   "title": "The teacher who stayed",
+   "title_hy": "Ուսուցչուհին, որ մնաց",
+   "level": "A2",
+   "voice": "en-GB-RyanNeural",
+   "scenes": [
+    [
+     "Everyone went home after class.",
+     "I [stayed at my desk], alone."
+    ],
+    [
+     "Miss Anna [sat down next to me].",
+     "She didn't ask why."
+    ],
+    [
+     "She opened a book,",
+     "and we read it [together], slowly."
+    ],
+    [
+     "Every Tuesday, [after class],",
+     "she [waited for me]."
+    ],
+    [
+     "Twenty years later,",
+     "I [teach English], too."
+    ],
+    [
+     "Today, a boy [stayed at his desk].",
+     "So I [sat down next to him]."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Դասից հետո բոլորը գնացին տուն։",
+     "Ես մնացի իմ նստարանի մոտ՝ մենակ։"
+    ],
+    [
+     "Միս Աննան նստեց իմ կողքին։",
+     "Նա չհարցրեց՝ ինչու։"
+    ],
+    [
+     "Նա բացեց մի գիրք,",
+     "և մենք այն միասին կարդացինք՝ դանդաղ։"
+    ],
+    [
+     "Ամեն երեքշաբթի, դասից հետո,",
+     "նա սպասում էր ինձ։"
+    ],
+    [
+     "Քսան տարի անց",
+     "ես էլ եմ անգլերեն դասավանդում։"
+    ],
+    [
+     "Այսօր մի տղա մնաց իր նստարանի մոտ։",
+     "Ու ես նստեցի նրա կողքին։"
+    ]
+   ]
+  },
+  {
+   "id": "old-coat",
+   "title": "Dad's old coat",
+   "title_hy": "Հայրիկի հին վերարկուն",
+   "level": "A2",
+   "voice": "en-GB-RyanNeural",
+   "scenes": [
+    [
+     "Every winter, Dad wore",
+     "[the same old coat]."
+    ],
+    [
+     "My friends' dads had new jackets.",
+     "I [was ashamed] of him."
+    ],
+    [
+     "'Why don't you [buy a new one]?'",
+     "He only smiled."
+    ],
+    [
+     "But every winter, I got",
+     "[new boots] and a warm jacket."
+    ],
+    [
+     "Years later, I [found the coat].",
+     "There was [a note] in the pocket."
+    ],
+    [
+     "'Boots for my son. [Next year], a coat for me.'",
+     "Now I [wear his coat]."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Ամեն ձմեռ հայրիկը հագնում էր",
+     "նույն հին վերարկուն։"
+    ],
+    [
+     "Ընկերներիս հայրերը նոր բաճկոններ ունեին։",
+     "Ես ամաչում էի նրանից։"
+    ],
+    [
+     "«Ինչո՞ւ նորը չես գնում»։",
+     "Նա միայն ժպտաց։"
+    ],
+    [
+     "Բայց ամեն ձմեռ ես ստանում էի",
+     "նոր կոշիկներ ու տաք բաճկոն։"
+    ],
+    [
+     "Տարիներ անց ես գտա վերարկուն։",
+     "Գրպանում մի գրություն կար։"
+    ],
+    [
+     "«Կոշիկներ տղայիս համար։ Հաջորդ տարի՝ վերարկու ինձ համար»։",
+     "Հիմա ես եմ հագնում նրա վերարկուն։"
+    ]
+   ]
+  },
+  {
+   "id": "lunchbox",
+   "title": "Notes in my lunchbox",
+   "title_hy": "Գրություններ նախաճաշի տուփում",
+   "level": "A2",
+   "voice": "en-GB-SoniaNeural",
+   "scenes": [
+    [
+     "Every day, in my lunchbox,",
+     "there was [a little note] from Mom."
+    ],
+    [
+     "'You can do it.' 'I'm proud of you.'",
+     "I [hid them] from my friends."
+    ],
+    [
+     "At fifteen, I said,",
+     "'Mom, [please stop].' And she did."
+    ],
+    [
+     "Now I live [far from home].",
+     "I eat lunch [at my desk], alone."
+    ],
+    [
+     "But I never [threw them away].",
+     "I [kept every note] in a box."
+    ],
+    [
+     "Today, I wrote [a note for her].",
+     "'I'm proud of you, Mom.'"
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Ամեն օր նախաճաշի տուփիս մեջ",
+     "մայրիկից մի փոքրիկ գրություն կար։"
+    ],
+    [
+     "«Դու կկարողանաս»։ «Ես հպարտ եմ քեզնով»։",
+     "Ես դրանք թաքցնում էի ընկերներիցս։"
+    ],
+    [
+     "Տասնհինգ տարեկանում ասացի.",
+     "«Մամ, խնդրում եմ, էլ մի գրիր»։ Եվ նա դադարեց։"
+    ],
+    [
+     "Հիմա ես ապրում եմ տնից հեռու։",
+     "Ճաշում եմ աշխատասեղանիս մոտ՝ մենակ։"
+    ],
+    [
+     "Բայց ես դրանք երբեք չեմ նետել։",
+     "Ամեն գրություն պահել եմ մի տուփում։"
+    ],
+    [
+     "Այսօր ես էլ նրա համար գրեցի։",
+     "«Ես հպարտ եմ քեզնով, մամ»։"
+    ]
+   ]
+  },
+  {
+   "id": "grandma",
+   "title": "Grandma's bread",
+   "title_hy": "Տատիկի հացը",
+   "level": "A2",
+   "voice": "en-GB-SoniaNeural",
+   "scenes": [
+    [
+     "Every Sunday, I [baked bread]",
+     "with Grandma."
+    ],
+    [
+     "She never used [a recipe].",
+     "'Your hands will remember,' she said."
+    ],
+    [
+     "Then I grew up,",
+     "and my Sundays [got busy]."
+    ],
+    [
+     "This year, her kitchen",
+     "[is quiet]."
+    ],
+    [
+     "Yesterday, I tried to [bake her bread].",
+     "No recipe. [Just my hands]."
+    ],
+    [
+     "And my hands [remembered].",
+     "Now I bake it [with my daughter]."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Ամեն կիրակի ես հաց էի թխում",
+     "տատիկի հետ։"
+    ],
+    [
+     "Նա երբեք բաղադրատոմս չէր օգտագործում։",
+     "«Ձեռքերդ կհիշեն»,— ասում էր նա։"
+    ],
+    [
+     "Հետո ես մեծացա,",
+     "և կիրակիներս զբաղված դարձան։"
+    ],
+    [
+     "Այս տարի նրա խոհանոցը",
+     "լուռ է։"
+    ],
+    [
+     "Երեկ փորձեցի թխել նրա հացը։",
+     "Առանց բաղադրատոմսի։ Միայն ձեռքերով։"
+    ],
+    [
+     "Ու ձեռքերս հիշեցին։",
+     "Հիմա այն թխում եմ աղջկաս հետ։"
+    ]
+   ]
+  }
+ ]
 }
