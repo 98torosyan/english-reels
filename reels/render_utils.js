@@ -102,8 +102,9 @@ async function renderFrames(page, duration, framesDirectory, posterPath, posterT
   if (want > 1 && page.__url && page.__steps) {
     for (let k = 1; k < want; k += 1) {
       try {
-        const p = await page.context().newPage();
-        await p.setViewportSize(page.viewportSize());
+        const dpr = await (page.__evaluate || page.evaluate.bind(page))(() => window.devicePixelRatio);
+        const browser = page.context().browser();
+        const p = browser ? await browser.newPage({ viewport: page.viewportSize(), deviceScaleFactor: dpr }) : await page.context().newPage();
         await p.goto(page.__url, { waitUntil: 'networkidle' });
         await p.evaluate(() => document.fonts.ready);
         for (const [fn, arg] of page.__steps) await p.evaluate(fn, arg);
@@ -125,7 +126,7 @@ async function renderFrames(page, duration, framesDirectory, posterPath, posterT
     }
   };
   await Promise.all(pages.map(run));
-  for (const p of pages.slice(1)) await p.close();
+  for (const p of pages.slice(1)) await p.close().catch(() => {});
   process.stdout.write(`  rendered ${totalFrames} frames (${pages.length} page${pages.length > 1 ? 's' : ''}).\n`);
   return { totalFrames, fps };
 }
