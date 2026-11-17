@@ -13,6 +13,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def panels(src):
     im = Image.open(src).convert("RGB"); a = np.asarray(im).astype(int); white = a.min(axis=2) > 232
+    if (src.parent / "single").exists():   # one full picture, not a grid: keep its shape (cropped to "boxes" if it has a frame)
+        b = src.parent / "boxes"
+        yield im.crop(tuple(json.loads(b.read_text())[0])) if b.exists() else im
+        return
     boxes = src.parent / "boxes"   # optional: exact panel boxes [x0, y0, x1, y1] when a sheet has frames instead of white gutters
     if boxes.exists():
         for x0, y0, x1, y1 in json.loads(boxes.read_text()):
@@ -77,7 +81,10 @@ def main():
             left += 1; continue
         for n, p in enumerate(panels(src), 1):
             if model is not None: p = model(p, kind)
-            p.resize((1080, 1080), Image.LANCZOS).save(d / f"{n}.jpg", quality=93)
+            if (d / "single").exists():   # single pictures are kept at 4K width (2160 px) for the 1872x3328 reels
+                p.resize((2160, round(2160 * p.size[1] / p.size[0])), Image.LANCZOS).save(d / f"{n}.jpg", quality=94)
+            else:
+                p.resize((1080, 1080), Image.LANCZOS).save(d / f"{n}.jpg", quality=93)
         mark.write_text(json.dumps(want)); done += 1; print("panels:", d.name, kind, "sharp" if sharp else "plain")
     print(done, "storyboard(s) processed,", left, "left")
     Path("panels_left.txt").write_text(str(left))

@@ -183,7 +183,7 @@ async function renderStory(browser, baseUrl, slug, part, outputName) {
   const htmlPath = path.join(working, 'story.html');
   fs.writeFileSync(htmlPath, buildStoryHtml(data, baseUrl), 'utf8');
 
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: utils.DPR });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
   const layout = await measureStory(page);
   console.log(`Story ${slug} part ${part}: ${JSON.stringify(layout)}`);
@@ -210,7 +210,7 @@ async function renderCard(browser, baseUrl, input, audio, outputName, correctInd
   const htmlPath = path.join(utils.ROOT, '.render-work', 'card.html');
   utils.ensureDirectory(path.dirname(htmlPath));
   fs.writeFileSync(htmlPath, buildCardHtml(baseUrl, input.kind || (outputName.split('-')[0])), 'utf8');
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: utils.DPR });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
   // Human pace: time to read and think before the answer, then hold so viewers can read it.
   const REVEAL = { quiz: 8.0, mistake: 5.0, word: 2.6 }[input.kind] || 3.4;

@@ -6,6 +6,10 @@ const { spawnSync } = require('node:child_process');
 const ROOT = path.resolve(__dirname, '..');
 const OUTPUT = path.resolve(ROOT, '..', '..', 'outputs', 'english-reels-samples');
 const FFmpeg = require('ffmpeg-static');
+// Pages are laid out at 1080 CSS px wide and captured at RENDER_SCALE: 26/15 gives 1872x3328 (9:16) and 1872x2340 (4:5),
+// the sharpest sizes Instagram's publishing accepts (max 1920 px wide, 3600 px tall). RENDER_SCALE=1 brings back 1080p.
+const DPR = Number(process.env.RENDER_SCALE || 26 / 15);
+const outSize = () => (process.env.VIDEO_SIZE || '1080x1920').split('x').map((v) => Math.round(Number(v) * DPR / 2) * 2);
 
 function startStaticServer() {
   const server = http.createServer((request, response) => {
@@ -174,8 +178,8 @@ function encodeVideo(framesDirectory, audioPath, audioStart, duration, outputPat
   }
   args.push(
     '-t', duration.toFixed(3),
-    '-vf', `scale=${(process.env.VIDEO_SIZE || '1080x1920').replace('x', ':')}:flags=lanczos,setsar=1`,
-    '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p',
+    '-vf', `scale=${outSize().join(':')}:flags=lanczos,setsar=1`,
+    '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-maxrate', '24M', '-bufsize', '48M', '-profile:v', 'high', '-level', '5.1', '-pix_fmt', 'yuv420p',
     '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
     '-movflags', '+faststart', path.resolve(outputPath),
   );
@@ -206,7 +210,7 @@ function verifyVideo(videoPath) {
   const fps = info.match(/(\d+(?:\.\d+)?) fps/);
   const duration = info.match(/Duration: (\d{2}:\d{2}:\d{2}\.\d{2})/);
   const hasAudio = /Audio:/.test(info);
-  if (!dimensions || dimensions[1] !== '1080' || dimensions[2] !== (process.env.VIDEO_SIZE || '1080x1920').split('x')[1] || !hasAudio) {
+  if (!dimensions || Number(dimensions[1]) !== outSize()[0] || Number(dimensions[2]) !== outSize()[1] || !hasAudio) {
     throw new Error(`Rendered video failed format validation: ${path.basename(videoPath)}`);
   }
   const q = qualityCheck(videoPath);
@@ -239,6 +243,8 @@ function paperTheme(html, skill) {
 }
 
 module.exports = {
+  DPR,
+  outSize,
   SKILL,
   paperTheme,
   ROOT,

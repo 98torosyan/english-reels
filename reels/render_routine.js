@@ -63,7 +63,7 @@ async function render(browser, baseUrl, st) {
   const htmlPath = path.join(work, 'routine.html'); fs.writeFileSync(htmlPath, html, 'utf8');
   const pics = st.lines.map((_, i) => `${baseUrl}/assets/routine/${st.id}/${i + 1}.jpg`);
   const data = { ...st, pics, color: PALETTE[(st.number - 1) % PALETTE.length] };
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: utils.DPR });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
   const plain = { ...T, plays: [] };
   await page.evaluate(({ d, t }) => { window.configure(d, t); window.seek(0); }, { d: data, t: plain });

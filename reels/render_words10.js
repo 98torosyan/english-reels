@@ -78,7 +78,7 @@ async function renderWords10(browser, baseUrl, list0) {
     .replaceAll('__GSAP__', `${baseUrl}/node_modules/gsap/dist`);
   const htmlPath = path.join(work, 'words10.html');
   fs.writeFileSync(htmlPath, html, 'utf8');
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: utils.DPR });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
   const plain = { ...T, plays: [] };
   await page.evaluate(({ d, t }) => { window.configure(d, t); window.seek(1.9); }, { d: list, t: plain });
@@ -102,7 +102,7 @@ async function renderWords10(browser, baseUrl, list0) {
   const sfx = [{ file: 'sfx-whoosh.wav', at: 0.25, gain: 0.3 }, ...T.rows.map((r) => ({ file: 'sfx-pop.wav', at: r.at, gain: 0.12 })),
     { file: 'sfx-whoosh.wav', at: T.total - 2.2, gain: 0.3 }];
   // story image: the same list, still, pointing to the reel
-  const sp = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+  const sp = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: utils.DPR });
   await utils.preparePage(sp, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
   await sp.evaluate(({ d, t, s }) => { window.configure({ ...d, story: true }, t); window.seek(0); window.fit(); window.seek(s); }, { d: list, t: plain, s: T.rows.at(-1).end + 0.3 });
   await sp.evaluate(() => document.fonts.ready);

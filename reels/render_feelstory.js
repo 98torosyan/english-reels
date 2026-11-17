@@ -90,7 +90,7 @@ async function main() {
       .replaceAll('__LITERATA_ITALIC__', `${baseUrl}/node_modules/@fontsource-variable/literata/files/literata-latin-wght-italic.woff2`);
     const htmlPath = path.join(work, 'feelstory.html'); fs.writeFileSync(htmlPath, html, 'utf8');
     const pics = st.pics ? st.pics.map((f) => `${baseUrl}/assets/${f}`) : st.scenes.map((_, i) => `${baseUrl}/assets/${st.pics_dir || `feelstory/${st.id}`}/${i + 1}.jpg`);   // pics_dir lets a series reuse pictures (e.g. countries)
-    const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+    const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: utils.DPR });
     const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
     await page.evaluate(({ d, t }) => { window.configure(d, t); window.seek(0); }, { d: { ...st, pics, paper: paperColour(st) }, t: { ...T, plays: [] } });
     await page.evaluate(() => Promise.all([document.fonts.load('600 60px Literata', 'Ab'), document.fonts.load('italic 600 60px Literata', 'Ab'), document.fonts.load('40px NotoArmenian', 'Աբ'),

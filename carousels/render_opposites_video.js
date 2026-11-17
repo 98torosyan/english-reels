@@ -144,7 +144,7 @@ function voiceTrack(plays, total, out) {
 async function renderVideo(browser, baseUrl, name, body, script, T, plays, out) {
   const work = path.join(utils.ROOT, '.render-work', `${name}.html`);
   fs.writeFileSync(work, `<!doctype html><html><head><meta charset="utf-8"><link rel="icon" href="data:,"><style>${css(baseUrl)}</style></head><body>${body}<script>${script}</script></body></html>`);
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: utils.DPR });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(work)}`, 1080, 1350);
   await page.evaluate((t) => { window.configure(t); window.seek(0); }, T);
   await page.evaluate(() => Promise.all([document.fonts.load('700 76px Lit', 'Ab'), document.fonts.load('italic 600 41px Lit', 'Ab'), document.fonts.load('500 41px Lit', 'Ab'), document.fonts.load('600 36px Arm', 'Աբ'), document.fonts.load('800 20px Inter', 'Ab'), document.fonts.ready, ...[...document.images].map((i) => i.decode().catch(() => null))]));

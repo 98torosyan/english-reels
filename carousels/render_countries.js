@@ -116,7 +116,7 @@ function voiceTrack(plays, total, out) {
 async function page(browser, baseUrl, name, body, script) {
   const work = path.join(utils.ROOT, '.render-work', `countries-${name}.html`);
   fs.writeFileSync(work, `<!doctype html><html><head><meta charset="utf-8"><link rel="icon" href="data:,"><style>${css(baseUrl)}</style></head><body>${body}${script ? `<script>${script}</script>` : ''}</body></html>`);
-  const p = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
+  const p = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: utils.DPR });
   const errors = await utils.preparePage(p, `${baseUrl}${utils.renderHtmlPath(work)}`, 1080, 1350);
   await p.evaluate(() => Promise.all([document.fonts.load('500 48px Lit', 'Ab'), document.fonts.load('italic 600 48px Lit', 'Ab'), document.fonts.load('600 38px Arm', 'Աբ'), document.fonts.load('800 20px Inter', 'Ab'), document.fonts.ready, ...[...document.images].map((i) => i.decode().catch(() => null))]));
   const bad = await p.evaluate(() => [...document.querySelectorAll('.sent,#title')].filter((e) => e.getBoundingClientRect().bottom > 1250 || e.scrollWidth > e.clientWidth + 2).map((e) => e.textContent.slice(0, 50)));

@@ -79,7 +79,7 @@ async function renderDialogue(browser, baseUrl, d) {
   const html = utils.paperTheme(utils.htmlAssets(fs.readFileSync(path.join(__dirname, 'templates', 'dialogue.html'), 'utf8'), baseUrl), 'speaking');
   const htmlPath = path.join(work, 'dialogue.html');
   fs.writeFileSync(htmlPath, html, 'utf8');
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: utils.DPR });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
   await page.evaluate(() => Promise.all([document.fonts.load('40px NotoArmenian', 'Աբգ'), document.fonts.load('600 48px Literata', 'Ab'), document.fonts.load('800 26px Inter', 'Ab')]).then(() => document.fonts.ready));
   const plain = { ...T, plays: [] };

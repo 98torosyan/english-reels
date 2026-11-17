@@ -82,7 +82,7 @@ async function renderSound(browser, baseUrl, item) {
     .replaceAll('__INTER_GREEK_FONT__', `${fonts}/inter-greek-wght-normal.woff2`);
   const htmlPath = path.join(work, 'sound.html');
   fs.writeFileSync(htmlPath, html, 'utf8');
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: utils.DPR });
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
   const plain = { ...T, plays: T.plays.map(({ key, at, end }) => ({ key, at, end })) };
   await page.evaluate(({ d, t }) => { window.configure(d, t); window.seek(0); }, { d: item, t: plain });
