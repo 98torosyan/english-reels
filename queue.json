@@ -2370,7 +2370,7 @@
       "content_id": "day-1",
       "title": "Opposites A Day in Opposites",
       "caption": "Մեկ օր՝ հակադիր բառերով · A Day in Opposites · A1–A2\n\nԼիլին և Սեմը մի օր են անցկացնում, իսկ մենք սովորում ենք 10 բառ՝ 5 հակադիր զույգով։\n\nopen ⇄ close — բացել ⇄ փակել\ngive ⇄ take — տալ ⇄ վերցնել\nremember ⇄ forget — հիշել ⇄ մոռանալ\nslow ⇄ fast — դանդաղ ⇄ արագ\nturn on ⇄ turn off — միացնել ⇄ անջատել\n\nԹերթի՛ր, լսի՛ր և կրկնի՛ր բարձրաձայն։\nՎերջին էջում թեստ կա. գրի՛ր պատասխաններդ մեկնաբանություններում։\nՊահի՛ր գրառումը, որ կրկնես։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishVocabulary #Yerevan",
-      "review_status": "staged",
+      "review_status": "published",
       "media": {
         "slides": [
           "https://98torosyan.github.io/english-reels-media/2026-11-17-opposites-day-1/01.mp4",
@@ -2392,7 +2392,9 @@
         ]
       },
       "attempts": 1,
-      "last_error": "Container 17931821298242156 ended with status ERROR."
+      "last_error": "Container 17931821298242156 ended with status ERROR.",
+      "published_at": "2026-11-17T14:46+04:00",
+      "ig_media_id": "18157971712536901"
     },
     {
       "id": "2026-11-17-picstory-broken-bike",
