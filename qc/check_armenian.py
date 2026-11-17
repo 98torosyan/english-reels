@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DICT = os.environ.get("HY_DICT", "/tmp/hy/index")
-ALLOW = {w.strip() for w in (ROOT / "qc/data/armenian_allow.txt").read_text(encoding="utf-8").split() if w.strip()} \
+ALLOW = {w.strip().lower() for w in (ROOT / "qc/data/armenian_allow.txt").read_text(encoding="utf-8").split() if w.strip()} \
     if (ROOT / "qc/data/armenian_allow.txt").exists() else set()
 ARM = re.compile(r"[Ա-և՛-՟]+")
 load = lambda p: json.loads((ROOT / p).read_text(encoding="utf-8"))
@@ -37,8 +37,8 @@ def main():
     words = {}
     for where, t in pairs:
         for w in ARM.findall(t):
-            w = re.sub(r"[՛-՟]", "", w)   # stress, emphasis and question marks sit inside the word
-            if len(w) > 1 and w not in ALLOW and w.lower() not in ALLOW: words.setdefault(w, where)
+            w = re.sub(r"[՛-՟]", "", w).lower().replace("և", "եւ")   # marks sit inside words; the dictionary is lower case and writes եւ
+            if len(w) > 1 and w not in ALLOW: words.setdefault(w, where)
     out = subprocess.run(["hunspell", "-d", DICT, "-l"], input="\n".join(words), capture_output=True, text=True).stdout.split()
     bad = sorted(set(out))
     for w in bad:
