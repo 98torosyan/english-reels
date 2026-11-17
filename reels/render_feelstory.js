@@ -36,7 +36,24 @@ function timeline(st) {
     });
     scenes.push({ at: r3(Math.max(0, s0)), end: r3(t) });
   });
-  return { plays, lines, scenes, total: r3(t + 0.6 + 3.4) };
+  const total = r3(t + 0.6 + 3.4);
+  // more pictures than scenes (e.g. 6 pictures for a one-scene "Story in a minute"): spread them over the speech,
+  // each change landing on a spoken word, preferably the first word of a line, so the picture follows the text
+  const k = st.pics ? st.pics.length : 0;
+  if (k > scenes.length && scenes.length === 1) {
+    const starts = lines.flatMap((l, i) => l.words.map(([a], j) => ({ a, first: j === 0, i })));
+    const t0 = lines[0].at, t1 = lines.at(-1).end; const out = [{ at: scenes[0].at, end: 0 }];
+    for (let i = 1; i < k; i++) {
+      const want = t0 + (t1 - t0) * i / k; const prev = out.at(-1).at + 2.2;
+      const cand = starts.filter((w) => w.a > prev && w.a < t1 - 1.5);
+      const score = (w) => Math.abs(w.a - want) - (w.first ? 1.2 : 0);
+      const best = cand.sort((x, y) => score(x) - score(y))[0];
+      if (best) out.push({ at: r3(best.a - 0.35), end: 0 });
+    }
+    out.forEach((s, i) => { s.end = i + 1 < out.length ? out[i + 1].at : r3(t); });
+    return { plays, lines, scenes: out, total };
+  }
+  return { plays, lines, scenes, total };
 }
 
 function voiceTrack(T, out) {
