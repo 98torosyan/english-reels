@@ -58,7 +58,7 @@
   let html='', k=0;
   data.scenes.forEach((sc,s)=>{ if(s) html+='<div class="ln gap"></div>';
    sc.forEach(line=>{ let inHl=false, j=0, out='';
-     line.replace(/'/g,'’').split(/\s+/).filter(Boolean).forEach(tok=>{
+     line.replace(/(^|[\s\[])'/g,'$1‘').replace(/'/g,'’').split(/\s+/).filter(Boolean).forEach(tok=>{
        const open=tok.startsWith('['), close=tok.includes(']'); tok=tok.replace(/[\[\]]/g,'');
        if(open){ out+='<span class="hl">'; inHl=true; }
        out+=`<span class="w" data-j="${j++}">${tok}</span>`;
