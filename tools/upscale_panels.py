@@ -13,6 +13,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def panels(src):
     im = Image.open(src).convert("RGB"); a = np.asarray(im).astype(int); white = a.min(axis=2) > 232
+    boxes = src.parent / "boxes"   # optional: exact panel boxes [x0, y0, x1, y1] when a sheet has frames instead of white gutters
+    if boxes.exists():
+        for x0, y0, x1, y1 in json.loads(boxes.read_text()):
+            p = im.crop((x0, y0, x1, y1)); w, h = p.size; s = min(w, h)
+            yield p.crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s))
+        return
     def runs(v, th=.95):
         out, s = [], None
         for i, x in enumerate(v):
@@ -62,8 +68,8 @@ def main():
             return out
         model = _up
     done = 0
-    for src in sorted(p for d in ("picstory", "storyvideo", "routine", "feelstory", "opposites") for p in ROOT.glob(f"assets/{d}/*/src.png")):
-        d = src.parent; mark = d / "panels.json"; h = hashlib.sha1(src.read_bytes() + ((d / "pick").read_bytes() if (d / "pick").exists() else b"")).hexdigest()
+    for src in sorted(p for d in ("picstory", "storyvideo", "routine", "feelstory", "opposites", "countries") for p in ROOT.glob(f"assets/{d}/*/src.png")):
+        d = src.parent; mark = d / "panels.json"; h = hashlib.sha1(src.read_bytes() + ((d / "pick").read_bytes() if (d / "pick").exists() else b"") + ((d / "boxes").read_bytes() if (d / "boxes").exists() else b"")).hexdigest()
         kind = "photo" if (d / "photo").exists() else "art"   # photorealistic storyboards get the natural-photo model
         want = {"src": h, "sharp": sharp, "model": kind}
         if mark.exists() and all(json.loads(mark.read_text()).get(k, "art" if k == "model" else None) == v for k, v in want.items()): continue
