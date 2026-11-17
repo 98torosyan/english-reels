@@ -14,6 +14,10 @@ function clip(id, n, text) {
   const dir = path.join(utils.ROOT, 'assets', 'feelstory', id);
   const timing = JSON.parse(fs.readFileSync(path.join(dir, `v${n}.json`), 'utf8'));
   if (timing.text !== text) throw new Error(`${id}/v${n}: audio is for a different text; re-run the voices.`);
+  // the voice service's word times run a little ahead of the sound: move them onto the real first sound
+  const det = require('child_process').spawnSync('ffmpeg', ['-hide_banner', '-i', path.join(dir, `v${n}.mp3`), '-af', 'silencedetect=n=-35dB:d=0.05', '-f', 'null', '-'], { encoding: 'utf8' }).stderr;
+  const onset = Number((det.match(/silence_end: ([\d.]+)/) || [])[1]);
+  if (Number.isFinite(onset) && Math.abs(onset - timing.words[0][0]) < 0.4) timing.words[0][0] = Math.min(onset, timing.words[0][1] - 0.05);
   const start = timing.words[0][0]; const end = timing.words.at(-1)[1];
   return { file: path.join(dir, `v${n}.mp3`), start, end, len: end - start, words: timing.words.map(([a, b]) => [a - start, b - start]) };
 }

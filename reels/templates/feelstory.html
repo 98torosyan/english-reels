@@ -29,8 +29,9 @@
  /* every word lights up as it is spoken */
  .w{display:inline-block;opacity:.34;will-change:transform,opacity,filter}
  .ln .hl{display:inline}
- .vig{position:absolute;left:0;top:0;width:1080px;height:1200px;z-index:2;pointer-events:none;background:radial-gradient(120% 90% at 50% 38%,transparent 55%,#2b1e1430 100%)}
- .glow{position:absolute;left:-200px;top:-200px;width:900px;height:900px;z-index:2;pointer-events:none;border-radius:50%;background:radial-gradient(circle,#fff3dc55,transparent 65%);mix-blend-mode:screen}
+ .fx{position:absolute;left:0;top:0;width:1080px;height:1200px;z-index:2;overflow:hidden;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 82%);mask-image:linear-gradient(180deg,#000 55%,transparent 82%)}
+ .vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 50% 38%,transparent 55%,#2b1e1430 100%)}
+ .glow{position:absolute;left:-200px;top:-200px;width:900px;height:900px;pointer-events:none;border-radius:50%;background:radial-gradient(circle,#fff3dc55,transparent 65%);mix-blend-mode:screen}
  .brand{position:absolute;left:0;right:0;bottom:70px;text-align:center;font:800 22px Inter;letter-spacing:6px;color:#2B1E1466}
  /* ending */
  .outro{position:absolute;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--paper);opacity:0;padding:0 90px}
@@ -44,7 +45,7 @@
 </head>
 <body>
  <div class="pics" id="pics"></div><div class="melt"></div><div class="grain"></div>
- <div class="vig"></div><div class="glow" id="glow"></div>
+ <div class="fx"><div class="vig"></div><div class="glow" id="glow"></div></div>
  <div class="text"><div class="col" id="col"></div></div>
  <div class="brand">@ENGLISH.READINGROOM</div>
  <section class="outro" id="outro"><img src="__LOGO_DATA__" alt=""><h2>Did you <em>understand</em> it?</h2><p>Գրի՛ր մեկնաբանություններում, թե որ բառերն էին նոր քեզ համար</p><span class="follow">Անհատական և խմբային դասեր · գրե՛ք Direct-ով</span><span class="signature">@ENGLISH.READINGROOM</span></section>
