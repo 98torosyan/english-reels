@@ -87,6 +87,7 @@ function coverHtml(st, baseUrl, paper, pic) {
 
 // paper colour = the average colour of the bottom strip of the first picture, so the picture melts into it
 function paperColour(st) {
+  if (st.paper) return st.paper;   // a story can set its own paper colour (e.g. bright pictures whose edge colour is too strong)
   const f = st.pics ? path.join(utils.ROOT, 'assets', st.pics[0]) : path.join(utils.ROOT, 'assets', st.pics_dir || `feelstory/${st.id}`, '1.jpg');
   const r = spawnSync(utils.FFmpeg, ['-v', 'error', '-i', f, '-vf', 'crop=iw:60:0:ih-60,scale=1:1', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], { encoding: 'buffer' });
   const [R, G, B] = r.stdout; return `rgb(${R},${G},${B})`;
