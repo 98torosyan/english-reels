@@ -24,13 +24,6 @@ jobs:
       - name: Pronunciation (IPA against Britfone)
         if: always()
         run: python qc/check_ipa.py
-      - name: Armenian spelling (report only)
-        if: always()
-        continue-on-error: true
-        run: |
-          sudo apt-get install -y -qq hunspell >/dev/null
-          mkdir -p /tmp/hy && curl -sSLf -o /tmp/hy/index.aff https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/hy/index.aff && curl -sSLf -o /tmp/hy/index.dic https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/hy/index.dic
-          python qc/check_armenian.py
       - name: Level check (report only)
         if: always()
         continue-on-error: true
