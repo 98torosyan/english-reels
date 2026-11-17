@@ -4,7 +4,7 @@ An item is due when review_status == "staged", it has media URLs, it is not yet
 published, and its date/time (Asia/Yerevan) is in the past but less than
 MAX_LATE_HOURS ago. Publishes up to eight due items per run, oldest first. DRY_RUN=1 sends nothing.
 """
-import json, os, sys, tempfile
+import json, os, sys, tempfile, time, urllib.request
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -30,6 +30,26 @@ def due_items(queue: dict, now: datetime) -> list[dict]:
     return sorted(out, key=lambda i: (i["date"], i["time"]))
 
 
+def media_ready(media: dict, wait: float = 240) -> list[str]:
+    """Instagram fetches the files itself: make sure every link already answers before asking it to.
+    Returns the links that are still missing after waiting (empty list = all ready)."""
+    urls = [u for k in ("video_url", "image_url", "cover_url") if (u := media.get(k))] + list(media.get("slides") or [])
+    left, end = urls, time.monotonic() + wait
+    while left:
+        missing = []
+        for u in left:
+            try:
+                req = urllib.request.Request(u, method="HEAD", headers={"User-Agent": "Mozilla/5.0"})
+                with urllib.request.urlopen(req, timeout=20) as r:
+                    if r.status != 200 or int(r.headers.get("Content-Length") or 1) == 0: missing.append(u)
+            except Exception:
+                missing.append(u)
+        left = missing
+        if not left or time.monotonic() > end: break
+        time.sleep(15)
+    return left
+
+
 def main() -> int:
     dry = os.environ.get("DRY_RUN", "1").strip().lower() not in {"0", "false", "no"}
     now = datetime.now(TZ)
@@ -47,6 +67,10 @@ def main() -> int:
         with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
             json.dump(content, f, ensure_ascii=False)
         print(f"Due: {item['id']} ({item['format']}).")
+        if not dry:
+            missing = media_ready(item["media"])
+            if missing:   # not a failed attempt: the files are still being deployed, the next run tries again
+                print(f"Waiting for {len(missing)} media link(s) of {item['id']} (e.g. {missing[0]}); trying on the next run."); continue
         publish.LAST_MEDIA_ID = None; publish.LAST_CONTAINER_ID = None
         try:
             rc = publish.run(Path(f.name), dry)

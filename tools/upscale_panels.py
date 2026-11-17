@@ -49,15 +49,16 @@ def main():
         import torch
         from spandrel import ModelLoader
         torch.set_num_threads(4)
-        nets = {"art": ModelLoader().load_from_file("weights/RealESRGAN_x4plus_anime_6B.pth").eval(),
-                "photo": ModelLoader().load_from_file("weights/RealESRGAN_x4plus.pth").eval()}
+        # compact Real-ESRGAN models (SRVGGNet, BSD-3): about ten times faster than the big ones, nearly the same at our size
+        nets = {"art": ModelLoader().load_from_file("weights/realesr-animevideov3.pth").eval(),
+                "photo": ModelLoader().load_from_file("weights/realesr-general-x4v3.pth").eval()}
         def _up(p, kind):
             x = torch.from_numpy(np.asarray(p).copy()).permute(2, 0, 1).float().div(255).unsqueeze(0)
             with torch.inference_mode():
                 y = nets[kind](x).clamp(0, 1)[0].permute(1, 2, 0).mul(255).round().byte().numpy()
             out = Image.fromarray(y)
             if kind == "photo":   # keep natural skin and texture: half model, half plain resize
-                out = Image.blend(out, p.resize(out.size, Image.LANCZOS), 0.45)
+                out = Image.blend(out, p.resize(out.size, Image.LANCZOS), 0.35)
             return out
         model = _up
     done = 0
