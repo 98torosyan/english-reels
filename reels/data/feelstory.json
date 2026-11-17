@@ -661,6 +661,300 @@
      "մեկը մեծ, մեկը փոքր, կողք կողքի։"
     ]
    ]
+  },
+  {
+   "id": "country-uk",
+   "style": "countries",
+   "pics_dir": "countries/uk",
+   "title": "The United Kingdom",
+   "title_hy": "Միացյալ Թագավորություն",
+   "level": "A2",
+   "voice": "en-GB-RyanNeural",
+   "scenes": [
+    [
+     "London is the [capital] of the UK. The River Thames runs through the city."
+    ],
+    [
+     "British people love [afternoon tea] with scones, jam and cream."
+    ],
+    [
+     "Red [double-decker] buses and black taxis are famous symbols of London."
+    ],
+    [
+     "Scotland has green [hills], old castles and deep lakes."
+    ],
+    [
+     "Soldiers in red jackets [guard] Buckingham Palace."
+    ],
+    [
+     "It often [rains], so people always carry an umbrella."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Լոնդոնը Միացյալ Թագավորության մայրաքաղաքն է։ Քաղաքի միջով հոսում է Թեմզա գետը։"
+    ],
+    [
+     "Բրիտանացիները սիրում են կեսօրվա թեյը՝ սքոնով, ջեմով և սերուցքով։"
+    ],
+    [
+     "Կարմիր երկհարկանի ավտոբուսներն ու սև տաքսիները Լոնդոնի հայտնի խորհրդանիշներն են։"
+    ],
+    [
+     "Շոտլանդիայում կան կանաչ բլուրներ, հին ամրոցներ և խոր լճեր։"
+    ],
+    [
+     "Կարմիր համազգեստով զինվորները հսկում են Բուքինգհեմյան պալատը։"
+    ],
+    [
+     "Հաճախ անձրև է գալիս, դրա համար մարդիկ միշտ հովանոց են վերցնում։"
+    ]
+   ]
+  },
+  {
+   "id": "country-france",
+   "style": "countries",
+   "pics_dir": "countries/france",
+   "title": "France",
+   "title_hy": "Ֆրանսիա",
+   "level": "A2",
+   "voice": "en-GB-LibbyNeural",
+   "scenes": [
+    [
+     "Paris is famous for the Eiffel Tower and the [river] Seine."
+    ],
+    [
+     "In the morning, many French people eat a [croissant] at a café."
+    ],
+    [
+     "In summer, the [fields] of Provence turn purple with lavender."
+    ],
+    [
+     "The Louvre is the biggest art [museum] in the world."
+    ],
+    [
+     "Mont Saint-Michel is a small [island] with an old abbey on top."
+    ],
+    [
+     "French people buy fresh [bread] every day, usually a long baguette."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Փարիզը հայտնի է Էյֆելյան աշտարակով և Սենա գետով։"
+    ],
+    [
+     "Առավոտյան շատ ֆրանսիացիներ սրճարանում կրուասան են ուտում։"
+    ],
+    [
+     "Ամռանը Պրովանսի դաշտերը մանուշակագույն են դառնում նարդոսից։"
+    ],
+    [
+     "Լուվրը աշխարհի ամենամեծ արվեստի թանգարանն է։"
+    ],
+    [
+     "Մոն Սեն Միշելը փոքրիկ կղզի է, որի գագաթին հին աբբայություն կա։"
+    ],
+    [
+     "Ֆրանսիացիները ամեն օր թարմ հաց են գնում, սովորաբար երկար բագետ։"
+    ]
+   ]
+  },
+  {
+   "id": "country-italy",
+   "style": "countries",
+   "pics_dir": "countries/italy",
+   "title": "Italy",
+   "title_hy": "Իտալիա",
+   "level": "A2",
+   "voice": "en-GB-ThomasNeural",
+   "scenes": [
+    [
+     "Rome is almost three thousand years [old]. The Colosseum is in the centre."
+    ],
+    [
+     "Italy gave the world [pizza] and pasta."
+    ],
+    [
+     "In Venice, there are no cars. People travel by [boat]."
+    ],
+    [
+     "The famous tower in Pisa [leans] to one side."
+    ],
+    [
+     "On the Amalfi Coast, colourful houses stand on the [cliffs]."
+    ],
+    [
+     "On hot days, Italians love [ice cream]. They call it gelato."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Հռոմը գրեթե երեք հազար տարեկան է։ Կենտրոնում Կոլիզեումն է։"
+    ],
+    [
+     "Իտալիան աշխարհին տվել է պիցցան և մակարոնեղենը։"
+    ],
+    [
+     "Վենետիկում մեքենաներ չկան։ Մարդիկ նավակով են տեղաշարժվում։"
+    ],
+    [
+     "Պիզայի հայտնի աշտարակը թեքված է մի կողմ։"
+    ],
+    [
+     "Ամալֆիի ափին գունավոր տները կանգնած են ժայռերի վրա։"
+    ],
+    [
+     "Շոգ օրերին իտալացիները պաղպաղակ են սիրում։ Նրանք այն անվանում են ջելատո։"
+    ]
+   ]
+  },
+  {
+   "id": "country-japan",
+   "style": "countries",
+   "pics_dir": "countries/japan",
+   "title": "Japan",
+   "title_hy": "Ճապոնիա",
+   "level": "A2",
+   "voice": "en-GB-SoniaNeural",
+   "scenes": [
+    [
+     "Tokyo is a huge, modern city. On clear days, you can see Mount Fuji."
+    ],
+    [
+     "Sushi is rice with fresh [fish]. People eat it with chopsticks."
+    ],
+    [
+     "In spring, people have picnics under the pink cherry [blossoms]."
+    ],
+    [
+     "The bullet train is very [fast]. It can go 300 kilometres an hour."
+    ],
+    [
+     "In Kyoto, there are more than a thousand old [temples]."
+    ],
+    [
+     "A tea ceremony is slow and [quiet]. Every move is important."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Տոկիոն հսկայական ժամանակակից քաղաք է։ Պայծառ օրերին կարելի է տեսնել Ֆուջի լեռը։"
+    ],
+    [
+     "Սուշին բրինձ է թարմ ձկով։ Այն ուտում են փայտիկներով։"
+    ],
+    [
+     "Գարնանը մարդիկ զբոսախնջույք են անում վարդագույն ծաղկած բալենիների տակ։"
+    ],
+    [
+     "Արագընթաց գնացքը շատ արագ է։ Այն կարող է ժամում 300 կիլոմետր անցնել։"
+    ],
+    [
+     "Կիոտոյում ավելի քան հազար հին տաճար կա։"
+    ],
+    [
+     "Թեյի արարողությունը դանդաղ է և լուռ։ Ամեն շարժում կարևոր է։"
+    ]
+   ]
+  },
+  {
+   "id": "country-usa",
+   "style": "countries",
+   "pics_dir": "countries/usa",
+   "title": "The United States",
+   "title_hy": "Միացյալ Նահանգներ",
+   "level": "A2",
+   "voice": "en-GB-RyanNeural",
+   "scenes": [
+    [
+     "The Statue of Liberty [welcomes] people to New York."
+    ],
+    [
+     "In a diner, you can have [pancakes] for breakfast at any time of day."
+    ],
+    [
+     "The Grand Canyon is very deep. It is millions of years [old]."
+    ],
+    [
+     "Yellow school buses take children to school every [morning]."
+    ],
+    [
+     "The Golden Gate [Bridge] in San Francisco is red, not gold."
+    ],
+    [
+     "On Thanksgiving, families [share] a big dinner and say thank you."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Ազատության արձանը ողջունում է Նյու Յորք եկողներին։"
+    ],
+    [
+     "Ճաշարանում նախաճաշի նրբաբլիթներ կարելի է ուտել օրվա ցանկացած ժամի։"
+    ],
+    [
+     "Մեծ կիրճը շատ խոր է։ Այն միլիոնավոր տարիների պատմություն ունի։"
+    ],
+    [
+     "Դեղին դպրոցական ավտոբուսները ամեն առավոտ երեխաներին դպրոց են տանում։"
+    ],
+    [
+     "Սան Ֆրանցիսկոյի Ոսկե դարպասի կամուրջը կարմիր է, ոչ թե ոսկեգույն։"
+    ],
+    [
+     "Շնորհակալության օրը ընտանիքները միասին մեծ ընթրիք են անում և շնորհակալություն հայտնում։"
+    ]
+   ]
+  },
+  {
+   "id": "country-armenia",
+   "style": "countries",
+   "pics_dir": "countries/armenia",
+   "title": "Armenia",
+   "title_hy": "Հայաստան",
+   "level": "A2",
+   "voice": "en-GB-LibbyNeural",
+   "scenes": [
+    [
+     "From Yerevan, you can see Mount Ararat. It has [snow] on top all year."
+    ],
+    [
+     "Armenians bake [lavash], a thin bread, in a tonir."
+    ],
+    [
+     "Lake Sevan is high in the [mountains]. Its water is very blue."
+    ],
+    [
+     "The Temple of Garni is about two thousand years [old]."
+    ],
+    [
+     "A long [cable car] takes visitors over the valley to Tatev Monastery."
+    ],
+    [
+     "Armenian [apricots] are sweet and famous all over the world."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "Երևանից երևում է Արարատ լեռը։ Նրա գագաթին ամբողջ տարին ձյուն կա։"
+    ],
+    [
+     "Հայերը թոնրում լավաշ են թխում՝ բարակ հաց։"
+    ],
+    [
+     "Սևանա լիճը բարձր լեռներում է։ Նրա ջուրը շատ կապույտ է։"
+    ],
+    [
+     "Գառնիի տաճարը մոտ երկու հազար տարեկան է։"
+    ],
+    [
+     "Երկար ճոպանուղին այցելուներին կիրճի վրայով տանում է Տաթևի վանք։"
+    ],
+    [
+     "Հայկական ծիրանը քաղցր է և հայտնի ամբողջ աշխարհում։"
+    ]
+   ]
   }
  ]
 }
