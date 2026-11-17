@@ -1,1 +1,1 @@
-{"text": "'I'm proud of you, Mom.'", "words": [[0.12, 0.38], [0.46, 0.8], [0.84, 0.92], [1.0, 1.12], [1.52, 2.002]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
+{"text": "'I'm proud of you, Mum.'", "words": [[0.12, 0.4], [0.48, 0.82], [0.86, 0.96], [1.04, 1.16], [1.56, 2.043]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

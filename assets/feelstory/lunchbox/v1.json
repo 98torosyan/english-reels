@@ -1,1 +1,1 @@
-{"text": "there was a little note from Mom.", "words": [[0.28, 0.42], [0.44, 0.58], [0.64, 0.67], [0.74, 1.06], [1.16, 1.48], [1.54, 1.72], [1.78, 2.244]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
+{"text": "there was a little note from Mum.", "words": [[0.26, 0.42], [0.44, 0.58], [0.64, 0.67], [0.74, 1.06], [1.16, 1.48], [1.54, 1.72], [1.78, 2.195]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
