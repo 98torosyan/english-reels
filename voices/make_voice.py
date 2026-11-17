@@ -109,6 +109,7 @@ def main():
     made += voice_routine()
     made += voice_feelstory()
     made += voice_opposites()
+    made += voice_countries()
     print(f"{made} file(s) voiced.")
 
 
@@ -399,6 +400,26 @@ def voice_opposites():
                 words = align(text.split(), bounds)
             except Exception as error:
                 print(f"SKIPPED opposites {day['id']}/{name}: {error}"); mp3.unlink(missing_ok=True); continue
+            tj.write_text(json.dumps({"text": text, "words": words, "tag": voice}), encoding="utf-8"); made += 1
+    return made
+
+def voice_countries():
+    """Countries in watercolour: the country's name and every slide's sentence, one clip each."""
+    made = 0
+    root = LESSONS.parents[1]
+    data = json.loads((root / "carousels/data/countries.json").read_text(encoding="utf-8"))
+    for c in data["countries"]:
+        voice = c.get("voice", "en-GB-SoniaNeural")
+        out = root / "assets" / "countries" / c["id"]; out.mkdir(parents=True, exist_ok=True)
+        jobs = [("title", c["name"] + ".", "-8%")] + [(f"s{i}", sl["en"].replace("[", "").replace("]", ""), "-8%") for i, sl in enumerate(c["slides"])]
+        for name, text, rate in jobs:
+            mp3, tj = out / f"{name}.mp3", out / f"{name}.json"
+            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text and json.loads(tj.read_text()).get("tag") == voice: continue
+            try:
+                bounds = asyncio.run(synth(text, voice, rate, mp3))
+                words = align(text.split(), bounds)
+            except Exception as error:
+                print(f"SKIPPED countries {c['id']}/{name}: {error}"); mp3.unlink(missing_ok=True); continue
             tj.write_text(json.dumps({"text": text, "words": words, "tag": voice}), encoding="utf-8"); made += 1
     return made
 

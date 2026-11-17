@@ -1,59 +1,257 @@
 {
  "note": "Countries in watercolour: one 2x3 sheet per country in assets/countries/<id>/src.png (panel 1 = cover). Sentences A2, [brackets] = highlighted words. Quiz at the end.",
  "countries": [
-  {"id": "uk", "name": "The United Kingdom", "name_hy": "Միացյալ Թագավորություն", "level": "A2",
+  {
+   "id": "uk",
+   "name": "The United Kingdom",
+   "name_hy": "Միացյալ Թագավորություն",
+   "level": "A2",
    "slides": [
-    {"en": "London is the [capital] of the UK. The River Thames runs through the city.", "hy": "Լոնդոնը Միացյալ Թագավորության մայրաքաղաքն է։ Քաղաքի միջով հոսում է Թեմզա գետը։"},
-    {"en": "British people love [afternoon tea] with scones, jam and cream.", "hy": "Բրիտանացիները սիրում են կեսօրվա թեյը՝ սքոնով, ջեմով և սերուցքով։"},
-    {"en": "Red [double-decker] buses and black taxis are famous symbols of London.", "hy": "Կարմիր երկհարկանի ավտոբուսներն ու սև տաքսիները Լոնդոնի հայտնի խորհրդանիշներն են։"},
-    {"en": "Scotland has green [hills], old castles and deep lakes.", "hy": "Շոտլանդիայում կան կանաչ բլուրներ, հին ամրոցներ և խոր լճեր։"},
-    {"en": "Soldiers in red jackets [guard] Buckingham Palace.", "hy": "Կարմիր համազգեստով զինվորները հսկում են Բուքինգհեմյան պալատը։"},
-    {"en": "It often [rains], so people always carry an umbrella.", "hy": "Հաճախ անձրև է գալիս, դրա համար մարդիկ միշտ հովանոց են վերցնում։"}],
-   "quiz": {"q": "What is the capital of the UK?", "a": "London", "options": ["Edinburgh", "London", "Manchester"]}},
-  {"id": "france", "name": "France", "name_hy": "Ֆրանսիա", "level": "A2",
+    {
+     "en": "London is the [capital] of the UK. The River Thames runs through the city.",
+     "hy": "Լոնդոնը Միացյալ Թագավորության մայրաքաղաքն է։ Քաղաքի միջով հոսում է Թեմզա գետը։"
+    },
+    {
+     "en": "British people love [afternoon tea] with scones, jam and cream.",
+     "hy": "Բրիտանացիները սիրում են կեսօրվա թեյը՝ սքոնով, ջեմով և սերուցքով։"
+    },
+    {
+     "en": "Red [double-decker] buses and black taxis are famous symbols of London.",
+     "hy": "Կարմիր երկհարկանի ավտոբուսներն ու սև տաքսիները Լոնդոնի հայտնի խորհրդանիշներն են։"
+    },
+    {
+     "en": "Scotland has green [hills], old castles and deep lakes.",
+     "hy": "Շոտլանդիայում կան կանաչ բլուրներ, հին ամրոցներ և խոր լճեր։"
+    },
+    {
+     "en": "Soldiers in red jackets [guard] Buckingham Palace.",
+     "hy": "Կարմիր համազգեստով զինվորները հսկում են Բուքինգհեմյան պալատը։"
+    },
+    {
+     "en": "It often [rains], so people always carry an umbrella.",
+     "hy": "Հաճախ անձրև է գալիս, դրա համար մարդիկ միշտ հովանոց են վերցնում։"
+    }
+   ],
+   "quiz": {
+    "q": "What is the capital of the UK?",
+    "a": "London",
+    "options": [
+     "Edinburgh",
+     "London",
+     "Manchester"
+    ]
+   },
+   "voice": "en-GB-RyanNeural"
+  },
+  {
+   "id": "france",
+   "name": "France",
+   "name_hy": "Ֆրանսիա",
+   "level": "A2",
    "slides": [
-    {"en": "Paris is famous for the Eiffel Tower and the [river] Seine.", "hy": "Փարիզը հայտնի է Էյֆելյան աշտարակով և Սենա գետով։"},
-    {"en": "In the morning, many French people eat a [croissant] at a café.", "hy": "Առավոտյան շատ ֆրանսիացիներ սրճարանում կրուասան են ուտում։"},
-    {"en": "In summer, the [fields] of Provence turn purple with lavender.", "hy": "Ամռանը Պրովանսի դաշտերը մանուշակագույն են դառնում նարդոսից։"},
-    {"en": "The Louvre is the biggest art [museum] in the world.", "hy": "Լուվրը աշխարհի ամենամեծ արվեստի թանգարանն է։"},
-    {"en": "Mont Saint-Michel is a small [island] with an old abbey on top.", "hy": "Մոն Սեն Միշելը փոքրիկ կղզի է, որի գագաթին հին աբբայություն կա։"},
-    {"en": "French people buy fresh [bread] every day, usually a long baguette.", "hy": "Ֆրանսիացիները ամեն օր թարմ հաց են գնում, սովորաբար երկար բագետ։"}],
-   "quiz": {"q": "What is purple in Provence in summer?", "a": "lavender", "options": ["lavender", "grapes", "roses"]}},
-  {"id": "italy", "name": "Italy", "name_hy": "Իտալիա", "level": "A2",
+    {
+     "en": "Paris is famous for the Eiffel Tower and the [river] Seine.",
+     "hy": "Փարիզը հայտնի է Էյֆելյան աշտարակով և Սենա գետով։"
+    },
+    {
+     "en": "In the morning, many French people eat a [croissant] at a café.",
+     "hy": "Առավոտյան շատ ֆրանսիացիներ սրճարանում կրուասան են ուտում։"
+    },
+    {
+     "en": "In summer, the [fields] of Provence turn purple with lavender.",
+     "hy": "Ամռանը Պրովանսի դաշտերը մանուշակագույն են դառնում նարդոսից։"
+    },
+    {
+     "en": "The Louvre is the biggest art [museum] in the world.",
+     "hy": "Լուվրը աշխարհի ամենամեծ արվեստի թանգարանն է։"
+    },
+    {
+     "en": "Mont Saint-Michel is a small [island] with an old abbey on top.",
+     "hy": "Մոն Սեն Միշելը փոքրիկ կղզի է, որի գագաթին հին աբբայություն կա։"
+    },
+    {
+     "en": "French people buy fresh [bread] every day, usually a long baguette.",
+     "hy": "Ֆրանսիացիները ամեն օր թարմ հաց են գնում, սովորաբար երկար բագետ։"
+    }
+   ],
+   "quiz": {
+    "q": "What is purple in Provence in summer?",
+    "a": "lavender",
+    "options": [
+     "lavender",
+     "grapes",
+     "roses"
+    ]
+   },
+   "voice": "en-GB-LibbyNeural"
+  },
+  {
+   "id": "italy",
+   "name": "Italy",
+   "name_hy": "Իտալիա",
+   "level": "A2",
    "slides": [
-    {"en": "Rome is almost three thousand years [old]. The Colosseum is in the centre.", "hy": "Հռոմը գրեթե երեք հազար տարեկան է։ Կենտրոնում Կոլիզեումն է։"},
-    {"en": "Italy gave the world [pizza] and pasta.", "hy": "Իտալիան աշխարհին տվել է պիցցան և մակարոնեղենը։"},
-    {"en": "In Venice, there are no cars. People travel by [boat].", "hy": "Վենետիկում մեքենաներ չկան։ Մարդիկ նավակով են տեղաշարժվում։"},
-    {"en": "The famous tower in Pisa [leans] to one side.", "hy": "Պիզայի հայտնի աշտարակը թեքված է մի կողմ։"},
-    {"en": "On the Amalfi Coast, colourful houses stand on the [cliffs].", "hy": "Ամալֆիի ափին գունավոր տները կանգնած են ժայռերի վրա։"},
-    {"en": "On hot days, Italians love [ice cream]. They call it gelato.", "hy": "Շոգ օրերին իտալացիները պաղպաղակ են սիրում։ Նրանք այն անվանում են ջելատո։"}],
-   "quiz": {"q": "How do people travel in Venice?", "a": "by boat", "options": ["by car", "by boat", "by train"]}},
-  {"id": "japan", "name": "Japan", "name_hy": "Ճապոնիա", "level": "A2",
+    {
+     "en": "Rome is almost three thousand years [old]. The Colosseum is in the centre.",
+     "hy": "Հռոմը գրեթե երեք հազար տարեկան է։ Կենտրոնում Կոլիզեումն է։"
+    },
+    {
+     "en": "Italy gave the world [pizza] and pasta.",
+     "hy": "Իտալիան աշխարհին տվել է պիցցան և մակարոնեղենը։"
+    },
+    {
+     "en": "In Venice, there are no cars. People travel by [boat].",
+     "hy": "Վենետիկում մեքենաներ չկան։ Մարդիկ նավակով են տեղաշարժվում։"
+    },
+    {
+     "en": "The famous tower in Pisa [leans] to one side.",
+     "hy": "Պիզայի հայտնի աշտարակը թեքված է մի կողմ։"
+    },
+    {
+     "en": "On the Amalfi Coast, colourful houses stand on the [cliffs].",
+     "hy": "Ամալֆիի ափին գունավոր տները կանգնած են ժայռերի վրա։"
+    },
+    {
+     "en": "On hot days, Italians love [ice cream]. They call it gelato.",
+     "hy": "Շոգ օրերին իտալացիները պաղպաղակ են սիրում։ Նրանք այն անվանում են ջելատո։"
+    }
+   ],
+   "quiz": {
+    "q": "How do people travel in Venice?",
+    "a": "by boat",
+    "options": [
+     "by car",
+     "by boat",
+     "by train"
+    ]
+   },
+   "voice": "en-GB-ThomasNeural"
+  },
+  {
+   "id": "japan",
+   "name": "Japan",
+   "name_hy": "Ճապոնիա",
+   "level": "A2",
    "slides": [
-    {"en": "Tokyo is a huge, modern city. On clear days, you can see Mount Fuji.", "hy": "Տոկիոն հսկայական ժամանակակից քաղաք է։ Պայծառ օրերին կարելի է տեսնել Ֆուջի լեռը։"},
-    {"en": "Sushi is rice with fresh [fish]. People eat it with chopsticks.", "hy": "Սուշին բրինձ է թարմ ձկով։ Այն ուտում են փայտիկներով։"},
-    {"en": "In spring, people have picnics under the pink cherry [blossoms].", "hy": "Գարնանը մարդիկ զբոսախնջույք են անում վարդագույն ծաղկած բալենիների տակ։"},
-    {"en": "The bullet train is very [fast]. It can go 300 kilometres an hour.", "hy": "Արագընթաց գնացքը շատ արագ է։ Այն կարող է ժամում 300 կիլոմետր անցնել։"},
-    {"en": "In Kyoto, there are more than a thousand old [temples].", "hy": "Կիոտոյում ավելի քան հազար հին տաճար կա։"},
-    {"en": "A tea ceremony is slow and [quiet]. Every move is important.", "hy": "Թեյի արարողությունը դանդաղ է և լուռ։ Ամեն շարժում կարևոր է։"}],
-   "quiz": {"q": "When do cherry trees bloom?", "a": "in spring", "options": ["in winter", "in spring", "in autumn"]}},
-  {"id": "usa", "name": "The United States", "name_hy": "Միացյալ Նահանգներ", "level": "A2",
+    {
+     "en": "Tokyo is a huge, modern city. On clear days, you can see Mount Fuji.",
+     "hy": "Տոկիոն հսկայական ժամանակակից քաղաք է։ Պայծառ օրերին կարելի է տեսնել Ֆուջի լեռը։"
+    },
+    {
+     "en": "Sushi is rice with fresh [fish]. People eat it with chopsticks.",
+     "hy": "Սուշին բրինձ է թարմ ձկով։ Այն ուտում են փայտիկներով։"
+    },
+    {
+     "en": "In spring, people have picnics under the pink cherry [blossoms].",
+     "hy": "Գարնանը մարդիկ զբոսախնջույք են անում վարդագույն ծաղկած բալենիների տակ։"
+    },
+    {
+     "en": "The bullet train is very [fast]. It can go 300 kilometres an hour.",
+     "hy": "Արագընթաց գնացքը շատ արագ է։ Այն կարող է ժամում 300 կիլոմետր անցնել։"
+    },
+    {
+     "en": "In Kyoto, there are more than a thousand old [temples].",
+     "hy": "Կիոտոյում ավելի քան հազար հին տաճար կա։"
+    },
+    {
+     "en": "A tea ceremony is slow and [quiet]. Every move is important.",
+     "hy": "Թեյի արարողությունը դանդաղ է և լուռ։ Ամեն շարժում կարևոր է։"
+    }
+   ],
+   "quiz": {
+    "q": "When do cherry trees bloom?",
+    "a": "in spring",
+    "options": [
+     "in winter",
+     "in spring",
+     "in autumn"
+    ]
+   },
+   "voice": "en-GB-SoniaNeural"
+  },
+  {
+   "id": "usa",
+   "name": "The United States",
+   "name_hy": "Միացյալ Նահանգներ",
+   "level": "A2",
    "slides": [
-    {"en": "The Statue of Liberty [welcomes] people to New York.", "hy": "Ազատության արձանը ողջունում է Նյու Յորք եկողներին։"},
-    {"en": "In a diner, you can have [pancakes] for breakfast at any time of day.", "hy": "Ճաշարանում նախաճաշի նրբաբլիթներ կարելի է ուտել օրվա ցանկացած ժամի։"},
-    {"en": "The Grand Canyon is very deep. It is millions of years [old].", "hy": "Մեծ կիրճը շատ խոր է։ Այն միլիոնավոր տարիների պատմություն ունի։"},
-    {"en": "Yellow school buses take children to school every [morning].", "hy": "Դեղին դպրոցական ավտոբուսները ամեն առավոտ երեխաներին դպրոց են տանում։"},
-    {"en": "The Golden Gate [Bridge] in San Francisco is red, not gold.", "hy": "Սան Ֆրանցիսկոյի Ոսկե դարպասի կամուրջը կարմիր է, ոչ թե ոսկեգույն։"},
-    {"en": "On Thanksgiving, families [share] a big dinner and say thank you.", "hy": "Շնորհակալության օրը ընտանիքները միասին մեծ ընթրիք են անում և շնորհակալություն հայտնում։"}],
-   "quiz": {"q": "What colour is the Golden Gate Bridge?", "a": "red", "options": ["gold", "red", "white"]}},
-  {"id": "armenia", "name": "Armenia", "name_hy": "Հայաստան", "level": "A2",
+    {
+     "en": "The Statue of Liberty [welcomes] people to New York.",
+     "hy": "Ազատության արձանը ողջունում է Նյու Յորք եկողներին։"
+    },
+    {
+     "en": "In a diner, you can have [pancakes] for breakfast at any time of day.",
+     "hy": "Ճաշարանում նախաճաշի նրբաբլիթներ կարելի է ուտել օրվա ցանկացած ժամի։"
+    },
+    {
+     "en": "The Grand Canyon is very deep. It is millions of years [old].",
+     "hy": "Մեծ կիրճը շատ խոր է։ Այն միլիոնավոր տարիների պատմություն ունի։"
+    },
+    {
+     "en": "Yellow school buses take children to school every [morning].",
+     "hy": "Դեղին դպրոցական ավտոբուսները ամեն առավոտ երեխաներին դպրոց են տանում։"
+    },
+    {
+     "en": "The Golden Gate [Bridge] in San Francisco is red, not gold.",
+     "hy": "Սան Ֆրանցիսկոյի Ոսկե դարպասի կամուրջը կարմիր է, ոչ թե ոսկեգույն։"
+    },
+    {
+     "en": "On Thanksgiving, families [share] a big dinner and say thank you.",
+     "hy": "Շնորհակալության օրը ընտանիքները միասին մեծ ընթրիք են անում և շնորհակալություն հայտնում։"
+    }
+   ],
+   "quiz": {
+    "q": "What colour is the Golden Gate Bridge?",
+    "a": "red",
+    "options": [
+     "gold",
+     "red",
+     "white"
+    ]
+   },
+   "voice": "en-GB-RyanNeural"
+  },
+  {
+   "id": "armenia",
+   "name": "Armenia",
+   "name_hy": "Հայաստան",
+   "level": "A2",
    "slides": [
-    {"en": "From Yerevan, you can see Mount Ararat. It has [snow] on top all year.", "hy": "Երևանից երևում է Արարատ լեռը։ Նրա գագաթին ամբողջ տարին ձյուն կա։"},
-    {"en": "Armenians bake [lavash], a thin bread, in a tonir.", "hy": "Հայերը թոնրում լավաշ են թխում՝ բարակ հաց։"},
-    {"en": "Lake Sevan is high in the [mountains]. Its water is very blue.", "hy": "Սևանա լիճը բարձր լեռներում է։ Նրա ջուրը շատ կապույտ է։"},
-    {"en": "The Temple of Garni is about two thousand years [old].", "hy": "Գառնիի տաճարը մոտ երկու հազար տարեկան է։"},
-    {"en": "A long [cable car] takes visitors over the valley to Tatev Monastery.", "hy": "Երկար ճոպանուղին այցելուներին կիրճի վրայով տանում է Տաթևի վանք։"},
-    {"en": "Armenian [apricots] are sweet and famous all over the world.", "hy": "Հայկական ծիրանը քաղցր է և հայտնի ամբողջ աշխարհում։"}],
-   "quiz": {"q": "What is lavash?", "a": "a thin bread", "options": ["a cake", "a thin bread", "a soup"]}}
+    {
+     "en": "From Yerevan, you can see Mount Ararat. It has [snow] on top all year.",
+     "hy": "Երևանից երևում է Արարատ լեռը։ Նրա գագաթին ամբողջ տարին ձյուն կա։"
+    },
+    {
+     "en": "Armenians bake [lavash], a thin bread, in a tonir.",
+     "hy": "Հայերը թոնրում լավաշ են թխում՝ բարակ հաց։"
+    },
+    {
+     "en": "Lake Sevan is high in the [mountains]. Its water is very blue.",
+     "hy": "Սևանա լիճը բարձր լեռներում է։ Նրա ջուրը շատ կապույտ է։"
+    },
+    {
+     "en": "The Temple of Garni is about two thousand years [old].",
+     "hy": "Գառնիի տաճարը մոտ երկու հազար տարեկան է։"
+    },
+    {
+     "en": "A long [cable car] takes visitors over the valley to Tatev Monastery.",
+     "hy": "Երկար ճոպանուղին այցելուներին կիրճի վրայով տանում է Տաթևի վանք։"
+    },
+    {
+     "en": "Armenian [apricots] are sweet and famous all over the world.",
+     "hy": "Հայկական ծիրանը քաղցր է և հայտնի ամբողջ աշխարհում։"
+    }
+   ],
+   "quiz": {
+    "q": "What is lavash?",
+    "a": "a thin bread",
+    "options": [
+     "a cake",
+     "a thin bread",
+     "a soup"
+    ]
+   },
+   "voice": "en-GB-LibbyNeural"
+  }
  ]
 }

@@ -2,7 +2,7 @@ name: Make voices
 on:
   push:
     branches: [main]
-    paths: ["assets/lessons/*.lesson.json", "reels/data/cards.json", "reels/data/sounds.json", "reels/data/dialogues.json", "reels/data/words10.json", "reels/data/phrasal.json", "reels/data/reading.json", "reels/data/storyvideo.json", "reels/data/routine.json", "reels/data/feelstory.json", "carousels/data/opposites.json", "stories/stories.json", "voices/**"]
+    paths: ["assets/lessons/*.lesson.json", "reels/data/cards.json", "reels/data/sounds.json", "reels/data/dialogues.json", "reels/data/words10.json", "reels/data/phrasal.json", "reels/data/reading.json", "reels/data/storyvideo.json", "reels/data/routine.json", "reels/data/feelstory.json", "carousels/data/opposites.json", "carousels/data/countries.json", "stories/stories.json", "voices/**"]
   workflow_dispatch:
 permissions:
   contents: write
@@ -32,7 +32,7 @@ jobs:
           python tools/voice_finish.py --budget 50 || echo "voice finishing skipped this time"
       - name: Save audio
         run: |
-          git add assets/lessons assets/cards assets/sounds assets/dialogues assets/stories assets/words10 assets/phrasal assets/reading assets/storyvideo assets/routine assets/feelstory assets/opposites
+          git add assets/lessons assets/cards assets/sounds assets/dialogues assets/stories assets/words10 assets/phrasal assets/reading assets/storyvideo assets/routine assets/feelstory assets/opposites assets/countries
           if ! git diff --cached --quiet; then
             git config user.name 98torosyan
             git config user.email 98torosyan@gmail.com
