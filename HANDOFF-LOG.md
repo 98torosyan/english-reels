@@ -97,3 +97,11 @@ Open:
 - QC: English check covers feelstory/opposites (caught Mom → Mum); voice check ignores quotes/spacing. Armenian Hunspell check tried and removed (dictionary misses too many correct forms).
 - Control panel: tools/build_panel.py → private page with alerts, next 7 days, grid preview, queue by series.
 - Open: token with instagram_manage_insights; held Everyday English clips flagged by voice QC (stir/keys/Hyde Park) need re-voicing before release; British vs American and school words10 pictures awaited.
+
+## 2026-11-17 (evening) — 4K reels, Story in a minute with 6 pictures
+- All reels now render at 1872x3328 (9:16) / 1872x2340 (4:5): RENDER_SCALE=26/15 in reels/render_utils.js (RENDER_SCALE=1 = old 1080p). Max Instagram API width is 1920.
+- feelstory template: picture feathered on all 4 sides + eased melt into the paper.
+- upscale_panels.py: `single` marker = one full picture (kept at 2160 px wide), optional `boxes` crop. NEVER run it locally without --sharp (it overwrites sharpened panels).
+- Story in a minute: 6 pictures per story, assets/minute/sNN-K/ (tools/ingest_minute.py <folder with sNN-K.jpg>); renderer spreads pictures over the speech, changes snap to spoken words.
+- Done: minute-the-happy-prince (6 pics). Others still use old 1-picture sheets; scenes for all 50 in the session scratchpad (six.py) — to redo: 6 Gemini images per story, same chat, full rules in every message (no collage, calm lower quarter fading to cream).
+- Owner: continue the other 49 later; there is enough stock of reels now. All 50 remain held.
