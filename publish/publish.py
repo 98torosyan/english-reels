@@ -162,7 +162,13 @@ def create_container(client: GraphClient, user_id: str, content: dict) -> str:
     child_ids = []
     alts = list(content.get("alt_texts") or [])
     for index, image_url in enumerate(content["slides"], start=1):
-        child_id = create_image(client, user_id, image_url, caption, is_item=True, alt_text=str(alts[index - 1]) if index <= len(alts) else "")
+        if str(image_url).lower().endswith(".mp4"):   # animated slide: a video carousel item
+            response = client.request("POST", f"{user_id}/media", {"media_type": "VIDEO", "video_url": image_url, "is_carousel_item": "true"})
+            child_id = str(response.get("id", ""))
+            if not child_id:
+                raise PublishError("Video carousel item creation returned no ID.")
+        else:
+            child_id = create_image(client, user_id, image_url, caption, is_item=True, alt_text=str(alts[index - 1]) if index <= len(alts) else "")
         print(f"Created carousel item {index}/{len(content['slides'])}.")
         wait_until_finished(client, child_id)
         child_ids.append(child_id)

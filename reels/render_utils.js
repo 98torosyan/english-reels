@@ -143,7 +143,7 @@ function encodeVideo(framesDirectory, audioPath, audioStart, duration, outputPat
   }
   args.push(
     '-t', duration.toFixed(3),
-    '-vf', 'scale=1080:1920:flags=lanczos,setsar=1',
+    '-vf', `scale=${(process.env.VIDEO_SIZE || '1080x1920').replace('x', ':')}:flags=lanczos,setsar=1`,
     '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p',
     '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
     '-movflags', '+faststart', path.resolve(outputPath),
@@ -175,7 +175,7 @@ function verifyVideo(videoPath) {
   const fps = info.match(/(\d+(?:\.\d+)?) fps/);
   const duration = info.match(/Duration: (\d{2}:\d{2}:\d{2}\.\d{2})/);
   const hasAudio = /Audio:/.test(info);
-  if (!dimensions || dimensions[1] !== '1080' || dimensions[2] !== '1920' || !hasAudio) {
+  if (!dimensions || dimensions[1] !== '1080' || dimensions[2] !== (process.env.VIDEO_SIZE || '1080x1920').split('x')[1] || !hasAudio) {
     throw new Error(`Rendered video failed format validation: ${path.basename(videoPath)}`);
   }
   const q = qualityCheck(videoPath);
