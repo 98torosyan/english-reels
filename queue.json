@@ -2390,7 +2390,9 @@
           "turn on and turn off: Lily turns on the lamp. Sam turns off the TV.",
           "Quiz: fill in the gap with close, forget, turn on."
         ]
-      }
+      },
+      "attempts": 1,
+      "last_error": "Container 17931821298242156 ended with status ERROR."
     },
     {
       "id": "2026-11-17-picstory-broken-bike",
