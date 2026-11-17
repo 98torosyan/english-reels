@@ -70,6 +70,14 @@ function renderHtmlPath(filePath) {
 
 async function preparePage(page, url, width, height) {
   await page.setViewportSize({ width, height });
+  // remember every set-up step the renderer does on this page, so renderFrames can open identical pages and render in parallel
+  if (!page.__steps) {
+    page.__steps = [];
+    const original = page.evaluate.bind(page);
+    page.evaluate = (fn, arg) => { page.__steps.push([fn, arg]); return original(fn, arg); };
+    page.__evaluate = original;
+  }
+  page.__url = url;
   const consoleErrors = [];
   page.on('console', (message) => {
     if (message.type() === 'error') consoleErrors.push(message.text());
@@ -88,15 +96,37 @@ async function renderFrames(page, duration, framesDirectory, posterPath, posterT
   fs.mkdirSync(resolvedFrames, { recursive: true });
   const totalFrames = Math.ceil(duration * fps);
   const posterFrame = Math.max(0, Math.min(totalFrames - 1, Math.round(posterTime * fps)));
-  for (let frame = 0; frame < totalFrames; frame += 1) {
-    const second = frame / fps;
-    await page.evaluate((time) => window.seek(time), second);
-    const framePath = path.join(resolvedFrames, `f${String(frame).padStart(5, '0')}.jpg`);
-    const screenshot = await page.screenshot({ path: framePath, type: 'jpeg', quality: 92 });
-    if (frame === posterFrame) fs.writeFileSync(posterPath, screenshot);
-    if (frame % 90 === 0) process.stdout.write(`  frame ${frame + 1}/${totalFrames}\r`);
+  // Several identical pages share the frames (each frame depends only on its time), so a video renders a few times faster.
+  const want = Math.max(1, Number(process.env.RENDER_WORKERS || Math.min(4, require('node:os').cpus().length + 1)));
+  const pages = [page];
+  if (want > 1 && page.__url && page.__steps) {
+    for (let k = 1; k < want; k += 1) {
+      try {
+        const p = await page.context().newPage();
+        await p.setViewportSize(page.viewportSize());
+        await p.goto(page.__url, { waitUntil: 'networkidle' });
+        await p.evaluate(() => document.fonts.ready);
+        for (const [fn, arg] of page.__steps) await p.evaluate(fn, arg);
+        pages.push(p);
+      } catch (error) { console.warn(`  parallel page ${k} not used: ${error.message}`); break; }
+    }
   }
-  process.stdout.write(`  rendered ${totalFrames} frames.\n`);
+  let next = 0; let done = 0;
+  const run = async (p) => {
+    const evaluate = p.__evaluate || p.evaluate.bind(p);
+    for (;;) {
+      const frame = next; next += 1;
+      if (frame >= totalFrames) return;
+      await evaluate((time) => window.seek(time), frame / fps);
+      const framePath = path.join(resolvedFrames, `f${String(frame).padStart(5, '0')}.jpg`);
+      const screenshot = await p.screenshot({ path: framePath, type: 'jpeg', quality: 92 });
+      if (frame === posterFrame) fs.writeFileSync(posterPath, screenshot);
+      done += 1; if (done % 90 === 0) process.stdout.write(`  frame ${done}/${totalFrames}\r`);
+    }
+  };
+  await Promise.all(pages.map(run));
+  for (const p of pages.slice(1)) await p.close();
+  process.stdout.write(`  rendered ${totalFrames} frames (${pages.length} page${pages.length > 1 ? 's' : ''}).\n`);
   return { totalFrames, fps };
 }
 
