@@ -11,6 +11,7 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import publish  # noqa: E402
+import caption_reach  # noqa: E402
 import crosspost  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,6 +63,7 @@ def main() -> int:
         return 0
     code = 0
     for item in items[:8]:
+        item["caption"] = caption_reach.improve(item)   # English first line + five reach hashtags for the mixed audience
         content = {"kind": item["format"], "caption": item.get("caption", ""), **item["media"], **({"thumb_offset": item["thumb_offset"]} if item.get("thumb_offset") else {}),
                    **({"_container": item["container_id"]} if item.get("container_id") else {})}
         with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
