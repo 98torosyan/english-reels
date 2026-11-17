@@ -1,0 +1,1 @@
+{"text": "The hare runs ahead and takes a nap, certain he will win.", "words": [[0.26, 0.34], [0.42, 0.64], [0.7, 0.96], [1.0, 1.3], [1.38, 1.48], [1.54, 1.82], [1.88, 1.91], [1.98, 2.26], [2.58, 2.94], [3.04, 3.12], [3.2, 3.38], [3.46, 3.85]], "tag": "en-GB-RyanNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
