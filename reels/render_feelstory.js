@@ -62,6 +62,8 @@ function paperColour(id) {
 async function main() {
   const st = DATA.stories.find((x) => x.id === process.argv[2]);
   if (!st) throw new Error(`Unknown story: ${process.argv[2]}`);
+  // a soft piano bed suits these stories better than the rotating set
+  if (!process.env.MUSIC_TRACK) process.env.MUSIC_TRACK = path.join(utils.ROOT, 'music', st.music || 'felt-piano.m4a');
   const T = timeline(st); const name = `feelstory-${st.id}`;
   const frames = path.join(utils.OUTPUT, `.frames-${name}`); const videoPath = path.join(utils.OUTPUT, `${name}.mp4`); const posterPath = path.join(utils.OUTPUT, `${name}.png`);
   const work = path.join(utils.ROOT, '.render-work'); utils.ensureDirectory(work); utils.ensureDirectory(utils.OUTPUT);
