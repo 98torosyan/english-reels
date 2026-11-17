@@ -31,6 +31,9 @@ def main():
         for f, name in zip(files, names):
             if f.suffix == ".png": Image.open(f).convert("RGB").save(target / name, "JPEG", quality=93, optimize=True)
             else: shutil.copy2(f, target / name)
+        poster = files[0].with_suffix(".png")   # the reel's poster frame is also its grid cover
+        if item["media"].get("cover_url", "").endswith("/cover.jpg") and poster.exists():
+            Image.open(poster).convert("RGB").save(target / "cover.jpg", "JPEG", quality=92)
         print(f"{n}/{len(todo)} restaged {item['id']}", flush=True)
         if n % 4 == 0 or n == len(todo):
             push(media, f"Reels՝ մաքուր դիզայն ({n}/{len(todo)})")
