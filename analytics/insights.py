@@ -84,6 +84,20 @@ def report(snap):
     lines += ["", "## Լավագույն 5 գրառումը", ""]
     for p in sorted(recent, key=score, reverse=True)[:5]:
         lines.append(f"- [{p['title'] or p['id']}]({p['permalink']}) · դիտում {p.get('views') or 0}, պահել {p.get('saved') or 0}, share {p.get('shares') or 0}, լայք {p.get('like_count') or 0}")
+    # which hashtags bring people: average reach (or likes until insights work) of the posts that used each tag
+    tag_posts = defaultdict(list); by_id = {p["id"]: p for p in snap["posts"] if "error" not in p}
+    for i in queue:
+        p = by_id.get(i.get("ig_media_id"))
+        if not p: continue
+        for t in i.get("hashtags") or [w for w in i.get("caption", "").split() if w.startswith("#")]:
+            tag_posts[t.lower()].append(p)
+    key = "reach" if snap.get("insights") else "like_count"
+    ranked = sorted(((t, ps) for t, ps in tag_posts.items() if len(ps) >= 3), key=lambda kv: -sum((x.get(key) or 0) for x in kv[1]) / len(kv[1]))
+    if ranked:
+        lines += ["", "## Hashtag-ներ՝ որոնք են աշխատում (միջինը մեկ գրառման համար, առնվազն 3 գրառում)", "",
+                  "| Hashtag | Գրառում | " + ("Հասանելիություն" if key == "reach" else "Լայք") + " |", "|---|---|---|"]
+        for t, ps in ranked[:12]: lines.append(f"| {t} | {len(ps)} | {avg(ps, key)} |")
+        if len(ranked) > 12: lines.append(f"| … ամենաթույլը՝ {ranked[-1][0]} | {len(ranked[-1][1])} | {avg(ranked[-1][1], key)} |")
     if hours:
         best = sorted(hours.items(), key=lambda kv: -sum(kv[1]) / len(kv[1]))[:3]
         lines += ["", "## Լավագույն ժամերը", "", ", ".join(f"{h:02d}:00" for h, _ in best)]

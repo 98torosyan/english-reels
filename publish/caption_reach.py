@@ -8,22 +8,33 @@ import hashlib
 # Instagram allows at most five hashtags per post (since December 2025), so every post gets five, chosen for that post:
 # one big learning tag, two that fit the topic, one about the format or level, one for the local audience.
 # The choice changes from post to post (seeded by the post's id), so the page reaches different searches.
-BROAD = ["#learnenglish", "#englishlearning", "#learningenglish", "#englishonline", "#esl", "#englishteacher", "#studyenglish"]
+BROAD = ["#learnenglish", "#englishlearning", "#learningenglish", "#englishonline", "#esl", "#englishteacher", "#studyenglish",
+         "#englishclass", "#englishlanguage", "#englishcourse", "#englishstudy", "#englishskills", "#improveyourenglish", "#englishlearners",
+         "#efl", "#tefl", "#englishtutor", "#learnenglishonline", "#englishpractice", "#englishfluency"]
 TOPICS = {
-    "grammar": ["#englishgrammar", "#grammartips", "#englishtips", "#englishmistakes", "#grammar"],
-    "words": ["#englishvocabulary", "#englishwords", "#vocabulary", "#newwords", "#wordoftheday", "#englishtips"],
-    "stories": ["#englishstories", "#shortstories", "#storytime", "#readinenglish", "#englishreading", "#easyenglish"],
-    "speaking": ["#spokenenglish", "#englishconversation", "#speakenglish", "#dailyenglish", "#englishphrases"],
-    "books": ["#englishliterature", "#classicbooks", "#bookstagram", "#readinenglish", "#booklovers"],
-    "travel": ["#travelenglish", "#englishfortravel", "#watercolortravel", "#easyenglish", "#englishvocabulary"],
-    "quiz": ["#englishquiz", "#englishtest", "#englishpractice", "#englishtips"],
+    "grammar": ["#englishgrammar", "#grammartips", "#englishtips", "#englishmistakes", "#grammar", "#grammarlesson", "#englishrules",
+                "#commonmistakes", "#tenses", "#grammarnerd", "#writeinenglish", "#correctenglish"],
+    "words": ["#englishvocabulary", "#englishwords", "#vocabulary", "#newwords", "#wordoftheday", "#englishtips", "#vocabularybuilding",
+              "#englishexpressions", "#learnwords", "#everydayenglish", "#englishidioms", "#wordsoftheday"],
+    "stories": ["#englishstories", "#shortstories", "#storytime", "#readinenglish", "#englishreading", "#easyenglish", "#gradedreaders",
+                "#storiesforlearners", "#readingpractice", "#listeningpractice", "#englishlistening", "#storytelling"],
+    "speaking": ["#spokenenglish", "#englishconversation", "#speakenglish", "#dailyenglish", "#englishphrases", "#speakingpractice",
+                 "#englishspeaking", "#conversationalenglish", "#phrasalverbs", "#realenglish", "#englishdialogue", "#speakfluently"],
+    "books": ["#englishliterature", "#classicbooks", "#bookstagram", "#readinenglish", "#booklovers", "#classicliterature",
+              "#bookworm", "#readingenglish", "#literature", "#bookish", "#easyreaders", "#booksofinstagram"],
+    "travel": ["#travelenglish", "#englishfortravel", "#watercolortravel", "#easyenglish", "#englishvocabulary", "#travelvocabulary",
+               "#worldculture", "#countriesoftheworld", "#travelwords", "#watercolor", "#learnwhileyoutravel", "#cultureandlanguage"],
+    "quiz": ["#englishquiz", "#englishtest", "#englishpractice", "#englishtips", "#testyourenglish", "#quiztime", "#englishexercise",
+             "#englishchallenge", "#grammarquiz"],
 }
 KIND = {"mistake": "grammar", "rule": "grammar", "quiz": "quiz", "words10": "words", "word": "words", "review": "words", "phrasal": "speaking",
         "dialogue": "speaking", "reading": "stories", "storyvideo": "stories", "story": "stories", "picstory": "stories", "feelstory": "stories",
         "classic": "books", "opposites": "words", "countries": "travel"}
-FORMAT = {"REELS": ["#englishreels", "#learnenglishwithreels", "#englishlesson", "#a2english", "#englishforbeginners"],
-          "CAROUSEL": ["#englishlesson", "#englishnotes", "#englishforbeginners", "#a2english", "#englishpractice"]}
-LOCAL = ["#անգլերեն", "#անգլերենիդասեր", "#անգլերենսովորել"]
+FORMAT = {"REELS": ["#englishreels", "#learnenglishwithreels", "#englishlesson", "#a2english", "#englishforbeginners", "#englishvideo",
+                    "#reelsenglish", "#b1english", "#englishshorts", "#listenandrepeat"],
+          "CAROUSEL": ["#englishlesson", "#englishnotes", "#englishforbeginners", "#a2english", "#englishpractice", "#studynotes",
+                       "#englishcards", "#saveforlater", "#b1english", "#swipeandlearn"]}
+LOCAL = ["#անգլերեն", "#անգլերենիդասեր", "#անգլերենսովորել", "#yerevan", "#armenia", "#englishinarmenia", "#հայաստան"]
 
 
 def tags(item):

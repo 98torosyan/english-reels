@@ -64,6 +64,7 @@ def main() -> int:
     code = 0
     for item in items[:8]:
         item["caption"] = caption_reach.improve(item)   # English first line + five reach hashtags for the mixed audience
+        item["hashtags"] = [w for w in item["caption"].split() if w.startswith("#")]   # kept, so analytics can tell which tags work
         content = {"kind": item["format"], "caption": item.get("caption", ""), **item["media"], **({"thumb_offset": item["thumb_offset"]} if item.get("thumb_offset") else {}),
                    **({"_container": item["container_id"]} if item.get("container_id") else {})}
         with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
