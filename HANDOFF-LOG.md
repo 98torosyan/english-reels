@@ -119,3 +119,14 @@ Open:
 - First one: "The Gift of the Magi" (magi). Finished reel stored on `motion-clips` branch under finished/. NOT queued: the owner wants to collect several and publish later on his word.
 - LumiTap tag 4 → lumitap.github.io/reading/ (English Reading Room page with Instagram button).
 - Open: readings for Nov 23–29 still need plan_reading.py; talk-cafe bubble overlap fix is in the template (re-render pending).
+
+## 2026-11-18 (late) — story reels on autopilot
+- GitHub Actions minutes for this private repo ran out at 20:35 (job annotation: spending limit). Nothing runs until the
+  repo is public (owner chose this; history scanned: no secrets, the one "EAA…" hit is base64 inside assets/logo-ig.svg).
+- New, all free: Telegram helper (telegram.yml every 5 min + tools/telegram_bot.py): owner sends the story JSON,
+  then the 6-scene sheet (cut and sent back as 6 files), then six clips → tools/story_pack.py adds it →
+  story.yml: narration (tools/story_voice.py) + six clips smoothed to 48 fps and sharpened to 1872 px in parallel →
+  reels/render_motion.py (vertical clips fill the screen, dark or light page from the mood) → tools/check_reel.py →
+  kept on the motion-clips branch, listed in reels/data/stories_ready.json, phone copy sent on Telegram.
+  Needs secrets TG_BOT_TOKEN and TG_CHAT_ID (the bot tells the chat id on /start while TG_CHAT_ID is empty).
+- The Last Leaf (leaf): text in talk.json, clips in assets/motion/leaf. Once public: run story.yml with story=leaf.
