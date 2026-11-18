@@ -2684,6 +2684,461 @@
     ]
    ],
    "paper": "#F4ECE3"
+  },
+  {
+   "id": "city-london",
+   "style": "cities",
+   "series": "Ani's travels",
+   "title": "Ani in London",
+   "title_hy": "",
+   "subtitle": "Ani's travels",
+   "english_only": true,
+   "level": "A2",
+   "voice": "en-GB-MaisieNeural",
+   "music": "new/piano-glow.m4a",
+   "pics_dir": "cities/london",
+   "scenes": [
+    [
+     "Hello from London! Today I am next to [Big Ben].",
+     "It is big, old and very beautiful."
+    ],
+    [
+     "We walk across [Tower Bridge].",
+     "Boats go slowly under it."
+    ],
+    [
+     "It starts to rain, so we take a [red bus].",
+     "‘[Two tickets, please],’ says Mum."
+    ],
+    [
+     "At [Buckingham Palace], the guards march.",
+     "Their hats are tall and black!"
+    ],
+    [
+     "Then we have [afternoon tea] with scones.",
+     "‘[Could I have some more], please?’"
+    ],
+    [
+     "In the evening, we ride the [London Eye].",
+     "London, I love you!"
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "city-paris",
+   "style": "cities",
+   "series": "Ani's travels",
+   "title": "Ani in Paris",
+   "title_hy": "",
+   "subtitle": "Ani's travels",
+   "english_only": true,
+   "level": "A2",
+   "voice": "en-GB-MaisieNeural",
+   "music": "new/cafe-accordion.m4a",
+   "pics_dir": "cities/paris",
+   "scenes": [
+    [
+     "Bonjour from Paris! We take a boat",
+     "and see the [Eiffel Tower]."
+    ],
+    [
+     "At a little café, I order breakfast.",
+     "‘[A croissant and a hot chocolate, please].’"
+    ],
+    [
+     "The [Louvre] is a huge museum.",
+     "Its glass pyramid shines in the sun."
+    ],
+    [
+     "In [Montmartre], artists paint the city.",
+     "I want to be a painter too!"
+    ],
+    [
+     "The [Arc de Triomphe] stands in the middle",
+     "of a very busy road."
+    ],
+    [
+     "Our last stop is a bakery.",
+     "‘[How much are the macarons]?’ I ask."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "city-new-york",
+   "style": "cities",
+   "series": "Ani's travels",
+   "title": "Ani in New York",
+   "title_hy": "",
+   "subtitle": "Ani's travels",
+   "english_only": true,
+   "level": "A2",
+   "voice": "en-GB-MaisieNeural",
+   "music": "new/warm-guitar.m4a",
+   "pics_dir": "cities/new-york",
+   "scenes": [
+    [
+     "Hi from New York! Our ferry goes past",
+     "the [Statue of Liberty]."
+    ],
+    [
+     "[Times Square] is so bright and busy.",
+     "There are lights everywhere!"
+    ],
+    [
+     "We take a [yellow taxi].",
+     "‘[To Fifth Avenue, please],’ says Dad."
+    ],
+    [
+     "In [Central Park], the leaves are red and gold.",
+     "We sit by the lake and rest."
+    ],
+    [
+     "We walk over the [Brooklyn Bridge].",
+     "The view is amazing."
+    ],
+    [
+     "The [Empire State Building] is so tall.",
+     "The city looks tiny from the top!"
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "city-venice",
+   "style": "cities",
+   "series": "Ani's travels",
+   "title": "Ani in Venice",
+   "title_hy": "",
+   "subtitle": "Ani's travels",
+   "english_only": true,
+   "level": "A2",
+   "voice": "en-GB-MaisieNeural",
+   "music": "new/nylon-garden.m4a",
+   "pics_dir": "cities/venice",
+   "scenes": [
+    [
+     "Ciao from Venice! Here the streets",
+     "are made of water. They are [canals]."
+    ],
+    [
+     "We stand on the [Rialto Bridge]",
+     "and watch the boats go by."
+    ],
+    [
+     "In [St Mark's Square], there are",
+     "hundreds of pigeons!"
+    ],
+    [
+     "Then we take a [gondola ride].",
+     "The gondolier sings a song."
+    ],
+    [
+     "On [Burano] island, every house",
+     "is a different colour."
+    ],
+    [
+     "For dinner, I have pasta and ice cream.",
+     "‘[The bill, please],’ says Dad."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "city-tokyo",
+   "style": "cities",
+   "series": "Ani's travels",
+   "title": "Ani in Tokyo",
+   "title_hy": "",
+   "subtitle": "Ani's travels",
+   "english_only": true,
+   "level": "A2",
+   "voice": "en-GB-MaisieNeural",
+   "music": "new/harp-dream.m4a",
+   "pics_dir": "cities/tokyo",
+   "scenes": [
+    [
+     "Hello from Japan! I can see",
+     "[Mount Fuji] and pink cherry blossoms."
+    ],
+    [
+     "The [Shibuya crossing] is very busy.",
+     "Hundreds of people cross at once!"
+    ],
+    [
+     "At [Senso-ji Temple], there is",
+     "a giant red lantern."
+    ],
+    [
+     "Then we take the [bullet train].",
+     "It is very, very fast!"
+    ],
+    [
+     "For lunch, we eat [ramen] and sushi.",
+     "‘[It's delicious]!’ I say."
+    ],
+    [
+     "In a quiet garden, I watch the fish",
+     "and listen to the water."
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "city-prague",
+   "style": "cities",
+   "series": "Ani's travels",
+   "title": "Ani in Prague",
+   "title_hy": "",
+   "subtitle": "Ani's travels",
+   "english_only": true,
+   "level": "A2",
+   "voice": "en-GB-MaisieNeural",
+   "music": "new/snow-celesta.m4a",
+   "pics_dir": "cities/prague",
+   "scenes": [
+    [
+     "Hello from Prague! We cross",
+     "the [Charles Bridge] early in the morning."
+    ],
+    [
+     "The [Old Town Square] looks",
+     "like a picture from a fairy tale."
+    ],
+    [
+     "Every hour, the old [astronomical clock]",
+     "puts on a little show."
+    ],
+    [
+     "From the hill, we can see",
+     "hundreds of [red roofs]."
+    ],
+    [
+     "At the [Christmas market], I drink hot chocolate.",
+     "‘[One more, please]!’"
+    ],
+    [
+     "At night, [Prague Castle] shines",
+     "above the river. Good night, Prague!"
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "city-dubai",
+   "style": "cities",
+   "series": "Ani's travels",
+   "title": "Ani in Dubai",
+   "title_hy": "",
+   "subtitle": "Ani's travels",
+   "english_only": true,
+   "level": "A2",
+   "voice": "en-GB-MaisieNeural",
+   "music": "new/evening-strings.m4a",
+   "pics_dir": "cities/dubai",
+   "scenes": [
+    [
+     "Hello from Dubai! This is the [Burj Khalifa],",
+     "the tallest building in the world."
+    ],
+    [
+     "Next to the sea, there is a hotel",
+     "that looks like a [sail]."
+    ],
+    [
+     "In the [desert], we ride camels",
+     "across the golden sand."
+    ],
+    [
+     "We cross the creek on a small",
+     "wooden boat called an [abra]."
+    ],
+    [
+     "In the [gold souk], everything shines.",
+     "‘[Can I have a look]?’ I ask."
+    ],
+    [
+     "In the evening, the [fountains] dance",
+     "to the music. What a day!"
+    ]
+   ],
+   "scenes_hy": [
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ]
+   ]
   }
  ]
 }

@@ -82,7 +82,7 @@ function coverHtml(st, baseUrl, paper, pic) {
 .t h1{font:600 italic 104px/1.02 Lit;letter-spacing:-2px;text-wrap:balance}
 .t p{margin-top:26px;font:600 40px Arm;color:#5b4636}
 .b{position:absolute;left:0;right:0;bottom:90px;text-align:center;font:800 22px Inter;letter-spacing:6px;color:#2B1E1466}
-</style></head><body><div class="p"><img src="${pic}"></div><div class="t"><h1>${st.title.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</h1><p>${st.title_hy}</p></div><div class="b">@ENGLISH.READINGROOM</div></body></html>`;
+</style></head><body><div class="p"><img src="${pic}"></div><div class="t"><h1>${st.title.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</h1><p>${st.subtitle || st.title_hy}</p></div><div class="b">@ENGLISH.READINGROOM</div></body></html>`;
 }
 
 // paper colour = the average colour of the bottom strip of the first picture, so the picture melts into it
