@@ -9,9 +9,9 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = (ROOT / ".." / ".." / "outputs" / "english-reels-samples").resolve()
-W, H, PIC_H, FPS = 1872, 3328, 2380, 30
+W, H, PIC_H, FPS = 1872, 3328, 2520, 30
 PAPER = (243, 234, 219)
-TEXT_Y = 2130            # top of the text band (in output pixels)
+TEXT_Y = 2250            # top of the text band (in output pixels)
 
 
 def run(args):
