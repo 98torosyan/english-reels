@@ -110,3 +110,12 @@ Open:
 - Owner reviewed every prepared post (artifact "Հերթի ստուգում"): 38 removed, then ALL words (words10, word) and ALL dialogues removed.
 - TODO (owner wants it): rebuild the Words and Dialogues sections from scratch in better quality, then queue them again.
 - New music candidates in music/new (12 tracks, real instruments via FluidSynth) wait for the owner's pick.
+
+## 2026-11-18 (evening) — moving painted stories
+- New format: 6 short motion clips (owner makes them in Grok from a cut 6-panel sheet) → `assets/motion/<id>/in1..6.mp4`.
+  The "Sharpen motion clips" workflow (motion.yml) upscales them with Real-ESRGAN and keeps them on the `motion-clips` branch.
+  `python reels/render_motion.py <id>` builds the 4K reel: picture melting into warm paper, each sentence under it while the narrator speaks, soft music.
+  Text and voice live in reels/data/talk.json (kind "story", person "Narrator"); voices.yml makes the clips.
+- First one: "The Gift of the Magi" (magi). Finished reel stored on `motion-clips` branch under finished/. NOT queued: the owner wants to collect several and publish later on his word.
+- LumiTap tag 4 → lumitap.github.io/reading/ (English Reading Room page with Instagram button).
+- Open: readings for Nov 23–29 still need plan_reading.py; talk-cafe bubble overlap fix is in the template (re-render pending).
