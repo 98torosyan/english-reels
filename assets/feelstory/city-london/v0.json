@@ -1,0 +1,1 @@
+{"text": "Hello from London! Today I am next to Big Ben.", "words": [[0.24, 0.52], [0.72, 0.9], [1.0, 1.54], [2.8, 3.14], [3.36, 3.39], [3.44, 3.52], [3.64, 3.96], [4.0, 4.1], [4.18, 4.36], [4.46, 4.906]], "tag": "en-GB-MaisieNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
