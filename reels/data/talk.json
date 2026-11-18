@@ -1,0 +1,189 @@
+{
+ "series": "Emma & Sam",
+ "note": "Everyday dialogues in 3D diorama pictures. English only. Bubbles show who speaks; [phrases] are the ones to learn. 'at' = where the speaker's head is in the picture (x, y from 0 to 1).",
+ "people": {
+  "Emma": {
+   "voice": "en-GB-SoniaNeural",
+   "colour": "#E0785A"
+  },
+  "Sam": {
+   "voice": "en-GB-RyanNeural",
+   "colour": "#4F6FA8"
+  },
+  "Barista": {
+   "voice": "en-GB-LibbyNeural",
+   "colour": "#5E8B6A"
+  }
+ },
+ "talks": [
+  {
+   "id": "cafe",
+   "title": "At the café",
+   "level": "A2",
+   "music": "new/lofi-desk.m4a",
+   "scenes": [
+    {
+     "at": {
+      "Emma": [
+       0.36,
+       0.3
+      ],
+      "Sam": [
+       0.55,
+       0.3
+      ]
+     },
+     "lines": [
+      [
+       "Sam",
+       "This café looks lovely. [Shall we go in?]"
+      ],
+      [
+       "Emma",
+       "Yes, let's! I really need a coffee."
+      ]
+     ]
+    },
+    {
+     "at": {
+      "Emma": [
+       0.36,
+       0.22
+      ],
+      "Sam": [
+       0.55,
+       0.22
+      ],
+      "Barista": [
+       0.8,
+       0.3
+      ]
+     },
+     "lines": [
+      [
+       "Emma",
+       "What would you like? I'm not sure."
+      ],
+      [
+       "Sam",
+       "The chocolate cake looks amazing!"
+      ]
+     ]
+    },
+    {
+     "at": {
+      "Emma": [
+       0.16,
+       0.4
+      ],
+      "Barista": [
+       0.47,
+       0.27
+      ],
+      "Sam": [
+       0.78,
+       0.32
+      ]
+     },
+     "lines": [
+      [
+       "Barista",
+       "Hi! [What can I get you?]"
+      ],
+      [
+       "Emma",
+       "[Can I have] a latte and the chocolate cake, please?"
+      ],
+      [
+       "Sam",
+       "And a cappuccino for me. [Can I pay by phone?]"
+      ],
+      [
+       "Barista",
+       "Of course! Here you are."
+      ]
+     ]
+    },
+    {
+     "at": {
+      "Emma": [
+       0.33,
+       0.36
+      ],
+      "Sam": [
+       0.7,
+       0.33
+      ]
+     },
+     "lines": [
+      [
+       "Emma",
+       "Mmm, this cake is delicious!"
+      ],
+      [
+       "Sam",
+       "I told you! How's your coffee?"
+      ],
+      [
+       "Emma",
+       "It's perfect."
+      ]
+     ]
+    },
+    {
+     "at": {
+      "Emma": [
+       0.33,
+       0.42
+      ],
+      "Sam": [
+       0.55,
+       0.4
+      ]
+     },
+     "lines": [
+      [
+       "Sam",
+       "[Shall we go for a walk?]"
+      ],
+      [
+       "Emma",
+       "Good idea. Let's take our coffee with us."
+      ]
+     ]
+    },
+    {
+     "at": {
+      "Emma": [
+       0.44,
+       0.4
+      ],
+      "Sam": [
+       0.64,
+       0.38
+      ]
+     },
+     "lines": [
+      [
+       "Emma",
+       "I love autumn in the city."
+      ],
+      [
+       "Sam",
+       "Me too. [Same time next week?]"
+      ],
+      [
+       "Emma",
+       "Definitely!"
+      ]
+     ]
+    }
+   ],
+   "recap": [
+    "Can I have a latte, please?",
+    "Can I pay by phone?",
+    "Shall we go for a walk?"
+   ]
+  }
+ ]
+}

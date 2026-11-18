@@ -110,6 +110,7 @@ def main():
     made += voice_feelstory()
     made += voice_opposites()
     made += voice_countries()
+    made += voice_talk()
     print(f"{made} file(s) voiced.")
 
 
@@ -378,6 +379,26 @@ def voice_feelstory():
             except Exception as error:
                 print(f"SKIPPED feelstory {st['id']}/{n}: {error}"); mp3.unlink(missing_ok=True); continue
             tj.write_text(json.dumps({"text": text, "words": words, "tag": st["voice"]}), encoding="utf-8"); made += 1
+    return made
+
+def voice_talk():
+    """Emma & Sam dialogues: every line its own clip, in the speaker's own voice, at a natural, slightly slow pace."""
+    made = 0
+    root = LESSONS.parents[1]
+    data = json.loads((root / "reels/data/talk.json").read_text(encoding="utf-8"))
+    for t in data["talks"]:
+        out = root / "assets" / "talk" / t["id"]; out.mkdir(parents=True, exist_ok=True)
+        lines = [l for sc in t["scenes"] for l in sc["lines"]]
+        for n, (who, raw) in enumerate(lines):
+            text = raw.replace("[", "").replace("]", ""); voice = data["people"][who]["voice"]
+            mp3, tj = out / f"v{n}.mp3", out / f"v{n}.json"
+            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text and json.loads(tj.read_text()).get("tag") == voice: continue
+            try:
+                bounds = asyncio.run(synth(text, voice, "-8%", mp3))
+                words = align(text.split(), bounds)
+            except Exception as error:
+                print(f"SKIPPED talk {t['id']}/{n}: {error}"); mp3.unlink(missing_ok=True); continue
+            tj.write_text(json.dumps({"text": text, "words": words, "tag": voice}), encoding="utf-8"); made += 1
     return made
 
 def voice_opposites():

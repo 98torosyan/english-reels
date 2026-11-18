@@ -2,7 +2,7 @@ name: Make voices
 on:
   push:
     branches: [main]
-    paths: ["assets/lessons/*.lesson.json", "reels/data/cards.json", "reels/data/sounds.json", "reels/data/dialogues.json", "reels/data/words10.json", "reels/data/phrasal.json", "reels/data/reading.json", "reels/data/storyvideo.json", "reels/data/routine.json", "reels/data/feelstory.json", "carousels/data/opposites.json", "carousels/data/countries.json", "stories/stories.json", "voices/**"]
+    paths: ["assets/lessons/*.lesson.json", "reels/data/cards.json", "reels/data/sounds.json", "reels/data/dialogues.json", "reels/data/words10.json", "reels/data/phrasal.json", "reels/data/reading.json", "reels/data/storyvideo.json", "reels/data/routine.json", "reels/data/feelstory.json", "carousels/data/opposites.json", "carousels/data/countries.json", "reels/data/talk.json", "stories/stories.json", "voices/**"]
   workflow_dispatch:
 permissions:
   contents: write
