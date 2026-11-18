@@ -85,6 +85,12 @@ jobs:
           pip install -q spandrel pillow numpy scenedetect opencv-python-headless
           mkdir -p weights
           curl -sSLf -o weights/realesr-animevideov3.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-animevideov3.pth
+      - name: RIFE frame interpolation (CPU Vulkan)
+        run: |
+          sudo apt-get install -y --no-install-recommends mesa-vulkan-drivers libvulkan1 >/dev/null
+          curl -sSLf -o rife.zip https://github.com/nihui/rife-ncnn-vulkan/releases/download/20221029/rife-ncnn-vulkan-20221029-ubuntu.zip
+          unzip -q rife.zip '*/rife-ncnn-vulkan' '*/rife-v4.6/*' && rm rife.zip
+          d=$(ls -d "$PWD"/rife-ncnn-vulkan-*); chmod +x "$d/rife-ncnn-vulkan"; echo "RIFE=$d" >> "$GITHUB_ENV"
       - name: Keep only the clean part of the clip
         run: python tools/clip_guard.py "assets/motion/$STORY/in${{ matrix.n }}.mp4" clean.mp4
       - name: Smooth (48 fps) and sharp (4K width)
