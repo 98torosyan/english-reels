@@ -28,7 +28,7 @@ jobs:
           pip install -q pillow numpy
           done=$(python tools/telegram_bot.py poll | tail -1)
           git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
-          git add -A inbox assets/motion reels/data/talk.json
+          git add -A inbox assets/motion reels/data/talk.json reels/data/stories_ready.json queue.json
           if ! git diff --cached --quiet; then
             git commit -qm "Telegram՝ նոր պատմության նյութեր"
             for k in 1 2 3 4 5; do git pull -q --rebase && git push -q && break; sleep 5; done

@@ -137,7 +137,7 @@ def main():
              "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-maxrate", "12M", "-bufsize", "24M", "-profile:v", "high", "-level", "5.1",
              "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(tmp)]
     run(args); tmp.rename(dst)
-    run(["ffmpeg", "-v", "error", "-y", "-ss", f"{lines[3]['at'] + 0.5:.2f}", "-i", str(dst), "-frames:v", "1", "-q:v", "2", str(OUT / f"motion-{sid}-cover.jpg")])
+    run(["ffmpeg", "-v", "error", "-y", "-ss", f"{lines[0]['end'] + 0.2:.2f}", "-i", str(dst), "-frames:v", "1", "-q:v", "2", str(OUT / f"motion-{sid}-cover.jpg")])
     print("rendered", dst, f"{total:.1f}s")
 
 

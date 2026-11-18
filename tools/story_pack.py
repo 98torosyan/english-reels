@@ -5,7 +5,8 @@
                                                                        moves the clips to assets/motion/<id>/in1..6.mp4
 The JSON may be pasted together with other text: anything around the {...} block is ignored.
 Format: {"id": "the-last-leaf", "title": "The Last Leaf", "level": "A2", "mood": "sad",
-         "scenes": [["sentence", "sentence"], ... six scenes, 1-3 sentences each]}"""
+         "scenes": [["sentence", "sentence"], ... six scenes, 1-3 sentences each],
+         "question": "optional question for the comments", "hashtags": ["optional", "five"]}"""
 import json, re, shutil, sys
 from pathlib import Path
 
@@ -50,6 +51,8 @@ def problems(st):
     if not isinstance(st.get("title"), str) or not st["title"].strip(): out.append("title is missing")
     if st.get("level", "A2") not in LEVELS: out.append(f"level must be one of {sorted(LEVELS)}")
     if st.get("mood", "warm") not in MOODS: out.append(f"mood must be one of {sorted(MOODS)}")
+    q = st.get("question")
+    if q is not None and (not isinstance(q, str) or len(q) > 120): out.append("question must be one short sentence")
     sc = st.get("scenes")
     if not isinstance(sc, list) or len(sc) != 6: out.append("there must be exactly 6 scenes"); return out
     for k, lines in enumerate(sc, 1):
@@ -68,7 +71,8 @@ def entry(st):
     scenes = [list(x) for x in st["scenes"]]
     scenes[0] = [title.rstrip(".") + "."] + scenes[0]   # the narrator says the title first
     return {"id": st["id"], "kind": "story", "title": title, "level": st.get("level", "A2"), "music": music, "paper": paper,
-            "scenes": [{"at": {}, "lines": [["Narrator", l.strip()] for l in lines]} for lines in scenes], "recap": []}
+            "scenes": [{"at": {}, "lines": [["Narrator", l.strip()] for l in lines]} for lines in scenes], "recap": [],
+            "question": (st.get("question") or "").strip(), "hashtags": [h.lstrip("#") for h in st.get("hashtags", []) if isinstance(h, str)][:5]}
 
 
 def add(folder):

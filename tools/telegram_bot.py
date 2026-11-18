@@ -22,7 +22,8 @@ HELP = ("Բարև 👋 Ես English Reading Room-ի օգնականն եմ։\n\n"
         "2. Ուղարկիր 6 տեսարանով նկարը. ես կկտրեմ ու հետ կուղարկեմ 6 առանձին նկար՝ կենդանացնելու համար։\n"
         "3. Ուղարկիր 6 վիդեոն հերթով՝ 1-ից 6 (ավելի լավ է որպես ֆայլ, որ որակը չընկնի)։\n"
         "4. Մոտ 30 րոպեից պատրաստ ռիլսը կգա այստեղ։\n\n"
-        "Հրամաններ. /status՝ ինչ է սպասվում, /cancel՝ չեղարկել ընթացիկը, /list՝ պատրաստ պատմությունները։")
+        "Հրամաններ. /status՝ ինչ է սպասվում, /cancel՝ չեղարկել ընթացիկը, /list՝ պատրաստ պատմությունները, "
+        "/publish՝ պատրաստները դնել հերթի մեջ։")
 
 
 def call(method, **params):
@@ -106,10 +107,16 @@ def handle(msg, st, done):
     if text.startswith("/cancel"):
         if p: subprocess.run(["rm", "-rf", str(INBOX / p["id"])])
         st["pending"] = None; send("Չեղարկեցի։ Կարող ես նոր պատմություն ուղարկել։"); return
+    if text.startswith("/publish"):
+        r = subprocess.run([sys.executable, str(ROOT / "publish" / "plan_stories.py")], capture_output=True, text=True)
+        planned = [l for l in r.stdout.splitlines() if l.strip()]
+        send("Հերթում են ✅\n" + "\n".join(f"• {l}" for l in planned) if planned else "Հրապարակելու պատրաստ պատմություն չկա։"); return
     if text.startswith("/list"):
         reg = ROOT / "reels" / "data" / "stories_ready.json"
         items = json.loads(reg.read_text()) if reg.exists() else []
-        send("Պատրաստ պատմություններ.\n" + "\n".join(f"• {x['title']} ({x['date']})" for x in items) if items else "Դեռ պատրաստ պատմություն չկա։"); return
+        mark = {"held": "⏸ սպասում է", "queued": "📅 հերթում"}
+        send("Պատրաստ պատմություններ.\n" + "\n".join(f"• {x['title']}՝ {mark.get(x.get('status'), x.get('status'))}" for x in items) +
+             "\n\n/publish՝ սպասողներին դնել հերթի մեջ (ամեն երեկո 21:00)" if items else "Դեռ պատրաստ պատմություն չկա։"); return
     doc = msg.get("document") or {}
     pic = (msg.get("photo") or [None])[-1] or (doc if doc.get("mime_type", "").startswith("image") else None)
     if pic:

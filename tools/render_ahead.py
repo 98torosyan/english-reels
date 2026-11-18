@@ -1,5 +1,6 @@
 """Just-in-time media: for staged posts due within --days days whose files are not in the media repo yet, render them
-and put them in place. Posts say how in item["render"]: {"reel": "<feelstory id>"} or {"countries": "<country id>"}.
+and put them in place. Posts say how in item["render"]: {"reel": "<feelstory id>"}, {"countries": "<country id>"} or
+{"motion": "<story id>"} (a finished story reel kept on the motion-clips branch: only copied, not rendered).
 This keeps the public media site small (only the next few days live there) and needs no computer: the daily
 "Render ahead" workflow runs it. Usage: python tools/render_ahead.py --media-repo ../english-reels-media [--days 3]"""
 import argparse, datetime as dt, json, shutil, subprocess
@@ -21,6 +22,12 @@ def render(item, media):
         subprocess.run(["node", "reels/render_feelstory.js", i], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
         shutil.copy2(OUT / f"feelstory-{i}.mp4", folder / f"feelstory-{i}.mp4")
         if (OUT / f"feelstory-{i}-cover.jpg").exists(): shutil.copy2(OUT / f"feelstory-{i}-cover.jpg", folder / "cover.jpg")
+    elif "motion" in spec:
+        i = spec["motion"]
+        subprocess.run(["git", "fetch", "-q", "--depth", "1", "origin", "motion-clips"], cwd=ROOT, check=True)
+        for name, dest in ((f"finished/motion-{i}.mp4", f"motion-{i}.mp4"), (f"finished/motion-{i}-cover.jpg", "cover.jpg")):
+            data = subprocess.run(["git", "show", f"FETCH_HEAD:{name}"], cwd=ROOT, check=True, capture_output=True).stdout
+            (folder / dest).write_bytes(data)
     elif "countries" in spec:
         i = spec["countries"]
         subprocess.run(["node", "carousels/render_countries.js", i], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
