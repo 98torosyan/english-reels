@@ -1,0 +1,133 @@
+"""A painted story that moves: six short motion clips (assets/motion/<id>/out-<n>.mp4, sharpened to 4K width) melt into a
+warm paper page; one calm narrator tells the story and each sentence appears under the picture while it is spoken.
+Text and voice come from reels/data/talk.json (kind "story"); voice clips from assets/talk/<id>.
+Usage: python reels/render_motion.py <id>"""
+import json, subprocess, sys, tempfile
+from pathlib import Path
+import numpy as np
+from PIL import Image
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = (ROOT / ".." / ".." / "outputs" / "english-reels-samples").resolve()
+W, H, PIC_H, FPS = 1872, 3328, 2380, 30
+PAPER = (243, 234, 219)
+TEXT_Y = 2330            # top of the text band (in output pixels)
+
+
+def run(args):
+    r = subprocess.run(args, capture_output=True, text=True)
+    if r.returncode: raise SystemExit(r.stderr[-3000:])
+    return r.stdout
+
+
+def timeline(t):
+    lines, scenes, at = [], [], 0.7
+    vdir = ROOT / "assets" / "talk" / t["id"]; n = 0
+    for s, sc in enumerate(t["scenes"]):
+        if s: at += 0.75
+        s0 = at
+        for _, text in sc["lines"]:
+            j = json.loads((vdir / f"v{n}.json").read_text())
+            assert j["text"] == text, f"voice {n} is for another text"
+            a, b = j["words"][0][0], j["words"][-1][1]
+            lines.append({"n": n, "text": text, "scene": s, "at": at, "end": at + (b - a), "from": a, "to": b, "title": n == 0})
+            at += (b - a) + (0.85 if n == 0 else 0.5); n += 1
+        scenes.append(s0)
+    total = lines[-1]["end"] + 2.6
+    return lines, scenes, total
+
+
+def mask(path):
+    y = np.arange(PIC_H)[:, None].astype(float)
+    def ss(e0, e1, v):
+        x = np.clip((v - e0) / (e1 - e0), 0, 1); return x * x * (3 - 2 * x)
+    m = ss(0, 140, y) * (1 - ss(PIC_H - 760, PIC_H, y))
+    x = np.arange(W)[None, :].astype(float)
+    m = m * (0.86 + 0.14 * ss(0, 90, x) * ss(0, 90, W - x))   # a breath of softness at the sides too
+    Image.fromarray((m * 255).astype(np.uint8), "L").save(path)
+
+
+def text_pngs(lines, work):
+    """Each sentence as a transparent PNG, set in Playfair Display by the browser (best type rendering)."""
+    script = r"""
+const { chromium } = require('playwright-core'); const fs = require('fs');
+(async () => {
+  const [lines, dir, root] = JSON.parse(fs.readFileSync(0, 'utf8'));
+  const b = await chromium.launch({ executablePath: process.env.CHROME_PATH });
+  const p = await b.newPage({ viewport: { width: 1080, height: 520 }, deviceScaleFactor: 26 / 15 });
+  const f = (s) => `file://${root}/node_modules/@fontsource-variable/playfair-display/files/playfair-display-latin-wght-${s}.woff2`;
+  await p.setContent(`<style>@font-face{font-family:P;src:url(${f('normal')})}@font-face{font-family:P;font-style:italic;src:url(${f('italic')})}
+   html,body{margin:0;background:transparent}#t{width:1080px;height:520px;display:flex;align-items:center;justify-content:center;text-align:center}
+   #t span{max-width:900px;font:500 66px/1.28 P;color:#3A2A1F;letter-spacing:.2px;text-shadow:0 0 18px rgba(243,234,219,.9),0 0 4px rgba(243,234,219,.8)}
+   #t.title span{font:italic 600 92px/1.12 P;color:#5A2E1E}</style><div id=t><span></span></div>`);
+  await p.evaluate(() => document.fonts.load('500 66px P').then(() => document.fonts.load('italic 600 92px P')));
+  for (const l of lines) {
+    await p.evaluate(([txt, title]) => { const t = document.getElementById('t'); t.className = title ? 'title' : ''; t.firstChild.textContent = txt; }, [l.title ? l.text.replace(/\.$/, '') : l.text, l.title]);
+    await p.screenshot({ path: `${dir}/line${l.n}.png`, omitBackground: true });
+  }
+  await b.close();
+})();"""
+    js = work / "text.js"; js.write_text(script)
+    subprocess.run(["node", str(js)], input=json.dumps([lines, str(work), str(ROOT)]), text=True, check=True, cwd=ROOT)
+
+
+def main():
+    sid = sys.argv[1]
+    t = next(x for x in json.loads((ROOT / "reels/data/talk.json").read_text())["talks"] if x["id"] == sid)
+    lines, scenes, total = timeline(t)
+    work = Path(tempfile.mkdtemp(prefix=f"motion-{sid}-")); mask(work / "mask.png"); text_pngs(lines, work)
+    mdir = ROOT / "assets" / "motion" / sid; XF = 1.0
+    # each picture runs from its scene start (minus half a cross-fade) to the next one; clips are slowed gently if needed
+    starts = [0.0] + [s - 0.55 for s in scenes[1:]]
+    ends = starts[1:] + [total]
+    args = ["ffmpeg", "-v", "error", "-y"]; fc = []
+    for k in range(len(scenes)):
+        need = ends[k] - starts[k] + (XF if k < len(scenes) - 1 else 0)
+        clip = mdir / f"out-{sid}-{k + 1}.mp4"
+        if not clip.exists(): clip = mdir / f"out-{k + 1}.mp4"
+        dur = float(run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(clip)]))
+        f = max(1.0, need / (dur - 0.1))
+        args += ["-i", str(clip)]
+        fc.append(f"[{k}:v]setpts={f:.4f}*PTS,framerate=fps={FPS},scale={PIC_H}:{PIC_H}:flags=lanczos,crop={W}:{PIC_H},trim=0:{need:.3f},setpts=PTS-STARTPTS,format=yuv420p[c{k}]")
+    prev, off = "c0", 0.0
+    for k in range(1, len(scenes)):
+        off = starts[k]
+        fc.append(f"[{prev}][c{k}]xfade=transition=fade:duration={XF}:offset={off:.3f}[x{k}]"); prev = f"x{k}"
+    nv = len(scenes)
+    args += ["-loop", "1", "-i", str(work / "mask.png")]; mi = nv
+    fc.append(f"[{mi}:v]format=gray,trim=0:{total:.3f}[m]")
+    fc.append(f"[{prev}]format=rgba,trim=0:{total:.3f}[pv];[pv][m]alphamerge[pa]")
+    fc.append(f"color=c=0x{''.join(f'{c:02X}' for c in PAPER)}:s={W}x{H}:r={FPS}:d={total:.3f}[bg];[bg][pa]overlay=0:0:shortest=1[v0]")
+    cur = "v0"
+    for i, l in enumerate(lines):
+        idx = nv + 1 + i
+        nxt = lines[i + 1]["at"] if i + 1 < len(lines) else total
+        a, b = max(0, l["at"] - 0.25), (nxt - 0.1 if i + 1 < len(lines) else total)
+        args += ["-loop", "1", "-t", f"{total:.3f}", "-i", str(work / f"line{l['n']}.png")]
+        fade_out = f",fade=t=out:st={b - 0.35:.3f}:d=0.35:alpha=1" if i + 1 < len(lines) else f",fade=t=out:st={total - 1.2:.3f}:d=1.0:alpha=1"
+        fc.append(f"[{idx}:v]format=rgba,fade=t=in:st={a:.3f}:d=0.45:alpha=1{fade_out}[t{i}]")
+        fc.append(f"[{cur}][t{i}]overlay=0:{TEXT_Y}:enable='between(t,{a:.3f},{b:.3f})'[v{i + 1}]"); cur = f"v{i + 1}"
+    fc.append(f"[{cur}]fade=t=in:st=0:d=0.6,format=yuv420p[vout]")
+    # sound: the narrator, and soft music under it
+    ai = nv + 1 + len(lines); vdir = ROOT / "assets" / "talk" / sid; chains = []
+    for i, l in enumerate(lines):
+        args += ["-i", str(vdir / f"v{l['n']}.mp3")]
+        fr = max(0, l["from"] - 0.06); ms = int(round((l["at"] - (l["from"] - fr)) * 1000))
+        chains.append(f"[{ai + i}:a]aresample=48000,atrim={fr:.3f}:{l['to'] + 0.35:.3f},asetpts=PTS-STARTPTS,afade=t=out:st={l['to'] - fr + 0.15:.3f}:d=0.2,adelay={ms}|{ms}[a{i}]")
+    mus = ai + len(lines)
+    args += ["-stream_loop", "-1", "-i", str(ROOT / "music" / t["music"])]
+    fc += chains
+    fc.append(f"{''.join(f'[a{i}]' for i in range(len(lines)))}amix=inputs={len(lines)}:normalize=0,apad=whole_dur={total:.3f}[voice]")
+    fc.append(f"[{mus}:a]aresample=48000,atrim=0:{total:.3f},volume=0.20,afade=t=in:d=1.5,afade=t=out:st={total - 2.5:.3f}:d=2.5[mus]")
+    fc.append(f"[voice][mus]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=9,aresample=48000[aout]")
+    OUT.mkdir(parents=True, exist_ok=True); dst = OUT / f"motion-{sid}.mp4"; tmp = OUT / f".motion-{sid}.tmp.mp4"
+    args += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", "[aout]", "-t", f"{total:.3f}",
+             "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-maxrate", "12M", "-bufsize", "24M", "-profile:v", "high", "-level", "5.1",
+             "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(tmp)]
+    run(args); tmp.rename(dst)
+    run(["ffmpeg", "-v", "error", "-y", "-ss", f"{lines[3]['at'] + 0.5:.2f}", "-i", str(dst), "-frames:v", "1", "-q:v", "2", str(OUT / f"motion-{sid}-cover.jpg")])
+    print("rendered", dst, f"{total:.1f}s")
+
+
+if __name__ == "__main__":
+    main()
