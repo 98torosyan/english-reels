@@ -9,7 +9,7 @@ on:
         description: "folder in assets/motion"
         required: false
 permissions:
-  contents: read
+  contents: write
 jobs:
   list:
     runs-on: ubuntu-latest
@@ -47,8 +47,11 @@ jobs:
       - id: n
         run: echo "name=$(echo '${{ matrix.clip }}' | sed 's#assets/motion/##; s#/in#-#; s#\.mp4##')" >> "$GITHUB_OUTPUT"
       - run: python tools/upscale_video.py "${{ matrix.clip }}" "out-${{ steps.n.outputs.name }}.mp4"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ${{ steps.n.outputs.name }}
-          path: out-${{ steps.n.outputs.name }}.mp4
-          retention-days: 7
+      - name: Keep the sharpened clip on the motion-clips branch
+        run: |
+          f="out-${{ steps.n.outputs.name }}.mp4"; story=$(dirname "${{ matrix.clip }}" | xargs basename)
+          git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
+          mv "$f" /tmp/"$f"
+          git fetch -q origin motion-clips && git checkout -q -B motion-clips origin/motion-clips || { git checkout -q --orphan motion-clips && git rm -rqf . ; }
+          mkdir -p "$story" && cp /tmp/"$f" "$story/$f" && git add "$story/$f" && git commit -qm "$story: $f"
+          for k in 1 2 3 4 5 6 7 8; do git push -q origin motion-clips && break; sleep $((RANDOM % 9 + 3)); git fetch -q origin motion-clips && git rebase -q origin/motion-clips; done
