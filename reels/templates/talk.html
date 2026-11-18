@@ -117,7 +117,7 @@
   T.lines.forEach((ln,i)=>{const el=bubs[i];const nxt=T.lines[i+1];const sameScene=nxt&&nxt.scene===ln.scene;
    const end=nxt?(sameScene?nxt.at+.25:T.scenes[ln.scene+1]?.at??ln.end+1):T.recapAt;
    const a=clamp((t-ln.at+.18)/.35), z=1-clamp((t-end)/.35);
-   el.style.opacity=a*z*(sameScene&&t>nxt.at?.0:1);
+   el.style.opacity=a*z*(sameScene?1-clamp((t-nxt.at+.3)/.12):1);
    el.style.transform=`scale(${.6+.4*back(clamp((t-ln.at+.18)/.45))})`;
    el.querySelectorAll('.w').forEach((w,j)=>w.classList.toggle('on',t>=ln.words[j][0]&&t<ln.end+.15));
    if(ln.phrase&&t>=ln.at&&t<end+0.6) learn={text:ln.phrase,at:ln.at,end:end+0.6}});
