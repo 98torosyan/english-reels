@@ -16,7 +16,7 @@ const r3 = (x) => Number(x.toFixed(3));
 // one accent per day, from the brand palette, so neighbouring posts never look the same
 const PALETTE = ['#B9790B', '#1C8AA3', '#B23F78', '#3E5FD9', '#2E9E6A', '#6A49E2'];
 const withColor = (st) => ({ ...st, color: PALETTE[(st.number + 4) % PALETTE.length],
-  img: `data:image/jpeg;base64,${fs.readFileSync(path.join(utils.ROOT, 'assets', 'reading', `${st.id}.jpg`)).toString('base64')}` });
+  img: `data:image/jpeg;base64,${fs.readFileSync([path.join(utils.ROOT, 'assets', 'reading', st.id, '1.jpg'), path.join(utils.ROOT, 'assets', 'reading', `${st.id}.jpg`)].find((f) => fs.existsSync(f))).toString('base64')}` });
 
 function clip(id, n, text) {
   const dir = path.join(utils.ROOT, 'assets', 'reading', id);
