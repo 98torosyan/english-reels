@@ -37,29 +37,32 @@ def timeline(t):
     return lines, scenes, total
 
 
-def mask(path):
-    y = np.arange(PIC_H)[:, None].astype(float)
+def mask(path, pic_h=PIC_H, fade=760):
+    y = np.arange(pic_h)[:, None].astype(float)
     def ss(e0, e1, v):
         x = np.clip((v - e0) / (e1 - e0), 0, 1); return x * x * (3 - 2 * x)
-    m = ss(0, 140, y) * (1 - ss(PIC_H - 760, PIC_H, y))
+    m = ss(0, 140, y) * (1 - ss(pic_h - fade, pic_h, y))
     x = np.arange(W)[None, :].astype(float)
     m = m * (0.86 + 0.14 * ss(0, 90, x) * ss(0, 90, W - x))   # a breath of softness at the sides too
     Image.fromarray((m * 255).astype(np.uint8), "L").save(path)
 
 
-def text_pngs(lines, work):
+def text_pngs(lines, work, dark=False):
     """Each sentence as a transparent PNG, set in Playfair Display by the browser (best type rendering)."""
     script = r"""
 const { chromium } = require('playwright-core'); const fs = require('fs');
 (async () => {
-  const [lines, dir, root] = JSON.parse(fs.readFileSync(0, 'utf8'));
+  const [lines, dir, root, dark] = JSON.parse(fs.readFileSync(0, 'utf8'));
   const b = await chromium.launch({ executablePath: process.env.CHROME_PATH });
   const p = await b.newPage({ viewport: { width: 1080, height: 520 }, deviceScaleFactor: 26 / 15 });
   const f = (s) => 'data:font/woff2;base64,' + fs.readFileSync(`${root}/node_modules/@fontsource-variable/playfair-display/files/playfair-display-latin-wght-${s}.woff2`).toString('base64');
   await p.setContent(`<style>@font-face{font-family:P;src:url(${f('normal')})}@font-face{font-family:P;font-style:italic;src:url(${f('italic')})}
    html,body{margin:0;background:transparent}#t{width:1080px;height:520px;display:flex;align-items:center;justify-content:center;text-align:center}
    #t span{max-width:900px;font:500 66px/1.28 P;color:#3A2A1F;letter-spacing:.2px;text-shadow:0 0 18px rgba(243,234,219,.9),0 0 4px rgba(243,234,219,.8)}
-   #t.title span{font:italic 600 92px/1.12 P;color:#5A2E1E}</style><div id=t><span></span></div>`);
+   #t.title span{font:italic 600 92px/1.12 P;color:#5A2E1E}
+   body.dark #t span{color:#F3E9D8;text-shadow:0 0 22px rgba(20,14,10,.95),0 0 6px rgba(20,14,10,.9)}
+   body.dark #t.title span{color:#E9C46A}</style><div id=t><span></span></div>`);
+  if (dark) await p.evaluate(() => document.body.classList.add('dark'));
   await p.evaluate(() => document.fonts.load('500 66px P').then(() => document.fonts.load('italic 600 92px P')));
   for (const l of lines) {
     await p.evaluate(([txt, title]) => { const t = document.getElementById('t'); t.className = title ? 'title' : ''; t.firstChild.textContent = txt; }, [l.title ? l.text.replace(/\.$/, '') : l.text, l.title]);
@@ -68,19 +71,28 @@ const { chromium } = require('playwright-core'); const fs = require('fs');
   await b.close();
 })();"""
     js = ROOT / ".render-work" / "motion-text.js"; js.parent.mkdir(exist_ok=True); js.write_text(script)
-    subprocess.run(["node", str(js)], input=json.dumps([lines, str(work), str(ROOT)]), text=True, check=True, cwd=ROOT)
+    subprocess.run(["node", str(js)], input=json.dumps([lines, str(work), str(ROOT), dark]), text=True, check=True, cwd=ROOT)
 
 
 def main():
     sid = sys.argv[1]
     t = next(x for x in json.loads((ROOT / "reels/data/talk.json").read_text())["talks"] if x["id"] == sid)
     lines, scenes, total = timeline(t)
-    work = Path(tempfile.mkdtemp(prefix=f"motion-{sid}-")); mask(work / "mask.png"); text_pngs(lines, work)
     mdir = ROOT / "assets" / "motion" / sid; XF = 1.0
+    first = mdir / f"out-{sid}-1.mp4"
+    if not first.exists(): first = mdir / "out-1.mp4"
+    cw, ch = map(int, run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", str(first)]).split(","))
+    tall = ch / cw > 1.2                     # vertical clips fill the screen; square ones sit on the page
+    pic_h = round(W * ch / cw / 2) * 2 if tall else PIC_H
+    text_y = pic_h - 640 if tall else TEXT_Y
+    paper = tuple(int(t["paper"][i:i + 2], 16) for i in (1, 3, 5)) if t.get("paper") else PAPER
+    dark = sum(paper) < 384
+    work = Path(tempfile.mkdtemp(prefix=f"motion-{sid}-")); mask(work / "mask.png", pic_h, 900 if tall else 760); text_pngs(lines, work, dark)
     # each picture runs from its scene start (minus half a cross-fade) to the next one; clips are slowed gently if needed
     starts = [0.0] + [s - 0.55 for s in scenes[1:]]
     ends = starts[1:] + [total]
     args = ["ffmpeg", "-v", "error", "-y"]; fc = []
+    fit = f"scale={W}:{pic_h}:flags=lanczos," if tall else f"scale={PIC_H}:{PIC_H}:flags=lanczos,crop={W}:{PIC_H},"
     for k in range(len(scenes)):
         need = ends[k] - starts[k] + (XF if k < len(scenes) - 1 else 0)
         clip = mdir / f"out-{sid}-{k + 1}.mp4"
@@ -88,7 +100,7 @@ def main():
         dur = float(run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(clip)]))
         f = max(1.0, need / (dur - 0.1))
         args += ["-i", str(clip)]
-        fc.append(f"[{k}:v]setpts={f:.4f}*PTS,framerate=fps={FPS},scale={PIC_H}:{PIC_H}:flags=lanczos,crop={W}:{PIC_H},trim=0:{need:.3f},setpts=PTS-STARTPTS,format=yuv420p[c{k}]")
+        fc.append(f"[{k}:v]setpts={f:.4f}*PTS,framerate=fps={FPS},{fit}trim=0:{need:.3f},setpts=PTS-STARTPTS,format=yuv420p[c{k}]")
     prev, off = "c0", 0.0
     for k in range(1, len(scenes)):
         off = starts[k]
@@ -97,7 +109,7 @@ def main():
     args += ["-loop", "1", "-i", str(work / "mask.png")]; mi = nv
     fc.append(f"[{mi}:v]format=gray,trim=0:{total:.3f}[m]")
     fc.append(f"[{prev}]format=rgba,trim=0:{total:.3f}[pv];[pv][m]alphamerge[pa]")
-    fc.append(f"color=c=0x{''.join(f'{c:02X}' for c in PAPER)}:s={W}x{H}:r={FPS}:d={total:.3f}[bg];[bg][pa]overlay=0:0:shortest=1[v0]")
+    fc.append(f"color=c=0x{''.join(f'{c:02X}' for c in paper)}:s={W}x{H}:r={FPS}:d={total:.3f}[bg];[bg][pa]overlay=0:0:shortest=1[v0]")
     cur = "v0"
     for i, l in enumerate(lines):
         idx = nv + 1 + i
@@ -106,7 +118,7 @@ def main():
         args += ["-loop", "1", "-t", f"{total:.3f}", "-i", str(work / f"line{l['n']}.png")]
         fade_out = f",fade=t=out:st={b - 0.35:.3f}:d=0.35:alpha=1" if i + 1 < len(lines) else f",fade=t=out:st={total - 1.2:.3f}:d=1.0:alpha=1"
         fc.append(f"[{idx}:v]format=rgba,fade=t=in:st={a:.3f}:d=0.45:alpha=1{fade_out}[t{i}]")
-        fc.append(f"[{cur}][t{i}]overlay=0:{TEXT_Y}:enable='between(t,{a:.3f},{b:.3f})'[v{i + 1}]"); cur = f"v{i + 1}"
+        fc.append(f"[{cur}][t{i}]overlay=0:{text_y}:enable='between(t,{a:.3f},{b:.3f})'[v{i + 1}]"); cur = f"v{i + 1}"
     fc.append(f"[{cur}]fade=t=in:st=0:d=0.6,format=yuv420p[vout]")
     # sound: the narrator, and soft music under it
     ai = nv + 1 + len(lines); vdir = ROOT / "assets" / "talk" / sid; chains = []
