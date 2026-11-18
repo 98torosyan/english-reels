@@ -1,6 +1,7 @@
 """Sharpen a short painted clip to 4K width, frame by frame: Real-ESRGAN (compact model) blended half and half with a
 plain Lanczos resize, so brushstrokes stay painterly instead of looking flat.
-Usage: python tools/upscale_video.py in.mp4 out.mp4 [--size 1872]"""
+With --fps 48 the clip is first made twice as smooth (motion-compensated in-between frames), so slowed-down
+scenes still glide. Usage: python tools/upscale_video.py in.mp4 out.mp4 [--size 1872] [--fps 48]"""
 import subprocess, sys
 import numpy as np, torch
 from PIL import Image
@@ -10,13 +11,16 @@ from spandrel import ModelLoader
 def main():
     src, dst = sys.argv[1], sys.argv[2]
     size = int(sys.argv[sys.argv.index("--size") + 1]) if "--size" in sys.argv else 1872
+    smooth = sys.argv[sys.argv.index("--fps") + 1] if "--fps" in sys.argv else None
     torch.set_num_threads(int(__import__("os").environ.get("THREADS", "4")))
     net = ModelLoader().load_from_file("weights/realesr-animevideov3.pth").eval()
     probe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height,r_frame_rate",
                             "-of", "csv=p=0", src], capture_output=True, text=True, check=True).stdout.strip().split(",")
     w, h, fps = int(probe[0]), int(probe[1]), probe[2]
+    vf = ["-vf", f"minterpolate=fps={smooth}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1"] if smooth else []
+    if smooth: fps = smooth
     W, H = size, round(size * h / w / 2) * 2
-    dec = subprocess.Popen(["ffmpeg", "-v", "error", "-i", src, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
+    dec = subprocess.Popen(["ffmpeg", "-v", "error", "-i", src, *vf, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", fps, "-i", "-",
                             "-c:v", "libx264", "-preset", "slow", "-crf", "14", "-pix_fmt", "yuv420p", dst], stdin=subprocess.PIPE)
     n = 0

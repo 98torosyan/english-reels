@@ -112,7 +112,7 @@ Open:
 - New music candidates in music/new (12 tracks, real instruments via FluidSynth) wait for the owner's pick.
 
 ## 2026-11-18 (evening) — moving painted stories
-- New format: 6 short motion clips (owner makes them in Grok from a cut 6-panel sheet) → `assets/motion/<id>/in1..6.mp4`.
+- New format: 6 short motion clips (owner animates the six cut scenes of one 6-panel sheet) → `assets/motion/<id>/in1..6.mp4`.
   The "Sharpen motion clips" workflow (motion.yml) upscales them with Real-ESRGAN and keeps them on the `motion-clips` branch.
   `python reels/render_motion.py <id>` builds the 4K reel: picture melting into warm paper, each sentence under it while the narrator speaks, soft music.
   Text and voice live in reels/data/talk.json (kind "story", person "Narrator"); voices.yml makes the clips.

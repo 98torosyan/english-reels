@@ -1,0 +1,36 @@
+name: Telegram helper
+# Every few minutes: read the owner's new Telegram messages (story text, then six clips). When a pack is complete it
+# goes into the repo and "Make a story reel" starts. Needs secrets TG_BOT_TOKEN and TG_CHAT_ID; does nothing without them.
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: telegram
+  cancel-in-progress: false
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+      TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        if: env.TG_BOT_TOKEN != ''
+      - name: Read messages
+        if: env.TG_BOT_TOKEN != ''
+        run: |
+          pip install -q pillow numpy
+          done=$(python tools/telegram_bot.py poll | tail -1)
+          git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
+          git add -A inbox assets/motion reels/data/talk.json
+          if ! git diff --cached --quiet; then
+            git commit -qm "Telegram՝ նոր պատմության նյութեր"
+            for k in 1 2 3 4 5; do git pull -q --rebase && git push -q && break; sleep 5; done
+          fi
+          for id in $done; do gh workflow run story.yml -f story="$id"; done
