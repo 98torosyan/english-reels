@@ -13,7 +13,7 @@ PUBLIC = "api.languagetool.org" in LT
 IGNORE = {"WHITESPACE_RULE", "EN_QUOTES", "DASH_RULE", "UPPERCASE_SENTENCE_START", "PUNCTUATION_PARAGRAPH_END",
           "COMMA_PARENTHESIS_WHITESPACE", "EN_UNPAIRED_BRACKETS", "SENTENCE_FRAGMENT", "I_LOWERCASE",
           "INTERJECTIONS_PUNCTUATION", "SERIAL_COMMA_ON", "PASSIVE_VOICE_SIMPLE"}  # style preferences, not errors
-NAMES = {"gayane", "torosyan", "ufar", "yerevan", "armenia", "armenian", "ani", "aram", "lilit", "narek", "mane", "davit", "tigran", "anna", "sona", "hayk", "gor", "sevan", "dilijan", "gata", "toto", "lavash", "leo", "biscuit", "sam", "yuki", "ella", "noah", "lily", "zara", "ben", "mia", "passepartout", "marmee", "morgiana", "bella", "nora", "tonir", "tatev", "lake sevan", "nesbit", "max", "hasmik", "burano", "senso-ji", "abra", "della", "jim", "magi", "johnsy", "behrman"}
+NAMES = {"gayane", "torosyan", "ufar", "yerevan", "armenia", "armenian", "ani", "aram", "lilit", "narek", "mane", "davit", "tigran", "anna", "sona", "hayk", "gor", "sevan", "dilijan", "gata", "toto", "lavash", "leo", "biscuit", "sam", "yuki", "ella", "noah", "lily", "zara", "ben", "mia", "passepartout", "marmee", "morgiana", "bella", "nora", "tonir", "tatev", "lake sevan", "nesbit", "max", "hasmik", "burano", "senso-ji", "abra", "della", "jim", "magi", "johnsy", "behrman", "emma", "clara", "sue"}
 ALLOW = json.loads((ROOT / "qc/data/english_allow.json").read_text(encoding="utf-8"))
 load = lambda p: json.loads((ROOT / p).read_text(encoding="utf-8"))
 clean = lambda s: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s)).replace("___", "…").strip()
@@ -55,6 +55,9 @@ def texts():
     for d in load("carousels/data/opposites.json")["days"]:
         for k, p in enumerate(d["pairs"]): yield f"opposites:{d['id']}/{k}", p["sentence"].replace("[", "").replace("]", "")
         for k, q in enumerate(d.get("quiz", [])): yield f"opposites:{d['id']}/q{k}", q["q"].replace("___", q["a"])
+    for t in load("reels/data/talk.json")["talks"]:
+        for k, sc in enumerate(t["scenes"]):
+            for n, (_, line) in enumerate(sc["lines"]): yield f"talk:{t['id']}/{k}.{n}", line.replace("[", "").replace("]", "")
     for l in load("reels/data/words10.json")["lists"]:
         yield f"words10:{l['id']}", ", ".join(w["en"] for w in l["words"]) + "."
 
@@ -70,7 +73,9 @@ def check(text):
     raise SystemExit(f"LanguageTool unreachable for: {text}")
 
 bad = n = 0
+ONLY = os.environ.get("ONLY", "")   # e.g. ONLY=talk:the-last-leaf/ checks just one new story
 for label, text in texts():
+    if ONLY and not label.startswith(ONLY): continue
     n += 1
     for m in check(text):
         bad += 1

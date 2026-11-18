@@ -18,7 +18,11 @@ env:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
+    services:
+      languagetool:
+        image: erikvl87/languagetool:latest
+        ports: ["8010:8010"]
     outputs:
       clips: ${{ steps.c.outputs.clips }}
     steps:
@@ -34,6 +38,13 @@ jobs:
           EOF
           n=$(ls assets/motion/$STORY/in*.mp4 | wc -l); [ "$n" -ge 1 ] || { echo "::error::no clips"; exit 1; }
           echo "clips=$(seq -s, 1 $n | sed 's/^/[/; s/$/]/')" >> "$GITHUB_OUTPUT"
+      - name: English check (LanguageTool, British English)
+        env:
+          LT_URL: http://localhost:8010/v2/check
+          ONLY: talk:${{ inputs.story }}/
+        run: |
+          for k in $(seq 1 30); do curl -s localhost:8010/v2/languages >/dev/null && break; sleep 3; done
+          python qc/check_english.py
 
   voice:
     needs: check
@@ -44,8 +55,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null && pip install -q "edge-tts>=7.0"
+      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null && pip install -q "edge-tts>=7.0" "faster-whisper>=1.1"
       - run: python tools/story_voice.py "$STORY"
+      - name: Listen to every sentence
+        run: python tools/story_listen.py "$STORY"
       - uses: actions/upload-artifact@v4
         with:
           name: voice
@@ -69,10 +82,13 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null
           pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu
-          pip install -q spandrel pillow numpy
+          pip install -q spandrel pillow numpy scenedetect opencv-python-headless
           mkdir -p weights
           curl -sSLf -o weights/realesr-animevideov3.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-animevideov3.pth
-      - run: python tools/upscale_video.py "assets/motion/$STORY/in${{ matrix.n }}.mp4" "out-$STORY-${{ matrix.n }}.mp4" --fps 48
+      - name: Keep only the clean part of the clip
+        run: python tools/clip_guard.py "assets/motion/$STORY/in${{ matrix.n }}.mp4" clean.mp4
+      - name: Smooth (48 fps) and sharp (4K width)
+        run: python tools/upscale_video.py clean.mp4 "out-$STORY-${{ matrix.n }}.mp4" --fps 48
       - uses: actions/upload-artifact@v4
         with:
           name: clip-${{ matrix.n }}
