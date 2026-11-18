@@ -23,7 +23,7 @@ function page(st, baseUrl, body) {
 :root{--c:${c};--ink:#17183A;--muted:#5E5B74;--soft:#8C89A0;--paper:#F4EFE4;--card:#FFFCF6}
 html,body{width:1080px;height:1350px;overflow:hidden}
 body{position:relative;color:var(--ink);font-family:Inter;background:radial-gradient(900px 700px at 85% 0%,#FFFDF7,transparent 70%),linear-gradient(170deg,#F6F0E2,#ECE2CD)}
-body:after{content:"";position:absolute;inset:18px;border:2px solid #A8741A55;border-radius:6px;z-index:9;pointer-events:none}
+/* no frame lines around the slide */
 .q1{font:700 200px/.6 Lit;color:var(--c)}
 .pic{position:absolute;left:0;top:0;width:1080px;overflow:hidden}
 .pic img{width:100%;height:100%;object-fit:cover}
@@ -45,7 +45,7 @@ mark{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--c) 28%,t
 
 const LOGO = () => `data:image/svg+xml;base64,${fs.readFileSync(path.join(utils.ROOT, 'assets/logo-ig.svg')).toString('base64')}`;
 const pill = () => `<div class="pill"><img src="${LOGO()}"><div><b>Gayane Torosyan</b><span>@ENGLISH.READINGROOM</span></div></div>`;
-const foot = () => `<div class="foot"><span>Gayane Torosyan · English Reading Room</span></div>`;
+const foot = () => `<div class="foot" aria-hidden="true"></div>`;   // empty: keeps the safe-margin check, shows nothing
 
 // New words are highlighted in the sentence; the first time a word appears, its card (IPA + Armenian) sits under the text.
 function marked(st, en, seen) {
