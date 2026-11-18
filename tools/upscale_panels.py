@@ -50,6 +50,21 @@ def panels(src):
     yield from ([cells[k - 1] for k in keep] if keep else cells)   # the pick order is the story order
 
 
+def harmonise(ps, strength=.6):
+    """Move every picture's brightness, contrast and colour cast part of the way to the set's average (YCbCr mean/spread),
+    so a story's pictures share one palette and the cross-fades between them stay gentle."""
+    import numpy as np
+    arrs = [np.asarray(p.convert("YCbCr")).astype(np.float32) for p in ps]
+    mean = np.mean([a.reshape(-1, 3).mean(0) for a in arrs], 0); std = np.mean([a.reshape(-1, 3).std(0) for a in arrs], 0)
+    out = []
+    for a in arrs:
+        m, s = a.reshape(-1, 3).mean(0), a.reshape(-1, 3).std(0) + 1e-3
+        tm, ts = m + (mean - m) * strength, s + (std - s) * strength
+        b = np.clip((a - m) / s * ts + tm, 0, 255).astype(np.uint8)
+        out.append(Image.fromarray(b, "YCbCr").convert("RGB"))
+    return out
+
+
 def main():
     sharp = "--sharp" in sys.argv
     import time
@@ -80,7 +95,9 @@ def main():
         if mark.exists() and all(json.loads(mark.read_text()).get(k, "art" if k == "model" else None) == v for k, v in want.items()): continue
         if time.monotonic() - t0 > budget:   # out of time: the workflow saves what is done and starts again
             left += 1; continue
-        for n, p in enumerate(panels(src), 1):
+        ps = list(panels(src))
+        if (d / "harmonise").exists(): ps = harmonise(ps)   # one colour mood for the whole set: no jarring jumps between pictures
+        for n, p in enumerate(ps, 1):
             if model is not None: p = model(p, kind)
             if (d / "single").exists() or (d / "wide").exists():   # single pictures are kept at 4K width (2160 px) for the 1872x3328 reels
                 p.resize((2160, round(2160 * p.size[1] / p.size[0])), Image.LANCZOS).save(d / f"{n}.jpg", quality=94)
