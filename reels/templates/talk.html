@@ -10,25 +10,25 @@
  *{box-sizing:border-box;margin:0}
  html,body{width:1080px;height:1920px;overflow:hidden;background:var(--paper);font-family:Inter,sans-serif;color:#2A2230}
  /* picture: a square 3D diorama, alive with parallax, melting into the paper on every side */
- .stage{position:absolute;left:0;top:150px;width:1080px;height:1080px;
+ .stage{position:absolute;left:0;top:240px;width:1080px;height:1080px;
    -webkit-mask-image:radial-gradient(ellipse 72% 72% at 50% 48%,#000 62%,rgba(0,0,0,.6) 80%,transparent 100%);mask-image:radial-gradient(ellipse 72% 72% at 50% 48%,#000 62%,rgba(0,0,0,.6) 80%,transparent 100%)}
  .stage canvas{position:absolute;inset:0;width:1080px;height:1080px;opacity:0}
- #fx{position:absolute;left:0;top:150px;width:1080px;height:1080px;pointer-events:none}
- .title{position:absolute;left:0;right:0;top:1230px;text-align:center;font:700 74px/1.05 Playfair,serif;color:#2A2230;opacity:0}
+ #fx{position:absolute;left:0;top:240px;width:1080px;height:1080px;pointer-events:none}
+ .title{position:absolute;left:0;right:0;top:1360px;text-align:center;font:700 84px/1.05 Playfair,serif;color:#2A2230;opacity:0}
  .title em{font-style:italic;font-weight:600;color:var(--accent)}
  .title small{display:block;margin-top:14px;font:700 24px Inter;letter-spacing:7px;color:#2A223088;text-transform:uppercase}
  /* speech bubbles: next to the speaker, coloured per person */
- .bub{position:absolute;max-width:600px;padding:22px 30px 24px;border-radius:34px;background:#FFFDF9;box-shadow:0 18px 40px #4a2a1a26,0 2px 0 #fff inset;
-   font:600 40px/1.28 Inter,sans-serif;color:#2A2230;transform-origin:var(--ox) 100%;opacity:0;z-index:5}
+ .bub{position:absolute;max-width:660px;padding:24px 34px 26px;border-radius:34px;background:#FFFDF9;box-shadow:0 18px 40px #4a2a1a26,0 2px 0 #fff inset;
+   font:600 45px/1.27 Inter,sans-serif;color:#2A2230;transform-origin:var(--ox) 100%;opacity:0;z-index:5}
  .bub b{display:block;font:800 21px Inter;letter-spacing:4px;text-transform:uppercase;color:var(--c);margin-bottom:6px}
  .bub:after{content:"";position:absolute;bottom:-20px;left:var(--tail);width:40px;height:40px;background:#FFFDF9;transform:rotate(45deg);border-radius:6px;z-index:-1}
  .bub .w{display:inline-block;transition:none}
  .bub .w.on{color:var(--c)}
  .bub .k{background:linear-gradient(transparent 58%,var(--hl) 58%);border-radius:4px}
  /* phrase to learn: appears under the picture when a [phrase] is spoken */
- .learn{position:absolute;left:90px;right:90px;top:1300px;text-align:center;opacity:0}
- .learn i{display:inline-block;font:800 22px Inter;letter-spacing:6px;color:#2A223080;text-transform:uppercase}
- .learn div{margin-top:16px;font:600 italic 62px/1.15 Playfair,serif;color:#2A2230}
+ .learn{position:absolute;left:70px;right:70px;top:1390px;text-align:center;opacity:0}
+ .learn i{display:inline-block;font:800 26px Inter;letter-spacing:7px;color:#2A223080;text-transform:uppercase}
+ .learn div{margin-top:20px;font:600 italic 78px/1.12 Playfair,serif;text-wrap:balance;color:#2A2230}
  .learn div span{background:linear-gradient(transparent 62%,var(--hl) 62%)}
  /* end: the three phrases to keep */
  .recap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;opacity:0;background:var(--paper);z-index:9}
@@ -94,8 +94,8 @@
     return `<span class="w${s?' k':''}" data-j="${j}">${w.replace(/[\[\]]/g,'')}</span>`}).join(' ');
    B.appendChild(el);
    // place: above the speaker's head, inside the picture, tail pointing at them
-   const [hx,hy]=ln.head; const w=Math.min(600,el.offsetWidth), h=el.offsetHeight;
-   let x=hx*1080-w/2, y=150+hy*1080-h-60; x=Math.max(40,Math.min(1040-w,x)); y=Math.max(70,y);
+   const [hx,hy]=ln.head; const w=Math.min(660,el.offsetWidth), h=el.offsetHeight;
+   let x=hx*1080-w/2, y=240+hy*1080-h-60; x=Math.max(40,Math.min(1040-w,x)); y=Math.max(110,y);
    el.style.left=x+'px';el.style.top=y+'px';const tail=Math.max(30,Math.min(w-70,hx*1080-x-20));el.style.setProperty('--tail',tail+'px');el.style.setProperty('--ox',(tail+20)+'px');
    bubs.push(el)});
   document.getElementById('recapList').innerHTML=D.recap.map(r=>`<p>${r}</p>`).join('');
