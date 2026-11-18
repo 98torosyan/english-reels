@@ -2743,7 +2743,7 @@
       "content_id": "surprise",
       "title": "Picture story 06",
       "caption": "Անգլերեն պատմություն նկարներով · Picture story\nThe surprise · Անակնկալը (A2)\n\n1. Ben had a secret plan: it was Mrs Green's last day before she retired.\n2. At break time, the class made a big card.\n3. They hid balloons and a cake behind the door.\n4. When Mrs Green came in, everyone shouted, 'Surprise!'\n5. She read the card and smiled. 'Thank you, my dear class.'\n6. Then everyone had a piece of cake.\n\nՆոր բառեր՝\nsecret /ˈsiːkrɪt/ — գաղտնի\nretire /rɪˈtaɪə/ — թոշակի անցնել\nballoon /bəˈluːn/ — փուչիկ\n\nՀարց՝ What did the class make for Mrs Green?\nՊատասխանի՛ր անգլերեն մեկնաբանություններում։\n\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
+      "review_status": "draft",
       "media": {
         "slides": [
           "https://98torosyan.github.io/english-reels-media/2026-11-18-picstory-surprise/01.jpg",
@@ -2765,7 +2765,8 @@
           "Illustration 6 of 6: Then everyone had a piece of cake.",
           "New words from the story: secret, retire, balloon. Question: What did the class make for Mrs Green?"
         ]
-      }
+      },
+      "hold_reason": "owner: one reading, one classic, one story a day"
     },
     {
       "id": "2026-11-18-story-picstory-surprise",
@@ -2778,15 +2779,16 @@
       "content_id": "picstory-surprise",
       "title": "Picture story 06 story",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "draft",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-18-story-picstory-surprise/story.jpg"
-      }
+      },
+      "hold_reason": "owner: one reading, one classic, one story a day"
     },
     {
       "id": "2026-11-18-classic-happy-prince",
       "date": "2026-11-18",
-      "time": "17:30",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
@@ -2803,7 +2805,7 @@
     {
       "id": "2026-11-18-feelstory-teacher",
       "date": "2026-11-18",
-      "time": "22:00",
+      "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
@@ -2846,7 +2848,7 @@
       "content_id": "sunflower",
       "title": "Picture story 07",
       "caption": "Անգլերեն պատմություն նկարներով · Picture story\nThe sunflower · Արևածաղիկը (A2)\n\n1. Grandad gave Tom a very small seed.\n2. Tom put it in some soil by the window.\n3. Every morning, he gave it some water.\n4. The plant grew and grew. Soon it was as tall as Tom!\n5. In summer, it was a giant sunflower.\n6. 'You can grow great things from a small seed,' said Grandad.\n\nՆոր բառեր՝\nseed /siːd/ — սերմ\nsoil /sɔɪl/ — հող\ngrow /ɡrəʊ/ — աճել\n\nՀարց՝ What did Tom give the plant every morning?\nՊատասխանի՛ր անգլերեն մեկնաբանություններում։\n\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
+      "review_status": "draft",
       "media": {
         "slides": [
           "https://98torosyan.github.io/english-reels-media/2026-11-19-picstory-sunflower/01.jpg",
@@ -2868,7 +2870,8 @@
           "Illustration 6 of 6: 'You can grow great things from a small seed,' said Grandad.",
           "New words from the story: seed, soil, grow. Question: What did Tom give the plant every morning?"
         ]
-      }
+      },
+      "hold_reason": "owner: one reading, one classic, one story a day"
     },
     {
       "id": "2026-11-19-story-picstory-sunflower",
@@ -2881,10 +2884,11 @@
       "content_id": "picstory-sunflower",
       "title": "Picture story 07 story",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "draft",
       "media": {
         "image_url": "https://98torosyan.github.io/english-reels-media/2026-11-19-story-picstory-sunflower/story.jpg"
-      }
+      },
+      "hold_reason": "owner: one reading, one classic, one story a day"
     },
     {
       "id": "2026-11-19-classic-eighty-days",
