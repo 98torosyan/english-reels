@@ -183,7 +183,7 @@ function encodeVideo(framesDirectory, audioPath, audioStart, duration, outputPat
   args.push(
     '-t', duration.toFixed(3),
     '-vf', `scale=${outSize().join(':')}:flags=lanczos,setsar=1`,
-    '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-maxrate', '24M', '-bufsize', '48M', '-profile:v', 'high', '-level', '5.1', '-pix_fmt', 'yuv420p',
+    '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-maxrate', '12M', '-bufsize', '24M', '-profile:v', 'high', '-level', '5.1', '-pix_fmt', 'yuv420p',
     '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
     '-movflags', '+faststart', path.resolve(outputPath),
   );
