@@ -74,12 +74,16 @@ def check(text):
 
 bad = n = 0
 ONLY = os.environ.get("ONLY", "")   # e.g. ONLY=talk:the-last-leaf/ checks just one new story
+# a new story's character and place names are not in the dictionary: when one story is checked, its capitalised words
+# are not reported as spelling mistakes (grammar, lower-case spelling and everything else still are)
+STORY_NAMES = {w for label, text in texts() if ONLY and label.startswith(ONLY) for w in re.findall(r"\b[A-Z][a-z]+\b", text)}
 for label, text in texts():
     if ONLY and not label.startswith(ONLY): continue
     n += 1
     for m in check(text):
-        bad += 1
         bit = text[m["offset"]:m["offset"] + m["length"]]
+        if m["rule"]["id"].startswith("MORFOLOGIK") and bit in STORY_NAMES: continue
+        bad += 1
         print(f"✗ {label}: “{text}” [{bit}] → {m['message']} ({m['rule']['id']})")
     if PUBLIC: time.sleep(3.2)
 print(f"{bad} issue(s) in {n} texts." if bad else f"✓ English check passed ({n} texts).")
