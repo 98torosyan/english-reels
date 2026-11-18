@@ -2889,7 +2889,7 @@
     {
       "id": "2026-11-19-classic-eighty-days",
       "date": "2026-11-19",
-      "time": "17:30",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
@@ -2906,7 +2906,7 @@
     {
       "id": "2026-11-19-feelstory-old-coat",
       "date": "2026-11-19",
-      "time": "22:00",
+      "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
@@ -2941,7 +2941,7 @@
     {
       "id": "2026-11-20-classic-little-women",
       "date": "2026-11-20",
-      "time": "17:30",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
@@ -2958,7 +2958,7 @@
     {
       "id": "2026-11-20-feelstory-lunchbox",
       "date": "2026-11-20",
-      "time": "22:00",
+      "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
@@ -2993,7 +2993,7 @@
     {
       "id": "2026-11-21-classic-jack-beanstalk",
       "date": "2026-11-21",
-      "time": "17:30",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
@@ -3010,7 +3010,7 @@
     {
       "id": "2026-11-21-feelstory-grandma",
       "date": "2026-11-21",
-      "time": "22:00",
+      "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
@@ -3043,9 +3043,211 @@
       }
     },
     {
-      "id": "2026-11-22-classic-carousel-alice",
+      "id": "2026-11-22-classic-ali-baba",
       "date": "2026-11-22",
-      "time": "14:00",
+      "time": "18:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "storyvideo",
+      "content_id": "ali-baba",
+      "title": "Classic Ali Baba",
+      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Ալի Բաբա\nClassics made easy · Ali Baba (One Thousand and One Nights, 18th century) · A2\n\nOne day, Ali Baba, a poor woodcutter, hid behind a rock and watched forty thieves. Their leader shouted, 'Open, Sesame!' and the rock opened like a door! When they left, Ali Baba went inside. The cave was full of gold and jewels! He took a little gold and went home happily on his donkey. But the thieves came to find him. Clever Morgiana noticed the big oil jars in the yard. Morgiana saved the family, and everyone celebrated her cleverness at a big feast.\n\nԹարգմանություն՝\nՄի օր աղքատ փայտահատ Ալի Բաբան թաքնվեց ժայռի ետևում և հետևեց քառասուն ավազակներին։ Նրանց պարագլուխը գոռաց. «Բացվի՛ր, Սեզամ», և ժայռը դռան պես բացվեց։ Երբ նրանք հեռացան, Ալի Բաբան ներս մտավ։ Քարանձավը լի էր ոսկով ու թանկարժեք քարերով։ Նա մի քիչ ոսկի վերցրեց և ուրախ վերադարձավ տուն իր էշով։ Բայց ավազակները եկան նրան փնտրելու։ Խելացի Մորջանան նկատեց բակի մեծ ձիթայուղի կարասները։ Մորջանան փրկեց ընտանիքը, և բոլորը մեծ խնջույքով տոնեցին նրա խելամտությունը։\n\n«Open, Sesame!» — One Thousand and One Nights\n«Բացվի՛ր, Սեզամ»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-classic-ali-baba/classic-ali-baba.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-classic-ali-baba/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-08-feelstory-rooftop-painter",
+      "date": "2026-11-22",
+      "time": "21:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "feelstory",
+      "content_id": "rooftop-painter",
+      "title": "Story The rooftop painter",
+      "caption": "Տանիքի նկարիչը · The rooftop painter · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nEvery evening, Luca climbed onto the roof and painted the sunset over the city.\nNobody bought his pictures. Only his cat watched him work.\nOne day, a little girl knocked on his door. She had five coins in her hand.\n‘Can I buy the smallest one?’ she asked. Luca smiled and gave it to her for free.\nTwenty years later, a letter arrived. Inside, there was a ticket to an art show.\nOn the wall, he saw his little sunset. Under it: ‘Thank you for my first painting.’\n\nԹարգմանություն՝\nԱմեն երեկո Լուկան բարձրանում էր տանիք և նկարում քաղաքի վրա իջնող մայրամուտը։\nՈչ ոք չէր գնում նրա նկարները։ Միայն կատուն էր նայում, թե ինչպես է նա աշխատում։\nՄի օր մի փոքրիկ աղջիկ թակեց նրա դուռը։ Ձեռքին հինգ մետաղադրամ ուներ։\n«Կարո՞ղ եմ գնել ամենափոքրը»,— հարցրեց նա։ Լուկան ժպտաց և այն նվիրեց նրան։\nՔսան տարի անց մի նամակ եկավ։ Ներսում ցուցահանդեսի տոմս կար։\nՊատին նա տեսավ իր փոքրիկ մայրամուտը։ Տակը գրված էր. «Շնորհակալություն իմ առաջին նկարի համար»։\n\nԸնդգծված արտահայտություններ՝ a letter arrived, an art show, bought, climbed onto, gave it to her, his little sunset, knocked on, my first painting, the smallest one, watched him\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "render": {
+        "reel": "rooftop-painter"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-08-feelstory-rooftop-painter/feelstory-rooftop-painter.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-08-feelstory-rooftop-painter/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-23-classic-selfish-giant",
+      "date": "2026-11-23",
+      "time": "18:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "storyvideo",
+      "content_id": "selfish-giant",
+      "title": "Classic The Selfish Giant",
+      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Եսասեր հսկան\nClassics made easy · The Selfish Giant (Oscar Wilde, 1888) · A2\n\nEvery afternoon, the children played in the Giant's beautiful garden. One day, the Giant came home. 'My garden is my garden!' he shouted, and the children ran away. He built a high wall around it, and winter stayed in his garden all year. One morning, the children climbed in through a hole in the wall, and spring came back! The Giant smiled and gently lifted a little boy into a tree, which burst into flowers. Then he knocked down the wall. 'It is your garden now, little children,' he said.\n\nԹարգմանություն՝\nԱմեն կեսօր երեխաները խաղում էին հսկայի գեղեցիկ այգում։ Մի օր հսկան վերադարձավ տուն. «Իմ այգին իմն է»,— գոռաց նա, և երեխաները փախան։ Նա այգու շուրջը բարձր պատ կառուցեց, և ձմեռը ամբողջ տարի մնաց նրա այգում։ Մի առավոտ երեխաները պատի անցքից ներս մտան, և գարունը վերադարձավ։ Հսկան ժպտաց և զգուշությամբ մի փոքրիկ տղայի բարձրացրեց ծառի վրա, որն իսկույն ծաղկեց։ Հետո նա քանդեց պատը. «Հիմա սա ձեր այգին է, փոքրիկներ»,— ասաց նա։\n\n«The children are the most beautiful flowers of all.» — Oscar Wilde\n«Երեխաները բոլոր ծաղիկներից ամենագեղեցիկն են»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-classic-selfish-giant/classic-selfish-giant.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-classic-selfish-giant/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-10-feelstory-tiny-bakery",
+      "date": "2026-11-23",
+      "time": "21:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "feelstory",
+      "content_id": "tiny-bakery",
+      "title": "Story The tiny bakery",
+      "caption": "Փոքրիկ հացատունը · The tiny bakery · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nRosa opened a tiny bakery at the end of a quiet street.\nOn the first day, nobody came. Her cat Pepper watched the door all day.\nIn the evening, it started to rain. An old man stood outside, wet and cold.\nRosa invited him in and gave him warm bread and tea.\n‘This is the best bread in the city!’ The next morning, he came back with a friend.\nSoon, there was a long queue every day, and one chair by the window was always his.\n\nԹարգմանություն՝\nՌոզան մի փոքրիկ հացատուն բացեց մի հանգիստ փողոցի վերջում։\nԱռաջին օրը ոչ ոք չեկավ։ Նրա Պեպեր կատուն ամբողջ օրը նայում էր դռանը։\nԵրեկոյան անձրև սկսվեց։ Դրսում մի ծեր մարդ էր կանգնած՝ թրջված ու մրսած։\nՌոզան նրան ներս հրավիրեց և տաք հաց ու թեյ տվեց։\n«Սա քաղաքի ամենահամեղ հացն է»։ Հաջորդ առավոտ նա եկավ ընկերոջ հետ։\nՇուտով ամեն օր երկար հերթ էր գոյանում, իսկ պատուհանի մոտի աթոռը միշտ նրանն էր։\n\nԸնդգծված արտահայտություններ՝ a long queue, a tiny bakery, always his, came back, invited him in, nobody came, started to rain, the best bread, watched the door, wet and cold\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "render": {
+        "reel": "tiny-bakery"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-10-feelstory-tiny-bakery/feelstory-tiny-bakery.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-10-feelstory-tiny-bakery/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-24-classic-don-quixote",
+      "date": "2026-11-24",
+      "time": "18:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "storyvideo",
+      "content_id": "don-quixote",
+      "title": "Classic Don Quixote",
+      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Դոն Կիխոտ\nClassics made easy · Don Quixote (Miguel de Cervantes, 1605) · A2\n\nDon Quixote read so many books about brave knights that he decided to become one. He put on some old armour, and his friend Sancho Panza looked at him in surprise. Together they rode out across the golden plains of Spain to find adventures. Suddenly, Don Quixote saw giants on a hill! 'Those are windmills!' cried Sancho. But Don Quixote attacked, and a windmill threw him high into the air. In the evening, by the fire, Sancho laughed, and Don Quixote smiled. He was still a proud knight.\n\nԹարգմանություն՝\nԴոն Կիխոտն այնքան գրքեր էր կարդացել քաջ ասպետների մասին, որ որոշեց ինքն էլ ասպետ դառնալ։ Նա հագավ մի հին զրահ, և նրա ընկերը՝ Սանչո Պանսան, զարմացած նայում էր նրան։ Միասին նրանք ճամփա ընկան Իսպանիայի ոսկեգույն հարթավայրերով՝ արկածներ փնտրելու։ Հանկարծ Դոն Կիխոտը բլրի վրա հսկաներ տեսավ։ «Դրանք հողմաղացներ են»,— գոռաց Սանչոն։ Բայց Դոն Կիխոտը հարձակվեց, և հողմաղացը նրան օդ նետեց։ Երեկոյան, խարույկի մոտ, Սանչոն ծիծաղում էր, իսկ Դոն Կիխոտը ժպտում էր։ Նա դեռ հպարտ ասպետ էր։\n\n«What we see there are not giants but windmills.» — Miguel de Cervantes\n«Այն, ինչ տեսնում ենք, հսկաներ չեն, այլ հողմաղացներ»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-don-quixote/classic-don-quixote.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-don-quixote/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-12-feelstory-rabbit-maps",
+      "date": "2026-11-24",
+      "time": "21:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "feelstory",
+      "content_id": "rabbit-maps",
+      "title": "Story The rabbit who collected maps",
+      "caption": "Քարտեզներ հավաքող ճագարը · The rabbit who collected maps · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nPip the rabbit collected maps. He wanted to find the most beautiful place.\nHe walked through golden fields and climbed snowy mountains.\nHe sailed across a silver lake and slept under a thousand stars.\nEvery place was beautiful, but something was missing.\nOne evening, he smelled carrot soup and saw a little round door.\nIt was his own home. The most beautiful place was where he started.\n\nԹարգմանություն՝\nՓիփ ճագարը քարտեզներ էր հավաքում։ Նա ուզում էր գտնել ամենագեղեցիկ վայրը։\nՆա քայլեց ոսկեգույն դաշտերով և բարձրացավ ձյունոտ լեռները։\nՆա նավարկեց արծաթափայլ լճով և քնեց հազարավոր աստղերի տակ։\nԱմեն վայր գեղեցիկ էր, բայց ինչ-որ բան պակասում էր։\nՄի երեկո նա գազարով ապուրի բույր զգաց և տեսավ մի փոքրիկ կլոր դուռ։\nԴա իր սեփական տունն էր։ Ամենագեղեցիկ վայրը այնտեղ էր, որտեղից նա սկսել էր։\n\nԸնդգծված արտահայտություններ՝ a little round door, a silver lake, a thousand stars, collected maps, golden fields, his own home, missing, smelled carrot soup, snowy mountains, the most beautiful place, where he started\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "render": {
+        "reel": "rabbit-maps"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-12-feelstory-rabbit-maps/feelstory-rabbit-maps.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-12-feelstory-rabbit-maps/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-25-classic-wizard-oz",
+      "date": "2026-11-25",
+      "time": "18:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "storyvideo",
+      "content_id": "wizard-oz",
+      "title": "Classic The Wizard of Oz",
+      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Օզի կախարդը\nClassics made easy · The Wizard of Oz (L. Frank Baum, 1900) · A2\n\nDorothy lived on a farm in Kansas. One day, a huge storm came, and she held her little dog, Toto. The wind carried her house far away, to the magical Land of Oz. On her way, she met a Scarecrow who wanted a brain. Then she met a Tin Woodman who wanted a heart. They walked together along the yellow brick road. In the forest, they found a Cowardly Lion who wanted to be brave. At last, the friends saw the shining Emerald City. Maybe the Wizard could help them!\n\nԹարգմանություն՝\nԴորոթին ապրում էր Կանզասի մի ֆերմայում։ Մի օր մեծ փոթորիկ եկավ, և նա գրկեց իր փոքրիկ շանը՝ Տոտոյին։ Քամին նրա տունը տարավ շատ հեռու՝ Օզի կախարդական երկիր։ Ճանապարհին նա հանդիպեց մի Խրտվիլակի, որը խելք էր ուզում։ Հետո նա հանդիպեց Թիթեղյա Փայտահատին, որը սիրտ էր ուզում։ Նրանք միասին քայլեցին դեղին աղյուսե ճանապարհով։ Անտառում նրանք գտան մի Վախկոտ Առյուծի, որը ուզում էր քաջ լինել։ Վերջապես ընկերները տեսան փայլող Զմրուխտե քաղաքը։ Գուցե Կախարդը կօգներ նրանց։\n\n«There is no place like home.» — L. Frank Baum\n«Տան պես տեղ չկա»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-wizard-oz/classic-wizard-oz.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-wizard-oz/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-14-feelstory-paper-boat",
+      "date": "2026-11-25",
+      "time": "21:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "feelstory",
+      "content_id": "paper-boat",
+      "title": "Story The paper boat",
+      "caption": "Թղթե նավակը · The paper boat · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nOn a rainy morning, Nina made a paper boat. She wrote on it: ‘Hello! Who are you?’\nThe boat sailed away down the street, past the shops and under the bridge.\nA boy called Tom found it by the river. He read the message and smiled.\nHe wrote back on the other side: ‘Hello! I’m Tom. Let’s be friends.’\nThen he followed the street up the hill and knocked on a yellow door.\nNow they meet every Saturday by the bridge, and they make paper boats together.\n\nԹարգմանություն՝\nԱնձրևոտ մի առավոտ Նինան թղթե նավակ սարքեց։ Վրան գրեց. «Բարև։ Ո՞վ ես դու»։\nՆավակը լողաց փողոցով ներքև, խանութների կողքով և կամրջի տակով։\nԹոմ անունով մի տղա այն գտավ գետի մոտ։ Նա կարդաց գրությունը և ժպտաց։\nՆա պատասխանեց մյուս կողմում. «Բարև։ Ես Թոմն եմ։ Եկ ընկերներ լինենք»։\nՀետո նա փողոցով բարձրացավ բլուրը և թակեց մի դեղին դուռ։\nՀիմա նրանք ամեն շաբաթ հանդիպում են կամրջի մոտ և միասին թղթե նավակներ են սարքում։\n\nԸնդգծված արտահայտություններ՝ a yellow door, followed the street, found it, Let’s be friends, made a paper boat, meet every Saturday, sailed away, smiled, together, under the bridge, wrote back\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "render": {
+        "reel": "paper-boat"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-feelstory-paper-boat/feelstory-paper-boat.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-feelstory-paper-boat/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-26-classic-emperor-clothes",
+      "date": "2026-11-26",
+      "time": "18:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "storyvideo",
+      "content_id": "emperor-clothes",
+      "title": "Classic The Emperor's New Clothes",
+      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Թագավորի նոր զգեստը\nClassics made easy · The Emperor's New Clothes (Hans Christian Andersen, 1837) · A2\n\nThere was once an Emperor who loved new clothes more than anything. Two tricksters said, 'We can make magic cloth. Foolish people cannot see it!' The ministers saw nothing on the loom, but they said, 'How beautiful!' The Emperor could not see the clothes either, but he did not want to look foolish. He walked through the town in his 'new clothes', and everyone pretended to admire them. Then a little boy shouted, 'But he hasn't got anything on!' And everyone started to laugh.\n\nԹարգմանություն՝\nԺամանակին մի թագավոր կար, որ նոր հագուստն ամեն ինչից շատ էր սիրում։ Երկու խաբեբա ասացին. «Մենք կարող ենք կախարդական կտոր գործել։ Հիմար մարդիկ այն չեն տեսնի»։ Նախարարները ջուլհակահաստոցի վրա ոչինչ չտեսան, բայց ասացին. «Ինչ գեղեցիկ է»։ Թագավորն էլ չէր տեսնում հագուստը, բայց չէր ուզում հիմար երևալ։ Նա իր «նոր զգեստով» անցավ քաղաքով, և բոլորը ձևացնում էին, թե հիանում են։ Հետո մի փոքրիկ տղա բղավեց. «Բայց նա ոչինչ չի հագել»։ Եվ բոլորը սկսեցին ծիծաղել։\n\n«But he hasn't got anything on!» — Hans Christian Andersen\n«Բայց նա ոչինչ չի հագել»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-emperor-clothes/classic-emperor-clothes.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-emperor-clothes/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-16-feelstory-red-balloon",
+      "date": "2026-11-26",
+      "time": "21:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "feelstory",
+      "content_id": "red-balloon",
+      "title": "Story My red balloon",
+      "caption": "Իմ կարմիր փուչիկը · My red balloon · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nOn my birthday, I got a red balloon. But the wind took it away.\nIt flew over the market. A baker looked up and smiled.\nIt flew past the school. The children stopped playing and waved.\nIt flew over the park. An old couple held hands and watched it.\nIn the evening, it got stuck in a tree next to a little girl’s window.\nShe had a cold and couldn’t go out. But now she had a red balloon, too.\n\nԹարգմանություն՝\nԾննդյանս օրը ես կարմիր փուչիկ ստացա։ Բայց քամին այն տարավ։\nԱյն թռավ շուկայի վրայով։ Մի հացթուխ վեր նայեց և ժպտաց։\nԱյն թռավ դպրոցի կողքով։ Երեխաները դադարեցին խաղալ և ձեռքով արեցին։\nԱյն թռավ այգու վրայով։ Մի տարեց զույգ բռնեց իրար ձեռք և նայում էր նրան։\nԵրեկոյան այն խրվեց մի ծառի մեջ՝ մի փոքրիկ աղջկա պատուհանի մոտ։\nՆա մրսել էր և չէր կարող դուրս գալ։ Բայց հիմա նա էլ կարմիր փուչիկ ուներ։\n\nԸնդգծված արտահայտություններ՝ a cold, a red balloon, got stuck, held hands, looked up, stopped playing, took it away\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "render": {
+        "reel": "red-balloon"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-16-feelstory-red-balloon/feelstory-red-balloon.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-16-feelstory-red-balloon/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-27-classic-christmas-carol",
+      "date": "2026-11-27",
+      "time": "18:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "storyvideo",
+      "content_id": "christmas-carol",
+      "title": "Classic A Christmas Carol",
+      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Սուրբ Ծննդյան երգ\nClassics made easy · A Christmas Carol (Charles Dickens, 1843) · A2\n\nScrooge was a rich old man, but he loved only money. His poor clerk, Bob, was always cold. On Christmas Eve, the ghost of his old friend Marley appeared, covered in heavy chains. The first spirit showed Scrooge a happy Christmas party from his past. The second spirit showed him a table full of food and people who were happy to share. The third spirit, silent and dark, showed him a lonely future. On Christmas morning, Scrooge woke up a new man. He laughed and wished everyone a merry Christmas!\n\nԹարգմանություն՝\nՍքրուջը հարուստ ծերունի էր, բայց սիրում էր միայն փողը։ Նրա աղքատ գրագիրը՝ Բոբը, միշտ մրսում էր։ Սուրբ Ծննդյան նախօրեին հայտնվեց նրա հին ընկերոջ՝ Մարլիի ուրվականը՝ ծանր շղթաներով պատված։ Առաջին ոգին Սքրուջին ցույց տվեց նրա անցյալի մի ուրախ տոնական երեկույթ։ Երկրորդ ոգին նրան ցույց տվեց ուտելիքով լի սեղան և մարդկանց, որոնք ուրախ էին կիսվել։ Երրորդ ոգին՝ լուռ և մութ, նրան ցույց տվեց միայնակ ապագա։ Սուրբ Ծննդյան առավոտ Սքրուջն արթնացավ բոլորովին այլ մարդ։ Նա ծիծաղում էր և բոլորին շնորհավորում տոնը։\n\n«God bless us, every one!» — Charles Dickens\n«Աստված օրհնի բոլորիս»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-27-classic-christmas-carol/classic-christmas-carol.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-27-classic-christmas-carol/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-22-classic-carousel-alice",
+      "date": "2026-11-28",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3078,26 +3280,114 @@
       }
     },
     {
-      "id": "2026-11-22-classic-ali-baba",
-      "date": "2026-11-22",
-      "time": "17:30",
+      "id": "2026-11-24-classic-carousel-sherlock",
+      "date": "2026-11-29",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "storyvideo",
-      "content_id": "ali-baba",
-      "title": "Classic Ali Baba",
-      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Ալի Բաբա\nClassics made easy · Ali Baba (One Thousand and One Nights, 18th century) · A2\n\nOne day, Ali Baba, a poor woodcutter, hid behind a rock and watched forty thieves. Their leader shouted, 'Open, Sesame!' and the rock opened like a door! When they left, Ali Baba went inside. The cave was full of gold and jewels! He took a little gold and went home happily on his donkey. But the thieves came to find him. Clever Morgiana noticed the big oil jars in the yard. Morgiana saved the family, and everyone celebrated her cleverness at a big feast.\n\nԹարգմանություն՝\nՄի օր աղքատ փայտահատ Ալի Բաբան թաքնվեց ժայռի ետևում և հետևեց քառասուն ավազակներին։ Նրանց պարագլուխը գոռաց. «Բացվի՛ր, Սեզամ», և ժայռը դռան պես բացվեց։ Երբ նրանք հեռացան, Ալի Բաբան ներս մտավ։ Քարանձավը լի էր ոսկով ու թանկարժեք քարերով։ Նա մի քիչ ոսկի վերցրեց և ուրախ վերադարձավ տուն իր էշով։ Բայց ավազակները եկան նրան փնտրելու։ Խելացի Մորջանան նկատեց բակի մեծ ձիթայուղի կարասները։ Մորջանան փրկեց ընտանիքը, և բոլորը մեծ խնջույքով տոնեցին նրա խելամտությունը։\n\n«Open, Sesame!» — One Thousand and One Nights\n«Բացվի՛ր, Սեզամ»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "type": "CAROUSEL",
+      "format": "CAROUSEL",
+      "kind": "classic",
+      "content_id": "sherlock",
+      "title": "Classic carousel Sherlock Holmes",
+      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Շերլոկ Հոլմս\nClassics made easy · Sherlock Holmes (Arthur Conan Doyle, 1887) · A2\n\nԹերթի՛ր և կարդա՛ անգլերեն, հայերենը՝ օգնության համար։\n\nՆոր բառեր՝\nviolin /ˌvaɪəˈlɪn/ — ջութակ\nfootprint /ˈfʊtprɪnt/ — ոտնահետք\nmystery /ˈmɪstəri/ — առեղծված\n\n«You have been in Afghanistan, I perceive.» — Arthur Conan Doyle\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
       "review_status": "staged",
       "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-classic-ali-baba/classic-ali-baba.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-classic-ali-baba/cover.jpg"
+        "slides": [
+          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/01.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/02.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/03.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/04.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/05.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/06.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/07.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/08.jpg"
+        ],
+        "alt_texts": [
+          "Cover of \"Sherlock Holmes\" by Arthur Conan Doyle, a classic story retold in simple English (A2) for learners.",
+          "Illustration 1: Dr Watson came back to rainy London after the war. He needed a cheap place to live.",
+          "Illustration 2: A friend took him to a laboratory, where a tall young man was doing an experiment.",
+          "Illustration 3: The man shook his hand and said, 'You have been in Afghanistan, I perceive.' Watson was amazed!",
+          "Illustration 4: The man was Sherlock Holmes. Together they rented rooms at 221B Baker Street.",
+          "Illustration 5: In the evenings, Holmes played the violin while Watson read by the fire.",
+          "Illustration 6: Soon they had their first mystery. Holmes studied the footprints with his magnifying glass.",
+          "New words: violin, footprint, mystery. Famous line: You have been in Afghanistan, I perceive."
+        ]
+      }
+    },
+    {
+      "id": "2026-11-25-classic-carousel-treasure-island",
+      "date": "2026-11-30",
+      "time": "18:00",
+      "timezone": "Asia/Yerevan",
+      "type": "CAROUSEL",
+      "format": "CAROUSEL",
+      "kind": "classic",
+      "content_id": "treasure-island",
+      "title": "Classic carousel Treasure Island",
+      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Գանձերի կղզին\nClassics made easy · Treasure Island (Robert Louis Stevenson, 1883) · A2\n\nԹերթի՛ր և կարդա՛ անգլերեն, հայերենը՝ օգնության համար։\n\nՆոր բառեր՝\ntreasure /ˈtreʒə/ — գանձ\nmap /mæp/ — քարտեզ\nisland /ˈaɪlənd/ — կղզի\n\n«Pieces of eight! Pieces of eight!» — Robert Louis Stevenson\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "slides": [
+          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/01.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/02.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/03.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/04.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/05.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/06.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/07.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/08.jpg"
+        ],
+        "alt_texts": [
+          "Cover of \"Treasure Island\" by Robert Louis Stevenson, a classic story retold in simple English (A2) for learners.",
+          "Illustration 1: In an old sailor's sea chest, young Jim found a map of an island with hidden treasure.",
+          "Illustration 2: At the harbour, he met Long John Silver, a friendly cook with a wooden crutch and a green parrot.",
+          "Illustration 3: They sailed across the stormy sea on a big ship called the Hispaniola.",
+          "Illustration 4: One night, Jim hid in a barrel of apples and heard a terrible secret: the sailors were pirates!",
+          "Illustration 5: On the island, Jim ran through the jungle to warn his friends.",
+          "Illustration 6: At last, they found the treasure in a cave, a chest full of gold!",
+          "New words: treasure, map, island. Famous line: Pieces of eight! Pieces of eight!"
+        ]
+      }
+    },
+    {
+      "id": "2026-11-26-classic-carousel-happy-prince",
+      "date": "2026-12-01",
+      "time": "18:00",
+      "timezone": "Asia/Yerevan",
+      "type": "CAROUSEL",
+      "format": "CAROUSEL",
+      "kind": "classic",
+      "content_id": "happy-prince",
+      "title": "Classic carousel The Happy Prince",
+      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Երջանիկ արքայազնը\nClassics made easy · The Happy Prince (Oscar Wilde, 1888) · A2\n\nԹերթի՛ր և կարդա՛ անգլերեն, հայերենը՝ օգնության համար։\n\nՆոր բառեր՝\nstatue /ˈstætʃuː/ — արձան\ngold /ɡəʊld/ — ոսկի\nswallow /ˈswɒləʊ/ — ծիծեռնակ\n\n«Swallow, Swallow, little Swallow.» — Oscar Wilde\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "slides": [
+          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/01.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/02.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/03.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/04.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/05.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/06.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/07.jpg",
+          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/08.jpg"
+        ],
+        "alt_texts": [
+          "Cover of \"The Happy Prince\" by Oscar Wilde, a classic story retold in simple English (A2) for learners.",
+          "Illustration 1: High above the city stood the statue of the Happy Prince, covered in gold, with sapphire eyes.",
+          "Illustration 2: One night, a little swallow rested at his feet, and a tear fell on him. The Prince was crying.",
+          "Illustration 3: 'I can see all the sadness of my city,' he said. 'Please, take my ruby to a poor family.'",
+          "Illustration 4: Every day, the swallow took a leaf of gold to the poor, and the children smiled again.",
+          "Illustration 5: Winter came. The statue was grey now, and the tired swallow kissed the Prince's hand.",
+          "Illustration 6: But the Prince and the swallow had the most beautiful hearts in the whole city.",
+          "New words: statue, gold, swallow. Famous line: Swallow, Swallow, little Swallow."
+        ]
       }
     },
     {
       "id": "2026-11-23-classic-carousel-red-headed-league",
-      "date": "2026-11-23",
-      "time": "14:00",
+      "date": "2026-12-02",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3132,182 +3422,9 @@
       }
     },
     {
-      "id": "2026-11-23-classic-selfish-giant",
-      "date": "2026-11-23",
-      "time": "17:30",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "storyvideo",
-      "content_id": "selfish-giant",
-      "title": "Classic The Selfish Giant",
-      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Եսասեր հսկան\nClassics made easy · The Selfish Giant (Oscar Wilde, 1888) · A2\n\nEvery afternoon, the children played in the Giant's beautiful garden. One day, the Giant came home. 'My garden is my garden!' he shouted, and the children ran away. He built a high wall around it, and winter stayed in his garden all year. One morning, the children climbed in through a hole in the wall, and spring came back! The Giant smiled and gently lifted a little boy into a tree, which burst into flowers. Then he knocked down the wall. 'It is your garden now, little children,' he said.\n\nԹարգմանություն՝\nԱմեն կեսօր երեխաները խաղում էին հսկայի գեղեցիկ այգում։ Մի օր հսկան վերադարձավ տուն. «Իմ այգին իմն է»,— գոռաց նա, և երեխաները փախան։ Նա այգու շուրջը բարձր պատ կառուցեց, և ձմեռը ամբողջ տարի մնաց նրա այգում։ Մի առավոտ երեխաները պատի անցքից ներս մտան, և գարունը վերադարձավ։ Հսկան ժպտաց և զգուշությամբ մի փոքրիկ տղայի բարձրացրեց ծառի վրա, որն իսկույն ծաղկեց։ Հետո նա քանդեց պատը. «Հիմա սա ձեր այգին է, փոքրիկներ»,— ասաց նա։\n\n«The children are the most beautiful flowers of all.» — Oscar Wilde\n«Երեխաները բոլոր ծաղիկներից ամենագեղեցիկն են»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-classic-selfish-giant/classic-selfish-giant.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-classic-selfish-giant/cover.jpg"
-      }
-    },
-    {
-      "id": "2026-11-24-classic-carousel-sherlock",
-      "date": "2026-11-24",
-      "time": "14:00",
-      "timezone": "Asia/Yerevan",
-      "type": "CAROUSEL",
-      "format": "CAROUSEL",
-      "kind": "classic",
-      "content_id": "sherlock",
-      "title": "Classic carousel Sherlock Holmes",
-      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Շերլոկ Հոլմս\nClassics made easy · Sherlock Holmes (Arthur Conan Doyle, 1887) · A2\n\nԹերթի՛ր և կարդա՛ անգլերեն, հայերենը՝ օգնության համար։\n\nՆոր բառեր՝\nviolin /ˌvaɪəˈlɪn/ — ջութակ\nfootprint /ˈfʊtprɪnt/ — ոտնահետք\nmystery /ˈmɪstəri/ — առեղծված\n\n«You have been in Afghanistan, I perceive.» — Arthur Conan Doyle\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "media": {
-        "slides": [
-          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/01.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/02.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/03.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/04.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/05.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/06.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/07.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-carousel-sherlock/08.jpg"
-        ],
-        "alt_texts": [
-          "Cover of \"Sherlock Holmes\" by Arthur Conan Doyle, a classic story retold in simple English (A2) for learners.",
-          "Illustration 1: Dr Watson came back to rainy London after the war. He needed a cheap place to live.",
-          "Illustration 2: A friend took him to a laboratory, where a tall young man was doing an experiment.",
-          "Illustration 3: The man shook his hand and said, 'You have been in Afghanistan, I perceive.' Watson was amazed!",
-          "Illustration 4: The man was Sherlock Holmes. Together they rented rooms at 221B Baker Street.",
-          "Illustration 5: In the evenings, Holmes played the violin while Watson read by the fire.",
-          "Illustration 6: Soon they had their first mystery. Holmes studied the footprints with his magnifying glass.",
-          "New words: violin, footprint, mystery. Famous line: You have been in Afghanistan, I perceive."
-        ]
-      }
-    },
-    {
-      "id": "2026-11-24-classic-don-quixote",
-      "date": "2026-11-24",
-      "time": "17:30",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "storyvideo",
-      "content_id": "don-quixote",
-      "title": "Classic Don Quixote",
-      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Դոն Կիխոտ\nClassics made easy · Don Quixote (Miguel de Cervantes, 1605) · A2\n\nDon Quixote read so many books about brave knights that he decided to become one. He put on some old armour, and his friend Sancho Panza looked at him in surprise. Together they rode out across the golden plains of Spain to find adventures. Suddenly, Don Quixote saw giants on a hill! 'Those are windmills!' cried Sancho. But Don Quixote attacked, and a windmill threw him high into the air. In the evening, by the fire, Sancho laughed, and Don Quixote smiled. He was still a proud knight.\n\nԹարգմանություն՝\nԴոն Կիխոտն այնքան գրքեր էր կարդացել քաջ ասպետների մասին, որ որոշեց ինքն էլ ասպետ դառնալ։ Նա հագավ մի հին զրահ, և նրա ընկերը՝ Սանչո Պանսան, զարմացած նայում էր նրան։ Միասին նրանք ճամփա ընկան Իսպանիայի ոսկեգույն հարթավայրերով՝ արկածներ փնտրելու։ Հանկարծ Դոն Կիխոտը բլրի վրա հսկաներ տեսավ։ «Դրանք հողմաղացներ են»,— գոռաց Սանչոն։ Բայց Դոն Կիխոտը հարձակվեց, և հողմաղացը նրան օդ նետեց։ Երեկոյան, խարույկի մոտ, Սանչոն ծիծաղում էր, իսկ Դոն Կիխոտը ժպտում էր։ Նա դեռ հպարտ ասպետ էր։\n\n«What we see there are not giants but windmills.» — Miguel de Cervantes\n«Այն, ինչ տեսնում ենք, հսկաներ չեն, այլ հողմաղացներ»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-don-quixote/classic-don-quixote.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-don-quixote/cover.jpg"
-      }
-    },
-    {
-      "id": "2026-11-25-classic-carousel-treasure-island",
-      "date": "2026-11-25",
-      "time": "14:00",
-      "timezone": "Asia/Yerevan",
-      "type": "CAROUSEL",
-      "format": "CAROUSEL",
-      "kind": "classic",
-      "content_id": "treasure-island",
-      "title": "Classic carousel Treasure Island",
-      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Գանձերի կղզին\nClassics made easy · Treasure Island (Robert Louis Stevenson, 1883) · A2\n\nԹերթի՛ր և կարդա՛ անգլերեն, հայերենը՝ օգնության համար։\n\nՆոր բառեր՝\ntreasure /ˈtreʒə/ — գանձ\nmap /mæp/ — քարտեզ\nisland /ˈaɪlənd/ — կղզի\n\n«Pieces of eight! Pieces of eight!» — Robert Louis Stevenson\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "media": {
-        "slides": [
-          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/01.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/02.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/03.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/04.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/05.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/06.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/07.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-carousel-treasure-island/08.jpg"
-        ],
-        "alt_texts": [
-          "Cover of \"Treasure Island\" by Robert Louis Stevenson, a classic story retold in simple English (A2) for learners.",
-          "Illustration 1: In an old sailor's sea chest, young Jim found a map of an island with hidden treasure.",
-          "Illustration 2: At the harbour, he met Long John Silver, a friendly cook with a wooden crutch and a green parrot.",
-          "Illustration 3: They sailed across the stormy sea on a big ship called the Hispaniola.",
-          "Illustration 4: One night, Jim hid in a barrel of apples and heard a terrible secret: the sailors were pirates!",
-          "Illustration 5: On the island, Jim ran through the jungle to warn his friends.",
-          "Illustration 6: At last, they found the treasure in a cave, a chest full of gold!",
-          "New words: treasure, map, island. Famous line: Pieces of eight! Pieces of eight!"
-        ]
-      }
-    },
-    {
-      "id": "2026-11-25-classic-wizard-oz",
-      "date": "2026-11-25",
-      "time": "17:30",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "storyvideo",
-      "content_id": "wizard-oz",
-      "title": "Classic The Wizard of Oz",
-      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Օզի կախարդը\nClassics made easy · The Wizard of Oz (L. Frank Baum, 1900) · A2\n\nDorothy lived on a farm in Kansas. One day, a huge storm came, and she held her little dog, Toto. The wind carried her house far away, to the magical Land of Oz. On her way, she met a Scarecrow who wanted a brain. Then she met a Tin Woodman who wanted a heart. They walked together along the yellow brick road. In the forest, they found a Cowardly Lion who wanted to be brave. At last, the friends saw the shining Emerald City. Maybe the Wizard could help them!\n\nԹարգմանություն՝\nԴորոթին ապրում էր Կանզասի մի ֆերմայում։ Մի օր մեծ փոթորիկ եկավ, և նա գրկեց իր փոքրիկ շանը՝ Տոտոյին։ Քամին նրա տունը տարավ շատ հեռու՝ Օզի կախարդական երկիր։ Ճանապարհին նա հանդիպեց մի Խրտվիլակի, որը խելք էր ուզում։ Հետո նա հանդիպեց Թիթեղյա Փայտահատին, որը սիրտ էր ուզում։ Նրանք միասին քայլեցին դեղին աղյուսե ճանապարհով։ Անտառում նրանք գտան մի Վախկոտ Առյուծի, որը ուզում էր քաջ լինել։ Վերջապես ընկերները տեսան փայլող Զմրուխտե քաղաքը։ Գուցե Կախարդը կօգներ նրանց։\n\n«There is no place like home.» — L. Frank Baum\n«Տան պես տեղ չկա»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-wizard-oz/classic-wizard-oz.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-wizard-oz/cover.jpg"
-      }
-    },
-    {
-      "id": "2026-11-26-classic-carousel-happy-prince",
-      "date": "2026-11-26",
-      "time": "14:00",
-      "timezone": "Asia/Yerevan",
-      "type": "CAROUSEL",
-      "format": "CAROUSEL",
-      "kind": "classic",
-      "content_id": "happy-prince",
-      "title": "Classic carousel The Happy Prince",
-      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Երջանիկ արքայազնը\nClassics made easy · The Happy Prince (Oscar Wilde, 1888) · A2\n\nԹերթի՛ր և կարդա՛ անգլերեն, հայերենը՝ օգնության համար։\n\nՆոր բառեր՝\nstatue /ˈstætʃuː/ — արձան\ngold /ɡəʊld/ — ոսկի\nswallow /ˈswɒləʊ/ — ծիծեռնակ\n\n«Swallow, Swallow, little Swallow.» — Oscar Wilde\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "media": {
-        "slides": [
-          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/01.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/02.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/03.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/04.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/05.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/06.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/07.jpg",
-          "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-carousel-happy-prince/08.jpg"
-        ],
-        "alt_texts": [
-          "Cover of \"The Happy Prince\" by Oscar Wilde, a classic story retold in simple English (A2) for learners.",
-          "Illustration 1: High above the city stood the statue of the Happy Prince, covered in gold, with sapphire eyes.",
-          "Illustration 2: One night, a little swallow rested at his feet, and a tear fell on him. The Prince was crying.",
-          "Illustration 3: 'I can see all the sadness of my city,' he said. 'Please, take my ruby to a poor family.'",
-          "Illustration 4: Every day, the swallow took a leaf of gold to the poor, and the children smiled again.",
-          "Illustration 5: Winter came. The statue was grey now, and the tired swallow kissed the Prince's hand.",
-          "Illustration 6: But the Prince and the swallow had the most beautiful hearts in the whole city.",
-          "New words: statue, gold, swallow. Famous line: Swallow, Swallow, little Swallow."
-        ]
-      }
-    },
-    {
-      "id": "2026-11-26-classic-emperor-clothes",
-      "date": "2026-11-26",
-      "time": "17:30",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "storyvideo",
-      "content_id": "emperor-clothes",
-      "title": "Classic The Emperor's New Clothes",
-      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Թագավորի նոր զգեստը\nClassics made easy · The Emperor's New Clothes (Hans Christian Andersen, 1837) · A2\n\nThere was once an Emperor who loved new clothes more than anything. Two tricksters said, 'We can make magic cloth. Foolish people cannot see it!' The ministers saw nothing on the loom, but they said, 'How beautiful!' The Emperor could not see the clothes either, but he did not want to look foolish. He walked through the town in his 'new clothes', and everyone pretended to admire them. Then a little boy shouted, 'But he hasn't got anything on!' And everyone started to laugh.\n\nԹարգմանություն՝\nԺամանակին մի թագավոր կար, որ նոր հագուստն ամեն ինչից շատ էր սիրում։ Երկու խաբեբա ասացին. «Մենք կարող ենք կախարդական կտոր գործել։ Հիմար մարդիկ այն չեն տեսնի»։ Նախարարները ջուլհակահաստոցի վրա ոչինչ չտեսան, բայց ասացին. «Ինչ գեղեցիկ է»։ Թագավորն էլ չէր տեսնում հագուստը, բայց չէր ուզում հիմար երևալ։ Նա իր «նոր զգեստով» անցավ քաղաքով, և բոլորը ձևացնում էին, թե հիանում են։ Հետո մի փոքրիկ տղա բղավեց. «Բայց նա ոչինչ չի հագել»։ Եվ բոլորը սկսեցին ծիծաղել։\n\n«But he hasn't got anything on!» — Hans Christian Andersen\n«Բայց նա ոչինչ չի հագել»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-emperor-clothes/classic-emperor-clothes.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-emperor-clothes/cover.jpg"
-      }
-    },
-    {
       "id": "2026-11-27-classic-carousel-baskervilles",
-      "date": "2026-11-27",
-      "time": "14:00",
+      "date": "2026-12-03",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3340,26 +3457,9 @@
       }
     },
     {
-      "id": "2026-11-27-classic-christmas-carol",
-      "date": "2026-11-27",
-      "time": "17:30",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "storyvideo",
-      "content_id": "christmas-carol",
-      "title": "Classic A Christmas Carol",
-      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Սուրբ Ծննդյան երգ\nClassics made easy · A Christmas Carol (Charles Dickens, 1843) · A2\n\nScrooge was a rich old man, but he loved only money. His poor clerk, Bob, was always cold. On Christmas Eve, the ghost of his old friend Marley appeared, covered in heavy chains. The first spirit showed Scrooge a happy Christmas party from his past. The second spirit showed him a table full of food and people who were happy to share. The third spirit, silent and dark, showed him a lonely future. On Christmas morning, Scrooge woke up a new man. He laughed and wished everyone a merry Christmas!\n\nԹարգմանություն՝\nՍքրուջը հարուստ ծերունի էր, բայց սիրում էր միայն փողը։ Նրա աղքատ գրագիրը՝ Բոբը, միշտ մրսում էր։ Սուրբ Ծննդյան նախօրեին հայտնվեց նրա հին ընկերոջ՝ Մարլիի ուրվականը՝ ծանր շղթաներով պատված։ Առաջին ոգին Սքրուջին ցույց տվեց նրա անցյալի մի ուրախ տոնական երեկույթ։ Երկրորդ ոգին նրան ցույց տվեց ուտելիքով լի սեղան և մարդկանց, որոնք ուրախ էին կիսվել։ Երրորդ ոգին՝ լուռ և մութ, նրան ցույց տվեց միայնակ ապագա։ Սուրբ Ծննդյան առավոտ Սքրուջն արթնացավ բոլորովին այլ մարդ։ Նա ծիծաղում էր և բոլորին շնորհավորում տոնը։\n\n«God bless us, every one!» — Charles Dickens\n«Աստված օրհնի բոլորիս»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-27-classic-christmas-carol/classic-christmas-carol.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-27-classic-christmas-carol/cover.jpg"
-      }
-    },
-    {
       "id": "2026-11-28-classic-carousel-eighty-days",
-      "date": "2026-11-28",
-      "time": "14:00",
+      "date": "2026-12-04",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3393,8 +3493,8 @@
     },
     {
       "id": "2026-11-29-classic-carousel-little-women",
-      "date": "2026-11-29",
-      "time": "14:00",
+      "date": "2026-12-05",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3428,8 +3528,8 @@
     },
     {
       "id": "2026-11-30-classic-carousel-jack-beanstalk",
-      "date": "2026-11-30",
-      "time": "14:00",
+      "date": "2026-12-06",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3463,8 +3563,8 @@
     },
     {
       "id": "2026-12-01-classic-carousel-ali-baba",
-      "date": "2026-12-01",
-      "time": "14:00",
+      "date": "2026-12-07",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3498,8 +3598,8 @@
     },
     {
       "id": "2026-12-02-classic-carousel-selfish-giant",
-      "date": "2026-12-02",
-      "time": "14:00",
+      "date": "2026-12-08",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3533,8 +3633,8 @@
     },
     {
       "id": "2026-12-03-classic-carousel-don-quixote",
-      "date": "2026-12-03",
-      "time": "14:00",
+      "date": "2026-12-09",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3568,8 +3668,8 @@
     },
     {
       "id": "2026-12-04-classic-carousel-wizard-oz",
-      "date": "2026-12-04",
-      "time": "14:00",
+      "date": "2026-12-10",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3603,8 +3703,8 @@
     },
     {
       "id": "2026-12-05-classic-carousel-emperor-clothes",
-      "date": "2026-12-05",
-      "time": "14:00",
+      "date": "2026-12-11",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3638,8 +3738,8 @@
     },
     {
       "id": "2026-12-06-classic-carousel-christmas-carol",
-      "date": "2026-12-06",
-      "time": "14:00",
+      "date": "2026-12-12",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3673,8 +3773,8 @@
     },
     {
       "id": "2026-12-07-classic-carousel-blue-carbuncle",
-      "date": "2026-12-07",
-      "time": "14:00",
+      "date": "2026-12-13",
+      "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "CAROUSEL",
       "format": "CAROUSEL",
@@ -3706,106 +3806,6 @@
           "The answer: It was James Ryder, a hotel attendant. He had hidden the stone in the goose. It was Christmas, so Holmes let him go.",
           "New words: goose, steal, forgive. Famous line: It is the season of forgiveness."
         ]
-      }
-    },
-    {
-      "id": "2026-12-08-feelstory-rooftop-painter",
-      "date": "2026-12-08",
-      "time": "22:00",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "feelstory",
-      "content_id": "rooftop-painter",
-      "title": "Story The rooftop painter",
-      "caption": "Տանիքի նկարիչը · The rooftop painter · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nEvery evening, Luca climbed onto the roof and painted the sunset over the city.\nNobody bought his pictures. Only his cat watched him work.\nOne day, a little girl knocked on his door. She had five coins in her hand.\n‘Can I buy the smallest one?’ she asked. Luca smiled and gave it to her for free.\nTwenty years later, a letter arrived. Inside, there was a ticket to an art show.\nOn the wall, he saw his little sunset. Under it: ‘Thank you for my first painting.’\n\nԹարգմանություն՝\nԱմեն երեկո Լուկան բարձրանում էր տանիք և նկարում քաղաքի վրա իջնող մայրամուտը։\nՈչ ոք չէր գնում նրա նկարները։ Միայն կատուն էր նայում, թե ինչպես է նա աշխատում։\nՄի օր մի փոքրիկ աղջիկ թակեց նրա դուռը։ Ձեռքին հինգ մետաղադրամ ուներ։\n«Կարո՞ղ եմ գնել ամենափոքրը»,— հարցրեց նա։ Լուկան ժպտաց և այն նվիրեց նրան։\nՔսան տարի անց մի նամակ եկավ։ Ներսում ցուցահանդեսի տոմս կար։\nՊատին նա տեսավ իր փոքրիկ մայրամուտը։ Տակը գրված էր. «Շնորհակալություն իմ առաջին նկարի համար»։\n\nԸնդգծված արտահայտություններ՝ a letter arrived, an art show, bought, climbed onto, gave it to her, his little sunset, knocked on, my first painting, the smallest one, watched him\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "render": {
-        "reel": "rooftop-painter"
-      },
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-08-feelstory-rooftop-painter/feelstory-rooftop-painter.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-08-feelstory-rooftop-painter/cover.jpg"
-      }
-    },
-    {
-      "id": "2026-12-10-feelstory-tiny-bakery",
-      "date": "2026-12-10",
-      "time": "22:00",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "feelstory",
-      "content_id": "tiny-bakery",
-      "title": "Story The tiny bakery",
-      "caption": "Փոքրիկ հացատունը · The tiny bakery · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nRosa opened a tiny bakery at the end of a quiet street.\nOn the first day, nobody came. Her cat Pepper watched the door all day.\nIn the evening, it started to rain. An old man stood outside, wet and cold.\nRosa invited him in and gave him warm bread and tea.\n‘This is the best bread in the city!’ The next morning, he came back with a friend.\nSoon, there was a long queue every day, and one chair by the window was always his.\n\nԹարգմանություն՝\nՌոզան մի փոքրիկ հացատուն բացեց մի հանգիստ փողոցի վերջում։\nԱռաջին օրը ոչ ոք չեկավ։ Նրա Պեպեր կատուն ամբողջ օրը նայում էր դռանը։\nԵրեկոյան անձրև սկսվեց։ Դրսում մի ծեր մարդ էր կանգնած՝ թրջված ու մրսած։\nՌոզան նրան ներս հրավիրեց և տաք հաց ու թեյ տվեց։\n«Սա քաղաքի ամենահամեղ հացն է»։ Հաջորդ առավոտ նա եկավ ընկերոջ հետ։\nՇուտով ամեն օր երկար հերթ էր գոյանում, իսկ պատուհանի մոտի աթոռը միշտ նրանն էր։\n\nԸնդգծված արտահայտություններ՝ a long queue, a tiny bakery, always his, came back, invited him in, nobody came, started to rain, the best bread, watched the door, wet and cold\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "render": {
-        "reel": "tiny-bakery"
-      },
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-10-feelstory-tiny-bakery/feelstory-tiny-bakery.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-10-feelstory-tiny-bakery/cover.jpg"
-      }
-    },
-    {
-      "id": "2026-12-12-feelstory-rabbit-maps",
-      "date": "2026-12-12",
-      "time": "22:00",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "feelstory",
-      "content_id": "rabbit-maps",
-      "title": "Story The rabbit who collected maps",
-      "caption": "Քարտեզներ հավաքող ճագարը · The rabbit who collected maps · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nPip the rabbit collected maps. He wanted to find the most beautiful place.\nHe walked through golden fields and climbed snowy mountains.\nHe sailed across a silver lake and slept under a thousand stars.\nEvery place was beautiful, but something was missing.\nOne evening, he smelled carrot soup and saw a little round door.\nIt was his own home. The most beautiful place was where he started.\n\nԹարգմանություն՝\nՓիփ ճագարը քարտեզներ էր հավաքում։ Նա ուզում էր գտնել ամենագեղեցիկ վայրը։\nՆա քայլեց ոսկեգույն դաշտերով և բարձրացավ ձյունոտ լեռները։\nՆա նավարկեց արծաթափայլ լճով և քնեց հազարավոր աստղերի տակ։\nԱմեն վայր գեղեցիկ էր, բայց ինչ-որ բան պակասում էր։\nՄի երեկո նա գազարով ապուրի բույր զգաց և տեսավ մի փոքրիկ կլոր դուռ։\nԴա իր սեփական տունն էր։ Ամենագեղեցիկ վայրը այնտեղ էր, որտեղից նա սկսել էր։\n\nԸնդգծված արտահայտություններ՝ a little round door, a silver lake, a thousand stars, collected maps, golden fields, his own home, missing, smelled carrot soup, snowy mountains, the most beautiful place, where he started\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "render": {
-        "reel": "rabbit-maps"
-      },
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-12-feelstory-rabbit-maps/feelstory-rabbit-maps.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-12-feelstory-rabbit-maps/cover.jpg"
-      }
-    },
-    {
-      "id": "2026-12-14-feelstory-paper-boat",
-      "date": "2026-12-14",
-      "time": "22:00",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "feelstory",
-      "content_id": "paper-boat",
-      "title": "Story The paper boat",
-      "caption": "Թղթե նավակը · The paper boat · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nOn a rainy morning, Nina made a paper boat. She wrote on it: ‘Hello! Who are you?’\nThe boat sailed away down the street, past the shops and under the bridge.\nA boy called Tom found it by the river. He read the message and smiled.\nHe wrote back on the other side: ‘Hello! I’m Tom. Let’s be friends.’\nThen he followed the street up the hill and knocked on a yellow door.\nNow they meet every Saturday by the bridge, and they make paper boats together.\n\nԹարգմանություն՝\nԱնձրևոտ մի առավոտ Նինան թղթե նավակ սարքեց։ Վրան գրեց. «Բարև։ Ո՞վ ես դու»։\nՆավակը լողաց փողոցով ներքև, խանութների կողքով և կամրջի տակով։\nԹոմ անունով մի տղա այն գտավ գետի մոտ։ Նա կարդաց գրությունը և ժպտաց։\nՆա պատասխանեց մյուս կողմում. «Բարև։ Ես Թոմն եմ։ Եկ ընկերներ լինենք»։\nՀետո նա փողոցով բարձրացավ բլուրը և թակեց մի դեղին դուռ։\nՀիմա նրանք ամեն շաբաթ հանդիպում են կամրջի մոտ և միասին թղթե նավակներ են սարքում։\n\nԸնդգծված արտահայտություններ՝ a yellow door, followed the street, found it, Let’s be friends, made a paper boat, meet every Saturday, sailed away, smiled, together, under the bridge, wrote back\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "render": {
-        "reel": "paper-boat"
-      },
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-feelstory-paper-boat/feelstory-paper-boat.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-feelstory-paper-boat/cover.jpg"
-      }
-    },
-    {
-      "id": "2026-12-16-feelstory-red-balloon",
-      "date": "2026-12-16",
-      "time": "22:00",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "feelstory",
-      "content_id": "red-balloon",
-      "title": "Story My red balloon",
-      "caption": "Իմ կարմիր փուչիկը · My red balloon · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nOn my birthday, I got a red balloon. But the wind took it away.\nIt flew over the market. A baker looked up and smiled.\nIt flew past the school. The children stopped playing and waved.\nIt flew over the park. An old couple held hands and watched it.\nIn the evening, it got stuck in a tree next to a little girl’s window.\nShe had a cold and couldn’t go out. But now she had a red balloon, too.\n\nԹարգմանություն՝\nԾննդյանս օրը ես կարմիր փուչիկ ստացա։ Բայց քամին այն տարավ։\nԱյն թռավ շուկայի վրայով։ Մի հացթուխ վեր նայեց և ժպտաց։\nԱյն թռավ դպրոցի կողքով։ Երեխաները դադարեցին խաղալ և ձեռքով արեցին։\nԱյն թռավ այգու վրայով։ Մի տարեց զույգ բռնեց իրար ձեռք և նայում էր նրան։\nԵրեկոյան այն խրվեց մի ծառի մեջ՝ մի փոքրիկ աղջկա պատուհանի մոտ։\nՆա մրսել էր և չէր կարող դուրս գալ։ Բայց հիմա նա էլ կարմիր փուչիկ ուներ։\n\nԸնդգծված արտահայտություններ՝ a cold, a red balloon, got stuck, held hands, looked up, stopped playing, took it away\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
-      "review_status": "staged",
-      "render": {
-        "reel": "red-balloon"
-      },
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-16-feelstory-red-balloon/feelstory-red-balloon.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-16-feelstory-red-balloon/cover.jpg"
       }
     },
     {
