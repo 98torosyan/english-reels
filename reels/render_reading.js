@@ -69,7 +69,7 @@ async function renderReading(browser, baseUrl, list0) {
   const errors = await utils.preparePage(page, `${baseUrl}${utils.renderHtmlPath(htmlPath)}`, 1080, 1920);
   const plain = { ...T, plays: [] };
   await page.evaluate(({ d, t }) => { window.configure(d, t); window.seek(1.9); }, { d: list, t: plain });
-  await page.evaluate(() => Promise.all([document.fonts.load('40px NotoArmenian', 'Աբգ'), document.fonts.load('700 48px Literata', 'Ab'),
+  await page.evaluate(() => Promise.all([document.fonts.load('40px NotoArmenian', 'Աբգ'), document.fonts.load('700 48px Literata', 'Ab'), document.fonts.load('700 84px Playfair', 'Ab'), document.fonts.load('italic 600 84px Playfair', 'Ab'),
     document.fonts.load('30px IPA', 'ʃɪiːθðɜɔæʌɒəʊɡŋ')]).then(() => document.fonts.ready));
   await page.evaluate(() => { window.seek(0); window.fit(); window.seek(1.9); });
   const check = await page.evaluate(() => {

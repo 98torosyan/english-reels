@@ -50,6 +50,8 @@ function fontUrls(baseUrl) {
     inter: `${baseUrl}/node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2`,
     literata: `${baseUrl}/node_modules/@fontsource-variable/literata/files/literata-latin-wght-normal.woff2`,
     armenian: `${baseUrl}/node_modules/@fontsource-variable/noto-sans-armenian/files/noto-sans-armenian-armenian-wght-normal.woff2`,
+    playfair: `${baseUrl}/node_modules/@fontsource-variable/playfair-display/files/playfair-display-latin-wght-normal.woff2`,
+    playfairItalic: `${baseUrl}/node_modules/@fontsource-variable/playfair-display/files/playfair-display-latin-wght-italic.woff2`,
   };
 }
 
@@ -60,6 +62,8 @@ function htmlAssets(html, baseUrl) {
     .replaceAll('__INTER_FONT__', fonts.inter)
     .replaceAll('__LITERATA_FONT__', fonts.literata)
     .replaceAll('__ARMENIAN_FONT__', fonts.armenian)
+    .replaceAll('__PLAYFAIR_FONT__', fonts.playfair)
+    .replaceAll('__PLAYFAIR_ITALIC_FONT__', fonts.playfairItalic)
     .replaceAll('__LOGO_DATA__', `data:image/svg+xml;base64,${logo}`);
 }
 
