@@ -280,6 +280,103 @@
         }
       ],
       "recap": []
+    },
+    {
+      "id": "leaf",
+      "kind": "story",
+      "title": "The Last Leaf",
+      "level": "A2",
+      "music": "new/evening-strings.m4a",
+      "paper": "#1C1511",
+      "scenes": [
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "The Last Leaf."
+            ],
+            [
+              "Narrator",
+              "Johnsy was very ill."
+            ],
+            [
+              "Narrator",
+              "Every day she watched the old ivy outside her window."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "\"When the last leaf falls, I will go too,\" she said."
+            ],
+            [
+              "Narrator",
+              "Her friend Sue held her hand and cried."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "Old Behrman, a painter, lived downstairs."
+            ],
+            [
+              "Narrator",
+              "He heard this, and he had a plan."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "That night there was a terrible storm."
+            ],
+            [
+              "Narrator",
+              "The rain and the wind did not stop."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "In the morning, one leaf was still there."
+            ],
+            [
+              "Narrator",
+              "Johnsy wanted to live again."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "But the last leaf was not real."
+            ],
+            [
+              "Narrator",
+              "Behrman painted it on the wall in the storm."
+            ],
+            [
+              "Narrator",
+              "It was his greatest painting."
+            ]
+          ]
+        }
+      ],
+      "recap": []
     }
   ]
 }
