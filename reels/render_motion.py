@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = (ROOT / ".." / ".." / "outputs" / "english-reels-samples").resolve()
 W, H, PIC_H, FPS = 1872, 3328, 2380, 30
 PAPER = (243, 234, 219)
-TEXT_Y = 2330            # top of the text band (in output pixels)
+TEXT_Y = 2130            # top of the text band (in output pixels)
 
 
 def run(args):
@@ -55,7 +55,7 @@ const { chromium } = require('playwright-core'); const fs = require('fs');
   const [lines, dir, root] = JSON.parse(fs.readFileSync(0, 'utf8'));
   const b = await chromium.launch({ executablePath: process.env.CHROME_PATH });
   const p = await b.newPage({ viewport: { width: 1080, height: 520 }, deviceScaleFactor: 26 / 15 });
-  const f = (s) => `file://${root}/node_modules/@fontsource-variable/playfair-display/files/playfair-display-latin-wght-${s}.woff2`;
+  const f = (s) => 'data:font/woff2;base64,' + fs.readFileSync(`${root}/node_modules/@fontsource-variable/playfair-display/files/playfair-display-latin-wght-${s}.woff2`).toString('base64');
   await p.setContent(`<style>@font-face{font-family:P;src:url(${f('normal')})}@font-face{font-family:P;font-style:italic;src:url(${f('italic')})}
    html,body{margin:0;background:transparent}#t{width:1080px;height:520px;display:flex;align-items:center;justify-content:center;text-align:center}
    #t span{max-width:900px;font:500 66px/1.28 P;color:#3A2A1F;letter-spacing:.2px;text-shadow:0 0 18px rgba(243,234,219,.9),0 0 4px rgba(243,234,219,.8)}
@@ -67,7 +67,7 @@ const { chromium } = require('playwright-core'); const fs = require('fs');
   }
   await b.close();
 })();"""
-    js = work / "text.js"; js.write_text(script)
+    js = ROOT / ".render-work" / "motion-text.js"; js.parent.mkdir(exist_ok=True); js.write_text(script)
     subprocess.run(["node", str(js)], input=json.dumps([lines, str(work), str(ROOT)]), text=True, check=True, cwd=ROOT)
 
 
@@ -119,7 +119,7 @@ def main():
     fc += chains
     fc.append(f"{''.join(f'[a{i}]' for i in range(len(lines)))}amix=inputs={len(lines)}:normalize=0,apad=whole_dur={total:.3f}[voice]")
     fc.append(f"[{mus}:a]aresample=48000,atrim=0:{total:.3f},volume=0.20,afade=t=in:d=1.5,afade=t=out:st={total - 2.5:.3f}:d=2.5[mus]")
-    fc.append(f"[voice][mus]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=9,aresample=48000[aout]")
+    fc.append("[voice][mus]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=9,aresample=48000[aout]")
     OUT.mkdir(parents=True, exist_ok=True); dst = OUT / f"motion-{sid}.mp4"; tmp = OUT / f".motion-{sid}.tmp.mp4"
     args += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", "[aout]", "-t", f"{total:.3f}",
              "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-maxrate", "12M", "-bufsize", "24M", "-profile:v", "high", "-level", "5.1",
