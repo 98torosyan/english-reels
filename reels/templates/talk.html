@@ -10,10 +10,12 @@
  *{box-sizing:border-box;margin:0}
  html,body{width:1080px;height:1920px;overflow:hidden;background:var(--paper);font-family:Inter,sans-serif;color:#2A2230}
  /* picture: a square 3D diorama, alive with parallax, melting into the paper on every side */
- .stage{position:absolute;left:0;top:240px;width:1080px;height:1080px;
+ .stage{position:absolute;left:-135px;top:285px;width:1350px;height:1350px;
    -webkit-mask-image:radial-gradient(ellipse 72% 72% at 50% 48%,#000 62%,rgba(0,0,0,.6) 80%,transparent 100%);mask-image:radial-gradient(ellipse 72% 72% at 50% 48%,#000 62%,rgba(0,0,0,.6) 80%,transparent 100%)}
- .stage canvas{position:absolute;inset:0;width:1080px;height:1080px;opacity:0}
- #fx{position:absolute;left:0;top:240px;width:1080px;height:1080px;pointer-events:none}
+ .stage canvas{position:absolute;inset:0;width:1350px;height:1350px;opacity:0}
+ #fx{position:absolute;left:-135px;top:285px;width:1350px;height:1350px;pointer-events:none}
+ /* full-screen picture: no text under it, the speech bubbles carry the words */
+ .title,.learn{display:none!important}
  .title{position:absolute;left:0;right:0;top:1360px;text-align:center;font:700 84px/1.05 Playfair,serif;color:#2A2230;opacity:0}
  .title em{font-style:italic;font-weight:600;color:var(--accent)}
  .title small{display:block;margin-top:14px;font:700 24px Inter;letter-spacing:7px;color:#2A223088;text-transform:uppercase}
@@ -83,7 +85,7 @@
   document.documentElement.style.setProperty('--paper',D.paper);document.documentElement.style.setProperty('--accent',D.accent||'#C8603A');
   document.getElementById('title').innerHTML=`${D.title.replace(/(\S+)$/,'<em>$1</em>')}<small>${D.series}</small>`;
   const st=document.getElementById('stage');
-  for(const [i,s] of D.scenes.entries()){const cv=document.createElement('canvas');cv.width=Math.round(1080*devicePixelRatio);cv.height=cv.width;st.appendChild(cv);
+  for(const [i,s] of D.scenes.entries()){const cv=document.createElement('canvas');cv.width=Math.round(1350*devicePixelRatio);cv.height=cv.width;st.appendChild(cv);
    gls.push({cv,gl:makeGL(cv,await load(s.pic),await load(s.depth))})}
   makeFx();
   // bubbles, one per line
@@ -95,8 +97,8 @@
    B.appendChild(el);
    // place: above the speaker's head, inside the picture, tail pointing at them
    const [hx,hy]=ln.head; const w=Math.min(660,el.offsetWidth), h=el.offsetHeight;
-   let x=hx*1080-w/2, y=240+hy*1080-h-60; x=Math.max(40,Math.min(1040-w,x)); y=Math.max(110,y);
-   el.style.left=x+'px';el.style.top=y+'px';const tail=Math.max(30,Math.min(w-70,hx*1080-x-20));el.style.setProperty('--tail',tail+'px');el.style.setProperty('--ox',(tail+20)+'px');
+   let x=-135+hx*1350-w/2, y=285+hy*1350-h-34; x=Math.max(36,Math.min(1044-w,x)); y=Math.max(110,y);
+   el.style.left=x+'px';el.style.top=y+'px';const tail=Math.max(30,Math.min(w-70,-135+hx*1350-x-20));el.style.setProperty('--tail',tail+'px');el.style.setProperty('--ox',(tail+20)+'px');
    bubs.push(el)});
   document.getElementById('recapList').innerHTML=D.recap.map(r=>`<p>${r}</p>`).join('');
  };

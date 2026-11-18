@@ -1,6 +1,6 @@
 {
  "series": "Emma & Sam",
- "note": "Everyday dialogues in 3D diorama pictures. English only. Bubbles show who speaks; [phrases] are the ones to learn. 'at' = where the speaker's head is in the picture (x, y from 0 to 1).",
+ "note": "Everyday dialogues in 3D diorama pictures. English only. Bubbles show who speaks; [phrases] are the ones to learn. 'at' = the top of the speaker's head in the picture (x, y from 0 to 1); the bubble sits just above it.",
  "people": {
   "Emma": {
    "voice": "en-GB-SoniaNeural",
@@ -25,12 +25,12 @@
     {
      "at": {
       "Emma": [
-       0.36,
-       0.3
+       0.3,
+       0.36
       ],
       "Sam": [
-       0.55,
-       0.3
+       0.46,
+       0.33
       ]
      },
      "lines": [
@@ -47,16 +47,16 @@
     {
      "at": {
       "Emma": [
-       0.36,
-       0.22
+       0.28,
+       0.27
       ],
       "Sam": [
-       0.55,
-       0.22
+       0.58,
+       0.18
       ],
       "Barista": [
-       0.8,
-       0.3
+       0.76,
+       0.25
       ]
      },
      "lines": [
@@ -73,16 +73,16 @@
     {
      "at": {
       "Emma": [
-       0.16,
-       0.4
+       0.2,
+       0.19
       ],
       "Barista": [
        0.47,
-       0.27
+       0.14
       ],
       "Sam": [
-       0.78,
-       0.32
+       0.8,
+       0.12
       ]
      },
      "lines": [
@@ -92,7 +92,7 @@
       ],
       [
        "Emma",
-       "[Can I have] a latte and the chocolate cake, please?"
+       "[Can I have a latte] and the chocolate cake, please?"
       ],
       [
        "Sam",
@@ -107,12 +107,12 @@
     {
      "at": {
       "Emma": [
-       0.33,
-       0.36
+       0.28,
+       0.19
       ],
       "Sam": [
-       0.7,
-       0.33
+       0.66,
+       0.13
       ]
      },
      "lines": [
@@ -133,12 +133,12 @@
     {
      "at": {
       "Emma": [
-       0.33,
-       0.42
+       0.38,
+       0.16
       ],
       "Sam": [
-       0.55,
-       0.4
+       0.62,
+       0.12
       ]
      },
      "lines": [
@@ -156,11 +156,11 @@
      "at": {
       "Emma": [
        0.44,
-       0.4
+       0.11
       ],
       "Sam": [
-       0.64,
-       0.38
+       0.66,
+       0.05
       ]
      },
      "lines": [
