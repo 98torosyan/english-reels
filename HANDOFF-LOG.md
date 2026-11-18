@@ -105,3 +105,8 @@ Open:
 - Story in a minute: 6 pictures per story, assets/minute/sNN-K/ (tools/ingest_minute.py <folder with sNN-K.jpg>); renderer spreads pictures over the speech, changes snap to spoken words.
 - Done: minute-the-happy-prince (6 pics). Others still use old 1-picture sheets; scenes for all 50 in the session scratchpad (six.py) — to redo: 6 Gemini images per story, same chat, full rules in every message (no collage, calm lower quarter fading to cream).
 - Owner: continue the other 49 later; there is enough stock of reels now. All 50 remain held.
+
+## 2026-11-18 — owner review of the queue
+- Owner reviewed every prepared post (artifact "Հերթի ստուգում"): 38 removed, then ALL words (words10, word) and ALL dialogues removed.
+- TODO (owner wants it): rebuild the Words and Dialogues sections from scratch in better quality, then queue them again.
+- New music candidates in music/new (12 tracks, real instruments via FluidSynth) wait for the owner's pick.
