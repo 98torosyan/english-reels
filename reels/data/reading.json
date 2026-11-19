@@ -101,7 +101,15 @@
       "level": "A2",
       "voice": "en-GB-LibbyNeural",
       "en": "Every evening, Ani takes her dog, Toto, for a walk in the park. It is autumn now, and the trees are yellow and orange. The leaves are falling, and they make a soft sound under Ani's feet. Toto runs, jumps and plays with the leaves. Ani laughs. They sit on a bench for a few minutes and watch the sunset. Then they go home, because it is getting cold.",
-      "hy": "Ամեն երեկո Անին իր շանը՝ Տոտոյին, զբոսնելու է տանում այգի։ Հիմա աշուն է, ծառերը դեղին ու նարնջագույն են։ Տերևները թափվում են և մեղմ խշշում Անիի ոտքերի տակ։ Տոտոն վազում է, ցատկում և խաղում տերևների հետ։ Անին ծիծաղում է։ Նրանք մի քանի րոպե նստում են նստարանին և նայում մայրամուտին։ Հետո գնում են տուն, որովհետև ցուրտ է դառնում։"
+      "hy": "Ամեն երեկո Անին իր շանը՝ Տոտոյին, զբոսնելու է տանում այգի։ Հիմա աշուն է, ծառերը դեղին ու նարնջագույն են։ Տերևները թափվում են և մեղմ խշշում Անիի ոտքերի տակ։ Տոտոն վազում է, ցատկում և խաղում տերևների հետ։ Անին ծիծաղում է։ Նրանք մի քանի րոպե նստում են նստարանին և նայում մայրամուտին։ Հետո գնում են տուն, որովհետև ցուրտ է դառնում։",
+      "pic_words": [
+        0,
+        13,
+        24,
+        37,
+        47,
+        60
+      ]
     },
     {
       "id": "gata",
@@ -111,7 +119,15 @@
       "level": "A2",
       "voice": "kokoro:bm_george",
       "en": "On Sunday, Ani visits her grandma. Today they are making gata, a sweet Armenian pastry. Grandma mixes the flour, butter and sugar, and Ani rolls out the dough. There is flour on the table, on her hands and even on her nose! Grandma laughs. Soon the kitchen smells wonderful. When the gata is ready, they drink tea and eat it together. 'Your gata is the best,' says Ani.",
-      "hy": "Կիրակի օրը Անին գնում է տատիկի մոտ։ Այսօր նրանք գաթա են թխում՝ քաղցր հայկական թխվածք։ Տատիկը խառնում է ալյուրը, կարագն ու շաքարը, իսկ Անին գրտնակում է խմորը։ Ալյուր կա սեղանին, ձեռքերին և նույնիսկ քթին։ Տատիկը ծիծաղում է։ Շուտով խոհանոցում հիանալի բույր է տարածվում։ Երբ գաթան պատրաստ է, նրանք թեյ են խմում և միասին ուտում։ «Քո գաթան ամենալավն է»,— ասում է Անին։"
+      "hy": "Կիրակի օրը Անին գնում է տատիկի մոտ։ Այսօր նրանք գաթա են թխում՝ քաղցր հայկական թխվածք։ Տատիկը խառնում է ալյուրը, կարագն ու շաքարը, իսկ Անին գրտնակում է խմորը։ Ալյուր կա սեղանին, ձեռքերին և նույնիսկ քթին։ Տատիկը ծիծաղում է։ Շուտով խոհանոցում հիանալի բույր է տարածվում։ Երբ գաթան պատրաստ է, նրանք թեյ են խմում և միասին ուտում։ «Քո գաթան ամենալավն է»,— ասում է Անին։",
+      "pic_words": [
+        0,
+        6,
+        15,
+        28,
+        49,
+        61
+      ]
     },
     {
       "id": "firstsnow",
