@@ -2947,6 +2947,22 @@
       "ig_media_id": "18094224149289246"
     },
     {
+      "id": "2026-11-19-story-lastleaf",
+      "date": "2026-11-19",
+      "time": "21:55",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "leaf",
+      "title": "The Last Leaf story",
+      "caption": "",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-19-story-lastleaf/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-20-reading-lesson",
       "date": "2026-11-20",
       "time": "10:30",
