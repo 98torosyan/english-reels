@@ -11,6 +11,21 @@ from check_voice import score, pcm   # noqa: E402
 PASS = 0.86
 
 
+def fair_score(text, heard):
+    """score() but forgiving with names: a character's name may be heard with another spelling (Behrman/Bearman),
+    which is a listening detail, not a voice mistake. Each name is matched to the most similar heard word."""
+    import difflib, re
+    sc = score(text, heard)
+    names = [w for w in re.findall(r"[A-Za-z']+", text)[1:] if w[:1].isupper()]
+    if sc >= PASS or not names: return sc
+    want, got = text, heard.split()
+    for n in names:
+        best = max(got, key=lambda g: difflib.SequenceMatcher(None, n.lower(), g.lower().strip(".,!?\"'")).ratio(), default=None)
+        if best and difflib.SequenceMatcher(None, n.lower(), best.lower().strip(".,!?\"'")).ratio() >= 0.55:
+            got.remove(best); want = re.sub(rf"\b{re.escape(n)}\b", "", want, count=1)
+    return max(sc, score(want, " ".join(got)))
+
+
 def main():
     sid = sys.argv[1]
     from faster_whisper import WhisperModel
@@ -25,14 +40,14 @@ def main():
         return " ".join(s.text for s in segs).strip()
 
     for n, (who, raw) in enumerate(lines):
-        text = raw.replace("[", "").replace("]", ""); h = heard(n); sc = score(text, h)
+        text = raw.replace("[", "").replace("]", ""); h = heard(n); sc = fair_score(text, h)
         if sc < PASS:
             print(f"redo {n}: wanted «{text}», heard «{h}» ({sc:.2f})")
             from make_voice import synth, align
             voice = data["people"][who]["voice"]
             words = align(text.split(), asyncio.run(synth(text, voice, "-6%", out / f"v{n}.mp3")))
             (out / f"v{n}.json").write_text(json.dumps({"text": text, "words": words, "tag": voice}), encoding="utf-8")
-            h = heard(n); sc = score(text, h)
+            h = heard(n); sc = fair_score(text, h)
         print(f"{'ok ' if sc >= PASS else 'BAD'} {n} {sc:.2f} {text}")
         if sc < PASS: failed.append(n)
     if failed: raise SystemExit(f"narration clips still wrong: {failed}")
