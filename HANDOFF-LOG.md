@@ -130,3 +130,19 @@ Open:
   kept on the motion-clips branch, listed in reels/data/stories_ready.json, phone copy sent on Telegram.
   Needs secrets TG_BOT_TOKEN and TG_CHAT_ID (the bot tells the chat id on /start while TG_CHAT_ID is empty).
 - The Last Leaf (leaf): text in talk.json, clips in assets/motion/leaf. Once public: run story.yml with story=leaf.
+
+## 2026-11-19 (night) — Lady, Stories, storyteller voice, voice fixes
+- Lady (lady): 5 still pictures (no Grok) → 4K camera moves made once (assets/motion/lady/still marks it, story.yml skips
+  sharpening). Held. story_pack accepts 4–6 scenes.
+- The Last Leaf reel published 21:05; its Story (picture + gold book frame + hook + music) published by the system.
+  tools/story_card.py + reels/story_card.js make such Stories; plan_stories.py now queues one at 21:30 after every
+  story reel (render spec {"story_card": …}, picture "motion:<id>:<scene>"); hooks/author in talk.json.
+- Narrator voice for story reels: Chatterbox (Resemble AI, MIT) "chatterbox:builtin" — owner chose it (sample 3).
+  story.yml voice job installs it; story_listen checks every sentence. reuse_clips input re-renders without sharpening.
+  Lady, Magi, Red Mitten re-voiced. Readings keep their own per-reading voices (owner's earlier wish).
+- Morning Telegram note (analytics/daily_tg.py, in analytics.yml): followers, yesterday's posts, best series.
+  Followers 74 → 228 on Nov 19. Insights (views/saves) still need the token's instagram_manage_insights permission.
+- Voice fixes: tools/fix_voice.py + fix-voices.yml (best of several paces, heard by faster-whisper). 7 of 10 flagged
+  city clips fixed; London (Nov 20) and Paris re-rendered. Still unclear to the listener: prague v1/v7, dubai v7, venice v6.
+- Cleanup: removed motion.yml (it re-sharpened clips on every story commit), voice-test, voice-catalogue,
+  test-meta-access workflows and samples. Owner did NOT like the unified page redesign proposal — do not apply it.
