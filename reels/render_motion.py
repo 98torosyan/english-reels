@@ -61,6 +61,9 @@ const { chromium } = require('playwright-core'); const fs = require('fs');
    html,body{margin:0;background:transparent}#t{width:1080px;height:520px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
    #s{max-width:920px;font:italic 400 66px/1.36 P;color:#3A2A1F;letter-spacing:.2px;text-shadow:0 0 18px rgba(243,234,219,.9),0 0 4px rgba(243,234,219,.8)}
    #s em{font-style:normal;color:#9A6B1F}
+   #s{position:relative;isolation:isolate}
+   #s:before{content:"";position:absolute;left:-110px;right:-110px;top:-120px;bottom:-120px;z-index:-1;background:radial-gradient(closest-side,rgba(243,234,219,.85),rgba(243,234,219,.5) 60%,transparent)}
+   body.dark #s:before{background:radial-gradient(closest-side,rgba(8,12,30,.72),rgba(8,12,30,.45) 60%,transparent)}
    #h{display:none;font:italic 600 104px/1.1 P;letter-spacing:1px;padding:0 20px;
       background:linear-gradient(180deg,#FBE3A1 0%,#E9C46A 45%,#B98A35 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
       filter:drop-shadow(0 3px 10px rgba(0,0,0,.55))}
