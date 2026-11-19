@@ -1,1 +1,1 @@
-{"text": "He could not say a word.", "words": [[0.24, 0.28], [0.36, 0.52], [0.6, 0.76], [0.88, 1.04], [1.1, 1.13], [1.22, 1.726]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
+{"text": "He could not say a word.", "words": [[0.05, 0.18], [0.18, 0.52], [0.52, 0.72], [0.72, 0.93], [0.93, 0.99], [0.99, 1.33]], "tag": "chatterbox:builtin"}
