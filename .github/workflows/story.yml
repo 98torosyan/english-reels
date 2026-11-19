@@ -170,7 +170,7 @@ jobs:
           git add "assets/talk/$STORY" reels/data/stories_ready.json
           git commit -qm "Պատմություն՝ $STORY (ձայն, պատրաստ)" || true
           # this run's narration was just checked by ear, so on a clash it wins
-          for k in 1 2 3 4 5; do git pull -q --rebase -X theirs && git push -q && break; git rebase --abort 2>/dev/null; sleep 5; done
+          for k in 1 2 3 4 5; do git pull -q --rebase -X theirs && git push -q && break; git rebase --abort 2>/dev/null || true; sleep 5; done
           o=../../outputs/english-reels-samples
           mkdir -p /tmp/mc && cp $o/motion-$STORY.mp4 $o/motion-$STORY-cover.jpg assets/motion/$STORY/out-*.mp4 /tmp/mc/
           git fetch -q origin motion-clips && git checkout -q -B motion-clips origin/motion-clips
