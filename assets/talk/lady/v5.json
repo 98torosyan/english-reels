@@ -1,1 +1,1 @@
-{"text": "Every day she walked old Mrs Anahit home.", "words": [[0.12, 0.44], [0.45, 0.8], [0.81, 1.01], [1.02, 1.42], [1.44, 1.69], [1.7, 2.23], [2.24, 2.74], [2.76, 3.26]], "tag": "en-GB-SoniaNeural"}
+{"text": "Every day she walked old Mrs Anahit home.", "words": [[0.24, 0.46], [0.54, 0.78], [0.94, 1.04], [1.14, 1.44], [1.54, 1.7], [1.8, 1.92], [2.4, 2.8], [2.9, 3.343]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

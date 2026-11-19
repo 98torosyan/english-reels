@@ -1,1 +1,1 @@
-{"text": "Then she ran out of the gate.", "words": [[0.15, 0.42], [0.44, 0.63], [0.65, 1.02], [1.04, 1.26], [1.27, 1.37], [1.38, 1.49], [1.51, 2.06]], "tag": "en-GB-SoniaNeural"}
+{"text": "Then she ran out of the gate.", "words": [[0.24, 0.42], [0.56, 0.66], [0.78, 1.04], [1.14, 1.3], [1.34, 1.42], [1.46, 1.54], [1.58, 2.123]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

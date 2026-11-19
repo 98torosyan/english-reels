@@ -1,1 +1,1 @@
-{"text": "She lived in our yard.", "words": [[0.15, 0.37], [0.38, 0.73], [0.74, 0.88], [0.9, 1.08], [1.09, 1.7]], "tag": "en-GB-SoniaNeural"}
+{"text": "She lived in our yard.", "words": [[0.28, 0.4], [0.5, 0.78], [0.82, 0.9], [1.0, 1.14], [1.2, 1.748]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

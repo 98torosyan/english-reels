@@ -1,1 +1,1 @@
-{"text": "Lady.", "words": [[0.1, 0.77]], "tag": "en-GB-SoniaNeural"}
+{"text": "Lady.", "words": [[0.26, 0.826]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
