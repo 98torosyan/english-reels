@@ -377,6 +377,105 @@
         }
       ],
       "recap": []
+    },
+    {
+      "id": "red-mitten",
+      "kind": "story",
+      "title": "The Red Mitten",
+      "level": "A2",
+      "music": "new/snow-celesta.m4a",
+      "paper": "#16203A",
+      "scenes": [
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "The Red Mitten."
+            ],
+            [
+              "Narrator",
+              "On a cold December night, Clara went skating in Vienna."
+            ],
+            [
+              "Narrator",
+              "She did not see her [red mitten] fall."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "Leo found it on the ice."
+            ],
+            [
+              "Narrator",
+              "Inside, there was one letter: C."
+            ],
+            [
+              "Narrator",
+              "But the girl was gone."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "Every evening, Leo came back with the mitten."
+            ],
+            [
+              "Narrator",
+              "He [waited and waited]. She never came."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "But every morning, Clara came back too."
+            ],
+            [
+              "Narrator",
+              "She looked for her mitten. He was never there."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "On Christmas Eve, the rink closed at noon."
+            ],
+            [
+              "Narrator",
+              "They both came early, and they [saw each other]."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "Now they each wear one red mitten."
+            ],
+            [
+              "Narrator",
+              "And they [hold hands] with the other."
+            ]
+          ]
+        }
+      ],
+      "recap": [],
+      "question": "What is your favourite winter memory? Tell us in English!",
+      "hashtags": []
     }
   ]
 }
