@@ -8,7 +8,7 @@
 - `carousels/` — the 21-rule bank and seven-slide carousel renderer.
 - `captions/` — caption guidance; the current dated captions are stored with their entries in `queue.json`.
 - `publish/` — safe API checks, draft queue builder, and a manual publishing client.
-- `.github/workflows/` — `test-meta-access.yml` (account check), `publish.yml` (scheduled publishing, off until the `PUBLISH_ENABLED` variable is `true`), `qc.yml` (English check).
+- `.github/workflows/` — `publish.yml` (scheduled publishing, off until the `PUBLISH_ENABLED` variable is `true`), `qc.yml` (English check).
 - `review/` — review gallery (`build_review.py` → `review/index.html`) and `apply_review.py`.
 - `music/` — original background loops (`make_music.py`); mixed under the voice with automatic ducking.
 - `qc/` — LanguageTool English check.
