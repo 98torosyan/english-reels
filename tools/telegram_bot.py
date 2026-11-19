@@ -163,6 +163,7 @@ def poll():
                 try: send("Ինչ-որ բան չստացվեց այս հաղորդագրության հետ։ Փորձիր նորից։")
                 except Exception: pass
         save(st)
+    save(st)
     print(" ".join(done))
 
 
