@@ -1,0 +1,39 @@
+name: Fix voices
+# Re-make the voice clips the listening check flagged (best of a few takes), polish and align them, commit.
+on:
+  workflow_dispatch:
+    inputs:
+      clips:
+        description: "clip paths separated by spaces (assets/.../v3.mp3)"
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: voices
+  cancel-in-progress: false
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y ffmpeg espeak-ng >/dev/null
+          pip install -q "edge-tts>=7.0" "kokoro>=0.9.4" soundfile "misaki[en]" "faster-whisper>=1.1" pedalboard
+          pip install -q "git+https://github.com/MahmoudAshraf97/ctc-forced-aligner.git"
+      - env:
+          CLIPS: ${{ inputs.clips }}
+        run: |
+          for c in $CLIPS; do case "$c" in assets/*.mp3) ;; *) echo "::error::bad clip $c"; exit 1;; esac; done
+          python tools/fix_voice.py $CLIPS
+          python tools/voice_finish.py
+      - run: |
+          git add assets
+          if ! git diff --cached --quiet; then
+            git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
+            git commit -qm "Clearer voice clips"
+            for k in 1 2 3 4 5; do git pull -q --rebase && git push -q && break; sleep 7; done
+          fi
