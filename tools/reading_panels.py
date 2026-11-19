@@ -19,7 +19,11 @@ def main():
     torch.set_num_threads(int(__import__("os").environ.get("THREADS", "2")))
     net = ModelLoader().load_from_file(str(ROOT / "weights" / "realesr-animevideov3.pth")).eval()
     ps = list(panels(dest / "sheet.png"))
-    if len(ps) != 6: raise SystemExit(f"{rid}: found {len(ps)} pictures, expected 6")
+    if len(ps) != 6:   # gutters not found (a snowy or very light picture): cut the 3 × 2 grid evenly, a little inside each cell
+        im = Image.open(dest / "sheet.png").convert("RGB"); W, H = im.size; cw, ch = W / 3, H / 2; m = 0.02
+        ps = [im.crop((round(c * cw + cw * m), round(r * ch + ch * m), round((c + 1) * cw - cw * m), round((r + 1) * ch - ch * m)))
+              for r in range(2) for c in range(3)]
+        print(rid, "even grid cut")
 
     def up(p):
         x = torch.from_numpy(np.asarray(p.convert("RGB")).copy()).permute(2, 0, 1).float().div(255).unsqueeze(0)
