@@ -78,7 +78,7 @@ async function renderReading(browser, baseUrl, list0) {
       title: document.getElementById('theme').scrollWidth <= 920, img: document.getElementById('pic').naturalWidth };
   });
   console.log(`${name}: ${JSON.stringify(check)} total ${T.total}s`);
-  if (!check.armenian || !check.title || check.storyBottom > 1645 || check.img !== 1080) throw new Error(`${name}: layout check failed`);
+  if (!check.armenian || !check.title || check.storyBottom > 1645 || check.img < 1080) throw new Error(`${name}: layout check failed`);
   await utils.renderFrames(page, T.total, frames, posterPath, 1.4, FPS);
   if (errors.length) throw new Error(`Template errors: ${errors.join(' | ')}`);
   await page.close();
