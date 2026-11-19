@@ -1,1 +1,1 @@
-{"text": "Johnsy was very ill.", "words": [[0.12, 0.7], [0.72, 0.98], [0.99, 1.38], [1.4, 1.84]], "tag": "en-GB-SoniaNeural"}
+{"text": "Johnsy was very ill.", "words": [[0.2, 0.66], [0.82, 0.98], [1.08, 1.36], [1.54, 1.904]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

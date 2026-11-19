@@ -1,1 +1,1 @@
-{"text": "Every day she watched the old ivy outside her window.", "words": [[0.12, 0.42], [0.44, 0.77], [0.79, 0.98], [0.99, 1.41], [1.43, 1.56], [1.58, 1.92], [1.94, 2.33], [2.34, 2.86], [2.87, 2.98], [2.99, 3.58]], "tag": "en-GB-SoniaNeural"}
+{"text": "Every day she watched the old ivy outside her window.", "words": [[0.22, 0.44], [0.52, 0.76], [0.92, 1.02], [1.1, 1.42], [1.48, 1.58], [1.68, 1.94], [2.16, 2.3], [2.44, 2.92], [2.96, 3.04], [3.1, 3.651]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
