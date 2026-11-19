@@ -21,7 +21,7 @@ def fair_score(text, heard):
     want, got = text, heard.split()
     for n in names:
         best = max(got, key=lambda g: difflib.SequenceMatcher(None, n.lower(), g.lower().strip(".,!?\"'")).ratio(), default=None)
-        if best and difflib.SequenceMatcher(None, n.lower(), best.lower().strip(".,!?\"'")).ratio() >= 0.55:
+        if best and difflib.SequenceMatcher(None, n.lower(), best.lower().strip(".,!?\"'")).ratio() >= 0.5:
             got.remove(best); want = re.sub(rf"\b{re.escape(n)}\b", "", want, count=1)
     sc = max(sc, score(want, " ".join(got)))
     if sc < PASS and re.search(r"\d", heard):   # the listener writes numbers as digits ("$1.87"): compare without them
