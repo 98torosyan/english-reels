@@ -1,1 +1,1 @@
-{"text": "She helped everyone.", "words": [[0.26, 0.38], [0.48, 0.78], [0.86, 1.551]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
+{"text": "She helped everyone.", "words": [[0.05, 0.23], [0.23, 0.59], [0.59, 1.13]], "tag": "chatterbox:builtin"}
