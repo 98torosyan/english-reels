@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = (ROOT / ".." / ".." / "outputs" / "english-reels-samples").resolve()
 W, H, PIC_H, FPS = 1872, 3328, 2520, 30
 PAPER = (243, 234, 219)
-TEXT_Y = 2320            # top of the text band (in output pixels)
+TEXT_Y = 1950            # top of the text band (in output pixels)
 
 
 def run(args):
@@ -100,10 +100,10 @@ def main():
     cw, ch = map(int, run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", str(first)]).split(","))
     tall = ch / cw > 1.2                     # vertical clips fill the screen; square ones sit on the page
     pic_h = round(W * ch / cw / 2) * 2 if tall else PIC_H
-    text_y = pic_h - 570 if tall else TEXT_Y
+    text_y = pic_h - 900 if tall else TEXT_Y   # sentence centre at about 71% of the height: above Instagram's caption and buttons
     paper = tuple(int(t["paper"][i:i + 2], 16) for i in (1, 3, 5)) if t.get("paper") else PAPER
     dark = sum(paper) < 384
-    work = Path(tempfile.mkdtemp(prefix=f"motion-{sid}-")); mask(work / "mask.png", pic_h, 900 if tall else 760); text_pngs(lines, work, dark)
+    work = Path(tempfile.mkdtemp(prefix=f"motion-{sid}-")); mask(work / "mask.png", pic_h, 1150 if tall else 900); text_pngs(lines, work, dark)
     # each picture runs from its scene start (minus half a cross-fade) to the next one; clips are slowed gently if needed
     starts = [0.0] + [s - 0.55 for s in scenes[1:]]
     ends = starts[1:] + [total]
