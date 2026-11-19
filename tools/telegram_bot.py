@@ -23,7 +23,7 @@ HELP = ("Բարև 👋 Ես English Reading Room-ի օգնականն եմ։\n\n"
         "3. Ուղարկիր 6 վիդեոն հերթով՝ 1-ից 6 (ավելի լավ է որպես ֆայլ, որ որակը չընկնի)։\n"
         "4. Մոտ 30 րոպեից պատրաստ ռիլսը կգա այստեղ։\n\n"
         "Հրամաններ. /status՝ ինչ է սպասվում, /cancel՝ չեղարկել ընթացիկը, /list՝ պատրաստ պատմությունները, "
-        "/publish՝ պատրաստները դնել հերթի մեջ։")
+        "/publish՝ պատրաստները դնել հերթի մեջ, /classics՝ դասական պատմություններ պատրաստի նկարներով։")
 
 
 def call(method, **params):
@@ -92,6 +92,22 @@ def save(st):
     INBOX.mkdir(exist_ok=True); STATE.write_text(json.dumps(st, ensure_ascii=False, indent=1) + "\n")
 
 
+SAFE_MOTION = ("Animate this exact image as one gentle 6-second shot. Keep the same style, faces, clothes and composition. "
+               "Very slow smooth camera push-in. Only small natural movements: breathing, blinking, a small smile, hair and clothes moving "
+               "softly, light and weather moving gently. Nothing appears, disappears, moves to another hand or falls. "
+               "No new people, no morphing, no text.")
+
+
+def from_classic(x):
+    """A classic that already has six finished pictures -> a story pack (same sentences) and the six pictures."""
+    import re
+    split = lambda t: [s.strip() for s in re.split(r"(?<=[.!?])\s+(?=[A-Z])|(?<=[.!?]['\"])\s+(?=[A-Z])", t) if s.strip()]
+    pack = {"id": f"{x['id']}-moving", "title": x["title"], "level": x.get("level", "A2"), "mood": "adventure",
+            "question": "Do you know this story? Tell us in English!", "scenes": [split(t)[:3] for t in x["scenes"][:6]]}
+    pics = [ROOT / "assets" / "storyvideo" / x["id"] / f"{k}.jpg" for k in range(1, 7)]
+    return pack, pics
+
+
 def handle(msg, st, done):
     sys.path.insert(0, str(ROOT / "tools"))
     import story_pack
@@ -107,6 +123,23 @@ def handle(msg, st, done):
     if text.startswith("/cancel"):
         if p: subprocess.run(["rm", "-rf", str(INBOX / p["id"])])
         st["pending"] = None; send("Չեղարկեցի։ Կարող ես նոր պատմություն ուղարկել։"); return
+    if text.startswith("/classics"):
+        sv = json.loads((ROOT / "reels/data/storyvideo.json").read_text(encoding="utf-8"))["stories"]
+        send("Դասական պատմություններ, որոնց 6 նկարն արդեն պատրաստ է.\n" + "\n".join(f"/classic_{x['id'].replace('-', '_')}՝ {x['title']}" for x in sv)); return
+    if text.startswith("/classic_") or text.startswith("/classic "):
+        cid = text.replace("/classic_", "").replace("/classic ", "").strip().split("@")[0].replace("_", "-")
+        sv = {x["id"]: x for x in json.loads((ROOT / "reels/data/storyvideo.json").read_text(encoding="utf-8"))["stories"]}
+        if cid not in sv: send("Այդպիսի պատմություն չգտա։ /classics՝ ցուցակը։"); return
+        pack, pics = from_classic(sv[cid])
+        bad = story_pack.problems(pack)
+        if bad: send("Այս պատմության տեքստը կարճացնել է պետք.\n• " + "\n• ".join(bad)); return
+        sid = story_pack.slug(pack["id"])
+        if p: subprocess.run(["rm", "-rf", str(INBOX / p["id"])])
+        (INBOX / sid).mkdir(parents=True, exist_ok=True)
+        (INBOX / sid / "story.json").write_text(json.dumps(pack, ensure_ascii=False, indent=1), encoding="utf-8")
+        st["pending"] = {"id": sid, "title": pack["title"], "clips": 0}
+        send_photos(pics, f"«{pack['title']}»՝ 6 պատրաստ նկար ✅ Ամեն մեկը կենդանացրու ու 6 վիդեոն ուղարկիր այստեղ հերթով։")
+        send("Կենդանացման տեքստը (բոլոր 6-ի համար նույնը).\n\n" + SAFE_MOTION); return
     if text.startswith("/publish"):
         r = subprocess.run([sys.executable, str(ROOT / "publish" / "plan_stories.py")], capture_output=True, text=True)
         planned = [l for l in r.stdout.splitlines() if l.strip()]

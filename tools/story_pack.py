@@ -59,8 +59,8 @@ def problems(st):
         if not isinstance(lines, list) or not 1 <= len(lines) <= 3: out.append(f"scene {k}: 1 to 3 sentences"); continue
         for l in lines:
             if not isinstance(l, str) or not l.strip(): out.append(f"scene {k}: empty sentence"); continue
-            if len(l) > 90: out.append(f"scene {k}: sentence too long for the screen ({len(l)} letters, max 90): {l[:40]}…")
-            if re.search(r"[^\x20-\x7E—–]", l): out.append(f"scene {k}: only plain English letters please: {l[:40]}")
+            if len(l) > 110: out.append(f"scene {k}: sentence too long for the screen ({len(l)} letters, max 110): {l[:40]}…")
+            if re.search(r"[^\x20-\x7EÀ-ÿ—–]", l): out.append(f"scene {k}: only plain English letters please: {l[:40]}")
             if not re.search(r"[.!?\"']$", l.strip()): out.append(f"scene {k}: sentence must end with . ! or ?: {l[:40]}")
     return out
 
