@@ -1,179 +1,187 @@
 {
- "series": "Daily reading",
- "note": "Short A2 stories about Ani, read aloud with word-by-word highlight. Illustrations supplied by the owner (assets/reading/<id>.jpg, 1080x720). British English. Armenian translations go in the caption and should be reviewed by the teacher.",
- "stories": [
-  {
-   "id": "bigben",
-   "title": "Big Ben",
-   "title_hy": "Բիգ Բեն",
-   "level": "A2",
-   "series": "DID YOU KNOW?",
-   "en": "Did you know that Big Ben is not the name of the clock? Big Ben is the name of the huge bell inside the tower. The tower is called the Elizabeth Tower. The bell weighs more than thirteen tonnes, which is as heavy as two big elephants! Every hour, it rings, and people can hear it all over Westminster. The great clock started working in 1859. In 1923, people heard Big Ben on the radio for the first time.",
-   "hy": "Գիտե՞իր, որ Big Ben-ը ժամացույցի անունը չէ։ Big Ben-ը աշտարակի ներսի հսկայական զանգի անունն է։ Աշտարակը կոչվում է Եղիսաբեթի աշտարակ։ Զանգը կշռում է ավելի քան տասներեք տոննա, որքան երկու մեծ փիղ։ Ամեն ժամ այն հնչում է, և նրա ձայնը լսվում է ամբողջ Վեսթմինսթերում։ Մեծ ժամացույցը սկսել է աշխատել 1859 թվականին։ 1923-ին մարդիկ առաջին անգամ ռադիոյով լսեցին Big Ben-ը։",
-   "number": 1,
-   "voice": "kokoro:bm_george"
-  },
-  {
-   "id": "morning",
-   "number": 2,
-   "title": "A happy morning",
-   "title_hy": "Ուրախ առավոտ",
-   "level": "A2",
-   "voice": "kokoro:bf_emma",
-   "en": "It is seven o'clock, and the sun is shining. Ani opens her eyes and smiles. She stretches her arms and says, 'Good morning!' Her room is small but cosy. There are books on every shelf, and her favourite blanket is on the bed. Ani gets up, makes her bed and opens the window. The air is fresh and cool. She can see the old church on the hill. 'Today is going to be a good day,' she thinks.",
-   "hy": "Ժամը յոթն է, արևը շողում է։ Անին բացում է աչքերը և ժպտում։ Նա ձգվում է ու ասում. «Բարի լույս»։ Նրա սենյակը փոքր է, բայց հարմարավետ։ Ամեն դարակին գրքեր կան, իսկ սիրելի վերմակը մահճակալին է։ Անին վեր է կենում, հավաքում անկողինը և բացում պատուհանը։ Օդը թարմ է ու զով։ Նա տեսնում է բլրի վրայի հին եկեղեցին։ «Այսօր լավ օր է լինելու»,— մտածում է նա։"
-  },
-  {
-   "id": "greatwall",
-   "title": "The Great Wall",
-   "title_hy": "Չինական մեծ պարիսպ",
-   "level": "A2",
-   "series": "DID YOU KNOW?",
-   "en": "The Great Wall of China is one of the most famous buildings in the world. In fact, it is not one wall but many walls, built over more than two thousand years. All the parts together are about twenty-one thousand kilometres long. Soldiers used the towers to watch for enemies, and they sent messages with smoke and fire. Many people believe that you can see the wall from space, but this is a myth. It is too narrow to see with your eyes.",
-   "hy": "Չինական մեծ պարիսպը աշխարհի ամենահայտնի կառույցներից է։ Իրականում այն մեկ պատ չէ, այլ բազմաթիվ պատեր, որոնք կառուցվել են ավելի քան երկու հազար տարվա ընթացքում։ Բոլոր մասերը միասին մոտ քսանմեկ հազար կիլոմետր երկարություն ունեն։ Զինվորները աշտարակներից հետևում էին թշնամիներին և հաղորդագրություններ էին ուղարկում ծխով ու կրակով։ Շատերը կարծում են, որ պարիսպը երևում է տիեզերքից, բայց դա առասպել է։ Այն չափազանց նեղ է աչքով տեսնելու համար։",
-   "number": 3,
-   "voice": "kokoro:bm_daniel"
-  },
-  {
-   "id": "breakfast",
-   "number": 4,
-   "title": "Breakfast together",
-   "title_hy": "Նախաճաշը միասին",
-   "level": "A2",
-   "voice": "kokoro:bf_lily",
-   "en": "Every morning, Ani has breakfast with her family. Her mum puts warm lavash, white cheese and fresh herbs on the table. Her dad pours the tea, and her little brother, Aram, laughs and asks for more tomatoes. They talk about their plans for the day. Ani is going to school, and Aram is going to nursery. Breakfast is Ani's favourite meal, because everyone is together and nobody is in a hurry.",
-   "hy": "Ամեն առավոտ Անին նախաճաշում է ընտանիքի հետ։ Մայրիկը սեղանին է դնում տաք լավաշ, սպիտակ պանիր և թարմ կանաչի։ Հայրիկը թեյ է լցնում, իսկ փոքր եղբայրը՝ Արամը, ծիծաղում է ու էլի լոլիկ խնդրում։ Նրանք խոսում են օրվա ծրագրերի մասին։ Անին գնում է դպրոց, իսկ Արամը՝ մանկապարտեզ։ Նախաճաշը Անիի սիրելի ճաշն է, որովհետև բոլորը միասին են, և ոչ ոք չի շտապում։"
-  },
-  {
-   "id": "venice",
-   "title": "Venice",
-   "title_hy": "Վենետիկ",
-   "level": "A2",
-   "series": "DID YOU KNOW?",
-   "en": "Venice is a city in Italy with no cars. Instead of streets, it has about one hundred and fifty canals and more than four hundred bridges. People travel by boat, and the most famous boat is the gondola. A gondola is always black, and one side is a little longer than the other, so the gondolier can row with only one oar. The city is built on more than one hundred small islands. Every year, millions of tourists visit Venice.",
-   "hy": "Վենետիկը Իտալիայի քաղաք է, որտեղ մեքենաներ չկան։ Փողոցների փոխարեն այնտեղ կա մոտ հարյուր հիսուն ջրանցք և ավելի քան չորս հարյուր կամուրջ։ Մարդիկ նավակներով են տեղաշարժվում, և ամենահայտնի նավակը գոնդոլան է։ Գոնդոլան միշտ սև է, իսկ մի կողմը մի փոքր ավելի երկար է մյուսից, որպեսզի գոնդոլավարը կարողանա թիավարել միայն մեկ թիով։ Քաղաքը կառուցված է հարյուրից ավելի փոքր կղզիների վրա։ Ամեն տարի միլիոնավոր զբոսաշրջիկներ են այցելում Վենետիկ։",
-   "number": 5,
-   "voice": "en-GB-SoniaNeural"
-  },
-  {
-   "id": "market",
-   "number": 6,
-   "title": "At the market",
-   "title_hy": "Շուկայում",
-   "level": "A2",
-   "voice": "kokoro:bm_lewis",
-   "en": "On Saturday, Ani goes to the market with her mum. The market is big, busy and full of colours. There are red pomegranates, sweet grapes and orange apricots. Ani also loves the colourful sweets on long strings. A kind man gives her a bag of apricots to try. 'Thank you very much!' says Ani. They buy fruit, nuts and bread, and then they walk home slowly in the sunshine.",
-   "hy": "Շաբաթ օրը Անին մայրիկի հետ գնում է շուկա։ Շուկան մեծ է, աշխույժ ու գույներով լի։ Կան կարմիր նռներ, քաղցր խաղող և նարնջագույն ծիրան։ Անին սիրում է նաև թելերին շարված գունավոր քաղցրավենիքը։ Մի բարի մարդ նրան մի տոպրակ ծիրան է տալիս համտեսելու։ «Շատ շնորհակալություն»,— ասում է Անին։ Նրանք գնում են միրգ, ընկույզ և հաց, հետո արևի տակ դանդաղ քայլում են տուն։"
-  },
-  {
-   "id": "rainy",
-   "number": 7,
-   "title": "A rainy day",
-   "title_hy": "Անձրևոտ օր",
-   "level": "A2",
-   "voice": "kokoro:bf_alice",
-   "en": "Today it is raining, so Ani stays at home. She sits by the window with a blanket and a cup of hot chocolate. Outside, people are walking quickly under their umbrellas. Inside, it is warm and quiet. Ani opens her favourite storybook and starts to read. Sometimes she looks up and watches the raindrops on the glass. 'I love rainy days,' she says. 'They are perfect for reading.'",
-   "hy": "Այսօր անձրև է գալիս, ու Անին մնում է տանը։ Նա նստում է պատուհանի մոտ՝ վերմակով և մի բաժակ տաք շոկոլադով։ Դրսում մարդիկ արագ քայլում են հովանոցների տակ։ Ներսում տաք է ու հանգիստ։ Անին բացում է իր սիրելի հեքիաթների գիրքը և սկսում կարդալ։ Երբեմն նա նայում է ապակու վրայի անձրևի կաթիլներին։ «Ես սիրում եմ անձրևոտ օրերը,— ասում է նա։— Դրանք կատարյալ են կարդալու համար»։"
-  },
-  {
-   "id": "lesson",
-   "number": 8,
-   "title": "An English lesson",
-   "title_hy": "Անգլերենի դաս",
-   "level": "A2",
-   "voice": "kokoro:bm_fable",
-   "en": "Ani's favourite lesson is English. Today the class is learning new words about animals. The teacher asks, 'What is this in English?' Ani raises her hand and answers, 'It's a dog!' 'Well done, Ani!' says the teacher. After that, the children read a short story and answer some questions. Ani writes the new words in her notebook. At home, she wants to practise them with her little brother.",
-   "hy": "Անիի սիրելի դասը անգլերենն է։ Այսօր դասարանը սովորում է կենդանիների մասին նոր բառեր։ Ուսուցիչը հարցնում է. «Սա ի՞նչ է անգլերեն»։ Անին բարձրացնում է ձեռքը և պատասխանում. «Դա շուն է»։ «Ապրե՛ս, Անի»,— ասում է ուսուցիչը։ Դրանից հետո երեխաները կարդում են կարճ պատմություն և պատասխանում հարցերի։ Անին նոր բառերը գրում է տետրում։ Տանը նա ուզում է դրանք կրկնել փոքր եղբոր հետ։"
-  },
-  {
-   "id": "park",
-   "number": 9,
-   "title": "A walk in the park",
-   "title_hy": "Զբոսանք այգում",
-   "level": "A2",
-   "voice": "en-GB-LibbyNeural",
-   "en": "Every evening, Ani takes her dog, Toto, for a walk in the park. It is autumn now, and the trees are yellow and orange. The leaves are falling, and they make a soft sound under Ani's feet. Toto runs, jumps and plays with the leaves. Ani laughs. They sit on a bench for a few minutes and watch the sunset. Then they go home, because it is getting cold.",
-   "hy": "Ամեն երեկո Անին իր շանը՝ Տոտոյին, զբոսնելու է տանում այգի։ Հիմա աշուն է, ծառերը դեղին ու նարնջագույն են։ Տերևները թափվում են և մեղմ խշշում Անիի ոտքերի տակ։ Տոտոն վազում է, ցատկում և խաղում տերևների հետ։ Անին ծիծաղում է։ Նրանք մի քանի րոպե նստում են նստարանին և նայում մայրամուտին։ Հետո գնում են տուն, որովհետև ցուրտ է դառնում։"
-  },
-  {
-   "id": "gata",
-   "number": 10,
-   "title": "Baking with Grandma",
-   "title_hy": "Տատիկի հետ թխում ենք",
-   "level": "A2",
-   "voice": "kokoro:bm_george",
-   "en": "On Sunday, Ani visits her grandma. Today they are making gata, a sweet Armenian pastry. Grandma mixes the flour, butter and sugar, and Ani rolls out the dough. There is flour on the table, on her hands and even on her nose! Grandma laughs. Soon the kitchen smells wonderful. When the gata is ready, they drink tea and eat it together. 'Your gata is the best,' says Ani.",
-   "hy": "Կիրակի օրը Անին գնում է տատիկի մոտ։ Այսօր նրանք գաթա են թխում՝ քաղցր հայկական թխվածք։ Տատիկը խառնում է ալյուրը, կարագն ու շաքարը, իսկ Անին գրտնակում է խմորը։ Ալյուր կա սեղանին, ձեռքերին և նույնիսկ քթին։ Տատիկը ծիծաղում է։ Շուտով խոհանոցում հիանալի բույր է տարածվում։ Երբ գաթան պատրաստ է, նրանք թեյ են խմում և միասին ուտում։ «Քո գաթան ամենալավն է»,— ասում է Անին։"
-  },
-  {
-   "id": "firstsnow",
-   "number": 11,
-   "title": "The first snow",
-   "title_hy": "Առաջին ձյունը",
-   "level": "A2",
-   "voice": "kokoro:bm_george",
-   "en": "When Ani wakes up, the room is very bright. She runs to the window. Everything is white! It is the first snow of the year. Ani puts on her warm coat, her hat and her gloves, and goes outside with her little brother. They make a big snowman with a carrot nose and two black buttons for eyes. Their cheeks are red, and their fingers are cold, but they are very happy. 'Winter is here!' Ani shouts.",
-   "hy": "Երբ Անին արթնանում է, սենյակը շատ լուսավոր է։ Նա վազում է պատուհանի մոտ։ Ամեն ինչ սպիտակ է։ Տարվա առաջին ձյունն է։ Անին հագնում է տաք վերարկուն, գլխարկն ու ձեռնոցները և փոքր եղբոր հետ դուրս է գալիս։ Նրանք մեծ ձնեմարդ են սարքում՝ գազարից քթով և աչքերի տեղը երկու սև կոճակով։ Նրանց այտերը կարմրել են, մատները մրսում են, բայց նրանք շատ երջանիկ են։ «Ձմեռը եկավ»,— բղավում է Անին։"
-  },
-  {
-   "id": "library",
-   "number": 12,
-   "title": "A day at the library",
-   "title_hy": "Մի օր գրադարանում",
-   "level": "A2",
-   "voice": "kokoro:bf_emma",
-   "en": "After school, Ani goes to the library near her house. It is quiet and warm inside, and it smells of old books. The librarian smiles and helps her find a book about the stars. Ani sits at a big wooden table by the window and starts to read. She learns that some stars are much bigger than the sun. Before she leaves, she borrows two more books. 'See you next week!' says the librarian. Ani can't wait to come back.",
-   "hy": "Դասերից հետո Անին գնում է տան մոտի գրադարան։ Ներսում հանգիստ է ու տաք, և հին գրքերի բույր է գալիս։ Գրադարանավարուհին ժպտում է և օգնում նրան գտնել աստղերի մասին մի գիրք։ Անին նստում է պատուհանի մոտ մի մեծ փայտե սեղանի շուրջ և սկսում կարդալ։ Նա իմանում է, որ որոշ աստղեր արևից շատ ավելի մեծ են։ Գնալուց առաջ նա ևս երկու գիրք է վերցնում։ «Կհանդիպենք հաջորդ շաբաթ»,— ասում է գրադարանավարուհին։ Անին անհամբեր սպասում է, որ նորից գա։"
-  },
-  {
-   "id": "letter",
-   "number": 13,
-   "title": "A letter to London",
-   "title_hy": "Նամակ Լոնդոն",
-   "level": "A2",
-   "voice": "kokoro:bm_george",
-   "en": "Ani has a penfriend in London. Her name is Emily, and she is eleven, like Ani. Every month they write letters to each other in English. Today Ani writes about her school, her favourite food and the mountains near Yerevan. She draws a small picture of Mount Ararat at the bottom of the page. Then she puts the letter in an envelope and walks to the post office with her dad. 'I hope Emily writes back soon,' she says.",
-   "hy": "Անին Լոնդոնում նամակագրական ընկերուհի ունի։ Նրա անունը Էմիլի է, և նա տասնմեկ տարեկան է, ինչպես Անին։ Ամեն ամիս նրանք անգլերենով նամակներ են գրում իրար։ Այսօր Անին գրում է իր դպրոցի, իր սիրելի ուտելիքի և Երևանի մոտի լեռների մասին։ Էջի ներքևում նա Արարատ լեռան փոքրիկ նկար է անում։ Հետո նամակը դնում է ծրարի մեջ և հայրիկի հետ գնում փոստ։ «Հուսով եմ՝ Էմիլին շուտով կպատասխանի»,— ասում է նա։"
-  },
-  {
-   "id": "dilijan",
-   "number": 14,
-   "title": "A trip to Dilijan",
-   "title_hy": "Ճամփորդություն Դիլիջան",
-   "level": "A2",
-   "voice": "kokoro:bf_emma",
-   "en": "On Saturday morning, Ani and her family take the bus to Dilijan. The road goes up into the green mountains, and Ani looks out of the window the whole time. In Dilijan the air is fresh and cool. They walk through the forest, listen to the birds and have a picnic by a small lake. Ani finds a red leaf and puts it in her notebook. In the evening she is tired, but she smiles. 'Can we come back in the spring?' she asks.",
-   "hy": "Շաբաթ առավոտյան Անին ընտանիքի հետ ավտոբուսով գնում է Դիլիջան։ Ճանապարհը բարձրանում է կանաչ լեռներ, և Անին ամբողջ ժամանակ նայում է պատուհանից։ Դիլիջանում օդը թարմ է ու զով։ Նրանք քայլում են անտառով, լսում թռչուններին և փոքր լճի մոտ խնջույք են անում։ Անին կարմիր տերև է գտնում և դնում տետրի մեջ։ Երեկոյան նա հոգնած է, բայց ժպտում է։ «Կարո՞ղ ենք գարնանը նորից գալ»,— հարցնում է նա։"
-  },
-  {
-   "id": "plant",
-   "number": 15,
-   "title": "Ani's little plant",
-   "title_hy": "Անիի փոքրիկ բույսը",
-   "level": "A2",
-   "voice": "kokoro:bm_george",
-   "en": "Ani's teacher gives every child a small pot with a seed in it. 'Water it a little every day and put it in the sun,' she says. At home, Ani puts the pot on the kitchen window. For a week nothing happens, and Ani feels sad. Then one morning she sees a tiny green leaf! Every day the plant grows a little taller. Ani learns an important lesson: good things need time. Now she writes the plant's height in her notebook every Sunday.",
-   "hy": "Անիի ուսուցչուհին ամեն երեխայի տալիս է մի փոքրիկ աման՝ մեջը սերմ։ «Ամեն օր մի քիչ ջրեք և դրեք արևի տակ»,— ասում է նա։ Տանը Անին ամանը դնում է խոհանոցի պատուհանին։ Մի շաբաթ ոչինչ չի լինում, և Անին տխրում է։ Հետո մի առավոտ նա տեսնում է մի փոքրիկ կանաչ տերև։ Ամեն օր բույսը մի քիչ բարձրանում է։ Անին կարևոր դաս է սովորում՝ լավ բաները ժամանակ են պահանջում։ Հիմա նա ամեն կիրակի տետրում գրում է բույսի բարձրությունը։"
-  },
-  {
-   "id": "concert",
-   "number": 16,
-   "title": "The school concert",
-   "title_hy": "Դպրոցական համերգը",
-   "level": "A2",
-   "voice": "kokoro:bf_emma",
-   "en": "Tonight is the school concert, and Ani is going to play the piano. Before the concert, her hands are cold, and her heart is beating fast. Her mum holds her hand and says, 'Just play for us, like at home.' When it is Ani's turn, she walks onto the stage, sits down and starts to play. The music is soft and beautiful. At the end, everyone claps loudly. Ani bows and smiles. She is not nervous any more. She is proud.",
-   "hy": "Այսօր երեկոյան դպրոցական համերգ է, և Անին դաշնամուր է նվագելու։ Համերգից առաջ նրա ձեռքերը սառն են, իսկ սիրտն արագ է բաբախում։ Մայրիկը բռնում է նրա ձեռքը և ասում. «Պարզապես նվագիր մեզ համար, ինչպես տանը»։ Երբ Անիի հերթն է, նա բարձրանում է բեմ, նստում և սկսում նվագել։ Երաժշտությունը մեղմ է ու գեղեցիկ։ Վերջում բոլորը բարձր ծափահարում են։ Անին խոնարհվում է և ժպտում։ Նա այլևս չի հուզվում։ Նա հպարտ է։"
-  },
-  {
-   "id": "neighbour",
-   "number": 17,
-   "title": "A kind neighbour",
-   "title_hy": "Բարի հարևանը",
-   "level": "A2",
-   "voice": "kokoro:bm_george",
-   "en": "Mrs Hasmik lives next door to Ani. She is very old, and she lives alone with her grey cat. One cold afternoon, Ani sees her on the stairs with two heavy bags. 'Let me help you,' says Ani, and she carries the bags up to the third floor. Mrs Hasmik is very happy. She invites Ani in for tea and tells her stories about Yerevan when she was a little girl. Now Ani visits her every Friday, and they are good friends.",
-   "hy": "Հասմիկ տատը Անիի հարևանն է։ Նա շատ տարեց է և մենակ է ապրում իր մոխրագույն կատվի հետ։ Մի ցուրտ կեսօր Անին նրան տեսնում է աստիճաններին՝ երկու ծանր պայուսակով։ «Թույլ տվեք օգնեմ»,— ասում է Անին և պայուսակները բարձրացնում է երրորդ հարկ։ Հասմիկ տատը շատ ուրախ է։ Նա Անիին թեյի է հրավիրում և պատմում, թե ինչպիսին էր Երևանը, երբ ինքը փոքր աղջիկ էր։ Հիմա Անին ամեն ուրբաթ այցելում է նրան, և նրանք լավ ընկերներ են։"
-  }
- ]
+  "series": "Daily reading",
+  "note": "Short A2 stories about Ani, read aloud with word-by-word highlight. Illustrations supplied by the owner (assets/reading/<id>.jpg, 1080x720). British English. Armenian translations go in the caption and should be reviewed by the teacher.",
+  "stories": [
+    {
+      "id": "bigben",
+      "title": "Big Ben",
+      "title_hy": "Բիգ Բեն",
+      "level": "A2",
+      "series": "DID YOU KNOW?",
+      "en": "Did you know that Big Ben is not the name of the clock? Big Ben is the name of the huge bell inside the tower. The tower is called the Elizabeth Tower. The bell weighs more than thirteen tonnes, which is as heavy as two big elephants! Every hour, it rings, and people can hear it all over Westminster. The great clock started working in 1859. In 1923, people heard Big Ben on the radio for the first time.",
+      "hy": "Գիտե՞իր, որ Big Ben-ը ժամացույցի անունը չէ։ Big Ben-ը աշտարակի ներսի հսկայական զանգի անունն է։ Աշտարակը կոչվում է Եղիսաբեթի աշտարակ։ Զանգը կշռում է ավելի քան տասներեք տոննա, որքան երկու մեծ փիղ։ Ամեն ժամ այն հնչում է, և նրա ձայնը լսվում է ամբողջ Վեսթմինսթերում։ Մեծ ժամացույցը սկսել է աշխատել 1859 թվականին։ 1923-ին մարդիկ առաջին անգամ ռադիոյով լսեցին Big Ben-ը։",
+      "number": 1,
+      "voice": "kokoro:bm_george"
+    },
+    {
+      "id": "morning",
+      "number": 2,
+      "title": "A happy morning",
+      "title_hy": "Ուրախ առավոտ",
+      "level": "A2",
+      "voice": "kokoro:bf_emma",
+      "en": "It is seven o'clock, and the sun is shining. Ani opens her eyes and smiles. She stretches her arms and says, 'Good morning!' Her room is small but cosy. There are books on every shelf, and her favourite blanket is on the bed. Ani gets up, makes her bed and opens the window. The air is fresh and cool. She can see the old church on the hill. 'Today is going to be a good day,' she thinks.",
+      "hy": "Ժամը յոթն է, արևը շողում է։ Անին բացում է աչքերը և ժպտում։ Նա ձգվում է ու ասում. «Բարի լույս»։ Նրա սենյակը փոքր է, բայց հարմարավետ։ Ամեն դարակին գրքեր կան, իսկ սիրելի վերմակը մահճակալին է։ Անին վեր է կենում, հավաքում անկողինը և բացում պատուհանը։ Օդը թարմ է ու զով։ Նա տեսնում է բլրի վրայի հին եկեղեցին։ «Այսօր լավ օր է լինելու»,— մտածում է նա։"
+    },
+    {
+      "id": "greatwall",
+      "title": "The Great Wall",
+      "title_hy": "Չինական մեծ պարիսպ",
+      "level": "A2",
+      "series": "DID YOU KNOW?",
+      "en": "The Great Wall of China is one of the most famous buildings in the world. In fact, it is not one wall but many walls, built over more than two thousand years. All the parts together are about twenty-one thousand kilometres long. Soldiers used the towers to watch for enemies, and they sent messages with smoke and fire. Many people believe that you can see the wall from space, but this is a myth. It is too narrow to see with your eyes.",
+      "hy": "Չինական մեծ պարիսպը աշխարհի ամենահայտնի կառույցներից է։ Իրականում այն մեկ պատ չէ, այլ բազմաթիվ պատեր, որոնք կառուցվել են ավելի քան երկու հազար տարվա ընթացքում։ Բոլոր մասերը միասին մոտ քսանմեկ հազար կիլոմետր երկարություն ունեն։ Զինվորները աշտարակներից հետևում էին թշնամիներին և հաղորդագրություններ էին ուղարկում ծխով ու կրակով։ Շատերը կարծում են, որ պարիսպը երևում է տիեզերքից, բայց դա առասպել է։ Այն չափազանց նեղ է աչքով տեսնելու համար։",
+      "number": 3,
+      "voice": "kokoro:bm_daniel"
+    },
+    {
+      "id": "breakfast",
+      "number": 4,
+      "title": "Breakfast together",
+      "title_hy": "Նախաճաշը միասին",
+      "level": "A2",
+      "voice": "kokoro:bf_lily",
+      "en": "Every morning, Ani has breakfast with her family. Her mum puts warm lavash, white cheese and fresh herbs on the table. Her dad pours the tea, and her little brother, Aram, laughs and asks for more tomatoes. They talk about their plans for the day. Ani is going to school, and Aram is going to nursery. Breakfast is Ani's favourite meal, because everyone is together and nobody is in a hurry.",
+      "hy": "Ամեն առավոտ Անին նախաճաշում է ընտանիքի հետ։ Մայրիկը սեղանին է դնում տաք լավաշ, սպիտակ պանիր և թարմ կանաչի։ Հայրիկը թեյ է լցնում, իսկ փոքր եղբայրը՝ Արամը, ծիծաղում է ու էլի լոլիկ խնդրում։ Նրանք խոսում են օրվա ծրագրերի մասին։ Անին գնում է դպրոց, իսկ Արամը՝ մանկապարտեզ։ Նախաճաշը Անիի սիրելի ճաշն է, որովհետև բոլորը միասին են, և ոչ ոք չի շտապում։"
+    },
+    {
+      "id": "venice",
+      "title": "Venice",
+      "title_hy": "Վենետիկ",
+      "level": "A2",
+      "series": "DID YOU KNOW?",
+      "en": "Venice is a city in Italy with no cars. Instead of streets, it has about one hundred and fifty canals and more than four hundred bridges. People travel by boat, and the most famous boat is the gondola. A gondola is always black, and one side is a little longer than the other, so the gondolier can row with only one oar. The city is built on more than one hundred small islands. Every year, millions of tourists visit Venice.",
+      "hy": "Վենետիկը Իտալիայի քաղաք է, որտեղ մեքենաներ չկան։ Փողոցների փոխարեն այնտեղ կա մոտ հարյուր հիսուն ջրանցք և ավելի քան չորս հարյուր կամուրջ։ Մարդիկ նավակներով են տեղաշարժվում, և ամենահայտնի նավակը գոնդոլան է։ Գոնդոլան միշտ սև է, իսկ մի կողմը մի փոքր ավելի երկար է մյուսից, որպեսզի գոնդոլավարը կարողանա թիավարել միայն մեկ թիով։ Քաղաքը կառուցված է հարյուրից ավելի փոքր կղզիների վրա։ Ամեն տարի միլիոնավոր զբոսաշրջիկներ են այցելում Վենետիկ։",
+      "number": 5,
+      "voice": "en-GB-SoniaNeural"
+    },
+    {
+      "id": "market",
+      "number": 6,
+      "title": "At the market",
+      "title_hy": "Շուկայում",
+      "level": "A2",
+      "voice": "kokoro:bm_lewis",
+      "en": "On Saturday, Ani goes to the market with her mum. The market is big, busy and full of colours. There are red pomegranates, sweet grapes and orange apricots. Ani also loves the colourful sweets on long strings. A kind man gives her a bag of apricots to try. 'Thank you very much!' says Ani. They buy fruit, nuts and bread, and then they walk home slowly in the sunshine.",
+      "hy": "Շաբաթ օրը Անին մայրիկի հետ գնում է շուկա։ Շուկան մեծ է, աշխույժ ու գույներով լի։ Կան կարմիր նռներ, քաղցր խաղող և նարնջագույն ծիրան։ Անին սիրում է նաև թելերին շարված գունավոր քաղցրավենիքը։ Մի բարի մարդ նրան մի տոպրակ ծիրան է տալիս համտեսելու։ «Շատ շնորհակալություն»,— ասում է Անին։ Նրանք գնում են միրգ, ընկույզ և հաց, հետո արևի տակ դանդաղ քայլում են տուն։"
+    },
+    {
+      "id": "rainy",
+      "number": 7,
+      "title": "A rainy day",
+      "title_hy": "Անձրևոտ օր",
+      "level": "A2",
+      "voice": "kokoro:bf_alice",
+      "en": "Today it is raining, so Ani stays at home. She sits by the window with a blanket and a cup of hot chocolate. Outside, people are walking quickly under their umbrellas. Inside, it is warm and quiet. Ani opens her favourite storybook and starts to read. Sometimes she looks up and watches the raindrops on the glass. 'I love rainy days,' she says. 'They are perfect for reading.'",
+      "hy": "Այսօր անձրև է գալիս, ու Անին մնում է տանը։ Նա նստում է պատուհանի մոտ՝ վերմակով և մի բաժակ տաք շոկոլադով։ Դրսում մարդիկ արագ քայլում են հովանոցների տակ։ Ներսում տաք է ու հանգիստ։ Անին բացում է իր սիրելի հեքիաթների գիրքը և սկսում կարդալ։ Երբեմն նա նայում է ապակու վրայի անձրևի կաթիլներին։ «Ես սիրում եմ անձրևոտ օրերը,— ասում է նա։— Դրանք կատարյալ են կարդալու համար»։"
+    },
+    {
+      "id": "lesson",
+      "number": 8,
+      "title": "An English lesson",
+      "title_hy": "Անգլերենի դաս",
+      "level": "A2",
+      "voice": "kokoro:bm_fable",
+      "en": "Ani's favourite lesson is English. Today the class is learning new words about animals. The teacher asks, 'What is this in English?' Ani raises her hand and answers, 'It's a dog!' 'Well done, Ani!' says the teacher. After that, the children read a short story and answer some questions. Ani writes the new words in her notebook. At home, she wants to practise them with her little brother.",
+      "hy": "Անիի սիրելի դասը անգլերենն է։ Այսօր դասարանը սովորում է կենդանիների մասին նոր բառեր։ Ուսուցիչը հարցնում է. «Սա ի՞նչ է անգլերեն»։ Անին բարձրացնում է ձեռքը և պատասխանում. «Դա շուն է»։ «Ապրե՛ս, Անի»,— ասում է ուսուցիչը։ Դրանից հետո երեխաները կարդում են կարճ պատմություն և պատասխանում հարցերի։ Անին նոր բառերը գրում է տետրում։ Տանը նա ուզում է դրանք կրկնել փոքր եղբոր հետ։",
+      "pic_words": [
+        0,
+        14,
+        22,
+        31,
+        37,
+        57
+      ]
+    },
+    {
+      "id": "park",
+      "number": 9,
+      "title": "A walk in the park",
+      "title_hy": "Զբոսանք այգում",
+      "level": "A2",
+      "voice": "en-GB-LibbyNeural",
+      "en": "Every evening, Ani takes her dog, Toto, for a walk in the park. It is autumn now, and the trees are yellow and orange. The leaves are falling, and they make a soft sound under Ani's feet. Toto runs, jumps and plays with the leaves. Ani laughs. They sit on a bench for a few minutes and watch the sunset. Then they go home, because it is getting cold.",
+      "hy": "Ամեն երեկո Անին իր շանը՝ Տոտոյին, զբոսնելու է տանում այգի։ Հիմա աշուն է, ծառերը դեղին ու նարնջագույն են։ Տերևները թափվում են և մեղմ խշշում Անիի ոտքերի տակ։ Տոտոն վազում է, ցատկում և խաղում տերևների հետ։ Անին ծիծաղում է։ Նրանք մի քանի րոպե նստում են նստարանին և նայում մայրամուտին։ Հետո գնում են տուն, որովհետև ցուրտ է դառնում։"
+    },
+    {
+      "id": "gata",
+      "number": 10,
+      "title": "Baking with Grandma",
+      "title_hy": "Տատիկի հետ թխում ենք",
+      "level": "A2",
+      "voice": "kokoro:bm_george",
+      "en": "On Sunday, Ani visits her grandma. Today they are making gata, a sweet Armenian pastry. Grandma mixes the flour, butter and sugar, and Ani rolls out the dough. There is flour on the table, on her hands and even on her nose! Grandma laughs. Soon the kitchen smells wonderful. When the gata is ready, they drink tea and eat it together. 'Your gata is the best,' says Ani.",
+      "hy": "Կիրակի օրը Անին գնում է տատիկի մոտ։ Այսօր նրանք գաթա են թխում՝ քաղցր հայկական թխվածք։ Տատիկը խառնում է ալյուրը, կարագն ու շաքարը, իսկ Անին գրտնակում է խմորը։ Ալյուր կա սեղանին, ձեռքերին և նույնիսկ քթին։ Տատիկը ծիծաղում է։ Շուտով խոհանոցում հիանալի բույր է տարածվում։ Երբ գաթան պատրաստ է, նրանք թեյ են խմում և միասին ուտում։ «Քո գաթան ամենալավն է»,— ասում է Անին։"
+    },
+    {
+      "id": "firstsnow",
+      "number": 11,
+      "title": "The first snow",
+      "title_hy": "Առաջին ձյունը",
+      "level": "A2",
+      "voice": "kokoro:bm_george",
+      "en": "When Ani wakes up, the room is very bright. She runs to the window. Everything is white! It is the first snow of the year. Ani puts on her warm coat, her hat and her gloves, and goes outside with her little brother. They make a big snowman with a carrot nose and two black buttons for eyes. Their cheeks are red, and their fingers are cold, but they are very happy. 'Winter is here!' Ani shouts.",
+      "hy": "Երբ Անին արթնանում է, սենյակը շատ լուսավոր է։ Նա վազում է պատուհանի մոտ։ Ամեն ինչ սպիտակ է։ Տարվա առաջին ձյունն է։ Անին հագնում է տաք վերարկուն, գլխարկն ու ձեռնոցները և փոքր եղբոր հետ դուրս է գալիս։ Նրանք մեծ ձնեմարդ են սարքում՝ գազարից քթով և աչքերի տեղը երկու սև կոճակով։ Նրանց այտերը կարմրել են, մատները մրսում են, բայց նրանք շատ երջանիկ են։ «Ձմեռը եկավ»,— բղավում է Անին։"
+    },
+    {
+      "id": "library",
+      "number": 12,
+      "title": "A day at the library",
+      "title_hy": "Մի օր գրադարանում",
+      "level": "A2",
+      "voice": "kokoro:bf_emma",
+      "en": "After school, Ani goes to the library near her house. It is quiet and warm inside, and it smells of old books. The librarian smiles and helps her find a book about the stars. Ani sits at a big wooden table by the window and starts to read. She learns that some stars are much bigger than the sun. Before she leaves, she borrows two more books. 'See you next week!' says the librarian. Ani can't wait to come back.",
+      "hy": "Դասերից հետո Անին գնում է տան մոտի գրադարան։ Ներսում հանգիստ է ու տաք, և հին գրքերի բույր է գալիս։ Գրադարանավարուհին ժպտում է և օգնում նրան գտնել աստղերի մասին մի գիրք։ Անին նստում է պատուհանի մոտ մի մեծ փայտե սեղանի շուրջ և սկսում կարդալ։ Նա իմանում է, որ որոշ աստղեր արևից շատ ավելի մեծ են։ Գնալուց առաջ նա ևս երկու գիրք է վերցնում։ «Կհանդիպենք հաջորդ շաբաթ»,— ասում է գրադարանավարուհին։ Անին անհամբեր սպասում է, որ նորից գա։"
+    },
+    {
+      "id": "letter",
+      "number": 13,
+      "title": "A letter to London",
+      "title_hy": "Նամակ Լոնդոն",
+      "level": "A2",
+      "voice": "kokoro:bm_george",
+      "en": "Ani has a penfriend in London. Her name is Emily, and she is eleven, like Ani. Every month they write letters to each other in English. Today Ani writes about her school, her favourite food and the mountains near Yerevan. She draws a small picture of Mount Ararat at the bottom of the page. Then she puts the letter in an envelope and walks to the post office with her dad. 'I hope Emily writes back soon,' she says.",
+      "hy": "Անին Լոնդոնում նամակագրական ընկերուհի ունի։ Նրա անունը Էմիլի է, և նա տասնմեկ տարեկան է, ինչպես Անին։ Ամեն ամիս նրանք անգլերենով նամակներ են գրում իրար։ Այսօր Անին գրում է իր դպրոցի, իր սիրելի ուտելիքի և Երևանի մոտի լեռների մասին։ Էջի ներքևում նա Արարատ լեռան փոքրիկ նկար է անում։ Հետո նամակը դնում է ծրարի մեջ և հայրիկի հետ գնում փոստ։ «Հուսով եմ՝ Էմիլին շուտով կպատասխանի»,— ասում է նա։"
+    },
+    {
+      "id": "dilijan",
+      "number": 14,
+      "title": "A trip to Dilijan",
+      "title_hy": "Ճամփորդություն Դիլիջան",
+      "level": "A2",
+      "voice": "kokoro:bf_emma",
+      "en": "On Saturday morning, Ani and her family take the bus to Dilijan. The road goes up into the green mountains, and Ani looks out of the window the whole time. In Dilijan the air is fresh and cool. They walk through the forest, listen to the birds and have a picnic by a small lake. Ani finds a red leaf and puts it in her notebook. In the evening she is tired, but she smiles. 'Can we come back in the spring?' she asks.",
+      "hy": "Շաբաթ առավոտյան Անին ընտանիքի հետ ավտոբուսով գնում է Դիլիջան։ Ճանապարհը բարձրանում է կանաչ լեռներ, և Անին ամբողջ ժամանակ նայում է պատուհանից։ Դիլիջանում օդը թարմ է ու զով։ Նրանք քայլում են անտառով, լսում թռչուններին և փոքր լճի մոտ խնջույք են անում։ Անին կարմիր տերև է գտնում և դնում տետրի մեջ։ Երեկոյան նա հոգնած է, բայց ժպտում է։ «Կարո՞ղ ենք գարնանը նորից գալ»,— հարցնում է նա։"
+    },
+    {
+      "id": "plant",
+      "number": 15,
+      "title": "Ani's little plant",
+      "title_hy": "Անիի փոքրիկ բույսը",
+      "level": "A2",
+      "voice": "kokoro:bm_george",
+      "en": "Ani's teacher gives every child a small pot with a seed in it. 'Water it a little every day and put it in the sun,' she says. At home, Ani puts the pot on the kitchen window. For a week nothing happens, and Ani feels sad. Then one morning she sees a tiny green leaf! Every day the plant grows a little taller. Ani learns an important lesson: good things need time. Now she writes the plant's height in her notebook every Sunday.",
+      "hy": "Անիի ուսուցչուհին ամեն երեխայի տալիս է մի փոքրիկ աման՝ մեջը սերմ։ «Ամեն օր մի քիչ ջրեք և դրեք արևի տակ»,— ասում է նա։ Տանը Անին ամանը դնում է խոհանոցի պատուհանին։ Մի շաբաթ ոչինչ չի լինում, և Անին տխրում է։ Հետո մի առավոտ նա տեսնում է մի փոքրիկ կանաչ տերև։ Ամեն օր բույսը մի քիչ բարձրանում է։ Անին կարևոր դաս է սովորում՝ լավ բաները ժամանակ են պահանջում։ Հիմա նա ամեն կիրակի տետրում գրում է բույսի բարձրությունը։"
+    },
+    {
+      "id": "concert",
+      "number": 16,
+      "title": "The school concert",
+      "title_hy": "Դպրոցական համերգը",
+      "level": "A2",
+      "voice": "kokoro:bf_emma",
+      "en": "Tonight is the school concert, and Ani is going to play the piano. Before the concert, her hands are cold, and her heart is beating fast. Her mum holds her hand and says, 'Just play for us, like at home.' When it is Ani's turn, she walks onto the stage, sits down and starts to play. The music is soft and beautiful. At the end, everyone claps loudly. Ani bows and smiles. She is not nervous any more. She is proud.",
+      "hy": "Այսօր երեկոյան դպրոցական համերգ է, և Անին դաշնամուր է նվագելու։ Համերգից առաջ նրա ձեռքերը սառն են, իսկ սիրտն արագ է բաբախում։ Մայրիկը բռնում է նրա ձեռքը և ասում. «Պարզապես նվագիր մեզ համար, ինչպես տանը»։ Երբ Անիի հերթն է, նա բարձրանում է բեմ, նստում և սկսում նվագել։ Երաժշտությունը մեղմ է ու գեղեցիկ։ Վերջում բոլորը բարձր ծափահարում են։ Անին խոնարհվում է և ժպտում։ Նա այլևս չի հուզվում։ Նա հպարտ է։"
+    },
+    {
+      "id": "neighbour",
+      "number": 17,
+      "title": "A kind neighbour",
+      "title_hy": "Բարի հարևանը",
+      "level": "A2",
+      "voice": "kokoro:bm_george",
+      "en": "Mrs Hasmik lives next door to Ani. She is very old, and she lives alone with her grey cat. One cold afternoon, Ani sees her on the stairs with two heavy bags. 'Let me help you,' says Ani, and she carries the bags up to the third floor. Mrs Hasmik is very happy. She invites Ani in for tea and tells her stories about Yerevan when she was a little girl. Now Ani visits her every Friday, and they are good friends.",
+      "hy": "Հասմիկ տատը Անիի հարևանն է։ Նա շատ տարեց է և մենակ է ապրում իր մոխրագույն կատվի հետ։ Մի ցուրտ կեսօր Անին նրան տեսնում է աստիճաններին՝ երկու ծանր պայուսակով։ «Թույլ տվեք օգնեմ»,— ասում է Անին և պայուսակները բարձրացնում է երրորդ հարկ։ Հասմիկ տատը շատ ուրախ է։ Նա Անիին թեյի է հրավիրում և պատմում, թե ինչպիսին էր Երևանը, երբ ինքը փոքր աղջիկ էր։ Հիմա Անին ամեն ուրբաթ այցելում է նրան, և նրանք լավ ընկերներ են։"
+    }
+  ]
 }

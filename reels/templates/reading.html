@@ -15,7 +15,7 @@
  *{box-sizing:border-box;margin:0}
  html,body{width:1080px;height:1920px;overflow:hidden;font-family:Inter,sans-serif}
  .pic{position:absolute;left:0;top:0;width:1080px;height:760px;overflow:hidden}
- .pic img{width:100%;height:100%;object-fit:cover;transform-origin:50% 40%}
+ .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;transform-origin:50% 35%}
  .pic:after{content:"";position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(transparent,var(--paper))}
  .pill{position:absolute;top:96px;left:56px;display:flex;align-items:center;gap:14px;padding:10px 22px 10px 10px;border-radius:99px;background:#FFFCF6ee;box-shadow:0 10px 30px #17183A26}
  .pill img{width:56px;height:56px;border-radius:16px}
@@ -63,14 +63,21 @@
  let D=null,T=null;
  window.configure=(data,timeline)=>{D=data;T=timeline;
   if(data.color) document.documentElement.style.setProperty('--c',data.color);
-  pic.src=data.img; series.textContent=`${data.series||'DAILY READING'} · ${String(data.number).padStart(2,'0')}`; level.textContent=data.level;
+  pic.src=data.img; document.querySelectorAll('.pic img.more').forEach(e=>e.remove());
+  (data.imgs||[]).slice(1).forEach(src=>{const im=document.createElement('img'); im.className='more'; im.src=src; im.style.cssText='position:absolute;inset:0;opacity:0'; pic.parentNode.insertBefore(im, pic.parentNode.lastChild.nextSibling);});
+  series.textContent=`${data.series||'DAILY READING'} · ${String(data.number).padStart(2,'0')}`; level.textContent=data.level;
   const tw=data.title.split(' '); theme.innerHTML=tw.length>1?tw.slice(0,-1).join(' ')+' <em>'+tw.at(-1)+'</em>':'<em>'+data.title+'</em>';
   story.innerHTML=data.en.split(' ').map((w,j)=>`<span data-j="${j}">${w}</span>`).join(' ');
  };
  window.fit=()=>{if(window.K){K.init();K.title(theme,.15);}let f=43;while(story.getBoundingClientRect().bottom>1640&&f>32){f-=1;story.style.fontSize=f+'px';}};
  window.seek=t=>{
   progress.style.width=(clamp(t/T.total)*100)+'%';
-  pic.style.transform=`scale(${1.04+0.06*clamp(t/T.total)})`;
+  const imgs=[pic,...document.querySelectorAll('.pic img.more')], at=T.picAt&&T.picAt.length===imgs.length?T.picAt:[0];
+  if(imgs.length===1||at.length===1) pic.style.transform=`scale(${1.04+0.06*clamp(t/T.total)})`;
+  else imgs.forEach((im,k)=>{ // each picture fades in over the previous one and drifts slowly, like a camera
+   const s0=at[k], s1=k+1<at.length?at[k+1]+0.8:T.total, p=clamp((t-s0)/Math.max(1,s1-s0));
+   im.style.opacity=k===0?1:ease(clamp((t-s0)/0.8));
+   im.style.transform=`scale(${1.05+0.07*p}) translateX(${(k%2?-1:1)*14*(p-.5)}px)`;});
   const a=ease(clamp(t/.5)); eyebrow.style.opacity=a; title.style.opacity=ease(clamp((t-.15)/.6)); title.style.transform=`translateY(${(1-ease(clamp((t-.15)/.6)))*40}px)`;
   story.style.opacity=ease(clamp((t-.5)/.6));
   story.querySelectorAll('span').forEach(s=>{const w=T.words[+s.dataset.j]; const now=t>=w[0]&&t<w[1]; const done=t>=w[1];

@@ -15,8 +15,22 @@ const FPS = 30;
 const r3 = (x) => Number(x.toFixed(3));
 // one accent per day, from the brand palette, so neighbouring posts never look the same
 const PALETTE = ['#B9790B', '#1C8AA3', '#B23F78', '#3E5FD9', '#2E9E6A', '#6A49E2'];
-const withColor = (st) => ({ ...st, color: PALETTE[(st.number + 4) % PALETTE.length],
-  img: `data:image/jpeg;base64,${fs.readFileSync([path.join(utils.ROOT, 'assets', 'reading', st.id, '1.jpg'), path.join(utils.ROOT, 'assets', 'reading', `${st.id}.jpg`)].find((f) => fs.existsSync(f))).toString('base64')}` });
+const b64 = (f) => `data:image/jpeg;base64,${fs.readFileSync(f).toString('base64')}`;
+// a story may have several pictures (assets/reading/<id>/1.jpg … N.jpg): they follow the text, one after another
+const pictures = (id) => { const out = []; for (let k = 1; fs.existsSync(path.join(utils.ROOT, 'assets', 'reading', id, `${k}.jpg`)); k += 1) out.push(path.join(utils.ROOT, 'assets', 'reading', id, `${k}.jpg`)); return out; };
+const withColor = (st) => { const many = pictures(st.id);
+  return { ...st, color: PALETTE[(st.number + 4) % PALETTE.length], imgs: many.length > 1 ? many.map(b64) : null,
+    img: b64(many[0] || path.join(utils.ROOT, 'assets', 'reading', `${st.id}.jpg`)) }; };
+// when each picture appears: the word given in pic_words, else spread evenly over the sentence starts
+function picTimes(st, words) {
+  const n = pictures(st.id).length; if (n < 2) return [];
+  let at = st.pic_words;
+  if (!at || at.length !== n) {
+    const w = st.en.split(' '); const starts = [0, ...w.slice(0, -1).flatMap((x, i) => (/[.!?]'?$/.test(x) ? [i + 1] : []))];
+    at = Array.from({ length: n }, (_, k) => starts[Math.floor((k * starts.length) / n)]);
+  }
+  return at.map((j, k) => (k === 0 ? 0 : r3(words[Math.min(j, words.length - 1)][0] - 0.35)));
+}
 
 function clip(id, n, text) {
   const dir = path.join(utils.ROOT, 'assets', 'reading', id);
@@ -31,7 +45,8 @@ function clip(id, n, text) {
 function timeline(st) {
   const c = clip(st.id, 'p', st.en);
   const at = 1.6;
-  return { plays: [{ at, clip: c }], start: at, words: c.words.map(([a, b]) => [r3(a + at), r3(b + at)]), total: r3(at + c.len + 1.8 + 2.6) };
+  const words = c.words.map(([a, b]) => [r3(a + at), r3(b + at)]);
+  return { plays: [{ at, clip: c }], start: at, words, picAt: picTimes(st, words), total: r3(at + c.len + 1.8 + 2.6) };
 }
 
 function voiceTrack(T, out) {
