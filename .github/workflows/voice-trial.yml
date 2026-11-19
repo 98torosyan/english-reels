@@ -24,7 +24,7 @@ jobs:
       - name: Keep the samples on the motion-clips branch
         run: |
           for f in trial/*.wav; do ffmpeg -v error -y -i "$f" -af loudnorm=I=-16:TP=-1.5 -c:a libmp3lame -q:a 2 "${f%.wav}.mp3"; done
-          mkdir -p /tmp/t && cp trial/*.mp3 /tmp/t/
+          mkdir -p /tmp/t && cp trial/*.mp3 /tmp/t/ && rm -rf trial
           git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
           git fetch -q origin motion-clips && git checkout -q -B motion-clips origin/motion-clips
           mkdir -p trial && cp /tmp/t/*.mp3 trial/ && git add trial && git commit -qm "Voice trial: $STORY" || true
