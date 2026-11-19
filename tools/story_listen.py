@@ -17,13 +17,21 @@ def fair_score(text, heard):
     import difflib, re
     sc = score(text, heard)
     names = [w for w in re.findall(r"[A-Za-z']+", text)[1:] if w[:1].isupper()]
-    if sc >= PASS or not names: return sc
+    if sc >= PASS: return sc
     want, got = text, heard.split()
     for n in names:
         best = max(got, key=lambda g: difflib.SequenceMatcher(None, n.lower(), g.lower().strip(".,!?\"'")).ratio(), default=None)
         if best and difflib.SequenceMatcher(None, n.lower(), best.lower().strip(".,!?\"'")).ratio() >= 0.55:
             got.remove(best); want = re.sub(rf"\b{re.escape(n)}\b", "", want, count=1)
-    return max(sc, score(want, " ".join(got)))
+    sc = max(sc, score(want, " ".join(got)))
+    if sc < PASS and re.search(r"\d", heard):   # the listener writes numbers as digits ("$1.87"): compare without them
+        nums = set("zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen "
+                   "eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred thousand million and dollar dollars "
+                   "cent cents pound pounds pence euro euros o'clock half past quarter".split())
+        w2 = " ".join(t for t in re.split(r"[\s-]+", want) if t.lower().strip(".,!?\"'") not in nums)
+        h2 = " ".join(t for t in " ".join(got).split() if not re.search(r"[\d$£€]", t))
+        sc = max(sc, score(w2, h2))
+    return sc
 
 
 def main():
