@@ -1,1 +1,1 @@
-{"text": "He waited and waited. She never came.", "words": [[0.24, 0.3], [0.42, 0.92], [1.04, 1.14], [1.2, 1.7], [2.34, 2.44], [2.54, 2.78], [2.86, 3.352]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
+{"text": "He waited and waited. She never came.", "words": [[0.05, 0.18], [0.18, 0.55], [0.55, 0.74], [0.74, 1.18], [1.18, 1.37], [1.37, 1.68], [1.68, 1.99]], "tag": "chatterbox:builtin"}
