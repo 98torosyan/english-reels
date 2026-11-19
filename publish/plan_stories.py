@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE, READY, TALK = ROOT / "queue.json", ROOT / "reels/data/stories_ready.json", ROOT / "reels/data/talk.json"
 BASE = "https://98torosyan.github.io/english-reels-media"
-AT = "21:00"
+AT, STORY_AT = "21:00", "21:30"   # the reel, then its Story (picture + gold book frame + hook) half an hour later
 DEFAULT_TAGS = ["learnenglish", "englishstories", "englishreading", "readinenglish", "englishlearning"]
 
 
@@ -18,6 +18,13 @@ def caption(t):
     tags = " ".join("#" + h for h in (t.get("hashtags") or DEFAULT_TAGS))
     return f"{t['title']} · Read and listen · {t.get('level', 'A2')}\n\n" + "\n".join(lines) + \
            f"\n\n{q}\nSave this reel and read it again tomorrow.\nMore stories with sound: link in bio.\n\n{tags}"
+
+
+def card(t):
+    """What the Story says: the title, who wrote it, and a hook line that makes people open the reel."""
+    first = next(l for _, l in t["scenes"][0]["lines"][1:]).replace("[", "").replace("]", "")
+    return {"picture": f"motion:{t['id']}:{t.get('card_scene', 1)}", "title": t["title"], "author": t.get("author", "A story in easy English"),
+            "hook": t.get("hook") or first, "music": "music/" + t["music"]}
 
 
 def main():
@@ -37,6 +44,10 @@ def main():
                            "kind": "motion", "content_id": r["id"], "title": t["title"], "caption": caption(t), "review_status": "staged",
                            "render": {"motion": r["id"]},
                            "media": {"video_url": f"{BASE}/{rid}/motion-{r['id']}.mp4", "cover_url": f"{BASE}/{rid}/cover.jpg"}})
+        sid = f"{day.isoformat()}-story-{r['id']}"
+        q["items"].append({"id": sid, "date": day.isoformat(), "time": STORY_AT, "timezone": "Asia/Yerevan", "type": "STORY", "format": "STORIES",
+                           "kind": "story-video", "content_id": r["id"], "title": f"{t['title']} story", "caption": "", "review_status": "staged",
+                           "render": {"story_card": card(t)}, "media": {"video_url": f"{BASE}/{sid}/story.mp4"}})
         r["status"] = "queued"; r["post"] = rid; busy.add(day.isoformat()); planned.append((day.isoformat(), t["title"]))
     for d, title in planned: print(d, AT, title)
     if a.dry_run or not planned: return

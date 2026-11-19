@@ -41,7 +41,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null && npm ci --no-audit --no-fund && pip install -q pillow numpy
+      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null && npm ci --no-audit --no-fund && pip install -q pillow numpy opencv-python-headless
       - name: Render what is due soon
         env:
           ONLY: ${{ inputs.only }}

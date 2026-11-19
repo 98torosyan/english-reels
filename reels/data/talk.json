@@ -279,7 +279,9 @@
           ]
         }
       ],
-      "recap": []
+      "recap": [],
+      "author": "O. Henry",
+      "hook": "She had only one dollar\nand eighty-seven cents..."
     },
     {
       "id": "leaf",
@@ -376,7 +378,9 @@
           ]
         }
       ],
-      "recap": []
+      "recap": [],
+      "author": "O. Henry",
+      "hook": "When the last leaf falls,\nwill Johnsy give up?"
     },
     {
       "id": "red-mitten",
@@ -475,7 +479,9 @@
       ],
       "recap": [],
       "question": "What is your favourite winter memory? Tell us in English!",
-      "hashtags": []
+      "hashtags": [],
+      "author": "A winter story",
+      "hook": "One red mitten\nin the Vienna snow..."
     },
     {
       "id": "lady",
@@ -571,7 +577,10 @@
         "dogstory",
         "englishreading",
         "easyenglish"
-      ]
+      ],
+      "author": "A true story",
+      "hook": "One snowy night, a little boy\ndid not come home...",
+      "card_scene": 5
     }
   ]
 }

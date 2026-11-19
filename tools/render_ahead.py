@@ -1,6 +1,7 @@
 """Just-in-time media: for staged posts due within --days days whose files are not in the media repo yet, render them
 and put them in place. Posts say how in item["render"]: {"reel": "<feelstory id>"}, {"countries": "<country id>"} or
-{"motion": "<story id>"} (a finished story reel kept on the motion-clips branch: only copied, not rendered).
+{"motion": "<story id>"} (a finished story reel kept on the motion-clips branch: only copied, not rendered) or
+{"story_card": {...}} (a Story video for a reel, tools/story_card.py).
 This keeps the public media site small (only the next few days live there) and needs no computer: the daily
 "Render ahead" workflow runs it. Usage: python tools/render_ahead.py --media-repo ../english-reels-media [--days 3]"""
 import argparse, datetime as dt, json, os, shutil, subprocess
@@ -35,6 +36,21 @@ def render(item, media):
         for name, dest in ((f"finished/motion-{i}.mp4", f"motion-{i}.mp4"), (f"finished/motion-{i}-cover.jpg", "cover.jpg")):
             data = subprocess.run(["git", "show", f"FETCH_HEAD:{name}"], cwd=ROOT, check=True, capture_output=True).stdout
             (folder / dest).write_bytes(data)
+    elif "story_card" in spec:   # a Story video for a reel (tools/story_card.py); picture "motion:<id>:<n>" = a frame of that clip
+        c = dict(spec["story_card"]); work = folder / ".card"; work.mkdir(exist_ok=True)
+        if c["picture"].startswith("motion:"):
+            _, sid, n = c["picture"].split(":")
+            subprocess.run(["git", "fetch", "-q", "--depth", "1", "origin", "motion-clips"], cwd=ROOT, check=True)
+            for name in (f"{sid}/out-{sid}-{n}.mp4", f"{sid}/out-{n}.mp4"):
+                r = subprocess.run(["git", "show", f"FETCH_HEAD:{name}"], cwd=ROOT, capture_output=True)
+                if r.returncode == 0: (work / "clip.mp4").write_bytes(r.stdout); break
+            else: raise SystemExit(f"no clip {sid}/{n} on motion-clips")
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", "1", "-i", str(work / "clip.mp4"), "-frames:v", "1", "-q:v", "2", str(work / "pic.jpg")], check=True)
+            c["picture"] = str(work / "pic.jpg")
+        else: c["picture"] = str(ROOT / c["picture"])
+        (work / "spec.json").write_text(json.dumps(c), encoding="utf-8")
+        subprocess.run(["python", str(ROOT / "tools" / "story_card.py"), str(work / "spec.json"), str(folder / "story.mp4")], cwd=ROOT, check=True)
+        shutil.rmtree(work)
     elif "countries" in spec:
         i = spec["countries"]
         subprocess.run(["node", "carousels/render_countries.js", i], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
