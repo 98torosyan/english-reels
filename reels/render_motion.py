@@ -129,11 +129,13 @@ def main():
     cur = "v0"
     for i, l in enumerate(lines):
         idx = nv + 1 + i
-        nxt = lines[i + 1]["at"] if i + 1 < len(lines) else total
-        a, b = max(0, l["at"] - 0.25), (nxt - 0.1 if i + 1 < len(lines) else total)
+        # one sentence on screen at a time: the old one fades out and the new one fades in, back to back, in the pause between them
+        mid = lambda k: (lines[k - 1]["end"] + lines[k]["at"]) / 2
+        a = max(0, l["at"] - 0.3) if i == 0 else mid(i)
+        b = mid(i + 1) if i + 1 < len(lines) else total
         args += ["-loop", "1", "-t", f"{total:.3f}", "-i", str(work / f"line{l['n']}.png")]
-        fade_out = f",fade=t=out:st={b - 0.35:.3f}:d=0.35:alpha=1" if i + 1 < len(lines) else f",fade=t=out:st={total - 1.2:.3f}:d=1.0:alpha=1"
-        fc.append(f"[{idx}:v]format=rgba,fade=t=in:st={a:.3f}:d=0.45:alpha=1{fade_out}[t{i}]")
+        fade_out = f",fade=t=out:st={b - 0.26:.3f}:d=0.26:alpha=1" if i + 1 < len(lines) else f",fade=t=out:st={total - 1.2:.3f}:d=1.0:alpha=1"
+        fc.append(f"[{idx}:v]format=rgba,fade=t=in:st={a:.3f}:d=0.3:alpha=1{fade_out}[t{i}]")
         fc.append(f"[{cur}][t{i}]overlay=0:{text_y}:enable='between(t,{a:.3f},{b:.3f})'[v{i + 1}]"); cur = f"v{i + 1}"
     fc.append(f"[{cur}]fade=t=in:st=0:d=0.6,format=yuv420p[vout]")
     # sound: the narrator, and soft music under it
