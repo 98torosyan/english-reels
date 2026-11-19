@@ -387,6 +387,7 @@ def voice_talk():
     root = LESSONS.parents[1]
     data = json.loads((root / "reels/data/talk.json").read_text(encoding="utf-8"))
     for t in data["talks"]:
+        if t.get("kind") == "story": continue   # stories are voiced and checked by their own workflow (story.yml)
         out = root / "assets" / "talk" / t["id"]; out.mkdir(parents=True, exist_ok=True)
         lines = [l for sc in t["scenes"] for l in sc["lines"]]
         for n, (who, raw) in enumerate(lines):
