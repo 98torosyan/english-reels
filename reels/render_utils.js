@@ -64,7 +64,8 @@ function htmlAssets(html, baseUrl) {
     .replaceAll('__ARMENIAN_FONT__', fonts.armenian)
     .replaceAll('__PLAYFAIR_FONT__', fonts.playfair)
     .replaceAll('__PLAYFAIR_ITALIC_FONT__', fonts.playfairItalic)
-    .replaceAll('__LOGO_DATA__', `data:image/svg+xml;base64,${logo}`);
+    .replaceAll('__LOGO_DATA__', `data:image/svg+xml;base64,${logo}`)
+    .replaceAll('__MARK_DATA__', `data:image/svg+xml;base64,${fs.readFileSync(path.join(ROOT, 'assets', 'logo-mark.svg')).toString('base64')}`);
 }
 
 function ensureDirectory(directory) {
