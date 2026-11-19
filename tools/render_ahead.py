@@ -3,7 +3,7 @@ and put them in place. Posts say how in item["render"]: {"reel": "<feelstory id>
 {"motion": "<story id>"} (a finished story reel kept on the motion-clips branch: only copied, not rendered).
 This keeps the public media site small (only the next few days live there) and needs no computer: the daily
 "Render ahead" workflow runs it. Usage: python tools/render_ahead.py --media-repo ../english-reels-media [--days 3]"""
-import argparse, datetime as dt, json, shutil, subprocess
+import argparse, datetime as dt, json, os, shutil, subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +22,13 @@ def render(item, media):
         subprocess.run(["node", "reels/render_feelstory.js", i], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
         shutil.copy2(OUT / f"feelstory-{i}.mp4", folder / f"feelstory-{i}.mp4")
         if (OUT / f"feelstory-{i}-cover.jpg").exists(): shutil.copy2(OUT / f"feelstory-{i}-cover.jpg", folder / "cover.jpg")
+    elif "reading" in spec:
+        i = spec["reading"]; env = {**os.environ}
+        if spec.get("music"): env["MUSIC_TRACK"] = str(ROOT / "music" / spec["music"])
+        subprocess.run(["node", "reels/render_reading.js", i], cwd=ROOT, check=True, stdout=subprocess.DEVNULL, env=env)
+        shutil.copy2(OUT / f"reading-{i}.mp4", folder / f"reading-{i}.mp4")
+        from PIL import Image
+        Image.open(OUT / f"reading-{i}.png").convert("RGB").save(folder / "cover.jpg", "JPEG", quality=92)
     elif "motion" in spec:
         i = spec["motion"]
         subprocess.run(["git", "fetch", "-q", "--depth", "1", "origin", "motion-clips"], cwd=ROOT, check=True)
