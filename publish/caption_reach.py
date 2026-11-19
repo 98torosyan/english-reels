@@ -29,7 +29,7 @@ TOPICS = {
 }
 KIND = {"mistake": "grammar", "rule": "grammar", "quiz": "quiz", "words10": "words", "word": "words", "review": "words", "phrasal": "speaking",
         "dialogue": "speaking", "reading": "stories", "storyvideo": "stories", "story": "stories", "picstory": "stories", "feelstory": "stories",
-        "classic": "books", "opposites": "words", "countries": "travel"}
+        "classic": "books", "opposites": "words", "countries": "travel", "motion": "stories"}
 FORMAT = {"REELS": ["#englishreels", "#learnenglishwithreels", "#englishlesson", "#a2english", "#englishforbeginners", "#englishvideo",
                     "#reelsenglish", "#b1english", "#englishshorts", "#listenandrepeat"],
           "CAROUSEL": ["#englishlesson", "#englishnotes", "#englishforbeginners", "#a2english", "#englishpractice", "#studynotes",
@@ -53,7 +53,7 @@ HOOK = {"mistake": "Common English mistake: can you spot it?", "rule": "English 
         "phrasal": "Phrasal verbs you will use every day: {t}", "dialogue": "Everyday English conversation: {t}", "reading": "Read and listen in English: {t}",
         "storyvideo": "Learn English with a short story: {t}", "story": "Learn English with a short story: {t}", "picstory": "A picture story in easy English: {t}",
         "feelstory": "A short story in easy English: {t}", "classic": "Classic books in easy English: {t}", "opposites": "English opposites in one picture: {t}",
-        "countries": "Learn English and travel: {t}"}
+        "countries": "Learn English and travel: {t}", "motion": "A beautiful story in easy English: {t}"}
 ARM = re.compile(r"[Ա-և]")
 
 
