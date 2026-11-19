@@ -54,7 +54,7 @@ def problems(st):
     q = st.get("question")
     if q is not None and (not isinstance(q, str) or len(q) > 120): out.append("question must be one short sentence")
     sc = st.get("scenes")
-    if not isinstance(sc, list) or len(sc) != 6: out.append("there must be exactly 6 scenes"); return out
+    if not isinstance(sc, list) or not 4 <= len(sc) <= 6: out.append("there must be 4 to 6 scenes"); return out
     for k, lines in enumerate(sc, 1):
         if not isinstance(lines, list) or not 1 <= len(lines) <= 3: out.append(f"scene {k}: 1 to 3 sentences"); continue
         for l in lines:
@@ -80,7 +80,7 @@ def add(folder):
     st["id"] = slug(st.get("id") or st.get("title", ""))
     bad = problems(st)
     clips = sorted(folder.glob("clip*.mp4"), key=lambda p: int(re.sub(r"\D", "", p.stem) or 0))
-    if len(clips) != 6: bad.append(f"need 6 clips, found {len(clips)}")
+    if len(clips) != len(st.get("scenes") or []): bad.append(f"need one clip per scene, found {len(clips)}")
     if bad: raise SystemExit("\n".join(bad))
     data = json.loads(TALK.read_text(encoding="utf-8"))
     data.setdefault("people", {}).setdefault("Narrator", {"voice": "en-GB-SoniaNeural", "colour": "#7A4A2A"})

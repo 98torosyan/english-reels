@@ -476,6 +476,102 @@
       "recap": [],
       "question": "What is your favourite winter memory? Tell us in English!",
       "hashtags": []
+    },
+    {
+      "id": "lady",
+      "kind": "story",
+      "title": "Lady",
+      "level": "A2",
+      "music": "new/snow-celesta.m4a",
+      "paper": "#16203A",
+      "scenes": [
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "Lady."
+            ],
+            [
+              "Narrator",
+              "Lady was a big black dog."
+            ],
+            [
+              "Narrator",
+              "She lived in our yard."
+            ],
+            [
+              "Narrator",
+              "All the children [loved her]."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "She helped everyone."
+            ],
+            [
+              "Narrator",
+              "Every day she [walked old Mrs Anahit home]."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "One snowy evening, little Aram did not come home."
+            ],
+            [
+              "Narrator",
+              "Everyone was [very afraid]."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "Lady put her nose in the snow."
+            ],
+            [
+              "Narrator",
+              "Then she [ran out of the gate]."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "She found Aram under a big tree."
+            ],
+            [
+              "Narrator",
+              "She [kept him warm] all night."
+            ],
+            [
+              "Narrator",
+              "Now Lady is [everybody's dog]."
+            ]
+          ]
+        }
+      ],
+      "recap": [],
+      "question": "Do you have a dog? What is its name? Tell us in English!",
+      "hashtags": [
+        "learnenglish",
+        "englishstories",
+        "dogstory",
+        "englishreading",
+        "easyenglish"
+      ]
     }
   ]
 }
