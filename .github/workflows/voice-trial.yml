@@ -1,0 +1,31 @@
+name: Voice trial (Chatterbox)
+on:
+  workflow_dispatch:
+    inputs:
+      story: {description: "story id", required: true, default: "lady"}
+permissions:
+  contents: write
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      STORY: ${{ inputs.story }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null
+      - run: pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu && pip install -q chatterbox-tts soundfile
+      - run: |
+          case "$STORY" in *[!a-z0-9-]*|"") exit 1;; esac
+          python tools/voice_trial.py "$STORY"
+      - name: Keep the samples on the motion-clips branch
+        run: |
+          for f in trial/*.wav; do ffmpeg -v error -y -i "$f" -af loudnorm=I=-16:TP=-1.5 -c:a libmp3lame -q:a 2 "${f%.wav}.mp3"; done
+          mkdir -p /tmp/t && cp trial/*.mp3 /tmp/t/
+          git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
+          git fetch -q origin motion-clips && git checkout -q -B motion-clips origin/motion-clips
+          mkdir -p trial && cp /tmp/t/*.mp3 trial/ && git add trial && git commit -qm "Voice trial: $STORY" || true
+          for k in 1 2 3; do git push -q origin motion-clips && break; sleep 5; git pull -q --rebase origin motion-clips; done
