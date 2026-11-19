@@ -78,7 +78,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Still pictures are already sharp and smooth (camera move made from a 4K picture)
+        id: still
+        run: |
+          if [ -f "assets/motion/$STORY/still" ]; then cp "assets/motion/$STORY/in${{ matrix.n }}.mp4" "out-$STORY-${{ matrix.n }}.mp4"; echo "yes=1" >> "$GITHUB_OUTPUT"; fi
       - name: Tools
+        if: steps.still.outputs.yes != '1'
         run: |
           sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null
           pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu
@@ -86,14 +91,17 @@ jobs:
           mkdir -p weights
           curl -sSLf -o weights/realesr-animevideov3.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-animevideov3.pth
       - name: RIFE frame interpolation (CPU Vulkan)
+        if: steps.still.outputs.yes != '1'
         run: |
           sudo apt-get install -y --no-install-recommends mesa-vulkan-drivers libvulkan1 >/dev/null
           curl -sSLf -o rife.zip https://github.com/nihui/rife-ncnn-vulkan/releases/download/20221029/rife-ncnn-vulkan-20221029-ubuntu.zip
           unzip -q rife.zip '*/rife-ncnn-vulkan' '*/rife-v4.6/*' && rm rife.zip
           d=$(ls -d "$PWD"/rife-ncnn-vulkan-*); chmod +x "$d/rife-ncnn-vulkan"; echo "RIFE=$d" >> "$GITHUB_ENV"
       - name: Keep only the clean part of the clip
+        if: steps.still.outputs.yes != '1'
         run: python tools/clip_guard.py "assets/motion/$STORY/in${{ matrix.n }}.mp4" clean.mp4
       - name: Smooth (48 fps) and sharp (4K width)
+        if: steps.still.outputs.yes != '1'
         run: python tools/upscale_video.py clean.mp4 "out-$STORY-${{ matrix.n }}.mp4" --fps 48
       - uses: actions/upload-artifact@v4
         with:
