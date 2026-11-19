@@ -17,7 +17,7 @@ def caption(t):
     q = t.get("question") or "Did you like the ending? Tell us in English!"
     tags = " ".join("#" + h for h in (t.get("hashtags") or DEFAULT_TAGS))
     return f"{t['title']} · Read and listen · {t.get('level', 'A2')}\n\n" + "\n".join(lines) + \
-           f"\n\n{q}\nSave this reel and read it again tomorrow.\n\n{tags}"
+           f"\n\n{q}\nSave this reel and read it again tomorrow.\nMore stories with sound: link in bio.\n\n{tags}"
 
 
 def main():
