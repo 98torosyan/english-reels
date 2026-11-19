@@ -8,6 +8,10 @@ on:
       story:
         description: "story id (reels/data/talk.json, assets/motion/<id>)"
         required: true
+      reuse_clips:
+        description: "use the clips sharpened before (only the voice or text changed)"
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -49,13 +53,16 @@ jobs:
   voice:
     needs: check
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null && pip install -q "edge-tts>=7.0" "faster-whisper>=1.1"
+          python-version: "3.11"
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null
+          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q chatterbox-tts soundfile "edge-tts>=7.0" "faster-whisper>=1.1"
       - run: python tools/story_voice.py "$STORY"
       - name: Listen to every sentence
         run: python tools/story_listen.py "$STORY"
@@ -78,10 +85,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Still pictures are already sharp and smooth (camera move made from a 4K picture)
+      - name: Still pictures are already sharp and smooth (camera move made from a 4K picture), or the clip was sharpened before
         id: still
         run: |
-          if [ -f "assets/motion/$STORY/still" ]; then cp "assets/motion/$STORY/in${{ matrix.n }}.mp4" "out-$STORY-${{ matrix.n }}.mp4"; echo "yes=1" >> "$GITHUB_OUTPUT"; fi
+          if [ "${{ inputs.reuse_clips }}" = "true" ] && git fetch -q origin motion-clips && \
+             { git show "FETCH_HEAD:$STORY/out-$STORY-${{ matrix.n }}.mp4" > "out-$STORY-${{ matrix.n }}.mp4" 2>/dev/null || git show "FETCH_HEAD:$STORY/out-${{ matrix.n }}.mp4" > "out-$STORY-${{ matrix.n }}.mp4" 2>/dev/null; } && [ -s "out-$STORY-${{ matrix.n }}.mp4" ]; then
+            echo "yes=1" >> "$GITHUB_OUTPUT"
+          elif [ -f "assets/motion/$STORY/still" ]; then cp "assets/motion/$STORY/in${{ matrix.n }}.mp4" "out-$STORY-${{ matrix.n }}.mp4"; echo "yes=1" >> "$GITHUB_OUTPUT"; fi
       - name: Tools
         if: steps.still.outputs.yes != '1'
         run: |

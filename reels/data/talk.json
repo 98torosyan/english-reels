@@ -15,7 +15,7 @@
       "colour": "#5E8B6A"
     },
     "Narrator": {
-      "voice": "en-GB-SoniaNeural",
+      "voice": "chatterbox:builtin",
       "colour": "#7A4A2A"
     }
   },

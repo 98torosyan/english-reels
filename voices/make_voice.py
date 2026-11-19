@@ -46,7 +46,34 @@ def synth_kokoro(text, voice, rate, mp3):
         out = [(w, min(s, speech_end - 0.05), min(e, speech_end)) for w, s, e in out]
     return out
 
+_CHATTER = None
+
+
+def synth_chatterbox(text, voice, rate, mp3):
+    """Chatterbox storyteller voice (Resemble AI, MIT), voice="chatterbox:builtin". It gives no word timings, so the
+    spoken span is found from the sound itself and the words are spread over it (the reels use the span)."""
+    global _CHATTER
+    import subprocess, tempfile, numpy as np, soundfile as sf, torch
+    if _CHATTER is None:
+        from chatterbox.tts import ChatterboxTTS
+        torch.set_num_threads(4); _CHATTER = ChatterboxTTS.from_pretrained(device="cpu")
+    w = _CHATTER.generate(text, exaggeration=0.55, cfg_weight=0.45).squeeze().cpu().numpy(); sr = _CHATTER.sr
+    env = np.convolve(np.abs(w), np.ones(int(sr * .02)) / int(sr * .02), "same"); on = np.where(env > env.max() * 0.04)[0]
+    a, b = max(0, on[0] - int(sr * .05)), min(len(w), on[-1] + int(sr * .12)); w = w[a:b]
+    pad = int(sr * .05); w = np.concatenate([np.zeros(pad), w, np.zeros(pad)])
+    with tempfile.NamedTemporaryFile(suffix=".wav") as tmp:
+        sf.write(tmp.name, w, sr)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", tmp.name, "-ar", "24000", "-c:a", "libmp3lame", "-q:a", "2", str(mp3)], check=True)
+    s0, s1 = pad / sr, (len(w) - pad) / sr; words = text.split(); total = sum(len(x) for x in words)
+    bounds, t = [], s0
+    for x in words:
+        d = (s1 - s0) * len(x) / total; bounds.append((x, t, t + d)); t += d
+    return bounds
+
+
 async def synth(text, voice, rate, mp3):
+    if voice.startswith("chatterbox:"):
+        return synth_chatterbox(text, voice, rate, mp3)
     if voice.startswith("kokoro:"):
         return synth_kokoro(text, voice, rate, mp3)
     com = edge_tts.Communicate(text, voice, rate=rate, boundary="WordBoundary")
