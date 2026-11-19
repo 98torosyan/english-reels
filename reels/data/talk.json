@@ -205,7 +205,7 @@
             ],
             [
               "Narrator",
-              "Della had only one dollar and eighty-seven cents."
+              "Della had only [one dollar and eighty-seven cents]."
             ],
             [
               "Narrator",
@@ -231,7 +231,7 @@
           "lines": [
             [
               "Narrator",
-              "Della sold her hair."
+              "Della [sold her hair]."
             ],
             [
               "Narrator",
@@ -257,7 +257,7 @@
           "lines": [
             [
               "Narrator",
-              "Jim had sold his watch."
+              "Jim had [sold his watch]."
             ],
             [
               "Narrator",
@@ -274,7 +274,7 @@
             ],
             [
               "Narrator",
-              "But their love was the best gift of all."
+              "But their love was [the best gift of all]."
             ]
           ]
         }
@@ -311,7 +311,7 @@
           "lines": [
             [
               "Narrator",
-              "\"When the last leaf falls, I will go too,\" she said."
+              "\"When the [last leaf] falls, I will go too,\" she said."
             ],
             [
               "Narrator",
@@ -363,7 +363,7 @@
           "lines": [
             [
               "Narrator",
-              "But the last leaf was not real."
+              "But the last leaf was [not real]."
             ],
             [
               "Narrator",
@@ -371,7 +371,7 @@
             ],
             [
               "Narrator",
-              "It was his greatest painting."
+              "It was his [greatest painting]."
             ]
           ]
         }

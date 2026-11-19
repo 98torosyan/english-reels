@@ -13,7 +13,7 @@ DEFAULT_TAGS = ["learnenglish", "englishstories", "englishreading", "readinengli
 
 
 def caption(t):
-    lines = [l for sc in t["scenes"] for _, l in sc["lines"]][1:]   # the first line is the spoken title
+    lines = [l.replace("[", "").replace("]", "") for sc in t["scenes"] for _, l in sc["lines"]][1:]   # the first line is the spoken title
     q = t.get("question") or "Did you like the ending? Tell us in English!"
     tags = " ".join("#" + h for h in (t.get("hashtags") or DEFAULT_TAGS))
     return f"{t['title']} · Read and listen · {t.get('level', 'A2')}\n\n" + "\n".join(lines) + \
