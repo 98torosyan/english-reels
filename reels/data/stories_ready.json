@@ -10,5 +10,11 @@
   "title": "The Gift of the Magi",
   "date": "2026-11-19",
   "status": "held"
+ },
+ {
+  "id": "red-mitten",
+  "title": "The Red Mitten",
+  "date": "2026-11-19",
+  "status": "held"
  }
 ]
