@@ -18,7 +18,7 @@ METRICS = {"REELS": "views,reach,saved,shares,total_interactions", "FEED": "view
 SERIES = {"reading": "Daily reading", "words10": "10 words", "phrasal": "Phrasal verbs", "review": "Weekly review", "dialogue": "Everyday English", "sound": "Sound it out",
           "story": "Story time", "rule": "Carousels", "mistake": "Common mistakes", "quiz": "Quiz", "word": "Word of the day",
           "storyvideo": "Story videos & Classics", "classic": "Classic carousels", "picstory": "Picture stories", "feelstory": "Emotional stories",
-          "opposites": "A Day in Opposites", "routine": "Everyday English (pictures)", "list": "Carousels", "test": "Tests"}
+          "opposites": "A Day in Opposites", "motion": "Moving stories", "routine": "Everyday English (pictures)", "list": "Carousels", "test": "Tests"}
 
 
 def get(path, **params):

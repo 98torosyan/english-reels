@@ -27,6 +27,12 @@ jobs:
       - name: Snapshot (and Monday report)
         run: |
           if [ "$(TZ=Asia/Yerevan date +%u)" = "1" ] || [ "${{ inputs.report }}" = "true" ]; then python analytics/insights.py --report; else python analytics/insights.py; fi
+      - name: Morning note to Telegram
+        continue-on-error: true
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: python analytics/daily_tg.py
       - name: Open the weekly report as an issue
         if: hashFiles('analytics/report.md') != ''
         env:
