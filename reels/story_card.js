@@ -1,7 +1,7 @@
 // Story card layers for an Instagram Story: the picture full screen with a soft shade (bg.png, 2592×4608) and a gold
 // book frame with the title, author line and a one-line hook (overlay.png, transparent, 2160×3840).
 // Usage: node reels/story_card.js <spec.json> <outdir>   spec: {picture, title, author, hook, line}
-const { chromium } = require('playwright'); const fs = require('fs'); const path = require('path');
+const { chromium } = require('playwright-core'); const fs = require('fs'); const path = require('path');
 const root = path.resolve(__dirname, '..');
 const spec = JSON.parse(fs.readFileSync(process.argv[2], 'utf8')); const out = process.argv[3];
 const font = (s) => 'data:font/woff2;base64,' + fs.readFileSync(`${root}/node_modules/@fontsource-variable/playfair-display/files/playfair-display-latin-wght-${s}.woff2`).toString('base64');
@@ -32,7 +32,8 @@ p{margin-top:34px;color:#F1E6D2;font:italic 400 50px/1.35 P}.s{margin-top:22px;c
 <div class=box><h1>${esc(spec.title)}</h1><div class=o><i></i><b></b><i></i></div>
 <p>${esc(spec.hook).replace(/\n/g, '<br>')}</p><div class=s>${esc(spec.line || 'READ AND LISTEN IN EASY ENGLISH')}</div></div>`}</body></html>`;
 (async () => {
-  const b = await chromium.launch();
+  const exe = [process.env.CHROME_PATH, '/usr/bin/google-chrome', '/usr/bin/chromium', '/usr/bin/chromium-browser'].find((p) => p && fs.existsSync(p));
+  const b = await chromium.launch(exe ? { executablePath: exe } : {});
   for (const [layer, scale] of [['bg', 2.4], ['overlay', 2]]) {
     const p = await b.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: scale });
     await p.setContent(page(layer)); await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(200);
