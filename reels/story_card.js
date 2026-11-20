@@ -16,6 +16,7 @@ const page = (layer) => `<!doctype html><html><head><style>
 *{margin:0;box-sizing:border-box}body{width:1080px;height:1920px;overflow:hidden;position:relative;font-family:P;background:${layer === 'bg' ? '#140c07' : 'transparent'}}
 .bg{position:absolute;inset:0;background:url(${pic}) ${spec.focus || '45% 30%'}/cover no-repeat}
 .sh{position:absolute;inset:0;background:linear-gradient(rgba(14,9,5,.72) 0,rgba(14,9,5,.35) 12%,rgba(14,9,5,0) 22%,rgba(14,9,5,0) 50%,rgba(14,9,5,.82) 66%,rgba(14,9,5,.9) 100%),radial-gradient(110% 70% at 50% 40%,transparent 55%,rgba(10,6,3,.5))}
+.dim{position:absolute;inset:150px 56px 250px;border-radius:6px;box-shadow:0 0 70px 2400px rgba(8,5,3,.62)}
 .b1{position:absolute;inset:150px 56px 250px;border:3px solid #C9973F;border-radius:6px;box-shadow:0 0 0 10px rgba(0,0,0,.25),0 0 30px rgba(0,0,0,.4)}
 .b2{position:absolute;inset:172px 78px 272px;border:1.2px solid rgba(233,199,122,.7);border-radius:3px}
 .c{position:absolute;width:120px;height:120px}.c1{top:134px;left:40px}.c2{top:134px;right:40px;transform:scaleX(-1)}
@@ -27,7 +28,7 @@ h1{font:italic 600 ${spec.title.length > 16 ? 92 : 112}px/1.05 P;background:line
 .o i{flex:1;height:1px;background:linear-gradient(90deg,transparent,#C9973F,transparent)}.o b{width:12px;height:12px;background:#C9973F;transform:rotate(45deg)}
 p{margin-top:34px;color:#F1E6D2;font:italic 400 50px/1.35 P}.s{margin-top:22px;color:#B9A585;font:400 28px P;letter-spacing:3px}
 </style></head><body>${layer === 'bg' ? '<div class=bg></div><div class=sh></div>' : `
-<div class=b1></div><div class=b2></div>${[1, 2, 3, 4].map((k) => `<div class="c c${k}">${corner}</div>`).join('')}
+<div class=dim></div><div class=b1></div><div class=b2></div>${[1, 2, 3, 4].map((k) => `<div class="c c${k}">${corner}</div>`).join('')}
 <div class=top>${esc(spec.author || 'ENGLISH READING ROOM').toUpperCase()}</div>
 <div class=box><h1>${esc(spec.title)}</h1><div class=o><i></i><b></b><i></i></div>
 <p>${esc(spec.hook).replace(/\n/g, '<br>')}</p><div class=s>${esc(spec.line || 'READ AND LISTEN IN EASY ENGLISH')}</div></div>`}</body></html>`;
