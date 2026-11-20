@@ -2984,6 +2984,31 @@
       }
     },
     {
+      "id": "2026-11-20-story-lesson",
+      "date": "2026-11-20",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "lesson",
+      "title": "An English lesson story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/lesson/1.jpg",
+          "title": "An English lesson",
+          "author": "DAILY READING",
+          "hook": "Ani's favourite\nlesson is English.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-20-story-lesson/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-20-cities-london",
       "date": "2026-11-20",
       "time": "15:00",
@@ -3004,6 +3029,31 @@
       }
     },
     {
+      "id": "2026-11-20-story-city-london",
+      "date": "2026-11-20",
+      "time": "15:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "city-london",
+      "title": "Ani in London story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/cities/london/1.jpg",
+          "title": "Ani in London",
+          "author": "ANI'S TRAVELS",
+          "hook": "Hello from London! Today\nI am next to Big Ben.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-20-story-city-london/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-20-classic-little-women",
       "date": "2026-11-20",
       "time": "18:00",
@@ -3021,6 +3071,31 @@
       }
     },
     {
+      "id": "2026-11-20-story-little-women",
+      "date": "2026-11-20",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "little-women",
+      "title": "Little Women story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/little-women/1.jpg",
+          "title": "Little Women",
+          "author": "A CLASSIC STORY",
+          "hook": "On Christmas Eve, the four March\nsisters sat by the fire with...",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-20-story-little-women/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-20-feelstory-lunchbox",
       "date": "2026-11-20",
       "time": "21:00",
@@ -3035,6 +3110,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-20-feelstory-lunchbox/feelstory-lunchbox.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-20-feelstory-lunchbox/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-20-story-lunchbox",
+      "date": "2026-11-20",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "lunchbox",
+      "title": "Notes in my lunchbox story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/lunchbox/1.jpg",
+          "title": "Notes in my lunchbox",
+          "author": "A SHORT STORY",
+          "hook": "Every day, in my lunchbox, there\nwas a little note from Mum.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-20-story-lunchbox/story.mp4"
       }
     },
     {
@@ -3056,6 +3156,31 @@
       }
     },
     {
+      "id": "2026-11-21-story-park",
+      "date": "2026-11-21",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "park",
+      "title": "A walk in the park story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/park/1.jpg",
+          "title": "A walk in the park",
+          "author": "DAILY READING",
+          "hook": "Every evening, Ani takes her dog,\nToto, for a walk in the park.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-story-park/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-21-classic-jack-beanstalk",
       "date": "2026-11-21",
       "time": "18:00",
@@ -3070,6 +3195,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-classic-jack-beanstalk/classic-jack-beanstalk.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-classic-jack-beanstalk/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-21-story-jack-beanstalk",
+      "date": "2026-11-21",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "jack-beanstalk",
+      "title": "Jack and the Beanstalk story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/jack-beanstalk/1.jpg",
+          "title": "Jack and the Beanstalk",
+          "author": "A CLASSIC STORY",
+          "hook": "Jack and his mother were very\npoor, so Jack took their cow to...",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-story-jack-beanstalk/story.mp4"
       }
     },
     {
@@ -3090,6 +3240,31 @@
       }
     },
     {
+      "id": "2026-11-21-story-grandma",
+      "date": "2026-11-21",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "grandma",
+      "title": "Grandma's bread story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/grandma/1.jpg",
+          "title": "Grandma's bread",
+          "author": "A SHORT STORY",
+          "hook": "Every Sunday, I baked\nbread with Grandma.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-story-grandma/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-22-reading-gata",
       "date": "2026-11-22",
       "time": "10:30",
@@ -3105,6 +3280,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-reading-gata/reading-gata.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-reading-gata/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-22-story-gata",
+      "date": "2026-11-22",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "gata",
+      "title": "Baking with Grandma story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/gata/1.jpg",
+          "title": "Baking with Grandma",
+          "author": "DAILY READING",
+          "hook": "On Sunday, Ani\nvisits her grandma.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-story-gata/story.mp4"
       }
     },
     {
@@ -3128,6 +3328,31 @@
       }
     },
     {
+      "id": "2026-11-22-story-city-paris",
+      "date": "2026-11-22",
+      "time": "15:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "city-paris",
+      "title": "Ani in Paris story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/cities/paris/1.jpg",
+          "title": "Ani in Paris",
+          "author": "ANI'S TRAVELS",
+          "hook": "Bonjour from Paris! We take a\nboat and see the Eiffel Tower.",
+          "music": "music/new/cafe-accordion.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-story-city-paris/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-22-classic-ali-baba",
       "date": "2026-11-22",
       "time": "18:00",
@@ -3142,6 +3367,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-classic-ali-baba/classic-ali-baba.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-classic-ali-baba/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-22-story-ali-baba",
+      "date": "2026-11-22",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "ali-baba",
+      "title": "Ali Baba story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/ali-baba/1.jpg",
+          "title": "Ali Baba",
+          "author": "A CLASSIC STORY",
+          "hook": "One day, Ali Baba, a poor\nwoodcutter, hid behind a rock and...",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-story-ali-baba/story.mp4"
       }
     },
     {
@@ -3162,6 +3412,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-08-feelstory-rooftop-painter/feelstory-rooftop-painter.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-08-feelstory-rooftop-painter/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-22-story-rooftop-painter",
+      "date": "2026-11-22",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "rooftop-painter",
+      "title": "The rooftop painter story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/rooftop-painter/1.jpg",
+          "title": "The rooftop painter",
+          "author": "A SHORT STORY",
+          "hook": "Every evening, Luca climbed onto\nthe roof and painted the...",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-story-rooftop-painter/story.mp4"
       }
     },
     {
@@ -3187,6 +3462,31 @@
       }
     },
     {
+      "id": "2026-11-23-story-firstsnow",
+      "date": "2026-11-23",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "firstsnow",
+      "title": "The first snow story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/firstsnow/1.jpg",
+          "title": "The first snow",
+          "author": "DAILY READING",
+          "hook": "When Ani wakes up, the\nroom is very bright.",
+          "music": "music/new/snow-celesta.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-story-firstsnow/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-23-classic-selfish-giant",
       "date": "2026-11-23",
       "time": "18:00",
@@ -3201,6 +3501,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-classic-selfish-giant/classic-selfish-giant.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-classic-selfish-giant/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-23-story-selfish-giant",
+      "date": "2026-11-23",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "selfish-giant",
+      "title": "The Selfish Giant story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/selfish-giant/1.jpg",
+          "title": "The Selfish Giant",
+          "author": "A CLASSIC STORY",
+          "hook": "Every afternoon, the children\nplayed in the Giant's beautiful...",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-story-selfish-giant/story.mp4"
       }
     },
     {
@@ -3221,6 +3546,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-10-feelstory-tiny-bakery/feelstory-tiny-bakery.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-10-feelstory-tiny-bakery/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-23-story-tiny-bakery",
+      "date": "2026-11-23",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "tiny-bakery",
+      "title": "The tiny bakery story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/tiny-bakery/1.jpg",
+          "title": "The tiny bakery",
+          "author": "A SHORT STORY",
+          "hook": "Rosa opened a tiny bakery at\nthe end of a quiet street.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-story-tiny-bakery/story.mp4"
       }
     },
     {
@@ -3246,6 +3596,31 @@
       }
     },
     {
+      "id": "2026-11-24-story-library",
+      "date": "2026-11-24",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "library",
+      "title": "A day at the library story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/library/1.jpg",
+          "title": "A day at the library",
+          "author": "DAILY READING",
+          "hook": "After school, Ani goes to\nthe library near her house.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-story-library/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-24-cities-new-york",
       "date": "2026-11-24",
       "time": "15:00",
@@ -3266,6 +3641,31 @@
       }
     },
     {
+      "id": "2026-11-24-story-city-new-york",
+      "date": "2026-11-24",
+      "time": "15:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "city-new-york",
+      "title": "Ani in New York story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/cities/new-york/1.jpg",
+          "title": "Ani in New York",
+          "author": "ANI'S TRAVELS",
+          "hook": "Hi from New York! Our ferry goes\npast the Statue of Liberty.",
+          "music": "music/new/warm-guitar.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-story-city-new-york/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-24-classic-don-quixote",
       "date": "2026-11-24",
       "time": "18:00",
@@ -3280,6 +3680,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-don-quixote/classic-don-quixote.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-don-quixote/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-24-story-don-quixote",
+      "date": "2026-11-24",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "don-quixote",
+      "title": "Don Quixote story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/don-quixote/1.jpg",
+          "title": "Don Quixote",
+          "author": "A CLASSIC STORY",
+          "hook": "Don Quixote read so many books\nabout brave knights that he...",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-story-don-quixote/story.mp4"
       }
     },
     {
@@ -3300,6 +3725,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-12-feelstory-rabbit-maps/feelstory-rabbit-maps.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-12-feelstory-rabbit-maps/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-24-story-rabbit-maps",
+      "date": "2026-11-24",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "rabbit-maps",
+      "title": "The rabbit who collected maps story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/rabbit-maps/1.jpg",
+          "title": "The rabbit who collected maps",
+          "author": "A SHORT STORY",
+          "hook": "Pip the rabbit\ncollected maps.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-story-rabbit-maps/story.mp4"
       }
     },
     {
@@ -3325,6 +3775,31 @@
       }
     },
     {
+      "id": "2026-11-25-story-letter",
+      "date": "2026-11-25",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "letter",
+      "title": "A letter to London story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/letter/1.jpg",
+          "title": "A letter to London",
+          "author": "DAILY READING",
+          "hook": "Ani has a penfriend\nin London.",
+          "music": "music/new/kalimba-steps.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-story-letter/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-25-classic-wizard-oz",
       "date": "2026-11-25",
       "time": "18:00",
@@ -3339,6 +3814,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-wizard-oz/classic-wizard-oz.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-wizard-oz/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-25-story-wizard-oz",
+      "date": "2026-11-25",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "wizard-oz",
+      "title": "The Wizard of Oz story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/wizard-oz/1.jpg",
+          "title": "The Wizard of Oz",
+          "author": "A CLASSIC STORY",
+          "hook": "Dorothy lived on\na farm in Kansas.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-story-wizard-oz/story.mp4"
       }
     },
     {
@@ -3359,6 +3859,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-feelstory-paper-boat/feelstory-paper-boat.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-feelstory-paper-boat/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-25-story-paper-boat",
+      "date": "2026-11-25",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "paper-boat",
+      "title": "The paper boat story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/paper-boat/1.jpg",
+          "title": "The paper boat",
+          "author": "A SHORT STORY",
+          "hook": "On a rainy morning,\nNina made a paper boat.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-story-paper-boat/story.mp4"
       }
     },
     {
@@ -3384,6 +3909,31 @@
       }
     },
     {
+      "id": "2026-11-26-story-dilijan",
+      "date": "2026-11-26",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "dilijan",
+      "title": "A trip to Dilijan story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/dilijan/1.jpg",
+          "title": "A trip to Dilijan",
+          "author": "DAILY READING",
+          "hook": "On Saturday morning, Ani and her\nfamily take the bus to Dilijan.",
+          "music": "music/new/harp-dream.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-story-dilijan/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-26-cities-venice",
       "date": "2026-11-26",
       "time": "15:00",
@@ -3404,6 +3954,31 @@
       }
     },
     {
+      "id": "2026-11-26-story-city-venice",
+      "date": "2026-11-26",
+      "time": "15:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "city-venice",
+      "title": "Ani in Venice story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/cities/venice/1.jpg",
+          "title": "Ani in Venice",
+          "author": "ANI'S TRAVELS",
+          "hook": "Ciao from Venice! Here the\nstreets are made of water.",
+          "music": "music/new/nylon-garden.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-story-city-venice/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-26-classic-emperor-clothes",
       "date": "2026-11-26",
       "time": "18:00",
@@ -3418,6 +3993,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-emperor-clothes/classic-emperor-clothes.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-emperor-clothes/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-26-story-emperor-clothes",
+      "date": "2026-11-26",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "emperor-clothes",
+      "title": "The Emperor's New Clothes story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/emperor-clothes/1.jpg",
+          "title": "The Emperor's New Clothes",
+          "author": "A CLASSIC STORY",
+          "hook": "There was once an Emperor who\nloved new clothes more than...",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-story-emperor-clothes/story.mp4"
       }
     },
     {
@@ -3438,6 +4038,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-16-feelstory-red-balloon/feelstory-red-balloon.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-16-feelstory-red-balloon/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-26-story-red-balloon",
+      "date": "2026-11-26",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "red-balloon",
+      "title": "My red balloon story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/red-balloon/1.jpg",
+          "title": "My red balloon",
+          "author": "A SHORT STORY",
+          "hook": "On my birthday, I\ngot a red balloon.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-story-red-balloon/story.mp4"
       }
     },
     {
@@ -3463,6 +4088,31 @@
       }
     },
     {
+      "id": "2026-11-27-story-plant",
+      "date": "2026-11-27",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "plant",
+      "title": "Ani's little plant story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/plant/1.jpg",
+          "title": "Ani's little plant",
+          "author": "DAILY READING",
+          "hook": "Ani's teacher gives every child\na small pot with a seed in it.",
+          "music": "music/new/marimba-sunrise.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-27-story-plant/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-27-classic-christmas-carol",
       "date": "2026-11-27",
       "time": "18:00",
@@ -3480,6 +4130,31 @@
       }
     },
     {
+      "id": "2026-11-27-story-christmas-carol",
+      "date": "2026-11-27",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "christmas-carol",
+      "title": "A Christmas Carol story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/christmas-carol/1.jpg",
+          "title": "A Christmas Carol",
+          "author": "A CLASSIC STORY",
+          "hook": "Scrooge was a rich old man,\nbut he loved only money.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-27-story-christmas-carol/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-18-feelstory-teacher",
       "date": "2026-11-27",
       "time": "21:00",
@@ -3494,6 +4169,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-18-feelstory-teacher/feelstory-teacher.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-18-feelstory-teacher/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-27-story-teacher",
+      "date": "2026-11-27",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "teacher",
+      "title": "The teacher who stayed story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/teacher/1.jpg",
+          "title": "The teacher who stayed",
+          "author": "A SHORT STORY",
+          "hook": "Everyone went\nhome after class.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-27-story-teacher/story.mp4"
       }
     },
     {
@@ -3519,6 +4219,31 @@
       }
     },
     {
+      "id": "2026-11-28-story-concert",
+      "date": "2026-11-28",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "concert",
+      "title": "The school concert story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/concert/1.jpg",
+          "title": "The school concert",
+          "author": "DAILY READING",
+          "hook": "Tonight is the school concert,\nand Ani is going to play the...",
+          "music": "music/new/book-waltz.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-28-story-concert/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-28-cities-tokyo",
       "date": "2026-11-28",
       "time": "15:00",
@@ -3536,6 +4261,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-28-cities-tokyo/feelstory-city-tokyo.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-28-cities-tokyo/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-28-story-city-tokyo",
+      "date": "2026-11-28",
+      "time": "15:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "city-tokyo",
+      "title": "Ani in Tokyo story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/cities/tokyo/1.jpg",
+          "title": "Ani in Tokyo",
+          "author": "ANI'S TRAVELS",
+          "hook": "Hello from\nJapan!",
+          "music": "music/new/harp-dream.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-28-story-city-tokyo/story.mp4"
       }
     },
     {
@@ -3574,6 +4324,32 @@
       }
     },
     {
+      "id": "2026-11-28-story-alice",
+      "date": "2026-11-28",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "alice",
+      "title": "Alice in Wonderland story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/alice/1.jpg",
+          "title": "Alice in Wonderland",
+          "author": "A CLASSIC STORY",
+          "hook": "Alice was sitting by the\nriver with her sister.",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-28-story-alice/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-19-feelstory-old-coat",
       "date": "2026-11-28",
       "time": "21:00",
@@ -3588,6 +4364,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-19-feelstory-old-coat/feelstory-old-coat.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-19-feelstory-old-coat/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-28-story-old-coat",
+      "date": "2026-11-28",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "old-coat",
+      "title": "Dad's old coat story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/old-coat/1.jpg",
+          "title": "Dad's old coat",
+          "author": "A SHORT STORY",
+          "hook": "Every winter, Dad wore\nthe same old coat.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-28-story-old-coat/story.mp4"
       }
     },
     {
@@ -3610,6 +4411,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-29-reading-neighbour/reading-neighbour.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-29-reading-neighbour/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-29-story-neighbour",
+      "date": "2026-11-29",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "neighbour",
+      "title": "A kind neighbour story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/neighbour/1.jpg",
+          "title": "A kind neighbour",
+          "author": "DAILY READING",
+          "hook": "Mrs Hasmik lives\nnext door to Ani.",
+          "music": "music/new/evening-strings.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-29-story-neighbour/story.mp4"
       }
     },
     {
@@ -3648,6 +4474,32 @@
       }
     },
     {
+      "id": "2026-11-29-story-sherlock",
+      "date": "2026-11-29",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "sherlock",
+      "title": "Sherlock Holmes story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/sherlock/1.jpg",
+          "title": "Sherlock Holmes",
+          "author": "A CLASSIC STORY",
+          "hook": "Dr Watson came back to\nrainy London after the war.",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-29-story-sherlock/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-30-cities-prague",
       "date": "2026-11-30",
       "time": "15:00",
@@ -3665,6 +4517,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-30-cities-prague/feelstory-city-prague.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-30-cities-prague/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-30-story-city-prague",
+      "date": "2026-11-30",
+      "time": "15:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "city-prague",
+      "title": "Ani in Prague story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/cities/prague/1.jpg",
+          "title": "Ani in Prague",
+          "author": "ANI'S TRAVELS",
+          "hook": "Hello from\nPrague!",
+          "music": "music/new/snow-celesta.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-30-story-city-prague/story.mp4"
       }
     },
     {
@@ -3703,6 +4580,32 @@
       }
     },
     {
+      "id": "2026-11-30-story-treasure-island",
+      "date": "2026-11-30",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "treasure-island",
+      "title": "Treasure Island story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/treasure-island/1.jpg",
+          "title": "Treasure Island",
+          "author": "A CLASSIC STORY",
+          "hook": "In an old sailor's sea chest,\nyoung Jim found a map of an...",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-30-story-treasure-island/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-26-classic-carousel-happy-prince",
       "date": "2026-12-01",
       "time": "18:00",
@@ -3738,6 +4641,32 @@
       }
     },
     {
+      "id": "2026-12-01-story-happy-prince",
+      "date": "2026-12-01",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "happy-prince",
+      "title": "The Happy Prince story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/happy-prince/1.jpg",
+          "title": "The Happy Prince",
+          "author": "A CLASSIC STORY",
+          "hook": "High above the city stood the\nstatue of the Happy Prince...",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-01-story-happy-prince/story.mp4"
+      }
+    },
+    {
       "id": "2026-12-02-cities-dubai",
       "date": "2026-12-02",
       "time": "15:00",
@@ -3755,6 +4684,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-02-cities-dubai/feelstory-city-dubai.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-02-cities-dubai/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-02-story-city-dubai",
+      "date": "2026-12-02",
+      "time": "15:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "city-dubai",
+      "title": "Ani in Dubai story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/cities/dubai/1.jpg",
+          "title": "Ani in Dubai",
+          "author": "ANI'S TRAVELS",
+          "hook": "Hello from\nDubai!",
+          "music": "music/new/evening-strings.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-02-story-city-dubai/story.mp4"
       }
     },
     {
@@ -3865,6 +4819,32 @@
       }
     },
     {
+      "id": "2026-12-04-story-eighty-days",
+      "date": "2026-12-04",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "eighty-days",
+      "title": "Around the World in 80 Days story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/eighty-days/1.jpg",
+          "title": "Around the World in 80 Days",
+          "author": "A CLASSIC STORY",
+          "hook": "In a London club, calm Mr Fogg made\na bet: 'I can travel around...",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-04-story-eighty-days/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-29-classic-carousel-little-women",
       "date": "2026-12-05",
       "time": "18:00",
@@ -3897,6 +4877,32 @@
           "Illustration 6: In the evening, Marmee read them a letter from their father, and everyone felt warm and happy.",
           "New words: sister, piano, letter. Famous line: Christmas won't be Christmas without any presents."
         ]
+      }
+    },
+    {
+      "id": "2026-12-05-story-little-women",
+      "date": "2026-12-05",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "little-women",
+      "title": "Little Women story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/little-women/1.jpg",
+          "title": "Little Women",
+          "author": "A CLASSIC STORY",
+          "hook": "On Christmas Eve, the four March\nsisters sat by the fire with...",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-05-story-little-women/story.mp4"
       }
     },
     {
@@ -3935,6 +4941,32 @@
       }
     },
     {
+      "id": "2026-12-06-story-jack-beanstalk",
+      "date": "2026-12-06",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "jack-beanstalk",
+      "title": "Jack and the Beanstalk story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/jack-beanstalk/1.jpg",
+          "title": "Jack and the Beanstalk",
+          "author": "A CLASSIC STORY",
+          "hook": "Jack and his mother were very\npoor, so Jack took their cow to...",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-06-story-jack-beanstalk/story.mp4"
+      }
+    },
+    {
       "id": "2026-12-01-classic-carousel-ali-baba",
       "date": "2026-12-07",
       "time": "18:00",
@@ -3967,6 +4999,32 @@
           "Illustration 6: Morgiana saved the family, and everyone celebrated her cleverness at a big feast.",
           "New words: cave, thief, jewel. Famous line: Open, Sesame!"
         ]
+      }
+    },
+    {
+      "id": "2026-12-07-story-ali-baba",
+      "date": "2026-12-07",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "ali-baba",
+      "title": "Ali Baba story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/ali-baba/1.jpg",
+          "title": "Ali Baba",
+          "author": "A CLASSIC STORY",
+          "hook": "One day, Ali Baba, a poor\nwoodcutter, hid behind a rock and...",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-07-story-ali-baba/story.mp4"
       }
     },
     {
@@ -4005,6 +5063,32 @@
       }
     },
     {
+      "id": "2026-12-08-story-selfish-giant",
+      "date": "2026-12-08",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "selfish-giant",
+      "title": "The Selfish Giant story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/selfish-giant/1.jpg",
+          "title": "The Selfish Giant",
+          "author": "A CLASSIC STORY",
+          "hook": "Every afternoon, the children\nplayed in the Giant's beautiful...",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-08-story-selfish-giant/story.mp4"
+      }
+    },
+    {
       "id": "2026-12-03-classic-carousel-don-quixote",
       "date": "2026-12-09",
       "time": "18:00",
@@ -4037,6 +5121,32 @@
           "Illustration 6: In the evening, by the fire, Sancho laughed, and Don Quixote smiled. He was still a proud knight.",
           "New words: knight, armour, windmill. Famous line: What we see there are not giants but windmills."
         ]
+      }
+    },
+    {
+      "id": "2026-12-09-story-don-quixote",
+      "date": "2026-12-09",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "don-quixote",
+      "title": "Don Quixote story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/don-quixote/1.jpg",
+          "title": "Don Quixote",
+          "author": "A CLASSIC STORY",
+          "hook": "Don Quixote read so many books\nabout brave knights that he...",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-09-story-don-quixote/story.mp4"
       }
     },
     {
@@ -4075,6 +5185,32 @@
       }
     },
     {
+      "id": "2026-12-10-story-wizard-oz",
+      "date": "2026-12-10",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "wizard-oz",
+      "title": "The Wizard of Oz story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/wizard-oz/1.jpg",
+          "title": "The Wizard of Oz",
+          "author": "A CLASSIC STORY",
+          "hook": "Dorothy lived on\na farm in Kansas.",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-10-story-wizard-oz/story.mp4"
+      }
+    },
+    {
       "id": "2026-12-05-classic-carousel-emperor-clothes",
       "date": "2026-12-11",
       "time": "18:00",
@@ -4110,6 +5246,32 @@
       }
     },
     {
+      "id": "2026-12-11-story-emperor-clothes",
+      "date": "2026-12-11",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "emperor-clothes",
+      "title": "The Emperor's New Clothes story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/emperor-clothes/1.jpg",
+          "title": "The Emperor's New Clothes",
+          "author": "A CLASSIC STORY",
+          "hook": "There was once an Emperor who\nloved new clothes more than...",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-11-story-emperor-clothes/story.mp4"
+      }
+    },
+    {
       "id": "2026-12-06-classic-carousel-christmas-carol",
       "date": "2026-12-12",
       "time": "18:00",
@@ -4142,6 +5304,32 @@
           "Illustration 6: On Christmas morning, Scrooge woke up a new man. He laughed and wished everyone a merry Christmas!",
           "New words: ghost, spirit, future. Famous line: God bless us, every one!"
         ]
+      }
+    },
+    {
+      "id": "2026-12-12-story-christmas-carol",
+      "date": "2026-12-12",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "christmas-carol",
+      "title": "A Christmas Carol story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/christmas-carol/1.jpg",
+          "title": "A Christmas Carol",
+          "author": "A CLASSIC STORY",
+          "hook": "Scrooge was a rich old man,\nbut he loved only money.",
+          "music": "music/new/piano-glow.m4a",
+          "line": "SWIPE AND READ IN EASY ENGLISH"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-12-story-christmas-carol/story.mp4"
       }
     },
     {
@@ -4199,6 +5387,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-24-feelstory-xmas-train/feelstory-xmas-train.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-24-feelstory-xmas-train/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-24-story-xmas-train",
+      "date": "2026-12-24",
+      "time": "20:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "xmas-train",
+      "title": "The Christmas train story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/xmas-train/1.jpg",
+          "title": "The Christmas train",
+          "author": "A SHORT STORY",
+          "hook": "On Christmas Eve, Leo and Mia\nsaw a red train at the snowy...",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-24-story-xmas-train/story.mp4"
       }
     }
   ]
