@@ -3241,45 +3241,48 @@
       "ig_media_id": "17885253357629544"
     },
     {
-      "id": "2026-11-21-classic-jack-beanstalk",
+      "id": "2026-11-21-motion-lady",
       "date": "2026-11-21",
       "time": "18:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
-      "kind": "storyvideo",
-      "content_id": "jack-beanstalk",
-      "title": "Classic Jack and the Beanstalk",
-      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Ջեքը և լոբու ցողունը\nClassics made easy · Jack and the Beanstalk (English fairy tale, 1807) · A2\n\nJack and his mother were very poor, so Jack took their cow to sell. But he swapped her for five magic beans! His mother was very angry, and she threw the beans out of the window. The next morning, a giant beanstalk stood in the garden, up to the clouds! Jack climbed higher and higher, above the fields and the clouds. At the top, in a giant's castle, he found a hen that laid golden eggs. Jack ran home with the hen and cut down the beanstalk. Now they were never poor again!\n\nԹարգմանություն՝\nՋեքն ու մայրը շատ աղքատ էին, ուստի Ջեքը կովը տարավ վաճառելու։ Բայց նա այն փոխանակեց հինգ կախարդական լոբու հետ։ Մայրը շատ բարկացավ և լոբիները դուրս շպրտեց պատուհանից։ Հաջորդ առավոտ այգում մի հսկա լոբու ցողուն էր կանգնած՝ մինչև ամպերը։ Ջեքը բարձրանում էր ավելի ու ավելի վեր՝ դաշտերից և ամպերից վեր։ Վերևում, հսկայի դղյակում, նա գտավ մի հավ, որ ոսկե ձու էր ածում։ Ջեքը հավով վազեց տուն և կտրեց ցողունը։ Այդ օրվանից նրանք այլևս երբեք աղքատ չէին։\n\n«Fee-fi-fo-fum!» — English fairy tale\n«Ֆի՜-ֆա՜-ֆո՜-ֆում»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "kind": "motion",
+      "content_id": "lady",
+      "title": "Lady",
+      "caption": "Lady · Read and listen · A2\n\nLady was a big black dog.\nShe lived in our yard.\nAll the children loved her.\nShe helped everyone.\nEvery day she walked old Mrs Anahit home.\nOne snowy evening, little Aram did not come home.\nEveryone was very afraid.\nLady put her nose in the snow.\nThen she ran out of the gate.\nShe found Aram under a big tree.\nShe kept him warm all night.\nNow Lady is everybody's dog.\n\nDo you have a dog? What is its name? Tell us in English!\nSave this reel and read it again tomorrow.\nMore stories with sound: link in bio.\n\n#learnenglish #englishstories #dogstory #englishreading #easyenglish",
       "review_status": "staged",
+      "render": {
+        "motion": "lady"
+      },
       "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-classic-jack-beanstalk/classic-jack-beanstalk.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-classic-jack-beanstalk/cover.jpg"
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-motion-lady/motion-lady.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-motion-lady/cover.jpg"
       }
     },
     {
-      "id": "2026-11-21-story-jack-beanstalk",
+      "id": "2026-11-21-story-lady",
       "date": "2026-11-21",
       "time": "18:30",
       "timezone": "Asia/Yerevan",
       "type": "STORY",
       "format": "STORIES",
       "kind": "story-video",
-      "content_id": "jack-beanstalk",
-      "title": "Jack and the Beanstalk story",
+      "content_id": "lady",
+      "title": "Lady story",
       "caption": "",
       "review_status": "staged",
       "render": {
         "story_card": {
-          "picture": "assets/storyvideo/jack-beanstalk/1.jpg",
-          "title": "Jack and the Beanstalk",
-          "author": "A CLASSIC STORY",
-          "hook": "Jack and his mother were very\npoor, so Jack took their cow to...",
-          "music": "music/new/piano-glow.m4a"
+          "picture": "motion:lady:5",
+          "title": "Lady",
+          "author": "A true story",
+          "hook": "One snowy night, a little boy\ndid not come home...",
+          "music": "music/new/snow-celesta.m4a"
         }
       },
       "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-story-jack-beanstalk/story.mp4"
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-story-lady/story.mp4"
       }
     },
     {
@@ -5679,6 +5682,48 @@
       },
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-story-skating/story.mp4"
+      }
+    },
+    {
+      "id": "2026-12-14-classic-jack-beanstalk",
+      "date": "2026-12-14",
+      "time": "18:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "storyvideo",
+      "content_id": "jack-beanstalk",
+      "title": "Classic Jack and the Beanstalk",
+      "caption": "Դասական գրականություն՝ պարզ անգլերենով · Ջեքը և լոբու ցողունը\nClassics made easy · Jack and the Beanstalk (English fairy tale, 1807) · A2\n\nJack and his mother were very poor, so Jack took their cow to sell. But he swapped her for five magic beans! His mother was very angry, and she threw the beans out of the window. The next morning, a giant beanstalk stood in the garden, up to the clouds! Jack climbed higher and higher, above the fields and the clouds. At the top, in a giant's castle, he found a hen that laid golden eggs. Jack ran home with the hen and cut down the beanstalk. Now they were never poor again!\n\nԹարգմանություն՝\nՋեքն ու մայրը շատ աղքատ էին, ուստի Ջեքը կովը տարավ վաճառելու։ Բայց նա այն փոխանակեց հինգ կախարդական լոբու հետ։ Մայրը շատ բարկացավ և լոբիները դուրս շպրտեց պատուհանից։ Հաջորդ առավոտ այգում մի հսկա լոբու ցողուն էր կանգնած՝ մինչև ամպերը։ Ջեքը բարձրանում էր ավելի ու ավելի վեր՝ դաշտերից և ամպերից վեր։ Վերևում, հսկայի դղյակում, նա գտավ մի հավ, որ ոսկե ձու էր ածում։ Ջեքը հավով վազեց տուն և կտրեց ցողունը։ Այդ օրվանից նրանք այլևս երբեք աղքատ չէին։\n\n«Fee-fi-fo-fum!» — English fairy tale\n«Ֆի՜-ֆա՜-ֆո՜-ֆում»\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր և ուղարկի՛ր ընկերոջդ, ով սիրում է գրքեր։\n\nԿարդացե՞լ ես այս գիրքը։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-classic-jack-beanstalk/classic-jack-beanstalk.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-classic-jack-beanstalk/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-14-story-jack-beanstalk",
+      "date": "2026-12-14",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "jack-beanstalk",
+      "title": "Jack and the Beanstalk story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/jack-beanstalk/1.jpg",
+          "title": "Jack and the Beanstalk",
+          "author": "A CLASSIC STORY",
+          "hook": "Jack and his mother were very\npoor, so Jack took their cow to...",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-story-jack-beanstalk/story.mp4"
       }
     },
     {
