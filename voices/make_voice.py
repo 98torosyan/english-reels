@@ -50,6 +50,34 @@ def synth_kokoro(text, voice, rate, mp3):
 _CHATTER = None
 
 
+_EAR = None
+
+
+def best_take(text, make, sr, tries=4):
+    """The storyteller voice is expressive and sometimes says a word wrongly ("laughs" -> "loves"): every take is
+    listened to (faster-whisper) and the clearest one is kept; a perfect take ends the search."""
+    global _EAR
+    import re, numpy as np
+    try:
+        from faster_whisper import WhisperModel
+        if _EAR is None: _EAR = WhisperModel("small.en", device="cpu", compute_type="int8")
+    except Exception:
+        return make()
+    norm = lambda x: re.findall(r"[a-z0-9]+", x.lower().replace("'", ""))
+    want = norm(text); best = (-1, None)
+    for k in range(tries):
+        w = make()
+        a = np.interp(np.arange(0, len(w), sr / 16000), np.arange(len(w)), w).astype(np.float32)
+        heard = " ".join(seg.text for seg in _EAR.transcribe(a, language="en", beam_size=5, vad_filter=False)[0])
+        got = norm(heard)
+        import difflib
+        sc = difflib.SequenceMatcher(None, want, got).ratio()
+        if sc > best[0]: best = (sc, w)
+        if sc >= 0.999: break
+        print(f"    take {k + 1}: {sc:.2f} heard «{heard.strip()}»", flush=True)
+    return best[1]
+
+
 def synth_chatterbox(text, voice, rate, mp3):
     """Chatterbox storyteller voice (Resemble AI, MIT), voice="chatterbox:builtin". It gives no word timings, so the
     spoken span is found from the sound itself and the words are spread over it (the reels use the span)."""
@@ -68,7 +96,7 @@ def synth_chatterbox(text, voice, rate, mp3):
                             "--rate=-6%", "--text", "Good morning. Today I will read you a short and happy story about a little girl and her family.",
                             "--write-media", str(ref)], check=True)
         kw = dict(audio_prompt_path=str(ref), exaggeration=0.5, cfg_weight=0.5)
-    w = _CHATTER.generate(text, **kw).squeeze().cpu().numpy(); sr = _CHATTER.sr
+    sr = _CHATTER.sr; w = best_take(text, lambda: _CHATTER.generate(text, **kw).squeeze().cpu().numpy(), sr)
     env = np.convolve(np.abs(w), np.ones(int(sr * .02)) / int(sr * .02), "same"); on = np.where(env > env.max() * 0.04)[0]
     a, b = max(0, on[0] - int(sr * .05)), min(len(w), on[-1] + int(sr * .12)); w = w[a:b]
     pad = int(sr * .05); w = np.concatenate([np.zeros(pad), w, np.zeros(pad)])
