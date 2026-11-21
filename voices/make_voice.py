@@ -9,6 +9,7 @@ import asyncio, json, re, subprocess
 from pathlib import Path
 import edge_tts
 
+ROOT = Path(__file__).resolve().parents[1]
 LESSONS = Path(__file__).resolve().parents[1] / "assets" / "lessons"
 CLEAN = re.compile(r"[^\w']+", re.UNICODE)
 KEEP = {"zoo", "saturday-market", "my-garden"}  # original site lessons
@@ -57,7 +58,17 @@ def synth_chatterbox(text, voice, rate, mp3):
     if _CHATTER is None:
         from chatterbox.tts import ChatterboxTTS
         torch.set_num_threads(4); _CHATTER = ChatterboxTTS.from_pretrained(device="cpu")
-    w = _CHATTER.generate(text, exaggeration=0.55, cfg_weight=0.45).squeeze().cpu().numpy(); sr = _CHATTER.sr
+    kw = dict(exaggeration=0.55, cfg_weight=0.45)
+    name = voice.split(":", 1)[1]
+    if name != "builtin":   # "chatterbox:sonia" = the storyteller's delivery in the clear voice of en-GB-SoniaNeural
+        ref = ROOT / "assets" / "voice-ref" / f"{name}.mp3"
+        if not ref.exists():
+            ref.parent.mkdir(parents=True, exist_ok=True)
+            subprocess.run(["edge-tts", "--voice", {"sonia": "en-GB-SoniaNeural", "libby": "en-GB-LibbyNeural", "ryan": "en-GB-RyanNeural"}[name],
+                            "--rate=-6%", "--text", "Good morning. Today I will read you a short and happy story about a little girl and her family.",
+                            "--write-media", str(ref)], check=True)
+        kw = dict(audio_prompt_path=str(ref), exaggeration=0.5, cfg_weight=0.5)
+    w = _CHATTER.generate(text, **kw).squeeze().cpu().numpy(); sr = _CHATTER.sr
     env = np.convolve(np.abs(w), np.ones(int(sr * .02)) / int(sr * .02), "same"); on = np.where(env > env.max() * 0.04)[0]
     a, b = max(0, on[0] - int(sr * .05)), min(len(w), on[-1] + int(sr * .12)); w = w[a:b]
     pad = int(sr * .05); w = np.concatenate([np.zeros(pad), w, np.zeros(pad)])
