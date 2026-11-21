@@ -25,6 +25,9 @@ def render(item, media):
         if (OUT / f"feelstory-{i}-cover.jpg").exists(): shutil.copy2(OUT / f"feelstory-{i}-cover.jpg", folder / "cover.jpg")
     elif "reading" in spec:
         i = spec["reading"]; env = {**os.environ}
+        if spec.get("living"):   # living pictures: soft depth movement made from the stills (tools/living_pictures.py)
+            live = ROOT / ".render-work" / "live" / i; shutil.rmtree(live, ignore_errors=True)
+            subprocess.run(["python", str(ROOT / "tools" / "living_pictures.py"), i, str(live)], cwd=ROOT, check=True); env["LIVE"] = "1"
         if spec.get("music"): env["MUSIC_TRACK"] = str(ROOT / "music" / spec["music"])
         subprocess.run(["node", "reels/render_reading.js", i], cwd=ROOT, check=True, stdout=subprocess.DEVNULL, env=env)
         shutil.copy2(OUT / f"reading-{i}.mp4", folder / f"reading-{i}.mp4")

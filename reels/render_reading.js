@@ -66,6 +66,11 @@ function voiceTrack(T, out) {
 async function renderReading(browser, baseUrl, list0) {
   const list = withColor(list0);
   const T = timeline(list);
+  // living pictures (tools/living_pictures.py): frames served from .render-work/live/<id>, one loop per picture
+  const liveDir = path.join(utils.ROOT, '.render-work', 'live', list.id);
+  if (process.env.LIVE === '1' && fs.existsSync(path.join(liveDir, 'live.json'))) {
+    list.live = { base: `${baseUrl}/.render-work/live/${list.id}`, ...JSON.parse(fs.readFileSync(path.join(liveDir, 'live.json'), 'utf8')) };
+  }
   const name = `reading-${list.id}`;
   const output = utils.OUTPUT;
   const frames = path.join(output, `.frames-${name}`);

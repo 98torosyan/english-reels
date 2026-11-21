@@ -3378,6 +3378,30 @@
       }
     },
     {
+      "id": "2026-11-22-reading-gata-live",
+      "date": "2026-11-22",
+      "time": "10:31",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "reading",
+      "content_id": "gata",
+      "title": "Daily reading 10",
+      "caption": "Կարդանք միասին · Daily reading\nBaking with Grandma · Տատիկի հետ թխում ենք (A2)\n\nOn Sunday, Ani visits her grandma. Today they are making gata, a sweet Armenian pastry. Grandma mixes the flour, butter and sugar, and Ani rolls out the dough. There is flour on the table, on her hands and even on her nose! Grandma laughs. Soon the kitchen smells wonderful. When the gata is ready, they drink tea and eat it together. 'Your gata is the best,' says Ani.\n\nQuestion: What do you like to bake with your family? Answer in English in the comments!\n\nԹարգմանություն՝\nԿիրակի օրը Անին գնում է տատիկի մոտ։ Այսօր նրանք գաթա են թխում՝ քաղցր հայկական թխվածք։ Տատիկը խառնում է ալյուրը, կարագն ու շաքարը, իսկ Անին գրտնակում է խմորը։ Ալյուր կա սեղանին, ձեռքերին և նույնիսկ քթին։ Տատիկը ծիծաղում է։ Շուտով խոհանոցում հիանալի բույր է տարածվում։ Երբ գաթան պատրաստ է, նրանք թեյ են խմում և միասին ուտում։ «Քո գաթան ամենալավն է»,— ասում է Անին։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nՈ՞ր բառն էր քեզ համար նոր։ Գրի՛ր մեկնաբանություններում։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishReading #Yerevan",
+      "review_status": "draft",
+      "thumb_offset": 1400,
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-reading-gata-live/reading-gata.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-reading-gata-live/cover.jpg"
+      },
+      "hold": "living pictures trial: owner compares first",
+      "render": {
+        "reading": "gata",
+        "music": "new/piano-glow.m4a",
+        "living": true
+      }
+    },
+    {
       "id": "2026-11-22-story-gata",
       "date": "2026-11-22",
       "time": "11:00",

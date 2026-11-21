@@ -31,6 +31,7 @@ function startStaticServer() {
         '.woff2': 'font/woff2',
         '.js': 'text/javascript; charset=utf-8',
         '.json': 'application/json; charset=utf-8',
+        '.jpg': 'image/jpeg',
       }[ext] || 'application/octet-stream';
       response.writeHead(200, { 'Content-Type': contentType, 'Cache-Control': 'no-store' });
       response.end(content);

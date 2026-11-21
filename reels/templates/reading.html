@@ -78,6 +78,12 @@
    const s0=at[k], s1=k+1<at.length?at[k+1]+0.8:T.total, p=clamp((t-s0)/Math.max(1,s1-s0));
    im.style.opacity=k===0?1:ease(clamp((t-s0)/0.8));
    im.style.transform=`scale(${1.05+0.07*p}) translateX(${(k%2?-1:1)*14*(p-.5)}px)`;});
+  if(D.live){ // living pictures: show the frame of each visible picture's loop for this moment
+   const f=String(Math.floor(t*D.live.fps)%D.live.frames).padStart(4,'0'), wait=[];
+   imgs.forEach((im,k)=>{ if(k>0&&parseFloat(im.style.opacity||0)<=0) return;
+    const src=`${D.live.base}/p${k+1}/${f}.jpg`; if(im.src!==src){im.src=src; wait.push(im.decode().catch(()=>{}));}});
+   return Promise.all(wait);
+  }
   const a=ease(clamp(t/.5)); eyebrow.style.opacity=a; title.style.opacity=ease(clamp((t-.15)/.6)); title.style.transform=`translateY(${(1-ease(clamp((t-.15)/.6)))*40}px)`;
   story.style.opacity=ease(clamp((t-.5)/.6));
   story.querySelectorAll('span').forEach(s=>{const w=T.words[+s.dataset.j]; const now=t>=w[0]&&t<w[1]; const done=t>=w[1];

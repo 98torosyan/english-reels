@@ -42,6 +42,9 @@ jobs:
         with:
           python-version: "3.12"
       - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null && npm ci --no-audit --no-fund && pip install -q pillow numpy opencv-python-headless
+      - name: Depth model for living pictures (only when a reading asks for them)
+        run: |
+          if grep -q '"living": true' queue.json; then pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q transformers; fi
       - name: Every new reel and carousel gets its Story half an hour later
         run: |
           python publish/plan_story_cards.py
