@@ -1,1 +1,1 @@
-{"text": "But their love was the best gift of all.", "words": [[0.05, 0.23], [0.23, 0.53], [0.53, 0.77], [0.77, 0.95], [0.95, 1.13], [1.13, 1.37], [1.37, 1.61], [1.61, 1.73], [1.73, 1.97]], "tag": "chatterbox:builtin"}
+{"text": "But their love was the best gift of all.", "words": [[0.12, 0.22], [0.26, 0.38], [0.46, 0.68], [0.7, 0.8], [0.84, 0.92], [0.94, 1.2], [1.26, 1.46], [1.5, 1.56], [1.66, 1.97]], "tag": "chatterbox:builtin", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

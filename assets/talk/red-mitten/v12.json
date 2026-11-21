@@ -1,1 +1,1 @@
-{"text": "Now they each wear one red mitten.", "words": [[0.05, 0.28], [0.28, 0.58], [0.58, 0.88], [0.88, 1.18], [1.18, 1.41], [1.41, 1.64], [1.64, 2.17]], "tag": "chatterbox:builtin"}
+{"text": "Now they each wear one red mitten.", "words": [[0.2, 0.4], [0.46, 0.58], [0.68, 0.84], [0.88, 1.06], [1.24, 1.4], [1.46, 1.64], [1.72, 2.149]], "tag": "chatterbox:builtin", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

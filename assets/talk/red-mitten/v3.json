@@ -1,1 +1,1 @@
-{"text": "Leo found it on the ice.", "words": [[0.05, 0.25], [0.25, 0.59], [0.59, 0.73], [0.73, 0.87], [0.87, 1.07], [1.07, 1.34]], "tag": "chatterbox:builtin"}
+{"text": "Leo found it on the ice.", "words": [[0.16, 0.34], [0.42, 0.62], [0.64, 0.7], [0.72, 0.76], [0.78, 0.84], [1.02, 1.33]], "tag": "chatterbox:builtin", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

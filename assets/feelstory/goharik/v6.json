@@ -1,0 +1,1 @@
+{"text": "'My English is not good,' she says.", "words": [[0.12, 0.42], [0.52, 0.96], [1.02, 1.12], [1.2, 1.4], [1.5, 2.0], [2.16, 2.26], [2.38, 2.893]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

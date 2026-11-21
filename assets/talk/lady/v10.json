@@ -1,1 +1,1 @@
-{"text": "She found Aram under a big tree.", "words": [[0.05, 0.27], [0.27, 0.64], [0.64, 0.93], [0.93, 1.3], [1.3, 1.37], [1.37, 1.59], [1.59, 1.96]], "tag": "chatterbox:builtin"}
+{"text": "She found Aram under a big tree.", "words": [[0.16, 0.24], [0.3, 0.5], [0.6, 0.86], [0.98, 1.16], [1.22, 1.25], [1.28, 1.44], [1.52, 1.936]], "tag": "chatterbox:builtin", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

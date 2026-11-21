@@ -1,1 +1,1 @@
-{"text": "But the girl was gone.", "words": [[0.05, 0.24], [0.24, 0.43], [0.43, 0.68], [0.68, 0.87], [0.87, 1.18]], "tag": "chatterbox:builtin"}
+{"text": "But the girl was gone.", "words": [[0.12, 0.22], [0.24, 0.3], [0.32, 0.52], [0.58, 0.68], [0.74, 1.196]], "tag": "chatterbox:builtin", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

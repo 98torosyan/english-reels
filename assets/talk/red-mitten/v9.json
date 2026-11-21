@@ -1,1 +1,1 @@
-{"text": "She looked for her mitten. He was never there.", "words": [[0.05, 0.23], [0.23, 0.58], [0.58, 0.76], [0.76, 0.94], [0.94, 1.36], [1.36, 1.48], [1.48, 1.65], [1.65, 1.95], [1.95, 2.31]], "tag": "chatterbox:builtin"}
+{"text": "She looked for her mitten. He was never there.", "words": [[0.18, 0.26], [0.32, 0.48], [0.5, 0.6], [0.64, 0.72], [0.78, 1.02], [1.112, 1.162], [1.112, 1.162], [1.112, 1.162], [1.112, 1.162]], "tag": "chatterbox:builtin", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

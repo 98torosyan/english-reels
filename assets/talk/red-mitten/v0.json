@@ -1,1 +1,1 @@
-{"text": "The Red Mitten.", "words": [[0.05, 0.25], [0.25, 0.45], [0.45, 0.92]], "tag": "chatterbox:builtin"}
+{"text": "The Red Mitten.", "words": [[0.12, 0.2], [0.26, 0.44], [0.52, 0.931]], "tag": "chatterbox:builtin", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
