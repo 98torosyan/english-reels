@@ -146,3 +146,25 @@ Open:
   city clips fixed; London (Nov 20) and Paris re-rendered. Still unclear to the listener: prague v1/v7, dubai v7, venice v6.
 - Cleanup: removed motion.yml (it re-sharpened clips on every story commit), voice-test, voice-catalogue,
   test-meta-access workflows and samples. Owner did NOT like the unified page redesign proposal — do not apply it.
+
+## 2026-11-20 / 21 — Stories for every post, new heroes, storyteller voice for readings
+- Every reel and carousel gets its own Story 30 min later (publish/plan_story_cards.py, run by render-ahead.yml before
+  rendering; tools/story_card.py + reels/story_card.js: picture full screen, gold book frame, darker surround, hook, music).
+- Followers: 74 (Nov 19) → 496 (Nov 20). Readings earn ~6× the likes of other kinds. Morning Telegram note works
+  (analytics/daily_tg.py), but GitHub runs the schedule late.
+- Goharik (13, a student of the owner's mother; parents agreed): feelstory "A letter from London", 3D animated style,
+  published Nov 21 21:00. Grandma moved to Nov 29.
+- Lady published Nov 21 18:00 (owner said so); Jack and the Beanstalk moved to Dec 14 18:00.
+- Five Ani winter readings from the owner's sheets: winterwalk Dec 1, snowman Dec 5, cookies Dec 9, skating Dec 14,
+  tree Dec 27 (owner wants similar-looking ones on separate days). reading_panels.py keeps wide panels wide (2×3 or 3×2).
+- Briefs waiting for sheets: docs/ani-winter-readings.md (toy shop, snow day, Grandpa Frost, gift, New Year's Eve) and
+  docs/pip-forest-library.md (new hero Pip the fox, 5 stories). Marianna (estate agent, friend; she agreed): prompt and
+  text given in chat, waiting for the owner's sheet.
+- Owner said kokoro reading voices sound bad: ALL upcoming readings (Nov 22 → Dec 27) now use "chatterbox:builtin"
+  (voices.yml installs it in a second step; setuptools<81 needed on Python 3.12). OWNER MUST LISTEN FIRST: those
+  readings are review_status "draft" with "hold": "new voice: owner listens first". Set them back to "staged" only
+  after his "yes". tools/listen_report.py (fix-voices.yml report_only) checks clarity.
+- Owner rejected: unified page redesign. Logo proposal (3 options) sent, no choice yet.
+- Owner wants a new series in the style of a screen recording he sent (simple animation, simple characters) for
+  "our Armenian series" — the upload failed (disk full); waiting for it again.
+- Disk in the work machine filled up (repo .git 4–7 GB): clean caches and run git gc when space is low.
