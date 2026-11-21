@@ -61,10 +61,12 @@ def synth_chatterbox(text, voice, rate, mp3):
     env = np.convolve(np.abs(w), np.ones(int(sr * .02)) / int(sr * .02), "same"); on = np.where(env > env.max() * 0.04)[0]
     a, b = max(0, on[0] - int(sr * .05)), min(len(w), on[-1] + int(sr * .12)); w = w[a:b]
     pad = int(sr * .05); w = np.concatenate([np.zeros(pad), w, np.zeros(pad)])
+    try: tempo = max(0.88, min(1.0, 1 + float(str(rate).rstrip("%")) / 200))   # "-18%" (a learner's pace) -> 0.91
+    except ValueError: tempo = 1.0
     with tempfile.NamedTemporaryFile(suffix=".wav") as tmp:
         sf.write(tmp.name, w, sr)
-        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", tmp.name, "-ar", "24000", "-c:a", "libmp3lame", "-q:a", "2", str(mp3)], check=True)
-    s0, s1 = pad / sr, (len(w) - pad) / sr; words = text.split(); total = sum(len(x) for x in words)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", tmp.name, "-af", f"atempo={tempo}", "-ar", "24000", "-c:a", "libmp3lame", "-q:a", "2", str(mp3)], check=True)
+    s0, s1 = pad / sr / tempo, (len(w) - pad) / sr / tempo; words = text.split(); total = sum(len(x) for x in words)
     bounds, t = [], s0
     for x in words:
         d = (s1 - s0) * len(x) / total; bounds.append((x, t, t + d)); t += d
