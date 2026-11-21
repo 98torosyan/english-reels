@@ -3283,45 +3283,55 @@
       }
     },
     {
-      "id": "2026-11-21-feelstory-grandma",
+      "id": "2026-11-21-feelstory-goharik",
       "date": "2026-11-21",
       "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
       "kind": "feelstory",
-      "content_id": "grandma",
-      "title": "Story Grandma's bread",
-      "caption": "Տատիկի հացը · Grandma's bread · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nEvery Sunday, I baked bread with Grandma.\nShe never used a recipe. 'Your hands will remember,' she said.\nThen I grew up, and my Sundays got busy.\nThis year, her kitchen is quiet.\nYesterday, I tried to bake her bread. No recipe. Just my hands.\nAnd my hands remembered. Now I bake it with my daughter.\n\nԹարգմանություն՝\nԱմեն կիրակի ես հաց էի թխում տատիկի հետ։\nՆա երբեք բաղադրատոմս չէր օգտագործում։ «Ձեռքերդ կհիշեն»,— ասում էր նա։\nՀետո ես մեծացա, և կիրակիներս զբաղված դարձան։\nԱյս տարի նրա խոհանոցը լուռ է։\nԵրեկ փորձեցի թխել նրա հացը։ Առանց բաղադրատոմսի։ Միայն ձեռքերով։\nՈւ ձեռքերս հիշեցին։ Հիմա այն թխում եմ աղջկաս հետ։\n\nԸնդգծված արտահայտություններ՝ a recipe, bake her bread, baked bread, got busy, is quiet, Just my hands, remembered, with my daughter\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "content_id": "goharik",
+      "title": "Story A letter from London",
+      "caption": "A short story in easy English: A letter from London\nՆամակ Լոնդոնից · A letter from London · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nGoharik is thirteen. She has a big dream: to see London.\nEvery day, she learns one new word. She writes it in her green notebook.\nOne morning, a letter comes. It is from London!\n'My English is not good,' she says. Her teacher smiles: 'Write from your heart.'\nSo she writes all evening. She uses all her new words.\nA new letter comes: 'Your English is beautiful!' Her dream is very close now.\n\nԹարգմանություն՝\nԳոհարիկը տասներեք տարեկան է։ Նա մեծ երազանք ունի՝ տեսնել Լոնդոնը։\nԱմեն օր նա մեկ նոր բառ է սովորում։ Գրում է այն իր կանաչ տետրում։\nՄի առավոտ նամակ է գալիս։ Այն Լոնդոնից է։\n«Իմ անգլերենը լավը չէ», — ասում է նա։ Ուսուցչուհին ժպտում է. «Գրիր սրտից»։\nԵվ նա ամբողջ երեկո գրում է։ Օգտագործում է իր բոլոր նոր բառերը։\nՆոր նամակ է գալիս. «Քո անգլերենը հրաշալի է»։ Նրա երազանքն այժմ շատ մոտ է։\n\nThis story is for our wonderful student Goharik.\nQuestion: What is your big dream? Answer in English in the comments!\nMore stories with sound: link in bio.",
       "review_status": "staged",
+      "render": {
+        "reel": "goharik"
+      },
       "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-feelstory-grandma/feelstory-grandma.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-feelstory-grandma/cover.jpg"
-      }
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-feelstory-goharik/feelstory-goharik.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-feelstory-goharik/cover.jpg"
+      },
+      "hashtags": [
+        "#englishcourse",
+        "#easyenglish",
+        "#storytelling",
+        "#learnenglish",
+        "#անգլերեն"
+      ]
     },
     {
-      "id": "2026-11-21-story-grandma",
+      "id": "2026-11-21-story-goharik",
       "date": "2026-11-21",
       "time": "21:30",
       "timezone": "Asia/Yerevan",
       "type": "STORY",
       "format": "STORIES",
       "kind": "story-video",
-      "content_id": "grandma",
-      "title": "Grandma's bread story",
+      "content_id": "goharik",
+      "title": "A letter from London story",
       "caption": "",
       "review_status": "staged",
       "render": {
         "story_card": {
-          "picture": "assets/feelstory/grandma/1.jpg",
-          "title": "Grandma's bread",
+          "picture": "assets/feelstory/goharik/1.jpg",
+          "title": "A letter from London",
           "author": "A SHORT STORY",
-          "hook": "Every Sunday, I baked\nbread with Grandma.",
+          "hook": "Goharik is thirteen. She has\na big dream: to see London.",
           "music": "music/new/piano-glow.m4a"
         }
       },
       "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-story-grandma/story.mp4"
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-21-story-goharik/story.mp4"
       }
     },
     {
@@ -3366,33 +3376,6 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-story-gata/story.mp4"
       }
-    },
-    {
-      "id": "2026-11-22-feelstory-goharik",
-      "date": "2026-11-22",
-      "time": "13:00",
-      "timezone": "Asia/Yerevan",
-      "type": "REEL",
-      "format": "REELS",
-      "kind": "feelstory",
-      "content_id": "goharik",
-      "title": "Story A letter from London",
-      "caption": "A short story in easy English: A letter from London\nՆամակ Լոնդոնից · A letter from London · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nGoharik is thirteen. She has a big dream: to see London.\nEvery day, she learns one new word. She writes it in her green notebook.\nOne morning, a letter comes. It is from London!\n'My English is not good,' she says. Her teacher smiles: 'Write from your heart.'\nSo she writes all evening. She uses all her new words.\nA new letter comes: 'Your English is beautiful!' Her dream is very close now.\n\nԹարգմանություն՝\nԳոհարիկը տասներեք տարեկան է։ Նա մեծ երազանք ունի՝ տեսնել Լոնդոնը։\nԱմեն օր նա մեկ նոր բառ է սովորում։ Գրում է այն իր կանաչ տետրում։\nՄի առավոտ նամակ է գալիս։ Այն Լոնդոնից է։\n«Իմ անգլերենը լավը չէ», — ասում է նա։ Ուսուցչուհին ժպտում է. «Գրիր սրտից»։\nԵվ նա ամբողջ երեկո գրում է։ Օգտագործում է իր բոլոր նոր բառերը։\nՆոր նամակ է գալիս. «Քո անգլերենը հրաշալի է»։ Նրա երազանքն այժմ շատ մոտ է։\n\nThis story is for our wonderful student Goharik.\nQuestion: What is your big dream? Answer in English in the comments!\nMore stories with sound: link in bio.",
-      "review_status": "draft",
-      "render": {
-        "reel": "goharik"
-      },
-      "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-feelstory-goharik/feelstory-goharik.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-feelstory-goharik/cover.jpg"
-      },
-      "hashtags": [
-        "#englishcourse",
-        "#easyenglish",
-        "#storytelling",
-        "#learnenglish",
-        "#անգլերեն"
-      ]
     },
     {
       "id": "2026-11-22-cities-paris",
@@ -4584,6 +4567,48 @@
       },
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-29-story-sherlock/story.mp4"
+      }
+    },
+    {
+      "id": "2026-11-29-feelstory-grandma",
+      "date": "2026-11-29",
+      "time": "21:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "feelstory",
+      "content_id": "grandma",
+      "title": "Story Grandma's bread",
+      "caption": "Տատիկի հացը · Grandma's bread · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nEvery Sunday, I baked bread with Grandma.\nShe never used a recipe. 'Your hands will remember,' she said.\nThen I grew up, and my Sundays got busy.\nThis year, her kitchen is quiet.\nYesterday, I tried to bake her bread. No recipe. Just my hands.\nAnd my hands remembered. Now I bake it with my daughter.\n\nԹարգմանություն՝\nԱմեն կիրակի ես հաց էի թխում տատիկի հետ։\nՆա երբեք բաղադրատոմս չէր օգտագործում։ «Ձեռքերդ կհիշեն»,— ասում էր նա։\nՀետո ես մեծացա, և կիրակիներս զբաղված դարձան։\nԱյս տարի նրա խոհանոցը լուռ է։\nԵրեկ փորձեցի թխել նրա հացը։ Առանց բաղադրատոմսի։ Միայն ձեռքերով։\nՈւ ձեռքերս հիշեցին։ Հիմա այն թխում եմ աղջկաս հետ։\n\nԸնդգծված արտահայտություններ՝ a recipe, bake her bread, baked bread, got busy, is quiet, Just my hands, remembered, with my daughter\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-29-feelstory-grandma/feelstory-grandma.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-29-feelstory-grandma/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-29-story-grandma",
+      "date": "2026-11-29",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "grandma",
+      "title": "Grandma's bread story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/grandma/1.jpg",
+          "title": "Grandma's bread",
+          "author": "A SHORT STORY",
+          "hook": "Every Sunday, I baked\nbread with Grandma.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-29-story-grandma/story.mp4"
       }
     },
     {
