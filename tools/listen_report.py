@@ -16,7 +16,8 @@ def main():
         mp3 = ROOT / rel; text = json.loads(mp3.with_suffix(".json").read_text(encoding="utf-8"))["text"]
         heard = " ".join(s.text for s in model.transcribe(pcm(mp3), language="en", beam_size=5, vad_filter=False)[0]).strip()
         sc = fair_score(text, heard); print(f"{'ok ' if sc >= PASS else 'BAD'} {sc:.2f} {rel}")
-        if sc < PASS: print("   wanted:", text, "\n   heard: ", heard); bad.append(rel)
+        if sc < 0.97: print("   wanted:", text, "\n   heard: ", heard)
+        if sc < PASS: bad.append(rel)
     if bad: raise SystemExit(f"unclear: {bad}")
 
 
