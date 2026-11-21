@@ -168,3 +168,11 @@ Open:
 - Owner wants a new series in the style of a screen recording he sent (simple animation, simple characters) for
   "our Armenian series" — the upload failed (disk full); waiting for it again.
 - Disk in the work machine filled up (repo .git 4–7 GB): clean caches and run git gc when space is low.
+
+## 2026-11-21 (evening) — new reading voice: ready for the owner to listen
+- Found: gata (Nov 22) had no "render" spec in queue.json, so render-ahead skipped it after its old video was removed.
+  Added {"reading": "gata", "music": "new/warm-guitar.m4a"}; rendered locally and checked (1872x3328, -14.8 LUFS, sync ok).
+- Code check failed on a duplicate "davit" in qc/check_english.py — removed.
+- Sent the owner one mp3 with all 13 chatterbox readings (Nov 22 → Dec 27) + gata phone copy. All 13 stay "draft" with the hold
+  until his "yes". letter, dilijan, plant, concert, neighbour are not on the media site yet: after "yes", set them "staged"
+  and run render-ahead with only=<their ids> (and gata).

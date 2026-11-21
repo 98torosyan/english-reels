@@ -3354,7 +3354,11 @@
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-reading-gata/reading-gata.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-reading-gata/cover.jpg"
       },
-      "hold": "new voice: owner listens first"
+      "hold": "new voice: owner listens first",
+      "render": {
+        "reading": "gata",
+        "music": "new/warm-guitar.m4a"
+      }
     },
     {
       "id": "2026-11-22-story-gata",
