@@ -139,7 +139,7 @@ No text, letters or logos anywhere.
 
 **Text**
 
-It is December, and the New Year is coming. Ani and her family buy a big green tree. At home, they put it in the living room. Ani puts red and gold balls on the branches. Dad puts the lights on the tree. Then Ani puts a big star at the top. The tree shines. 'It's beautiful!' says Ani.
+It is December, and the New Year is coming. Ani and her family buy a big green tree. At home, they put it in the living room. Ani puts red and gold decorations on the branches. Dad puts the lights on the tree. Then Ani puts a big star at the top. The tree shines. 'It's beautiful!' says Ani.
 
 **Prompt**
 
@@ -150,7 +150,7 @@ ANI: a 7-year-old girl with curly brown hair in a ponytail with a red bow, big b
 No text, letters or logos anywhere.
 1. Ani and her family choose a big green tree at a snowy tree market.
 2. They carry the tree into a cosy living room.
-3. Ani hangs red and gold balls on the branches.
+3. Ani hangs red and gold decorations on the branches.
 4. Dad puts warm lights on the tree.
 5. Dad lifts Ani up so she can put a big gold star on the top.
 6. The family looks at the shining tree in the dark room, magical light.
