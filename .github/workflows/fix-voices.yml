@@ -6,6 +6,10 @@ on:
       clips:
         description: "clip paths separated by spaces (assets/.../v3.mp3)"
         required: true
+      report_only:
+        description: "only listen and report, change nothing"
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -28,6 +32,7 @@ jobs:
           CLIPS: ${{ inputs.clips }}
         run: |
           for c in $CLIPS; do case "$c" in assets/*.mp3) ;; *) echo "::error::bad clip $c"; exit 1;; esac; done
+          if [ "${{ inputs.report_only }}" = "true" ]; then python tools/listen_report.py $CLIPS; exit $?; fi
           python tools/fix_voice.py $CLIPS
           python tools/voice_finish.py
       - run: |
