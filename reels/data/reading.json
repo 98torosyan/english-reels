@@ -254,6 +254,96 @@
         53,
         71
       ]
+    },
+    {
+      "id": "winterwalk",
+      "number": 18,
+      "title": "A winter walk",
+      "title_hy": "Ձմեռային զբոսանք",
+      "level": "A1",
+      "voice": "kokoro:bf_lily",
+      "pic_words": [
+        0,
+        14,
+        28,
+        39,
+        51,
+        56
+      ],
+      "en": "It is a cold morning. Ani puts on her red hat and warm boots. She takes her little dog for a walk. The trees are white with snow. The dog jumps and plays in the snow, and Ani laughs. They see a bird on a branch. 'Hello, little bird!' says Ani. Then they go home for a warm breakfast.",
+      "hy": "Ցուրտ առավոտ է։ Անին դնում է իր կարմիր գլխարկը և հագնում տաք կոշիկները։ Նա իր փոքրիկ շանը տանում է զբոսանքի։ Ծառերը ձյունից սպիտակ են։ Շունը ցատկում ու խաղում է ձյան մեջ, և Անին ծիծաղում է։ Նրանք ճյուղի վրա մի թռչուն են տեսնում։ «Բարև, փոքրիկ թռչուն»,— ասում է Անին։ Հետո նրանք տուն են գնում՝ տաք նախաճաշի։"
+    },
+    {
+      "id": "snowman",
+      "number": 19,
+      "title": "Ani's snowman",
+      "title_hy": "Անիի ձնեմարդը",
+      "level": "A1",
+      "voice": "kokoro:bm_george",
+      "pic_words": [
+        0,
+        9,
+        17,
+        23,
+        29,
+        43
+      ],
+      "en": "After school, Ani and her friend Davit go outside. They make a big snowman in the yard. Ani gives him a carrot nose. Davit gives him two black buttons. Then Ani puts a warm scarf on him. 'Now he is warm,' she says. The snowman looks very happy, and the children are happy too.",
+      "hy": "Դասերից հետո Անին և իր ընկեր Դավիթը դուրս են գալիս։ Նրանք բակում մի մեծ ձնեմարդ են սարքում։ Անին նրան գազարից քիթ է տալիս։ Դավիթը նրան երկու սև կոճակ է տալիս։ Հետո Անին նրա վզին տաք շարֆ է փաթաթում։ «Հիմա նա տաք է»,— ասում է նա։ Ձնեմարդը շատ ուրախ տեսք ունի, և երեխաներն էլ են ուրախ։"
+    },
+    {
+      "id": "cookies",
+      "number": 20,
+      "title": "Cookies with Grandma",
+      "title_hy": "Թխվածքաբլիթ տատիկի հետ",
+      "level": "A2",
+      "voice": "kokoro:bf_isabella",
+      "pic_words": [
+        0,
+        11,
+        20,
+        28,
+        33,
+        42
+      ],
+      "en": "On Sunday, Ani visits her grandma. They want to make cookies. Ani mixes the flour, the butter and the sugar. Grandma cuts the cookies into stars and hearts. Soon, the kitchen smells wonderful. When the cookies are ready, they drink tea together. 'Your cookies are the best, Grandma!' says Ani.",
+      "hy": "Կիրակի օրը Անին գնում է տատիկի մոտ։ Նրանք ուզում են թխվածքաբլիթ պատրաստել։ Անին խառնում է ալյուրը, կարագը և շաքարը։ Տատիկը թխվածքները կտրում է աստղերի և սրտիկների տեսքով։ Շուտով խոհանոցում հրաշալի բույր է տարածվում։ Երբ թխվածքները պատրաստ են, նրանք միասին թեյ են խմում։ «Քո թխվածքները լավագույնն են, տատիկ»,— ասում է Անին։"
+    },
+    {
+      "id": "skating",
+      "number": 21,
+      "title": "On the ice",
+      "title_hy": "Սառույցի վրա",
+      "level": "A1",
+      "voice": "kokoro:bf_alice",
+      "pic_words": [
+        0,
+        9,
+        15,
+        20,
+        32,
+        42
+      ],
+      "en": "Today, Ani goes ice skating for the first time. Dad helps her with her skates. At first, Ani falls down. 'It's OK,' says Dad. 'Try again!' Ani stands up and tries again. Slowly, she skates across the ice. Everyone smiles at her. 'I can do it!' she shouts. What a happy day!",
+      "hy": "Այսօր Անին առաջին անգամ սահադաշտ է գնում։ Հայրիկն օգնում է նրան հագնել չմուշկները։ Սկզբում Անին ընկնում է։ «Ոչինչ,— ասում է հայրիկը։— Նորից փորձիր»։ Անին վեր է կենում և նորից փորձում։ Դանդաղ նա սահում է սառույցի վրայով։ Բոլորը ժպտում են նրան։ «Ես կարողանում եմ»,— բղավում է նա։ Ինչ ուրախ օր է։"
+    },
+    {
+      "id": "tree",
+      "number": 22,
+      "title": "The New Year tree",
+      "title_hy": "Ամանորյա տոնածառը",
+      "level": "A1",
+      "voice": "kokoro:bf_emma",
+      "pic_words": [
+        0,
+        18,
+        27,
+        36,
+        43,
+        52
+      ],
+      "en": "It is December, and the New Year is coming. Ani and her family buy a big green tree. At home, they put it in the living room. Ani puts red and gold balls on the branches. Dad puts the lights on the tree. Then Ani puts a big star at the top. The tree shines. 'It's beautiful!' says Ani.",
+      "hy": "Դեկտեմբեր է, և Նոր տարին մոտենում է։ Անին և իր ընտանիքը մի մեծ կանաչ տոնածառ են գնում։ Տանը նրանք այն դնում են հյուրասենյակում։ Անին ճյուղերից կարմիր և ոսկեգույն խաղալիքներ է կախում։ Հայրիկը տոնածառի վրա լույսեր է փաթաթում։ Հետո Անին գագաթին մի մեծ աստղ է դնում։ Տոնածառը փայլում է։ «Ինչ գեղեցիկ է»,— ասում է Անին։"
     }
   ]
 }

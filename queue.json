@@ -4718,6 +4718,53 @@
       }
     },
     {
+      "id": "2026-12-01-reading-winterwalk",
+      "date": "2026-12-01",
+      "time": "10:30",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "reading",
+      "content_id": "winterwalk",
+      "title": "Daily reading 18",
+      "caption": "Կարդանք միասին · Daily reading\nA winter walk · Ձմեռային զբոսանք (A1)\n\nIt is a cold morning. Ani puts on her red hat and warm boots. She takes her little dog for a walk. The trees are white with snow. The dog jumps and plays in the snow, and Ani laughs. They see a bird on a branch. 'Hello, little bird!' says Ani. Then they go home for a warm breakfast.\n\nQuestion: Do you like winter walks? Answer in English in the comments!\n\nԹարգմանություն՝\nՑուրտ առավոտ է։ Անին դնում է իր կարմիր գլխարկը և հագնում տաք կոշիկները։ Նա իր փոքրիկ շանը տանում է զբոսանքի։ Ծառերը ձյունից սպիտակ են։ Շունը ցատկում ու խաղում է ձյան մեջ, և Անին ծիծաղում է։ Նրանք ճյուղի վրա մի թռչուն են տեսնում։ «Բարև, փոքրիկ թռչուն»,— ասում է Անին։ Հետո նրանք տուն են գնում՝ տաք նախաճաշի։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishReading #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 1400,
+      "render": {
+        "reading": "winterwalk",
+        "music": "new/snow-celesta.m4a"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-01-reading-winterwalk/reading-winterwalk.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-01-reading-winterwalk/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-01-story-winterwalk",
+      "date": "2026-12-01",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "winterwalk",
+      "title": "A winter walk story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/winterwalk/1.jpg",
+          "title": "A winter walk",
+          "author": "DAILY READING",
+          "hook": "It is a cold morning. Ani puts\non her red hat and warm boots.",
+          "music": "music/new/snow-celesta.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-01-story-winterwalk/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-26-classic-carousel-happy-prince",
       "date": "2026-12-01",
       "time": "18:00",
@@ -4954,6 +5001,53 @@
       },
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-04-story-eighty-days/story.mp4"
+      }
+    },
+    {
+      "id": "2026-12-05-reading-snowman",
+      "date": "2026-12-05",
+      "time": "10:30",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "reading",
+      "content_id": "snowman",
+      "title": "Daily reading 19",
+      "caption": "Կարդանք միասին · Daily reading\nAni's snowman · Անիի ձնեմարդը (A1)\n\nAfter school, Ani and her friend Davit go outside. They make a big snowman in the yard. Ani gives him a carrot nose. Davit gives him two black buttons. Then Ani puts a warm scarf on him. 'Now he is warm,' she says. The snowman looks very happy, and the children are happy too.\n\nQuestion: Can you make a snowman? Answer in English in the comments!\n\nԹարգմանություն՝\nԴասերից հետո Անին և իր ընկեր Դավիթը դուրս են գալիս։ Նրանք բակում մի մեծ ձնեմարդ են սարքում։ Անին նրան գազարից քիթ է տալիս։ Դավիթը նրան երկու սև կոճակ է տալիս։ Հետո Անին նրա վզին տաք շարֆ է փաթաթում։ «Հիմա նա տաք է»,— ասում է նա։ Ձնեմարդը շատ ուրախ տեսք ունի, և երեխաներն էլ են ուրախ։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishReading #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 1400,
+      "render": {
+        "reading": "snowman",
+        "music": "new/jingle-lights.m4a"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-05-reading-snowman/reading-snowman.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-05-reading-snowman/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-05-story-snowman",
+      "date": "2026-12-05",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "snowman",
+      "title": "Ani's snowman story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/snowman/1.jpg",
+          "title": "Ani's snowman",
+          "author": "DAILY READING",
+          "hook": "After school, Ani and her\nfriend Davit go outside.",
+          "music": "music/new/jingle-lights.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-05-story-snowman/story.mp4"
       }
     },
     {
@@ -5198,6 +5292,53 @@
       },
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-08-story-selfish-giant/story.mp4"
+      }
+    },
+    {
+      "id": "2026-12-09-reading-cookies",
+      "date": "2026-12-09",
+      "time": "10:30",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "reading",
+      "content_id": "cookies",
+      "title": "Daily reading 20",
+      "caption": "Կարդանք միասին · Daily reading\nCookies with Grandma · Թխվածքաբլիթ տատիկի հետ (A2)\n\nOn Sunday, Ani visits her grandma. They want to make cookies. Ani mixes the flour, the butter and the sugar. Grandma cuts the cookies into stars and hearts. Soon, the kitchen smells wonderful. When the cookies are ready, they drink tea together. 'Your cookies are the best, Grandma!' says Ani.\n\nQuestion: What do you like to cook? Answer in English in the comments!\n\nԹարգմանություն՝\nԿիրակի օրը Անին գնում է տատիկի մոտ։ Նրանք ուզում են թխվածքաբլիթ պատրաստել։ Անին խառնում է ալյուրը, կարագը և շաքարը։ Տատիկը թխվածքները կտրում է աստղերի և սրտիկների տեսքով։ Շուտով խոհանոցում հրաշալի բույր է տարածվում։ Երբ թխվածքները պատրաստ են, նրանք միասին թեյ են խմում։ «Քո թխվածքները լավագույնն են, տատիկ»,— ասում է Անին։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishReading #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 1400,
+      "render": {
+        "reading": "cookies",
+        "music": "new/piano-glow.m4a"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-09-reading-cookies/reading-cookies.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-09-reading-cookies/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-09-story-cookies",
+      "date": "2026-12-09",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "cookies",
+      "title": "Cookies with Grandma story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/cookies/1.jpg",
+          "title": "Cookies with Grandma",
+          "author": "DAILY READING",
+          "hook": "On Sunday, Ani\nvisits her grandma.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-09-story-cookies/story.mp4"
       }
     },
     {
@@ -5482,6 +5623,53 @@
       }
     },
     {
+      "id": "2026-12-14-reading-skating",
+      "date": "2026-12-14",
+      "time": "10:30",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "reading",
+      "content_id": "skating",
+      "title": "Daily reading 21",
+      "caption": "Կարդանք միասին · Daily reading\nOn the ice · Սառույցի վրա (A1)\n\nToday, Ani goes ice skating for the first time. Dad helps her with her skates. At first, Ani falls down. 'It's OK,' says Dad. 'Try again!' Ani stands up and tries again. Slowly, she skates across the ice. Everyone smiles at her. 'I can do it!' she shouts. What a happy day!\n\nQuestion: Can you skate? Answer in English in the comments!\n\nԹարգմանություն՝\nԱյսօր Անին առաջին անգամ սահադաշտ է գնում։ Հայրիկն օգնում է նրան հագնել չմուշկները։ Սկզբում Անին ընկնում է։ «Ոչինչ,— ասում է հայրիկը։— Նորից փորձիր»։ Անին վեր է կենում և նորից փորձում։ Դանդաղ նա սահում է սառույցի վրայով։ Բոլորը ժպտում են նրան։ «Ես կարողանում եմ»,— բղավում է նա։ Ինչ ուրախ օր է։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishReading #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 1400,
+      "render": {
+        "reading": "skating",
+        "music": "new/marimba-sunrise.m4a"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-reading-skating/reading-skating.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-reading-skating/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-14-story-skating",
+      "date": "2026-12-14",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "skating",
+      "title": "On the ice story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/skating/1.jpg",
+          "title": "On the ice",
+          "author": "DAILY READING",
+          "hook": "Today, Ani goes ice skating\nfor the first time.",
+          "music": "music/new/marimba-sunrise.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-story-skating/story.mp4"
+      }
+    },
+    {
       "id": "2026-12-24-feelstory-xmas-train",
       "date": "2026-12-24",
       "time": "20:00",
@@ -5524,6 +5712,53 @@
       },
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-24-story-xmas-train/story.mp4"
+      }
+    },
+    {
+      "id": "2026-12-27-reading-tree",
+      "date": "2026-12-27",
+      "time": "10:30",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "reading",
+      "content_id": "tree",
+      "title": "Daily reading 22",
+      "caption": "Կարդանք միասին · Daily reading\nThe New Year tree · Ամանորյա տոնածառը (A1)\n\nIt is December, and the New Year is coming. Ani and her family buy a big green tree. At home, they put it in the living room. Ani puts red and gold balls on the branches. Dad puts the lights on the tree. Then Ani puts a big star at the top. The tree shines. 'It's beautiful!' says Ani.\n\nQuestion: How do you decorate your New Year tree? Answer in English in the comments!\n\nԹարգմանություն՝\nԴեկտեմբեր է, և Նոր տարին մոտենում է։ Անին և իր ընտանիքը մի մեծ կանաչ տոնածառ են գնում։ Տանը նրանք այն դնում են հյուրասենյակում։ Անին ճյուղերից կարմիր և ոսկեգույն խաղալիքներ է կախում։ Հայրիկը տոնածառի վրա լույսեր է փաթաթում։ Հետո Անին գագաթին մի մեծ աստղ է դնում։ Տոնածառը փայլում է։ «Ինչ գեղեցիկ է»,— ասում է Անին։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#EnglishReadingRoom #Անգլերեն #անգլերենիդասեր #EnglishReading #Yerevan",
+      "review_status": "staged",
+      "thumb_offset": 1400,
+      "render": {
+        "reading": "tree",
+        "music": "new/jingle-lights.m4a"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-27-reading-tree/reading-tree.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-27-reading-tree/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-27-story-tree",
+      "date": "2026-12-27",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "tree",
+      "title": "The New Year tree story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/tree/1.jpg",
+          "title": "The New Year tree",
+          "author": "DAILY READING",
+          "hook": "It is December, and the\nNew Year is coming.",
+          "music": "music/new/jingle-lights.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-27-story-tree/story.mp4"
       }
     }
   ]
