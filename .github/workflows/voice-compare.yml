@@ -1,0 +1,33 @@
+name: Voice comparison
+on:
+  workflow_dispatch:
+    inputs:
+      reading: {description: "reading id", required: true, default: "gata"}
+permissions:
+  contents: write
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      READING: ${{ inputs.reading }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y ffmpeg espeak-ng >/dev/null
+          pip install -q "edge-tts>=7.0" "kokoro>=0.9.4" soundfile "misaki[en]"
+          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q chatterbox-tts "setuptools<81"
+      - run: |
+          case "$READING" in *[!a-z0-9-]*|"") exit 1;; esac
+          python tools/voice_compare.py "$READING"
+      - name: Keep the samples on the motion-clips branch
+        run: |
+          mkdir -p /tmp/t && cp trial/compare-*.mp3 /tmp/t/ && rm -rf trial
+          git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
+          git fetch -q origin motion-clips && git checkout -q -B motion-clips origin/motion-clips
+          mkdir -p trial && rm -f trial/compare-*.mp3 && cp /tmp/t/*.mp3 trial/ && git add -A trial && git commit -qm "Voice comparison" || true
+          for k in 1 2 3; do git push -q origin motion-clips && break; sleep 5; git pull -q --rebase origin motion-clips; done
