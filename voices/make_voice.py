@@ -446,7 +446,7 @@ def voice_feelstory():
             if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text and json.loads(tj.read_text()).get("tag") == tag: continue
             try:
                 bounds = asyncio.run(synth(say, st["voice"], "-16%", mp3))
-                words = align(text.split(), bounds)
+                words = align(say.split(), bounds)   # same words in the same order, only a name spelt for the voice
             except Exception as error:
                 print(f"SKIPPED feelstory {st['id']}/{n}: {error}"); mp3.unlink(missing_ok=True); continue
             tj.write_text(json.dumps({"text": text, "words": words, "tag": tag}), encoding="utf-8"); made += 1
