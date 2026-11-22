@@ -1,1 +1,1 @@
-{"text": "She practises every evening.", "words": [[0.28, 0.38], [0.48, 1.28], [1.44, 1.7], [1.86, 2.476]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
+{"text": "She practises every evening.", "words": [[0.28, 0.38], [0.48, 1.28], [1.44, 1.7], [1.86, 2.476]], "tag": "en-GB-SoniaNeural|{\"Maria\": \"Mariya\"}", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

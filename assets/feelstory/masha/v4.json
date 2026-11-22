@@ -1,1 +1,1 @@
-{"text": "She also learns English.", "words": [[0.28, 0.38], [0.54, 0.82], [1.0, 1.38], [1.46, 2.169]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
+{"text": "She also learns English.", "words": [[0.28, 0.38], [0.54, 0.82], [1.0, 1.38], [1.46, 2.169]], "tag": "en-GB-SoniaNeural|{\"Maria\": \"Mariya\"}", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "She plays the piano very well.", "words": [[0.28, 0.38], [0.48, 0.82], [0.88, 0.96], [1.0, 1.44], [1.62, 1.88], [2.0, 2.483]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
+{"text": "She plays the piano very well.", "words": [[0.28, 0.38], [0.48, 0.82], [0.88, 0.96], [1.0, 1.44], [1.62, 1.88], [2.0, 2.483]], "tag": "en-GB-SoniaNeural|{\"Maria\": \"Mariya\"}", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
