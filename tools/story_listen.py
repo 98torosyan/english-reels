@@ -15,6 +15,13 @@ def fair_score(text, heard):
     """score() but forgiving with names: a character's name may be heard with another spelling (Behrman/Bearman),
     which is a listening detail, not a voice mistake. Each name is matched to the most similar heard word."""
     import difflib, re
+    # the listener writes American spelling ("practices", "color"): British spelling is not a voice mistake
+    uk = {"practises": "practices", "practise": "practice", "colour": "color", "colours": "colors", "favourite": "favorite",
+          "grey": "gray", "centre": "center", "theatre": "theater", "travelling": "traveling", "neighbour": "neighbor",
+          "neighbours": "neighbors", "mum": "mom", "okay": "ok", "realise": "realize", "organise": "organize"}
+    import re as _re
+    fix = lambda x: _re.sub(r"[A-Za-z']+", lambda m: uk.get(m.group(0).lower(), m.group(0)), x)
+    text, heard = fix(text), fix(heard)
     sc = score(text, heard)
     names = [w for w in re.findall(r"[A-Za-z']+", text)[1:] if w[:1].isupper()]
     if sc >= PASS: return sc
