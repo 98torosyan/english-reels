@@ -1,7 +1,7 @@
-# Nare & Leo — picture rules (paste once at the start of a ChatGPT chat)
+# Mila & Leo — picture rules (paste once at the start of a ChatGPT chat)
 
 ```
-From now on, this chat makes pictures for a children's English-reading series called "Nare & Leo".
+From now on, this chat makes pictures for a children's English-reading series called "Mila & Leo".
 Remember everything below and follow it in EVERY picture I ask for, without exceptions.
 
 === STYLE (always) ===
@@ -9,16 +9,16 @@ Warm, detailed storybook illustration, like a classic modern picture book: soft 
 No text, letters, numbers, signs, logos or watermarks anywhere — books, signs and papers show only soft wavy lines or simple pictures.
 
 === CHARACTERS (never change faces, hair, eyes or freckles) ===
-NARE — 9-year-old girl. Very curly, voluminous copper-ginger hair, lots of freckles, bright green eyes, a big cheerful smile. Curious, brave, kind, a little dreamy. Always has her small brown leather satchel with a sketchbook and pencils; she loves drawing what she sees.
+MILA — 9-year-old girl. Very curly, voluminous copper-ginger hair, lots of freckles, bright green eyes, a big cheerful smile. Curious, brave, kind, a little dreamy. Always has her small brown leather satchel with a sketchbook and pencils; she loves drawing what she sees.
 LEO — her brother, 6. The same copper-ginger curls (shorter, messy), freckles, green eyes, a big gap-toothed grin (one front tooth missing). Cheeky, funny, full of questions. Loves dinosaurs, space and snacks.
 TOFFEE — their fluffy ginger-and-white cat with a small green collar. Appears often, always the same.
 MUM — warm smile, copper hair in a loose bun, freckles, cardigans in soft colours.
 DAD — tall, dark-brown beard, round glasses, kind eyes, checked shirts and knitted jumpers.
-GRANDPA VARDAN — white moustache, flat cap, waistcoat, a walking stick; he has a garden and many stories.
+GRANDPA — white moustache, flat cap, waistcoat, a walking stick; he has a garden and many stories.
 Ages, faces and hair stay identical in every picture. Clothes are modest and age-appropriate.
 
 === WARDROBE (I will name the outfit; if I don't, choose one that fits the season and the place) ===
-NARE
+MILA
 N1 Autumn walk: olive-green coat with wooden buttons, mustard knitted scarf, brown corduroy trousers, red-brown lace-up boots.
 N2 Rainy day: bright yellow raincoat with hood, green wellies, a small clear umbrella.
 N3 Winter: cream puffer coat, mustard pompom hat, green mittens, snow boots.
@@ -50,13 +50,13 @@ Their cosy home in Yerevan (warm kitchen, attic room with a round window, balcon
 Make ONE image: a 3×2 grid of six square panels with thin white gutters, telling the six scenes I give in order.
 Use the outfits I name (same outfit in all six panels unless I say otherwise) and the place I name.
 Vary the camera: some wide scenes showing the whole place, some close-ups of faces and hands.
-Keep Nare, Leo, Toffee and the family exactly the same as in the reference pictures I attach.
+Keep Mila, Leo, Toffee and the family exactly the same as in the reference pictures I attach.
 ```
 
 ## How to ask for each lesson (after the rules)
 
 ```
-Lesson: <title>. Place: <place>. Outfits: Nare N_, Leo L_.
+Lesson: <title>. Place: <place>. Outfits: Mila N_, Leo L_.
 1. …
 2. …
 3. …
