@@ -3509,8 +3509,8 @@
       "format": "REELS",
       "kind": "feelstory",
       "content_id": "masha",
-      "title": "Story Masha's song",
-      "caption": "A short story in easy English: Masha's song\nՄաշայի երգը · Masha's song · A1\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nMasha loves music. She sings every day.\nShe goes to music school. She plays the piano very well.\nShe also learns English. She loves English songs.\nOne day, her teacher says: 'Sing an English song at the concert!' Masha is a little nervous.\nShe practises every evening. She sings and plays again and again.\nAt the concert, everyone claps. Masha smiles: 'I did it!'\n\nԹարգմանություն՝\nՄաշան սիրում է երաժշտություն։ Նա ամեն օր երգում է։\nՆա երաժշտական դպրոց է գնում։ Նա շատ լավ է դաշնամուր նվագում։\nՆա նաև անգլերեն է սովորում։ Նա սիրում է անգլերեն երգեր։\nՄի օր ուսուցիչն ասում է. «Համերգին անգլերեն երգ երգիր»։ Մաշան մի քիչ հուզվում է։\nՆա ամեն երեկո պարապում է։ Նա նորից ու նորից երգում և նվագում է։\nՀամերգին բոլորը ծափահարում են։ Մաշան ժպտում է. «Ես կարողացա»։\n\nThis story is for our wonderful student Masha.\nQuestion: What is your favourite song? Answer in English in the comments!\nMore stories with sound: link in bio.",
+      "title": "Story Maria's song",
+      "caption": "A short story in easy English: Maria's song\nՄարիայի երգը · Maria's song · A1\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nMaria loves music. She sings every day.\nShe goes to music school. She plays the piano very well.\nShe also learns English. She loves English songs.\nOne day, her teacher says: 'Sing an English song at the concert!' Maria is a little nervous.\nShe practises every evening. She sings and plays again and again.\nAt the concert, everyone claps. Maria smiles: 'I did it!'\n\nԹարգմանություն՝\nՄարիան սիրում է երաժշտություն։ Նա ամեն օր երգում է։\nՆա երաժշտական դպրոց է գնում։ Նա շատ լավ է դաշնամուր նվագում։\nՆա նաև անգլերեն է սովորում։ Նա սիրում է անգլերեն երգեր։\nՄի օր ուսուցիչն ասում է. «Համերգին անգլերեն երգ երգիր»։ Մարիան մի քիչ հուզվում է։\nՆա ամեն երեկո պարապում է։ Նա նորից ու նորից երգում և նվագում է։\nՀամերգին բոլորը ծափահարում են։ Մարիան ժպտում է. «Ես կարողացա»։\n\nThis story is for our wonderful student Maria.\nQuestion: What is your favourite song? Answer in English in the comments!\nMore stories with sound: link in bio.",
       "review_status": "staged",
       "render": {
         "reel": "masha"
@@ -3536,15 +3536,15 @@
       "format": "STORIES",
       "kind": "story-video",
       "content_id": "masha",
-      "title": "Masha's song story",
+      "title": "Maria's song story",
       "caption": "",
       "review_status": "staged",
       "render": {
         "story_card": {
           "picture": "assets/feelstory/masha/1.jpg",
-          "title": "Masha's song",
+          "title": "Maria's song",
           "author": "A SHORT STORY",
-          "hook": "Masha loves music.\nShe sings every day.",
+          "hook": "Maria loves music.\nShe sings every day.",
           "music": "music/new/piano-glow.m4a"
         }
       },

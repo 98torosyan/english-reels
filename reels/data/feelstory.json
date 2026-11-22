@@ -3201,13 +3201,13 @@
     },
     {
       "id": "masha",
-      "title": "Masha's song",
-      "title_hy": "Մաշայի երգը",
+      "title": "Maria's song",
+      "title_hy": "Մարիայի երգը",
       "level": "A1",
       "voice": "en-GB-SoniaNeural",
       "scenes": [
         [
-          "Masha loves music.",
+          "Maria loves music.",
           "She sings [every day]."
         ],
         [
@@ -3220,7 +3220,7 @@
         ],
         [
           "One day, her teacher says: 'Sing an English song at the concert!'",
-          "Masha is [a little nervous]."
+          "Maria is [a little nervous]."
         ],
         [
           "She practises every evening.",
@@ -3228,12 +3228,12 @@
         ],
         [
           "At the concert, everyone claps.",
-          "Masha smiles: '[I did it]!'"
+          "Maria smiles: '[I did it]!'"
         ]
       ],
       "scenes_hy": [
         [
-          "Մաշան սիրում է երաժշտություն։",
+          "Մարիան սիրում է երաժշտություն։",
           "Նա ամեն օր երգում է։"
         ],
         [
@@ -3246,7 +3246,7 @@
         ],
         [
           "Մի օր ուսուցիչն ասում է. «Համերգին անգլերեն երգ երգիր»։",
-          "Մաշան մի քիչ հուզվում է։"
+          "Մարիան մի քիչ հուզվում է։"
         ],
         [
           "Նա ամեն երեկո պարապում է։",
@@ -3254,7 +3254,7 @@
         ],
         [
           "Համերգին բոլորը ծափահարում են։",
-          "Մաշան ժպտում է. «Ես կարողացա»։"
+          "Մարիան ժպտում է. «Ես կարողացա»։"
         ]
       ]
     }
