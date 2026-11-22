@@ -1,1 +1,1 @@
-{"text": "Masha smiles: 'I did it!'", "words": [[0.26, 0.62], [0.76, 1.36], [1.64, 1.86], [1.94, 2.12], [2.2, 2.504]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
+{"text": "Maria smiles: 'I did it!'", "words": [[0.24, 0.62], [0.76, 1.38], [1.64, 1.88], [1.94, 2.12], [2.18, 2.49]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
