@@ -3198,6 +3198,65 @@
           "Նրա երազանքն այժմ շատ մոտ է։"
         ]
       ]
+    },
+    {
+      "id": "masha",
+      "title": "Masha's song",
+      "title_hy": "Մաշայի երգը",
+      "level": "A1",
+      "voice": "en-GB-SoniaNeural",
+      "scenes": [
+        [
+          "Masha loves music.",
+          "She sings [every day]."
+        ],
+        [
+          "She goes to music school.",
+          "She plays the piano [very well]."
+        ],
+        [
+          "She also learns English.",
+          "She loves [English songs]."
+        ],
+        [
+          "One day, her teacher says: 'Sing an English song at the concert!'",
+          "Masha is [a little nervous]."
+        ],
+        [
+          "She practises every evening.",
+          "She sings and plays [again and again]."
+        ],
+        [
+          "At the concert, everyone claps.",
+          "Masha smiles: '[I did it]!'"
+        ]
+      ],
+      "scenes_hy": [
+        [
+          "Մաշան սիրում է երաժշտություն։",
+          "Նա ամեն օր երգում է։"
+        ],
+        [
+          "Նա երաժշտական դպրոց է գնում։",
+          "Նա շատ լավ է դաշնամուր նվագում։"
+        ],
+        [
+          "Նա նաև անգլերեն է սովորում։",
+          "Նա սիրում է անգլերեն երգեր։"
+        ],
+        [
+          "Մի օր ուսուցիչն ասում է. «Համերգին անգլերեն երգ երգիր»։",
+          "Մաշան մի քիչ հուզվում է։"
+        ],
+        [
+          "Նա ամեն երեկո պարապում է։",
+          "Նա նորից ու նորից երգում և նվագում է։"
+        ],
+        [
+          "Համերգին բոլորը ծափահարում են։",
+          "Մաշան ժպտում է. «Ես կարողացա»։"
+        ]
+      ]
     }
   ]
 }

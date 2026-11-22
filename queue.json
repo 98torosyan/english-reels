@@ -3498,48 +3498,55 @@
       }
     },
     {
-      "id": "2026-12-08-feelstory-rooftop-painter",
+      "id": "2026-11-22-feelstory-masha",
       "date": "2026-11-22",
       "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
       "kind": "feelstory",
-      "content_id": "rooftop-painter",
-      "title": "Story The rooftop painter",
-      "caption": "Տանիքի նկարիչը · The rooftop painter · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nEvery evening, Luca climbed onto the roof and painted the sunset over the city.\nNobody bought his pictures. Only his cat watched him work.\nOne day, a little girl knocked on his door. She had five coins in her hand.\n‘Can I buy the smallest one?’ she asked. Luca smiled and gave it to her for free.\nTwenty years later, a letter arrived. Inside, there was a ticket to an art show.\nOn the wall, he saw his little sunset. Under it: ‘Thank you for my first painting.’\n\nԹարգմանություն՝\nԱմեն երեկո Լուկան բարձրանում էր տանիք և նկարում քաղաքի վրա իջնող մայրամուտը։\nՈչ ոք չէր գնում նրա նկարները։ Միայն կատուն էր նայում, թե ինչպես է նա աշխատում։\nՄի օր մի փոքրիկ աղջիկ թակեց նրա դուռը։ Ձեռքին հինգ մետաղադրամ ուներ։\n«Կարո՞ղ եմ գնել ամենափոքրը»,— հարցրեց նա։ Լուկան ժպտաց և այն նվիրեց նրան։\nՔսան տարի անց մի նամակ եկավ։ Ներսում ցուցահանդեսի տոմս կար։\nՊատին նա տեսավ իր փոքրիկ մայրամուտը։ Տակը գրված էր. «Շնորհակալություն իմ առաջին նկարի համար»։\n\nԸնդգծված արտահայտություններ՝ a letter arrived, an art show, bought, climbed onto, gave it to her, his little sunset, knocked on, my first painting, the smallest one, watched him\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "content_id": "masha",
+      "title": "Story Masha's song",
+      "caption": "A short story in easy English: Masha's song\nՄաշայի երգը · Masha's song · A1\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nMasha loves music. She sings every day.\nShe goes to music school. She plays the piano very well.\nShe also learns English. She loves English songs.\nOne day, her teacher says: 'Sing an English song at the concert!' Masha is a little nervous.\nShe practises every evening. She sings and plays again and again.\nAt the concert, everyone claps. Masha smiles: 'I did it!'\n\nԹարգմանություն՝\nՄաշան սիրում է երաժշտություն։ Նա ամեն օր երգում է։\nՆա երաժշտական դպրոց է գնում։ Նա շատ լավ է դաշնամուր նվագում։\nՆա նաև անգլերեն է սովորում։ Նա սիրում է անգլերեն երգեր։\nՄի օր ուսուցիչն ասում է. «Համերգին անգլերեն երգ երգիր»։ Մաշան մի քիչ հուզվում է։\nՆա ամեն երեկո պարապում է։ Նա նորից ու նորից երգում և նվագում է։\nՀամերգին բոլորը ծափահարում են։ Մաշան ժպտում է. «Ես կարողացա»։\n\nThis story is for our wonderful student Masha.\nQuestion: What is your favourite song? Answer in English in the comments!\nMore stories with sound: link in bio.",
       "review_status": "staged",
       "render": {
-        "reel": "rooftop-painter"
+        "reel": "masha"
       },
       "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-08-feelstory-rooftop-painter/feelstory-rooftop-painter.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-08-feelstory-rooftop-painter/cover.jpg"
-      }
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-feelstory-masha/feelstory-masha.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-feelstory-masha/cover.jpg"
+      },
+      "hashtags": [
+        "#englishcourse",
+        "#easyenglish",
+        "#storytelling",
+        "#learnenglish",
+        "#անգլերեն"
+      ]
     },
     {
-      "id": "2026-11-22-story-rooftop-painter",
+      "id": "2026-11-22-story-masha",
       "date": "2026-11-22",
       "time": "21:30",
       "timezone": "Asia/Yerevan",
       "type": "STORY",
       "format": "STORIES",
       "kind": "story-video",
-      "content_id": "rooftop-painter",
-      "title": "The rooftop painter story",
+      "content_id": "masha",
+      "title": "Masha's song story",
       "caption": "",
       "review_status": "staged",
       "render": {
         "story_card": {
-          "picture": "assets/feelstory/rooftop-painter/1.jpg",
-          "title": "The rooftop painter",
+          "picture": "assets/feelstory/masha/1.jpg",
+          "title": "Masha's song",
           "author": "A SHORT STORY",
-          "hook": "Every evening, Luca climbed onto\nthe roof and painted the...",
+          "hook": "Masha loves music.\nShe sings every day.",
           "music": "music/new/piano-glow.m4a"
         }
       },
       "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-story-rooftop-painter/story.mp4"
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-22-story-masha/story.mp4"
       }
     },
     {
@@ -4748,6 +4755,51 @@
       },
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-30-story-treasure-island/story.mp4"
+      }
+    },
+    {
+      "id": "2026-11-30-feelstory-rooftop-painter",
+      "date": "2026-11-30",
+      "time": "21:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "feelstory",
+      "content_id": "rooftop-painter",
+      "title": "Story The rooftop painter",
+      "caption": "Տանիքի նկարիչը · The rooftop painter · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nEvery evening, Luca climbed onto the roof and painted the sunset over the city.\nNobody bought his pictures. Only his cat watched him work.\nOne day, a little girl knocked on his door. She had five coins in her hand.\n‘Can I buy the smallest one?’ she asked. Luca smiled and gave it to her for free.\nTwenty years later, a letter arrived. Inside, there was a ticket to an art show.\nOn the wall, he saw his little sunset. Under it: ‘Thank you for my first painting.’\n\nԹարգմանություն՝\nԱմեն երեկո Լուկան բարձրանում էր տանիք և նկարում քաղաքի վրա իջնող մայրամուտը։\nՈչ ոք չէր գնում նրա նկարները։ Միայն կատուն էր նայում, թե ինչպես է նա աշխատում։\nՄի օր մի փոքրիկ աղջիկ թակեց նրա դուռը։ Ձեռքին հինգ մետաղադրամ ուներ։\n«Կարո՞ղ եմ գնել ամենափոքրը»,— հարցրեց նա։ Լուկան ժպտաց և այն նվիրեց նրան։\nՔսան տարի անց մի նամակ եկավ։ Ներսում ցուցահանդեսի տոմս կար։\nՊատին նա տեսավ իր փոքրիկ մայրամուտը։ Տակը գրված էր. «Շնորհակալություն իմ առաջին նկարի համար»։\n\nԸնդգծված արտահայտություններ՝ a letter arrived, an art show, bought, climbed onto, gave it to her, his little sunset, knocked on, my first painting, the smallest one, watched him\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "render": {
+        "reel": "rooftop-painter"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-30-feelstory-rooftop-painter/feelstory-rooftop-painter.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-30-feelstory-rooftop-painter/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-11-30-story-rooftop-painter",
+      "date": "2026-11-30",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "rooftop-painter",
+      "title": "The rooftop painter story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/rooftop-painter/1.jpg",
+          "title": "The rooftop painter",
+          "author": "A SHORT STORY",
+          "hook": "Every evening, Luca climbed onto\nthe roof and painted the...",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-30-story-rooftop-painter/story.mp4"
       }
     },
     {
