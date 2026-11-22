@@ -4700,7 +4700,7 @@
       "content_id": "mila-meet",
       "title": "Meet Mila and Leo story",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "draft",
       "render": {
         "story_card": {
           "picture": "assets/reading/mila-meet/1.jpg",

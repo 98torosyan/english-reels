@@ -61,6 +61,14 @@ def main():
     src = {k: data(k) for k in ("reading", "feelstory", "storyvideo")}
     have = {(i.get("content_id"), i["date"]) for i in items if i["format"] == "STORIES" and i.get("kind") == "story-video"}
     taken = {(i["date"], i["time"]) for i in items}
+    # a Story follows its post: held while the post is held, staged once the post is staged
+    posts = {(i.get("content_id"), i["date"]): i for i in items if i["format"] in ("REELS", "CAROUSEL")}
+    synced = 0
+    for st in items:
+        if st["format"] == "STORIES" and st.get("kind") == "story-video" and st["date"] >= start:
+            p = posts.get((st.get("content_id"), st["date"]))
+            if p and p["review_status"] in ("staged", "draft") and st["review_status"] != p["review_status"]:
+                st["review_status"] = p["review_status"]; synced += 1
     added = []
     for it in sorted(items, key=lambda x: (x["date"], x["time"])):
         if it["date"] < start or it["format"] not in ("REELS", "CAROUSEL") or it.get("review_status") not in ("staged", "draft"): continue
@@ -72,10 +80,10 @@ def main():
         sid = f"{it['date']}-story-{it['content_id']}"
         new = {"id": sid, "date": it["date"], "time": t.strftime("%H:%M"), "timezone": it.get("timezone", "Asia/Yerevan"), "type": "STORY",
                "format": "STORIES", "kind": "story-video", "content_id": it["content_id"], "title": f"{card['title']} story", "caption": "",
-               "review_status": "staged", "render": {"story_card": card}, "media": {"video_url": f"{BASE}/{sid}/story.mp4"}}
+               "review_status": it["review_status"], "render": {"story_card": card}, "media": {"video_url": f"{BASE}/{sid}/story.mp4"}}
         items.append(new); taken.add((new["date"], new["time"])); added.append(new)
         print(new["date"], new["time"], card["title"], "|", card["hook"].replace("\n", " / "))
-    if a.dry_run or not added: return
+    if a.dry_run or not (added or synced): return
     items.sort(key=lambda x: (x["date"], x["time"], x["id"]))
     QUEUE.write_text(json.dumps(q, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(len(added), "stories added")
