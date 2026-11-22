@@ -26,7 +26,7 @@ def main():
     asyncio.run(synth("Good morning. Today I will read you a short and happy story about a little girl and her family.", "en-GB-SoniaNeural", "-6%", ref))
     for k, (name, voice) in enumerate(VOICES, 1):
         say = text
-        if "@" in voice: voice, word = voice.split("@"); say = text.replace("Masha", word)   # try another spelling of the name
+        if "@" in voice: voice, word = voice.split("@"); say = text.replace("Maria", word)   # try another spelling of the name
         mp3 = out / f"compare-{k}-{name}.mp3"
         try:
             if voice == "chatterbox:sonia":
