@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       reading: {description: "reading id", required: true, default: "gata"}
+      text: {description: "optional: 'text|voice,voice' (voice@Spelling tries another spelling)", required: false, default: ""}
 permissions:
   contents: write
 jobs:
@@ -11,6 +12,7 @@ jobs:
     timeout-minutes: 40
     env:
       READING: ${{ inputs.reading }}
+      COMPARE_TEXT: ${{ inputs.text }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
