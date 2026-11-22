@@ -3671,48 +3671,48 @@
       }
     },
     {
-      "id": "2026-12-10-feelstory-tiny-bakery",
+      "id": "2026-11-23-motion-red-mitten",
       "date": "2026-11-23",
       "time": "21:00",
       "timezone": "Asia/Yerevan",
       "type": "REEL",
       "format": "REELS",
-      "kind": "feelstory",
-      "content_id": "tiny-bakery",
-      "title": "Story The tiny bakery",
-      "caption": "Փոքրիկ հացատունը · The tiny bakery · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nRosa opened a tiny bakery at the end of a quiet street.\nOn the first day, nobody came. Her cat Pepper watched the door all day.\nIn the evening, it started to rain. An old man stood outside, wet and cold.\nRosa invited him in and gave him warm bread and tea.\n‘This is the best bread in the city!’ The next morning, he came back with a friend.\nSoon, there was a long queue every day, and one chair by the window was always his.\n\nԹարգմանություն՝\nՌոզան մի փոքրիկ հացատուն բացեց մի հանգիստ փողոցի վերջում։\nԱռաջին օրը ոչ ոք չեկավ։ Նրա Պեպեր կատուն ամբողջ օրը նայում էր դռանը։\nԵրեկոյան անձրև սկսվեց։ Դրսում մի ծեր մարդ էր կանգնած՝ թրջված ու մրսած։\nՌոզան նրան ներս հրավիրեց և տաք հաց ու թեյ տվեց։\n«Սա քաղաքի ամենահամեղ հացն է»։ Հաջորդ առավոտ նա եկավ ընկերոջ հետ։\nՇուտով ամեն օր երկար հերթ էր գոյանում, իսկ պատուհանի մոտի աթոռը միշտ նրանն էր։\n\nԸնդգծված արտահայտություններ՝ a long queue, a tiny bakery, always his, came back, invited him in, nobody came, started to rain, the best bread, watched the door, wet and cold\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "kind": "motion",
+      "content_id": "red-mitten",
+      "title": "The Red Mitten",
+      "caption": "The Red Mitten · Read and listen · A2\n\nOn a cold December night, Clara went skating in Vienna.\nShe did not see her red mitten fall.\nLeo found it on the ice.\nInside, there was one letter: C.\nBut the girl was gone.\nEvery evening, Leo came back with the mitten.\nHe waited and waited. She never came.\nBut every morning, Clara came back too.\nShe looked for her mitten. He was never there.\nOn Christmas Eve, the rink closed at noon.\nThey both came early, and they saw each other.\nNow they each wear one red mitten.\nAnd they hold hands with the other.\n\nWhat is your favourite winter memory? Tell us in English!\nSave this reel and read it again tomorrow.\nMore stories with sound: link in bio.\n\n#learnenglish #englishstories #englishreading #readinenglish #englishlearning",
       "review_status": "staged",
       "render": {
-        "reel": "tiny-bakery"
+        "motion": "red-mitten"
       },
       "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-10-feelstory-tiny-bakery/feelstory-tiny-bakery.mp4",
-        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-10-feelstory-tiny-bakery/cover.jpg"
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-motion-red-mitten/motion-red-mitten.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-motion-red-mitten/cover.jpg"
       }
     },
     {
-      "id": "2026-11-23-story-tiny-bakery",
+      "id": "2026-11-23-story-red-mitten",
       "date": "2026-11-23",
       "time": "21:30",
       "timezone": "Asia/Yerevan",
       "type": "STORY",
       "format": "STORIES",
       "kind": "story-video",
-      "content_id": "tiny-bakery",
-      "title": "The tiny bakery story",
+      "content_id": "red-mitten",
+      "title": "The Red Mitten story",
       "caption": "",
       "review_status": "staged",
       "render": {
         "story_card": {
-          "picture": "assets/feelstory/tiny-bakery/1.jpg",
-          "title": "The tiny bakery",
-          "author": "A SHORT STORY",
-          "hook": "Rosa opened a tiny bakery at\nthe end of a quiet street.",
-          "music": "music/new/piano-glow.m4a"
+          "picture": "motion:red-mitten:1",
+          "title": "The Red Mitten",
+          "author": "A winter story",
+          "hook": "One red mitten\nin the Vienna snow...",
+          "music": "music/new/snow-celesta.m4a"
         }
       },
       "media": {
-        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-story-tiny-bakery/story.mp4"
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-story-red-mitten/story.mp4"
       }
     },
     {
@@ -4987,6 +4987,51 @@
       },
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-01-story-happy-prince/story.mp4"
+      }
+    },
+    {
+      "id": "2026-12-01-feelstory-tiny-bakery",
+      "date": "2026-12-01",
+      "time": "21:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "feelstory",
+      "content_id": "tiny-bakery",
+      "title": "Story The tiny bakery",
+      "caption": "Փոքրիկ հացատունը · The tiny bakery · A2\n\nՄի կարճ պատմություն, որ կարդում ենք անգլերեն։\n\nRosa opened a tiny bakery at the end of a quiet street.\nOn the first day, nobody came. Her cat Pepper watched the door all day.\nIn the evening, it started to rain. An old man stood outside, wet and cold.\nRosa invited him in and gave him warm bread and tea.\n‘This is the best bread in the city!’ The next morning, he came back with a friend.\nSoon, there was a long queue every day, and one chair by the window was always his.\n\nԹարգմանություն՝\nՌոզան մի փոքրիկ հացատուն բացեց մի հանգիստ փողոցի վերջում։\nԱռաջին օրը ոչ ոք չեկավ։ Նրա Պեպեր կատուն ամբողջ օրը նայում էր դռանը։\nԵրեկոյան անձրև սկսվեց։ Դրսում մի ծեր մարդ էր կանգնած՝ թրջված ու մրսած։\nՌոզան նրան ներս հրավիրեց և տաք հաց ու թեյ տվեց։\n«Սա քաղաքի ամենահամեղ հացն է»։ Հաջորդ առավոտ նա եկավ ընկերոջ հետ։\nՇուտով ամեն օր երկար հերթ էր գոյանում, իսկ պատուհանի մոտի աթոռը միշտ նրանն էր։\n\nԸնդգծված արտահայտություններ՝ a long queue, a tiny bakery, always his, came back, invited him in, nobody came, started to rain, the best bread, watched the door, wet and cold\n\nԼսի՛ր, հետևի՛ր բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր մեկին, ում այսօր պետք է այս պատմությունը։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#learnenglish #անգլերեն #անգլերենիդասեր #EnglishStories #Yerevan",
+      "review_status": "staged",
+      "render": {
+        "reel": "tiny-bakery"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-10-feelstory-tiny-bakery/feelstory-tiny-bakery.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-10-feelstory-tiny-bakery/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-01-story-tiny-bakery",
+      "date": "2026-12-01",
+      "time": "21:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "tiny-bakery",
+      "title": "The tiny bakery story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/feelstory/tiny-bakery/1.jpg",
+          "title": "The tiny bakery",
+          "author": "A SHORT STORY",
+          "hook": "Rosa opened a tiny bakery at\nthe end of a quiet street.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-01-story-tiny-bakery/story.mp4"
       }
     },
     {
