@@ -440,13 +440,16 @@ def voice_feelstory():
         for n, raw in enumerate(lines):
             text = raw.replace("[", "").replace("]", "")
             mp3, tj = out / f"v{n}.mp3", out / f"v{n}.json"
-            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text and json.loads(tj.read_text()).get("tag") == st["voice"]: continue
+            # "pronounce": how a name is spelt for the voice only (Maria -> Mariya); the screen keeps the real spelling
+            say = re.sub(r"[A-Za-z]+", lambda m: st.get("pronounce", {}).get(m.group(0), m.group(0)), text)
+            tag = st["voice"] + ("|" + json.dumps(st["pronounce"], sort_keys=True) if st.get("pronounce") else "")
+            if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text and json.loads(tj.read_text()).get("tag") == tag: continue
             try:
-                bounds = asyncio.run(synth(text, st["voice"], "-16%", mp3))
+                bounds = asyncio.run(synth(say, st["voice"], "-16%", mp3))
                 words = align(text.split(), bounds)
             except Exception as error:
                 print(f"SKIPPED feelstory {st['id']}/{n}: {error}"); mp3.unlink(missing_ok=True); continue
-            tj.write_text(json.dumps({"text": text, "words": words, "tag": st["voice"]}), encoding="utf-8"); made += 1
+            tj.write_text(json.dumps({"text": text, "words": words, "tag": tag}), encoding="utf-8"); made += 1
     return made
 
 def voice_talk():
