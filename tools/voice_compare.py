@@ -30,7 +30,7 @@ def main():
         mp3 = out / f"compare-{k}-{name}.mp3"
         try:
             if voice == "chatterbox:sonia":
-                import make_voice as mv, soundfile as sf, numpy as np
+                import make_voice as mv, soundfile as sf
                 if mv._CHATTER is None: asyncio.run(synth("Hello.", "chatterbox:builtin", "-10%", out / "warm.mp3"))
                 w = mv._CHATTER.generate(say, audio_prompt_path=str(ref), exaggeration=0.5, cfg_weight=0.5).squeeze().cpu().numpy()
                 wav = out / "tmp.wav"; sf.write(wav, w, mv._CHATTER.sr)

@@ -441,7 +441,8 @@ def voice_feelstory():
             text = raw.replace("[", "").replace("]", "")
             mp3, tj = out / f"v{n}.mp3", out / f"v{n}.json"
             # "pronounce": how a name is spelt for the voice only (Maria -> Mariya); the screen keeps the real spelling
-            say = re.sub(r"[A-Za-z]+", lambda m: st.get("pronounce", {}).get(m.group(0), m.group(0)), text)
+            spell = st.get("pronounce", {})
+            say = re.sub(r"[A-Za-z]+", lambda m, spell=spell: spell.get(m.group(0), m.group(0)), text)
             tag = st["voice"] + ("|" + json.dumps(st["pronounce"], sort_keys=True) if st.get("pronounce") else "")
             if mp3.exists() and tj.exists() and json.loads(tj.read_text()).get("text") == text and json.loads(tj.read_text()).get("tag") == tag: continue
             try:
