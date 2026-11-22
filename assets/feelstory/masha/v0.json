@@ -1,1 +1,1 @@
-{"text": "Maria loves music.", "words": [[0.24, 0.66], [0.8, 1.1], [1.2, 1.932]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
+{"text": "Maria loves music.", "words": [[0.28, 0.72], [0.84, 1.16], [1.26, 1.998]], "tag": "en-GB-SoniaNeural|{\"Maria\": \"Mariya\"}", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

@@ -1,1 +1,1 @@
-{"text": "Maria is a little nervous.", "words": [[0.24, 0.7], [0.94, 1.04], [1.1, 1.13], [1.2, 1.5], [1.6, 2.374]], "tag": "en-GB-SoniaNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
+{"text": "Maria is a little nervous.", "words": [[0.28, 0.72], [0.94, 1.04], [1.1, 1.13], [1.2, 1.52], [1.62, 2.394]], "tag": "en-GB-SoniaNeural|{\"Maria\": \"Mariya\"}", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
