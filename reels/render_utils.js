@@ -56,10 +56,28 @@ function fontUrls(baseUrl) {
   };
 }
 
+// The page's signature in the top-left corner: a thin gold line, the name and "English Reading Room" in Fraunces italic.
+// Replaces the older pill (reading, storyvideo, routine) and the bottom handle (feelstory).
+const SIGN = '<div class="sign"><span>GAYANE TOROSYAN</span><em>English Reading Room</em></div>';
+function signCss(baseUrl) {
+  const f = `${baseUrl}/node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-italic.woff2`;
+  const sh = 'text-shadow:0 1px 2px #0003,0 2px 14px #00000047';
+  return `<style>@font-face{font-family:SignF;src:url("${f}") format("woff2");font-style:italic;font-weight:100 900;font-display:block}
+ .sign{position:absolute;top:34px;left:30px;z-index:40;padding-left:14px;border-left:1.5px solid #F2C86Bcc;pointer-events:none}
+ .sign span{display:block;font:600 12px Inter,sans-serif;letter-spacing:7px;color:#F2C86Bee;${sh}}
+ .sign em{display:block;margin-top:4px;font:italic 300 27px SignF,serif;font-variation-settings:"SOFT" 100,"WONK" 1;color:#fffffff0;${sh}}</style>`;
+}
+function withSign(html, baseUrl) {
+  const pill = /<div class="pill"><img src="__LOGO_DATA__" alt=""><div><b>Gayane Torosyan<\/b><span>@ENGLISH\.READINGROOM<\/span><\/div><\/div>/;
+  const handle = '<div class="brand">@ENGLISH.READINGROOM</div>';
+  if (!pill.test(html) && !html.includes(handle)) return html;
+  return html.replace(pill, SIGN).replace(handle, SIGN).replace('</head>', `${signCss(baseUrl)}</head>`);
+}
+
 function htmlAssets(html, baseUrl) {
   const fonts = fontUrls(baseUrl);
   const logo = fs.readFileSync(path.join(ROOT, 'assets', process.env.THEME === 'dark' ? 'icon.svg' : 'logo-ig.svg')).toString('base64');
-  return html
+  return withSign(html, baseUrl)
     .replaceAll('__INTER_FONT__', fonts.inter)
     .replaceAll('__LITERATA_FONT__', fonts.literata)
     .replaceAll('__ARMENIAN_FONT__', fonts.armenian)

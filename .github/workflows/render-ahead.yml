@@ -19,7 +19,7 @@ concurrency:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 340
     env:
       CHROME_PATH: /usr/bin/google-chrome
     steps:
@@ -65,4 +65,4 @@ jobs:
         run: |
           git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
           git add -A
-          if ! git diff --cached --quiet; then git commit -qm "Մոտակա օրերի տեսանյութերը (ամպում ռենդեր)"; git push; fi
+          if ! git diff --cached --quiet; then git commit -qm "Մոտակա օրերի տեսանյութերը (ամպում ռենդեր)"; for i in 1 2 3 4 5; do git pull -q --rebase && git push && break; sleep 5; done; fi
