@@ -1,6 +1,6 @@
 """Just-in-time media: for staged posts due within --days days whose files are not in the media repo yet, render them
 and put them in place. Posts say how in item["render"]: {"reel": "<feelstory id>"}, {"countries": "<country id>"} or
-{"motion": "<story id>"} (a finished story reel kept on the motion-clips branch: only copied, not rendered) or
+{"motion": "<story id>"}, {"storyvideo": "<story id>"} (a finished story reel kept on the motion-clips branch: only copied, not rendered) or
 {"story_card": {...}} (a Story video for a reel, tools/story_card.py).
 This keeps the public media site small (only the next few days live there) and needs no computer: the daily
 "Render ahead" workflow runs it. Usage: python tools/render_ahead.py --media-repo ../english-reels-media [--days 3]"""
@@ -54,6 +54,13 @@ def render(item, media):
         (work / "spec.json").write_text(json.dumps(c), encoding="utf-8")
         subprocess.run(["python", str(ROOT / "tools" / "story_card.py"), str(work / "spec.json"), str(folder / "story.mp4")], cwd=ROOT, check=True)
         shutil.rmtree(work)
+    elif "storyvideo" in spec:   # classics and story-time reels (reels/render_storyvideo.js)
+        i = spec["storyvideo"]
+        subprocess.run(["node", "reels/render_storyvideo.js", i], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
+        shutil.copy2(OUT / f"storyvideo-{i}.mp4", folder / Path(item["media"]["video_url"]).name)
+        if item["media"].get("cover_url") and not (folder / "cover.jpg").exists():
+            from PIL import Image
+            Image.open(OUT / f"storyvideo-{i}.png").convert("RGB").save(folder / "cover.jpg", "JPEG", quality=92)
     elif "countries" in spec:
         i = spec["countries"]
         subprocess.run(["node", "carousels/render_countries.js", i], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
@@ -72,7 +79,7 @@ def main():
             if it["id"] not in a.only: continue
         elif it["review_status"] != "staged" or not 0 <= (dt.date.fromisoformat(it["date"]) - today).days <= a.days: continue
         missing = [f for f in files_for(it) if not (media / f).exists()]
-        if not missing: continue
+        if not missing and a.only is None: continue   # --only renders again even when the files are there (design changes)
         print("render", it["id"], flush=True); render(it, media)
         still = [f for f in files_for(it) if not (media / f).exists()]
         if still: raise SystemExit(f"{it['id']}: still missing {still}")

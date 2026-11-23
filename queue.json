@@ -3643,6 +3643,9 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-classic-selfish-giant/classic-selfish-giant.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-classic-selfish-giant/cover.jpg"
+      },
+      "render": {
+        "storyvideo": "selfish-giant"
       }
     },
     {
@@ -3822,6 +3825,9 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-don-quixote/classic-don-quixote.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-classic-don-quixote/cover.jpg"
+      },
+      "render": {
+        "storyvideo": "don-quixote"
       }
     },
     {
@@ -3956,6 +3962,9 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-wizard-oz/classic-wizard-oz.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-classic-wizard-oz/cover.jpg"
+      },
+      "render": {
+        "storyvideo": "wizard-oz"
       }
     },
     {
@@ -4135,6 +4144,9 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-emperor-clothes/classic-emperor-clothes.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-classic-emperor-clothes/cover.jpg"
+      },
+      "render": {
+        "storyvideo": "emperor-clothes"
       }
     },
     {
@@ -4269,6 +4281,9 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-27-classic-christmas-carol/classic-christmas-carol.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-27-classic-christmas-carol/cover.jpg"
+      },
+      "render": {
+        "storyvideo": "christmas-carol"
       }
     },
     {
@@ -5893,6 +5908,9 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-classic-jack-beanstalk/classic-jack-beanstalk.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-14-classic-jack-beanstalk/cover.jpg"
+      },
+      "render": {
+        "storyvideo": "jack-beanstalk"
       }
     },
     {

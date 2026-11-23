@@ -64,6 +64,10 @@
  #bgflow .in{position:absolute;inset:-80px;filter:blur(34px) saturate(1.1)}
  #bgflow img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
  #bgflow .tint{position:absolute;inset:0;background:linear-gradient(transparent 0,#F4EFE499 45%,#F4EFE4c8 62%,#F4EFE4d8 100%)}
+ body.flow .title{text-align:center;top:1205px;font-size:72px;white-space:nowrap}
+ body.flow .title:before{content:attr(data-au);position:absolute;left:0;right:0;top:-46px;font:800 22px Inter;letter-spacing:7px;color:var(--c);font-style:normal}
+ body.flow .title:after{content:"";display:block;width:90px;height:3px;background:var(--c);margin:22px auto 0}
+ body.flow .cap{top:1350px}body.flow .cap p{text-align:center}
  </style>
 </head>
 <body>
@@ -93,11 +97,11 @@
   if(data.classic){ introK.textContent='CLASSICS MADE EASY'; introA.textContent=`${data.classic.author} · ${data.classic.year}`;
    outro.classList.add('classic'); const h2=outro.querySelector('h2'); h2.textContent=data.classic.quote;
    outro.querySelector('p').textContent=`«${data.classic.quote_hy}»`; h2.insertAdjacentHTML('afterend',`<div class="by">— ${data.classic.author.toUpperCase()} · ${data.classic.book.toUpperCase()}</div>`); }
-  const tw=data.title.split(' '); title.innerHTML=tw.slice(0,-1).join(' ')+' <em>'+tw.at(-1)+'</em>'; introT.innerHTML=title.innerHTML;
+  const tw=data.title.split(' '); title.innerHTML=tw.slice(0,-1).join(' ')+' <em>'+tw.at(-1)+'</em>'; introT.innerHTML=title.innerHTML; if(data.classic) title.dataset.au=data.classic.author.toUpperCase();
   let k=0; const curly=w=>w.replace(/^'/,'‘').replace(/'/g,'’');   // typographic quotes and apostrophes
   cap.innerHTML=data.scenes.map((sc,i)=>`<p id="p${i}">${sc.split(' ').map(w=>`<span data-k="${k++}">${curly(w)}</span>`).join(' ')}</p>`).join('');
  };
- window.fit=()=>{if(window.K){K.init();K.title(introT,.15);}document.querySelectorAll('.cap p').forEach(p=>{let f=46;while(p.scrollHeight>330&&f>34){f-=1;p.style.fontSize=f+'px';}})};
+ window.fit=()=>{if(document.body.classList.contains('flow')){let f=72;while(title.scrollWidth>title.clientWidth&&f>46){f-=2;title.style.fontSize=f+'px';}}if(window.K){K.init();K.title(introT,.15);}document.querySelectorAll('.cap p').forEach(p=>{let f=46;while(p.scrollHeight>330&&f>34){f-=1;p.style.fontSize=f+'px';}})};
  window.seek=t=>{
   progress.style.width=(clamp(t/T.total)*100)+'%';
   const n=D.imgs.length; const st=T.sceneStart; // image i is shown from st[i]-0.35 to st[i+1]-0.35
