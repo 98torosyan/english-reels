@@ -57,9 +57,17 @@
  .wm,.outro .signature{display:none!important}   /* clean: no watermark, no signature line */
  /* clean reels: no progress bars, scene dots, counters or small label lines */
  .progress,.sdots,.eyebrow,.dots,.count{display:none!important}
+ /* classics: the picture flows on under the text, blurred and softened, instead of a hard edge */
+ body.flow .stage{-webkit-mask-image:linear-gradient(#000 0,#000 58%,transparent 100%);mask-image:linear-gradient(#000 0,#000 58%,transparent 100%);background:transparent}
+ body.flow .stage:after{display:none}
+ #bgflow{position:absolute;inset:0;z-index:0;overflow:hidden;display:none}body.flow #bgflow{display:block}
+ #bgflow .in{position:absolute;inset:-80px;filter:blur(34px) saturate(1.1)}
+ #bgflow img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
+ #bgflow .tint{position:absolute;inset:0;background:linear-gradient(transparent 0,#F4EFE499 45%,#F4EFE4c8 62%,#F4EFE4d8 100%)}
  </style>
 </head>
 <body>
+ <div id="bgflow"><div class="in" id="bgIn"></div><div class="tint"></div></div>
  <div class="stage" id="stageWrap"><div id="stage"></div><div class="vig"></div><div class="grain" id="grain"></div><div class="leak" id="leak"></div><div class="intro" id="intro"><small id="introK">STORY TIME</small><div class="it" id="introT"></div><i id="introLine"></i><div class="ia" id="introA"></div></div></div>
  <div class="pill"><img src="__LOGO_DATA__" alt=""><div><b>Gayane Torosyan</b><span>@ENGLISH.READINGROOM</span></div></div>
  <div class="sdots" id="sdots"></div>
@@ -79,6 +87,7 @@
  window.configure=(data,timeline)=>{D=data;T=timeline;
   if(data.color) document.documentElement.style.setProperty('--c',data.color);
   stage.innerHTML=data.imgs.map((s,i)=>`<img id="im${i}" src="${s}">`).join('');
+  document.body.classList.toggle('flow',!!data.classic); bgIn.innerHTML=data.imgs.map((s,i)=>`<img id="bg${i}" src="${s}">`).join('');
   sdots.innerHTML=data.imgs.map(()=>'<i></i>').join('');
   series.textContent=data.classic?`CLASSICS · ${data.classic.author.toUpperCase()}`:`${data.series||'STORY TIME'} · ${String(data.number).padStart(2,'0')}`; level.textContent=data.level;
   if(data.classic){ introK.textContent='CLASSICS MADE EASY'; introA.textContent=`${data.classic.author} · ${data.classic.year}`;
@@ -100,6 +109,7 @@
    const sc=m[0]+(m[1]-m[0])*p, x=m[2]+(m[3]-m[2])*p, y=m[4]+(m[5]-m[4])*p;
    const slide=i%2==1?(1-fin)*14:0;
    im.style.transform=`translate(${x+slide}%,${y}%) scale(${sc+(i%2==0&&i>0?(1-fin)*.08:0)})`;
+   const bi=document.getElementById('bg'+i); bi.style.opacity=im.style.opacity; bi.style.zIndex=i; bi.style.transform=im.style.transform;
    sdots.children[i].className=t>=b?'done':(t>=a?'on':'');}
   const ia=ease(clamp((t-.15)/.6)), io2=clamp((t-1.75)/.45); intro.style.opacity=ia*(1-io2);
   introT.style.transform=`translateY(${(1-ia)*40}px) scale(${1+.04*clamp(t/2.2)})`; introK.style.opacity=ease(clamp((t-.05)/.5)); introLine.style.width=(ease(clamp((t-.5)/.8))*260)+'px'; introA.style.opacity=ease(clamp((t-.7)/.6));
