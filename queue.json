@@ -3680,7 +3680,7 @@
       "content_id": "selfish-giant",
       "title": "The Selfish Giant story",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "render": {
         "story_card": {
           "picture": "assets/storyvideo/selfish-giant/1.jpg",
@@ -3692,7 +3692,10 @@
       },
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-story-selfish-giant/story.mp4"
-      }
+      },
+      "hashtags": [],
+      "published_at": "2026-11-23T18:35+04:00",
+      "ig_media_id": "18112330028229922"
     },
     {
       "id": "2026-11-23-motion-red-mitten",
