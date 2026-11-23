@@ -72,7 +72,13 @@ const { chromium } = require('playwright-core'); const fs = require('fs');
    #o b{width:14px;height:14px;background:#E9C46A;transform:rotate(45deg)}
    #t.title #s{display:none}#t.title #h{display:block}#t.title #o{display:flex}
    body.dark #s{color:#F6EBD9;text-shadow:0 2px 26px rgba(10,7,5,.95),0 0 6px rgba(10,7,5,.85)}
-   body.dark #s em{color:#E9C46A}</style><div id=t><div id=h></div><div id=o><i></i><b></b><i></i></div><div id=s></div></div>`);
+   body.dark #s em{color:#E9C46A}
+   body[data-look] #s .w{transition:none}
+   body[data-look=dim] #s .w{opacity:.55}body.dark[data-look=dim] #s .w{opacity:.66}
+   body[data-look=on] #s:before,body[data-look=now] #s:before{display:none}
+   body[data-look=on] #s,body[data-look=now] #s{text-shadow:none}
+   body[data-look=now] #s,body[data-look=now] #s em{color:#B5701A}
+   body.dark[data-look=now] #s,body.dark[data-look=now] #s em{color:#FFD36E}</style><div id=t><div id=h></div><div id=o><i></i><b></b><i></i></div><div id=s></div></div>`);
   if (dark) await p.evaluate(() => document.body.classList.add('dark'));
   await p.evaluate(() => document.fonts.load('italic 400 66px P').then(() => document.fonts.load('italic 600 104px P')).then(() => document.fonts.load('400 66px P')));
   for (const l of lines) {
@@ -86,11 +92,79 @@ const { chromium } = require('playwright-core'); const fs = require('fs');
         if (part.startsWith('[')) { const e = document.createElement('em'); e.textContent = part.slice(1, -1); s.append(e); } else s.append(part); });
     }, [l.title ? l.text.replace(/[.\[\]]/g, '') : l.text, l.title]);
     await p.screenshot({ path: `${dir}/line${l.n}.png`, omitBackground: true });
+    if (l.title) continue;
+    // karaoke: the same sentence with every word spoken (ink) and every word "now" (gold), plus where each word sits
+    const boxes = await p.evaluate(() => { const s = document.getElementById('s'); const out = [];
+      const walk = (node) => { for (const c of [...node.childNodes]) { if (c.nodeType === 3) { const parts = c.textContent.split(/(\s+)/); const frag = document.createDocumentFragment();
+        parts.forEach((w) => { if (!w) return; if (/^\s+$/.test(w)) frag.append(w); else { const sp = document.createElement('span'); sp.className = 'w'; sp.textContent = w; frag.append(sp); } }); c.replaceWith(frag); }
+        else if (c.nodeType === 1 && c.className !== 'w') walk(c); } };
+      walk(s); const dpr = window.devicePixelRatio;
+      document.querySelectorAll('#s .w').forEach((w) => { const r = w.getBoundingClientRect(); out.push([...[r.left, r.top, r.width, r.height].map((v) => Math.round(v * dpr)), w.textContent]); });
+      return out; });
+    fs.writeFileSync(`${dir}/line${l.n}.json`, JSON.stringify(boxes));
+    for (const look of ['dim', 'on', 'now']) {
+      await p.evaluate((k) => { document.body.dataset.look = k; }, look);
+      await p.screenshot({ path: `${dir}/line${l.n}-${look}.png`, omitBackground: true });
+    }
+    await p.evaluate(() => { delete document.body.dataset.look; });
   }
   await b.close();
 })();"""
     js = ROOT / ".render-work" / "motion-text.js"; js.parent.mkdir(exist_ok=True); js.write_text(script)
     subprocess.run(["node", str(js)], input=json.dumps([lines, str(work), str(ROOT), dark]), text=True, check=True, cwd=ROOT)
+
+
+def text_band(lines, work, total, sid):
+    """All sentences as one transparent video band. One sentence on screen at a time: it fades in during the pause
+    before it, its words wait half-faded, each word turns gold while it is spoken and stays in full ink after it."""
+    first = Image.open(work / f"line{lines[0]['n']}.png"); bw, bh = first.size
+    def load(name): return np.asarray(Image.open(work / name).convert("RGBA"), dtype=np.float32)
+    plan = []
+    mid = lambda k: (lines[k - 1]["end"] + lines[k]["at"]) / 2
+    for i, l in enumerate(lines):
+        a = max(0, l["at"] - 0.3) if i == 0 else mid(i)
+        b = mid(i + 1) if i + 1 < len(lines) else total
+        out = 0.26 if i + 1 < len(lines) else 1.0
+        e = {"a": a, "b": b if i + 1 < len(lines) else total - 0.2, "out": out}
+        if l["title"]:
+            e["base"] = load(f"line{l['n']}.png"); e["words"] = []
+        else:
+            e["base"] = load(f"line{l['n']}-dim.png"); e["on"] = load(f"line{l['n']}-on.png"); e["now"] = load(f"line{l['n']}-now.png")
+            boxes = []   # a piece with no letters (the full stop after a gold [phrase]) belongs to the word before it
+            for x, y, w, h, txt in json.loads((work / f"line{l['n']}.json").read_text()):
+                if boxes and not any(ch.isalnum() for ch in txt) and abs(boxes[-1][1] - y) < h / 2:
+                    px, py, pw, ph = boxes[-1]; boxes[-1] = [px, min(py, y), max(px + pw, x + w) - px, max(py + ph, y + h) - min(py, y)]
+                else: boxes.append([x, y, w, h])
+            j = json.loads((ROOT / "assets" / "talk" / sid / f"v{l['n']}.json").read_text())
+            if len(boxes) != len(j["words"]): raise SystemExit(f"line {l['n']}: {len(boxes)} words on screen, {len(j['words'])} spoken")
+            e["words"] = [((max(0, x - 6), max(0, y - 4), x + w + 6, y + h + 4), l["at"] + w0 - l["from"], l["at"] + w1 - l["from"])
+                          for (x, y, w, h), (w0, w1) in zip(boxes, j["words"])]
+        plan.append(e)
+    dst = work / "band.mov"
+    enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgba", "-s", f"{bw}x{bh}", "-r", str(FPS), "-i", "-",
+                            "-c:v", "qtrle", str(dst)], stdin=subprocess.PIPE)
+    empty = np.zeros((bh, bw, 4), np.uint8)
+    for f in range(int(round(total * FPS))):
+        t = f / FPS
+        e = next((x for x in plan if x["a"] <= t < x["b"]), None)
+        if e is None: enc.stdin.write(empty.tobytes()); continue
+        img = e["base"].copy()
+        for (x0, y0, x1, y1), w0, w1 in e["words"]:
+            if t < w0: continue
+            # the word glides from half-faded to gold in 0.08 s, then settles to ink after it is spoken
+            src = e["now"] if t < max(w1, w0 + 0.15) else e["on"]
+            k = min(1.0, (t - w0) / 0.08)
+            d, sr = img[y0:y1, x0:x1], src[y0:y1, x0:x1]
+            sa = sr[..., 3:4] / 255 * k; da = d[..., 3:4] / 255
+            oa = sa + da * (1 - sa)
+            d[..., :3] = np.where(oa > 0, (sr[..., :3] * sa + d[..., :3] * da * (1 - sa)) / np.maximum(oa, 1e-6), d[..., :3])
+            d[..., 3:4] = oa * 255
+        alpha = min(1.0, (t - e["a"]) / 0.3) * min(1.0, max(0.0, (e["b"] - t) / e["out"]))
+        img[..., 3] *= alpha
+        enc.stdin.write(img.clip(0, 255).astype(np.uint8).tobytes())
+    enc.stdin.close(); enc.wait()
+    if enc.returncode: raise SystemExit("text band failed")
+    return dst
 
 
 def main():
@@ -108,7 +182,7 @@ def main():
     dark = sum(paper) < 384
     work = Path(tempfile.mkdtemp(prefix=f"motion-{sid}-")); mask(work / "mask.png", pic_h, 1150 if tall else 900); text_pngs(lines, work, dark)
     # each picture runs from its scene start (minus half a cross-fade) to the next one; clips are slowed gently if needed
-    starts = [0.0] + [s - 0.55 for s in scenes[1:]]
+    starts = [0.0] + [s - 0.15 for s in scenes[1:]]   # the new picture comes in with the narrator's voice, never ahead of it
     ends = starts[1:] + [total]
     args = ["ffmpeg", "-v", "error", "-y"]; fc = []
     fit = f"scale={W}:{pic_h}:flags=lanczos," if tall else f"scale={PIC_H}:{PIC_H}:flags=lanczos,crop={W}:{PIC_H},"
@@ -129,20 +203,13 @@ def main():
     fc.append(f"[{mi}:v]format=gray,trim=0:{total:.3f}[m]")
     fc.append(f"[{prev}]format=rgba,trim=0:{total:.3f}[pv];[pv][m]alphamerge[pa]")
     fc.append(f"color=c=0x{''.join(f'{c:02X}' for c in paper)}:s={W}x{H}:r={FPS}:d={total:.3f}[bg];[bg][pa]overlay=0:0:shortest=1[v0]")
-    cur = "v0"
-    for i, l in enumerate(lines):
-        idx = nv + 1 + i
-        # one sentence on screen at a time: the old one fades out and the new one fades in, back to back, in the pause between them
-        mid = lambda k: (lines[k - 1]["end"] + lines[k]["at"]) / 2
-        a = max(0, l["at"] - 0.3) if i == 0 else mid(i)
-        b = mid(i + 1) if i + 1 < len(lines) else total
-        args += ["-loop", "1", "-t", f"{total:.3f}", "-i", str(work / f"line{l['n']}.png")]
-        fade_out = f",fade=t=out:st={b - 0.26:.3f}:d=0.26:alpha=1" if i + 1 < len(lines) else f",fade=t=out:st={total - 1.2:.3f}:d=1.0:alpha=1"
-        fc.append(f"[{idx}:v]format=rgba,fade=t=in:st={a:.3f}:d=0.3:alpha=1{fade_out}[t{i}]")
-        fc.append(f"[{cur}][t{i}]overlay=0:{text_y}:enable='between(t,{a:.3f},{b:.3f})'[v{i + 1}]"); cur = f"v{i + 1}"
+    # the sentences: one band of text drawn frame by frame (tools: numpy), laid over the page in one pass
+    band = text_band(lines, work, total, sid)
+    args += ["-i", str(band)]; extra = nv + 2
+    fc.append(f"[v0][{nv + 1}:v]overlay=0:{text_y}:format=auto[vt]"); cur = "vt"
     fc.append(f"[{cur}]fade=t=in:st=0:d=0.6,format=yuv420p[vout]")
     # sound: the narrator, and soft music under it
-    ai = nv + 1 + len(lines); vdir = ROOT / "assets" / "talk" / sid; chains = []
+    ai = extra; vdir = ROOT / "assets" / "talk" / sid; chains = []
     for i, l in enumerate(lines):
         args += ["-i", str(vdir / f"v{l['n']}.mp3")]
         fr = max(0, l["from"] - 0.06); ms = int(round((l["at"] - (l["from"] - fr)) * 1000))
@@ -151,7 +218,7 @@ def main():
     args += ["-stream_loop", "-1", "-i", str(ROOT / "music" / t["music"])]
     fc += chains
     fc.append(f"{''.join(f'[a{i}]' for i in range(len(lines)))}amix=inputs={len(lines)}:normalize=0,apad=whole_dur={total:.3f}[voice]")
-    fc.append(f"[{mus}:a]aresample=48000,atrim=0:{total:.3f},volume=0.20,afade=t=in:d=1.5,afade=t=out:st={total - 2.5:.3f}:d=2.5[mus]")
+    fc.append(f"[{mus}:a]aresample=48000,atrim=0:{total:.3f},volume=0.30,afade=t=in:d=1.5,afade=t=out:st={total - 2.5:.3f}:d=2.5[mus]")
     fc.append("[voice][mus]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=9,aresample=48000[aout]")
     OUT.mkdir(parents=True, exist_ok=True); dst = OUT / f"motion-{sid}.mp4"; tmp = OUT / f".motion-{sid}.tmp.mp4"
     args += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", "[aout]", "-t", f"{total:.3f}",
