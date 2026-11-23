@@ -8,7 +8,7 @@ from pathlib import Path
 import edge_tts
 
 ROOT = Path(__file__).resolve().parents[1]
-VOICES = {"hy": [("mms", "mms:facebook/mms-tts-hye"), ("gtts", "gtts:hy"), ("t5", "t5:Edmon02/speecht5_finetuned_hy")],
+VOICES = {"hy": [("kore", "gemini:Kore"), ("aoede", "gemini:Aoede"), ("charon", "gemini:Charon")],
           "en": [("ryan", "en-GB-RyanNeural"), ("sonia", "en-GB-SoniaNeural")]}
 RATE = {"hy": "-6%", "en": "-12%"}
 
@@ -66,7 +66,46 @@ def speak_t5(text, model_id, mp3):
     return []
 
 
+GEMINI_MODELS = ["gemini-2.5-pro-preview-tts", "gemini-2.5-flash-preview-tts", "gemini-3.1-flash-tts-preview"]
+STYLE = ("Read this in natural Eastern Armenian, as a warm, friendly English teacher talking to her followers: "
+         "clear, calm pace, smiling voice. Words in «» are said exactly as written. Text: ")
+
+
+def speak_gemini(text, voice, mp3):
+    import base64, os, time, urllib.request, urllib.error
+    key = os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise RuntimeError("secret GEMINI_API_KEY is empty")
+    body = json.dumps({"contents": [{"parts": [{"text": STYLE + text}]}],
+                       "generationConfig": {"responseModalities": ["AUDIO"],
+                                            "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}).encode()
+    last = None
+    for model in GEMINI_MODELS:
+        for attempt in range(3):
+            req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+                                         data=body, headers={"Content-Type": "application/json", "x-goog-api-key": key})
+            try:
+                with urllib.request.urlopen(req, timeout=120) as r:
+                    part = json.load(r)["candidates"][0]["content"]["parts"][0]["inlineData"]
+                pcm = base64.b64decode(part["data"])
+                rate = int((part.get("mimeType", "").split("rate=") + ["24000"])[1].split(";")[0])
+                raw = str(mp3) + ".pcm"; Path(raw).write_bytes(pcm)
+                subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "s16le", "-ar", str(rate), "-ac", "1", "-i", raw,
+                                "-af", "adelay=80|80", "-b:a", "192k", str(mp3)], check=True)
+                Path(raw).unlink(); print("  model", model, flush=True)
+                return []
+            except urllib.error.HTTPError as e:
+                last = f"{model}: {e.code} {e.read()[:200]!r}"
+                if e.code == 429: time.sleep(25); continue
+                break
+            except Exception as e:
+                last = f"{model}: {e}"; break
+    raise RuntimeError(last)
+
+
 async def speak(text, voice, rate, mp3):
+    if voice.startswith("gemini:"):
+        return speak_gemini(text, voice[7:], mp3)
     if voice.startswith("t5:"):
         return speak_t5(text, voice[3:], mp3)
     if voice.startswith("mms:"):

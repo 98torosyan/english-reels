@@ -15,8 +15,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null && pip install -q edge-tts gTTS soundfile uroman && pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q transformers sentencepiece huggingface_hub && pip install -q 'faster-whisper>=1.1' 'av>=14'
+      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null && pip install -q edge-tts 'faster-whisper>=1.1' 'av<14'
       - run: python tools/sayit_voice.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       - name: Hear the English words back
         run: |
           python - <<'P' || true
