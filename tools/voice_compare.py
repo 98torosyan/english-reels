@@ -16,7 +16,7 @@ def main():
     if os.environ.get("COMPARE_TEXT"):   # "text|voice,voice,…" — a name or a line in several voices
         text, vs = os.environ["COMPARE_TEXT"].split("|")
         global VOICES
-        VOICES = [(f"{re.sub(r'[^a-z]+', '-', v.lower()).strip('-')}", v) for v in vs.split(",")]
+        VOICES = [(f"{re.sub(r'[^a-z0-9]+', '-', v.lower()).strip('-')}", v) for v in vs.split(",")]
         if "~" in text: pass
     else:
         st = next(s for s in json.loads((ROOT / "reels/data/reading.json").read_text(encoding="utf-8"))["stories"] if s["id"] == sys.argv[1])
@@ -25,7 +25,8 @@ def main():
     ref = Path(tempfile.mkdtemp()) / "sonia.mp3"
     asyncio.run(synth("Good morning. Today I will read you a short and happy story about a little girl and her family.", "en-GB-SoniaNeural", "-6%", ref))
     for k, (name, voice) in enumerate(VOICES, 1):
-        say = text
+        say = text; rate = "-10%"
+        if "~" in voice: voice, rate = voice.split("~")   # voice~-20% reads slower
         if "@" in voice: voice, word = voice.split("@"); say = text.replace("Maria", word)   # try another spelling of the name
         mp3 = out / f"compare-{k}-{name}.mp3"
         try:
@@ -34,9 +35,9 @@ def main():
                 if mv._CHATTER is None: asyncio.run(synth("Hello.", "chatterbox:builtin", "-10%", out / "warm.mp3"))
                 w = mv._CHATTER.generate(say, audio_prompt_path=str(ref), exaggeration=0.5, cfg_weight=0.5).squeeze().cpu().numpy()
                 wav = out / "tmp.wav"; sf.write(wav, w, mv._CHATTER.sr)
-                subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(wav), "-af", "atempo=0.93", "-c:a", "libmp3lame", "-q:a", "2", str(mp3)], check=True); wav.unlink()
+                subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(wav), "-af", f"atempo={max(0.6, 1 + int(rate.rstrip('%')) / 100):.2f}", "-c:a", "libmp3lame", "-q:a", "2", str(mp3)], check=True); wav.unlink()
             else:
-                asyncio.run(synth(say, voice, "-10%", mp3))
+                asyncio.run(synth(say, voice, rate, mp3))
             print("ok", k, name)
         except Exception as error:
             print("failed", name, error)
