@@ -36,7 +36,10 @@ async def main(only):
                 out = ROOT / "assets/sayit" / item["id"] / name
                 out.mkdir(parents=True, exist_ok=True)
                 mp3 = out / f"{line['k']}.mp3"
-                words = await speak(line["text"], voice, RATE[line["lang"]], mp3)
+                try:
+                    words = await speak(line["text"], voice, RATE[line["lang"]], mp3)
+                except Exception as e:  # voice not offered: try the next one
+                    print("skip", voice, type(e).__name__, flush=True); mp3.unlink(missing_ok=True); continue
                 if not words:  # no boundaries: take the sound itself
                     d = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(mp3)],
                                              capture_output=True, text=True).stdout)

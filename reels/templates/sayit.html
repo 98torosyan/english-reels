@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<style>
+@font-face{font-family:Inter;src:url("__INTER_FONT__") format("woff2");font-weight:100 900;font-display:block}
+@font-face{font-family:IPA;src:url("__INTER_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0000-00FF}
+@font-face{font-family:IPA;src:url("__INTER_EXT_FONT__") format("woff2");font-weight:100 900;font-display:block;unicode-range:U+0100-02FF}
+@font-face{font-family:Literata;src:url("__LITERATA_FONT__") format("woff2");font-weight:100 900;font-display:block}
+@font-face{font-family:NotoArmenian;src:url("__ARMENIAN_FONT__") format("woff2");font-weight:100 900;font-display:block}
+@font-face{font-family:SignF;src:url("__FRAUNCES_FONT__") format("woff2");font-style:italic;font-weight:100 900;font-display:block}
+:root{--ink:#17183A;--muted:#6B6880;--paper:#F4EFE4;--card:#FFFCF6;--violet:#6A49E2;--lav:#A891F7;--gold:#E9C46A;--gold2:#C99A2E;--bad:#B23F78;--good:#2E9E6A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--paper);color:var(--ink);font-family:Inter,NotoArmenian,sans-serif}
+#bg{position:absolute;inset:0;background:
+  radial-gradient(900px 700px at 85% 8%,#A891F72e,transparent 70%),
+  radial-gradient(800px 700px at 8% 92%,#E9C46A33,transparent 70%),
+  radial-gradient(1200px 900px at 50% 50%,#FFFCF6,transparent 75%),var(--paper)}
+#grain{position:absolute;inset:0;opacity:.35;background-image:radial-gradient(#17183A0a 1px,transparent 1.2px);background-size:7px 7px}
+.sign{position:absolute;top:70px;left:64px;padding-left:16px;border-left:2px solid var(--gold2);z-index:9}
+.sign span{display:block;font:600 13px Inter;letter-spacing:7px;color:var(--gold2)}
+.sign em{display:block;margin-top:4px;font:italic 400 30px SignF,serif;font-variation-settings:"SOFT" 100,"WONK" 1;color:var(--ink)}
+.scene{position:absolute;left:0;right:0;top:0;bottom:0;opacity:0;will-change:transform,opacity}
+.arm{font-family:NotoArmenian,sans-serif}
+/* hook */
+#hook{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:260px}
+#hook .l{font:800 104px/1.18 NotoArmenian;letter-spacing:-1px;text-align:center;opacity:0}
+#hook .l b{color:var(--bad);position:relative;font-weight:800}
+#hook svg{position:absolute;left:-2%;bottom:-18px;width:104%;height:34px;overflow:visible}
+#hook svg path{fill:none;stroke:var(--gold);stroke-width:12;stroke-linecap:round}
+#hook .sub{margin-top:60px;display:flex;gap:22px;opacity:0}
+#hook .sub i{font:italic 500 46px Literata;color:var(--muted);padding:10px 26px;border:2px dashed #17183A26;border-radius:999px}
+/* word */
+.word{display:flex;flex-direction:column;align-items:center;padding-top:300px}
+.en{font:600 150px/1 Literata;letter-spacing:-2px;white-space:nowrap;position:relative}
+.en .ch{display:inline-block;position:relative}
+.en .ch.s:after{content:"";position:absolute;left:8%;right:8%;bottom:-26px;height:8px;border-radius:8px;background:var(--gold);transform:scaleX(var(--k,0));transform-origin:left}
+.ipa{margin-top:58px;font:500 48px IPA;color:var(--muted);letter-spacing:1px}
+.rows{margin-top:70px;width:860px;display:flex;flex-direction:column;gap:30px}
+.row{position:relative;display:flex;align-items:center;gap:34px;padding:28px 40px;border-radius:34px;background:var(--card);border:2px solid #17183A14;box-shadow:0 22px 50px #3a2f1414}
+.row .ic{flex:none;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;color:#fff;font:700 44px Inter}
+.row.bad .ic{background:var(--bad)}
+.row.good .ic{background:var(--good)}
+.row .t{font:700 72px/1.1 NotoArmenian;position:relative}
+.row.bad .t{color:#17183ACC}
+.row.good .t{color:var(--good)}
+.row .strike{position:absolute;left:-6px;top:54%;height:9px;width:calc(100% + 12px);background:var(--bad);border-radius:9px;transform-origin:left;transform:scaleX(0)}
+.row .tag{margin-left:auto;font:600 30px NotoArmenian;color:var(--muted)}
+.syl{margin-top:64px;display:flex;gap:20px;align-items:center}
+.syl .c{font:700 64px Inter;padding:18px 36px;border-radius:26px;border:3px solid #6A49E259;color:var(--violet);background:#FFFCF6}
+.syl .c.st{background:var(--violet);color:#fff;border-color:var(--violet)}
+.syl .dot{width:12px;height:12px;border-radius:50%;background:#17183A33}
+.count{margin-top:56px;display:flex;align-items:center;gap:26px;font:600 40px NotoArmenian;color:var(--muted)}
+.count .d{width:34px;height:34px;border-radius:50%;background:var(--violet)}
+.count .d.x{background:var(--bad)}
+/* outro */
+#outro{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:300px}
+#outro .q{font:800 100px/1.2 NotoArmenian;text-align:center}
+#outro .q b{color:var(--violet)}
+#outro .list{margin-top:70px;display:flex;flex-direction:column;gap:22px;width:760px}
+#outro .it{display:flex;align-items:center;justify-content:space-between;padding:22px 38px;border-radius:28px;background:var(--card);border:2px solid #17183A14;box-shadow:0 16px 40px #3a2f1412}
+#outro .it b{font:600 58px Literata}
+#outro .it span{font:700 50px NotoArmenian;color:var(--good)}
+#outro .ask{margin-top:64px;font:600 44px NotoArmenian;color:var(--ink);padding:20px 44px;border-radius:999px;background:#E9C46A59}
+/* caption */
+#cap{position:absolute;left:90px;right:90px;top:1600px;text-align:center;font:600 50px/1.45 NotoArmenian;color:var(--ink);z-index:8}
+#cap .w{display:inline-block;padding:0 8px;border-radius:12px;color:#17183A66}
+#cap .w.on{color:var(--ink)}
+#cap .w.now{background:var(--violet);color:#fff}
+</style>
+</head>
+<body>
+<div id="bg"></div><div id="grain"></div>
+<div class="sign"><span>GAYANE TOROSYAN</span><em>English Reading Room</em></div>
+<div id="stage"></div>
+<div id="cap"></div>
+<script>
+const $ = (h) => { const d = document.createElement('div'); d.innerHTML = h.trim(); return d.firstChild; };
+const cl = (x) => Math.max(0, Math.min(1, x));
+const ease = (x) => { x = cl(x); return 1 - Math.pow(1 - x, 3); };
+const back = (x) => { x = cl(x); const c = 1.5; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+let D, T, S = {};
+
+window.configure = (data, tl) => {
+  D = data; T = tl;
+  const st = document.getElementById('stage');
+  const hl = D.title_hy.map((l, i) => `<div class="l">${i === 2 ? l.replace(/(սխալ)/, '<b>$1<svg viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M2 7 C 30 2, 60 2, 98 6" pathLength="1"/></svg></b>') : l}</div>`).join('');
+  st.appendChild($(`<div class="scene" id="hook">${hl}<div class="sub">${D.words.map((w) => `<i>${w.en}</i>`).join('')}</div></div>`));
+  D.words.forEach((w, i) => {
+    const letters = [...w.en].map((c, j) => `<span class="ch${w.silent.includes(j) ? ' s' : ''}">${c}</span>`).join('');
+    const syl = w.syll.map((s, j) => `${j ? '<i class="dot"></i>' : ''}<span class="c${j === w.stress ? ' st' : ''}">${s}</span>`).join('');
+    const dots = (n, x) => Array.from({ length: n }, () => `<i class="d${x ? ' x' : ''}"></i>`).join('');
+    st.appendChild($(`<div class="scene word" id="w${i}">
+      <div class="en">${letters}</div><div class="ipa">${w.ipa}</div>
+      <div class="rows">
+        <div class="row bad"><div class="ic">✕</div><div class="t">${w.wrong}<i class="strike"></i></div></div>
+        <div class="row good"><div class="ic">✓</div><div class="t">${w.right}</div></div>
+      </div>
+      <div class="syl">${syl}</div>
+      <div class="count"><span class="cw">${dots(w.count[0], true)}</span><span>→</span><span class="cr">${dots(w.count[1])}</span><span>վանկ</span></div>
+    </div>`));
+  });
+  st.appendChild($(`<div class="scene" id="outro"><div class="q">${D.outro_hy[0]}<br><b>${D.outro_hy[1]}</b></div>
+    <div class="list">${D.words.map((w) => `<div class="it"><b>${w.en}</b><span>${w.right}</span></div>`).join('')}</div>
+    <div class="ask">Գրեք մեկնաբանություններում</div></div>`));
+};
+
+function scene(el, t, a, b) {          // a: in-start, b: out-start (0.45 s each)
+  const k = t < b ? ease((t - a) / 0.5) : 1 - ease((t - b) / 0.45);
+  const y = t < b ? (1 - k) * 60 : -(1 - k) * 60;
+  el.style.opacity = t < a || t > b + 0.45 ? 0 : k;
+  el.style.transform = `translateY(${y}px)`;
+  return t >= a && t <= b + 0.45;
+}
+function pop(el, t, a, d = 0.45) { const k = back((t - a) / d); el.style.opacity = cl((t - a) / (d * 0.6)); el.style.transform = `scale(${0.86 + 0.14 * k})`; }
+
+function caption(t) {
+  const cap = document.getElementById('cap');
+  const line = T.lines.find((l) => l.lang === 'hy' && t >= l.at - 0.15 && t <= l.at + l.len + 0.5);
+  if (!line) { cap.style.opacity = 0; return; }
+  if (cap.dataset.k !== line.k) { cap.dataset.k = line.k; cap.innerHTML = line.tokens.map((w) => `<span class="w">${w.text}</span>`).join(' '); }
+  cap.style.opacity = cl((t - line.at + 0.15) / 0.2) * (1 - cl((t - line.at - line.len - 0.3) / 0.2));
+  const spans = cap.children;
+  line.tokens.forEach((w, i) => {
+    const on = t >= line.at + w.s - 0.04;
+    spans[i].className = 'w' + (on ? ' on' : '') + (on && t < line.at + w.e + 0.06 ? ' now' : '');
+  });
+}
+
+window.seek = (t) => {
+  const hook = document.getElementById('hook');
+  if (scene(hook, t, 0, T.scenes[0].at - 0.45)) {
+    hook.querySelectorAll('.l').forEach((l, i) => { const a = 0.15 + i * 0.22; l.style.opacity = cl((t - a) / 0.35); l.style.transform = `translateY(${(1 - ease((t - a) / 0.5)) * 40}px)`; });
+    const p = hook.querySelector('path'); if (p) { p.style.strokeDasharray = 1; p.style.strokeDashoffset = 1 - ease((t - 1.0) / 0.6); }
+    const sub = hook.querySelector('.sub'); sub.style.opacity = cl((t - 1.4) / 0.4); sub.style.filter = `blur(${(1 - cl((t - 1.4) / 0.6)) * 8 + 5}px)`;
+  }
+  T.scenes.forEach((sc, i) => {
+    const el = document.getElementById(`w${i}`);
+    const end = i + 1 < T.scenes.length ? T.scenes[i + 1].at - 0.45 : T.outro - 0.45;
+    if (!scene(el, t, sc.at, end)) return;
+    const w = D.words[i];
+    pop(el.querySelector('.en'), t, sc.at + 0.1, 0.5);
+    el.querySelector('.ipa').style.opacity = cl((t - sc.en[0]) / 0.3);
+    const bad = el.querySelector('.row.bad'), good = el.querySelector('.row.good');
+    pop(bad, t, sc.at + 0.25);
+    el.querySelector('.strike').style.transform = `scaleX(${ease((t - sc.wrongEnd) / 0.35)})`;
+    bad.style.opacity = Math.min(Number(bad.style.opacity), 1 - 0.45 * cl((t - sc.wrongEnd) / 0.4));
+    pop(good, t, sc.en[0] - 0.15);
+    const syl = el.querySelector('.syl'); syl.style.opacity = cl((t - sc.en[0] + 0.15) / 0.3);
+    const chips = [...el.querySelectorAll('.syl .c')];
+    let lit = -1;
+    sc.plays.forEach(([a, b]) => { if (t >= a && t < b) lit = Math.min(chips.length - 1, Math.floor(((t - a) / (b - a)) * chips.length)); });
+    chips.forEach((c, j) => { const on = j === lit; c.style.transform = `scale(${on ? 1.12 : 1})`; c.style.boxShadow = on ? '0 14px 34px #6A49E255' : 'none'; c.style.transition = 'none'; });
+    const nk = cl((t - sc.note) / 0.6);
+    el.querySelectorAll('.en .ch.s').forEach((c) => { c.style.setProperty('--k', ease(nk)); c.style.opacity = 1 - 0.68 * nk; });
+    const count = el.querySelector('.count'); count.style.opacity = cl((t - sc.note) / 0.35);
+    count.style.transform = `translateY(${(1 - ease((t - sc.note) / 0.5)) * 20}px)`;
+    el.querySelectorAll('.cr .d').forEach((d, j) => { const k = back((t - sc.note - 0.35 - j * 0.12) / 0.35); d.style.transform = `scale(${cl(k) ? k : 0})`; });
+  });
+  const out = document.getElementById('outro');
+  if (scene(out, t, T.outro, T.total + 1)) {
+    out.querySelectorAll('.it').forEach((it, i) => pop(it, t, T.outro + 0.5 + i * 0.18));
+    pop(out.querySelector('.ask'), t, T.outro + 1.3);
+  }
+  caption(t);
+};
+
+window.fit = () => {
+  const bad = [];
+  document.querySelectorAll('.en,.row,.syl,#cap,.q,.list').forEach((e) => { const r = e.getBoundingClientRect(); if (r.width && (r.left < 40 || r.right > 1040)) bad.push(e.className || e.id); });
+  return bad;
+};
+</script>
+</body>
+</html>
