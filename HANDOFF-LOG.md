@@ -168,3 +168,11 @@ Open:
 - Owner wants a new series in the style of a screen recording he sent (simple animation, simple characters) for
   "our Armenian series" — the upload failed (disk full); waiting for it again.
 - Disk in the work machine filled up (repo .git 4–7 GB): clean caches and run git gc when space is low.
+
+## 2026-11-23 — new series idea "Say it right" (branch sayit-sample)
+- Owner wants an English Reading Room series where an Armenian voice explains English pronunciation ("not X but Y"), 30–45 s.
+- Branch sayit-sample: reels/data/sayit.json (sample "silent3": vegetable, comfortable, Wednesday), reels/templates/sayit.html,
+  reels/render_sayit.js (PREVIEW=1 renders silence where the Armenian voice is missing), tools/sayit_voice.py + sayit.yml.
+- Finding: there is NO free Armenian neural voice: edge-tts has no hy-AM voices, gTTS has no "hy", facebook/mms-tts-hye did not load.
+  Proposed to the owner: he records the Armenian lines himself (phone), then we clean and align them. Waiting for his answer.
+- The Armenian text of the sample should be checked by the owner's mother.

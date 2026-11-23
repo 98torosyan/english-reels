@@ -32,8 +32,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--paper);col
 #hook .sub{margin-top:60px;display:flex;gap:22px;opacity:0}
 #hook .sub i{font:italic 500 46px Literata;color:var(--muted);padding:10px 26px;border:2px dashed #17183A26;border-radius:999px}
 /* word */
-.word{display:flex;flex-direction:column;align-items:center;padding-top:300px}
-.en{font:600 150px/1 Literata;letter-spacing:-2px;white-space:nowrap;position:relative}
+.word{display:flex;flex-direction:column;align-items:center;padding-top:400px}
+.en{font:600 172px/1 Literata;letter-spacing:-2px;white-space:nowrap;position:relative}
 .en .ch{display:inline-block;position:relative}
 .en .ch.s:after{content:"";position:absolute;left:8%;right:8%;bottom:-26px;height:8px;border-radius:8px;background:var(--gold);transform:scaleX(var(--k,0));transform-origin:left}
 .ipa{margin-top:58px;font:500 48px IPA;color:var(--muted);letter-spacing:1px}
@@ -42,7 +42,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--paper);col
 .row .ic{flex:none;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;color:#fff;font:700 44px Inter}
 .row.bad .ic{background:var(--bad)}
 .row.good .ic{background:var(--good)}
-.row .t{font:700 72px/1.1 NotoArmenian;position:relative}
+.row .t{font:700 80px/1.1 NotoArmenian;position:relative}
 .row.bad .t{color:#17183ACC}
 .row.good .t{color:var(--good)}
 .row .strike{position:absolute;left:-6px;top:54%;height:9px;width:calc(100% + 12px);background:var(--bad);border-radius:9px;transform-origin:left;transform:scaleX(0)}
@@ -51,8 +51,9 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--paper);col
 .syl .c{font:700 64px Inter;padding:18px 36px;border-radius:26px;border:3px solid #6A49E259;color:var(--violet);background:#FFFCF6}
 .syl .c.st{background:var(--violet);color:#fff;border-color:var(--violet)}
 .syl .dot{width:12px;height:12px;border-radius:50%;background:#17183A33}
-.count{margin-top:56px;display:flex;align-items:center;gap:26px;font:600 40px NotoArmenian;color:var(--muted)}
-.count .d{width:34px;height:34px;border-radius:50%;background:var(--violet)}
+.count{margin-top:70px;display:flex;align-items:center;gap:26px;font:600 40px NotoArmenian;color:var(--muted)}
+.count span{display:flex;gap:12px;align-items:center}
+.count .d{display:inline-block;width:34px;height:34px;border-radius:50%;background:var(--violet)}
 .count .d.x{background:var(--bad)}
 /* outro */
 #outro{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:300px}
@@ -86,13 +87,13 @@ window.configure = (data, tl) => {
   D = data; T = tl;
   const st = document.getElementById('stage');
   const hl = D.title_hy.map((l, i) => `<div class="l">${i === 2 ? l.replace(/(սխալ)/, '<b>$1<svg viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M2 7 C 30 2, 60 2, 98 6" pathLength="1"/></svg></b>') : l}</div>`).join('');
-  st.appendChild($(`<div class="scene" id="hook">${hl}<div class="sub">${D.words.map((w) => `<i>${w.en}</i>`).join('')}</div></div>`));
+  st.appendChild($(`<div class="scene" id="hook">${hl}</div>`));
   D.words.forEach((w, i) => {
     const letters = [...w.en].map((c, j) => `<span class="ch${w.silent.includes(j) ? ' s' : ''}">${c}</span>`).join('');
     const syl = w.syll.map((s, j) => `${j ? '<i class="dot"></i>' : ''}<span class="c${j === w.stress ? ' st' : ''}">${s}</span>`).join('');
     const dots = (n, x) => Array.from({ length: n }, () => `<i class="d${x ? ' x' : ''}"></i>`).join('');
     st.appendChild($(`<div class="scene word" id="w${i}">
-      <div class="en">${letters}</div><div class="ipa">${w.ipa}</div>
+      <div class="en" style="font-size:${Math.min(172, Math.round(1580 / w.en.length))}px">${letters}</div><div class="ipa">${w.ipa}</div>
       <div class="rows">
         <div class="row bad"><div class="ic">✕</div><div class="t">${w.wrong}<i class="strike"></i></div></div>
         <div class="row good"><div class="ic">✓</div><div class="t">${w.right}</div></div>
@@ -133,7 +134,6 @@ window.seek = (t) => {
   if (scene(hook, t, 0, T.scenes[0].at - 0.45)) {
     hook.querySelectorAll('.l').forEach((l, i) => { const a = 0.15 + i * 0.22; l.style.opacity = cl((t - a) / 0.35); l.style.transform = `translateY(${(1 - ease((t - a) / 0.5)) * 40}px)`; });
     const p = hook.querySelector('path'); if (p) { p.style.strokeDasharray = 1; p.style.strokeDashoffset = 1 - ease((t - 1.0) / 0.6); }
-    const sub = hook.querySelector('.sub'); sub.style.opacity = cl((t - 1.4) / 0.4); sub.style.filter = `blur(${(1 - cl((t - 1.4) / 0.6)) * 8 + 5}px)`;
   }
   T.scenes.forEach((sc, i) => {
     const el = document.getElementById(`w${i}`);
@@ -164,6 +164,10 @@ window.seek = (t) => {
     pop(out.querySelector('.ask'), t, T.outro + 1.3);
   }
   caption(t);
+};
+
+window.shrink = () => {
+  document.querySelectorAll('.en').forEach((e) => { let f = parseFloat(e.style.fontSize); while (e.scrollWidth > 880 && f > 90) { f -= 2; e.style.fontSize = `${f}px`; } });
 };
 
 window.fit = () => {

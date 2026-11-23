@@ -17,8 +17,18 @@ const norm = (s) => s.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
 // Trim the clip to its real sound (silence detection) and spread the voice's word marks over the displayed words.
 function clip(id, line) {
   const dir = path.join(utils.ROOT, 'assets', 'sayit', id, line.lang === 'hy' ? HY : EN);
-  const file = path.join(dir, `${line.k}.mp3`);
-  const timing = JSON.parse(fs.readFileSync(path.join(dir, `${line.k}.json`), 'utf8'));
+  let file = path.join(dir, `${line.k}.mp3`);
+  let timing;
+  if (!fs.existsSync(file) && process.env.PREVIEW === '1') {   // layout preview before the Armenian voice exists: silence of a natural length
+    const len = Math.max(1.2, line.text.length / 13.5);
+    file = path.join(utils.ROOT, '.render-work', `sayit-silence-${line.k}.mp3`);
+    spawnSync(utils.FFmpeg, ['-y', '-v', 'error', '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=mono', '-t', String(len + 0.2), '-af', 'volume=0', file]);
+    timing = { text: line.text, words: [] };
+    const tokens = line.text.split(' '); const total = line.text.length; let acc = 0;
+    timing.words = tokens.map((w) => { const s0 = 0.1 + (len * acc) / total; acc += w.length + 1; return [s0, 0.1 + (len * acc) / total, w]; });
+    return { file, start: 0.1, end: 0.1 + len, len, tokens: timing.words.map(([a, b, w]) => ({ text: w, s: a - 0.1, e: b - 0.1 })) };
+  }
+  timing = JSON.parse(fs.readFileSync(path.join(dir, `${line.k}.json`), 'utf8'));
   if (timing.text !== line.text) throw new Error(`${id}/${line.k}: audio is for another text; run the voices again.`);
   const sd = spawnSync(utils.FFmpeg, ['-hide_banner', '-i', file, '-af', 'silencedetect=n=-42dB:d=0.12', '-f', 'null', '-'], { encoding: 'utf8' }).stderr;
   const dur = Number(sd.match(/Duration: (\d+):(\d+):([\d.]+)/).slice(1).reduce((a, x, i) => a + Number(x) * [3600, 60, 1][i], 0));
@@ -102,6 +112,7 @@ async function main() {
     await page.evaluate(({ d, t }) => window.configure(d, t), { d: item, t: plain });
     await page.evaluate(() => Promise.all([document.fonts.load('800 80px NotoArmenian', 'Աբգ'), document.fonts.load('600 80px Literata', 'Ab'),
       document.fonts.load('500 40px IPA', 'ˈʌəʒɪ'), document.fonts.load('italic 30px SignF', 'Ab')]).then(() => document.fonts.ready));
+    await page.evaluate(() => window.shrink());
     if (process.env.STILLS) {
       for (const s of process.env.STILLS.split(',')) {
         await page.evaluate((x) => window.seek(x), Number(s));
