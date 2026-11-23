@@ -1,1 +1,1 @@
-{"text": "On a cold December night, Clara went skating in Vienna.", "words": [[0.16, 0.22], [0.26, 0.29], [0.34, 0.54], [0.58, 0.92], [0.98, 1.16], [1.26, 1.5], [1.56, 1.7], [1.74, 2.04], [2.08, 2.14], [2.18, 2.651]], "tag": "chatterbox:builtin", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
+{"text": "On a cold December night, Clara went skating in Vienna.", "words": [[0.06, 0.19], [0.19, 0.26], [0.26, 0.53], [0.53, 1.07], [1.07, 1.48], [1.48, 1.82], [1.82, 2.09], [2.09, 2.57], [2.57, 2.7], [2.7, 3.18]], "tag": "chatterbox:builtin", "rate": "-22%"}
