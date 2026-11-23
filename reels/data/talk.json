@@ -16,7 +16,8 @@
     },
     "Narrator": {
       "voice": "chatterbox:builtin",
-      "colour": "#7A4A2A"
+      "colour": "#7A4A2A",
+      "rate": "-22%"
     }
   },
   "talks": [
