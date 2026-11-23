@@ -24,14 +24,14 @@ def timeline(t):
     lines, scenes, at = [], [], 0.7
     vdir = ROOT / "assets" / "talk" / t["id"]; n = 0
     for s, sc in enumerate(t["scenes"]):
-        if s: at += 0.75
+        if s: at += 1.0
         s0 = at
         for _, text in sc["lines"]:
             j = json.loads((vdir / f"v{n}.json").read_text())
             assert j["text"] == text.replace("[", "").replace("]", ""), f"voice {n} is for another text"
             a, b = j["words"][0][0], j["words"][-1][1]
             lines.append({"n": n, "text": text, "scene": s, "at": at, "end": at + (b - a), "from": a, "to": b, "title": n == 0})
-            at += (b - a) + (0.85 if n == 0 else 0.5); n += 1
+            at += (b - a) + (1.0 if n == 0 else 0.8); n += 1   # calm pauses: time to read and to listen
         scenes.append(s0)
     total = lines[-1]["end"] + 2.6
     return lines, scenes, total
