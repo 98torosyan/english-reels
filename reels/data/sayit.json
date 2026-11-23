@@ -1,0 +1,29 @@
+{
+  "series": "Say it right",
+  "note": "Armenian narrator explains English pronunciation. Lines with lang hy are read by the Armenian voice, en by the British voice.",
+  "items": [
+    {
+      "id": "silent3",
+      "title_hy": ["Այս 3 բառը", "շատերն են", "սխալ ասում"],
+      "outro_hy": ["Ո՞ր մեկն էիք", "սխալ ասում"],
+      "lines": [
+        {"k": "intro", "lang": "hy", "text": "Այս երեք բառը շատերն են սխալ արտասանում։ Ստուգեք ինքներդ ձեզ։"},
+        {"k": "w1a", "lang": "hy", "text": "Առաջինը՝ ոչ թե «վեգետաբլ», այլ՝"},
+        {"k": "w1", "lang": "en", "text": "Vegetable."},
+        {"k": "w1b", "lang": "hy", "text": "Երեք վանկ, ոչ թե չորս։"},
+        {"k": "w2a", "lang": "hy", "text": "Երկրորդը՝ ոչ թե «կոմֆորտաբլ», այլ՝"},
+        {"k": "w2", "lang": "en", "text": "Comfortable."},
+        {"k": "w2b", "lang": "hy", "text": "Մեջտեղի «օր»-ը կուլ է գնում։"},
+        {"k": "w3a", "lang": "hy", "text": "Եվ երրորդը՝ ոչ թե «վեդնեսդեյ», այլ՝"},
+        {"k": "w3", "lang": "en", "text": "Wednesday."},
+        {"k": "w3b", "lang": "hy", "text": "Առաջին «դ»-ն չի կարդացվում։"},
+        {"k": "outro", "lang": "hy", "text": "Ո՞ր մեկն էիք սխալ ասում։ Գրեք մեկնաբանություններում։"}
+      ],
+      "words": [
+        {"en": "vegetable", "silent": [3], "wrong": "վեգետաբլ", "right": "վե՛ջթըբըլ", "syll": ["vej", "tə", "bəl"], "stress": 0, "ipa": "/ˈvedʒ.tə.bəl/", "count": [4, 3]},
+        {"en": "comfortable", "silent": [4, 5], "wrong": "կոմֆորտաբլ", "right": "քա՛մֆթըբըլ", "syll": ["kumf", "tə", "bəl"], "stress": 0, "ipa": "/ˈkʌmf.tə.bəl/", "count": [4, 3]},
+        {"en": "Wednesday", "silent": [2], "wrong": "վեդնեսդեյ", "right": "ուե՛նզդեյ", "syll": ["wenz", "day"], "stress": 0, "ipa": "/ˈwenz.deɪ/", "count": [3, 2]}
+      ]
+    }
+  ]
+}

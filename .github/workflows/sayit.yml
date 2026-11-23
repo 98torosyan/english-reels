@@ -1,0 +1,32 @@
+name: Say it right voices
+on:
+  push:
+    branches: [sayit-sample]
+    paths: [reels/data/sayit.json, tools/sayit_voice.py, .github/workflows/sayit.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  voices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null && pip install -q edge-tts faster-whisper
+      - run: python tools/sayit_voice.py
+      - name: Hear the English words back
+        run: |
+          python - <<'P'
+          from faster_whisper import WhisperModel
+          from pathlib import Path
+          m = WhisperModel("small.en", compute_type="int8")
+          for f in sorted(Path("assets/sayit").glob("*/*/w[0-9].mp3")):
+              segs, _ = m.transcribe(str(f), language="en")
+              print(f, "->", " ".join(s.text.strip() for s in segs))
+          P
+      - run: |
+          git config user.name 98torosyan; git config user.email 98torosyan@gmail.com
+          git add assets/sayit && git commit -qm "Say it right: voices" && git push -q || true
