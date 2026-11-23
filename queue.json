@@ -3623,7 +3623,7 @@
       "content_id": "mila-meet",
       "title": "Meet Mila and Leo story",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "render": {
         "story_card": {
           "picture": "assets/reading/mila-meet/1.jpg",
@@ -3635,7 +3635,10 @@
       },
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-23-story-mila-meet/story.mp4"
-      }
+      },
+      "hashtags": [],
+      "published_at": "2026-11-23T11:05+04:00",
+      "ig_media_id": "18086577461339309"
     },
     {
       "id": "2026-11-23-classic-selfish-giant",
