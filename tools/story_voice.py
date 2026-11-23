@@ -18,6 +18,8 @@ def main():
     for n, (who, raw) in enumerate(lines):
         text = raw.replace("[", "").replace("]", ""); voice = data["people"][who]["voice"]
         speed = data["people"][who].get("rate", rate)   # a speaker may read slower (the narrator: calm and clear)
+        own = t.get("voices", {}).get(who)   # a story may give a speaker another voice: {"Narrator": {"voice": ..., "rate": ...}}
+        if own: voice, speed = own["voice"], own.get("rate", rate)
         mp3, tj = out / f"v{n}.mp3", out / f"v{n}.json"
         if mp3.exists() and tj.exists():
             j = json.loads(tj.read_text())

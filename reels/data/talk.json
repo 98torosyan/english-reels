@@ -386,6 +386,7 @@
     {
       "id": "red-mitten",
       "kind": "story",
+      "voices": {"Narrator": {"voice": "en-GB-SoniaNeural", "rate": "-10%"}},
       "title": "The Red Mitten",
       "level": "A2",
       "music": "new/snow-celesta.m4a",

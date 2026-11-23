@@ -59,7 +59,7 @@ def main():
         if sc < PASS:
             print(f"redo {n}: wanted «{text}», heard «{h}» ({sc:.2f})")
             from make_voice import synth, align
-            voice = data["people"][who]["voice"]
+            voice = (t.get("voices", {}).get(who) or data["people"][who])["voice"]
             words = align(text.split(), asyncio.run(synth(text, voice, "-6%", out / f"v{n}.mp3")))
             (out / f"v{n}.json").write_text(json.dumps({"text": text, "words": words, "tag": voice}), encoding="utf-8")
             h = heard(n); sc = fair_score(text, h)
