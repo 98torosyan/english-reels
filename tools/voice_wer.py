@@ -1,8 +1,9 @@
 """How clearly each sample is heard: faster-whisper (medium.en) word error rate against the text."""
-import re, sys
+import re
 from pathlib import Path
 from faster_whisper import WhisperModel
-sys.path.insert(0, str(Path(__file__).resolve().parent)); from voice_samples import TEXT
+TEXT = ("It is a cold, snowy day. Mila and Leo play in the park. They throw snowballs and laugh. "
+        "Then Leo looks at his hands. 'Oh no, my red mitten is lost!' Then Toffee runs to them. 'Good girl, Toffee!' says Leo.")
 norm = lambda s: re.sub(r"[^a-z' ]", " ", s.lower().replace("’", "'")).split()
 ref = norm(TEXT); m = WhisperModel("medium.en", compute_type="int8")
 def wer(a, b):
