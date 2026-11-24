@@ -3706,8 +3706,8 @@
       "kind": "reading",
       "content_id": "mila-mitten",
       "title": "Daily reading 24",
-      "caption": "Read and listen in English: The lost mitten\nԿարդանք միասին · Daily reading\nThe lost mitten · Կորած թաթմանը (A1)\n\nIt is a cold, snowy day. Mila and Leo play in the park. They throw snowballs and laugh. Then Leo looks at his hands. 'Oh no, my red mitten is lost!' They look under the trees and behind the bench. Then Toffee runs to them. The red mitten is in her mouth! 'Good girl, Toffee!' says Leo.\n\nQuestion: Do you like snow? What do you do on a snowy day? Answer in English in the comments!\n\nԹարգմանություն՝\nՑուրտ, ձյունառատ օր է։ Միլան ու Լեոն խաղում են այգում։ Նրանք ձնագնդիներ են նետում ու ծիծաղում։ Հետո Լեոն նայում է իր ձեռքերին։ «Վա՜յ, իմ կարմիր թաթմանը կորել է»։ Նրանք փնտրում են ծառերի տակ ու նստարանի հետևում։ Հետո Թոֆին վազում է նրանց մոտ։ Կարմիր թաթմանը նրա բերանում է։ «Ապրե՛ս, Թոֆի»,— ասում է Լեոն։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#englishpractice #englishlistening #readingpractice #englishshorts #անգլերենսովորել",
-      "review_status": "staged",
+      "caption": "Read and listen in English: Read and listen in English: The lost mitten\nRead and listen in English: The lost mitten\nԿարդանք միասին · Daily reading\nThe lost mitten · Կորած թաթմանը (A1)\n\nIt is a cold, snowy day. Mila and Leo play in the park. They throw snowballs and laugh. Then Leo looks at his hands. 'Oh no, my red mitten is lost!' They look under the trees and behind the bench. Then Toffee runs to them. The red mitten is in her mouth! 'Good girl, Toffee!' says Leo.\n\nQuestion: Do you like snow? What do you do on a snowy day? Answer in English in the comments!\n\nԹարգմանություն՝\nՑուրտ, ձյունառատ օր է։ Միլան ու Լեոն խաղում են այգում։ Նրանք ձնագնդիներ են նետում ու ծիծաղում։ Հետո Լեոն նայում է իր ձեռքերին։ «Վա՜յ, իմ կարմիր թաթմանը կորել է»։ Նրանք փնտրում են ծառերի տակ ու նստարանի հետևում։ Հետո Թոֆին վազում է նրանց մոտ։ Կարմիր թաթմանը նրա բերանում է։ «Ապրե՛ս, Թոֆի»,— ասում է Լեոն։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#englishteacher #easyenglish #listeningpractice #englishvideo #անգլերենսովորել",
+      "review_status": "published",
       "thumb_offset": 1400,
       "render": {
         "reading": "mila-mitten",
@@ -3716,7 +3716,16 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-reading-mila-mitten/reading-mila-mitten.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-reading-mila-mitten/cover.jpg"
-      }
+      },
+      "hashtags": [
+        "#englishteacher",
+        "#easyenglish",
+        "#listeningpractice",
+        "#englishvideo",
+        "#անգլերենսովորել"
+      ],
+      "published_at": "2026-11-24T18:47+04:00",
+      "ig_media_id": "18104485862067553"
     },
     {
       "id": "2026-11-24-classic-don-quixote",
@@ -3758,7 +3767,7 @@
       "content_id": "mila-mitten",
       "title": "The lost mitten story",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "render": {
         "story_card": {
           "picture": "assets/reading/mila-mitten/1.jpg",
@@ -3771,7 +3780,9 @@
       "hashtags": [],
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-story-mila-mitten/story.mp4"
-      }
+      },
+      "published_at": "2026-11-24T18:47+04:00",
+      "ig_media_id": "18139669105655833"
     },
     {
       "id": "2026-11-24-story-don-quixote",
