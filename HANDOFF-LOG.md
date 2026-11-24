@@ -168,3 +168,7 @@ Open:
 - Owner wants a new series in the style of a screen recording he sent (simple animation, simple characters) for
   "our Armenian series" — the upload failed (disk full); waiting for it again.
 - Disk in the work machine filled up (repo .git 4–7 GB): clean caches and run git gc when space is low.
+- Mila & Leo: owner fixed the slot — 15:00 every day is Mila & Leo, mornings (10:30) are Ani. Lessons 2–4 (mila-mitten,
+  mila-dinosaur, mila-chocolate) added: sheets → reading-sheets.yml (branch-only cutter), voice chatterbox:sonia, queue
+  Nov 24/25/26 15:00 + stories 15:30. Mitten rendered locally and pushed to media; the other two by render-ahead.
+  Lesson 5 (night sky) sheet still to come; lessons 6–10 need sheets.

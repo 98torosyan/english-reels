@@ -1,0 +1,35 @@
+name: Reading sheets to pictures
+on:
+  push:
+    branches-ignore: [main]
+    paths: ["assets/reading/*/sheet.png", ".github/workflows/reading-sheets.yml"]
+permissions:
+  contents: write
+jobs:
+  cut:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Real-ESRGAN (CPU)
+        run: |
+          pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          pip install -q spandrel pillow numpy
+          mkdir -p weights
+          curl -sSLf -o weights/realesr-animevideov3.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-animevideov3.pth
+          curl -sSLf -o weights/realesr-general-x4v3.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-general-x4v3.pth
+      - name: Cut the sheets that have no pictures yet
+        run: |
+          for s in assets/reading/*/sheet.png; do d=$(dirname "$s"); [ -f "$d/6.jpg" ] && continue; cp "$s" /tmp/sheet.png
+            python tools/reading_panels.py "$(basename "$d")" /tmp/sheet.png; done
+      - name: Save
+        run: |
+          git add assets/reading
+          if ! git diff --cached --quiet; then
+            git config user.name "$(git log -1 --format=%an)"; git config user.email "$(git log -1 --format=%ae)"
+            git commit -qm "Ընթերցանության նկարներ"
+            for k in 1 2 3 4 5; do git pull -q --rebase && git push -q && break; sleep 7; done
+          fi

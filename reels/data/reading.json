@@ -362,6 +362,186 @@
       ],
       "en": "This is Mila. She is nine, and she has red curly hair. She loves drawing. This is her little brother, Leo. He is six, and he loves dinosaurs. They have a fluffy cat. Her name is Toffee. Every day, Mila draws, Leo plays, and Toffee sleeps. 'We are a happy family!' says Leo.",
       "hy": "Սա Միլան է։ Նա ինը տարեկան է, և նա կարմիր խուճուճ մազեր ունի։ Նա սիրում է նկարել։ Սա նրա փոքր եղբայրն է՝ Լեոն։ Նա վեց տարեկան է և սիրում է դինոզավրեր։ Նրանք մի փափկամազ կատու ունեն։ Նրա անունը Թոֆի է։ Ամեն օր Միլան նկարում է, Լեոն խաղում է, իսկ Թոֆին քնում է։ «Մենք երջանիկ ընտանիք ենք»,— ասում է Լեոն։"
+    },
+    {
+      "id": "mila-mitten",
+      "number": 24,
+      "title": "The lost mitten",
+      "title_hy": "Կորած թաթմանը",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        13,
+        18,
+        31,
+        40,
+        52
+      ],
+      "en": "It is a cold, snowy day. Mila and Leo play in the park. They throw snowballs and laugh. Then Leo looks at his hands. 'Oh no, my red mitten is lost!' They look under the trees and behind the bench. Then Toffee runs to them. The red mitten is in her mouth! 'Good girl, Toffee!' says Leo.",
+      "hy": "Ցուրտ, ձյունառատ օր է։ Միլան ու Լեոն խաղում են այգում։ Նրանք ձնագնդիներ են նետում ու ծիծաղում։ Հետո Լեոն նայում է իր ձեռքերին։ «Վա՜յ, իմ կարմիր թաթմանը կորել է»։ Նրանք փնտրում են ծառերի տակ ու նստարանի հետևում։ Հետո Թոֆին վազում է նրանց մոտ։ Կարմիր թաթմանը նրա բերանում է։ «Ապրե՛ս, Թոֆի»,— ասում է Լեոն։"
+    },
+    {
+      "id": "mila-dinosaur",
+      "number": 25,
+      "title": "Dinosaur day",
+      "title_hy": "Դինոզավրերի օրը",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        9,
+        16,
+        32,
+        41,
+        50
+      ],
+      "en": "Today, Dad takes Mila and Leo to the museum. Leo is very excited. 'Dinosaurs!' he shouts. In a big room, there is a huge dinosaur. It is very tall, with long teeth. Leo opens his mouth. 'It's bigger than our house!' Mila sits down and draws it in her sketchbook. Leo says, 'This is the best day ever!'",
+      "hy": "Այսօր հայրիկը Միլային ու Լեոյին տանում է թանգարան։ Լեոն շատ ոգևորված է։ «Դինոզավրե՜ր»,— բղավում է նա։ Մի մեծ սրահում հսկայական դինոզավր կա։ Այն շատ բարձր է, երկար ատամներով։ Լեոն բերանը բացում է. «Այն մեր տնից էլ մեծ է»։ Միլան նստում է և նկարում այն իր նկարչական ալբոմում։ Լեոն ասում է. «Սա իմ կյանքի ամենալավ օրն է»։"
+    },
+    {
+      "id": "mila-chocolate",
+      "number": 26,
+      "title": "Hot chocolate",
+      "title_hy": "Տաք շոկոլադ",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        10,
+        17,
+        21,
+        33,
+        50
+      ],
+      "en": "It is a cold winter evening. Mum makes hot chocolate. Mila puts the milk in a pan. Leo adds the chocolate. 'Can I have marshmallows, please?' asks Leo. 'Yes, you can,' says Mum. They sit by the window and drink. Outside, it is snowing. Inside, it is warm and sweet. Toffee sleeps on Leo's lap.",
+      "hy": "Ձմեռային ցուրտ երեկո է։ Մայրիկը տաք շոկոլադ է պատրաստում։ Միլան կաթը լցնում է կաթսայի մեջ։ Լեոն ավելացնում է շոկոլադը։ «Կարո՞ղ եմ մարշմելոու ուտել, խնդրում եմ»,— հարցնում է Լեոն։ «Այո, կարող ես»,— ասում է մայրիկը։ Նրանք նստում են պատուհանի մոտ ու խմում։ Դրսում ձյուն է գալիս։ Ներսում տաք է ու քաղցր։ Թոֆին քնում է Լեոյի գրկում։"
+    },
+    {
+      "id": "mila-cake",
+      "number": 27,
+      "title": "Baking a cake",
+      "title_hy": "Տորթ ենք թխում",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        15,
+        22,
+        36,
+        43,
+        53
+      ],
+      "en": "On Sunday, Mum, Mila and Leo make a cake. They have flour, eggs and milk. Mila breaks an egg into the bowl. Leo adds the flour. Puff! A white cloud! Now his face is white too. Mum puts the cake in the oven. Soon, the cake is ready, with red strawberries on top. 'Mmm, it's yummy!' says Leo. Toffee wants some too!",
+      "hy": "Կիրակի օրը մայրիկը, Միլան ու Լեոն տորթ են պատրաստում։ Նրանք ունեն ալյուր, ձու ու կաթ։ Միլան ձուն կոտրում է ամանի մեջ։ Լեոն ավելացնում է ալյուրը։ Փո՜ւֆ։ Սպիտակ ամպ։ Հիմա նրա դեմքն էլ է սպիտակ։ Մայրիկը տորթը դնում է ջեռոցը։ Շուտով տորթը պատրաստ է՝ վրան կարմիր ելակներով։ «Մմմ, համեղ է»,— ասում է Լեոն։ Թոֆին էլ է ուզում։"
+    },
+    {
+      "id": "mila-sledge",
+      "number": 28,
+      "title": "Sledging on the hill",
+      "title_hy": "Սահնակով բլրից",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        11,
+        22,
+        32,
+        43,
+        53
+      ],
+      "en": "Mila and Leo pull their red sledge up the snowy hill. At the top, they sit down. 'Ready, steady, go!' says Mila. They go down the hill very, very fast. Oh no! The sledge turns over, and they fall into the soft snow. Leo is white like a snowman. They laugh and laugh. In the evening, they walk home, cold and happy.",
+      "hy": "Միլան ու Լեոն իրենց կարմիր սահնակը քաշում են ձյունոտ բլրի վրա։ Վերևում նրանք նստում են։ «Մեկ, երկու, երեք, գնացի՜նք»,— ասում է Միլան։ Նրանք շատ-շատ արագ սահում են բլրից ներքև։ Վա՜յ։ Սահնակը շրջվում է, և նրանք ընկնում են փափուկ ձյան մեջ։ Լեոն ձնեմարդու պես սպիտակ է։ Նրանք ծիծաղում են ու ծիծաղում։ Երեկոյան նրանք տուն են գնում՝ մրսած, բայց երջանիկ։"
+    },
+    {
+      "id": "mila-zoo",
+      "number": 29,
+      "title": "At the zoo",
+      "title_hy": "Կենդանաբանական այգում",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        14,
+        26,
+        36,
+        47,
+        54
+      ],
+      "en": "It is a sunny autumn day. Dad, Mila and Leo go to the zoo. First, they see a tall giraffe. It eats leaves from a tree. Then, a funny monkey hangs from a branch. Mila laughs. A big lion is asleep in the sun. 'Shh!' says Leo. Mila draws the giraffe in her sketchbook. Dad buys Leo a toy giraffe. 'Thank you, Dad!'",
+      "hy": "Արևոտ աշնանային օր է։ Հայրիկը, Միլան ու Լեոն գնում են կենդանաբանական այգի։ Սկզբում նրանք տեսնում են բարձրահասակ ընձուղտ։ Այն ծառի տերևներ է ուտում։ Հետո մի ծիծաղելի կապիկ կախվում է ճյուղից։ Միլան ծիծաղում է։ Մեծ առյուծը քնած է արևի տակ։ «Սո՜ւս»,— ասում է Լեոն։ Միլան ընձուղտին նկարում է իր ալբոմում։ Հայրիկը Լեոյի համար խաղալիք ընձուղտ է գնում։ «Շնորհակալություն, հայրիկ»։"
+    },
+    {
+      "id": "mila-tooth",
+      "number": 30,
+      "title": "Leo's wobbly tooth",
+      "title_hy": "Լեոյի շարժվող ատամը",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        9,
+        15,
+        33,
+        39,
+        48
+      ],
+      "en": "At breakfast, Leo touches his front tooth. 'It's wobbly!' He bites an apple very carefully. Then, oh! The tooth is in his hand. Leo smiles, and there is a gap in his smile. Everyone claps. 'You are so brave!' At night, Leo puts the tooth under his pillow. In the morning, he finds a shiny coin!",
+      "hy": "Նախաճաշի ժամանակ Լեոն դիպչում է իր առջևի ատամին։ «Ատամս շարժվում է»։ Նա շատ զգույշ կծում է խնձորը։ Հետո՝ օ՜։ Ատամը նրա ձեռքում է։ Լեոն ժպտում է, և նրա ժպիտի մեջ մի բացվածք կա։ Բոլորը ծափահարում են։ «Դու շատ քաջ ես»։ Գիշերը Լեոն ատամը դնում է բարձի տակ։ Առավոտյան նա փայլուն մետաղադրամ է գտնում։"
+    },
+    {
+      "id": "mila-village",
+      "number": 31,
+      "title": "A day in the village",
+      "title_hy": "Մի օր գյուղում",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        19,
+        24,
+        31,
+        43,
+        49
+      ],
+      "en": "Today, Mila and Leo visit Grandpa in his village. He opens the gate and gives them a big hug. Leo runs after the hens. Mila finds brown eggs in the hay. Grandpa puts Leo on his shoulders, and Leo picks a red apple. Grandpa's big dog is very friendly. In the evening, they eat lavash, cheese and apples. 'I love the village!' says Mila.",
+      "hy": "Այսօր Միլան ու Լեոն գնում են պապիկի մոտ՝ գյուղ։ Պապիկը բացում է դարպասը և ամուր գրկում նրանց։ Լեոն վազում է հավերի հետևից։ Միլան խոտի մեջ շագանակագույն ձվեր է գտնում։ Պապիկը Լեոյին նստեցնում է ուսերին, և Լեոն մի կարմիր խնձոր է քաղում։ Պապիկի մեծ շունը շատ ընկերասեր է։ Երեկոյան նրանք լավաշ, պանիր ու խնձոր են ուտում։ «Ես սիրում եմ գյուղը»,— ասում է Միլան։"
+    },
+    {
+      "id": "mila-goldfish",
+      "number": 32,
+      "title": "The goldfish",
+      "title_hy": "Ոսկե ձկնիկը",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        13,
+        24,
+        31,
+        40,
+        55
+      ],
+      "en": "Dad, Mila and Leo go to a pet shop. There are fish everywhere! Leo looks at the orange goldfish. 'Can we have one, please?' Dad smiles and buys a little goldfish. At home, Mila puts it in a round bowl. Toffee looks at the fish with big eyes. 'No, Toffee, it's our friend!' says Leo. Leo gives the fish its food, and Mila draws it.",
+      "hy": "Հայրիկը, Միլան ու Լեոն գնում են կենդանիների խանութ։ Ամենուր ձկներ են։ Լեոն նայում է նարնջագույն ոսկե ձկնիկներին։ «Կարո՞ղ ենք մեկը վերցնել, խնդրում եմ»։ Հայրիկը ժպտում է և մի փոքրիկ ոսկե ձկնիկ է գնում։ Տանը Միլան այն դնում է կլոր ակվարիումի մեջ։ Թոֆին մեծ-մեծ աչքերով նայում է ձկնիկին։ «Ո՛չ, Թոֆի, սա մեր ընկերն է»,— ասում է Լեոն։ Լեոն ձկնիկին կեր է տալիս, իսկ Միլան նկարում է այն։"
+    },
+    {
+      "id": "mila-toffee",
+      "number": 33,
+      "title": "Where is Toffee?",
+      "title_hy": "Ո՞ւր է Թոֆին",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        15,
+        23,
+        28,
+        34,
+        48
+      ],
+      "en": "It is dinner time for Toffee, but where is she? Mila looks at her bowl. Leo looks under the sofa with a torch. Mila looks behind the curtains. Leo opens the wardrobe. No Toffee! Then Mila opens the big basket. There she is, asleep on the warm blankets! 'Toffee, we love you!' says Leo.",
+      "hy": "Թոֆիի ընթրիքի ժամն է, բայց ո՞ւր է նա։ Միլան նայում է նրա ամանին։ Լեոն լապտերով նայում է բազմոցի տակ։ Միլան նայում է վարագույրների հետևում։ Լեոն բացում է պահարանը։ Թոֆին չկա։ Հետո Միլան բացում է մեծ զամբյուղը։ Ահա նա՝ քնած տաք ծածկոցների վրա։ «Թոֆի, մենք քեզ սիրում ենք»,— ասում է Լեոն։"
     }
   ]
 }
