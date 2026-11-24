@@ -3260,6 +3260,72 @@
       "pronounce": {
         "Maria": "Mariya"
       }
+    },
+    {
+      "id": "classic-wizard-oz",
+      "style": "2d",
+      "title": "The Wizard of Oz",
+      "title_hy": "Օզի կախարդը",
+      "level": "A2",
+      "voice": "en-GB-LibbyNeural",
+      "pics_dir": "storyvideo/wizard-oz",
+      "classic": {
+        "author": "L. Frank Baum",
+        "year": "1900",
+        "book": "The Wonderful Wizard of Oz"
+      },
+      "scenes": [
+        [
+          "One day, [a huge storm] came to Kansas.",
+          "Dorothy [held Toto close] and closed her eyes."
+        ],
+        [
+          "The wind [lifted her little house]",
+          "and carried it far away, to [the Land of Oz]."
+        ],
+        [
+          "On the road, she met a Scarecrow.",
+          "‘I want [a brain],’ he said [sadly]."
+        ],
+        [
+          "Then they met a Tin Woodman, [all alone].",
+          "‘I want [a heart],’ he whispered."
+        ],
+        [
+          "In the dark forest, a Lion [was crying].",
+          "‘I want to be [brave],’ he said."
+        ],
+        [
+          "At last, they saw [the shining Emerald City].",
+          "Dorothy smiled: ‘There’s [no place like home].’"
+        ]
+      ],
+      "scenes_hy": [
+        [
+          "Մի օր Կանզասում մեծ փոթորիկ սկսվեց։",
+          "Դորոթին ամուր գրկեց Տոտոյին և փակեց աչքերը։"
+        ],
+        [
+          "Քամին բարձրացրեց նրա փոքրիկ տունը",
+          "և տարավ շատ հեռու՝ Օզի երկիր։"
+        ],
+        [
+          "Ճանապարհին նա հանդիպեց մի Խրտվիլակի։",
+          "«Ես խելք եմ ուզում»,— տխուր ասաց նա։"
+        ],
+        [
+          "Հետո նրանք հանդիպեցին մի միայնակ Թիթեղյա Փայտահատի։",
+          "«Ես սիրտ եմ ուզում»,— շշնջաց նա։"
+        ],
+        [
+          "Մութ անտառում մի Առյուծ լաց էր լինում։",
+          "«Ես ուզում եմ քաջ լինել»,— ասաց նա։"
+        ],
+        [
+          "Վերջապես նրանք տեսան փայլող Զմրուխտե քաղաքը։",
+          "Դորոթին ժպտաց. «Տան պես տեղ չկա»։"
+        ]
+      ]
     }
   ]
 }
