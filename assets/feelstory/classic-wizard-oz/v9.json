@@ -1,0 +1,1 @@
+{"text": "‘I want to be brave,’ he said.", "words": [[0.32, 0.35], [0.42, 0.62], [0.68, 0.76], [0.8, 0.86], [0.96, 1.42], [1.7, 1.76], [1.9, 2.321]], "tag": "en-GB-LibbyNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}
