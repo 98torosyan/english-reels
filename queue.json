@@ -3846,6 +3846,10 @@
       "render": {
         "reading": "mila-mitten",
         "music": "new/snow-celesta.m4a"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-reading-mila-mitten/reading-mila-mitten.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-reading-mila-mitten/cover.jpg"
       }
     },
     {
@@ -3894,7 +3898,10 @@
           "music": "music/new/snow-celesta.m4a"
         }
       },
-      "hashtags": []
+      "hashtags": [],
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-story-mila-mitten/story.mp4"
+      }
     },
     {
       "id": "2026-11-24-classic-don-quixote",
@@ -4049,6 +4056,10 @@
       "render": {
         "reading": "mila-dinosaur",
         "music": "new/warm-guitar.m4a"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-reading-mila-dinosaur/reading-mila-dinosaur.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-reading-mila-dinosaur/cover.jpg"
       }
     },
     {
@@ -4072,7 +4083,10 @@
           "music": "music/new/warm-guitar.m4a"
         }
       },
-      "hashtags": []
+      "hashtags": [],
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-story-mila-dinosaur/story.mp4"
+      }
     },
     {
       "id": "2026-11-25-classic-wizard-oz",
@@ -4247,6 +4261,10 @@
       "render": {
         "reading": "mila-chocolate",
         "music": "new/piano-glow.m4a"
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-reading-mila-chocolate/reading-mila-chocolate.mp4",
+        "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-reading-mila-chocolate/cover.jpg"
       }
     },
     {
@@ -4295,7 +4313,10 @@
           "music": "music/new/piano-glow.m4a"
         }
       },
-      "hashtags": []
+      "hashtags": [],
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-story-mila-chocolate/story.mp4"
+      }
     },
     {
       "id": "2026-11-26-classic-emperor-clothes",
