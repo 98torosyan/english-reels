@@ -25,5 +25,11 @@
   "date": "2026-11-23",
   "status": "queued",
   "post": "2026-11-23-motion-red-mitten"
+ },
+ {
+  "id": "thanks1000",
+  "title": "Thank you!",
+  "date": "2026-11-24",
+  "status": "held"
  }
 ]
