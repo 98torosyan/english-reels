@@ -1,10 +1,10 @@
 name: Reading sheets to pictures
 on:
   push:
-    branches-ignore: [main]
     paths: ["assets/reading/*/sheet.png", ".github/workflows/reading-sheets.yml"]
 permissions:
   contents: write
+  actions: write
 jobs:
   cut:
     runs-on: ubuntu-latest
@@ -33,3 +33,7 @@ jobs:
             git commit -qm "Ընթերցանության նկարներ"
             for k in 1 2 3 4 5; do git pull -q --rebase && git push -q && break; sleep 7; done
           fi
+      - name: Make the voices next
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run voices.yml --ref "${GITHUB_REF_NAME}"
