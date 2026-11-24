@@ -3774,6 +3774,34 @@
       }
     },
     {
+      "id": "2026-11-24-story-don-quixote",
+      "date": "2026-11-24",
+      "time": "18:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "don-quixote",
+      "title": "Don Quixote story",
+      "caption": "",
+      "review_status": "published",
+      "render": {
+        "story_card": {
+          "picture": "assets/storyvideo/don-quixote/1.jpg",
+          "title": "Don Quixote",
+          "author": "A CLASSIC STORY",
+          "hook": "Don Quixote read so many books\nabout brave knights that he...",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-story-don-quixote/story.mp4"
+      },
+      "hashtags": [],
+      "published_at": "2026-11-24T18:35+04:00",
+      "ig_media_id": "17991244358880834"
+    },
+    {
       "id": "2026-11-24-reading-skating",
       "date": "2026-11-24",
       "time": "21:00",
