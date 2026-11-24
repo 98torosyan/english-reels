@@ -582,6 +582,90 @@
       "author": "A true story",
       "hook": "One snowy night, a little boy\ndid not come home...",
       "card_scene": 5
+    },
+    {
+      "id": "thanks1000",
+      "kind": "story",
+      "title": "Thank you!",
+      "level": "A1",
+      "music": "new/book-waltz.m4a",
+      "paper": "#F3EADB",
+      "scenes": [
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "Thank you!"
+            ],
+            [
+              "Narrator",
+              "Hello, friends! It's me, Ani."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "Today is a [very special] day."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "One thousand of you [read with us] now!"
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "Thank you for [every like], every comment and every share."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "Now let's [make a wish] together."
+            ]
+          ]
+        },
+        {
+          "at": {},
+          "lines": [
+            [
+              "Narrator",
+              "Let's [read together] every day."
+            ],
+            [
+              "Narrator",
+              "See you tomorrow!"
+            ]
+          ]
+        }
+      ],
+      "recap": [],
+      "question": "What story should Ani read next? Tell us in English!",
+      "hashtags": [
+        "learnenglish",
+        "englishreading",
+        "easyenglish",
+        "englishstories",
+        "thankyou"
+      ],
+      "author": "Ani",
+      "hook": "1,000 friends!\nAni has something to say...",
+      "card_scene": 6
     }
   ]
 }
