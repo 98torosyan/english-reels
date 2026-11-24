@@ -168,3 +168,22 @@ Open:
 - Owner wants a new series in the style of a screen recording he sent (simple animation, simple characters) for
   "our Armenian series" — the upload failed (disk full); waiting for it again.
 - Disk in the work machine filled up (repo .git 4–7 GB): clean caches and run git gc when space is low.
+- Mila & Leo: owner fixed the slot — 15:00 every day is Mila & Leo, mornings (10:30) are Ani. Lessons 2–4 (mila-mitten,
+  mila-dinosaur, mila-chocolate) added: sheets → reading-sheets.yml (branch-only cutter), voice chatterbox:sonia, queue
+  Nov 24/25/26 15:00 + stories 15:30. Mitten rendered locally and pushed to media; the other two by render-ahead.
+  Lesson 5 (night sky) sheet still to come; lessons 6–10 need sheets.
+
+## 2026-11-24 (evening) — ONE FORMAT (owner's decision)
+- The page publishes only "Daily reading" reels + their story 30 min later:
+  10:30 Ani (story 11:00), 15:00 Mila & Leo (story 15:30). Planned next: 20:30 mixed stories with new heroes
+  (21 picture prompts given to the owner on Nov 24; he sends sheets; write texts that match the panels).
+- One voice for every reading: chatterbox:sonia. The 6 Ani readings that were en-GB-SoniaNeural were re-voiced.
+- queue.json: removed 74 staged/draft items (feelstory, classics reels + carousels, cities, routine, picstory,
+  story-image and their stories). Mila lessons moved to Nov 25 – Dec 4 at 15:00 (mitten media copied in the media repo).
+- Unused renderers and plan scripts moved to archive/ (see archive/README.md). Data files stay (checks read them).
+- Paused workflows (Actions → Disable): Sharpen panels, Voice trial, Voice comparison, Fix voices,
+  Render in the cloud, Make a story reel, Say it right voices.
+- reading-sheets.yml now runs on main too and starts "Make voices" itself; render-ahead also runs after a merge
+  that changes queue.json and no longer stops at the first broken post.
+- English check ignores EN_UNPAIRED_QUOTES and RUDE_SARCASTIC (false positives on dialogue lines).
+- PRs #24/#25 are replaced by the one-format PR. Branches classics-feel, sayit-sample, red-mitten-voice: not used.

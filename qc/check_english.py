@@ -12,7 +12,8 @@ LT = os.environ.get("LT_URL", "https://api.languagetool.org/v2/check")
 PUBLIC = "api.languagetool.org" in LT
 IGNORE = {"WHITESPACE_RULE", "EN_QUOTES", "DASH_RULE", "UPPERCASE_SENTENCE_START", "PUNCTUATION_PARAGRAPH_END",
           "COMMA_PARENTHESIS_WHITESPACE", "EN_UNPAIRED_BRACKETS", "SENTENCE_FRAGMENT", "I_LOWERCASE",
-          "INTERJECTIONS_PUNCTUATION", "SERIAL_COMMA_ON", "PASSIVE_VOICE_SIMPLE"}  # style preferences, not errors
+          "INTERJECTIONS_PUNCTUATION", "SERIAL_COMMA_ON", "PASSIVE_VOICE_SIMPLE",
+          "EN_UNPAIRED_QUOTES", "RUDE_SARCASTIC"}  # style preferences, not errors
 NAMES = {"gayane", "torosyan", "ufar", "yerevan", "armenia", "armenian", "ani", "aram", "lilit", "narek", "mane", "davit", "tigran", "anna", "sona", "hayk", "gor", "sevan", "dilijan", "gata", "toto", "lavash", "leo", "biscuit", "sam", "yuki", "ella", "noah", "lily", "zara", "ben", "mia", "passepartout", "marmee", "morgiana", "bella", "nora", "tonir", "tatev", "lake sevan", "nesbit", "max", "hasmik", "burano", "senso-ji", "abra", "della", "jim", "magi", "johnsy", "behrman", "emma", "clara", "sue", "anahit", "goharik"}
 ALLOW = json.loads((ROOT / "qc/data/english_allow.json").read_text(encoding="utf-8"))
 load = lambda p: json.loads((ROOT / p).read_text(encoding="utf-8"))

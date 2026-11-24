@@ -5,6 +5,9 @@ name: Render ahead
 on:
   schedule:
     - cron: "17 22 * * *"   # 02:17 in Yerevan
+  push:                     # also right after a merge that adds or changes posts
+    branches: [main]
+    paths: ["queue.json"]
   workflow_dispatch:
     inputs:
       only:
