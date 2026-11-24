@@ -168,3 +168,9 @@ Open:
 - Owner wants a new series in the style of a screen recording he sent (simple animation, simple characters) for
   "our Armenian series" — the upload failed (disk full); waiting for it again.
 - Disk in the work machine filled up (repo .git 4–7 GB): clean caches and run git gc when space is low.
+
+## 2026-11-24 — cities removed
+- Owner: remove the city carousels. Removed from queue.json: New York, Venice, Tokyo, Prague, Dubai (+ their stories).
+  London and Paris stay published. Media files stay in english-reels-media.
+- Nov 23: The Red Mitten re-voiced with en-GB-SoniaNeural (owner asked), branch red-mitten-voice (per-story "voices" in talk.json).
+- Plan offered: Mila & Leo lessons 2–10 at 10:30 from Dec 2; owner is making pictures for lessons 2–5.
