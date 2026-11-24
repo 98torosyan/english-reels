@@ -23,8 +23,8 @@ jobs:
           curl -sSLf -o weights/realesr-general-x4v3.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-general-x4v3.pth
       - name: Cut the sheets that have no pictures yet
         run: |
-          for s in assets/reading/*/sheet.png; do d=$(dirname "$s"); [ -f "$d/6.jpg" ] && continue
-            python tools/reading_panels.py "$(basename "$d")" "$s"; done
+          for s in assets/reading/*/sheet.png; do d=$(dirname "$s"); [ -f "$d/6.jpg" ] && continue; cp "$s" /tmp/sheet.png
+            python tools/reading_panels.py "$(basename "$d")" /tmp/sheet.png; done
       - name: Save
         run: |
           git add assets/reading
