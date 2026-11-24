@@ -7,9 +7,9 @@ import make_voice as mv
 ROOT = Path(__file__).resolve().parents[1]
 TEXT = ("It is a cold, snowy day. Mila and Leo play in the park. They throw snowballs and laugh. "
         "Then Leo looks at his hands. 'Oh no, my red mitten is lost!' Then Toffee runs to them. 'Good girl, Toffee!' says Leo.")
-VOICES = sys.argv[1:]
+VOICES = sys.argv[1:] if __name__ == "__main__" else []
 out = ROOT / "samples"; out.mkdir(exist_ok=True)
-for v in VOICES:
+for v in VOICES if __name__ == "__main__" else []:
     name = v.replace(":", "-"); parts = []
     try:
         for k, sent in enumerate(re.split(r"(?<=[.!?'])\s+(?=[A-Z'])", TEXT)):
