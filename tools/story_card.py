@@ -8,6 +8,7 @@ import cv2, numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 OW, OH, FPS, T = 1080, 1920, 30, 12
+MOTION = {"mila-b": "float", "ani-c": "rise", "mila-c": "pull"}   # other styles: push-in
 
 
 def main():
@@ -24,9 +25,16 @@ def main():
         f"[2:a]atrim=0:{T},afade=t=in:d=1,afade=t=out:st={T - 1.5}:d=1.5,loudnorm=I=-15:TP=-1.5[a]",
         "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-profile:v", "high", "-level", "4.1",
         "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", "-t", str(T), str(tmp)], stdin=subprocess.PIPE)
-    for i in range(N):   # slow push-in, eased, sub-pixel (no shaking)
-        t = i / (N - 1); t = t * t * (3 - 2 * t); s = OW / W * (1.0 + 0.07 * t)
-        M = np.array([[s, 0, OW / 2 - s * W / 2], [0, s, OH * 0.45 - s * H * 0.45]])
+    pic = str(spec.get("picture", "")); auto = "mila-c" if "assets/reading/mila-" in pic else "ani-b" if "assets/reading/" in pic else ""
+    motion = spec.get("motion") or MOTION.get(spec.get("style") or auto, "push")
+    for i in range(N):   # eased, sub-pixel camera move (no shaking); default: slow push-in
+        t = i / (N - 1); e = t * t * (3 - 2 * t); dy = 0.0
+        if motion == "rise": z = 1.06; dy = 46 * (1 - 2 * e)                               # the picture slowly rises
+        elif motion == "pull": z = 1.08 - 0.07 * e                                          # slow pull-back
+        elif motion == "float": z = 1.035 + 0.02 * e; dy = 12 * np.sin(2 * np.pi * t)       # gentle bob
+        else: z = 1.0 + 0.07 * e
+        s = OW / W * z
+        M = np.array([[s, 0, OW / 2 - s * W / 2], [0, s, OH * 0.45 - s * H * 0.45 + dy]])
         p.stdin.write(cv2.warpAffine(im, M, (OW, OH), flags=cv2.INTER_AREA, borderMode=cv2.BORDER_REFLECT).tobytes())
     p.stdin.close()
     if p.wait(): raise SystemExit("ffmpeg failed")
