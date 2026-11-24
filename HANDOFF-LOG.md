@@ -199,3 +199,10 @@ Open:
 - Times (PR #27): Ani 10:30 weekdays, 11:00 weekend; Mila 20:30; stories +30 min.
 - Story cards: new 'ani' and 'mila' styles in reels/story_card.js (picked from the picture path). The owner is
   choosing between 3 more design directions.
+
+## 2026-11-24 (late) — voices
+- All 16 British voices compared on the same text (faster-whisper medium.en: same word error for all; edge voices
+  clearest, chatterbox most natural). Kept 4 voices only: chatterbox:sonia (the page's voice for every reading),
+  en-GB-SoniaNeural, en-GB-LibbyNeural, en-GB-RyanNeural (backups). Kokoro and the other voices removed from
+  voices/make_voice.py; make_voice and check_code refuse any other voice.
+- Story cards: Ani = 'ani-b' (film still), Mila = 'mila-c' (gold), chosen by the owner (PR #29).

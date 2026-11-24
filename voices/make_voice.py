@@ -16,36 +16,6 @@ GAP = 0.9  # seconds of silence after each sentence
 
 def norm(s): return CLEAN.sub("", s.replace("’", "'")).lower().strip("'")
 
-_KOKORO = None
-
-def synth_kokoro(text, voice, rate, mp3):
-    """British Kokoro voice (Apache 2.0), e.g. voice="kokoro:bf_emma". Returns word bounds like edge-tts."""
-    global _KOKORO
-    import numpy as np, soundfile as sf
-    if _KOKORO is None:
-        from kokoro import KPipeline
-        _KOKORO = KPipeline(lang_code="b")
-    speed = 1 + int(rate.rstrip("%")) / 100 if rate else 1.0
-    audio, bounds, t0 = [], [], 0.0
-    for res in _KOKORO(text, voice=voice.split(":", 1)[1], speed=speed):
-        a = res.audio.numpy() if hasattr(res.audio, "numpy") else np.asarray(res.audio)
-        for tok in res.tokens or []:
-            if tok.start_ts is not None and tok.end_ts is not None and norm(tok.text):
-                bounds.append((tok.text, t0 + tok.start_ts, t0 + tok.end_ts))
-        audio.append(a); t0 += len(a) / 24000
-    wav = str(mp3) + ".wav"
-    sf.write(wav, np.concatenate(audio), 24000)
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", wav, "-af", "adelay=100|100", "-b:a", "160k", str(mp3)], check=True)
-    Path(wav).unlink()
-    # Kokoro's last token often runs into the trailing silence: clamp every end to where speech really stops
-    det = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(mp3), "-af", "silencedetect=n=-40dB:d=0.08", "-f", "null", "-"], capture_output=True, text=True).stderr
-    starts = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", det) if float(x) > 0.3]
-    speech_end = starts[-1] + 0.05 if starts else None
-    out = [(w, s + 0.1, e + 0.1) for w, s, e in bounds]
-    if speech_end:
-        out = [(w, min(s, speech_end - 0.05), min(e, speech_end)) for w, s, e in out]
-    return out
-
 _CHATTER = None
 
 
@@ -91,7 +61,7 @@ def synth_chatterbox(text, voice, rate, mp3):
         ref = ROOT / "assets" / "voice-ref" / f"{name}.mp3"
         if not ref.exists():
             ref.parent.mkdir(parents=True, exist_ok=True)
-            subprocess.run(["edge-tts", "--voice", {"sonia": "en-GB-SoniaNeural", "libby": "en-GB-LibbyNeural", "ryan": "en-GB-RyanNeural"}[name],
+            subprocess.run(["edge-tts", "--voice", {"sonia": "en-GB-SoniaNeural"}[name],
                             "--rate=-6%", "--text", "Good morning. Today I will read you a short and happy story about a little girl and her family.",
                             "--write-media", str(ref)], check=True)
         kw = dict(audio_prompt_path=str(ref), exaggeration=0.5, cfg_weight=0.5)
@@ -111,11 +81,13 @@ def synth_chatterbox(text, voice, rate, mp3):
     return bounds
 
 
+VOICES = {"chatterbox:sonia", "en-GB-SoniaNeural", "en-GB-LibbyNeural", "en-GB-RyanNeural"}   # the only voices the page uses
+
+
 async def synth(text, voice, rate, mp3):
+    if voice not in VOICES: raise ValueError(f"voice {voice} is not one of the page's voices: {sorted(VOICES)}")
     if voice.startswith("chatterbox:"):
         return synth_chatterbox(text, voice, rate, mp3)
-    if voice.startswith("kokoro:"):
-        return synth_kokoro(text, voice, rate, mp3)
     com = edge_tts.Communicate(text, voice, rate=rate, boundary="WordBoundary")
     bounds = []
     with open(mp3, "wb") as f:
