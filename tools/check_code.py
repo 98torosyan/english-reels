@@ -44,6 +44,10 @@ def need(path, key, fields):
         for k in fields:
             if not s.get(k): bad(f"data: {path} '{s.get('id')}' has no {k}")
 need("reels/data/reading.json", "stories", ["id", "title", "title_hy", "level", "voice", "en", "hy"])
+PAGE_VOICES = {"chatterbox:sonia", "en-GB-SoniaNeural", "en-GB-LibbyNeural", "en-GB-RyanNeural"}
+_q = {i.get("content_id") for i in json.loads((ROOT / "queue.json").read_text(encoding="utf-8"))["items"] if i.get("review_status") in ("staged", "draft")}
+for s in json.loads((ROOT / "reels/data/reading.json").read_text(encoding="utf-8"))["stories"]:
+    if s["id"] in _q and s.get("voice") not in PAGE_VOICES: bad(f"data: reading '{s['id']}' uses voice {s.get('voice')}, not one of the page's voices")
 
 # 4. Queue: everything still to be published must pass the publisher's validation
 import publish  # noqa: E402
