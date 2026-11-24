@@ -21,10 +21,6 @@ def check(name, level, text, taught=()):
 def main():
     for s in json.loads((ROOT / "reels/data/reading.json").read_text(encoding="utf-8"))["stories"]:
         check(s["id"], s["level"], s["en"])
-    for s in json.loads((ROOT / "carousels/data/picture_stories.json").read_text(encoding="utf-8"))["stories"]:
-        check(s["id"], s["level"], " ".join(s["scenes"]), {w["en"] for w in s["words"]})
-    for s in json.loads((ROOT / "reels/data/storyvideo.json").read_text(encoding="utf-8"))["stories"]:
-        check(s["id"], s.get("level", "A2"), " ".join(s["scenes"]))
 
 
 if __name__ == "__main__":

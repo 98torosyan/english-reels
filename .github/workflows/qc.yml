@@ -1,7 +1,7 @@
 name: English check
 on:
   push:
-    paths: ["reels/data/**", "stories/stories.json", "carousels/data/**", "qc/**"]
+    paths: ["reels/data/**", "qc/**"]
   workflow_dispatch:
 jobs:
   english:
@@ -21,9 +21,6 @@ jobs:
         run: python qc/check_english.py
         env:
           LT_URL: http://localhost:8010/v2/check
-      - name: Pronunciation (IPA against Britfone)
-        if: always()
-        run: python qc/check_ipa.py
       - name: Level check (report only)
         if: always()
         continue-on-error: true

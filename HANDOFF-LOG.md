@@ -187,3 +187,15 @@ Open:
   that changes queue.json and no longer stops at the first broken post.
 - English check ignores EN_UNPAIRED_QUOTES and RUDE_SARCASTIC (false positives on dialogue lines).
 - PRs #24/#25 are replaced by the one-format PR. Branches classics-feel, sayit-sample, red-mitten-voice: not used.
+
+## 2026-11-24 (night) — purge: only Ani and Mila & Leo remain
+- Owner: delete everything that is not the Ani / Mila & Leo reading format. No archive.
+- Deleted: all other series' renderers, templates, data, assets (feelstory, storyvideo, classics, cities, words10,
+  dialogues, phrasal, routine, talk, cards, sounds, lessons, opposites, picstory, motion, minute, emoji…), carousels/,
+  stories/, books/, covers/, archive/, unused tools and publish scripts, and the workflows Fix voices, Sharpen panels,
+  Render in the cloud, Make a story reel, Telegram helper, Voice comparison, Voice trial. Git history still has them.
+- make_voice.py, voice_finish.py, check_voice.py, check_english.py, check_level.py, system_check.py and check_code.py
+  now look at reels/data/reading.json / assets/reading only. IPA check removed (readings have no IPA).
+- Times (PR #27): Ani 10:30 weekdays, 11:00 weekend; Mila 20:30; stories +30 min.
+- Story cards: new 'ani' and 'mila' styles in reels/story_card.js (picked from the picture path). The owner is
+  choosing between 3 more design directions.

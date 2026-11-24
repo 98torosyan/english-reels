@@ -4,11 +4,8 @@
   "private": true,
   "description": "Media preparation tools for English Reading Room.",
   "scripts": {
-    "build:queue": "python publish/build_queue.py",
-    "render:samples": "node reels/render_samples.js",
-    "render:reel": "node reels/generate.js",
-    "render:carousel": "node carousels/render.js",
-    "publish:dry-run": "python publish/publish.py publish/examples/sample-reel.json"
+    "render:reading": "node reels/render_reading.js",
+    "publish:due": "python publish/run_due.py"
   },
   "dependencies": {
     "@fontsource-variable/cormorant-garamond": "^5.3.0",

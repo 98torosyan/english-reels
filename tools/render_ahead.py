@@ -18,12 +18,7 @@ def files_for(item):
 
 def render(item, media):
     spec = item["render"]; folder = media / item["id"]; folder.mkdir(parents=True, exist_ok=True)
-    if "reel" in spec:
-        i = spec["reel"]
-        subprocess.run(["node", "reels/render_feelstory.js", i], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
-        shutil.copy2(OUT / f"feelstory-{i}.mp4", folder / f"feelstory-{i}.mp4")
-        if (OUT / f"feelstory-{i}-cover.jpg").exists(): shutil.copy2(OUT / f"feelstory-{i}-cover.jpg", folder / "cover.jpg")
-    elif "reading" in spec:
+    if "reading" in spec:
         i = spec["reading"]; env = {**os.environ}
         if spec.get("living"):   # living pictures: soft depth movement made from the stills (tools/living_pictures.py)
             live = ROOT / ".render-work" / "live" / i; shutil.rmtree(live, ignore_errors=True)
@@ -33,39 +28,12 @@ def render(item, media):
         shutil.copy2(OUT / f"reading-{i}.mp4", folder / f"reading-{i}.mp4")
         from PIL import Image
         Image.open(OUT / f"reading-{i}.png").convert("RGB").save(folder / "cover.jpg", "JPEG", quality=92)
-    elif "motion" in spec:
-        i = spec["motion"]
-        subprocess.run(["git", "fetch", "-q", "--depth", "1", "origin", "motion-clips"], cwd=ROOT, check=True)
-        for name, dest in ((f"finished/motion-{i}.mp4", f"motion-{i}.mp4"), (f"finished/motion-{i}-cover.jpg", "cover.jpg")):
-            data = subprocess.run(["git", "show", f"FETCH_HEAD:{name}"], cwd=ROOT, check=True, capture_output=True).stdout
-            (folder / dest).write_bytes(data)
-    elif "story_card" in spec:   # a Story video for a reel (tools/story_card.py); picture "motion:<id>:<n>" = a frame of that clip
+    elif "story_card" in spec:   # a Story video for a reel (tools/story_card.py)
         c = dict(spec["story_card"]); work = folder / ".card"; work.mkdir(exist_ok=True)
-        if c["picture"].startswith("motion:"):
-            _, sid, n = c["picture"].split(":")
-            subprocess.run(["git", "fetch", "-q", "--depth", "1", "origin", "motion-clips"], cwd=ROOT, check=True)
-            for name in (f"{sid}/out-{sid}-{n}.mp4", f"{sid}/out-{n}.mp4"):
-                r = subprocess.run(["git", "show", f"FETCH_HEAD:{name}"], cwd=ROOT, capture_output=True)
-                if r.returncode == 0: (work / "clip.mp4").write_bytes(r.stdout); break
-            else: raise SystemExit(f"no clip {sid}/{n} on motion-clips")
-            subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", "1", "-i", str(work / "clip.mp4"), "-frames:v", "1", "-q:v", "2", str(work / "pic.jpg")], check=True)
-            c["picture"] = str(work / "pic.jpg")
-        else: c["picture"] = str(ROOT / c["picture"])
+        c["picture"] = str(ROOT / c["picture"])
         (work / "spec.json").write_text(json.dumps(c), encoding="utf-8")
         subprocess.run(["python", str(ROOT / "tools" / "story_card.py"), str(work / "spec.json"), str(folder / "story.mp4")], cwd=ROOT, check=True)
         shutil.rmtree(work)
-    elif "storyvideo" in spec:   # classics and story-time reels (reels/render_storyvideo.js)
-        i = spec["storyvideo"]
-        subprocess.run(["node", "reels/render_storyvideo.js", i], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
-        shutil.copy2(OUT / f"storyvideo-{i}.mp4", folder / Path(item["media"]["video_url"]).name)
-        if item["media"].get("cover_url") and not (folder / "cover.jpg").exists():
-            from PIL import Image
-            Image.open(OUT / f"storyvideo-{i}.png").convert("RGB").save(folder / "cover.jpg", "JPEG", quality=92)
-    elif "countries" in spec:
-        i = spec["countries"]
-        subprocess.run(["node", "carousels/render_countries.js", i], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
-        for f in (OUT / f"countries-{i}").iterdir():
-            if f.suffix in (".mp4", ".jpg") and "poster" not in f.name: shutil.copy2(f, folder / f.name)
 
 
 def main():

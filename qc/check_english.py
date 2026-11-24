@@ -20,47 +20,8 @@ load = lambda p: json.loads((ROOT / p).read_text(encoding="utf-8"))
 clean = lambda s: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s)).replace("___", "…").strip()
 
 def texts():
-    cards = load("reels/data/cards.json")
-    for m in cards["mistakes"]: yield f"mistake:{m['id']}", m["correct"]
-    for q in cards["quizzes"]: yield f"quiz:{q['id']}", q["prompt"].replace("___", q["answer"])
-    for w in cards["words"]: yield f"word:{w['id']}", w["example"]
-    for d in load("reels/data/dialogues.json")["dialogues"]:
-        for n, l in enumerate(d["lines"]): yield f"dialogue:{d['id']}/{n}", l["en"]
-    for s in load("reels/data/sounds.json")["sounds"]: yield f"sound:{s['id']}", s["sentence"]
-    for st in load("stories/stories.json"):
-        for k, line in enumerate(re.split(r"<br\s*/?>", st.get("en") or "")):
-            line = clean(line)
-            if line and not line.startswith("Wrong") and "+" not in line and " / " not in line and not re.match(r"^[A-C]\)", line):
-                yield f"story:{st['id']}/{k}", line
-    for c in load("carousels/data/lists.json") if isinstance(load("carousels/data/lists.json"), list) else load("carousels/data/lists.json").get("lists", []):
-        for n, it in enumerate(c.get("items", [])):
-            for k in ("en", "example"):
-                if it.get(k) and "___" not in it[k]: yield f"carousel:{c['id']}/{n}/{k}", clean(it[k])
-    for st in load("carousels/data/picture_stories.json")["stories"]:
-        for k, sc in enumerate(st["scenes"]): yield f"picstory:{st['id']}/{k}", sc
-        if st.get("question"): yield f"picstory:{st['id']}/q", st["question"]
-    for st in load("carousels/data/classic_carousels.json")["stories"]:
-        for k, sc in enumerate(st["scenes"]): yield f"classic:{st['id']}/{k}", sc
-        if st.get("mystery"): yield f"classic:{st['id']}/q", st["mystery"]["question"]
-    for st in load("reels/data/storyvideo.json")["stories"]:
-        for k, sc in enumerate(st["scenes"]): yield f"storyvideo:{st['id']}/{k}", sc
-    for st in load("reels/data/routine.json")["stories"]:
-        yield f"routine:{st['id']}/q", st["question"]
-        for k, ln in enumerate(st["lines"]): yield f"routine:{st['id']}/{k}", ln.replace("[", "").replace("]", "")
     for st in load("reels/data/reading.json")["stories"]:
         for k, sent in enumerate(re.split(r"(?<=[.!?'])\s+(?=[A-Z'])", st["en"])): yield f"reading:{st['id']}/{k}", sent
-    for st in load("reels/data/phrasal.json")["sets"]:
-        for n, it in enumerate(st["items"]): yield f"phrasal:{st['id']}/{n}", it["example"]
-    for st in load("reels/data/feelstory.json")["stories"]:
-        for k, sc in enumerate(st["scenes"]): yield f"feelstory:{st['id']}/{k}", " ".join(sc).replace("[", "").replace("]", "")
-    for d in load("carousels/data/opposites.json")["days"]:
-        for k, p in enumerate(d["pairs"]): yield f"opposites:{d['id']}/{k}", p["sentence"].replace("[", "").replace("]", "")
-        for k, q in enumerate(d.get("quiz", [])): yield f"opposites:{d['id']}/q{k}", q["q"].replace("___", q["a"])
-    for t in load("reels/data/talk.json")["talks"]:
-        for k, sc in enumerate(t["scenes"]):
-            for n, (_, line) in enumerate(sc["lines"]): yield f"talk:{t['id']}/{k}.{n}", line.replace("[", "").replace("]", "")
-    for l in load("reels/data/words10.json")["lists"]:
-        yield f"words10:{l['id']}", ", ".join(w["en"] for w in l["words"]) + "."
 
 def check(text):
     data = urllib.parse.urlencode({"text": text, "language": "en-GB", "level": "picky" if not PUBLIC else "default"}).encode()

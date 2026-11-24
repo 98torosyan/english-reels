@@ -1,1 +1,0 @@
-{"text": "It starts to rain, so we take a red bus.", "words": [[0.24, 0.34], [0.44, 0.8], [0.86, 0.94], [1.04, 1.38], [1.76, 1.86], [1.96, 2.04], [2.12, 2.36], [2.4, 2.43], [2.52, 2.72], [2.82, 3.332]], "tag": "en-GB-MaisieNeural", "fx": "pb1", "aligned": "ctc1", "clamped": 1}

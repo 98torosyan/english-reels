@@ -83,26 +83,6 @@ def main():
     r = subprocess.run(["git", "log", "--oneline", "@{u}..HEAD"], cwd=media, capture_output=True, text=True)
     if r.stdout.strip(): fail("media repo has unpushed commits")
     # content data
-    for d in json.loads((ROOT / "reels/data/dialogues.json").read_text(encoding="utf-8"))["dialogues"]:
-        for n, l in enumerate(d["lines"]):
-            tj = ROOT / "assets/dialogues" / d["id"] / f"{n}.json"
-            if not tj.exists(): warn(f"dialogue {d['id']}/{n}: no voice yet"); continue
-            j = json.loads(tj.read_text())
-            if j.get("text") != l["en"] or j.get("tag") != d["speakers"][l["s"]]["voice"]: fail(f"dialogue {d['id']}/{n}: voice does not match text/speaker")
-            if not l["hy"].rstrip().endswith(("։", "՞", "՜", "»։", "՛")) and not l["hy"].endswith("։"): warn(f"dialogue {d['id']}/{n}: Armenian line has no final punctuation")
-    for s in json.loads((ROOT / "reels/data/sounds.json").read_text(encoding="utf-8"))["sounds"]:
-        for k, text in (("a", s["a"]["word"] + "."), ("b", s["b"]["word"] + "."), ("s", s["sentence"])):
-            tj = ROOT / "assets/sounds" / s["id"] / f"{k}.json"
-            if not tj.exists() or json.loads(tj.read_text()).get("text") != text: fail(f"sound {s['id']}/{k}: voice missing or stale")
-    for l in json.loads((ROOT / "reels/data/words10.json").read_text(encoding="utf-8"))["lists"]:
-        for n, w in enumerate(l["words"]):
-            tj = ROOT / "assets/words10" / l["id"] / f"{n}.json"
-            if not tj.exists() or json.loads(tj.read_text()).get("text") != w["en"] + ".": fail(f"words10 {l['id']}/{n}: voice missing or stale")
-    for st in json.loads((ROOT / "reels/data/phrasal.json").read_text(encoding="utf-8"))["sets"]:
-        for n, it in enumerate(st["items"]):
-            for k, text in ((f"{n}p", it["en"] + "."), (f"{n}e", it["example"])):
-                tj = ROOT / "assets/phrasal" / st["id"] / f"{k}.json"
-                if not tj.exists() or json.loads(tj.read_text()).get("text") != text: fail(f"phrasal {st['id']}/{k}: voice missing or stale")
     for st in json.loads((ROOT / "reels/data/reading.json").read_text(encoding="utf-8"))["stories"]:
         tj = ROOT / "assets/reading" / st["id"] / "p.json"
         if not ((ROOT / "assets/reading" / f"{st['id']}.jpg").exists() or (ROOT / "assets/reading" / st["id"] / "1.jpg").exists()):
@@ -110,8 +90,7 @@ def main():
         if not tj.exists(): fail(f"reading {st['id']}: voice missing"); continue
         j = json.loads(tj.read_text())
         if j.get("text") != st["en"] or j.get("tag") != st["voice"] or len(j.get("words", [])) != len(st["en"].split()): fail(f"reading {st['id']}: voice stale")
-    for f in [ROOT / "reels/data/reading.json", ROOT / "reels/data/dialogues.json", ROOT / "reels/data/sounds.json", ROOT / "carousels/data/lists.json", ROOT / "stories/stories.json",
-              ROOT / "reels/data/words10.json", ROOT / "reels/data/phrasal.json"]:
+    for f in [ROOT / "reels/data/reading.json"]:
         txt = f.read_text(encoding="utf-8")
         if EMOJI.search(txt): fail(f"{f.name}: emoji in content")
     for p in ["publish/ENABLED"]:

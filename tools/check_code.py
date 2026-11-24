@@ -43,19 +43,7 @@ def need(path, key, fields):
     for s in json.loads(p.read_text(encoding="utf-8"))[key]:
         for k in fields:
             if not s.get(k): bad(f"data: {path} '{s.get('id')}' has no {k}")
-need("reels/data/feelstory.json", "stories", ["id", "title", "voice", "scenes"])
-for s in json.loads((ROOT / "reels/data/feelstory.json").read_text(encoding="utf-8"))["stories"]:
-    if not s.get("english_only") and not (s.get("title_hy") and s.get("scenes_hy")): bad(f"data: feelstory '{s['id']}' has no Armenian text")
-need("reels/data/storyvideo.json", "stories", ["id", "title", "title_hy", "scenes"])
-for s in json.loads((ROOT / "reels/data/storyvideo.json").read_text(encoding="utf-8"))["stories"]:
-    if not (s.get("scenes_hy") or s.get("hy")): bad(f"data: storyvideo '{s['id']}' has no Armenian text")
-need("carousels/data/opposites.json", "days", ["id", "title", "pairs"])
-for s in json.loads((ROOT / "reels/data/feelstory.json").read_text(encoding="utf-8"))["stories"]:
-    if not s.get("english_only") and len(s["scenes"]) != len(s["scenes_hy"]) or not s.get("english_only") and any(len(a) != len(b) for a, b in zip(s["scenes"], s["scenes_hy"])):
-        bad(f"data: feelstory '{s['id']}': English and Armenian lines do not match one to one")
-    for sc in s["scenes"]:
-        for line in sc:
-            if line.count("[") != line.count("]"): bad(f"data: feelstory '{s['id']}': unbalanced [ ] in “{line}”")
+need("reels/data/reading.json", "stories", ["id", "title", "title_hy", "level", "voice", "en", "hy"])
 
 # 4. Queue: everything still to be published must pass the publisher's validation
 import publish  # noqa: E402
