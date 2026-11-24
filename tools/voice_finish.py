@@ -8,7 +8,7 @@ import json, sys, time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DIRS = ["feelstory", "opposites", "countries", "storyvideo", "routine", "reading", "dialogues", "phrasal", "words10", "stories", "cards", "talk"]
+DIRS = ["reading"]
 FX, ALIGN = "pb1", "ctc1"
 
 
