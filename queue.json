@@ -3669,6 +3669,34 @@
       "ig_media_id": "17875478406641607"
     },
     {
+      "id": "2026-11-24-story-city-new-york",
+      "date": "2026-11-24",
+      "time": "15:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "city-new-york",
+      "title": "Ani in New York story",
+      "caption": "",
+      "review_status": "published",
+      "render": {
+        "story_card": {
+          "picture": "assets/cities/new-york/1.jpg",
+          "title": "Ani in New York",
+          "author": "ANI'S TRAVELS",
+          "hook": "Hi from New York! Our ferry goes\npast the Statue of Liberty.",
+          "music": "music/new/warm-guitar.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-story-city-new-york/story.mp4"
+      },
+      "hashtags": [],
+      "published_at": "2026-11-24T15:35+04:00",
+      "ig_media_id": "17889060765626178"
+    },
+    {
       "id": "2026-11-25-reading-letter",
       "date": "2026-11-25",
       "time": "10:30",
