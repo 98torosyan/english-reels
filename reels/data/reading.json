@@ -488,6 +488,60 @@
       ],
       "en": "At breakfast, Leo touches his front tooth. 'It's wobbly!' He bites an apple very carefully. Then, oh! The tooth is in his hand. Leo smiles, and there is a gap in his smile. Everyone claps. 'You are so brave!' At night, Leo puts the tooth under his pillow. In the morning, he finds a shiny coin!",
       "hy": "Նախաճաշի ժամանակ Լեոն դիպչում է իր առջևի ատամին։ «Ատամս շարժվում է»։ Նա շատ զգույշ կծում է խնձորը։ Հետո՝ օ՜։ Ատամը նրա ձեռքում է։ Լեոն ժպտում է, և նրա ժպիտի մեջ մի բացվածք կա։ Բոլորը ծափահարում են։ «Դու շատ քաջ ես»։ Գիշերը Լեոն ատամը դնում է բարձի տակ։ Առավոտյան նա փայլուն մետաղադրամ է գտնում։"
+    },
+    {
+      "id": "mila-village",
+      "number": 31,
+      "title": "A day in the village",
+      "title_hy": "Մի օր գյուղում",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        19,
+        24,
+        31,
+        43,
+        49
+      ],
+      "en": "Today, Mila and Leo visit Grandpa in his village. He opens the gate and gives them a big hug. Leo runs after the hens. Mila finds brown eggs in the hay. Grandpa puts Leo on his shoulders, and Leo picks a red apple. Grandpa's big dog is very friendly. In the evening, they eat lavash, cheese and apples. 'I love the village!' says Mila.",
+      "hy": "Այսօր Միլան ու Լեոն գնում են պապիկի մոտ՝ գյուղ։ Պապիկը բացում է դարպասը և ամուր գրկում նրանց։ Լեոն վազում է հավերի հետևից։ Միլան խոտի մեջ շագանակագույն ձվեր է գտնում։ Պապիկը Լեոյին նստեցնում է ուսերին, և Լեոն մի կարմիր խնձոր է քաղում։ Պապիկի մեծ շունը շատ ընկերասեր է։ Երեկոյան նրանք լավաշ, պանիր ու խնձոր են ուտում։ «Ես սիրում եմ գյուղը»,— ասում է Միլան։"
+    },
+    {
+      "id": "mila-goldfish",
+      "number": 32,
+      "title": "The goldfish",
+      "title_hy": "Ոսկե ձկնիկը",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        13,
+        24,
+        31,
+        40,
+        55
+      ],
+      "en": "Dad, Mila and Leo go to a pet shop. There are fish everywhere! Leo looks at the orange goldfish. 'Can we have one, please?' Dad smiles and buys a little goldfish. At home, Mila puts it in a round bowl. Toffee looks at the fish with big eyes. 'No, Toffee, it's our friend!' says Leo. Leo gives the fish its food, and Mila draws it.",
+      "hy": "Հայրիկը, Միլան ու Լեոն գնում են կենդանիների խանութ։ Ամենուր ձկներ են։ Լեոն նայում է նարնջագույն ոսկե ձկնիկներին։ «Կարո՞ղ ենք մեկը վերցնել, խնդրում եմ»։ Հայրիկը ժպտում է և մի փոքրիկ ոսկե ձկնիկ է գնում։ Տանը Միլան այն դնում է կլոր ակվարիումի մեջ։ Թոֆին մեծ-մեծ աչքերով նայում է ձկնիկին։ «Ո՛չ, Թոֆի, սա մեր ընկերն է»,— ասում է Լեոն։ Լեոն ձկնիկին կեր է տալիս, իսկ Միլան նկարում է այն։"
+    },
+    {
+      "id": "mila-toffee",
+      "number": 33,
+      "title": "Where is Toffee?",
+      "title_hy": "Ո՞ւր է Թոֆին",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "pic_words": [
+        0,
+        15,
+        23,
+        28,
+        34,
+        48
+      ],
+      "en": "It is dinner time for Toffee, but where is she? Mila looks at her bowl. Leo looks under the sofa with a torch. Mila looks behind the curtains. Leo opens the wardrobe. No Toffee! Then Mila opens the big basket. There she is, asleep on the warm blankets! 'Toffee, we love you!' says Leo.",
+      "hy": "Թոֆիի ընթրիքի ժամն է, բայց ո՞ւր է նա։ Միլան նայում է նրա ամանին։ Լեոն լապտերով նայում է բազմոցի տակ։ Միլան նայում է վարագույրների հետևում։ Լեոն բացում է պահարանը։ Թոֆին չկա։ Հետո Միլան բացում է մեծ զամբյուղը։ Ահա նա՝ քնած տաք ծածկոցների վրա։ «Թոֆի, մենք քեզ սիրում ենք»,— ասում է Լեոն։"
     }
   ]
 }
