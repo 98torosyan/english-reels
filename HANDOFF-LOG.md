@@ -168,3 +168,7 @@ Open:
 - Owner wants a new series in the style of a screen recording he sent (simple animation, simple characters) for
   "our Armenian series" — the upload failed (disk full); waiting for it again.
 - Disk in the work machine filled up (repo .git 4–7 GB): clean caches and run git gc when space is low.
+
+## 2026-11-24 — 1000 followers thank-you reel (Ani)
+- thanks1000: owner sheet (6 panels) cut and sharpened locally, 12 s camera-move clips with gold dust, sparkles, confetti and candle glow (assets/motion/thanks1000, still). Storyteller voice, music new/book-waltz. Rendered by story.yml on branch thanks-1000; kept on motion-clips/finished.
+- HELD: publish only when the page reaches 1000 and the owner says yes.
