@@ -1,0 +1,25 @@
+name: Voice samples
+on:
+  push:
+    branches: [voice-samples]
+    paths: [tools/voice_samples.py, .github/workflows/voice-samples.yml]
+permissions:
+  contents: write
+jobs:
+  samples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg espeak-ng >/dev/null && pip install -q "edge-tts>=7.0" "kokoro>=0.9.4" soundfile "misaki[en]"
+      - run: python tools/voice_samples.py en-GB-SoniaNeural en-GB-LibbyNeural en-GB-MaisieNeural en-GB-RyanNeural en-GB-ThomasNeural kokoro:bf_emma kokoro:bf_isabella kokoro:bf_alice kokoro:bf_lily kokoro:bm_george kokoro:bm_fable kokoro:bm_lewis
+      - run: |
+          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q chatterbox-tts "setuptools<81" "faster-whisper>=1.1"
+          python tools/voice_samples.py chatterbox:sonia chatterbox:libby chatterbox:ryan chatterbox:builtin
+      - run: |
+          git config user.name "$(git log -1 --format=%an)"; git config user.email "$(git log -1 --format=%ae)"
+          git add samples && git commit -qm "Voice samples" && git push -q || true
