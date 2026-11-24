@@ -3831,6 +3831,24 @@
       }
     },
     {
+      "id": "2026-11-24-reading-mila-mitten",
+      "date": "2026-11-24",
+      "time": "15:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "reading",
+      "content_id": "mila-mitten",
+      "title": "Daily reading 24",
+      "caption": "Read and listen in English: The lost mitten\nԿարդանք միասին · Daily reading\nThe lost mitten · Կորած թաթմանը (A1)\n\nIt is a cold, snowy day. Mila and Leo play in the park. They throw snowballs and laugh. Then Leo looks at his hands. 'Oh no! My red mitten is lost!' They look under the trees and behind the bench. Then Toffee runs to them. The red mitten is in her mouth! 'Good girl, Toffee!' says Leo.\n\nQuestion: Do you like snow? What do you do on a snowy day? Answer in English in the comments!\n\nԹարգմանություն՝\nՑուրտ, ձյունառատ օր է։ Միլան ու Լեոն խաղում են այգում։ Նրանք ձնագնդիներ են նետում ու ծիծաղում։ Հետո Լեոն նայում է իր ձեռքերին։ «Վա՜յ, իմ կարմիր թաթմանը կորել է»։ Նրանք փնտրում են ծառերի տակ ու նստարանի հետևում։ Հետո Թոֆին վազում է նրանց մոտ։ Կարմիր թաթմանը նրա բերանում է։ «Ապրե՛ս, Թոֆի»,— ասում է Լեոն։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#englishpractice #englishlistening #readingpractice #englishshorts #անգլերենսովորել",
+      "review_status": "staged",
+      "thumb_offset": 1400,
+      "render": {
+        "reading": "mila-mitten",
+        "music": "new/snow-celesta.m4a"
+      }
+    },
+    {
       "id": "2026-11-24-story-city-new-york",
       "date": "2026-11-24",
       "time": "15:30",
@@ -3854,6 +3872,29 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-24-story-city-new-york/story.mp4"
       }
+    },
+    {
+      "id": "2026-11-24-story-mila-mitten",
+      "date": "2026-11-24",
+      "time": "15:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "mila-mitten",
+      "title": "The lost mitten story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/mila-mitten/1.jpg",
+          "title": "The lost mitten",
+          "author": "DAILY READING",
+          "hook": "It is a cold, snowy day.\nMila and Leo play in the park.",
+          "music": "music/new/snow-celesta.m4a"
+        }
+      },
+      "hashtags": []
     },
     {
       "id": "2026-11-24-classic-don-quixote",
@@ -3991,6 +4032,47 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-25-story-letter/story.mp4"
       }
+    },
+    {
+      "id": "2026-11-25-reading-mila-dinosaur",
+      "date": "2026-11-25",
+      "time": "15:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "reading",
+      "content_id": "mila-dinosaur",
+      "title": "Daily reading 25",
+      "caption": "Read and listen in English: Dinosaur day\nԿարդանք միասին · Daily reading\nDinosaur day · Դինոզավրերի օրը (A1)\n\nToday, Dad takes Mila and Leo to the museum. Leo is very excited. 'Dinosaurs!' he shouts. In a big room, there is a huge dinosaur. It is very tall, with long teeth. Leo opens his mouth. 'It's bigger than our house!' Mila sits down and draws it in her sketchbook. Leo says, 'This is the best day ever!'\n\nQuestion: Do you like dinosaurs? What is your favourite museum? Answer in English in the comments!\n\nԹարգմանություն՝\nԱյսօր հայրիկը Միլային ու Լեոյին տանում է թանգարան։ Լեոն շատ ոգևորված է։ «Դինոզավրե՜ր»,— բղավում է նա։ Մի մեծ սրահում հսկայական դինոզավր կա։ Այն շատ բարձր է, երկար ատամներով։ Լեոն բերանը բացում է. «Այն մեր տնից էլ մեծ է»։ Միլան նստում է և նկարում այն իր նկարչական ալբոմում։ Լեոն ասում է. «Սա իմ կյանքի ամենալավ օրն է»։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#englishpractice #englishlistening #readingpractice #englishshorts #անգլերենսովորել",
+      "review_status": "staged",
+      "thumb_offset": 1400,
+      "render": {
+        "reading": "mila-dinosaur",
+        "music": "new/warm-guitar.m4a"
+      }
+    },
+    {
+      "id": "2026-11-25-story-mila-dinosaur",
+      "date": "2026-11-25",
+      "time": "15:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "mila-dinosaur",
+      "title": "Dinosaur day story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/mila-dinosaur/1.jpg",
+          "title": "Dinosaur day",
+          "author": "DAILY READING",
+          "hook": "Today, Dad takes Mila and Leo\nto the museum.",
+          "music": "music/new/warm-guitar.m4a"
+        }
+      },
+      "hashtags": []
     },
     {
       "id": "2026-11-25-classic-wizard-oz",
@@ -4150,6 +4232,24 @@
       }
     },
     {
+      "id": "2026-11-26-reading-mila-chocolate",
+      "date": "2026-11-26",
+      "time": "15:00",
+      "timezone": "Asia/Yerevan",
+      "type": "REEL",
+      "format": "REELS",
+      "kind": "reading",
+      "content_id": "mila-chocolate",
+      "title": "Daily reading 26",
+      "caption": "Read and listen in English: Hot chocolate\nԿարդանք միասին · Daily reading\nHot chocolate · Տաք շոկոլադ (A1)\n\nIt is a cold winter evening. Mum makes hot chocolate. Mila puts the milk in a pan. Leo adds the chocolate. 'Can I have marshmallows, please?' asks Leo. 'Yes, you can,' says Mum. They sit by the window and drink. Outside, it is snowing. Inside, it is warm and sweet. Toffee sleeps on Leo's lap.\n\nQuestion: What do you like to drink on a cold evening? Answer in English in the comments!\n\nԹարգմանություն՝\nՁմեռային ցուրտ երեկո է։ Մայրիկը տաք շոկոլադ է պատրաստում։ Միլան կաթը լցնում է կաթսայի մեջ։ Լեոն ավելացնում է շոկոլադը։ «Կարո՞ղ եմ մարշմելոու ուտել, խնդրում եմ»,— հարցնում է Լեոն։ «Այո, կարող ես»,— ասում է մայրիկը։ Նրանք նստում են պատուհանի մոտ ու խմում։ Դրսում ձյուն է գալիս։ Ներսում տաք է ու քաղցր։ Թոֆին քնում է Լեոյի գրկում։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՊահի՛ր, որ վաղը նորից կարդաս, և ուղարկի՛ր ընկերոջդ։\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#englishpractice #englishlistening #readingpractice #englishshorts #անգլերենսովորել",
+      "review_status": "staged",
+      "thumb_offset": 1400,
+      "render": {
+        "reading": "mila-chocolate",
+        "music": "new/piano-glow.m4a"
+      }
+    },
+    {
       "id": "2026-11-26-story-city-venice",
       "date": "2026-11-26",
       "time": "15:30",
@@ -4173,6 +4273,29 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-story-city-venice/story.mp4"
       }
+    },
+    {
+      "id": "2026-11-26-story-mila-chocolate",
+      "date": "2026-11-26",
+      "time": "15:30",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "mila-chocolate",
+      "title": "Hot chocolate story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/mila-chocolate/1.jpg",
+          "title": "Hot chocolate",
+          "author": "DAILY READING",
+          "hook": "It is a cold winter evening.\nMum makes hot chocolate.",
+          "music": "music/new/piano-glow.m4a"
+        }
+      },
+      "hashtags": []
     },
     {
       "id": "2026-11-26-classic-emperor-clothes",
