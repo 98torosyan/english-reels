@@ -2,7 +2,7 @@ name: Reading sheets to pictures
 on:
   push:
     branches-ignore: [main]
-    paths: ["assets/reading/*/sheet.png"]
+    paths: ["assets/reading/*/sheet.png", ".github/workflows/reading-sheets.yml"]
 permissions:
   contents: write
 jobs:
