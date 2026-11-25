@@ -20,10 +20,17 @@ def youtube(video_url: str, caption: str) -> str | None:
     token = _post("https://oauth2.googleapis.com/token", {"client_id": cid, "client_secret": secret, "refresh_token": refresh, "grant_type": "refresh_token"})["access_token"]
     with urllib.request.urlopen(video_url, timeout=300) as r:
         video = r.read()
-    first = caption.split("\n")[0].strip() or "English Reading Room"
-    meta = {"snippet": {"title": f"{first[:90]} #Shorts", "description": caption[:4900], "categoryId": "27", "defaultLanguage": "en",
-                        "tags": ["English", "learn English", "Armenian", "English Reading Room"]},
-            "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False}}
+    lines = [l.strip() for l in caption.split("\n")]
+    head = next((l for l in lines[1:4] if "·" in l), lines[0] if lines else "")
+    name = head.split("·")[0].strip() or "Daily reading"
+    title = f"{name} 📖 Easy English Story (A1) | Անգլերեն ընթերցանություն"[:100]
+    desc = "\n".join(l for l in caption.split("\n") if not l.startswith("#") and "Direct" not in l and "bio" not in l).strip()
+    desc += ("\n\nԱնհատական և խմբային դասեր Երևանում՝ englishreadingroom.am@gmail.com"
+             "\nԱմբողջական դասերը ձայնով՝ https://98torosyan.github.io/english-reading/"
+             "\nInstagram՝ https://www.instagram.com/english.readingroom/\n\n#Shorts #LearnEnglish #EnglishReading #Անգլերեն")
+    meta = {"snippet": {"title": title, "description": desc[:4900], "categoryId": "27", "defaultLanguage": "en", "defaultAudioLanguage": "en-GB",
+                        "tags": ["English", "learn English", "easy English story", "English reading", "A1 English", "Անգլերեն", "English Reading Room"]},
+            "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True}}
     boundary = "erroomboundary"
     body = (f"--{boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n{json.dumps(meta)}\r\n--{boundary}\r\nContent-Type: video/mp4\r\n\r\n").encode() + video + f"\r\n--{boundary}--\r\n".encode()
     out = _post("https://www.googleapis.com/upload/youtube/v3/videos?uploadType=multipart&part=snippet,status", body=body,
