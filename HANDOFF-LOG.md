@@ -230,3 +230,13 @@ Open:
   (data("x"), data(k) for k in (...)). It would have caught the deleted feelstory.json bug.
 - render_ahead.py refuses unknown render kinds loudly; system_check.py accepts files that are committed but not on
   disk (sparse checkouts); upscale_panels.py only looks at assets/reading; stale comments about removed series cleaned.
+## 2026-11-26 — YouTube listening lessons (ready, not switched on)
+- reels/render_lesson.js: a 16:9 lesson (3840x2160 by default; RENDER_SCALE=1 gives a 1920x1080 preview) from 3-4
+  readings listed in reels/data/lessons.json: title card, story title over its picture, "Words to know" with Armenian,
+  then the story read with the spoken word lit (same voices and timings as the reels), outro. STILLS=3,26 saves
+  single frames for a quick look. Writes lesson-<id>.json with YouTube chapters next to the video.
+- publish/youtube_lesson.py: title, description (how to use, chapters, words per story, links), tags, Armenian
+  title; resumable upload. `python publish/youtube_lesson.py meta <id>` prints it without uploading.
+- .github/workflows/youtube-lesson.yml: renders in 4K and uploads only the ids written in publish/LESSONS (empty now);
+  the YouTube id is saved in lessons.json so a lesson never goes up twice.
+- The Armenian words in lessons.json ("words") should be checked by the teacher.
