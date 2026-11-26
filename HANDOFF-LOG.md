@@ -206,3 +206,18 @@ Open:
   en-GB-SoniaNeural, en-GB-LibbyNeural, en-GB-RyanNeural (backups). Kokoro and the other voices removed from
   voices/make_voice.py; make_voice and check_code refuse any other voice.
 - Story cards: Ani = 'ani-b' (film still), Mila = 'mila-c' (gold), chosen by the owner (PR #29).
+
+## 2026-11-26 — YouTube
+- Site https://98torosyan.github.io/ (repo 98torosyan.github.io): home, privacy.html, terms.html; verified in Search
+  Console (googlebffce0bc30020fe7.html — keep it). Google Cloud project err-uploader-515806, app "ERR Uploader" in
+  production, OAuth web client (redirect: OAuth Playground). Secrets YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN.
+  Uploads come out public (no audit needed so far). Scope is youtube.upload only: titles/descriptions cannot be
+  changed by API afterwards, playlists cannot be filled by API.
+- publish/crosspost.py: every published reading reel also goes to YouTube Shorts (youtube_meta: story title + level,
+  full English text, Armenian translation, question, links, 5 hashtags, search tags, Armenian localized title,
+  synthetic-media flag, not made for kids). Other kinds are not sent to YouTube.
+- youtube-backfill.yml: older published readings listed in publish/YOUTUBE_BACKFILL go up two a day (18:17); each upload
+  costs 1,600 of the 10,000 daily API units. rainy, market, lesson have no media left, so they are not in the list.
+- caption_reach: the English first line is never added twice (dinosaur and mitten captions had it twice on Instagram).
+- plan_story_cards.py reads only reading.json (render-ahead failed on the deleted feelstory.json).
+- Channel profile: description, links (lessons, Instagram) and contact email filled. Still to do by hand: banner.

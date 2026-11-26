@@ -37,15 +37,6 @@ def card_for(item, src):
         r = src["reading"][cid]; title, text = r["title"], r.get("en", ""); author = r.get("series") or "DAILY READING"
         pic = next((p for p in (f"assets/reading/{cid}/1.jpg", r.get("picture") and f"assets/{r['picture']}") if p and (ROOT / p).exists()), None)
         music = music or r.get("music")
-    elif kind in ("feelstory", "countries") and cid in src["feelstory"]:
-        s = src["feelstory"][cid]; title = s["title"]; text = " ".join(s["scenes"][0]); music = music or s.get("music")
-        author = (s.get("series") or ("ANI'S TRAVELS" if kind == "countries" else "A SHORT STORY")).upper()
-        pic = f"assets/{s['pics'][0]}" if s.get("pics") else f"assets/{s.get('pics_dir') or 'feelstory/' + cid}/1.jpg"
-    elif kind in ("storyvideo", "classic") and cid in src["storyvideo"]:
-        s = src["storyvideo"][cid]; title = s["title"]; sc = s["scenes"][0]; text = sc if isinstance(sc, str) else " ".join(sc)
-        author = "A CLASSIC STORY" if kind == "classic" or s.get("classic") else "A STORY IN EASY ENGLISH"; music = music or s.get("music")
-        pic = f"assets/storyvideo/{cid}/1.jpg"
-        if item["format"] == "CAROUSEL": line = "SWIPE AND READ IN EASY ENGLISH"
     if not (pic and title and text and (ROOT / pic).exists()): return None
     music = "music/" + (music or "new/piano-glow.m4a").removeprefix("music/")
     if not (ROOT / music).exists(): music = "music/new/piano-glow.m4a"
@@ -58,7 +49,7 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--from", dest="start"); ap.add_argument("--dry-run", action="store_true"); a = ap.parse_args()
     start = a.start or dt.date.today().isoformat()
     q = json.loads(QUEUE.read_text(encoding="utf-8")); items = q["items"]
-    src = {k: data(k) for k in ("reading", "feelstory", "storyvideo")}
+    src = {"reading": data("reading")}
     have = {(i.get("content_id"), i["date"]) for i in items if i["format"] == "STORIES" and i.get("kind") == "story-video"}
     taken = {(i["date"], i["time"]) for i in items}
     # a Story follows its post: held while the post is held, staged once the post is staged
