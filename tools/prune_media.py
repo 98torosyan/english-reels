@@ -1,5 +1,5 @@
 """Keep the public media site small (GitHub Pages serves at most ~1 GB): remove the media folders of posts that were
-published more than --days days ago. Instagram keeps its own copy, and every file stays in the media repo's git history.
+published more than --days days ago (reading reels stay until they are on YouTube). Instagram keeps its own copy, and every file stays in the media repo's git history.
 Usage: python tools/prune_media.py --media-repo ../english-reels-media [--days 3] [--dry-run]"""
 import argparse, datetime as dt, json, shutil
 from pathlib import Path
@@ -16,6 +16,7 @@ def main():
     for i in items:
         if i.get("review_status") != "published": continue
         if (today - dt.date.fromisoformat(i["date"])).days <= a.days: continue
+        if i.get("kind") == "reading" and i.get("format") == "REELS" and not i.get("youtube_id"): continue  # still needed for YouTube
         d = media / i["id"]
         if not d.is_dir(): continue
         size = sum(f.stat().st_size for f in d.rglob("*") if f.is_file()); freed += size
