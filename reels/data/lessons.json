@@ -7,13 +7,584 @@
       "title_hy": "Անիի շաբաթը",
       "level": "A2",
       "music": "quiet-page.m4a",
-      "stories": ["library", "plant", "letter", "dilijan"]
+      "stories": [
+        "library",
+        "plant",
+        "letter",
+        "dilijan"
+      ]
+    },
+    {
+      "id": "mila-week-1",
+      "title": "Meet Mila and Leo",
+      "title_hy": "Ծանոթացեք Միլային և Լեոյին",
+      "level": "A1",
+      "music": "quiet-page.m4a",
+      "stories": [
+        "mila-meet",
+        "mila-mitten",
+        "mila-dinosaur",
+        "mila-chocolate"
+      ]
+    },
+    {
+      "id": "ani-week-2",
+      "title": "Ani's autumn",
+      "title_hy": "Անիի աշունը",
+      "level": "A2",
+      "music": "quiet-page.m4a",
+      "stories": [
+        "gata",
+        "concert",
+        "neighbour",
+        "firstsnow"
+      ]
+    },
+    {
+      "id": "mila-week-2",
+      "title": "Mila and Leo's busy week",
+      "title_hy": "Միլայի և Լեոյի զբաղված շաբաթը",
+      "level": "A1",
+      "music": "quiet-page.m4a",
+      "stories": [
+        "mila-cake",
+        "mila-sledge",
+        "mila-zoo",
+        "mila-tooth"
+      ]
+    },
+    {
+      "id": "ani-winter",
+      "title": "Ani's winter",
+      "title_hy": "Անիի ձմեռը",
+      "level": "A2",
+      "music": "quiet-page.m4a",
+      "stories": [
+        "winterwalk",
+        "snowman",
+        "skating",
+        "cookies"
+      ]
+    },
+    {
+      "id": "mila-week-3",
+      "title": "Mila, Leo and Toffee",
+      "title_hy": "Միլան, Լեոն և Թոֆին",
+      "level": "A1",
+      "music": "quiet-page.m4a",
+      "stories": [
+        "mila-village",
+        "mila-goldfish",
+        "mila-toffee"
+      ]
     }
   ],
   "words": {
-    "library": [["library", "գրադարան"], ["quiet", "լուռ, հանգիստ"], ["librarian", "գրադարանավար"], ["wooden", "փայտե"], ["borrow", "վերցնել ժամանակավորապես"]],
-    "plant": [["seed", "սերմ"], ["pot", "ծաղկաման"], ["tiny", "փոքրիկ"], ["grow", "աճել"], ["height", "բարձրություն"]],
-    "letter": [["penfriend", "նամակագրական ընկեր"], ["envelope", "ծրար"], ["post office", "փոստ"], ["draw", "նկարել"], ["write back", "պատասխան գրել"]],
-    "dilijan": [["trip", "ճամփորդություն"], ["forest", "անտառ"], ["fresh", "թարմ"], ["lake", "լիճ"], ["leaf", "տերև"]]
+    "library": [
+      [
+        "library",
+        "գրադարան"
+      ],
+      [
+        "quiet",
+        "լուռ, հանգիստ"
+      ],
+      [
+        "librarian",
+        "գրադարանավար"
+      ],
+      [
+        "wooden",
+        "փայտե"
+      ],
+      [
+        "borrow",
+        "վերցնել ժամանակավորապես"
+      ]
+    ],
+    "plant": [
+      [
+        "seed",
+        "սերմ"
+      ],
+      [
+        "pot",
+        "ծաղկաման"
+      ],
+      [
+        "tiny",
+        "փոքրիկ"
+      ],
+      [
+        "grow",
+        "աճել"
+      ],
+      [
+        "height",
+        "բարձրություն"
+      ]
+    ],
+    "letter": [
+      [
+        "penfriend",
+        "նամակագրական ընկեր"
+      ],
+      [
+        "envelope",
+        "ծրար"
+      ],
+      [
+        "post office",
+        "փոստ"
+      ],
+      [
+        "draw",
+        "նկարել"
+      ],
+      [
+        "write back",
+        "պատասխան գրել"
+      ]
+    ],
+    "dilijan": [
+      [
+        "trip",
+        "ճամփորդություն"
+      ],
+      [
+        "forest",
+        "անտառ"
+      ],
+      [
+        "fresh",
+        "թարմ"
+      ],
+      [
+        "lake",
+        "լիճ"
+      ],
+      [
+        "leaf",
+        "տերև"
+      ]
+    ],
+    "mila-meet": [
+      [
+        "curly",
+        "գանգուր"
+      ],
+      [
+        "drawing",
+        "նկարչություն"
+      ],
+      [
+        "little brother",
+        "կրտսեր եղբայր"
+      ],
+      [
+        "fluffy",
+        "փափկամազ"
+      ],
+      [
+        "family",
+        "ընտանիք"
+      ]
+    ],
+    "mila-mitten": [
+      [
+        "snowy",
+        "ձյունառատ"
+      ],
+      [
+        "snowball",
+        "ձնագնդի"
+      ],
+      [
+        "mitten",
+        "ձեռնոց"
+      ],
+      [
+        "lost",
+        "կորած"
+      ],
+      [
+        "bench",
+        "նստարան"
+      ]
+    ],
+    "mila-dinosaur": [
+      [
+        "museum",
+        "թանգարան"
+      ],
+      [
+        "excited",
+        "ոգևորված"
+      ],
+      [
+        "huge",
+        "հսկայական"
+      ],
+      [
+        "teeth",
+        "ատամներ"
+      ],
+      [
+        "sketchbook",
+        "նկարչական ալբոմ"
+      ]
+    ],
+    "mila-chocolate": [
+      [
+        "evening",
+        "երեկո"
+      ],
+      [
+        "milk",
+        "կաթ"
+      ],
+      [
+        "pan",
+        "կաթսա"
+      ],
+      [
+        "outside",
+        "դրսում"
+      ],
+      [
+        "lap",
+        "գիրկ"
+      ]
+    ],
+    "gata": [
+      [
+        "pastry",
+        "խմորեղեն"
+      ],
+      [
+        "flour",
+        "ալյուր"
+      ],
+      [
+        "butter",
+        "կարագ"
+      ],
+      [
+        "dough",
+        "խմոր"
+      ],
+      [
+        "wonderful",
+        "հիանալի"
+      ]
+    ],
+    "concert": [
+      [
+        "concert",
+        "համերգ"
+      ],
+      [
+        "piano",
+        "դաշնամուր"
+      ],
+      [
+        "stage",
+        "բեմ"
+      ],
+      [
+        "clap",
+        "ծափ տալ"
+      ],
+      [
+        "proud",
+        "հպարտ"
+      ]
+    ],
+    "neighbour": [
+      [
+        "next door",
+        "հարևանությամբ"
+      ],
+      [
+        "alone",
+        "մենակ"
+      ],
+      [
+        "heavy",
+        "ծանր"
+      ],
+      [
+        "carry",
+        "տանել, կրել"
+      ],
+      [
+        "invite",
+        "հրավիրել"
+      ]
+    ],
+    "firstsnow": [
+      [
+        "bright",
+        "պայծառ"
+      ],
+      [
+        "coat",
+        "վերարկու"
+      ],
+      [
+        "gloves",
+        "ձեռնոցներ"
+      ],
+      [
+        "snowman",
+        "ձնեմարդ"
+      ],
+      [
+        "cheeks",
+        "այտեր"
+      ]
+    ],
+    "mila-cake": [
+      [
+        "egg",
+        "ձու"
+      ],
+      [
+        "bowl",
+        "աման"
+      ],
+      [
+        "cloud",
+        "ամպ"
+      ],
+      [
+        "oven",
+        "ջեռոց"
+      ],
+      [
+        "strawberry",
+        "ելակ"
+      ]
+    ],
+    "mila-sledge": [
+      [
+        "sledge",
+        "սահնակ"
+      ],
+      [
+        "hill",
+        "բլուր"
+      ],
+      [
+        "top",
+        "գագաթ"
+      ],
+      [
+        "fast",
+        "արագ"
+      ],
+      [
+        "fall",
+        "ընկնել"
+      ]
+    ],
+    "mila-zoo": [
+      [
+        "zoo",
+        "կենդանաբանական այգի"
+      ],
+      [
+        "giraffe",
+        "ընձուղտ"
+      ],
+      [
+        "monkey",
+        "կապիկ"
+      ],
+      [
+        "branch",
+        "ճյուղ"
+      ],
+      [
+        "asleep",
+        "քնած"
+      ]
+    ],
+    "mila-tooth": [
+      [
+        "tooth",
+        "ատամ"
+      ],
+      [
+        "wobbly",
+        "երերուն"
+      ],
+      [
+        "bite",
+        "կծել"
+      ],
+      [
+        "brave",
+        "քաջ"
+      ],
+      [
+        "pillow",
+        "բարձ"
+      ]
+    ],
+    "winterwalk": [
+      [
+        "boots",
+        "կոշիկներ"
+      ],
+      [
+        "walk",
+        "զբոսանք"
+      ],
+      [
+        "jump",
+        "ցատկել"
+      ],
+      [
+        "bird",
+        "թռչուն"
+      ],
+      [
+        "branch",
+        "ճյուղ"
+      ]
+    ],
+    "snowman": [
+      [
+        "yard",
+        "բակ"
+      ],
+      [
+        "carrot",
+        "գազար"
+      ],
+      [
+        "button",
+        "կոճակ"
+      ],
+      [
+        "scarf",
+        "շարֆ"
+      ],
+      [
+        "warm",
+        "տաք"
+      ]
+    ],
+    "skating": [
+      [
+        "ice skating",
+        "չմշկասահք"
+      ],
+      [
+        "first time",
+        "առաջին անգամ"
+      ],
+      [
+        "skates",
+        "չմուշկներ"
+      ],
+      [
+        "fall down",
+        "ընկնել"
+      ],
+      [
+        "try again",
+        "նորից փորձել"
+      ]
+    ],
+    "cookies": [
+      [
+        "cookies",
+        "թխվածքաբլիթներ"
+      ],
+      [
+        "mix",
+        "խառնել"
+      ],
+      [
+        "sugar",
+        "շաքար"
+      ],
+      [
+        "star",
+        "աստղ"
+      ],
+      [
+        "heart",
+        "սիրտ"
+      ]
+    ],
+    "mila-village": [
+      [
+        "village",
+        "գյուղ"
+      ],
+      [
+        "gate",
+        "դարպաս"
+      ],
+      [
+        "hen",
+        "հավ"
+      ],
+      [
+        "hay",
+        "խոտ"
+      ],
+      [
+        "shoulders",
+        "ուսեր"
+      ]
+    ],
+    "mila-goldfish": [
+      [
+        "pet shop",
+        "կենդանիների խանութ"
+      ],
+      [
+        "goldfish",
+        "ոսկե ձկնիկ"
+      ],
+      [
+        "round",
+        "կլոր"
+      ],
+      [
+        "food",
+        "կեր"
+      ],
+      [
+        "everywhere",
+        "ամենուր"
+      ]
+    ],
+    "mila-toffee": [
+      [
+        "dinner time",
+        "ընթրիքի ժամ"
+      ],
+      [
+        "sofa",
+        "բազմոց"
+      ],
+      [
+        "torch",
+        "լապտեր"
+      ],
+      [
+        "curtains",
+        "վարագույրներ"
+      ],
+      [
+        "basket",
+        "զամբյուղ"
+      ]
+    ]
   }
 }

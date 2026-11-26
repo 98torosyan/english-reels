@@ -240,3 +240,9 @@ Open:
 - .github/workflows/youtube-lesson.yml: renders in 4K and uploads only the ids written in publish/LESSONS (empty now);
   the YouTube id is saved in lessons.json so a lesson never goes up twice.
 - The Armenian words in lessons.json ("words") should be checked by the teacher.
+
+## 2026-11-26 (noon) — weekly YouTube lessons on
+- reels/data/lessons.json: 6 lessons (ani-week-1, mila-week-1, ani-week-2, mila-week-2, ani-winter, mila-week-3) with
+  5 words + Armenian per story (to be checked by the teacher).
+- youtube-lesson.yml now also runs Wed and Sat 09:07 Yerevan: `youtube_lesson.py next` picks the first lesson not on
+  YouTube whose stories are all published on Instagram. publish/LESSONS still forces a lesson at once.
