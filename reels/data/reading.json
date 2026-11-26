@@ -732,6 +732,116 @@
         50,
         55
       ]
+    },
+    {
+      "id": "toyshop",
+      "number": 44,
+      "title": "The toy shop window",
+      "title_hy": "Խաղալիքների խանութի ցուցափեղկը",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "In the city centre, there is a little toy shop. Ani and Mum stop in front of the window. Inside, a small train goes round and round. There are dolls, teddy bears and colourful balls. Snow falls softly on the street. Ani puts her nose on the glass. 'It's like magic,' she says. Mum smiles and holds her hand.",
+      "hy": "Քաղաքի կենտրոնում խաղալիքների մի փոքրիկ խանութ կա։ Անին ու մայրիկը կանգ են առնում ցուցափեղկի առաջ։ Ներսում մի փոքրիկ գնացք պտտվում է ու պտտվում։ Այնտեղ կան տիկնիկներ, արջուկներ և գունավոր գնդակներ։ Փողոցում մեղմ ձյուն է գալիս։ Անին քիթը դնում է ապակուն։ «Կարծես կախարդանք լինի»,— ասում է նա։ Մայրիկը ժպտում է ու բռնում նրա ձեռքը։"
+    },
+    {
+      "id": "snowday",
+      "number": 45,
+      "title": "Snow day",
+      "title_hy": "Ձյունառատ օր",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "In the morning, Ani looks out of the window. Everything is white! There is no school today. Ani and her friends take their sledges to the hill. They go down fast and laugh all the way. Their cheeks are red, and their hands are cold. In the evening, Ani is tired but very happy. 'I love snow days!' she says.",
+      "hy": "Առավոտյան Անին նայում է պատուհանից։ Ամեն ինչ սպիտակ է։ Այսօր դպրոց չկա։ Անին ու ընկերները սահնակներով գնում են բլուր։ Նրանք արագ սահում են ներքև ու ամբողջ ճանապարհին ծիծաղում։ Նրանց այտերը կարմրել են, իսկ ձեռքերը սառել։ Երեկոյան Անին հոգնած է, բայց շատ երջանիկ։ «Ես սիրում եմ ձյունառատ օրերը»,— ասում է նա։"
+    },
+    {
+      "id": "frostletter",
+      "number": 46,
+      "title": "A letter to Grandpa Frost",
+      "title_hy": "Նամակ Ձմեռ պապին",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "Ani sits at her desk with a pencil and paper. She writes a letter to Grandpa Frost. 'Dear Grandpa Frost, I help Mum, and I read every day. Can I have a new book, please?' She draws a little tree on the letter. Then she puts it under the New Year tree and goes to bed.",
+      "hy": "Անին նստած է գրասեղանի մոտ՝ մատիտն ու թուղթը ձեռքին։ Նա նամակ է գրում Ձմեռ պապին. «Սիրելի՛ Ձմեռ պապ, ես օգնում եմ մայրիկին և ամեն օր կարդում եմ։ Կարելի՞ է ինձ նոր գիրք նվիրել»։ Նամակի վրա նա փոքրիկ տոնածառ է նկարում։ Հետո այն դնում է տոնածառի տակ ու գնում քնելու։"
+    },
+    {
+      "id": "giftmum",
+      "number": 47,
+      "title": "A gift for Mum",
+      "title_hy": "Նվեր մայրիկի համար",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "Ani wants to make a gift for Mum. She takes paper, glue and her colour pencils. She makes a card with a big red heart. Inside, she writes, 'I love you, Mum.' Ani hides the card under her bed. On New Year's Eve, she gives it to Mum. Mum reads it and hugs her. 'This is the best gift,' she says.",
+      "hy": "Անին ուզում է նվեր պատրաստել մայրիկի համար։ Նա վերցնում է թուղթ, սոսինձ ու գունավոր մատիտներ։ Նա մեծ կարմիր սրտով բացիկ է պատրաստում։ Ներսում գրում է. «Սիրում եմ քեզ, մայրիկ»։ Անին բացիկը թաքցնում է մահճակալի տակ։ Ամանորի գիշերը նա այն նվիրում է մայրիկին։ Մայրիկը կարդում է ու գրկում նրան։ «Սա ամենալավ նվերն է»,— ասում է նա։"
+    },
+    {
+      "id": "nye",
+      "number": 48,
+      "title": "New Year's Eve",
+      "title_hy": "Ամանորի գիշեր",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "It is New Year's Eve. The whole family is at Grandma's house. The table is full of good food. Everyone talks and laughs. At midnight, they count: 'Three, two, one... Happy New Year!' Fireworks light up the sky over the city. Ani makes a wish and closes her eyes. 'I wish everyone a happy year,' she says quietly.",
+      "hy": "Ամանորի գիշեր է։ Ամբողջ ընտանիքը տատիկի տանն է։ Սեղանը լի է համեղ ուտելիքով։ Բոլորը զրուցում են ու ծիծաղում։ Կեսգիշերին նրանք հաշվում են. «Երեք, երկու, մեկ... Շնորհավոր Նոր տարի»։ Հրավառությունը լուսավորում է քաղաքի երկինքը։ Անին երազանք է պահում ու փակում աչքերը։ «Բոլորին երջանիկ տարի եմ մաղթում»,— կամացուկ ասում է նա։"
+    },
+    {
+      "id": "mila-nightsky",
+      "number": 49,
+      "title": "The night sky",
+      "title_hy": "Գիշերային երկինքը",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "After dinner, Dad takes a telescope to the balcony. 'Look at the sky,' he says. There are hundreds of stars. Mila looks into the telescope. 'I can see the Moon!' she says. Leo looks too. 'Can I go to the Moon one day?' he asks. Dad smiles. 'If you study hard, maybe you can!'",
+      "hy": "Ընթրիքից հետո հայրիկը աստղադիտակը տանում է պատշգամբ։ «Նայեք երկնքին»,— ասում է նա։ Երկնքում հարյուրավոր աստղեր կան։ Միլան նայում է աստղադիտակով։ «Ես Լուսինն եմ տեսնում»,— ասում է նա։ Լեոն էլ է նայում։ «Ես մի օր կարո՞ղ եմ Լուսին գնալ»,— հարցնում է նա։ Հայրիկը ժպտում է. «Եթե լավ սովորես, գուցե կարողանաս»։"
+    },
+    {
+      "id": "mila-snowcastle",
+      "number": 50,
+      "title": "The snow castle",
+      "title_hy": "Ձյունե դղյակը",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "The family goes to the mountains. There is snow everywhere. Mila and Leo want to build a snow castle. Mila makes the walls. Leo makes a tower with a stick on top. Then they ride a sledge down the hill. 'Faster!' shouts Leo. In the evening, they are tired, but very, very happy.",
+      "hy": "Ընտանիքը գնում է լեռներ։ Ամենուր ձյուն է։ Միլան ու Լեոն ուզում են ձյունե դղյակ կառուցել։ Միլան պատերն է սարքում։ Լեոն աշտարակ է սարքում, իսկ գագաթին փայտ է դնում։ Հետո նրանք սահնակով սահում են բլրից ներքև։ «Ավելի արագ»,— գոռում է Լեոն։ Երեկոյան նրանք հոգնած են, բայց շատ ու շատ երջանիկ։"
+    },
+    {
+      "id": "mila-bakery",
+      "number": 51,
+      "title": "At the bakery",
+      "title_hy": "Հացատանը",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "On Saturday morning, Mila and Leo go to the bakery. It smells wonderful. 'Good morning! Can I have a loaf of bread, please?' asks Mila. 'And two cookies, please!' says Leo. The baker smiles and gives them the bread and the cookies. 'Thank you!' say Mila and Leo. They eat the cookies on the way home.",
+      "hy": "Շաբաթ առավոտյան Միլան ու Լեոն գնում են հացատուն։ Այնտեղ հիանալի բույր է։ «Բարի լույս։ Կարելի՞ է մեկ բոքոն հաց»,— հարցնում է Միլան։ «Եվ երկու թխվածքաբլիթ, խնդրում եմ»,— ասում է Լեոն։ Հացթուխը ժպտում է ու տալիս նրանց հացն ու թխվածքաբլիթները։ «Շնորհակալություն»,— ասում են Միլան ու Լեոն։ Տուն գնալիս նրանք ուտում են թխվածքաբլիթները։"
+    },
+    {
+      "id": "mila-giftgrandpa",
+      "number": 52,
+      "title": "A gift for Grandpa",
+      "title_hy": "Նվեր պապիկի համար",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "It is Grandpa's birthday. Mila wants to make a special gift. She draws a big picture of Grandpa's garden with apricot trees. Leo adds a little dinosaur in the corner. 'Grandpa loves dinosaurs too,' he says. They go to Grandpa's house. Grandpa looks at the picture and laughs. 'This is the best gift in the world!'",
+      "hy": "Պապիկի ծննդյան օրն է։ Միլան ուզում է հատուկ նվեր պատրաստել։ Նա նկարում է պապիկի այգին՝ ծիրանենիներով։ Լեոն անկյունում փոքրիկ դինոզավր է ավելացնում։ «Պապիկն էլ է դինոզավրեր սիրում»,— ասում է նա։ Նրանք գնում են պապիկի տուն։ Պապիկը նայում է նկարին ու ծիծաղում. «Սա աշխարհի ամենալավ նվերն է»։"
+    },
+    {
+      "id": "mila-train",
+      "number": 53,
+      "title": "The train to Dilijan",
+      "title_hy": "Գնացքով Դիլիջան",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "Today, the family takes a train to Dilijan. Mila and Leo sit by the window. Outside, there are white hills and tall green trees. Leo counts the tunnels. 'One, two, three!' Mila draws the forest. In Dilijan, the air is fresh and cold. 'It's like a fairy tale,' says Mila.",
+      "hy": "Այսօր ընտանիքը գնացքով գնում է Դիլիջան։ Միլան ու Լեոն նստում են պատուհանի մոտ։ Դրսում սպիտակ բլուրներ ու բարձր կանաչ ծառեր են։ Լեոն հաշվում է թունելները. «Մեկ, երկու, երեք»։ Միլան նկարում է անտառը։ Դիլիջանում օդը թարմ է ու ցուրտ։ «Կարծես հեքիաթ լինի»,— ասում է Միլան։"
+    },
+    {
+      "id": "mila-market",
+      "number": 54,
+      "title": "The New Year market",
+      "title_hy": "Ամանորյա տոնավաճառը",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "It is the end of December. The city is full of lights. Mila and Leo go to the New Year market with Mum and Dad. There are toys, sweets and a big tree with stars. Leo buys a small wooden dinosaur. Mila buys a red ribbon for Toffee. 'Happy New Year!' everyone says. What a magical night!",
+      "hy": "Դեկտեմբերի վերջն է։ Քաղաքը լի է լույսերով։ Միլան ու Լեոն մայրիկի ու հայրիկի հետ գնում են ամանորյա տոնավաճառ։ Այնտեղ խաղալիքներ, քաղցրավենիք և աստղերով մեծ տոնածառ կա։ Լեոն փոքրիկ փայտե դինոզավր է գնում։ Միլան Թոֆիի համար կարմիր ժապավեն է գնում։ «Շնորհավոր Նոր տարի»,— ասում են բոլորը։ Ի՜նչ կախարդական գիշեր է։"
     }
   ]
 }
