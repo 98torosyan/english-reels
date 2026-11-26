@@ -6,6 +6,7 @@ on:
 permissions:
   contents: read
   issues: write
+  actions: read
 concurrency:
   group: watchdog
 jobs:
@@ -13,10 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Find late posts and check the token
+      - name: Find late posts, YouTube gaps, missing media, failed runs; check the token
         id: w
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
         run: python publish/watchdog.py || echo "late=1" >> "$GITHUB_OUTPUT"
       - name: Open an issue (GitHub e-mails the owner)
         if: steps.w.outputs.late == '1'

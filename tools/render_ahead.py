@@ -1,7 +1,6 @@
 """Just-in-time media: for staged posts due within --days days whose files are not in the media repo yet, render them
-and put them in place. Posts say how in item["render"]: {"reel": "<feelstory id>"}, {"countries": "<country id>"} or
-{"motion": "<story id>"}, {"storyvideo": "<story id>"} (a finished story reel kept on the motion-clips branch: only copied, not rendered) or
-{"story_card": {...}} (a Story video for a reel, tools/story_card.py).
+and put them in place. Posts say how in item["render"]: {"reading": "<reading id>"} (reels/render_reading.js) or
+{"story_card": {...}} (a Story video for a reel, tools/story_card.py). Any other kind is reported, never skipped silently.
 This keeps the public media site small (only the next few days live there) and needs no computer: the daily
 "Render ahead" workflow runs it. Usage: python tools/render_ahead.py --media-repo ../english-reels-media [--days 3]"""
 import argparse, datetime as dt, json, os, shutil, subprocess
@@ -34,6 +33,8 @@ def render(item, media):
         (work / "spec.json").write_text(json.dumps(c), encoding="utf-8")
         subprocess.run(["python", str(ROOT / "tools" / "story_card.py"), str(work / "spec.json"), str(folder / "story.mp4")], cwd=ROOT, check=True)
         shutil.rmtree(work)
+    else:
+        raise ValueError(f"unknown render kind {sorted(spec)}: only reading and story_card exist now")
 
 
 def main():
