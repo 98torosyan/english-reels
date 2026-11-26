@@ -55,12 +55,20 @@ HOOK = {"mistake": "Common English mistake: can you spot it?", "rule": "English 
         "feelstory": "A short story in easy English: {t}", "classic": "Classic books in easy English: {t}", "opposites": "English opposites in one picture: {t}",
         "countries": "Learn English and travel: {t}", "motion": "A beautiful story in easy English: {t}"}
 ARM = re.compile(r"[Ա-և]")
+HOOK_START = tuple(h.split("{t}")[0].split(":")[0] for h in HOOK.values())
+
+
+def strip_hooks(cap: str) -> str:
+    """Drop any English hook lines already at the top, so the hook is never added twice."""
+    lines = cap.split("\n")
+    while lines and lines[0].startswith(HOOK_START): lines = lines[1:]
+    return "\n".join(lines)
 
 
 def english_title(item):
     """The English name of the post, taken from its own caption (the part without Armenian letters), else from its id."""
     if item.get("kind") == "words10": return str(item.get("content_id", "")).replace("-", " ")
-    for line in item.get("caption", "").split("\n")[:3]:
+    for line in strip_hooks(item.get("caption", "")).split("\n")[:3]:
         parts = [p.strip() for p in line.split("·") if p.strip() and not ARM.search(p)]
         parts = [p for p in parts if not re.fullmatch(r"(A1|A2|B1|B2|C1)(–(A2|B1|B2))?", p) and p.lower() not in {
             "common english mistakes", "english vocabulary", "english grammar", "english grammar quiz", "weekly review", "daily reading",
@@ -75,8 +83,9 @@ def improve(item):
     if item.get("format") == "STORIES" or not cap.strip(): return cap
     kind = item.get("kind", "")
     hook = HOOK.get(kind, "Learn English: {t}").format(t=english_title(item)).rstrip(": ")
-    if cap.startswith(hook): return cap
-    lines = cap.rstrip().split("\n")
+    body = strip_hooks(cap)
+    if cap.startswith(hook + "\n") and body == cap[len(hook) + 1:]: return cap
+    lines = body.rstrip().split("\n")
     if lines and lines[-1].lstrip().startswith("#"): lines = lines[:-1]
     return f"{hook}\n" + "\n".join(lines).rstrip() + "\n\n" + " ".join(tags(item))
 
