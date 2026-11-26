@@ -1,0 +1,50 @@
+name: YouTube backfill
+
+on:
+  push:
+    branches: [main]
+    paths: ["publish/YOUTUBE_BACKFILL"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Upload the listed published reels to YouTube
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          python - <<'PY'
+          import json, sys
+          sys.path.insert(0, "publish")
+          import crosspost
+          ids = [l.strip() for l in open("publish/YOUTUBE_BACKFILL") if l.strip() and not l.startswith("#")]
+          q = json.load(open("queue.json"))
+          for item in q["items"]:
+              if item["id"] in ids and item.get("published_at") and not item.get("youtube_id"):
+                  got = crosspost.youtube(item["media"]["video_url"], item.get("caption", ""))
+                  print(item["id"], "->", got)
+                  if got: item["youtube_id"] = got
+          json.dump(q, open("queue.json", "w"), ensure_ascii=False, indent=2)
+          open("queue.json", "a").write("\n")
+          PY
+      - name: Save
+        run: |
+          if ! git diff --quiet queue.json; then
+            git config user.name 98torosyan
+            git config user.email "$(git log -1 --format=%ae)"
+            git commit -m "YouTube: նշել ներբեռնված տեսանյութերը" queue.json
+            for k in 1 2 3 4 5; do git pull --rebase && git push && break; sleep 7; done
+          fi
