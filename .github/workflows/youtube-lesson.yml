@@ -1,9 +1,12 @@
 name: YouTube listening lesson
 
 # Renders a weekly listening lesson in 4K (reels/render_lesson.js) and uploads it to YouTube.
-# Nothing goes out on its own: only lesson ids written in publish/LESSONS are made, once each
-# (the video id is then saved in reels/data/lessons.json).
+# Twice a week (Wednesday and Saturday) the next ready lesson goes out: the first one in reels/data/lessons.json that is
+# not on YouTube yet and whose stories are all already published on Instagram. Lesson ids written in publish/LESSONS
+# go out at once. Each lesson is made once (its video id is then saved in reels/data/lessons.json).
 on:
+  schedule:
+    - cron: "7 5 * * 3,6"   # 09:07 Yerevan, ready before noon
   push:
     branches: [main]
     paths: ["publish/LESSONS"]
@@ -41,7 +44,9 @@ jobs:
           RENDER_WORKERS: "4"
         run: |
           OUT="$(cd .. && pwd)/../outputs/english-reels-samples"
-          for id in $(grep -v '^#' publish/LESSONS | awk 'NF{print $1}'); do
+          if [ "${{ github.event_name }}" = "schedule" ]; then IDS=$(python publish/youtube_lesson.py next); else IDS=$(grep -v '^#' publish/LESSONS | awk 'NF{print $1}'); fi
+          echo "lessons: ${IDS:-none}"
+          for id in $IDS; do
             done_id=$(python -c "import json,sys; l=[x for x in json.load(open('reels/data/lessons.json'))['lessons'] if x['id']=='$id']; print(l[0].get('youtube_id','') if l else 'missing')")
             if [ -n "$done_id" ]; then echo "$id: already on YouTube ($done_id) or unknown"; continue; fi
             node reels/render_lesson.js "$id"

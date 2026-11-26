@@ -2,6 +2,7 @@
 
     python publish/youtube_lesson.py meta <lesson-id>                 # print title, description, tags (no upload)
     python publish/youtube_lesson.py upload <lesson-id> <video.mp4>   # resumable upload, prints the video id
+    python publish/youtube_lesson.py next                             # the next lesson that is ready (scheduled runs)
 
 Upload needs YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN. Chapters come from <video>.json next to the video
 (written by the renderer), so the times always match the video."""
@@ -96,9 +97,21 @@ def upload(lesson_id: str, video: Path) -> str:
     raise RuntimeError("Upload ended without a video id.")
 
 
+def next_lesson() -> str:
+    """The first lesson not yet on YouTube whose stories have all been published on Instagram (empty if none)."""
+    _, data = _data()
+    queue = json.loads((ROOT / "queue.json").read_text(encoding="utf-8"))["items"]
+    out = {i.get("content_id") for i in queue if i.get("kind") == "reading" and i.get("published_at")}
+    for lesson in data["lessons"]:
+        if not lesson.get("youtube_id") and all(s in out for s in lesson["stories"]): return lesson["id"]
+    return ""
+
+
 if __name__ == "__main__":
     if len(sys.argv) >= 3 and sys.argv[1] == "meta":
         print(json.dumps(lesson_meta(sys.argv[2]), ensure_ascii=False, indent=2))
+    elif len(sys.argv) >= 2 and sys.argv[1] == "next":
+        print(next_lesson())
     elif len(sys.argv) >= 4 and sys.argv[1] == "upload":
         print(upload(sys.argv[2], Path(sys.argv[3])))
     else:
