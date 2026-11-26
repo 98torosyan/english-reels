@@ -57,7 +57,7 @@ function fontUrls(baseUrl) {
 }
 
 // The page's signature in the top-left corner: a thin gold line, the name and "English Reading Room" in Fraunces italic.
-// Replaces the older pill (reading, storyvideo, routine) and the bottom handle (feelstory).
+// Replaces the older pill and bottom handle of the earlier formats.
 const SIGN = '<div class="sign"><span>GAYANE TOROSYAN</span><em>English Reading Room</em></div>';
 function signCss(baseUrl) {
   const f = `${baseUrl}/node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-italic.woff2`;

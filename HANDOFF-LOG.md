@@ -221,3 +221,12 @@ Open:
 - caption_reach: the English first line is never added twice (dinosaur and mitten captions had it twice on Instagram).
 - plan_story_cards.py reads only reading.json (render-ahead failed on the deleted feelstory.json).
 - Channel profile: description, links (lessons, Instagram) and contact email filled. Still to do by hand: banner.
+
+## 2026-11-26 — reliability
+- watchdog.py now also reports (Telegram + issue): readings on Instagram but not on YouTube after 2 h, staged posts
+  due within 48 h whose media files are not in the media repo (read from the GitHub tree, not a local checkout),
+  and a failed latest run of Render ahead / Publish due post / YouTube backfill in the last 24 h.
+- check_code.py step 5: every file named in code or workflows must exist, including data sets loaded by name
+  (data("x"), data(k) for k in (...)). It would have caught the deleted feelstory.json bug.
+- render_ahead.py refuses unknown render kinds loudly; system_check.py accepts files that are committed but not on
+  disk (sparse checkouts); upscale_panels.py only looks at assets/reading; stale comments about removed series cleaned.

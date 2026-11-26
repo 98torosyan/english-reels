@@ -21,6 +21,11 @@ def ffprobe(path):
     secs = int(dur[1]) * 3600 + int(dur[2]) * 60 + float(dur[3]) if dur else 0
     return (int(dim[1]), int(dim[2])) if dim else None, secs, "Audio:" in info
 
+def in_git(repo, path):
+    """True when the media repo has the file committed (a sparse local checkout may not show it on disk)."""
+    return subprocess.run(["git", "cat-file", "-e", f"HEAD:{path}"], cwd=repo, capture_output=True).returncode == 0
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--media-repo", required=True); a = ap.parse_args()
     media = Path(a.media_repo).resolve()
@@ -56,6 +61,7 @@ def main():
             if isinstance(u, dict): u = u.get("image_url") or u.get("video_url")
             if not u.startswith(BASE): fail(f"{iid}: media outside the media site: {u}"); continue
             f = media / u[len(BASE):]
+            if not f.exists() and in_git(media, u[len(BASE):]): continue   # sparse checkout: the file is in the repo, just not on disk
             if not f.exists():
                 # rendered just in time by "Render ahead" (tools/render_ahead.py): fine until 2 days before it is due
                 if i.get("render") and when > now + dt.timedelta(days=2): continue

@@ -1,7 +1,6 @@
 """English quality check with LanguageTool (British English, self-hosted in CI).
 
-Checks every English text that appears on screen: cards, dialogues, sounds, stories,
-carousels and the 10-words lists (spelling included). Prints a report and exits 1 if
+Checks every English text that appears on screen in the daily readings (spelling included). Prints a report and exits 1 if
 any issue is found, so a bad sentence never reaches Instagram.
 LT_URL points to the LanguageTool server (the CI job starts one in Docker)."""
 import json, os, re, sys, time, urllib.parse, urllib.request

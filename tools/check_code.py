@@ -1,8 +1,10 @@
 """Code health check (runs in CI on every push and every night):
 1. every Python file compiles; ruff finds no real bugs (undefined names, unused imports, likely mistakes);
 2. every JavaScript file and every <script> inside the HTML templates parses;
-3. every data file is valid JSON and every story/carousel has what its renderer needs;
-4. every queue item that is still to be published passes the publisher's own validation.
+3. every data file is valid JSON and every reading has what its renderer needs;
+4. every queue item that is still to be published passes the publisher's own validation;
+5. every file a script or workflow names (reels/data/<name>.json, tools/x.py, reels/x.js, music, assets…) exists,
+   including data sets loaded by name such as data("reading").
 Exit code 1 with a list of problems if anything is wrong."""
 import json, py_compile, re, subprocess, sys, tempfile
 from pathlib import Path
@@ -64,6 +66,23 @@ for i in q:
     except publish.PublishError as e: bad(f"queue: {i['id']}: {e}")
     if len(i.get("caption", "")) > 2200: bad(f"queue: {i['id']}: caption longer than Instagram allows")
     if i.get("caption", "").count("#") > 30: bad(f"queue: {i['id']}: more than 30 hashtags")
+
+# 5. Files named in code and workflows must exist (a deleted data set or script must not stay referenced)
+PATH_RE = re.compile(r"""(?<![\w./-])((?:reels|tools|publish|qc|voices|analytics|music|assets)/[\w./-]+\.(?:py|js|json|m4a|mp3|svg|png|html|txt))(?![\w{])""")
+DATA_CALL = re.compile(r"""\bdata\(\s*["']([\w-]+)["']\s*\)""")
+DATA_LOOP = re.compile(r"""data\(\s*(\w+)\s*\)\s*for\s+\1\s+in\s+\(([^)]*)\)""")
+JOINED = re.compile(r"""["']reels["']\s*/\s*["']data["']\s*/\s*["']([\w-]+\.json)["']""")
+for f in [f for f in tracked if f.endswith((".py", ".js", ".yml", ".yaml")) and not f.startswith("node_modules")]:
+    text = (ROOT / f).read_text(encoding="utf-8")
+    if f.endswith(".py"): text = re.sub(r'"""[\s\S]*?"""', "", text)   # docstrings hold examples, not real paths
+    code = "\n".join(l for l in text.splitlines() if not l.lstrip().startswith(("#", "//")))
+    names = set(PATH_RE.findall(code))
+    names |= {f"reels/data/{n}.json" for n in DATA_CALL.findall(code)}
+    names |= {f"reels/data/{n}.json" for _, group in DATA_LOOP.findall(code) for n in re.findall(r"[\"']([\w-]+)[\"']", group)}
+    names |= {f"reels/data/{n}" for n in JOINED.findall(code)}
+    for n in sorted(names):
+        if "*" in n or "{" in n or "$" in n: continue
+        if not (ROOT / n).exists(): bad(f"missing file: {f} names {n}")
 
 print("\n".join(problems) if problems else "code check: all good")
 print(f"{len(problems)} problem(s)")

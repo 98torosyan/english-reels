@@ -48,7 +48,7 @@ jobs:
       - name: Depth model for living pictures (only when a reading asks for them)
         run: |
           if grep -q '"living": true' queue.json; then pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q transformers; fi
-      - name: Every new reel and carousel gets its Story half an hour later
+      - name: Every new reading gets its Story half an hour later
         run: |
           python publish/plan_story_cards.py
           git add queue.json

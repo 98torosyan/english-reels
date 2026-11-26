@@ -1,6 +1,6 @@
 """Cut a 2x3 or 3x3 storyboard (src.png) into square panels and sharpen them with Real-ESRGAN (BSD-3, anime-6B weights for illustrations; loaded with spandrel, MIT).
 
-For every assets/picstory/<id>/src.png and assets/storyvideo/<id>/src.png whose panels are missing or older
+For every assets/reading/<id>/src.png whose panels are missing or older
 than the source, writes 1.jpg … 6.jpg (or 9.jpg) at 1080x1080. Runs in CI (GitHub Actions) where PyTorch is available.
 Without --sharp it only cuts and resizes (used locally)."""
 import hashlib, json, sys
@@ -88,7 +88,7 @@ def main():
             return out
         model = _up
     done = 0
-    for src in sorted(p for d in ("picstory", "storyvideo", "routine", "feelstory", "opposites", "countries", "minute", "reading", "cities", "talk") for p in ROOT.glob(f"assets/{d}/*/src.png")):
+    for src in sorted(p for d in ("reading",) for p in ROOT.glob(f"assets/{d}/*/src.png")):
         d = src.parent; mark = d / "panels.json"; h = hashlib.sha1(src.read_bytes() + ((d / "pick").read_bytes() if (d / "pick").exists() else b"") + ((d / "boxes").read_bytes() if (d / "boxes").exists() else b"")).hexdigest()
         kind = "photo" if (d / "photo").exists() else "art"   # photorealistic storyboards get the natural-photo model
         want = {"src": h, "sharp": sharp, "model": kind}
