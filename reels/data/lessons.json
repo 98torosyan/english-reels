@@ -1,0 +1,19 @@
+{
+  "note": "Weekly YouTube listening lessons: 3-4 daily readings joined into one 16:9 video (reels/render_lesson.js). 'words' are the words shown before each story; the Armenian should be reviewed by the teacher.",
+  "lessons": [
+    {
+      "id": "ani-week-1",
+      "title": "Ani's week",
+      "title_hy": "Անիի շաբաթը",
+      "level": "A2",
+      "music": "quiet-page.m4a",
+      "stories": ["library", "plant", "letter", "dilijan"]
+    }
+  ],
+  "words": {
+    "library": [["library", "գրադարան"], ["quiet", "լուռ, հանգիստ"], ["librarian", "գրադարանավար"], ["wooden", "փայտե"], ["borrow", "վերցնել ժամանակավորապես"]],
+    "plant": [["seed", "սերմ"], ["pot", "ծաղկաման"], ["tiny", "փոքրիկ"], ["grow", "աճել"], ["height", "բարձրություն"]],
+    "letter": [["penfriend", "նամակագրական ընկեր"], ["envelope", "ծրար"], ["post office", "փոստ"], ["draw", "նկարել"], ["write back", "պատասխան գրել"]],
+    "dilijan": [["trip", "ճամփորդություն"], ["forest", "անտառ"], ["fresh", "թարմ"], ["lake", "լիճ"], ["leaf", "տերև"]]
+  }
+}

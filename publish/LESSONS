@@ -1,0 +1,2 @@
+# Listening lessons to render in 4K and upload to YouTube (ids from reels/data/lessons.json), one per line.
+# A lesson is made once; its YouTube id is then saved in lessons.json. Empty for now.

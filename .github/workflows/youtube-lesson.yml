@@ -1,0 +1,65 @@
+name: YouTube listening lesson
+
+# Renders a weekly listening lesson in 4K (reels/render_lesson.js) and uploads it to YouTube.
+# Nothing goes out on its own: only lesson ids written in publish/LESSONS are made, once each
+# (the video id is then saved in reels/data/lessons.json).
+on:
+  push:
+    branches: [main]
+    paths: ["publish/LESSONS"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: youtube-lesson
+  cancel-in-progress: false
+
+jobs:
+  lesson:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    env:
+      CHROME_PATH: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null && npm ci --no-audit --no-fund
+      - name: Render and upload the listed lessons
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          RENDER_SCALE: "2"
+          RENDER_WORKERS: "4"
+        run: |
+          OUT="$(cd .. && pwd)/../outputs/english-reels-samples"
+          for id in $(grep -v '^#' publish/LESSONS | awk 'NF{print $1}'); do
+            done_id=$(python -c "import json,sys; l=[x for x in json.load(open('reels/data/lessons.json'))['lessons'] if x['id']=='$id']; print(l[0].get('youtube_id','') if l else 'missing')")
+            if [ -n "$done_id" ]; then echo "$id: already on YouTube ($done_id) or unknown"; continue; fi
+            node reels/render_lesson.js "$id"
+            vid=$(python publish/youtube_lesson.py upload "$id" "$OUT/lesson-$id.mp4" | tail -1)
+            echo "$id -> $vid"
+            python - "$id" "$vid" <<'PY'
+          import json, sys
+          p = "reels/data/lessons.json"; d = json.load(open(p, encoding="utf-8"))
+          for l in d["lessons"]:
+              if l["id"] == sys.argv[1]: l["youtube_id"] = sys.argv[2]
+          open(p, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, indent=2) + "\n")
+          PY
+          done
+      - name: Save
+        run: |
+          if ! git diff --quiet reels/data/lessons.json; then
+            git config user.name 98torosyan
+            git config user.email "$(git log -1 --format=%ae)"
+            git commit -m "YouTube: նշել ներբեռնված դասը" reels/data/lessons.json
+            for k in 1 2 3 4 5; do git pull --rebase && git push && break; sleep 7; done
+          fi
