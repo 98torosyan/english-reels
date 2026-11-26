@@ -20,10 +20,14 @@ def youtube(video_url: str, caption: str) -> str | None:
     token = _post("https://oauth2.googleapis.com/token", {"client_id": cid, "client_secret": secret, "refresh_token": refresh, "grant_type": "refresh_token"})["access_token"]
     with urllib.request.urlopen(video_url, timeout=300) as r:
         video = r.read()
-    lines = [l.strip() for l in caption.split("\n")]
-    head = next((l for l in lines[1:4] if "·" in l), lines[0] if lines else "")
-    name = head.split("·")[0].strip() or "Daily reading"
-    title = f"{name} 📖 Easy English Story (A1) | Անգլերեն ընթերցանություն"[:100]
+    name, level = "", "A1"
+    for line in caption.split("\n")[:4]:
+        if "·" in line and "Daily reading" not in line and "Կարդանք" not in line:
+            name = line.split("·")[0].strip()
+            if "(" in line: level = line.rsplit("(", 1)[1].split(")")[0].strip() or level
+            break
+    name = name or "Daily reading"
+    title = f"{name} 📖 Easy English Story ({level}) | Անգլերեն ընթերցանություն"[:100]
     desc = "\n".join(l for l in caption.split("\n") if not l.startswith("#") and "Direct" not in l and "bio" not in l).strip()
     desc += ("\n\nԱնհատական և խմբային դասեր Երևանում՝ englishreadingroom.am@gmail.com"
              "\nԱմբողջական դասերը ձայնով՝ https://98torosyan.github.io/english-reading/"
