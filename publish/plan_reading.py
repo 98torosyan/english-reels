@@ -29,7 +29,8 @@ def music(day_index):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--media-repo", required=True); ap.add_argument("--start", required=True)
-    ap.add_argument("--only", nargs="*"); ap.add_argument("--ahead", action="store_true"); a = ap.parse_args()
+    ap.add_argument("--only", nargs="*"); ap.add_argument("--ahead", action="store_true")
+    ap.add_argument("--time", default=REEL_AT, help="post time, e.g. 16:00 for Story time"); a = ap.parse_args()
     media = Path(a.media_repo).resolve()
     lists = json.loads((ROOT / "reels/data/reading.json").read_text(encoding="utf-8"))["stories"]
     start = dt.date.fromisoformat(a.start)
@@ -44,8 +45,8 @@ def main():
             rdir = media / rid; rdir.mkdir(parents=True, exist_ok=True)
             shutil.copy2(OUT / f"reading-{l['id']}.mp4", rdir / f"reading-{l['id']}.mp4")
             Image.open(OUT / f"reading-{l['id']}.png").convert("RGB").save(rdir / "cover.jpg", "JPEG", quality=92)
-        new.append({"id": rid, "date": day, "time": REEL_AT, "timezone": "Asia/Yerevan", "type": "REEL", "format": "REELS",
-                           "kind": "reading", "content_id": l["id"], "title": f"Daily reading {l['number']:02d}", "caption": caption(l),
+        new.append({"id": rid, "date": day, "time": a.time, "timezone": "Asia/Yerevan", "type": "REEL", "format": "REELS",
+                           "kind": "reading", "content_id": l["id"], "title": f"{'Story time' if l.get('series') == 'STORY TIME' else 'Daily reading'} {l['number']:02d}", "caption": caption(l),
                            "review_status": "staged", "thumb_offset": 1400,
                            **({"render": {"reading": l["id"], "music": Path(track).name}} if a.ahead else {}),
                            "media": {"video_url": f"{BASE}/{rid}/reading-{l['id']}.mp4", "cover_url": f"{BASE}/{rid}/cover.jpg"}})
