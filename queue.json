@@ -4096,7 +4096,7 @@
       "content_id": "mila-chocolate",
       "title": "Hot chocolate story",
       "caption": "",
-      "review_status": "staged",
+      "review_status": "published",
       "render": {
         "story_card": {
           "picture": "assets/reading/mila-chocolate/1.jpg",
@@ -4109,7 +4109,9 @@
       "hashtags": [],
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-26-story-mila-chocolate/story.mp4"
-      }
+      },
+      "published_at": "2026-11-26T21:05+04:00",
+      "ig_media_id": "18077448350749205"
     },
     {
       "id": "2026-11-27-reading-plant",
