@@ -71,7 +71,7 @@ def english_title(item):
     for line in strip_hooks(item.get("caption", "")).split("\n")[:3]:
         parts = [p.strip() for p in line.split("·") if p.strip() and not ARM.search(p)]
         parts = [p for p in parts if not re.fullmatch(r"(A1|A2|B1|B2|C1)(–(A2|B1|B2))?", p) and p.lower() not in {
-            "common english mistakes", "english vocabulary", "english grammar", "english grammar quiz", "weekly review", "daily reading",
+            "common english mistakes", "english vocabulary", "english grammar", "english grammar quiz", "weekly review", "daily reading", "story time",
             "everyday english dialogue", "english story for learners", "picture story", "classics made easy"}]
         if parts: return re.sub(r"^(Word of the day|Phrasal verbs?|Picture story)\s*:\s*", "", parts[0], flags=re.I)
     return str(item.get("content_id", "")).replace("-", " ").strip().capitalize()
