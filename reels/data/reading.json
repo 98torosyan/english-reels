@@ -637,6 +637,101 @@
         49,
         54
       ]
+    },
+    {
+      "id": "st-boot",
+      "title": "The kitten in the boot",
+      "title_hy": "Կատվիկը կոշիկի մեջ",
+      "en": "It was a cold morning, and Dad was late for work. He quickly put on his coat. Then he tried to put on his boot, but something was inside. 'Meow!' said the boot. Dad jumped. He looked inside and saw two big green eyes. It was Pumpkin, the little kitten! She was warm and sleepy. Everyone laughed, and Dad was late again.",
+      "hy": "Ցուրտ առավոտ էր, և հայրիկը ուշանում էր աշխատանքից։ Նա արագ հագավ վերարկուն։ Հետո փորձեց հագնել կոշիկը, բայց ներսում ինչ-որ բան կար։ «Մյաու»,— ասաց կոշիկը։ Հայրիկը ցատկեց։ Նա նայեց ներս ու տեսավ երկու մեծ կանաչ աչք։ Դա Դդմիկն էր՝ փոքրիկ կատվիկը։ Նա տաք էր ու քնկոտ։ Բոլորը ծիծաղեցին, և հայրիկը նորից ուշացավ։",
+      "number": 39,
+      "level": "A2",
+      "voice": "chatterbox:sonia",
+      "series": "STORY TIME",
+      "pic_words": [
+        0,
+        17,
+        29,
+        35,
+        44,
+        55
+      ]
+    },
+    {
+      "id": "st-parrot",
+      "title": "Grandma's clever parrot",
+      "title_hy": "Տատիկի խելացի թութակը",
+      "en": "Grandma had a green parrot called Kiko. Every morning, Lilit said, 'Hello, Kiko!' but Kiko never answered. One day, Lilit had an idea. She sat next to the cage and said, 'Good morning, Grandma!' again and again. The next day, Grandma came into the kitchen. 'Good morning, Grandma!' shouted Kiko. Grandma dropped her cup of tea. Then she laughed and laughed.",
+      "hy": "Տատիկը Կիկո անունով կանաչ թութակ ուներ։ Ամեն առավոտ Լիլիթն ասում էր. «Բարև, Կիկո», բայց Կիկոն երբեք չէր պատասխանում։ Մի օր Լիլիթի մտքին մի գաղափար եկավ։ Նա նստեց վանդակի կողքին ու նորից ու նորից ասաց. «Բարի լույս, տատիկ»։ Հաջորդ օրը տատիկը մտավ խոհանոց։ «Բարի լույս, տատիկ»,— գոռաց Կիկոն։ Տատիկը գցեց թեյի բաժակը։ Հետո նա երկար ծիծաղեց։",
+      "number": 40,
+      "level": "A2",
+      "voice": "chatterbox:sonia",
+      "series": "STORY TIME",
+      "pic_words": [
+        0,
+        7,
+        23,
+        37,
+        45,
+        50
+      ]
+    },
+    {
+      "id": "st-pumpkin",
+      "title": "The giant pumpkin",
+      "title_hy": "Հսկա դդումը",
+      "en": "In spring, Vahe planted a pumpkin seed in Grandpa's garden. He watered it every day. In summer, the pumpkin grew and grew. By autumn, it was bigger than Vahe! It was too heavy to carry, so Grandpa brought a wheelbarrow. They took it to the village fair. Vahe's pumpkin won first prize! That evening, Grandma made pumpkin soup for the whole village.",
+      "hy": "Գարնանը Վահեն պապիկի այգում դդմի սերմ տնկեց։ Նա ամեն օր ջրում էր այն։ Ամռանը դդումն աճում էր ու աճում։ Աշնանը այն Վահեից էլ մեծ էր։ Այն շատ ծանր էր տանելու համար, ուստի պապիկը ձեռնասայլակ բերեց։ Նրանք դդումը տարան գյուղի տոնավաճառ։ Վահեի դդումը առաջին մրցանակը շահեց։ Այդ երեկո տատիկը դդմով ապուր պատրաստեց ամբողջ գյուղի համար։",
+      "number": 41,
+      "level": "A2",
+      "voice": "chatterbox:sonia",
+      "series": "STORY TIME",
+      "pic_words": [
+        0,
+        15,
+        22,
+        29,
+        47,
+        52
+      ]
+    },
+    {
+      "id": "st-paintbrush",
+      "title": "The bird on the page",
+      "title_hy": "Թռչունը էջի վրա",
+      "en": "One evening, Lusine painted a little blue bird in her sketchbook. It looked almost real. Then she went to bed. In the middle of the night, she heard a sweet song. The blue bird was flying around her room! It sang at the window and looked at the moon. In the morning, the bird was back on the page. But there was a small blue feather on her desk.",
+      "hy": "Մի երեկո Լուսինեն իր նկարչական ալբոմում փոքրիկ կապույտ թռչուն նկարեց։ Այն գրեթե իսկական էր թվում։ Հետո նա գնաց քնելու։ Կեսգիշերին նա մի քաղցր երգ լսեց։ Կապույտ թռչունը թռչում էր նրա սենյակում։ Այն երգում էր պատուհանի մոտ ու նայում լուսնին։ Առավոտյան թռչունը նորից էջի վրա էր։ Բայց նրա գրասեղանին մի փոքրիկ կապույտ փետուր կար։",
+      "number": 42,
+      "level": "A2",
+      "voice": "chatterbox:sonia",
+      "series": "STORY TIME",
+      "pic_words": [
+        0,
+        20,
+        31,
+        39,
+        49,
+        59
+      ]
+    },
+    {
+      "id": "st-pancakes",
+      "title": "Pancakes for Mum",
+      "title_hy": "Նրբաբլիթներ մայրիկի համար",
+      "en": "It was Mum's birthday, and Arsen wanted to make pancakes. He got up very early. He mixed the eggs, the milk and the flour in a big bowl. Then he tried to flip a pancake like a real chef. Up it went, and down it fell onto the dog's head! The dog was very happy. Arsen made more pancakes, and Mum loved her birthday breakfast.",
+      "hy": "Մայրիկի ծննդյան օրն էր, և Արսենը ուզում էր նրբաբլիթներ պատրաստել։ Նա շատ վաղ արթնացավ։ Մեծ ամանի մեջ խառնեց ձուն, կաթն ու ալյուրը։ Հետո փորձեց իսկական խոհարարի պես շրջել նրբաբլիթը։ Այն թռավ վեր ու ընկավ շան գլխին։ Շունը շատ ուրախ էր։ Արսենն էլի նրբաբլիթներ պատրաստեց, և մայրիկին շատ դուր եկավ իր ծննդյան նախաճաշը։",
+      "number": 43,
+      "level": "A2",
+      "voice": "chatterbox:sonia",
+      "series": "STORY TIME",
+      "pic_words": [
+        0,
+        15,
+        28,
+        39,
+        50,
+        55
+      ]
     }
   ]
 }
