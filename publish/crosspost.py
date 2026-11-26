@@ -49,7 +49,8 @@ def youtube_meta(item: dict) -> dict:
                 if "(" in line: level = line.rsplit("(", 1)[1].split(")")[0].strip() or level
                 break
     name = name or "Daily reading"
-    who = "Mila and Leo" if "mila-" in str(item.get("id")) else "Ani"
+    rid = str(item.get("id"))
+    who = "Mila and Leo" if "mila-" in rid else "" if "-st-" in rid else "Ani"
     title = f"{name} 📖 Easy English Story ({level}) | Անգլերեն ընթերցանություն"
     if len(title) > 100: title = f"{name} 📖 Easy English Story ({level})"[:100]
     parts = [f"{name} — a short {level} story in easy English with a clear British voice and the Armenian translation.",
@@ -58,7 +59,7 @@ def youtube_meta(item: dict) -> dict:
     if s.get("hy"): parts += ["", f"🇦🇲 Թարգմանություն — {s.get('title_hy', '')}".rstrip(" —"), s["hy"].strip()]
     q = _question(caption)
     if q: parts += ["", "💬 " + q]
-    parts += ["", f"New stories every day with {who}. Subscribe 🔔 {CHANNEL}?sub_confirmation=1",
+    parts += ["", f"New stories every day{' with ' + who if who else ''}. Subscribe 🔔 {CHANNEL}?sub_confirmation=1",
               f"📚 All lessons with audio: {LESSONS}",
               f"📷 Instagram: {INSTAGRAM}",
               "✉️ Private and group English lessons in Yerevan: englishreadingroom.am@gmail.com",
@@ -66,7 +67,7 @@ def youtube_meta(item: dict) -> dict:
     desc = "\n".join(parts).replace("<", "‹").replace(">", "›")[:4900]
     words = [w for w in name.replace("'", " ").replace("?", "").split() if len(w) > 3]
     tags, total = [], 0
-    for t in [name, f"{level} English", f"{level} English story", f"{who} English story"] + BASE_TAGS + words:
+    for t in [name, f"{level} English", f"{level} English story", f"{who or 'short'} English story"] + BASE_TAGS + words:
         if t not in tags and total + len(t) + 3 < 480: tags.append(t); total += len(t) + 3
     snippet = {"title": title, "description": desc, "categoryId": "27", "defaultLanguage": "en", "defaultAudioLanguage": "en-GB", "tags": tags}
     loc = {}

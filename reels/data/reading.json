@@ -542,6 +542,101 @@
       ],
       "en": "It is dinner time for Toffee, but where is she? Mila looks at her bowl. Leo looks under the sofa with a torch. Mila looks behind the curtains. Leo opens the wardrobe. No Toffee! Then Mila opens the big basket. There she is, asleep on the warm blankets! 'Toffee, we love you!' says Leo.",
       "hy": "Թոֆիի ընթրիքի ժամն է, բայց ո՞ւր է նա։ Միլան նայում է նրա ամանին։ Լեոն լապտերով նայում է բազմոցի տակ։ Միլան նայում է վարագույրների հետևում։ Լեոն բացում է պահարանը։ Թոֆին չկա։ Հետո Միլան բացում է մեծ զամբյուղը։ Ահա նա՝ քնած տաք ծածկոցների վրա։ «Թոֆի, մենք քեզ սիրում ենք»,— ասում է Լեոն։"
+    },
+    {
+      "id": "st-kite",
+      "title": "The kite on the hill",
+      "title_hy": "Օդապարիկը բլրի վրա",
+      "en": "On a windy Saturday, Aram and his grandpa made a big yellow kite. They took it to the hill near the village. Grandpa held the string, and Aram ran as fast as he could. Up went the kite, high into the blue sky! Suddenly, the wind pulled it into an old walnut tree. Aram was sad, but Grandpa climbed up carefully and got it back. Soon the kite was flying again.",
+      "hy": "Քամոտ մի շաբաթ օր Արամն ու պապիկը մեծ դեղին օդապարիկ սարքեցին։ Այն տարան գյուղի մոտի բլուրը։ Պապիկը բռնել էր թելը, իսկ Արամը վազում էր, որքան կարող էր արագ։ Օդապարիկը բարձրացավ կապույտ երկինք։ Հանկարծ քամին այն քաշեց մի հին ընկուզենու մեջ։ Արամը տխրեց, բայց պապիկը զգուշորեն բարձրացավ ու հետ բերեց այն։ Շուտով օդապարիկը նորից թռչում էր։",
+      "number": 34,
+      "level": "A2",
+      "voice": "chatterbox:sonia",
+      "series": "STORY TIME",
+      "pic_words": [
+        0,
+        13,
+        22,
+        34,
+        43,
+        65
+      ]
+    },
+    {
+      "id": "st-newpupil",
+      "title": "The new pupil",
+      "title_hy": "Նոր աշակերտը",
+      "en": "On Monday, a new pupil came to Nare's class. His name was Sami, and he was from another city. He sat alone and did not say a word. At break, Nare gave him half of her apple. 'Do you like football?' she asked. Sami smiled for the first time. After school, they played football in the yard with the other children. Soon Sami had a lot of friends.",
+      "hy": "Երկուշաբթի օրը Նարեի դասարան նոր աշակերտ եկավ։ Նրա անունը Սամի էր, և նա ուրիշ քաղաքից էր։ Նա նստել էր մենակ ու ոչ մի բառ չէր ասում։ Դասամիջոցին Նարեն նրան տվեց իր խնձորի կեսը։ «Ֆուտբոլ սիրո՞ւմ ես»,— հարցրեց նա։ Սամին առաջին անգամ ժպտաց։ Դասերից հետո նրանք մյուս երեխաների հետ բակում ֆուտբոլ խաղացին։ Շուտով Սամին շատ ընկերներ ուներ։",
+      "number": 35,
+      "level": "A2",
+      "voice": "chatterbox:sonia",
+      "series": "STORY TIME",
+      "pic_words": [
+        0,
+        19,
+        28,
+        43,
+        49,
+        61
+      ]
+    },
+    {
+      "id": "st-umbrella",
+      "title": "The black umbrella",
+      "title_hy": "Սև անձրևանոցը",
+      "en": "It was raining hard when Mr Arman got off the bus. At the bus stop, he saw a little girl without an umbrella. She looked cold and worried. Mr Arman gave her his big black umbrella and walked home in the rain. The next morning, someone knocked on his door. It was the girl and her mother, with his umbrella and a warm cake. 'Thank you for your kindness,' they said.",
+      "hy": "Ուժեղ անձրև էր գալիս, երբ պարոն Արմանն իջավ ավտոբուսից։ Կանգառում նա տեսավ մի փոքրիկ աղջկա՝ առանց անձրևանոցի։ Աղջիկը մրսած ու անհանգիստ տեսք ուներ։ Պարոն Արմանը նրան տվեց իր մեծ սև անձրևանոցը, իսկ ինքը անձրևի տակ քայլեց տուն։ Հաջորդ առավոտ ինչ-որ մեկը թակեց նրա դուռը։ Դա աղջիկն էր՝ մայրիկի հետ, ձեռքին անձրևանոցն ու տաք կարկանդակ։ «Շնորհակալություն ձեր բարության համար»,— ասացին նրանք։",
+      "number": 36,
+      "level": "A2",
+      "voice": "chatterbox:sonia",
+      "series": "STORY TIME",
+      "pic_words": [
+        0,
+        11,
+        23,
+        28,
+        42,
+        64
+      ]
+    },
+    {
+      "id": "st-market",
+      "title": "The winter market",
+      "title_hy": "Ձմեռային տոնավաճառը",
+      "en": "Before New Year, Anna and her mum went to the winter market in the city centre. There were lights everywhere, and music played in the square. They bought a small wooden star for their tree. Then Anna saw an old man selling hot chestnuts. 'Two bags, please,' she said. The chestnuts were warm in her cold hands. On the way home, it started to snow, and Anna laughed.",
+      "hy": "Նոր տարուց առաջ Աննան ու մայրիկը գնացին քաղաքի կենտրոնի ձմեռային տոնավաճառ։ Ամենուր լույսեր էին, իսկ հրապարակում երաժշտություն էր հնչում։ Նրանք իրենց տոնածառի համար փոքրիկ փայտե աստղ գնեցին։ Հետո Աննան տեսավ մի ծեր մարդու, որը տաք շագանակ էր վաճառում։ «Երկու տոպրակ, խնդրում եմ»,— ասաց նա։ Շագանակները տաք էին նրա սառած ձեռքերում։ Տուն գնալիս ձյուն սկսեց գալ, և Աննան ծիծաղեց։",
+      "number": 37,
+      "level": "A2",
+      "voice": "chatterbox:sonia",
+      "series": "STORY TIME",
+      "pic_words": [
+        0,
+        16,
+        26,
+        35,
+        49,
+        57
+      ]
+    },
+    {
+      "id": "st-radio",
+      "title": "Grandpa's old radio",
+      "title_hy": "Պապիկի հին ռադիոն",
+      "en": "In the attic, Narek found an old radio. It was dusty and quiet. 'It was my father's,' said Grandpa. 'It doesn't work any more.' Narek had an idea. He and Grandpa cleaned the radio and opened it carefully. Grandpa changed a small broken part. Then Narek turned the button. Suddenly, music filled the room! Grandpa closed his eyes and listened. 'This song is from my childhood,' he said softly.",
+      "hy": "Ձեղնահարկում Նարեկը մի հին ռադիո գտավ։ Այն փոշոտ էր ու լուռ։ «Այն իմ հորն էր պատկանում,— ասաց պապիկը։— Այլևս չի աշխատում»։ Նարեկի մտքին մի գաղափար եկավ։ Նա պապիկի հետ մաքրեց ռադիոն ու զգուշորեն բացեց այն։ Պապիկը փոխեց մի փոքրիկ կոտրված մաս։ Հետո Նարեկը պտտեց կոճակը։ Հանկարծ երաժշտությունը լցրեց սենյակը։ Պապիկը փակեց աչքերն ու լսեց։ «Այս երգը իմ մանկությունից է»,— մեղմ ասաց նա։",
+      "number": 38,
+      "level": "A2",
+      "voice": "chatterbox:sonia",
+      "series": "STORY TIME",
+      "pic_words": [
+        0,
+        13,
+        28,
+        38,
+        49,
+        54
+      ]
     }
   ]
 }
