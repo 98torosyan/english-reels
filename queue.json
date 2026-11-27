@@ -4896,6 +4896,31 @@
       }
     },
     {
+      "id": "2026-12-02-story-snowcat",
+      "date": "2026-12-02",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "snowcat",
+      "title": "The snow cat story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/snowcat/1.jpg",
+          "title": "The snow cat",
+          "author": "DAILY READING",
+          "hook": "It snows all night. In the\nmorning, Ani runs into the garden.",
+          "music": "music/calm-study.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-02-story-snowcat/story.mp4"
+      }
+    },
+    {
       "id": "2026-12-02-reading-st-paintbrush",
       "date": "2026-12-02",
       "time": "16:00",
@@ -5013,6 +5038,31 @@
       }
     },
     {
+      "id": "2026-12-03-story-hiccups",
+      "date": "2026-12-03",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "hiccups",
+      "title": "Ani has hiccups story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/hiccups/1.jpg",
+          "title": "Ani has hiccups",
+          "author": "DAILY READING",
+          "hook": "At breakfast,\nAni has hiccups.",
+          "music": "music/lofi-notes.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-03-story-hiccups/story.mp4"
+      }
+    },
+    {
       "id": "2026-12-03-reading-st-radio",
       "date": "2026-12-03",
       "time": "16:00",
@@ -5127,6 +5177,31 @@
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-04-reading-pyjamaday/reading-pyjamaday.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-12-04-reading-pyjamaday/cover.jpg"
+      }
+    },
+    {
+      "id": "2026-12-04-story-pyjamaday",
+      "date": "2026-12-04",
+      "time": "11:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "pyjamaday",
+      "title": "Pyjama day story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/pyjamaday/1.jpg",
+          "title": "Pyjama day",
+          "author": "DAILY READING",
+          "hook": "Today is pyjama day\nat Ani's school.",
+          "music": "music/warm-tea.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-12-04-story-pyjamaday/story.mp4"
       }
     },
     {
