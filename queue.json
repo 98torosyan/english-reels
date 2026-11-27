@@ -4495,6 +4495,31 @@
       }
     },
     {
+      "id": "2026-11-29-story-st-bella-kite",
+      "date": "2026-11-29",
+      "time": "13:00",
+      "timezone": "Asia/Yerevan",
+      "type": "STORY",
+      "format": "STORIES",
+      "kind": "story-video",
+      "content_id": "st-bella-kite",
+      "title": "The red kite story",
+      "caption": "",
+      "review_status": "staged",
+      "render": {
+        "story_card": {
+          "picture": "assets/reading/st-bella-kite/1.jpg",
+          "title": "The red kite",
+          "author": "STORY TIME",
+          "hook": "Noy has a new red\nkite. 'Look, Bella!",
+          "music": "music/lofi-notes.m4a"
+        }
+      },
+      "media": {
+        "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-29-story-st-bella-kite/story.mp4"
+      }
+    },
+    {
       "id": "2026-11-29-reading-st-newpupil",
       "date": "2026-11-29",
       "time": "16:00",
