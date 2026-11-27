@@ -1,7 +1,7 @@
 name: Make voices
 on:
   push:
-    branches: [main]
+    branches: [main, kite-lesson]
     paths: ["reels/data/reading.json", "voices/**"]
   workflow_dispatch:
 permissions:
