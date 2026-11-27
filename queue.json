@@ -4483,11 +4483,15 @@
       "content_id": "st-bella-kite",
       "title": "Story time · The red kite",
       "caption": "Read and listen in English: The red kite\nՊատմության ժամ · Story time\nThe red kite · Կարմիր օդապարիկը (A1)\n\nNoy has a new red kite. 'Look, Bella!' he says. The kite flies high in the blue sky. But the wind is very strong. Oh no! The kite is in the tree, and it is broken. Noy is very sad. 'Don't cry,' says Bella. At night, Bella fixes the kite with tape and paper stars. In the morning, Noy sees it. He is so happy! 'Thank you, Bella!' Now they fly the kite together. Brothers and sisters help each other.\n\nԹարգմանություն՝\nՆոյը նոր կարմիր օդապարիկ ունի։ «Նայի՛ր, Բելլա»,— ասում է նա։ Օդապարիկը բարձր թռչում է կապույտ երկնքում։ Բայց քամին շատ ուժեղ է։ Վա՜յ։ Օդապարիկը ծառի վրա է, և այն կոտրվել է։ Նոյը շատ տխուր է։ «Մի՛ լացիր»,— ասում է Բելլան։ Գիշերը Բելլան սոսնձաժապավենով ու թղթե աստղերով նորոգում է օդապարիկը։ Առավոտյան Նոյը տեսնում է այն։ Նա այնքա՜ն ուրախ է։ «Շնորհակալություն, Բելլա»։ Հիմա նրանք միասին են օդապարիկ թռցնում։ Քույրերն ու եղբայրները օգնում են իրար։\n\nԼսի՛ր, հետևի՛ր ընդգծված բառերին, ապա կարդա՛ բարձրաձայն։\nՈւղարկի՛ր եղբորդ կամ քրոջդ 💛\n\nԱնհատական և խմբային դասերի համար գրե՛ք Direct-ով։\nԱմբողջական դասերը ձայնով՝ bio-ի հղումով։\n\n#esl #englishreading #englishstories #englishforbeginners #armenia",
-      "review_status": "draft",
+      "review_status": "staged",
       "thumb_offset": 1400,
       "media": {
         "video_url": "https://98torosyan.github.io/english-reels-media/2026-11-29-reading-st-bella-kite/reading-st-bella-kite.mp4",
         "cover_url": "https://98torosyan.github.io/english-reels-media/2026-11-29-reading-st-bella-kite/cover.jpg"
+      },
+      "render": {
+        "reading": "st-bella-kite",
+        "music": "lofi-notes.m4a"
       }
     },
     {
