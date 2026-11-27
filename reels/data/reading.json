@@ -842,6 +842,96 @@
       "voice": "chatterbox:sonia",
       "en": "It is the end of December. The city is full of lights. Mila and Leo go to the New Year market with Mum and Dad. There are toys, sweets and a big tree with stars. Leo buys a small wooden dinosaur. Mila buys a red ribbon for Toffee. 'Happy New Year!' everyone says. What a magical night!",
       "hy": "Դեկտեմբերի վերջն է։ Քաղաքը լի է լույսերով։ Միլան ու Լեոն մայրիկի ու հայրիկի հետ գնում են ամանորյա տոնավաճառ։ Այնտեղ խաղալիքներ, քաղցրավենիք և աստղերով մեծ տոնածառ կա։ Լեոն փոքրիկ փայտե դինոզավր է գնում։ Միլան Թոֆիի համար կարմիր ժապավեն է գնում։ «Շնորհավոր Նոր տարի»,— ասում են բոլորը։ Ի՜նչ կախարդական գիշեր է։"
+    },
+    {
+      "id": "snowcat",
+      "number": 55,
+      "title": "The snow cat",
+      "title_hy": "Ձյունե կատուն",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "It snows all night. In the morning, Ani runs into the garden. She makes a cat from snow. It has two ears, a long tail and green buttons for eyes. 'Hello, Snow Cat!' says Ani. Then she goes inside for lunch. When she comes back, she cannot believe it. A real cat is sitting next to the snow cat!",
+      "hy": "Ամբողջ գիշեր ձյուն է գալիս։ Առավոտյան Անին վազում է այգի։ Նա ձյունից կատու է սարքում։ Կատուն ունի երկու ականջ, երկար պոչ, իսկ աչքերի փոխարեն՝ կանաչ կոճակներ։ «Բարև, Ձյունե կատու»,— ասում է Անին։ Հետո նա ներս է գնում ճաշելու։ Երբ վերադառնում է, չի հավատում իր աչքերին։ Ձյունե կատվի կողքին իսկական կատու է նստած։",
+      "pic_words": [
+        0,
+        4,
+        12,
+        30,
+        33,
+        41
+      ]
+    },
+    {
+      "id": "hiccups",
+      "number": 56,
+      "title": "Ani has hiccups",
+      "title_hy": "Անին զկռտում է",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "At breakfast, Ani has hiccups. 'Hic! Hic!' She drinks some water. 'Hic!' She holds her breath. 'Hic!' Mum gives her a spoon of honey. 'Hic!' Then Dad hides behind the door. 'Boo!' he shouts. Ani jumps. Then she laughs. The hiccups are gone!",
+      "hy": "Նախաճաշի ժամանակ Անին զկռտում է։ «Զկռտ, զկռտ»։ Նա մի քիչ ջուր է խմում։ «Զկռտ»։ Նա պահում է շունչը։ «Զկռտ»։ Մայրիկը նրան մի գդալ մեղր է տալիս։ «Զկռտ»։ Հետո հայրիկը թաքնվում է դռան ետևում։ «Բո՜ւ»,— գոռում է նա։ Անին ցատկում է։ Հետո ծիծաղում է։ Զկռտոցն անցավ։",
+      "pic_words": [
+        0,
+        7,
+        12,
+        17,
+        25,
+        36
+      ]
+    },
+    {
+      "id": "pyjamaday",
+      "number": 57,
+      "title": "Pyjama day",
+      "title_hy": "Պիժամայի օր",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "Today is pyjama day at Ani's school. Ani puts on her pink pyjamas with stars. She takes her teddy bear, Bobo. At school, everyone is in pyjamas! Even the teacher has blue pyjamas and big fluffy slippers. They read stories and drink warm milk. 'This is the best school day!' says Ani.",
+      "hy": "Այսօր Անիի դպրոցում պիժամայի օր է։ Անին հագնում է իր վարդագույն, աստղերով պիժաման։ Նա վերցնում է իր արջուկին՝ Բոբոյին։ Դպրոցում բոլորը պիժամայով են։ Նույնիսկ ուսուցչուհին կապույտ պիժամա և մեծ փափուկ հողաթափեր է հագել։ Նրանք պատմություններ են կարդում ու տաք կաթ խմում։ «Սա դպրոցի ամենալավ օրն է»,— ասում է Անին։",
+      "pic_words": [
+        0,
+        7,
+        15,
+        21,
+        27,
+        37
+      ]
+    },
+    {
+      "id": "birdfeeder",
+      "number": 58,
+      "title": "The bird feeder",
+      "title_hy": "Թռչունների կերակրատեղին",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "It is very cold, and the birds are hungry. Ani and Dad make a bird feeder from an old bottle. Ani puts seeds inside. Dad hangs it on the tree by the window. Ani waits and waits. Then a little red bird comes. Then two, then five! Ani watches them every morning.",
+      "hy": "Շատ ցուրտ է, և թռչունները քաղցած են։ Անին ու հայրիկը հին շշից թռչունների կերակրատեղի են սարքում։ Անին ներսը սերմեր է լցնում։ Հայրիկը այն կախում է պատուհանի մոտի ծառից։ Անին սպասում է ու սպասում։ Հետո մի փոքրիկ կարմիր թռչուն է գալիս։ Հետո՝ երկու, հետո՝ հինգ։ Անին ամեն առավոտ նայում է նրանց։",
+      "pic_words": [
+        0,
+        9,
+        20,
+        24,
+        37,
+        43
+      ]
+    },
+    {
+      "id": "dolma",
+      "number": 59,
+      "title": "Dolma with Grandma",
+      "title_hy": "Տոլմա տատիկի հետ",
+      "level": "A1",
+      "voice": "chatterbox:sonia",
+      "en": "On Sunday, Ani visits Grandma. 'Today we make dolma,' says Grandma. Ani washes her hands. Grandma shows her the green leaves. Ani puts rice and meat on a leaf and rolls it. Her first dolma is very big and funny. Grandma laughs. At dinner, everyone wants Ani's big dolma!",
+      "hy": "Կիրակի օրը Անին գնում է տատիկի մոտ։ «Այսօր տոլմա ենք պատրաստում»,— ասում է տատիկը։ Անին լվանում է ձեռքերը։ Տատիկը նրան ցույց է տալիս կանաչ տերևները։ Անին բրինձ ու միս է դնում տերևի վրա ու փաթաթում։ Նրա առաջին տոլման շատ մեծ ու ծիծաղելի է։ Տատիկը ծիծաղում է։ Ընթրիքին բոլորն ուզում են Անիի մեծ տոլման։",
+      "pic_words": [
+        0,
+        11,
+        15,
+        21,
+        32,
+        42
+      ]
     }
   ]
 }
