@@ -41,10 +41,16 @@ def _question(caption: str) -> str:
 def youtube_meta(item: dict) -> dict:
     """Title, description, tags and status for one reading Short, written for YouTube search."""
     s, caption = _story(item), item.get("caption", "")
+    if not s.get("en"):   # a reel made outside the reading data: take the texts from its caption
+        paras = [p.strip() for p in caption.split("\n\n")]
+        for k, para in enumerate(paras):
+            if para.startswith("Թարգմանություն"):
+                s = {**s, "hy": para.split("\n", 1)[-1], "en": paras[k - 1] if k else ""}
+                break
     name, level = s.get("title", ""), s.get("level", "A1")
     if not name:
         for line in caption.split("\n")[:5]:
-            if "·" in line and "Daily reading" not in line and "Կարդանք" not in line:
+            if "·" in line and not any(w in line for w in ("Daily reading", "Կարդանք", "Story time", "Did you know")):
                 name = line.split("·")[0].strip()
                 if "(" in line: level = line.rsplit("(", 1)[1].split(")")[0].strip() or level
                 break
