@@ -47,11 +47,14 @@ def best_take(text, make, sr, tries=4):
     return best[1]
 
 
+CHUNK_WORDS = 24
+
+
 def synth_chatterbox(text, voice, rate, mp3):
     """Chatterbox storyteller voice (Resemble AI, MIT), voice="chatterbox:builtin". It gives no word timings, so the
     spoken span is found from the sound itself and the words are spread over it (the reels use the span)."""
     global _CHATTER
-    import subprocess, tempfile, numpy as np, soundfile as sf, torch
+    import re, subprocess, tempfile, numpy as np, soundfile as sf, torch
     if _CHATTER is None:
         from chatterbox.tts import ChatterboxTTS
         torch.set_num_threads(4); _CHATTER = ChatterboxTTS.from_pretrained(device="cpu")
@@ -65,9 +68,24 @@ def synth_chatterbox(text, voice, rate, mp3):
                             "--rate=-6%", "--text", "Good morning. Today I will read you a short and happy story about a little girl and her family.",
                             "--write-media", str(ref)], check=True)
         kw = dict(audio_prompt_path=str(ref), exaggeration=0.5, cfg_weight=0.5)
-    sr = _CHATTER.sr; w = best_take(text, lambda: _CHATTER.generate(text, **kw).squeeze().cpu().numpy(), sr)
-    env = np.convolve(np.abs(w), np.ones(int(sr * .02)) / int(sr * .02), "same"); on = np.where(env > env.max() * 0.04)[0]
-    a, b = max(0, on[0] - int(sr * .05)), min(len(w), on[-1] + int(sr * .12)); w = w[a:b]
+    sr = _CHATTER.sr
+
+    def trim(x):
+        env = np.convolve(np.abs(x), np.ones(int(sr * .02)) / int(sr * .02), "same"); on = np.where(env > env.max() * 0.04)[0]
+        return x[max(0, on[0] - int(sr * .05)):min(len(x), on[-1] + int(sr * .12))]
+
+    # One long generation drops the last words of a story, so the text is read in short parts (whole sentences,
+    # at most CHUNK_WORDS words each) and joined with a natural pause.
+    parts, cur = [], []
+    for sent in re.split(r"(?<=[.!?'’])\s+(?=[A-Z'‘])", text.strip()):
+        if cur and len(" ".join(cur + [sent]).split()) > CHUNK_WORDS: parts.append(" ".join(cur)); cur = []
+        cur.append(sent)
+    if cur: parts.append(" ".join(cur))
+    gap = np.zeros(int(sr * .32)); pieces = []
+    for k, part in enumerate(parts):
+        piece = trim(best_take(part, lambda part=part: _CHATTER.generate(part, **kw).squeeze().cpu().numpy(), sr))
+        pieces += ([gap] if k else []) + [piece]
+    w = np.concatenate(pieces)
     pad = int(sr * .05); w = np.concatenate([np.zeros(pad), w, np.zeros(pad)])
     try: tempo = max(0.88, min(1.0, 1 + float(str(rate).rstrip("%")) / 200))   # "-18%" (a learner's pace) -> 0.91
     except ValueError: tempo = 1.0
