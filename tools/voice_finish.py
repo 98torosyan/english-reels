@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DIRS = ["reading"]
-FX, ALIGN = "pb1", "ctc1"
+FX, ALIGN = "pb1", "ctc2"
 
 
 def clips():
@@ -83,8 +83,10 @@ def main():
                 old = [tuple(w[:2]) for w in meta["words"]]
                 ok = len(new) == n and all(a < b for a, b in new) and all(new[i][0] >= new[i - 1][0] for i in range(1, n))
                 drift = sum(abs(a[0] - b[0]) for a, b in zip(new, old)) / n if ok else 99
-                if ok and drift < 0.5:   # sanity: never replace good times with a bad alignment
-                    meta["words"] = [[round(a, 3), round(b, 3)] for a, b in new]; aligned += 1
+                # The joined sentence clips drift a little each (mp3 padding), so long stories can be well over half a second
+                # off by the end: a sane alignment within 2.5 s is better than the joined times.
+                if ok and drift < 2.5:
+                    meta["words"] = [[round(a, 3), round(b, 3)] for a, b in new]; aligned += 1; meta.pop("clamped", None)
                 else:
                     kept += 1
                 meta["aligned"] = ALIGN; changed = True
