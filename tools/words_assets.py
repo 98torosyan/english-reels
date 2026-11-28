@@ -4,7 +4,7 @@
     python tools/words_assets.py voices     # intro.mp3, 01.mp3 … 12.mp3 (each word said twice), outro.mp3
 Only what is missing is made.
 """
-import asyncio, json, sys
+import asyncio, json, subprocess, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -59,6 +59,14 @@ def pictures():
         print(s["id"], "12 pictures")
 
 
+def trim(mp3):
+    """Cut the silence the voice service leaves before and after the word, keeping a short natural edge."""
+    tmp = mp3.with_suffix(".t.mp3")
+    edge = "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.06,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.12,areverse"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(mp3), "-af", edge, "-b:a", "160k", str(tmp)], check=True)
+    tmp.replace(mp3)
+
+
 def voices():
     sys.path.insert(0, str(ROOT / "voices"))
     from make_voice import synth
@@ -69,6 +77,7 @@ def voices():
             mp3 = d / f"{name}.mp3"
             if mp3.exists(): continue
             asyncio.run(synth(text, DATA["voice"], "-8%", mp3))
+            trim(mp3)
             print(s["id"], name)
 
 
