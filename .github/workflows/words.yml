@@ -1,0 +1,38 @@
+name: Word sets
+on:
+  push:
+    paths: ["reels/data/words.json", "assets/words/*/sheet.png", "tools/words_assets.py"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: words-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  words:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pictures
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y ffmpeg >/dev/null
+          pip install -q torch==2.6.0 torchaudio==2.6.0 torchvision --index-url https://download.pytorch.org/whl/cpu
+          pip install -q spandrel pillow numpy "edge-tts>=7.0" soundfile
+          python tools/words_assets.py pictures
+      - name: Voice
+        run: |
+          pip install -q chatterbox-tts "setuptools<81" "faster-whisper>=1.1"
+          python tools/words_assets.py voices
+      - name: Save
+        run: |
+          git add assets/words
+          if ! git diff --cached --quiet; then
+            git config user.name 98torosyan
+            git config user.email "$(git log -1 --format=%ae)"
+            git commit -m "Բառերի նկարներ և ձայներ"
+            for k in 1 2 3 4 5; do git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin HEAD:"${GITHUB_REF_NAME}" && break; sleep 7; done
+          fi

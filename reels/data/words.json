@@ -1,0 +1,28 @@
+{
+  "note": "Word sets: 12 pictures in a 3 x 4 sheet (assets/words/<id>/sheet.png), word, British IPA and Armenian. tools/words_assets.py cuts and sharpens the pictures and makes the voice.",
+  "voice": "chatterbox:sonia",
+  "sets": [
+    {
+      "id": "winter-clothes",
+      "title": "Winter clothes",
+      "title_hy": "Ձմեռային հագուստ",
+      "music": "snow-celesta.m4a",
+      "intro": "Let's learn some new words! Winter clothes.",
+      "outro": "Well done! Save this and say them again tomorrow.",
+      "words": [
+        ["hat", "/hæt/", "գլխարկ"],
+        ["scarf", "/skɑːf/", "շարֆ"],
+        ["gloves", "/ɡlʌvz/", "ձեռնոցներ"],
+        ["mittens", "/ˈmɪtnz/", "թաթմաններ"],
+        ["coat", "/kəʊt/", "վերարկու"],
+        ["jacket", "/ˈdʒækɪt/", "բաճկոն"],
+        ["jumper", "/ˈdʒʌmpə/", "սվիտեր"],
+        ["boots", "/buːts/", "երկարաճիտ կոշիկներ"],
+        ["socks", "/sɒks/", "գուլպաներ"],
+        ["earmuffs", "/ˈɪəmʌfs/", "ականջի տաքացուցիչներ"],
+        ["umbrella", "/ʌmˈbrelə/", "անձրևանոց"],
+        ["raincoat", "/ˈreɪŋkəʊt/", "անձրևի վերարկու"]
+      ]
+    }
+  ]
+}
