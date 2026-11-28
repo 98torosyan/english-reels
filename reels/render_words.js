@@ -156,7 +156,8 @@ async function main() {
     const frames = path.join(utils.OUTPUT, `.frames-${name}`);
     const videoPath = path.join(utils.OUTPUT, `${name}.mp4`);
     await utils.renderFrames(pg, T.total, frames, path.join(utils.OUTPUT, `${name}.png`), T.cards[0].at + 1.2, FPS);
-    if (errors.length) throw new Error(`Template errors: ${errors.join(' | ')}`);
+    const real = errors.filter((e) => !/404/.test(e));   // the browser asks for a favicon; pictures are checked above
+    if (real.length) throw new Error(`Template errors: ${real.join(' | ')}`);
     const voice = path.join(work, `${name}.wav`);
     voiceTrack(T, voice);
     if (set.music && !process.env.MUSIC_TRACK) process.env.MUSIC_TRACK = path.join(utils.ROOT, 'music', set.music);
