@@ -71,6 +71,426 @@
           "անձրևի վերարկու"
         ]
       ]
+    },
+    {
+      "id": "breakfast",
+      "title": "At breakfast",
+      "title_hy": "Նախաճաշին",
+      "music": "calm-study.m4a",
+      "intro": "Let's learn some new words! At breakfast.",
+      "outro": "Well done! Save this and say them again tomorrow.",
+      "words": [
+        [
+          "bread",
+          "/bred/",
+          "հաց"
+        ],
+        [
+          "butter",
+          "/ˈbʌtə/",
+          "կարագ"
+        ],
+        [
+          "cheese",
+          "/tʃiːz/",
+          "պանիր"
+        ],
+        [
+          "egg",
+          "/eɡ/",
+          "ձու"
+        ],
+        [
+          "milk",
+          "/mɪlk/",
+          "կաթ"
+        ],
+        [
+          "tea",
+          "/tiː/",
+          "թեյ"
+        ],
+        [
+          "honey",
+          "/ˈhʌni/",
+          "մեղր"
+        ],
+        [
+          "jam",
+          "/dʒæm/",
+          "ջեմ"
+        ],
+        [
+          "porridge",
+          "/ˈpɒrɪdʒ/",
+          "շիլա"
+        ],
+        [
+          "toast",
+          "/təʊst/",
+          "տոստ"
+        ],
+        [
+          "juice",
+          "/dʒuːs/",
+          "հյութ"
+        ],
+        [
+          "yoghurt",
+          "/ˈjɒɡət/",
+          "մածուն"
+        ]
+      ],
+      "picture": [
+        "a round loaf of brown bread on a wooden board",
+        "a block of yellow butter on a small dish with a knife",
+        "a wedge of white and yellow cheese",
+        "a boiled egg in a blue egg cup",
+        "a glass of milk",
+        "a cup of tea with steam on a saucer",
+        "a jar of golden honey with a wooden honey dipper",
+        "a jar of red strawberry jam",
+        "a bowl of warm porridge with berries",
+        "two slices of golden toast",
+        "a glass of orange juice",
+        "a small bowl of white yoghurt with a spoon"
+      ]
+    },
+    {
+      "id": "kitchen",
+      "title": "In the kitchen",
+      "title_hy": "Խոհանոցում",
+      "music": "warm-tea.m4a",
+      "intro": "Let's learn some new words! In the kitchen.",
+      "outro": "Well done! Save this and say them again tomorrow.",
+      "words": [
+        [
+          "cup",
+          "/kʌp/",
+          "բաժակ"
+        ],
+        [
+          "plate",
+          "/pleɪt/",
+          "ափսե"
+        ],
+        [
+          "bowl",
+          "/bəʊl/",
+          "աման"
+        ],
+        [
+          "spoon",
+          "/spuːn/",
+          "գդալ"
+        ],
+        [
+          "fork",
+          "/fɔːk/",
+          "պատառաքաղ"
+        ],
+        [
+          "knife",
+          "/naɪf/",
+          "դանակ"
+        ],
+        [
+          "glass",
+          "/ɡlɑːs/",
+          "ապակե բաժակ"
+        ],
+        [
+          "pan",
+          "/pæn/",
+          "տապակ"
+        ],
+        [
+          "kettle",
+          "/ˈketl/",
+          "թեյնիկ"
+        ],
+        [
+          "teapot",
+          "/ˈtiːpɒt/",
+          "թեյաման"
+        ],
+        [
+          "fridge",
+          "/frɪdʒ/",
+          "սառնարան"
+        ],
+        [
+          "oven",
+          "/ˈʌvn/",
+          "ջեռոց"
+        ]
+      ],
+      "picture": [
+        "a blue cup",
+        "a white plate with a blue pattern",
+        "an empty clay bowl",
+        "a silver spoon",
+        "a silver fork",
+        "a table knife with a wooden handle",
+        "an empty clear drinking glass",
+        "a black frying pan",
+        "a red kettle",
+        "a white teapot with flowers",
+        "a small cream fridge",
+        "a kitchen oven with a glass door"
+      ]
+    },
+    {
+      "id": "fruit",
+      "title": "Fruit",
+      "title_hy": "Մրգեր",
+      "music": "sunny-marimba.m4a",
+      "intro": "Let's learn some new words! Fruit.",
+      "outro": "Well done! Save this and say them again tomorrow.",
+      "words": [
+        [
+          "apple",
+          "/ˈæpl/",
+          "խնձոր"
+        ],
+        [
+          "pear",
+          "/peə/",
+          "տանձ"
+        ],
+        [
+          "banana",
+          "/bəˈnɑːnə/",
+          "բանան"
+        ],
+        [
+          "orange",
+          "/ˈɒrɪndʒ/",
+          "նարինջ"
+        ],
+        [
+          "grapes",
+          "/ɡreɪps/",
+          "խաղող"
+        ],
+        [
+          "cherries",
+          "/ˈtʃeriz/",
+          "բալ"
+        ],
+        [
+          "apricot",
+          "/ˈeɪprɪkɒt/",
+          "ծիրան"
+        ],
+        [
+          "peach",
+          "/piːtʃ/",
+          "դեղձ"
+        ],
+        [
+          "lemon",
+          "/ˈlemən/",
+          "կիտրոն"
+        ],
+        [
+          "strawberry",
+          "/ˈstrɔːbəri/",
+          "ելակ"
+        ],
+        [
+          "pomegranate",
+          "/ˈpɒmɪɡrænɪt/",
+          "նուռ"
+        ],
+        [
+          "watermelon",
+          "/ˈwɔːtəmelən/",
+          "ձմերուկ"
+        ]
+      ],
+      "picture": [
+        "a red apple with a leaf",
+        "a yellow-green pear",
+        "a yellow banana",
+        "an orange",
+        "a bunch of purple grapes",
+        "two red cherries on a stem",
+        "two orange apricots with a leaf",
+        "a soft pink-orange peach",
+        "a yellow lemon",
+        "a red strawberry",
+        "a red pomegranate, one half open with bright seeds",
+        "a slice of watermelon"
+      ]
+    },
+    {
+      "id": "new-year",
+      "title": "New Year",
+      "title_hy": "Նոր տարի",
+      "music": "snow-celesta.m4a",
+      "intro": "Let's learn some new words! New Year.",
+      "outro": "Well done! Save this and say them again tomorrow.",
+      "words": [
+        [
+          "tree",
+          "/triː/",
+          "տոնածառ"
+        ],
+        [
+          "star",
+          "/stɑː/",
+          "աստղ"
+        ],
+        [
+          "present",
+          "/ˈpreznt/",
+          "նվեր"
+        ],
+        [
+          "candle",
+          "/ˈkændl/",
+          "մոմ"
+        ],
+        [
+          "bell",
+          "/bel/",
+          "զանգակ"
+        ],
+        [
+          "snowflake",
+          "/ˈsnəʊfleɪk/",
+          "ձյան փաթիլ"
+        ],
+        [
+          "lights",
+          "/laɪts/",
+          "լույսեր"
+        ],
+        [
+          "ball",
+          "/bɔːl/",
+          "խաղալիք գունդ"
+        ],
+        [
+          "card",
+          "/kɑːd/",
+          "բացիկ"
+        ],
+        [
+          "sweets",
+          "/swiːts/",
+          "կոնֆետներ"
+        ],
+        [
+          "fireworks",
+          "/ˈfaɪəwɜːks/",
+          "հրավառություն"
+        ],
+        [
+          "snowman",
+          "/ˈsnəʊmæn/",
+          "ձնեմարդ"
+        ]
+      ],
+      "picture": [
+        "a small decorated New Year tree",
+        "a golden star",
+        "a present wrapped in red paper with a gold ribbon",
+        "a lit white candle",
+        "a small golden bell with a red bow",
+        "a big white snowflake",
+        "a string of warm fairy lights",
+        "a shiny red tree ball",
+        "a New Year card with a snowy house picture and no words",
+        "a small bowl of wrapped sweets",
+        "colourful fireworks in a dark sky",
+        "a small happy snowman with a carrot nose"
+      ]
+    },
+    {
+      "id": "school",
+      "title": "At school",
+      "title_hy": "Դպրոցում",
+      "music": "little-steps.m4a",
+      "intro": "Let's learn some new words! At school.",
+      "outro": "Well done! Save this and say them again tomorrow.",
+      "words": [
+        [
+          "pencil",
+          "/ˈpensl/",
+          "մատիտ"
+        ],
+        [
+          "pen",
+          "/pen/",
+          "գրիչ"
+        ],
+        [
+          "rubber",
+          "/ˈrʌbə/",
+          "ռետին"
+        ],
+        [
+          "ruler",
+          "/ˈruːlə/",
+          "քանոն"
+        ],
+        [
+          "sharpener",
+          "/ˈʃɑːpnə/",
+          "սրիչ"
+        ],
+        [
+          "notebook",
+          "/ˈnəʊtbʊk/",
+          "տետր"
+        ],
+        [
+          "book",
+          "/bʊk/",
+          "գիրք"
+        ],
+        [
+          "school bag",
+          "/ˈskuːl bæɡ/",
+          "պայուսակ"
+        ],
+        [
+          "scissors",
+          "/ˈsɪzəz/",
+          "մկրատ"
+        ],
+        [
+          "glue",
+          "/ɡluː/",
+          "սոսինձ"
+        ],
+        [
+          "crayons",
+          "/ˈkreɪɒnz/",
+          "մոմամատիտներ"
+        ],
+        [
+          "pencil case",
+          "/ˈpensl keɪs/",
+          "գրչատուփ"
+        ]
+      ],
+      "picture": [
+        "a yellow pencil",
+        "a blue pen",
+        "a pink rubber (eraser)",
+        "a wooden ruler",
+        "a small blue pencil sharpener",
+        "a green notebook",
+        "a closed red book",
+        "a yellow school bag",
+        "a pair of scissors with red handles",
+        "a glue stick",
+        "a box of colourful crayons",
+        "a zip pencil case with stars"
+      ]
     }
   ]
 }
