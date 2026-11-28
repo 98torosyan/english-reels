@@ -491,6 +491,426 @@
         "a box of colourful crayons",
         "a zip pencil case with stars"
       ]
+    },
+    {
+      "id": "farm-animals",
+      "title": "Farm animals",
+      "title_hy": "Ագարակի կենդանիներ",
+      "music": "morning-walk.m4a",
+      "intro": "Let's learn some new words! Farm animals.",
+      "outro": "Well done! Save this and say them again tomorrow.",
+      "words": [
+        [
+          "cow",
+          "/kaʊ/",
+          "կով"
+        ],
+        [
+          "horse",
+          "/hɔːs/",
+          "ձի"
+        ],
+        [
+          "sheep",
+          "/ʃiːp/",
+          "ոչխար"
+        ],
+        [
+          "goat",
+          "/ɡəʊt/",
+          "այծ"
+        ],
+        [
+          "pig",
+          "/pɪɡ/",
+          "խոզ"
+        ],
+        [
+          "hen",
+          "/hen/",
+          "հավ"
+        ],
+        [
+          "rooster",
+          "/ˈruːstə/",
+          "աքաղաղ"
+        ],
+        [
+          "duck",
+          "/dʌk/",
+          "բադ"
+        ],
+        [
+          "donkey",
+          "/ˈdɒŋki/",
+          "էշ"
+        ],
+        [
+          "rabbit",
+          "/ˈræbɪt/",
+          "ճագար"
+        ],
+        [
+          "dog",
+          "/dɒɡ/",
+          "շուն"
+        ],
+        [
+          "cat",
+          "/kæt/",
+          "կատու"
+        ]
+      ],
+      "picture": [
+        "a brown and white cow",
+        "a brown horse",
+        "a fluffy white sheep",
+        "a white goat with small horns",
+        "a pink pig",
+        "a brown hen",
+        "a colourful rooster",
+        "a white duck",
+        "a grey donkey",
+        "a brown rabbit",
+        "a friendly farm dog",
+        "a ginger cat sitting"
+      ]
+    },
+    {
+      "id": "vegetables",
+      "title": "Vegetables",
+      "title_hy": "Բանջարեղեն",
+      "music": "garden-guitar.m4a",
+      "intro": "Let's learn some new words! Vegetables.",
+      "outro": "Well done! Save this and say them again tomorrow.",
+      "words": [
+        [
+          "tomato",
+          "/təˈmɑːtəʊ/",
+          "լոլիկ"
+        ],
+        [
+          "cucumber",
+          "/ˈkjuːkʌmbə/",
+          "վարունգ"
+        ],
+        [
+          "potato",
+          "/pəˈteɪtəʊ/",
+          "կարտոֆիլ"
+        ],
+        [
+          "carrot",
+          "/ˈkærət/",
+          "գազար"
+        ],
+        [
+          "onion",
+          "/ˈʌnjən/",
+          "սոխ"
+        ],
+        [
+          "garlic",
+          "/ˈɡɑːlɪk/",
+          "սխտոր"
+        ],
+        [
+          "pepper",
+          "/ˈpepə/",
+          "պղպեղ"
+        ],
+        [
+          "aubergine",
+          "/ˈəʊbəʒiːn/",
+          "սմբուկ"
+        ],
+        [
+          "cabbage",
+          "/ˈkæbɪdʒ/",
+          "կաղամբ"
+        ],
+        [
+          "beans",
+          "/biːnz/",
+          "լոբի"
+        ],
+        [
+          "corn",
+          "/kɔːn/",
+          "եգիպտացորեն"
+        ],
+        [
+          "pumpkin",
+          "/ˈpʌmpkɪn/",
+          "դդում"
+        ]
+      ],
+      "picture": [
+        "a red tomato",
+        "a green cucumber",
+        "two brown potatoes",
+        "an orange carrot with green leaves",
+        "a golden onion",
+        "a head of garlic",
+        "a red sweet pepper",
+        "a purple aubergine",
+        "a green cabbage",
+        "green beans",
+        "a yellow corn cob",
+        "an orange pumpkin"
+      ]
+    },
+    {
+      "id": "toys",
+      "title": "Toys",
+      "title_hy": "Խաղալիքներ",
+      "music": "little-steps.m4a",
+      "intro": "Let's learn some new words! Toys.",
+      "outro": "Well done! Save this and say them again tomorrow.",
+      "words": [
+        [
+          "ball",
+          "/bɔːl/",
+          "գնդակ"
+        ],
+        [
+          "doll",
+          "/dɒl/",
+          "տիկնիկ"
+        ],
+        [
+          "teddy bear",
+          "/ˈtedi beə/",
+          "արջուկ"
+        ],
+        [
+          "car",
+          "/kɑː/",
+          "մեքենա"
+        ],
+        [
+          "train",
+          "/treɪn/",
+          "գնացք"
+        ],
+        [
+          "kite",
+          "/kaɪt/",
+          "օդապարիկ"
+        ],
+        [
+          "blocks",
+          "/blɒks/",
+          "խորանարդիկներ"
+        ],
+        [
+          "puzzle",
+          "/ˈpʌzl/",
+          "փազլ"
+        ],
+        [
+          "robot",
+          "/ˈrəʊbɒt/",
+          "ռոբոտ"
+        ],
+        [
+          "drum",
+          "/drʌm/",
+          "թմբուկ"
+        ],
+        [
+          "yo-yo",
+          "/ˈjəʊjəʊ/",
+          "յո-յո"
+        ],
+        [
+          "skipping rope",
+          "/ˈskɪpɪŋ rəʊp/",
+          "ցատկապարան"
+        ]
+      ],
+      "picture": [
+        "a red and blue ball",
+        "a rag doll in a blue dress",
+        "a brown teddy bear",
+        "a small red toy car",
+        "a wooden toy train",
+        "a yellow kite with a tail",
+        "colourful wooden blocks",
+        "a few puzzle pieces",
+        "a small tin robot",
+        "a toy drum with sticks",
+        "a green yo-yo",
+        "a skipping rope with wooden handles"
+      ]
+    },
+    {
+      "id": "transport",
+      "title": "Transport",
+      "title_hy": "Տրանսպորտ",
+      "music": "bright-day.m4a",
+      "intro": "Let's learn some new words! Transport.",
+      "outro": "Well done! Save this and say them again tomorrow.",
+      "words": [
+        [
+          "car",
+          "/kɑː/",
+          "մեքենա"
+        ],
+        [
+          "bus",
+          "/bʌs/",
+          "ավտոբուս"
+        ],
+        [
+          "train",
+          "/treɪn/",
+          "գնացք"
+        ],
+        [
+          "plane",
+          "/pleɪn/",
+          "ինքնաթիռ"
+        ],
+        [
+          "bike",
+          "/baɪk/",
+          "հեծանիվ"
+        ],
+        [
+          "boat",
+          "/bəʊt/",
+          "նավակ"
+        ],
+        [
+          "ship",
+          "/ʃɪp/",
+          "նավ"
+        ],
+        [
+          "taxi",
+          "/ˈtæksi/",
+          "տաքսի"
+        ],
+        [
+          "lorry",
+          "/ˈlɒri/",
+          "բեռնատար"
+        ],
+        [
+          "helicopter",
+          "/ˈhelɪkɒptə/",
+          "ուղղաթիռ"
+        ],
+        [
+          "scooter",
+          "/ˈskuːtə/",
+          "սքութեր"
+        ],
+        [
+          "tram",
+          "/træm/",
+          "տրամվայ"
+        ]
+      ],
+      "picture": [
+        "a blue car",
+        "a yellow city bus",
+        "a red train",
+        "a white plane",
+        "a green bicycle",
+        "a small wooden boat",
+        "a big ship",
+        "a yellow taxi",
+        "a blue lorry",
+        "a red helicopter",
+        "a kick scooter",
+        "a green tram"
+      ]
+    },
+    {
+      "id": "bedroom",
+      "title": "In my bedroom",
+      "title_hy": "Իմ ննջասենյակում",
+      "music": "quiet-page.m4a",
+      "intro": "Let's learn some new words! In my bedroom.",
+      "outro": "Well done! Save this and say them again tomorrow.",
+      "words": [
+        [
+          "bed",
+          "/bed/",
+          "մահճակալ"
+        ],
+        [
+          "pillow",
+          "/ˈpɪləʊ/",
+          "բարձ"
+        ],
+        [
+          "blanket",
+          "/ˈblæŋkɪt/",
+          "վերմակ"
+        ],
+        [
+          "lamp",
+          "/læmp/",
+          "լամպ"
+        ],
+        [
+          "clock",
+          "/klɒk/",
+          "ժամացույց"
+        ],
+        [
+          "wardrobe",
+          "/ˈwɔːdrəʊb/",
+          "զգեստապահարան"
+        ],
+        [
+          "chair",
+          "/tʃeə/",
+          "աթոռ"
+        ],
+        [
+          "desk",
+          "/desk/",
+          "գրասեղան"
+        ],
+        [
+          "mirror",
+          "/ˈmɪrə/",
+          "հայելի"
+        ],
+        [
+          "rug",
+          "/rʌɡ/",
+          "գորգ"
+        ],
+        [
+          "curtains",
+          "/ˈkɜːtnz/",
+          "վարագույրներ"
+        ],
+        [
+          "shelf",
+          "/ʃelf/",
+          "դարակ"
+        ]
+      ],
+      "picture": [
+        "a small wooden bed with a blanket",
+        "a white pillow",
+        "a folded patterned blanket",
+        "a bedside lamp, switched on",
+        "an alarm clock",
+        "a wooden wardrobe",
+        "a wooden chair",
+        "a small desk",
+        "a round mirror",
+        "a small patterned rug",
+        "blue curtains",
+        "a shelf with books"
+      ]
     }
   ]
 }
